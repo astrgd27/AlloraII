@@ -9,5 +9,11 @@
   },
   "scripts": {
     "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
   }
 }
