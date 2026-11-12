@@ -41,3 +41,7 @@
 ## Decisions
 
 (Record decisions here as they are made, with the date and the reason.)
+
+- **2026-11-09 · Magic design notes.** The owner supplied the notes as a PDF. It is kept as `canon/magic_design.pdf` (authoritative), with a `pdftotext -layout` extraction in `canon/magic_design.md` so the `/canon` lookup and the tools can search it.
+- **2026-11-09 · Issues.** Phase 0 items are GitHub issues #1–#10, labelled `phase-0`, in the same order as this list.
+- **2026-11-09 · Scaffold (#1).** Three packages as the phase plan names them: `packages/engine`, `packages/ui`, `packages/content-tools`. The bible's `content` and `render` packages are left for later: content lives in `content/` at the root, and rendering stays inside `ui` until it grows. TypeScript is pinned to 5.9 because typescript-eslint does not yet support TypeScript 7. The site is built with base path `/AlloraII/` for GitHub Pages (override with `BASE_PATH`). `pnpm lint:content`, `pnpm balance` and `pnpm extract` are added by the issues that build them (#2, #5, #9), not as empty stubs.

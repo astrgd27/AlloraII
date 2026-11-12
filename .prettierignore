@@ -1,0 +1,7 @@
+canon/
+docs/
+.claude/
+dist/
+coverage/
+pnpm-lock.yaml
+*.md

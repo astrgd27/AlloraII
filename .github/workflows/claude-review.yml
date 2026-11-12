@@ -1,0 +1,66 @@
+name: Claude review
+
+# Reviews every pull request against CLAUDE.md, canon and the design bible.
+# Needs one repository secret: CLAUDE_CODE_OAUTH_TOKEN (from `claude setup-token`)
+# or ANTHROPIC_API_KEY. Without one, the review is skipped rather than failing.
+
+on:
+  pull_request:
+    types: [opened, synchronize, ready_for_review, reopened]
+
+concurrency:
+  group: claude-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: read
+      id-token: write
+      actions: read
+    env:
+      HAS_CLAUDE_AUTH: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN != '' || secrets.ANTHROPIC_API_KEY != '' }}
+    steps:
+      - name: Note missing secret
+        if: env.HAS_CLAUDE_AUTH != 'true'
+        run: echo "::notice::No CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY secret; skipping the Claude review."
+
+      - uses: actions/checkout@v6
+        if: env.HAS_CLAUDE_AUTH == 'true'
+        with:
+          fetch-depth: 1
+
+      - uses: anthropics/claude-code-action@v1
+        if: env.HAS_CLAUDE_AUTH == 'true'
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          track_progress: true
+          prompt: |
+            REPO: ${{ github.repository }}
+            PR NUMBER: ${{ github.event.pull_request.number }}
+
+            Review this pull request for Allora II. First read CLAUDE.md, the newest
+            docs/phase-N.md, and the sections of docs/design-bible.md the change touches.
+
+            Check, in this order:
+            1. Canon. Nothing under canon/ was edited. content/canon/ changed only by
+               re-running the extractors, or the PR is labelled canon-change and says why.
+               Every new content entry has origin: allora2 and roots naming real canon ids.
+               Nothing contradicts canon: look facts up in canon/ rather than trusting memory.
+            2. World rules from CLAUDE.md (static world, unresolved mysteries, no real-world
+               historical terms in game text, adults only in romance, no witch magic for the
+               player, no hints from augury except Nim's dreams, little UI text, no pop-ups).
+            3. Architecture. No game logic in the UI; engine state stays in the worker;
+               content is YAML checked by zod schemas; modules stay under about 400 lines.
+            4. Correctness and tests for the code that changed.
+            5. The PR description says what changed and what could not be decided.
+
+            Use inline comments for specific problems, and one short top-level summary.
+            Do not approve or merge.
+          claude_args: |
+            --allowedTools "mcp__github_inline_comment__create_inline_comment,Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*)"
