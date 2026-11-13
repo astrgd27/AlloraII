@@ -11,7 +11,7 @@ import { parse } from 'yaml';
  */
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../../../..');
 const GUIDES = join(ROOT, 'docs/lore/cultures');
-const CANON = join(ROOT, 'content/canon/allora1');
+const CANON_DIRS = ['allora1', 'polygoetia'].map((d) => join(ROOT, 'content/canon', d));
 
 const strings = (value: unknown): string[] => {
   if (typeof value === 'string') return [value];
@@ -25,11 +25,13 @@ function canonText(): Map<string, string> {
   const text = new Map<string, string>();
   const add = (id: string, value: unknown) =>
     text.set(id, `${text.get(id) ?? ''}\n${strings(value).join('\n')}`);
-  for (const file of readdirSync(CANON).filter((f) => f.endsWith('.yaml'))) {
-    for (const entry of parse(readFileSync(join(CANON, file), 'utf8')) as Record<
-      string,
-      unknown
-    >[]) {
+  const files = CANON_DIRS.flatMap((dir) =>
+    readdirSync(dir)
+      .filter((f) => f.endsWith('.yaml'))
+      .map((f) => join(dir, f)),
+  );
+  for (const file of files) {
+    for (const entry of parse(readFileSync(file, 'utf8')) as Record<string, unknown>[]) {
       const id = String(entry.id);
       add(id, entry);
       for (const sub of (entry.subs as Record<string, unknown>[] | undefined) ?? []) {

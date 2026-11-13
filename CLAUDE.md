@@ -28,6 +28,10 @@ Rules:
 - `canon/` is still never edited, and the world rules below still hold.
 - Stop and ask only when a change is large: it would undo a canon place, person, group or story.
 
+**Owner's direction, 2026-11-13: ten times Allora I, and a place you live in.** Allora II should be at least ten times the size of the first game (Allora I has 282 places and about 290 named people), and it should feel like a place you live in, not just an idle game. When choosing what to build:
+- Prefer what makes a place lived-in: neighbours with routines, small places with a reason to return, hours and seasons that change what is there.
+- Grow the world in batches through the content pipeline, linted and rooted, rather than by hand-building screens.
+
 ## World rules (fixed)
 
 - **The world is static.** Realms, rulers and borders never change. Players rise within the world's order, never overturn it. No quest breaks the world.
