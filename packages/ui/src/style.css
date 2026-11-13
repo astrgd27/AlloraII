@@ -28,3 +28,40 @@ h1 {
   font-weight: normal;
   letter-spacing: 0.08em;
 }
+
+.frame {
+  align-content: center;
+  gap: 1.5rem;
+  padding: 16px;
+  text-align: center;
+}
+
+.clock p {
+  margin: 0.2rem 0;
+}
+
+.date {
+  font-size: 1.1rem;
+}
+
+.hour {
+  opacity: 0.75;
+  font-variant-numeric: tabular-nums;
+}
+
+.hour-bar {
+  width: 12rem;
+  height: 2px;
+  margin: 0.8rem auto 0;
+  background: color-mix(in srgb, var(--ink) 15%, transparent);
+}
+
+.hour-bar div {
+  height: 100%;
+  background: var(--ink);
+  opacity: 0.6;
+}
+
+.error {
+  color: #a63a2b;
+}
