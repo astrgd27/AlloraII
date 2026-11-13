@@ -9,6 +9,7 @@ export interface EngineEvents {
   DayBegan: { hours: number; date: GameDate };
   SeasonBegan: { hours: number; date: GameDate };
   YearBegan: { hours: number; date: GameDate };
+  Arrived: { hours: number; place: string; from: string };
 }
 
 export type EventName = keyof EngineEvents;

@@ -21,3 +21,13 @@ export function formatHour(d: GameDate): string {
   if (d.hour === 12) return 'Noon';
   return `${DAY_PART_WORDS[d.dayPart]}, the ${ordinal(d.hour)} hour`;
 }
+
+/** "7 hours", or "2 days, 3 hours" for a long road. */
+export function hoursText(hours: number): string {
+  const days = Math.floor(hours / 24);
+  const rest = hours % 24;
+  const h = `${rest} ${rest === 1 ? 'hour' : 'hours'}`;
+  if (days === 0) return h;
+  const d = `${days} ${days === 1 ? 'day' : 'days'}`;
+  return rest === 0 ? d : `${d}, ${h}`;
+}

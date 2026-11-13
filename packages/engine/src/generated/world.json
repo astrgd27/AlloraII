@@ -1,0 +1,550 @@
+{
+ "regions": [
+  {
+   "id": "eintenn",
+   "name": "Duchy of Eintenn"
+  },
+  {
+   "id": "marre",
+   "name": "Republic of Marre"
+  }
+ ],
+ "places": [
+  {
+   "id": "ostwick",
+   "name": "Ostwick",
+   "region": "eintenn",
+   "x": 32,
+   "y": 58,
+   "kind": "settled"
+  },
+  {
+   "id": "kess_harbor",
+   "name": "Kesselhaven Harbor",
+   "region": "eintenn",
+   "x": 76,
+   "y": 70,
+   "kind": "city"
+  },
+  {
+   "id": "kess_market",
+   "name": "Salzmarkt & Guild Quarter",
+   "region": "eintenn",
+   "x": 70,
+   "y": 60,
+   "kind": "city"
+  },
+  {
+   "id": "kess_fondaco",
+   "name": "The Marrean Fondaco",
+   "region": "eintenn",
+   "x": 82,
+   "y": 58,
+   "kind": "city"
+  },
+  {
+   "id": "kess_undercroft",
+   "name": "The Undercroft",
+   "region": "eintenn",
+   "x": 66,
+   "y": 68,
+   "kind": "city"
+  },
+  {
+   "id": "collegium",
+   "name": "Collegium Arcanum",
+   "region": "eintenn",
+   "x": 63,
+   "y": 53,
+   "kind": "city"
+  },
+  {
+   "id": "tennfels",
+   "name": "Burg Tennfels",
+   "region": "eintenn",
+   "x": 48,
+   "y": 46,
+   "kind": "settled"
+  },
+  {
+   "id": "aschau",
+   "name": "Aschau & the Pyre Fields",
+   "region": "eintenn",
+   "x": 46,
+   "y": 74,
+   "kind": "settled"
+  },
+  {
+   "id": "grauwald",
+   "name": "The Grauwald",
+   "region": "eintenn",
+   "x": 30,
+   "y": 36,
+   "kind": "wild"
+  },
+  {
+   "id": "wisewoman_hut",
+   "name": "Mother Brindl’s Hut",
+   "region": "eintenn",
+   "x": 20,
+   "y": 44,
+   "kind": "wild"
+  },
+  {
+   "id": "greenwife_grove",
+   "name": "The Ribboned Oaks",
+   "region": "eintenn",
+   "x": 22,
+   "y": 26,
+   "kind": "wild"
+  },
+  {
+   "id": "hohenkamm",
+   "name": "The Hohenkamm",
+   "region": "eintenn",
+   "x": 24,
+   "y": 12,
+   "kind": "wild"
+  },
+  {
+   "id": "thunder_caves",
+   "name": "The Thunder-Caves",
+   "region": "eintenn",
+   "x": 14,
+   "y": 5,
+   "kind": "wild"
+  },
+  {
+   "id": "silberhalde",
+   "name": "Silberhalde",
+   "region": "eintenn",
+   "x": 42,
+   "y": 24,
+   "kind": "settled"
+  },
+  {
+   "id": "salzmoor",
+   "name": "The Salzmoor",
+   "region": "eintenn",
+   "x": 88,
+   "y": 86,
+   "kind": "wild"
+  },
+  {
+   "id": "vaelis_ruins",
+   "name": "Ruins of Old Vaelis",
+   "region": "eintenn",
+   "x": 52,
+   "y": 10,
+   "kind": "wild"
+  },
+  {
+   "id": "threshold_sanctum",
+   "name": "The Threshold Sanctum",
+   "region": "eintenn",
+   "x": 58,
+   "y": 5,
+   "kind": "settled"
+  },
+  {
+   "id": "marre_city",
+   "name": "Marre, City of Sea-Glass",
+   "region": "marre",
+   "x": 56,
+   "y": 52,
+   "kind": "city"
+  },
+  {
+   "id": "marre_isles",
+   "name": "The Glass Isles",
+   "region": "marre",
+   "x": 78,
+   "y": 32,
+   "kind": "settled"
+  },
+  {
+   "id": "wp_ferry",
+   "name": "The Ferryman’s Inn",
+   "region": "eintenn",
+   "x": 86,
+   "y": 32,
+   "kind": "settled"
+  },
+  {
+   "id": "wp_lighthouse",
+   "name": "The Lantern of Cape Drown",
+   "region": "marre",
+   "x": 16,
+   "y": 80,
+   "kind": "wild"
+  },
+  {
+   "id": "xonia_shore",
+   "name": "The Marble Shallows",
+   "region": "marre",
+   "x": 88,
+   "y": 68,
+   "kind": "wild"
+  },
+  {
+   "id": "xonia_sunken",
+   "name": "Sunken Xonia",
+   "region": "marre",
+   "x": 90,
+   "y": 18,
+   "kind": "wild"
+  },
+  {
+   "id": "selino",
+   "name": "Selino",
+   "region": "marre",
+   "x": 30,
+   "y": 28,
+   "kind": "city"
+  },
+  {
+   "id": "marre_palace",
+   "name": "The Piazza of the Doges",
+   "region": "marre",
+   "x": 44,
+   "y": 44,
+   "kind": "city"
+  },
+  {
+   "id": "marre_canal",
+   "name": "The Grand Canal Palazzi",
+   "region": "marre",
+   "x": 68,
+   "y": 47,
+   "kind": "city"
+  },
+  {
+   "id": "lazaretto",
+   "name": "The Lazaretto",
+   "region": "marre",
+   "x": 24,
+   "y": 62,
+   "kind": "settled"
+  },
+  {
+   "id": "terraferma",
+   "name": "The Terraferma",
+   "region": "marre",
+   "x": 8,
+   "y": 40,
+   "kind": "wild"
+  },
+  {
+   "id": "morena",
+   "name": "Morena",
+   "region": "marre",
+   "x": 93,
+   "y": 46,
+   "kind": "city"
+  },
+  {
+   "id": "pomerell",
+   "name": "Pomerell, the Orchard Abbey",
+   "region": "eintenn",
+   "x": 30,
+   "y": 84,
+   "kind": "settled"
+  }
+ ],
+ "roads": [
+  {
+   "id": "road_aschau_kess_undercroft",
+   "from": "aschau",
+   "to": "kess_undercroft",
+   "way": "road",
+   "hours": 8
+  },
+  {
+   "id": "road_aschau_pomerell",
+   "from": "aschau",
+   "to": "pomerell",
+   "way": "road",
+   "hours": 7
+  },
+  {
+   "id": "road_collegium_kess_market",
+   "from": "collegium",
+   "to": "kess_market",
+   "way": "street",
+   "hours": 1
+  },
+  {
+   "id": "road_collegium_kess_undercroft",
+   "from": "collegium",
+   "to": "kess_undercroft",
+   "way": "street",
+   "hours": 1
+  },
+  {
+   "id": "road_collegium_tennfels",
+   "from": "collegium",
+   "to": "tennfels",
+   "way": "road",
+   "hours": 6
+  },
+  {
+   "id": "road_collegium_wp_ferry",
+   "from": "collegium",
+   "to": "wp_ferry",
+   "way": "road",
+   "hours": 12
+  },
+  {
+   "id": "road_grauwald_greenwife_grove",
+   "from": "grauwald",
+   "to": "greenwife_grove",
+   "way": "track",
+   "hours": 5
+  },
+  {
+   "id": "road_grauwald_silberhalde",
+   "from": "grauwald",
+   "to": "silberhalde",
+   "way": "track",
+   "hours": 6
+  },
+  {
+   "id": "road_grauwald_wisewoman_hut",
+   "from": "grauwald",
+   "to": "wisewoman_hut",
+   "way": "track",
+   "hours": 5
+  },
+  {
+   "id": "road_greenwife_grove_hohenkamm",
+   "from": "greenwife_grove",
+   "to": "hohenkamm",
+   "way": "track",
+   "hours": 5
+  },
+  {
+   "id": "road_greenwife_grove_thunder_caves",
+   "from": "greenwife_grove",
+   "to": "thunder_caves",
+   "way": "track",
+   "hours": 9
+  },
+  {
+   "id": "road_greenwife_grove_wisewoman_hut",
+   "from": "greenwife_grove",
+   "to": "wisewoman_hut",
+   "way": "track",
+   "hours": 7
+  },
+  {
+   "id": "road_hohenkamm_thunder_caves",
+   "from": "hohenkamm",
+   "to": "thunder_caves",
+   "way": "track",
+   "hours": 5
+  },
+  {
+   "id": "road_kess_fondaco_kess_harbor",
+   "from": "kess_fondaco",
+   "to": "kess_harbor",
+   "way": "street",
+   "hours": 1
+  },
+  {
+   "id": "road_kess_fondaco_kess_market",
+   "from": "kess_fondaco",
+   "to": "kess_market",
+   "way": "street",
+   "hours": 1
+  },
+  {
+   "id": "road_kess_fondaco_wp_ferry",
+   "from": "kess_fondaco",
+   "to": "wp_ferry",
+   "way": "road",
+   "hours": 10
+  },
+  {
+   "id": "road_kess_harbor_kess_market",
+   "from": "kess_harbor",
+   "to": "kess_market",
+   "way": "street",
+   "hours": 1
+  },
+  {
+   "id": "road_kess_harbor_kess_undercroft",
+   "from": "kess_harbor",
+   "to": "kess_undercroft",
+   "way": "street",
+   "hours": 1
+  },
+  {
+   "id": "road_kess_harbor_salzmoor",
+   "from": "kess_harbor",
+   "to": "salzmoor",
+   "way": "track",
+   "hours": 8
+  },
+  {
+   "id": "road_kess_market_kess_undercroft",
+   "from": "kess_market",
+   "to": "kess_undercroft",
+   "way": "street",
+   "hours": 1
+  },
+  {
+   "id": "road_kess_undercroft_salzmoor",
+   "from": "kess_undercroft",
+   "to": "salzmoor",
+   "way": "track",
+   "hours": 11
+  },
+  {
+   "id": "road_ostwick_pomerell",
+   "from": "ostwick",
+   "to": "pomerell",
+   "way": "road",
+   "hours": 10
+  },
+  {
+   "id": "road_ostwick_tennfels",
+   "from": "ostwick",
+   "to": "tennfels",
+   "way": "road",
+   "hours": 8
+  },
+  {
+   "id": "road_ostwick_wisewoman_hut",
+   "from": "ostwick",
+   "to": "wisewoman_hut",
+   "way": "track",
+   "hours": 7
+  },
+  {
+   "id": "road_silberhalde_threshold_sanctum",
+   "from": "silberhalde",
+   "to": "threshold_sanctum",
+   "way": "road",
+   "hours": 9
+  },
+  {
+   "id": "road_silberhalde_vaelis_ruins",
+   "from": "silberhalde",
+   "to": "vaelis_ruins",
+   "way": "track",
+   "hours": 7
+  },
+  {
+   "id": "road_threshold_sanctum_vaelis_ruins",
+   "from": "threshold_sanctum",
+   "to": "vaelis_ruins",
+   "way": "track",
+   "hours": 3
+  },
+  {
+   "id": "road_lazaretto_marre_palace",
+   "from": "lazaretto",
+   "to": "marre_palace",
+   "way": "road",
+   "hours": 10
+  },
+  {
+   "id": "road_lazaretto_terraferma",
+   "from": "lazaretto",
+   "to": "terraferma",
+   "way": "track",
+   "hours": 10
+  },
+  {
+   "id": "road_lazaretto_wp_lighthouse",
+   "from": "lazaretto",
+   "to": "wp_lighthouse",
+   "way": "track",
+   "hours": 7
+  },
+  {
+   "id": "road_marre_canal_marre_city",
+   "from": "marre_canal",
+   "to": "marre_city",
+   "way": "street",
+   "hours": 1
+  },
+  {
+   "id": "road_marre_canal_marre_isles",
+   "from": "marre_canal",
+   "to": "marre_isles",
+   "way": "road",
+   "hours": 7
+  },
+  {
+   "id": "road_marre_canal_xonia_shore",
+   "from": "marre_canal",
+   "to": "xonia_shore",
+   "way": "track",
+   "hours": 11
+  },
+  {
+   "id": "road_marre_city_marre_palace",
+   "from": "marre_city",
+   "to": "marre_palace",
+   "way": "street",
+   "hours": 1
+  },
+  {
+   "id": "road_marre_isles_morena",
+   "from": "marre_isles",
+   "to": "morena",
+   "way": "road",
+   "hours": 8
+  },
+  {
+   "id": "road_marre_isles_xonia_sunken",
+   "from": "marre_isles",
+   "to": "xonia_sunken",
+   "way": "track",
+   "hours": 7
+  },
+  {
+   "id": "road_marre_palace_selino",
+   "from": "marre_palace",
+   "to": "selino",
+   "way": "road",
+   "hours": 8
+  },
+  {
+   "id": "road_morena_xonia_shore",
+   "from": "morena",
+   "to": "xonia_shore",
+   "way": "track",
+   "hours": 9
+  },
+  {
+   "id": "road_morena_xonia_sunken",
+   "from": "morena",
+   "to": "xonia_sunken",
+   "way": "track",
+   "hours": 11
+  },
+  {
+   "id": "road_selino_terraferma",
+   "from": "selino",
+   "to": "terraferma",
+   "way": "track",
+   "hours": 10
+  },
+  {
+   "id": "road_terraferma_wp_lighthouse",
+   "from": "terraferma",
+   "to": "wp_lighthouse",
+   "way": "track",
+   "hours": 16
+  },
+  {
+   "id": "road_kess_harbor_marre_city",
+   "from": "kess_harbor",
+   "to": "marre_city",
+   "way": "sea",
+   "hours": 110
+  }
+ ]
+}

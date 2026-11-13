@@ -1,0 +1,273 @@
+# Stub roads, laid by `pnpm world --roads` over canon places, for the owner to redraw.
+# Allora I has no roads inside a realm; these are new. Hours follow Allora I’s travel formula.
+# Once edited by hand, do not run `--roads` again for this file: it would overwrite the edits.
+- id: road_aschau_kess_undercroft
+  origin: allora2
+  kind: road
+  roots:
+    - aschau
+    - kess_undercroft
+  from: aschau
+  to: kess_undercroft
+  way: road
+  hours: 8
+- id: road_aschau_pomerell
+  origin: allora2
+  kind: road
+  roots:
+    - aschau
+    - pomerell
+  from: aschau
+  to: pomerell
+  way: road
+  hours: 7
+- id: road_collegium_kess_market
+  origin: allora2
+  kind: road
+  roots:
+    - collegium
+    - kess_market
+  from: collegium
+  to: kess_market
+  way: street
+  hours: 1
+- id: road_collegium_kess_undercroft
+  origin: allora2
+  kind: road
+  roots:
+    - collegium
+    - kess_undercroft
+  from: collegium
+  to: kess_undercroft
+  way: street
+  hours: 1
+- id: road_collegium_tennfels
+  origin: allora2
+  kind: road
+  roots:
+    - collegium
+    - tennfels
+  from: collegium
+  to: tennfels
+  way: road
+  hours: 6
+- id: road_collegium_wp_ferry
+  origin: allora2
+  kind: road
+  roots:
+    - collegium
+    - wp_ferry
+  from: collegium
+  to: wp_ferry
+  way: road
+  hours: 12
+- id: road_grauwald_greenwife_grove
+  origin: allora2
+  kind: road
+  roots:
+    - grauwald
+    - greenwife_grove
+  from: grauwald
+  to: greenwife_grove
+  way: track
+  hours: 5
+- id: road_grauwald_silberhalde
+  origin: allora2
+  kind: road
+  roots:
+    - grauwald
+    - silberhalde
+  from: grauwald
+  to: silberhalde
+  way: track
+  hours: 6
+- id: road_grauwald_wisewoman_hut
+  origin: allora2
+  kind: road
+  roots:
+    - grauwald
+    - wisewoman_hut
+  from: grauwald
+  to: wisewoman_hut
+  way: track
+  hours: 5
+- id: road_greenwife_grove_hohenkamm
+  origin: allora2
+  kind: road
+  roots:
+    - greenwife_grove
+    - hohenkamm
+  from: greenwife_grove
+  to: hohenkamm
+  way: track
+  hours: 5
+- id: road_greenwife_grove_thunder_caves
+  origin: allora2
+  kind: road
+  roots:
+    - greenwife_grove
+    - thunder_caves
+  from: greenwife_grove
+  to: thunder_caves
+  way: track
+  hours: 9
+- id: road_greenwife_grove_wisewoman_hut
+  origin: allora2
+  kind: road
+  roots:
+    - greenwife_grove
+    - wisewoman_hut
+  from: greenwife_grove
+  to: wisewoman_hut
+  way: track
+  hours: 7
+- id: road_hohenkamm_thunder_caves
+  origin: allora2
+  kind: road
+  roots:
+    - hohenkamm
+    - thunder_caves
+  from: hohenkamm
+  to: thunder_caves
+  way: track
+  hours: 5
+- id: road_kess_fondaco_kess_harbor
+  origin: allora2
+  kind: road
+  roots:
+    - kess_fondaco
+    - kess_harbor
+  from: kess_fondaco
+  to: kess_harbor
+  way: street
+  hours: 1
+- id: road_kess_fondaco_kess_market
+  origin: allora2
+  kind: road
+  roots:
+    - kess_fondaco
+    - kess_market
+  from: kess_fondaco
+  to: kess_market
+  way: street
+  hours: 1
+- id: road_kess_fondaco_wp_ferry
+  origin: allora2
+  kind: road
+  roots:
+    - kess_fondaco
+    - wp_ferry
+  from: kess_fondaco
+  to: wp_ferry
+  way: road
+  hours: 10
+- id: road_kess_harbor_kess_market
+  origin: allora2
+  kind: road
+  roots:
+    - kess_harbor
+    - kess_market
+  from: kess_harbor
+  to: kess_market
+  way: street
+  hours: 1
+- id: road_kess_harbor_kess_undercroft
+  origin: allora2
+  kind: road
+  roots:
+    - kess_harbor
+    - kess_undercroft
+  from: kess_harbor
+  to: kess_undercroft
+  way: street
+  hours: 1
+- id: road_kess_harbor_salzmoor
+  origin: allora2
+  kind: road
+  roots:
+    - kess_harbor
+    - salzmoor
+  from: kess_harbor
+  to: salzmoor
+  way: track
+  hours: 8
+- id: road_kess_market_kess_undercroft
+  origin: allora2
+  kind: road
+  roots:
+    - kess_market
+    - kess_undercroft
+  from: kess_market
+  to: kess_undercroft
+  way: street
+  hours: 1
+- id: road_kess_undercroft_salzmoor
+  origin: allora2
+  kind: road
+  roots:
+    - kess_undercroft
+    - salzmoor
+  from: kess_undercroft
+  to: salzmoor
+  way: track
+  hours: 11
+- id: road_ostwick_pomerell
+  origin: allora2
+  kind: road
+  roots:
+    - ostwick
+    - pomerell
+  from: ostwick
+  to: pomerell
+  way: road
+  hours: 10
+- id: road_ostwick_tennfels
+  origin: allora2
+  kind: road
+  roots:
+    - ostwick
+    - tennfels
+  from: ostwick
+  to: tennfels
+  way: road
+  hours: 8
+- id: road_ostwick_wisewoman_hut
+  origin: allora2
+  kind: road
+  roots:
+    - ostwick
+    - wisewoman_hut
+  from: ostwick
+  to: wisewoman_hut
+  way: track
+  hours: 7
+- id: road_silberhalde_threshold_sanctum
+  origin: allora2
+  kind: road
+  roots:
+    - silberhalde
+    - threshold_sanctum
+  from: silberhalde
+  to: threshold_sanctum
+  way: road
+  hours: 9
+- id: road_silberhalde_vaelis_ruins
+  origin: allora2
+  kind: road
+  roots:
+    - silberhalde
+    - vaelis_ruins
+  from: silberhalde
+  to: vaelis_ruins
+  way: track
+  hours: 7
+- id: road_threshold_sanctum_vaelis_ruins
+  origin: allora2
+  kind: road
+  roots:
+    - threshold_sanctum
+    - vaelis_ruins
+  from: threshold_sanctum
+  to: vaelis_ruins
+  way: track
+  hours: 3

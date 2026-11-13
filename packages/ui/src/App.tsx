@@ -1,6 +1,8 @@
-import { useEffect, useSyncExternalStore } from 'react';
+import { useEffect, useState, useSyncExternalStore } from 'react';
 import { engine } from './engine-client';
 import { formatDate, formatHour } from './format';
+import { MapView } from './map/MapView';
+import { PlaceList, PlacePanel } from './map/PlacePanel';
 import { TITLE } from './title';
 
 /** The frame. The UI only displays state and sends orders; no game logic lives here. */
@@ -8,6 +10,7 @@ export function App() {
   useEffect(() => engine.start(), []);
   const snapshot = useSyncExternalStore(engine.subscribe, engine.getSnapshot);
   const error = useSyncExternalStore(engine.subscribe, engine.getError);
+  const [chosen, setChosen] = useState<string | undefined>(undefined);
 
   return (
     <main className="frame">
@@ -24,6 +27,13 @@ export function App() {
             <div style={{ width: `${snapshot.hourProgress * 100}%` }} />
           </div>
         </section>
+      )}
+      <MapView snapshot={snapshot} chosen={chosen} onChoose={setChosen} />
+      {snapshot && (
+        <>
+          <PlacePanel snapshot={snapshot} chosen={chosen} send={(order) => engine.send(order)} />
+          <PlaceList snapshot={snapshot} chosen={chosen} onChoose={setChosen} />
+        </>
       )}
       {error && (
         <p className="error" role="alert">

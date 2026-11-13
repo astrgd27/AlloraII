@@ -1,0 +1,13 @@
+# Stub roads, laid by `pnpm world --roads` over canon places, for the owner to redraw.
+# Allora I has no roads inside a realm; these are new. Hours follow Allora I’s travel formula.
+# Once edited by hand, do not run `--roads` again for this file: it would overwrite the edits.
+- id: road_kess_harbor_marre_city
+  origin: allora2
+  kind: road
+  roots:
+    - kess_harbor
+    - marre_city
+  from: kess_harbor
+  to: marre_city
+  way: sea
+  hours: 110

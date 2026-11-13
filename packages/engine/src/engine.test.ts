@@ -171,11 +171,26 @@ describe('saves and migrations', () => {
       lastRealMs: 1_000_000,
       paused: false,
       rng: { streams: {} },
+      place: 'ostwick',
+      journey: null,
     });
     // A migrated save plays on.
     const engine = new Engine(state);
     engine.advanceTo(1_000_000 + 2 * MINUTE);
     expect(engine.state.hours).toBe(502);
+  });
+
+  it('migrates a v1 save: the life is placed at the start', () => {
+    const v1 = {
+      version: 1,
+      seed: 3,
+      hours: 40,
+      carryMs: 10,
+      lastRealMs: 5,
+      paused: true,
+      rng: { streams: { world: 9 } },
+    };
+    expect(migrate(v1)).toEqual({ ...v1, version: SAVE_VERSION, place: 'ostwick', journey: null });
   });
 
   it('leaves a current save as it is, and refuses a newer or broken one', () => {

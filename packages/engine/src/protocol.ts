@@ -8,6 +8,10 @@ import type { Snapshot } from './engine';
 export type Order =
   | { type: 'pause' }
   | { type: 'resume' }
+  /** Set out for a place, by the quickest way. */
+  | { type: 'travel'; to: string }
+  /** Turn back to the place last left. */
+  | { type: 'turnBack' }
   /** Write a save now. */
   | { type: 'save' }
   /** Delete all saves and start a new game. */

@@ -18,6 +18,8 @@ export const REFERENCE_FIELDS = [
   'people',
   'superior',
   'rival',
+  'from',
+  'to',
 ];
 
 export function lintReferences(additions: Loaded[], index: CanonIndex): Problem[] {
