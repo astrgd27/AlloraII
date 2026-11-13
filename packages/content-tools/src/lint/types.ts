@@ -2,10 +2,10 @@
 
 export interface Entry {
   id: string;
-  origin?: string;
-  kind?: string;
-  name?: string;
-  roots?: string[];
+  origin?: string | undefined;
+  kind?: string | undefined;
+  name?: string | undefined;
+  roots?: string[] | undefined;
   [key: string]: unknown;
 }
 
