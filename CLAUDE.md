@@ -22,6 +22,12 @@ Rules:
 - Before writing about a canon thing, look it up (`/canon <name>`). Never write canon facts from memory.
 - **If you are unsure whether something contradicts canon, stop and ask.**
 
+**Owner's ruling, 2026-11-13: the world must be expansive and huge.** New places, groups and people may be added even where they shift canon lore slightly (a new village on a road canon calls empty, a new guild in a city canon gives one guild, a new cousin in a canon house). For additions, growth wins over strict agreement with canon:
+- Do not stop and ask for a slight shift caused by an addition. Add it, and log the shift in `docs/lore/conflicts.md` so the owner can see what moved.
+- A slight shift bends a detail around the new thing. It does not remove, rename or move a canon place, kill a canon person or change their allegiance or role, dissolve a canon group, or overwrite a canon history.
+- `canon/` is still never edited, and the world rules below still hold.
+- Stop and ask only when a change is large: it would undo a canon place, person, group or story.
+
 ## World rules (fixed)
 
 - **The world is static.** Realms, rulers and borders never change. Players rise within the world's order, never overturn it. No quest breaks the world.
