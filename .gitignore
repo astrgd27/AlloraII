@@ -5,3 +5,4 @@ dist/
 coverage/
 playwright-report/
 test-results/
+balance-report.md
