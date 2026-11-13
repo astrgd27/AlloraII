@@ -6,3 +6,4 @@ coverage/
 pnpm-lock.yaml
 *.md
 content/canon/
+packages/engine/src/generated/

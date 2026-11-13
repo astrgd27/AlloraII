@@ -1,0 +1,143 @@
+# Stub roads, laid by `pnpm world --roads` over canon places, for the owner to redraw.
+# Allora I has no roads inside a realm; these are new. Hours follow Allora I’s travel formula.
+# Once edited by hand, do not run `--roads` again for this file: it would overwrite the edits.
+- id: road_lazaretto_marre_palace
+  origin: allora2
+  kind: road
+  roots:
+    - lazaretto
+    - marre_palace
+  from: lazaretto
+  to: marre_palace
+  way: road
+  hours: 10
+- id: road_lazaretto_terraferma
+  origin: allora2
+  kind: road
+  roots:
+    - lazaretto
+    - terraferma
+  from: lazaretto
+  to: terraferma
+  way: track
+  hours: 10
+- id: road_lazaretto_wp_lighthouse
+  origin: allora2
+  kind: road
+  roots:
+    - lazaretto
+    - wp_lighthouse
+  from: lazaretto
+  to: wp_lighthouse
+  way: track
+  hours: 7
+- id: road_marre_canal_marre_city
+  origin: allora2
+  kind: road
+  roots:
+    - marre_canal
+    - marre_city
+  from: marre_canal
+  to: marre_city
+  way: street
+  hours: 1
+- id: road_marre_canal_marre_isles
+  origin: allora2
+  kind: road
+  roots:
+    - marre_canal
+    - marre_isles
+  from: marre_canal
+  to: marre_isles
+  way: road
+  hours: 7
+- id: road_marre_canal_xonia_shore
+  origin: allora2
+  kind: road
+  roots:
+    - marre_canal
+    - xonia_shore
+  from: marre_canal
+  to: xonia_shore
+  way: track
+  hours: 11
+- id: road_marre_city_marre_palace
+  origin: allora2
+  kind: road
+  roots:
+    - marre_city
+    - marre_palace
+  from: marre_city
+  to: marre_palace
+  way: street
+  hours: 1
+- id: road_marre_isles_morena
+  origin: allora2
+  kind: road
+  roots:
+    - marre_isles
+    - morena
+  from: marre_isles
+  to: morena
+  way: road
+  hours: 8
+- id: road_marre_isles_xonia_sunken
+  origin: allora2
+  kind: road
+  roots:
+    - marre_isles
+    - xonia_sunken
+  from: marre_isles
+  to: xonia_sunken
+  way: track
+  hours: 7
+- id: road_marre_palace_selino
+  origin: allora2
+  kind: road
+  roots:
+    - marre_palace
+    - selino
+  from: marre_palace
+  to: selino
+  way: road
+  hours: 8
+- id: road_morena_xonia_shore
+  origin: allora2
+  kind: road
+  roots:
+    - morena
+    - xonia_shore
+  from: morena
+  to: xonia_shore
+  way: track
+  hours: 9
+- id: road_morena_xonia_sunken
+  origin: allora2
+  kind: road
+  roots:
+    - morena
+    - xonia_sunken
+  from: morena
+  to: xonia_sunken
+  way: track
+  hours: 11
+- id: road_selino_terraferma
+  origin: allora2
+  kind: road
+  roots:
+    - selino
+    - terraferma
+  from: selino
+  to: terraferma
+  way: track
+  hours: 10
+- id: road_terraferma_wp_lighthouse
+  origin: allora2
+  kind: road
+  roots:
+    - terraferma
+    - wp_lighthouse
+  from: terraferma
+  to: wp_lighthouse
+  way: track
+  hours: 16

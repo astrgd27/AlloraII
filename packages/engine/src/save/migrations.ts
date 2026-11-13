@@ -7,6 +7,7 @@
  */
 import { createRng } from '../rng';
 import { SAVE_VERSION, type GameState } from '../state';
+import { START_PLACE } from '../world';
 
 type AnySave = Record<string, unknown>;
 
@@ -34,6 +35,8 @@ export const MIGRATIONS: Record<number, (save: AnySave) => AnySave> = {
       rng: createRng(),
     };
   },
+  // Version 2 adds the life's place and its journey (the map stub).
+  1: (save) => ({ ...save, version: 2, place: START_PLACE, journey: null }),
 };
 
 export function versionOf(save: unknown): number {

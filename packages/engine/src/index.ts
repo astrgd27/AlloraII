@@ -12,5 +12,7 @@ export * from './host';
 export * from './protocol';
 export * from './rng';
 export * from './state';
+export * from './travel';
+export * from './world';
 export * from './save/migrations';
 export * from './save/store';

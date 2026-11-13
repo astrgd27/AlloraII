@@ -38,6 +38,7 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: pnpm world --check
       - run: pnpm lint:content --check
         env:
           LINT_BASE: origin/${{ github.base_ref || 'main' }}

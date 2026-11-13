@@ -8,6 +8,8 @@ import { HOURS_PER_DAY, dateAt, type GameDate } from './calendar';
 import { EventBus } from './events';
 import type { Order } from './protocol';
 import { type GameState } from './state';
+import { travelSystem, turnBack, setOut } from './travel';
+import { World } from './world';
 
 /** One real minute is one game hour. The single tunable clock rate. */
 export const MS_PER_GAME_HOUR = 60_000;
@@ -27,7 +29,9 @@ export interface System {
 
 export interface EngineOptions {
   msPerGameHour?: number;
+  /** Extra systems, run after the built-in ones. */
   systems?: System[];
+  world?: World;
 }
 
 export interface Snapshot {
@@ -40,11 +44,27 @@ export interface Snapshot {
   caughtUpHours: number;
   /** Game hours of the last time away that were not simulated (over the cap). */
   skippedHours: number;
+  /** The place the life is in, or last left. */
+  place: string;
+  journey: {
+    from: string;
+    to: string;
+    /** The place the current leg leads to. */
+    next: string;
+    /** The place the current leg started from. */
+    last: string;
+    /** How far along the current leg, 0 to 1. */
+    legProgress: number;
+    hoursLeft: number;
+  } | null;
+  /** Travel hours from the life's place to every place it can reach. */
+  hoursTo: Record<string, number>;
 }
 
 export class Engine {
   readonly bus = new EventBus();
   readonly msPerGameHour: number;
+  readonly world: World;
   private readonly systems: System[];
   private caughtUpHours = 0;
   private skippedHours = 0;
@@ -54,7 +74,8 @@ export class Engine {
     options: EngineOptions = {},
   ) {
     this.msPerGameHour = options.msPerGameHour ?? MS_PER_GAME_HOUR;
-    this.systems = options.systems ?? [];
+    this.world = options.world ?? new World();
+    this.systems = [travelSystem, ...(options.systems ?? [])];
   }
 
   /** Runs one game hour. */
@@ -118,6 +139,12 @@ export class Engine {
         this.state.lastRealMs = nowMs;
         this.state.paused = false;
         break;
+      case 'travel':
+        setOut(this.state, this.world, order.to);
+        break;
+      case 'turnBack':
+        turnBack(this.state);
+        break;
       case 'save':
       case 'reset':
         // Handled by the host (the worker), which owns storage.
@@ -126,7 +153,25 @@ export class Engine {
   }
 
   snapshot(): Snapshot {
+    const j = this.state.journey;
+    const leg = j?.legs[0];
     return {
+      place: this.state.place,
+      journey:
+        j && leg
+          ? {
+              from: j.from,
+              to: j.to,
+              next: leg.to,
+              last: this.state.place,
+              legProgress: Math.min(
+                1,
+                (j.legHours + this.state.carryMs / this.msPerGameHour) / leg.hours,
+              ),
+              hoursLeft: j.legs.reduce((n, l) => n + l.hours, 0) - j.legHours,
+            }
+          : null,
+      hoursTo: j ? {} : this.world.hoursFrom(this.state.place),
       hours: this.state.hours,
       date: dateAt(this.state.hours),
       paused: this.state.paused,

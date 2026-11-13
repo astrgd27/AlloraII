@@ -30,7 +30,7 @@
 - [x] **7. Engine skeleton.** A Web Worker engine with the clock (1 real minute = 1 game hour), the calendar (28-day seasons, 112-day year), a message protocol for state and orders, and saves in IndexedDB with versioned migrations and a migration test.
   *Done when:* the clock runs in the browser, survives a reload, and a v0 save migrates in tests.
 
-- [ ] **8. Map stub.** A PixiJS map of Eintenn and Marre, drawn from canon places, with roads and travel times.
+- [x] **8. Map stub.** A PixiJS map of Eintenn and Marre, drawn from canon places, with roads and travel times.
   *Done when:* every canon place in those two areas shows and can be travelled to.
 
 - [ ] **9. Balance bot harness.** A headless runner that steps the engine for one game-year and posts a (mostly empty) report as a PR comment.
@@ -83,3 +83,11 @@
   - **Saves.** `SAVE_VERSION = 1`. A save with no version is version 0 (seed, hours, savedAt), and a migration lifts it to 1; the test loads a v0 save and plays on. The last 3 saves are kept. Autosave runs at the start of each game day, on pause, and when the page is hidden or left.
   - **Protocol.** UI → engine: `init`, then orders (`pause`, `resume`, `save`, `reset`). Engine → UI: `state` (a snapshot), `saved`, `error`.
   - **Checked in a browser.** With `?rate=200` the clock ran from hour 0 to 9, and after a reload carried on from 10. There is no automated browser test yet; the reload path is covered in unit tests with a memory store.
+- **2026-11-13 · Map stub (#8).** A PixiJS map of Eintenn (19 places) and Marre (11), with roads, travel times and travel. Decisions:
+  - **Roads are new.** Allora I has no roads inside a realm: you go straight between any two places. Allora II joins places by roads, so `pnpm world --roads` laid a first network over canon places: a spanning tree (every place can be reached) plus each place's two nearest neighbours (more than one way). The 42 roads are the first additions in `content/world/roads/`, each `origin: allora2` and rooted on the two places it joins. They are unnamed stubs for the owner to redraw and name; nothing canon says was changed, so nothing is logged in `conflicts.md`.
+  - **Hours come from Allora I's own travel formula** (`travelTime` in the game): distance × 0.38 inside a realm; 20 + world distance × 1.3 between realms. That gives 3–12 hours between neighbours, about two days across Eintenn, and 110 hours (4.6 days) for the one sea lane, Kesselhaven Harbor to Marre: the two realms' canon gates. All inside the bible's travel bands. Two city places within 20 map units are quarters of one city, one hour apart.
+  - **Ways.** `street` (inside a city), `road`, `track` (to or through a wild place), `sea`. Water crossings inside Marre's lagoon are not modelled yet; they show as roads.
+  - **Engine.** `packages/engine/src/world.ts` holds the graph and the quickest route (Dijkstra); `travel.ts` walks a route an hour at a time, arrives, and can turn back. Orders: `travel`, `turnBack`. The life starts in Ostwick, as in Allora I. The save is now version 2 (place and journey), with a migration from 1 and a test.
+  - **World data.** `pnpm world` builds `packages/engine/src/generated/world.json` from canon places and the roads; CI runs `pnpm world --check`.
+  - **Map.** Regions sit side by side on a wide screen and stack on a phone. Settled places are dots, wild places rings, sea lanes blue. Tap a place to see the hours and set out. A plain list of the same places sits under the map for keyboards and screen readers. The UI holds no rules: hours and routes come from the engine.
+  - **Checked in a browser.** All 30 places can be chosen and offer "Set out"; a journey to Burg Tennfels ran and arrived; a tap on the canvas chose the right place; no sideways scroll at phone width; no console errors.
