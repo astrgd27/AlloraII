@@ -1,6 +1,6 @@
 # Grell · culture guide
 
-**Status: draft, waiting for the owner's approval.** See [the overview](the-seven.md) for how to read this.
+**Status: approved by the owner, 2026-11-13.** See [the overview](the-seven.md) for how to read this.
 
 ## In one line
 

@@ -1,6 +1,6 @@
 # The Seven · culture guide (overview)
 
-**Status: draft, waiting for the owner's approval.** Written from canon (`content/canon/allora1/`, extracted from Allora I).
+**Status: approved by the owner, 2026-11-13.** Written from canon (`content/canon/allora1/`, extracted from Allora I).
 
 This page covers what the seven realms share. Each realm has its own guide:
 [Eintenn](eintenn.md) · [Luggen](luggen.md) · [Grell](grell.md) · [Sarlon](sarlon.md) · [Dellian](dellian.md) · [Rolla](rolla.md) · [Marre](marre.md).

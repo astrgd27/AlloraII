@@ -6,11 +6,11 @@ A guide is a **draft** until the owner approves it. Its status is on its first l
 
 | Land | Guides | Status |
 | --- | --- | --- |
-| The Seven | [Overview](the-seven.md) · [Eintenn](eintenn.md) · [Luggen](luggen.md) · [Grell](grell.md) · [Sarlon](sarlon.md) · [Dellian](dellian.md) · [Rolla](rolla.md) · [Marre](marre.md) | Draft, waiting for approval |
-| Gallar | Not written | |
-| Qoul | Not written | |
-| Thoolma | Not written | |
-| Polygoetia | Not written | |
+| The Seven | [Overview](the-seven.md) · [Eintenn](eintenn.md) · [Luggen](luggen.md) · [Grell](grell.md) · [Sarlon](sarlon.md) · [Dellian](dellian.md) · [Rolla](rolla.md) · [Marre](marre.md) | Approved 2026-11-13 |
+| Gallar | [Gallar](gallar.md), a section per realm | Draft, waiting for approval |
+| Qoul | [Qoul](qoul.md), a section per realm | Draft, waiting for approval |
+| Thoolma | [Thoolma](thoolma.md), a section per realm | Draft, waiting for approval |
+| Polygoetia | [Polygoetia](polygoetia.md), a section per island | Draft, waiting for approval |
 
 ## How a guide is written
 
