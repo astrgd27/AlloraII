@@ -15,7 +15,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "extract": "tsx packages/content-tools/src/extract/cli.ts",
-    "extract:check": "tsx packages/content-tools/src/extract/cli.ts --check"
+    "extract:check": "tsx packages/content-tools/src/extract/cli.ts --check",
+    "lint:content": "tsx packages/content-tools/src/lint/cli.ts"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

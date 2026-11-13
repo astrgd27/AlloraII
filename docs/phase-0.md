@@ -21,7 +21,7 @@
 - [x] **4. Schemas.** zod schemas for land, realm, place, person, group, faith, school, item and post. All have `id`, `origin` (`allora1` | `polygoetia` | `allora2`) and `roots` (required when origin is `allora2`).
   *Done when:* all extracted canon validates, or failures are listed in the extractor report with reasons.
 
-- [ ] **5. Canon index and lints.** A name index across all canon. `pnpm lint:content` runs the schema check, reference check, canon lint (no missing roots, no near-duplicate names, no edits to canon outside a `canon-change` PR) and lore lint (banned words, world rules). It also generates `docs/lore/additions.md`.
+- [x] **5. Canon index and lints.** A name index across all canon. `pnpm lint:content` runs the schema check, reference check, canon lint (no missing roots, no near-duplicate names, no edits to canon outside a `canon-change` PR) and lore lint (banned words, world rules). It also generates `docs/lore/additions.md`.
   *Done when:* a deliberately bad test entry fails each rule.
 
 - [ ] **6. Culture guides.** One draft guide per land and realm in `docs/lore/cultures/`: naming sounds and patterns, titles, food, dress, oaths, faiths, what people value. Every claim quotes canon as evidence. Open one PR per land for the owner to review.
@@ -66,3 +66,11 @@
   - **Canon kinds to schemas.** `region` uses the realm schema; `npc` uses person; `item_variant` uses item. Workings, skills, recipes, careers, lore, guide, Weathers, peoples, goods and routes get the base check only, until a phase needs more.
   - **Land and post have no canon entries.** Allora I names a land only as a `world` field on regions, and posts are new to Allora II. Both schemas are tested with hand-made entries. A post's ladder is exactly four ranks.
   - **Result.** All 9,485 canon entries validate. Each extraction report ends with a "Schema check" section, so a future failure is listed there with its entry, field and reason.
+- **2026-11-13 · Canon index and lints (#5).** `pnpm lint:content` (in `packages/content-tools/src/lint`) runs four checks and writes `docs/lore/additions.md`. `--check` also fails if that ledger is stale. A CI job runs it on every PR. Decisions:
+  - **Name index.** `pnpm extract` writes `content/canon/index/names.yaml`: 2,121 proper names (places and sub-places, realms, people, groups, faiths, schools, careers, Weathers) with the entries that bear them. Item, recipe and skill names are left out: they are common words.
+  - **Where additions live.** Anything under `content/` outside `content/canon/` is an addition. A file is a list of entries (or one entry).
+  - **Roots.** Every root must exist, and following roots must reach a canon entry. So a tavern may root on a new village, as long as the village roots on canon.
+  - **Near-duplicate names.** A new proper name fails if, with case, accents, spaces and a leading "the" removed, it equals a canon name or sits within one letter of it (two letters for names of ten or more). Names under five letters only fail on an exact match.
+  - **Edits to canon.** A change under `canon/` fails unless the PR is labelled `canon-change`. `content/canon/` is guarded more strictly by `pnpm extract:check`: it must equal a fresh extraction, label or no label. A hand change to extracted canon therefore has to go through the extractor.
+  - **Lore lint reads additions only.** Canon text is what it is. Banned words live in `banned-words.ts` (real-world terms, interface jargon, modern terms, placeholders); add to it whenever review finds one. The world-rule checks (witch magic, the three mysteries, augury hints, romance and minors) are patterns that catch the plain cases; `/lore-check` and review catch the subtle ones. A sentence over 45 words is a warning, not an error.
+  - **The owner's ruling and the lint.** The lint does not judge whether an addition shifts canon lore, so the ruling of 2026-11-13 needs no exception in it. Shifts are logged by hand in `docs/lore/conflicts.md`. The name rules still apply to every addition.

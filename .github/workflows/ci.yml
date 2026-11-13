@@ -25,6 +25,24 @@ jobs:
       - run: pnpm test
       - run: pnpm build
 
+  content:
+    # Schemas, references, canon lint, lore lint and the additions ledger.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint:content --check
+        env:
+          LINT_BASE: origin/${{ github.base_ref || 'main' }}
+          CANON_CHANGE: ${{ contains(github.event.pull_request.labels.*.name, 'canon-change') }}
+
   canon:
     # pnpm extract must reproduce content/canon/ byte for byte.
     runs-on: ubuntu-latest

@@ -10,6 +10,7 @@ import { collectTables } from './allora1/collect';
 import * as allora1 from './allora1/extract';
 import { TABLES } from './allora1/kinds';
 import * as polygoetia from './polygoetia/import';
+import { nameIndexFiles, NAME_INDEX_DIR } from './name-index';
 import { withSchemaCheck } from './schema-check';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../../../..');
@@ -56,7 +57,8 @@ async function differences({ outDir, files }: Extraction): Promise<string[]> {
 
 async function main(): Promise<void> {
   const check = process.argv.includes('--check');
-  const extractions = [await extractAllora1(), await extractPolygoetia()];
+  const sources = [await extractAllora1(), await extractPolygoetia()];
+  const extractions = [...sources, { outDir: NAME_INDEX_DIR, files: nameIndexFiles(sources) }];
 
   if (check) {
     const problems = (await Promise.all(extractions.map(differences))).flat();
