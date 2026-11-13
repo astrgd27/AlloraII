@@ -28,9 +28,12 @@ Rules:
 - `canon/` is still never edited, and the world rules below still hold.
 - Stop and ask only when a change is large: it would undo a canon place, person, group or story.
 
-**Owner's direction, 2026-11-13: ten times Allora I, and a place you live in.** Allora II should be at least ten times the size of the first game (Allora I has 282 places and about 290 named people), and it should feel like a place you live in, not just an idle game. When choosing what to build:
-- Prefer what makes a place lived-in: neighbours with routines, small places with a reason to return, hours and seasons that change what is there.
-- Grow the world in batches through the content pipeline, linted and rooted, rather than by hand-building screens.
+**Owner's direction, 2026-11-13: the most comprehensive fantasy life-sim ever.** Allora I felt like an abstract idle game. Allora II should feel like a place you live in, and its scale and travel are what make the difference.
+- **Target: about 2,200 places** (Allora I has 282; this replaces the bible's 1,100). By land: the Seven 560, Gallar 480, Qoul 480, Thoolma 420, Polygoetia 260.
+- **Fill gaps freely.** New faiths, groups, factions, people, skills, lore and game mechanics are all welcome wherever the expanded game needs them. Every one is marked as an addition (`origin: allora2`, with `roots`), fits the existing lore and its land's culture guide, and shows in `docs/lore/additions.md`. A new mechanic is recorded in the phase file with the gap it fills.
+- **Prefer what makes a place lived-in:** neighbours with routines, small places with a reason to return, hours and seasons that change what is there.
+- **Grow in batches** through the content pipeline, linted and rooted. Keep sessions cheap: generate from canon by script where a script can do it, and write by hand only what needs judgment.
+- The canon rules above and the world rules below still hold.
 
 ## World rules (fixed)
 
