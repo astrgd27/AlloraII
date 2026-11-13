@@ -53,3 +53,29 @@ Some fields in the game hold code (conditions and effects written as functions),
 The game holds more tables than the kinds above (quests, events, bestiary, romance, decor and many more). These are not part of the Phase 0 extraction and are read straight from `canon/allora-1.html` when needed:
 
 `ACTIONS`, `ACTION_SRC`, `AGE`, `AGE_ROWS`, `ANTIQ`, `ANTIQ_ITEMS`, `ANTIQ_LANG`, `ANTIQ_REVEAL`, `AN_ARC`, `AN_BOND`, `AN_BR`, `AN_FAITH`, `AN_FIND`, `AN_GM`, `AN_GR`, `AN_ITEMS`, `AN_KIND`, `AN_MKT`, `AN_MKT_Q`, `AN_NAMES`, `AN_PERS`, `AN_PREMIUM`, `AN_PREM_OF`, `AN_RARE`, `AN_SEARCH_SUB`, `AN_WILD`, `ARC`, `ARTS`, `ART_STAGE_T`, `ART_STAGE_TXT`, `ATTR_BOOST`, `BACKGROUNDS`, `BAKE_ACTS`, `BAKE_RX`, `BANK_LOCS`, `BBREED`, `BELLOR_ALTARS`, `BELLOR_DEEDS`, `BELLOR_T`, `BESTIARY`, `BG_RX`, `BKIND`, `BUFFS`, `BW`, `CALDER_VOWS`, `CAP`, `CAREER_GARB`, `CAREER_SUB`, `CAT_ATTR`, `CE`, `CERDAN_CASES`, `CERDAN_SUSPECTS`, `CIVS`, `CLIENTS`, `CL_BY`, `CM`, `CM_NOQ`, `CODEX_CATS`, `COMMISSIONS`, `CORNER_FAC`, `CORNER_N`, `CORNER_PRICE`, `CORNER_R4`, `CORNER_SK`, `CORNER_XP`, `CORPUS_VARS`, `CROP_SEAS`, `CROSS`, `CURIO_OF`, `CURIO_SETS`, `CV_BASE`, `CV_SIZE`, `DATES`, `DECIPHER_L`, `DECIPHER_N`, `DECIPHER_VARS`, `DECOR`, `DEGREES`, `DEITY_FAC`, `DEITY_SUB`, `DEM_DISLIKE`, `DEM_SQUARES`, `DISC_RN`, `DISC_TXT`, `DISEASES`, `DONATE_VARS`, `DZ_SEASON`, `EAST_DECOR`, `EAST_QUIRKS`, `EAST_VOYAGE_EVENTS`, `ENCH`, `ENCH_GN`, `ENCH_GROUPS`, `ENCH_SCH`, `ENCOUNTERS`, `EVC`, `EVENTS`, `EXEMPLAR_SK`, `EXTRA_SPECIAL`, `FACES`, `FACET_HOUSE_N`, `FACTION_TYPES`, `FARM_BASE`, `FARM_DAYS`, `FARM_FAM_SEAS`, `FARM_SEAS`, `FARM_SK`, `FEY_BOONS`, `FEY_PRICES`, `FLAG_TXT`, `FLOURISH`, `FOCUS`, `FOCUS_NEED`, `FOCUS_SRC`, `FOOD_FX`, `FORMS`, `FORM_GROUP`, `FURN`, `FURN_IDS`, `FW_CIRC`, `FW_DELL_COURTS`, `FW_DEVM`, `FW_DOORS`, `FW_DUTY`, `FW_EXCOM`, `FW_FEE`, `FW_GATE`, `FW_HALT`, `FW_JEALOUS`, `FW_MOMENTS`, `FW_NF`, `FW_NOR`, `FW_OBL`, `FW_PANEL`, `FW_PEAKS`, `FW_PEC_GIFTS`, `FW_PIL`, `FW_RECON`, `FW_REST`, `FW_RIVERS`, `FW_RULER_N`, `FW_TRACK`, `FXC`, `GALLAR_DECOR`, `GALLAR_FLAGS`, `GALLAR_SHORT`, `GAPB`, `GARB`, `GARB_ACT`, `GARB_SLOTS`, `GATED_FINDS`, `GATHER_SK`, `GENRES`, `GFAM`, `GH`, `GIANT_SLOTS`, `GK_FOCUS`, `GK_TUNE`, `GL_RENAME`, `GL_REVISE`, `GRAND`, `GRIM`, `GRIM_ACT`, `GW`, `GW_BY`, `GW_HOME`, `GW_RUMOUR`, `HAB_ACT`, `HAB_OF`, `HANDLERS`, `HEAL`, `HEARTH_SK`, `HOOK`, `HOUSES`, `HOUSE_CAT`, `HOUSE_RIVALS`, `HT`, `HTAG`, `HUM_N`, `HUM_PEN`, `KN_ABS`, `KN_CACHE`, `KN_DEF`, `KN_FX`, `KN_KIND_N`, `KN_LV`, `KN_N`, `KN_OWN`, `KN_SCOPED`, `KN_T`, `KW_STEPS`, `LAMP_SK`, `LANG`, `LANG_FAM_N`, `LANG_KIND_N`, `LANG_STAGE`, `LEGAL`, `LETTERS`, `LETTER_REACT`, `LIFESTYLES`, `LINKS`, `LINK_EVENTS`, `LORE_PEOPLE`, `LV_FAM`, `LV_MEAT`, `MAINT_ACTS`, `MANTLE_BARS`, `MAP_DECOR_SEVEN`, `MARK_T`, `MASTERPIECES`, `MAST_AT`, `MAW_CRAVE`, `MK_CATS`, `MOON_I`, `MOON_N`, `MP_PICK`, `MP_ROWS`, `MUSH`, `MUSIC`, `MX`, `NICHE_FOOD`, `NIGHT_SK`, `NIM_FORK`, `NORTH_WILD`, `NPCC`, `NPC_LOOKS`, `OWN_FX`, `PAYW`, `PDW`, `PD_DISC`, `PHORN_SITES`, `PIECE_CX`, `PJ`, `PJ_AT`, `PJ_NAME`, `PJ_PREM`, `PJ_ROOF`, `PJ_T`, `PJ_W`, `PLOT_N`, `PORT_SUB`, `PRACTICE_VERB`, `PRODUCE_HAB`, `PRODUCE_ROWS`, `PRONOUNS`, `PYRE_SK`, `QB`, `QE`, `QN`, `QOUL_DECOR`, `QSEC`, `QT`, `QTYPE`, `QT_BY_ID`, `QUEST_NAMES`, `QV`, `QVAR`, `Q_DAYS`, `Q_REWARD`, `RANK_REP`, `RANK_T`, `RBASE`, `REACT`, `REACT_MULT`, `REALM_REGION`, `REL_HANDLERS`, `REL_TASTE`, `REL_TIERS`, `REP_ACT`, `REP_GATE`, `REP_TIERS`, `RESIDENCES`, `RINGS`, `RIVALS`, `RIVAL_ROWS`, `RIVERS`, `RIVER_OF`, `ROAD_ENCOUNTERS`, `ROM`, `ROMAN`, `ROM_GIFT`, `ROM_STAGES`, `RUMOR_ACTS`, `SCENTS`, `SCHW`, `SCH_FIND`, `SEASONS`, `SEASON_SKY`, `SEA_LOCS`, `SECRET_SK`, `SEC_ADDED`, `SEC_RULES`, `SEED`, `SEED_OF`, `SHOP_ADD`, `SHOP_COST`, `SHORT`, `SKILL_NEED`, `SKILL_REQ`, `SKILL_SRC`, `SKY`, `SK_ALIAS`, `SLOTS`, `SLOT_GROUPS`, `SOUTH_WILD`, `SPEC`, `SPEC_FAMN`, `SPEC_ROWS`, `SPEC_SWAP`, `SPY_CASES`, `STALL`, `STARTER_RX`, `STATIONS`, `STAVES`, `STUDY_KIND`, `STUDY_T`, `ST_MAX`, `SUB_ST`, `TABLET`, `TABS`, `TALKS`, `TASTE`, `TIER_N`, `TIER_OF`, `TITLE_A`, `TITLE_OF`, `TRAITS`, `TRAIT_CAT`, `TRAIT_DAILY`, `TWILIGHT_SK`, `UI`, `VEILED_RITES`, `VENUE_N`, `VENUE_RX`, `VOICE_WORDS`, `VOTIVE_VARS`, `VOYAGE_EVENTS`, `WANDERERS`, `WAYPOINT_ROUTES`, `WEATHER`, `WEATHER_P`, `WORKS`, `WORK_LEARN`, `WORK_ROWS`, `XPT`, `XTRA`
+
+## Schema check
+
+Each file is checked against its zod schema (`packages/content-tools/src/schemas`). Kinds outside the nine Phase 0 schemas get the base check only: `id`, `origin`, `kind` and `roots`.
+
+| File | Schema | Entries | Failures |
+| --- | --- | ---: | ---: |
+| `places.yaml` | place | 282 | 0 |
+| `regions.yaml` | realm | 30 | 0 |
+| `realms.yaml` | realm | 34 | 0 |
+| `people.yaml` | person | 168 | 0 |
+| `npcs.yaml` | person | 125 | 0 |
+| `groups.yaml` | group | 249 | 0 |
+| `faiths.yaml` | faith | 36 | 0 |
+| `schools.yaml` | school | 29 | 0 |
+| `workings.yaml` | base | 237 | 0 |
+| `skills.yaml` | base | 275 | 0 |
+| `skill_categories.yaml` | base | 15 | 0 |
+| `items.yaml` | item | 1745 | 0 |
+| `item_variants.yaml` | item | 4484 | 0 |
+| `recipes.yaml` | base | 1135 | 0 |
+| `careers.yaml` | base | 97 | 0 |
+| `lore.yaml` | base | 403 | 0 |
+| `guide.yaml` | base | 63 | 0 |
+
+Every entry validates.

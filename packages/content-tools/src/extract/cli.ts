@@ -10,6 +10,7 @@ import { collectTables } from './allora1/collect';
 import * as allora1 from './allora1/extract';
 import { TABLES } from './allora1/kinds';
 import * as polygoetia from './polygoetia/import';
+import { withSchemaCheck } from './schema-check';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../../../..');
 
@@ -28,13 +29,13 @@ async function extractAllora1(): Promise<Extraction> {
     sha256: sha256(html),
     tableNames: allora1.topLevelTableNames(html.toString('utf8')),
   });
-  return { outDir: allora1.OUT_DIR, files };
+  return { outDir: allora1.OUT_DIR, files: withSchemaCheck(files) };
 }
 
 async function extractPolygoetia(): Promise<Extraction> {
   const md = await readFile(join(ROOT, polygoetia.SOURCE_FILE));
   const { files } = polygoetia.importPolygoetia(md.toString('utf8'), sha256(md));
-  return { outDir: polygoetia.OUT_DIR, files };
+  return { outDir: polygoetia.OUT_DIR, files: withSchemaCheck(files) };
 }
 
 async function differences({ outDir, files }: Extraction): Promise<string[]> {
