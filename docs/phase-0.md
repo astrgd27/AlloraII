@@ -53,3 +53,4 @@
   - **Not yet extracted.** Quests, events, the bestiary, romance and the other tables listed in the report. They are not Phase 0 kinds, and `/canon` reads them from the HTML.
   - **Reproducible.** The output depends only on the HTML (its SHA-256 is in the report). A CI job runs `pnpm extract:check`, which fails if `content/canon/` differs from a fresh run.
 - **2026-11-13 · Owner's ruling on canon and new places.** The game must be expansive and huge, so new places may be added even where they shift canon lore slightly. Such shifts are logged in `docs/lore/conflicts.md`, not stopped on. Recorded in `CLAUDE.md` under Canon. The canon lint (#5) must treat a logged slight shift from a new place as allowed.
+- **2026-11-13 · Ruling widened.** The owner widened the ruling above from places to new groups and people as well. `CLAUDE.md` and `docs/lore/conflicts.md` updated.
