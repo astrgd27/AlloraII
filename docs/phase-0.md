@@ -27,7 +27,7 @@
 - [ ] **6. Culture guides.** One draft guide per land and realm in `docs/lore/cultures/`: naming sounds and patterns, titles, food, dress, oaths, faiths, what people value. Every claim quotes canon as evidence. Open one PR per land for the owner to review.
   *Done when:* the owner approves each guide.
 
-- [ ] **7. Engine skeleton.** A Web Worker engine with the clock (1 real minute = 1 game hour), the calendar (28-day seasons, 112-day year), a message protocol for state and orders, and saves in IndexedDB with versioned migrations and a migration test.
+- [x] **7. Engine skeleton.** A Web Worker engine with the clock (1 real minute = 1 game hour), the calendar (28-day seasons, 112-day year), a message protocol for state and orders, and saves in IndexedDB with versioned migrations and a migration test.
   *Done when:* the clock runs in the browser, survives a reload, and a v0 save migrates in tests.
 
 - [ ] **8. Map stub.** A PixiJS map of Eintenn and Marre, drawn from canon places, with roads and travel times.
@@ -74,3 +74,12 @@
   - **Edits to canon.** A change under `canon/` fails unless the PR is labelled `canon-change`. `content/canon/` is guarded more strictly by `pnpm extract:check`: it must equal a fresh extraction, label or no label. A hand change to extracted canon therefore has to go through the extractor.
   - **Lore lint reads additions only.** Canon text is what it is. Banned words live in `banned-words.ts` (real-world terms, interface jargon, modern terms, placeholders); add to it whenever review finds one. The world-rule checks (witch magic, the three mysteries, augury hints, romance and minors) are patterns that catch the plain cases; `/lore-check` and review catch the subtle ones. A sentence over 45 words is a warning, not an error.
   - **The owner's ruling and the lint.** The lint does not judge whether an addition shifts canon lore, so the ruling of 2026-11-13 needs no exception in it. Shifts are logged by hand in `docs/lore/conflicts.md`. The name rules still apply to every addition.
+- **2026-11-13 · Order of work.** Issue 6 (culture guides) is skipped for now and taken after the code issues. It needs one PR per land held open for the owner's review, and this session has one branch, so it would block everything behind it.
+- **2026-11-13 · Engine skeleton (#7).** `packages/engine` now holds the calendar, the clock, a typed event bus, seeded random streams, saves with migrations, the message protocol, a host and the Web Worker entry. The UI shows the date and hour. Decisions:
+  - **Calendar.** Hours are counted whole, from the start of play. Play begins at dawn (the 6th hour) on day 1 of Spring, 1347 AR: canon gives the seasons (`SEASONS` in Allora I) and the present year (`lore_reckoning`). Day parts: dawn 5–8, day 8–18, dusk 18–21, night otherwise. These hours are my choice; canon does not fix them.
+  - **Clock.** `MS_PER_GAME_HOUR = 60_000` is the single clock rate. `?rate=<ms>` in the URL overrides it for tests and debugging.
+  - **Offline time (the bible's open question, due in Phase 0).** Time away is simulated at full speed, capped at 7 game days for each real day away, counting a started day as a whole one. So an hour away is caught up in full; a day away gives 7 game days, not 60. The snapshot reports hours caught up and hours skipped, ready for the "summary" the bible wants. This is the bible's leaning as I read it; the owner should confirm.
+  - **Layers.** `Engine` is pure (no worker, no storage, no real clock), so tests and the balance bot run it directly. `EngineHost` adds saves and messages. `worker.ts` only wires the host to the worker, a 250 ms timer and IndexedDB.
+  - **Saves.** `SAVE_VERSION = 1`. A save with no version is version 0 (seed, hours, savedAt), and a migration lifts it to 1; the test loads a v0 save and plays on. The last 3 saves are kept. Autosave runs at the start of each game day, on pause, and when the page is hidden or left.
+  - **Protocol.** UI → engine: `init`, then orders (`pause`, `resume`, `save`, `reset`). Engine → UI: `state` (a snapshot), `saved`, `error`.
+  - **Checked in a browser.** With `?rate=200` the clock ran from hour 0 to 9, and after a reload carried on from 10. There is no automated browser test yet; the reload path is covered in unit tests with a memory store.
