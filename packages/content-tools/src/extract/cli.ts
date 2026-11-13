@@ -7,40 +7,76 @@ import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { collectTables } from './allora1/collect';
-import { OUT_DIR, SOURCE_FILE, render, topLevelTableNames } from './allora1/extract';
+import * as allora1 from './allora1/extract';
 import { TABLES } from './allora1/kinds';
+import * as polygoetia from './polygoetia/import';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../../../..');
 
+interface Extraction {
+  outDir: string;
+  files: Map<string, string>;
+}
+
+const sha256 = (data: Buffer): string => createHash('sha256').update(data).digest('hex');
+
+async function extractAllora1(): Promise<Extraction> {
+  const htmlPath = join(ROOT, allora1.SOURCE_FILE);
+  const html = await readFile(htmlPath);
+  const tables = await collectTables(htmlPath, TABLES);
+  const files = allora1.render(tables, {
+    sha256: sha256(html),
+    tableNames: allora1.topLevelTableNames(html.toString('utf8')),
+  });
+  return { outDir: allora1.OUT_DIR, files };
+}
+
+async function extractPolygoetia(): Promise<Extraction> {
+  const md = await readFile(join(ROOT, polygoetia.SOURCE_FILE));
+  const { files } = polygoetia.importPolygoetia(md.toString('utf8'), sha256(md));
+  return { outDir: polygoetia.OUT_DIR, files };
+}
+
+async function differences({ outDir, files }: Extraction): Promise<string[]> {
+  const dir = join(ROOT, outDir);
+  const problems: string[] = [];
+  for (const [file, text] of files) {
+    const onDisk = await readFile(join(dir, file), 'utf8').catch(() => undefined);
+    if (onDisk !== text) {
+      problems.push(`${outDir}/${file} ${onDisk === undefined ? 'is missing' : 'differs'}`);
+    }
+  }
+  const onDisk = await readdir(dir).catch(() => [] as string[]);
+  for (const f of onDisk) {
+    if (!files.has(f)) problems.push(`${outDir}/${f} is not produced by the extractor`);
+  }
+  return problems;
+}
+
 async function main(): Promise<void> {
   const check = process.argv.includes('--check');
-  const htmlPath = join(ROOT, SOURCE_FILE);
-  const html = await readFile(htmlPath);
-  const sha256 = createHash('sha256').update(html).digest('hex');
-  const tables = await collectTables(htmlPath, TABLES);
-  const output = render(tables, { sha256, tableNames: topLevelTableNames(html.toString('utf8')) });
+  const extractions = [await extractAllora1(), await extractPolygoetia()];
 
-  const outDir = join(ROOT, OUT_DIR);
   if (check) {
-    const problems: string[] = [];
-    for (const [file, text] of output) {
-      const onDisk = await readFile(join(outDir, file), 'utf8').catch(() => undefined);
-      if (onDisk !== text)
-        problems.push(onDisk === undefined ? `${file} is missing` : `${file} differs`);
-    }
-    const extra = (await readdir(outDir).catch(() => [] as string[])).filter((f) => !output.has(f));
-    for (const f of extra) problems.push(`${f} is not produced by the extractor`);
+    const problems = (await Promise.all(extractions.map(differences))).flat();
     if (problems.length > 0) {
-      console.error(`${OUT_DIR} is out of date. Run \`pnpm extract\`.\n- ${problems.join('\n- ')}`);
+      console.error(
+        `content/canon is out of date. Run \`pnpm extract\`.\n- ${problems.join('\n- ')}`,
+      );
       process.exit(1);
     }
-    console.log(`${OUT_DIR} matches a fresh extraction (${output.size} files).`);
+    for (const e of extractions) {
+      console.log(`${e.outDir} matches a fresh extraction (${e.files.size} files).`);
+    }
     return;
   }
 
-  await mkdir(outDir, { recursive: true });
-  for (const [file, text] of output) await writeFile(join(outDir, file), text);
-  console.log(`Wrote ${output.size} files to ${OUT_DIR}.`);
+  for (const e of extractions) {
+    const dir = join(ROOT, e.outDir);
+    await mkdir(dir, { recursive: true });
+    for (const [file, text] of e.files) await writeFile(join(dir, file), text);
+    console.log(`Wrote ${e.files.size} files to ${e.outDir}.`);
+  }
 }
 
 main().catch((e: unknown) => {
