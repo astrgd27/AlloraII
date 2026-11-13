@@ -33,7 +33,7 @@
 - [x] **8. Map stub.** A PixiJS map of Eintenn and Marre, drawn from canon places, with roads and travel times.
   *Done when:* every canon place in those two areas shows and can be travelled to.
 
-- [ ] **9. Balance bot harness.** A headless runner that steps the engine for one game-year and posts a (mostly empty) report as a PR comment.
+- [x] **9. Balance bot harness.** A headless runner that steps the engine for one game-year and posts a (mostly empty) report as a PR comment.
   *Done when:* the report appears on a PR.
 
 - [ ] **10. Gate review.** Measure the game-day budget, run the full lint, and list anything left for the owner.
@@ -91,3 +91,8 @@
   - **World data.** `pnpm world` builds `packages/engine/src/generated/world.json` from canon places and the roads; CI runs `pnpm world --check`.
   - **Map.** Regions sit side by side on a wide screen and stack on a phone. Settled places are dots, wild places rings, sea lanes blue. Tap a place to see the hours and set out. A plain list of the same places sits under the map for keyboards and screen readers. The UI holds no rules: hours and routes come from the engine.
   - **Checked in a browser.** All 30 places can be chosen and offer "Set out"; a journey to Burg Tennfels ran and arrived; a tap on the canvas chose the right place; no sideways scroll at phone width; no console errors.
+- **2026-11-13 · Balance bot harness (#9).** `pnpm balance` (in `packages/content-tools/src/balance`) plays 20 lives for one game year each with the real engine, headless, and prints a report. The `Balance report` workflow runs it on every PR and posts the report as one comment, updated in place on later pushes. Decisions:
+  - **One persona, the wanderer.** Travel is the only thing a life can do yet, so the bot walks to random places. That already gives real numbers: journeys, time on the road, most and least visited places, and places nobody visited (dead content). The bible's six personas come with their systems.
+  - **Empty sections stay in the report** (hours to level, earnings, money supply, check odds, Legend pace), each marked as not built, so the report's shape is set from the start.
+  - **The performance budget is measured here.** The report gives real milliseconds per game day against the 20 ms budget, and `pnpm balance` fails if it is over. Today: about 0.01 ms.
+  - **Repeatable.** The bot draws from its own random stream, so the same seeds give the same lives. Only the timings differ between runs.

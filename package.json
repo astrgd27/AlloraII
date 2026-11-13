@@ -17,7 +17,8 @@
     "extract": "tsx packages/content-tools/src/extract/cli.ts",
     "extract:check": "tsx packages/content-tools/src/extract/cli.ts --check",
     "lint:content": "tsx packages/content-tools/src/lint/cli.ts",
-    "world": "tsx packages/content-tools/src/world/build.ts"
+    "world": "tsx packages/content-tools/src/world/build.ts",
+    "balance": "tsx packages/content-tools/src/balance/cli.ts"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
