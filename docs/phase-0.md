@@ -15,7 +15,7 @@
 - [x] **2. Allora I extractor.** Load `canon/allora-1.html` in headless Chromium (Playwright; do not run `playwright install` if a browser is already present). Find the game's data tables in the page (places and sub-places, people, organisations, faiths, schools and workings, skills, items and recipes, codex and lore text). Write them to `content/canon/allora1/<kind>.yaml`, keeping Allora I's own ids, with `origin: allora1`. Write `content/canon/allora1/REPORT.md` with counts by kind and anything that could not be read.
   *Done when:* `pnpm extract` reproduces the files byte for byte, and the report's counts match the game's own lists.
 
-- [ ] **3. Polygoetia importer.** Turn `canon/polygoetia.md` into `content/canon/polygoetia/` entries (islands as places, powers as groups, peoples, Weathers, schools, goods), `origin: polygoetia`, with ids in the same style as Allora I's.
+- [x] **3. Polygoetia importer.** Turn `canon/polygoetia.md` into `content/canon/polygoetia/` entries (islands as places, powers as groups, peoples, Weathers, schools, goods), `origin: polygoetia`, with ids in the same style as Allora I's.
   *Done when:* every island, power and Weather in the document has an entry.
 
 - [ ] **4. Schemas.** zod schemas for land, realm, place, person, group, faith, school, item and post. All have `id`, `origin` (`allora1` | `polygoetia` | `allora2`) and `roots` (required when origin is `allora2`).
@@ -54,3 +54,9 @@
   - **Reproducible.** The output depends only on the HTML (its SHA-256 is in the report). A CI job runs `pnpm extract:check`, which fails if `content/canon/` differs from a fresh run.
 - **2026-11-13 · Owner's ruling on canon and new places.** The game must be expansive and huge, so new places may be added even where they shift canon lore slightly. Such shifts are logged in `docs/lore/conflicts.md`, not stopped on. Recorded in `CLAUDE.md` under Canon. The canon lint (#5) must treat a logged slight shift from a new place as allowed.
 - **2026-11-13 · Ruling widened.** The owner widened the ruling above from places to new groups and people as well. `CLAUDE.md` and `docs/lore/conflicts.md` updated.
+- **2026-11-13 · Polygoetia importer (#3).** `pnpm extract` now also reads the tables of `canon/polygoetia.md` and writes `content/canon/polygoetia/` (78 entries in 8 files, plus `REPORT.md`). Decisions:
+  - **Tables only.** One entry per row of the islands, powers, Weathers, goods and doors tables. Prose (the Ring, the Charter, the Warden, the hooks, the dishes) is not turned into entries; the report lists what was left.
+  - **Ids** follow Allora I's short prefixed style: `pg_<island>` for places and the two regions, `f_pg_<power>` for groups, `folk_pg_<island>` for peoples, `wx_<weather>`, `mag_pg_<school>`, `goods_pg_<kind>`, `route_pg_<door>`.
+  - **Schools are names only.** The twelve island schools get a name and an island. The reference's magic and faith sections are unwritten, so nothing else is invented, and no faith entries exist yet (Mother Smoke is marked `magic_note: a faith`).
+  - **Peoples** are one per island, with the reference's own text. Some islands' opening labels name a rule or a nature, not a people ("The volcano"), so the field is `label`, not `name`. The culture guides (#6) can name the peoples properly.
+  - **Goods** are one entry per row (Fruit, Spices and scents, …), not one per good. Splitting them into items belongs with the item families.
