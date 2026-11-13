@@ -36,7 +36,7 @@
 - [x] **9. Balance bot harness.** A headless runner that steps the engine for one game-year and posts a (mostly empty) report as a PR comment.
   *Done when:* the report appears on a PR.
 
-- [ ] **10. Gate review.** Measure the game-day budget, run the full lint, and list anything left for the owner.
+- [x] **10. Gate review.** Measure the game-day budget, run the full lint, and list anything left for the owner.
 
 ## Decisions
 
@@ -96,3 +96,5 @@
   - **Empty sections stay in the report** (hours to level, earnings, money supply, check odds, Legend pace), each marked as not built, so the report's shape is set from the start.
   - **The performance budget is measured here.** The report gives real milliseconds per game day against the 20 ms budget, and `pnpm balance` fails if it is over. Today: about 0.01 ms.
   - **Repeatable.** The bot draws from its own random stream, so the same seeds give the same lives. Only the timings differ between runs.
+- **2026-11-13 · Gate review (#10).** Written up in `docs/phase-0-gate.md`. Two of the three gate lines hold: a game day simulates in about 0.005 ms (budget 20 ms), and all extracted canon passes `pnpm lint:content`. The third does not: the culture guides (#6) are not written or approved. **The gate is not passed, and Phase 1 does not start until it is.** The same document lists every decision left for the owner.
+- **Next for a fresh session:** issue #6, the culture guides. Ask the owner first whether to go one land at a time (recommended, starting with the Seven) or all five in one pull request.
