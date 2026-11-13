@@ -41,3 +41,20 @@ These parts of the reference are prose or notes for other content, not entries. 
 - The new disciplines and skills named in prose (Aeromancy, Hydromancy, Mentalism, Shell-Song, Weather-Lore).
 - The dishes list.
 - Schools have a name and an island only. The reference’s magic schools, faiths and open questions sections are unwritten (see `canon/README.md`), so nothing more is invented here.
+
+## Schema check
+
+Each file is checked against its zod schema (`packages/content-tools/src/schemas`). Kinds outside the nine Phase 0 schemas get the base check only: `id`, `origin`, `kind` and `roots`.
+
+| File | Schema | Entries | Failures |
+| --- | --- | ---: | ---: |
+| `regions.yaml` | realm | 2 | 0 |
+| `places.yaml` | place | 16 | 0 |
+| `peoples.yaml` | base | 16 | 0 |
+| `groups.yaml` | group | 14 | 0 |
+| `weathers.yaml` | base | 8 | 0 |
+| `schools.yaml` | school | 12 | 0 |
+| `goods.yaml` | base | 8 | 0 |
+| `routes.yaml` | base | 2 | 0 |
+
+Every entry validates.

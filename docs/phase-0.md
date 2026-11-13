@@ -18,7 +18,7 @@
 - [x] **3. Polygoetia importer.** Turn `canon/polygoetia.md` into `content/canon/polygoetia/` entries (islands as places, powers as groups, peoples, Weathers, schools, goods), `origin: polygoetia`, with ids in the same style as Allora I's.
   *Done when:* every island, power and Weather in the document has an entry.
 
-- [ ] **4. Schemas.** zod schemas for land, realm, place, person, group, faith, school, item and post. All have `id`, `origin` (`allora1` | `polygoetia` | `allora2`) and `roots` (required when origin is `allora2`).
+- [x] **4. Schemas.** zod schemas for land, realm, place, person, group, faith, school, item and post. All have `id`, `origin` (`allora1` | `polygoetia` | `allora2`) and `roots` (required when origin is `allora2`).
   *Done when:* all extracted canon validates, or failures are listed in the extractor report with reasons.
 
 - [ ] **5. Canon index and lints.** A name index across all canon. `pnpm lint:content` runs the schema check, reference check, canon lint (no missing roots, no near-duplicate names, no edits to canon outside a `canon-change` PR) and lore lint (banned words, world rules). It also generates `docs/lore/additions.md`.
@@ -60,3 +60,9 @@
   - **Schools are names only.** The twelve island schools get a name and an island. The reference's magic and faith sections are unwritten, so nothing else is invented, and no faith entries exist yet (Mother Smoke is marked `magic_note: a faith`).
   - **Peoples** are one per island, with the reference's own text. Some islands' opening labels name a rule or a nature, not a people ("The volcano"), so the field is `label`, not `name`. The culture guides (#6) can name the peoples properly.
   - **Goods** are one entry per row (Fruit, Spices and scents, …), not one per good. Splitting them into items belongs with the item families.
+- **2026-11-13 · Schemas (#4).** zod schemas in `packages/content-tools/src/schemas` for land, realm, place, person, group, faith, school, item and post. Decisions:
+  - **Base rules.** Every entry has `id`, `origin` and `kind`. An `allora2` entry must name at least one root and have a kind-prefixed stable id. Canon entries keep their source ids (`ostwick`, `candle_t2#1`).
+  - **Loose on purpose.** Each schema requires only what every entry of its kind must have, and keeps unknown fields, because canon carries many fields Allora II has not decided on. Later phases tighten them.
+  - **Canon kinds to schemas.** `region` uses the realm schema; `npc` uses person; `item_variant` uses item. Workings, skills, recipes, careers, lore, guide, Weathers, peoples, goods and routes get the base check only, until a phase needs more.
+  - **Land and post have no canon entries.** Allora I names a land only as a `world` field on regions, and posts are new to Allora II. Both schemas are tested with hand-made entries. A post's ladder is exactly four ranks.
+  - **Result.** All 9,485 canon entries validate. Each extraction report ends with a "Schema check" section, so a future failure is listed there with its entry, field and reason.
