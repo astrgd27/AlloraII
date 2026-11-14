@@ -37,6 +37,19 @@ export const wanderer: Persona = {
   },
 };
 
+/** Lives in Ostwick and does whatever work is to hand. */
+export const villager: Persona = {
+  name: 'Villager',
+  about: 'Stays in Ostwick and takes up any work that can be done at the hour.',
+  act(engine) {
+    if (engine.state.doing || engine.state.asleep) return;
+    const options = engine.snapshot().canDo;
+    const roll = nextRandom(engine.state.rng, engine.state.seed, 'bot');
+    const pick = options[Math.floor(roll * options.length)];
+    if (pick) engine.handle({ type: 'do', activity: pick }, 0);
+  },
+};
+
 export interface LifeResult {
   seed: number;
   hours: number;
@@ -48,6 +61,10 @@ export interface LifeResult {
   endDate: string;
   meals: number;
   hoursSlept: number;
+  /** Skill id → level reached. */
+  skills: Record<string, number>;
+  /** Hours spent on activities. */
+  hoursWorked: number;
   /** Each need: its mean over the life, and the lowest it fell. */
   needs: Record<'vigour' | 'health' | 'spirits', { mean: number; low: number }>;
 }
@@ -64,6 +81,8 @@ export function playLife(persona: Persona, seed: number, hours: number): LifeRes
     endDate: '',
     meals: 0,
     hoursSlept: 0,
+    skills: {},
+    hoursWorked: 0,
     needs: {
       vigour: { mean: 0, low: 100 },
       health: { mean: 0, low: 100 },
@@ -77,6 +96,7 @@ export function playLife(persona: Persona, seed: number, hours: number): LifeRes
   for (let h = 0; h < hours; h++) {
     persona.act(engine);
     if (engine.state.journey) result.hoursOnTheRoad += 1;
+    if (engine.state.doing && !engine.state.asleep) result.hoursWorked += 1;
     engine.tick();
     for (const key of ['vigour', 'health', 'spirits'] as const) {
       const v = engine.state.needs[key];
@@ -84,6 +104,7 @@ export function playLife(persona: Persona, seed: number, hours: number): LifeRes
       if (v < result.needs[key].low) result.needs[key].low = v;
     }
   }
+  for (const [id, k] of Object.entries(engine.state.skills)) result.skills[id] = k.level;
   result.meals = engine.state.meals;
   result.hoursSlept = engine.state.hoursSlept;
   const date = dateAt(engine.state.hours);

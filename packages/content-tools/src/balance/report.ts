@@ -1,5 +1,5 @@
 /** Renders the balance report posted on every pull request. */
-import { WORLD } from '@allora/engine';
+import { WORLD, hoursToLevel } from '@allora/engine';
 import { DAY_BUDGET_MS, type BalanceRun } from './bot';
 
 /** Marks the report's comment so the next run updates it instead of adding another. */
@@ -39,21 +39,26 @@ export function renderReport(run: BalanceRun, options: { timings?: boolean } = {
       '',
     );
   }
+  const travels = lives.some((l) => l.journeys > 0);
+  if (!travels) lines.push('### Travel', '', '_This persona stays at home._', '');
+  else
+    lines.push(
+      '### Travel',
+      '',
+      `- Journeys finished per life: ${mean(lives.map((l) => l.journeys)).toFixed(1)} on average.`,
+      `- Time on the road: ${((onRoad / totalHours) * 100).toFixed(1)}% of all hours.`,
+      `- Most visited: ${ranked
+        .slice(0, 3)
+        .map(([id, n]) => `${nameOf(id)} (${n})`)
+        .join(', ')}.`,
+      `- Least visited: ${ranked
+        .slice(-3)
+        .reverse()
+        .map(([id, n]) => `${nameOf(id)} (${n})`)
+        .join(', ')}.`,
+      '',
+    );
   lines.push(
-    '### Travel',
-    '',
-    `- Journeys finished per life: ${mean(lives.map((l) => l.journeys)).toFixed(1)} on average.`,
-    `- Time on the road: ${((onRoad / totalHours) * 100).toFixed(1)}% of all hours.`,
-    `- Most visited: ${ranked
-      .slice(0, 3)
-      .map(([id, n]) => `${nameOf(id)} (${n})`)
-      .join(', ')}.`,
-    `- Least visited: ${ranked
-      .slice(-3)
-      .reverse()
-      .map(([id, n]) => `${nameOf(id)} (${n})`)
-      .join(', ')}.`,
-    '',
     '### Needs',
     '',
     '| Need | Mean | Lowest any life fell |',
@@ -67,14 +72,16 @@ export function renderReport(run: BalanceRun, options: { timings?: boolean } = {
     '',
     '### Dead content',
     '',
-    never.length === 0
-      ? `- Places nobody visited: none (all ${WORLD.places.length} were reached).`
-      : `- **Places nobody visited (${never.length}):** ${never.join(', ')}.`,
+    !travels
+      ? '- Places nobody visited: not measured for a persona that stays at home.'
+      : never.length === 0
+        ? `- Places nobody visited: none (all ${WORLD.places.length} were reached).`
+        : `- **Places nobody visited (${never.length}):** ${never.join(', ')}.`,
     '- Items nobody makes, cases nobody finishes: ' + NOT_YET,
     '',
     '### Hours to level',
     '',
-    NOT_YET,
+    ...skillLines(run),
     '',
     '### Earnings per hour',
     '',
@@ -94,4 +101,21 @@ export function renderReport(run: BalanceRun, options: { timings?: boolean } = {
     '',
   );
   return lines.join('\n');
+}
+
+/** Levels reached in the run, against the hours the curve says they should take. */
+function skillLines(run: BalanceRun): string[] {
+  const ids = [...new Set(run.lives.flatMap((l) => Object.keys(l.skills)))].sort();
+  if (ids.length === 0) return ['_This persona does no work that trains a skill._'];
+  const worked = mean(run.lives.map((l) => l.hoursWorked));
+  return [
+    `Hours worked per life: ${worked.toFixed(0)}. Target curve: level 10 in ${hoursToLevel(10).toFixed(0)} hours of work at the edge, 25 in ${hoursToLevel(25).toFixed(0)}, 50 in ${hoursToLevel(50).toFixed(0)}.`,
+    '',
+    '| Skill | Mean level | Highest |',
+    '| --- | ---: | ---: |',
+    ...ids.map((id) => {
+      const levels = run.lives.map((l) => l.skills[id] ?? 0);
+      return `| ${WORLD.skills?.find((s) => s.id === id)?.name ?? id} | ${mean(levels).toFixed(1)} | ${Math.max(...levels)} |`;
+    }),
+  ];
 }

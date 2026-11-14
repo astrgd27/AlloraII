@@ -5,8 +5,8 @@
  *   --years <n>    game years per life (default 1)
  */
 import { writeFile } from 'node:fs/promises';
-import { DAY_BUDGET_MS, runBalance } from './bot';
-import { renderReport } from './report';
+import { DAY_BUDGET_MS, runBalance, villager, wanderer } from './bot';
+import { REPORT_MARKER, renderReport } from './report';
 
 const arg = (name: string): string | undefined => {
   const i = process.argv.indexOf(name);
@@ -16,8 +16,9 @@ const arg = (name: string): string | undefined => {
 async function main(): Promise<void> {
   const lives = Number(arg('--lives') ?? 20);
   const gameYears = Number(arg('--years') ?? 1);
-  const run = runBalance({ lives, gameYears });
-  const report = renderReport(run);
+  const run = runBalance({ lives, gameYears, persona: wanderer });
+  const village = runBalance({ lives, gameYears, persona: villager });
+  const report = `${renderReport(run)}\n---\n\n${renderReport(village, { timings: false }).replace(REPORT_MARKER, '').replace('## Balance report', '## Balance report: the villager')}`;
   console.log(report);
   const out = arg('--out');
   if (out) await writeFile(out, report);

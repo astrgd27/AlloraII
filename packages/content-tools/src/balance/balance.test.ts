@@ -1,6 +1,6 @@
 import { HOURS_PER_YEAR, WORLD } from '@allora/engine';
 import { describe, expect, it } from 'vitest';
-import { DAY_BUDGET_MS, playLife, runBalance, wanderer } from './bot';
+import { DAY_BUDGET_MS, playLife, runBalance, villager, wanderer } from './bot';
 import { REPORT_MARKER, renderReport } from './report';
 
 describe('the balance bot', () => {
@@ -32,6 +32,17 @@ describe('the balance bot', () => {
   });
 });
 
+describe('the villager', () => {
+  it('works, learns and stays well for a year', () => {
+    const life = playLife(villager, 1, HOURS_PER_YEAR);
+    expect(life.journeys).toBe(0);
+    expect(life.hoursWorked).toBeGreaterThan(500);
+    expect(life.skills.skill_husbandry).toBeGreaterThan(3);
+    expect(Math.max(...Object.values(life.skills))).toBeLessThanOrEqual(10);
+    expect(life.needs.health.low).toBeGreaterThan(80);
+  });
+});
+
 describe('the report', () => {
   const ticks = [0, 448];
   const run = runBalance({ lives: 4, now: () => ticks.shift() ?? 448 });
@@ -53,7 +64,8 @@ describe('the report', () => {
     }
     expect(report).toContain('One game day simulates in **1.0000 ms**');
     expect(report).toContain('within budget');
-    expect(report.match(/No data yet/g)).toHaveLength(6);
+    expect(report.match(/No data yet/g)).toHaveLength(5);
+    expect(report).toContain('does no work that trains a skill');
   });
 
   it('is the same every time once timings are left out', () => {

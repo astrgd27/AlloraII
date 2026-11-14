@@ -12,7 +12,7 @@
   from: 6
   to: 12
   hours: 3
-  skill: farming
+  skill: skill_husbandry
   effects:
     vigour: -10
     spirits: 0
@@ -28,7 +28,7 @@
   from: 7
   to: 11
   hours: 2
-  skill: farming
+  skill: skill_husbandry
   seasons: [0]
   effects:
     vigour: -6
@@ -45,7 +45,7 @@
   from: 6
   to: 18
   hours: 2
-  skill: farming
+  skill: skill_husbandry
   effects:
     vigour: -6
     spirits: 0
@@ -61,7 +61,7 @@
   from: 15
   to: 19
   hours: 1
-  skill: foraging
+  skill: skill_herblore
   seasons: [2]
   effects:
     vigour: -3
@@ -78,7 +78,7 @@
   from: 6
   to: 8
   hours: 2
-  skill: herding
+  skill: skill_beastcraft
   effects:
     vigour: -6
     spirits: 0
@@ -94,7 +94,7 @@
   from: 8
   to: 17
   hours: 3
-  skill: herding
+  skill: skill_beastcraft
   effects:
     vigour: -4
     spirits: 2
@@ -110,7 +110,7 @@
   from: 10
   to: 15
   hours: 1
-  skill: apiculture
+  skill: skill_husbandry
   effects:
     vigour: -3
     spirits: 1
@@ -126,7 +126,7 @@
   from: 6
   to: 10
   hours: 1
-  skill: herbalism
+  skill: skill_herblore
   effects:
     vigour: -3
     spirits: 1
@@ -142,7 +142,7 @@
   from: 6
   to: 9
   hours: 2
-  skill: cooking
+  skill: skill_cookery
   effects:
     vigour: -4
     spirits: 2
@@ -158,7 +158,7 @@
   from: 8
   to: 20
   hours: 2
-  skill: weaving
+  skill: skill_clothwork
   effects:
     vigour: -4
     spirits: 0
@@ -174,7 +174,7 @@
   from: 9
   to: 15
   hours: 3
-  skill: brewing
+  skill: skill_cookery
   effects:
     vigour: -6
     spirits: 1
@@ -190,7 +190,7 @@
   from: 6
   to: 10
   hours: 1
-  skill: gardening
+  skill: skill_husbandry
   effects:
     vigour: -3
     spirits: 0
@@ -206,7 +206,7 @@
   from: 17
   to: 20
   hours: 1
-  skill: gardening
+  skill: skill_husbandry
   effects:
     vigour: -3
     spirits: 1
@@ -222,7 +222,7 @@
   from: 18
   to: 22
   hours: 3
-  skill: insight
+  skill: skill_insight
   effects:
     vigour: -8
     spirits: 1
@@ -238,7 +238,7 @@
   from: 17
   to: 22
   hours: 1
-  skill: carousing
+  skill: skill_revelry
   effects:
     vigour: -2
     spirits: 4
@@ -254,7 +254,7 @@
   from: 19
   to: 22
   hours: 1
-  skill: storytelling
+  skill: skill_stagecraft
   effects:
     vigour: -1
     spirits: 3
@@ -270,7 +270,7 @@
   from: 16
   to: 20
   hours: 1
-  skill: strength
+  skill: attribute_might
   effects:
     vigour: -8
     spirits: 2
@@ -286,7 +286,7 @@
   from: 17
   to: 21
   hours: 1
-  skill: fiddle
+  skill: skill_music
   effects:
     vigour: -2
     spirits: 3
@@ -302,7 +302,7 @@
   from: 6
   to: 8
   hours: 1
-  skill: prayer
+  skill: skill_devotion
   effects:
     vigour: -1
     spirits: 3
@@ -318,7 +318,7 @@
   from: 6
   to: 9
   hours: 1
-  skill: endurance
+  skill: attribute_might
   effects:
     vigour: -3
     spirits: 0

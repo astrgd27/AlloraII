@@ -1,0 +1,40 @@
+# The five attributes. Each names the canon attribute skills it gathers in `roots`.
+- id: attribute_might
+  origin: allora2
+  kind: attribute
+  name: Might
+  text: Strength of body and the power to last.
+  roots:
+    - strength
+    - endurance
+    - vitality
+- id: attribute_grace
+  origin: allora2
+  kind: attribute
+  name: Grace
+  text: Quickness, balance and a sure hand.
+  roots:
+    - agility
+- id: attribute_wits
+  origin: allora2
+  kind: attribute
+  name: Wits
+  text: Memory, sharp senses and reasoning.
+  roots:
+    - memory
+    - acuity
+    - intellect
+- id: attribute_presence
+  origin: allora2
+  kind: attribute
+  name: Presence
+  text: The weight a person carries in a room.
+  roots:
+    - presence
+- id: attribute_will
+  origin: allora2
+  kind: attribute
+  name: Will
+  text: Resolve, and the strength magic draws on.
+  roots:
+    - willpower

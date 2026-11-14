@@ -84,6 +84,11 @@ async function main(): Promise<void> {
       subs: Object.fromEntries(((p.subs as Raw[] | undefined) ?? []).map((x) => [x.id, x.name])),
     })),
     roads: roads.map((r) => ({ id: r.id, from: r.from, to: r.to, way: r.way, hours: r.hours })),
+    skills: (await readYaml('content/skills/skills.yaml')).map((k) => ({
+      id: k.id,
+      name: k.name,
+      family: k.family,
+    })),
     people: npcs.map((n) => ({
       id: n.id,
       name: n.name,

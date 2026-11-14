@@ -38,6 +38,8 @@ export interface Activity {
   seasons?: number[];
   skill?: string;
   effects: { vigour?: number; health?: number; spirits?: number };
+  /** How hard it is, as a skill level. 1 if left out. */
+  level?: number;
 }
 
 /** One line of a person's day: where they are, in which hours and seasons. */
@@ -70,6 +72,7 @@ export interface WorldData {
   roads: Road[];
   activities?: Activity[];
   people?: Person[];
+  skills?: { id: string; name: string; family: string }[];
 }
 
 export const WORLD = data as unknown as WorldData;

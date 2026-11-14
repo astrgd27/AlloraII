@@ -1,0 +1,772 @@
+# Allora II's skills: fewer and deeper than Allora I's. Each names the canon skills it gathers in `roots`.
+- id: skill_smithing
+  origin: allora2
+  kind: skill
+  name: Smithing
+  family: crafts
+  text: Iron, bronze, silver and gold, from nails to bells.
+  roots:
+    - smithing
+    - goldsmithing
+    - minting
+    - bellfounding
+    - sunsmithing
+- id: skill_woodwork
+  origin: allora2
+  kind: skill
+  name: Woodwork
+  family: crafts
+  text: Timber shaped for houses, ships, bows and instruments.
+  roots:
+    - carpentry
+    - woodcarving
+    - bowyery
+    - shipwright
+    - luthiery
+    - bonecrafting
+- id: skill_building
+  origin: allora2
+  kind: skill
+  name: Building
+  family: crafts
+  text: Stone dressed and set, walls raised, floors laid.
+  roots:
+    - masonry
+    - construction
+    - mosaic
+    - architecture
+- id: skill_clothwork
+  origin: allora2
+  kind: skill
+  name: Clothwork
+  family: crafts
+  text: Thread, cloth, hide and fur, cut, dyed and sewn.
+  roots:
+    - tailoring
+    - weaving
+    - dyeing
+    - leatherwork
+    - furriery
+- id: skill_cookery
+  origin: allora2
+  kind: skill
+  name: Cookery
+  family: crafts
+  text: The oven, the pot, the cask and the salt-barrel.
+  roots:
+    - cooking
+    - baking
+    - brewing
+    - pickling
+    - butchery
+    - curing
+    - gastronomy
+- id: skill_kilncraft
+  origin: allora2
+  kind: skill
+  name: Kilncraft
+  family: crafts
+  text: Glass and clay, worked hot.
+  roots:
+    - glassblowing
+    - pottery
+    - gemcutting
+- id: skill_alchemy
+  origin: allora2
+  kind: skill
+  name: Alchemy
+  family: crafts
+  text: Distilling, compounding and preserving.
+  roots:
+    - alchemy
+    - perfumery
+    - candlemaking
+    - embalming
+- id: skill_bookcraft
+  origin: allora2
+  kind: skill
+  name: Bookcraft
+  family: crafts
+  text: Parchment, ink, binding, gilding and paint.
+  roots:
+    - bookbinding
+    - illumination
+    - painting
+    - scribecraft
+- id: skill_artifice
+  origin: allora2
+  kind: skill
+  name: Artifice
+  family: crafts
+  text: Wheels, springs and made things that move.
+  roots:
+    - horology
+    - golemcraft
+    - maintenance
+- id: skill_husbandry
+  origin: allora2
+  kind: skill
+  name: Husbandry
+  family: land
+  text: Field, garden, vine, hive and silk.
+  roots:
+    - farming
+    - gardening
+    - viticulture
+    - apiculture
+    - floristry
+    - sericulture
+    - irrigation
+- id: skill_beastcraft
+  origin: allora2
+  kind: skill
+  name: Beastcraft
+  family: land
+  text: Flocks, horses, hounds, hawks and stranger beasts.
+  roots:
+    - herding
+    - horsemanship
+    - animal_lore
+    - falconry
+    - kennelcraft
+    - elephantry
+    - grooming
+    - beast_training
+    - taming
+    - animal_appraisal
+- id: skill_herblore
+  origin: allora2
+  kind: skill
+  name: Herblore
+  family: land
+  text: What grows wild, and what it is good for.
+  roots:
+    - herbalism
+    - mycology
+    - foraging
+- id: skill_woodcraft
+  origin: allora2
+  kind: skill
+  name: Woodcraft
+  family: land
+  text: 'The forest: its timber, its game and its ways through.'
+  roots:
+    - forestry
+    - woodcutting
+    - tracking
+    - trapping
+    - hunting
+    - survival
+    - canopy
+- id: skill_mining
+  origin: allora2
+  kind: skill
+  name: Mining
+  family: land
+  text: Ore, stone, salt and ice, found and won.
+  roots:
+    - mining
+    - prospecting
+    - excavation
+    - icecraft
+- id: skill_seamanship
+  origin: allora2
+  kind: skill
+  name: Seamanship
+  family: land
+  text: Sail, oar, rope and the reading of water.
+  roots:
+    - sailing
+    - rigging
+    - navigation
+    - pilotage
+    - rowing
+    - rafting
+- id: skill_fishing
+  origin: allora2
+  kind: skill
+  name: Fishing
+  family: land
+  text: Net, line, trap and the breath-held dive.
+  roots:
+    - fishing
+    - diving
+- id: skill_wayfaring
+  origin: allora2
+  kind: skill
+  name: Wayfaring
+  family: land
+  text: Roads, maps, caravans and the long way round.
+  roots:
+    - pathfinding
+    - caravaneering
+    - geography
+    - cartography
+    - freighting
+- id: skill_arms
+  origin: allora2
+  kind: skill
+  name: Arms
+  family: body
+  text: Blade, haft, shield and harness.
+  roots:
+    - swords
+    - polearms
+    - axemace
+    - dueling
+    - shieldwork
+    - armored
+    - shieldwall
+    - machete
+    - silkcord
+- id: skill_marksmanship
+  origin: allora2
+  kind: skill
+  name: Marksmanship
+  family: body
+  text: Bow, crossbow and the thrown thing.
+  roots:
+    - archery
+    - crossbows
+    - throwing
+- id: skill_riding
+  origin: allora2
+  kind: skill
+  name: Riding to war
+  family: body
+  text: The charge, the chariot and the lists.
+  roots:
+    - cavalry
+    - chariotry
+    - jousting
+- id: skill_athletics
+  origin: allora2
+  kind: skill
+  name: Athletics
+  family: body
+  text: Running, leaping, climbing and swimming.
+  roots:
+    - running
+    - jumping
+    - acrobatics
+    - climbing
+    - swimming
+    - skating
+    - paragliding
+    - bullleaping
+    - sway
+    - magnateclimb
+- id: skill_games
+  origin: allora2
+  kind: skill
+  name: Games
+  family: body
+  text: Wrestling, ball-games and every contest of the green.
+  roots:
+    - wrestling
+    - brawling
+    - ninepins
+    - calcio
+    - stoneheave
+    - pallone
+    - klootschiet
+    - fingerhakeln
+    - canes
+- id: skill_letters
+  origin: allora2
+  kind: skill
+  name: Letters
+  family: mind
+  text: Reading, records, lineages and the past.
+  roots:
+    - literacy
+    - genealogy
+    - cordreading
+    - history
+- id: skill_numbers
+  origin: allora2
+  kind: skill
+  name: Numbers
+  family: mind
+  text: Reckoning, ledgers and the keeping of money.
+  roots:
+    - mathematics
+    - accounting
+    - banking
+- id: skill_physick
+  origin: allora2
+  kind: skill
+  name: Physick
+  family: mind
+  text: The sick, the hurt and the mending of both.
+  roots:
+    - physick
+    - chirurgery
+    - nursing
+- id: skill_philosophy
+  origin: allora2
+  kind: skill
+  name: Natural philosophy
+  family: mind
+  text: The sky, the earth and why things are as they are.
+  roots:
+    - natphil
+    - astrology
+    - humreading
+- id: skill_antiquities
+  origin: allora2
+  kind: skill
+  name: Antiquities
+  family: mind
+  text: What the old peoples left, and how to read it.
+  roots:
+    - archaeology
+- id: skill_tongues
+  origin: allora2
+  kind: skill
+  name: Tongues
+  family: mind
+  text: The languages of Allora, living and dead.
+  roots:
+    - lang_eintennish
+    - lang_velarran
+    - lang_qadiri
+    - lang_seaspeak
+    - lang_allorese
+    - lang_runic
+    - lang_threshold
+    - lang_sarlonese
+    - lang_luggish
+    - lang_grellish
+    - lang_rollan
+    - lang_phrell
+    - lang_xonian
+    - lang_callum
+    - lang_thoolmic
+    - lang_riplese
+    - lang_drellic
+    - lang_dorric
+    - lang_shellan
+    - lang_lommish
+    - lang_harrowan
+    - lang_mearcish
+    - lang_woccan
+    - lang_sillenian
+    - lang_ahnari
+    - lang_arumi
+    - lang_ashqeli
+    - lang_seylonese
+    - lang_gramannan
+    - lang_topilan
+    - lang_stipend
+    - lang_velator
+    - lang_anquerran
+- id: skill_command
+  origin: allora2
+  kind: skill
+  name: Command
+  family: mind
+  text: Ordering people and ground, in war and out of it.
+  roots:
+    - tactics
+    - leadership
+    - siegecraft
+- id: skill_persuasion
+  origin: allora2
+  kind: skill
+  name: Persuasion
+  family: people
+  text: Moving minds by reason, charm or weight.
+  roots:
+    - persuasion
+    - rhetoric
+    - diplomacy
+    - mediation
+    - petitioning
+    - intimidation
+- id: skill_courtesy
+  origin: allora2
+  kind: skill
+  name: Courtesy
+  family: people
+  text: Rank, manners, dress and the right word at court.
+  roots:
+    - etiquette
+    - heraldry
+    - chivalry
+    - fashion
+    - courtship
+- id: skill_insight
+  origin: allora2
+  kind: skill
+  name: Insight
+  family: people
+  text: Reading a face, a room and a lie.
+  roots:
+    - insight
+- id: skill_trade
+  origin: allora2
+  kind: skill
+  name: Trade
+  family: people
+  text: Buying, selling, valuing and the terms of a deal.
+  roots:
+    - bartering
+    - appraisal
+    - peddling
+    - speculation
+    - factoring
+    - contracts
+- id: skill_stewardship
+  origin: allora2
+  kind: skill
+  name: Stewardship
+  family: people
+  text: Running a house, an estate or an office.
+  roots:
+    - stewardship
+    - cleaning
+- id: skill_music
+  origin: allora2
+  kind: skill
+  name: Music
+  family: people
+  text: Voice and instrument.
+  roots:
+    - singing
+    - harp
+    - fiddle
+    - lute
+    - shawm
+    - tabor
+    - composition
+- id: skill_stagecraft
+  origin: allora2
+  kind: skill
+  name: Stagecraft
+  family: people
+  text: The stage, the tale, the verse and the dance.
+  roots:
+    - acting
+    - dance
+    - juggling
+    - puppetry
+    - mummery
+    - playwriting
+    - choreography
+    - storytelling
+    - poetry
+    - riddling
+- id: skill_revelry
+  origin: allora2
+  kind: skill
+  name: Revelry
+  family: people
+  text: The table, the cup and good company.
+  roots:
+    - carousing
+- id: skill_stealth
+  origin: allora2
+  kind: skill
+  name: Stealth
+  family: shadow
+  text: Going unseen and unremarked.
+  roots:
+    - sneaking
+    - casing
+    - disguise
+- id: skill_thievery
+  origin: allora2
+  kind: skill
+  name: Thievery
+  family: shadow
+  text: Locks, purses and graves.
+  roots:
+    - lockpicking
+    - pickpocketing
+    - graverobbing
+- id: skill_streetwise
+  origin: allora2
+  kind: skill
+  name: Streetwise
+  family: shadow
+  text: 'The underside of a town: its talk, its games and its trade.'
+  roots:
+    - streetwise
+    - cant
+    - smuggling
+    - dicing
+    - kalazt
+- id: skill_deceit
+  origin: allora2
+  kind: skill
+  name: Deceit
+  family: shadow
+  text: Lies, forged hands, plots and spies.
+  roots:
+    - deception
+    - forgery
+    - intrigue
+    - spycraft
+- id: skill_poisoncraft
+  origin: allora2
+  kind: skill
+  name: Poisoncraft
+  family: shadow
+  text: Venoms, doses and their cures.
+  roots:
+    - poisoncraft
+- id: skill_devotion
+  origin: allora2
+  kind: skill
+  name: Devotion
+  family: faith
+  text: Prayer, song and the rites of the day.
+  roots:
+    - prayer
+    - liturgy
+    - chanting
+    - psalmody
+    - lustration
+    - remembrance
+    - keening
+- id: skill_theology
+  origin: allora2
+  kind: skill
+  name: Theology
+  family: faith
+  text: Doctrine, and the speaking of it.
+  roots:
+    - theology
+    - preaching
+- id: skill_contemplation
+  origin: allora2
+  kind: skill
+  name: Contemplation
+  family: faith
+  text: Stillness, fasting and the long road to a shrine.
+  roots:
+    - meditation
+    - asceticism
+    - pilgrimage
+- id: skill_rites
+  origin: allora2
+  kind: skill
+  name: Rites of power
+  family: faith
+  text: Casting out and calling in.
+  roots:
+    - exorcism
+    - channeling
+- id: skill_augury
+  origin: allora2
+  kind: skill
+  name: Augury
+  family: faith
+  text: Signs, lots and the reading of them.
+  roots:
+    - augury
+    - prophecy
+    - lotcasting
+- id: skill_hedgecraft
+  origin: allora2
+  kind: skill
+  name: Charms
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - hedgecraft
+- id: skill_evocation
+  origin: allora2
+  kind: skill
+  name: Evocation
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - evocation
+- id: skill_warding
+  origin: allora2
+  kind: skill
+  name: Warding
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - warding
+- id: skill_illusion
+  origin: allora2
+  kind: skill
+  name: Illusion
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - illusion
+- id: skill_divination
+  origin: allora2
+  kind: skill
+  name: Divination
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - divination
+- id: skill_summoning
+  origin: allora2
+  kind: skill
+  name: Summoning
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - summoning
+- id: skill_necromancy
+  origin: allora2
+  kind: skill
+  name: Necromancy
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - necromancy
+- id: skill_druidism
+  origin: allora2
+  kind: skill
+  name: Nature Magic
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - druidism
+- id: skill_runecraft
+  origin: allora2
+  kind: skill
+  name: Rune Magic
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - runecraft
+- id: skill_feybargain
+  origin: allora2
+  kind: skill
+  name: Fae Magic
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - feybargain
+- id: skill_lumencraft
+  origin: allora2
+  kind: skill
+  name: Light Magic
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - lumencraft
+    - lanterncraft
+- id: skill_grandeur
+  origin: allora2
+  kind: skill
+  name: Gigantism
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - grandeur
+- id: skill_hushcraft
+  origin: allora2
+  kind: skill
+  name: Oblivion
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - hushcraft
+- id: skill_witchlore
+  origin: allora2
+  kind: skill
+  name: Countermagic
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - witchlore
+  note: Countermagic only. It can never be used to work witch magic.
+- id: skill_battlemagic
+  origin: allora2
+  kind: skill
+  name: Pyromancy
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - battlemagic
+- id: skill_dreaming
+  origin: allora2
+  kind: skill
+  name: Dream Magic
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - dreaming
+- id: skill_geomancy
+  origin: allora2
+  kind: skill
+  name: Geomancy
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - geomancy
+- id: skill_namebinding
+  origin: allora2
+  kind: skill
+  name: Name Magic
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - namebinding
+- id: skill_redreading
+  origin: allora2
+  kind: skill
+  name: Blood Magic
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - redreading
+- id: skill_demonology
+  origin: allora2
+  kind: skill
+  name: Demonology
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - demonology
+- id: skill_facetcraft
+  origin: allora2
+  kind: skill
+  name: Crystal Magic
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - facetcraft
+- id: skill_verseburning
+  origin: allora2
+  kind: skill
+  name: Inscription
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - verseburning
+- id: skill_alteration
+  origin: allora2
+  kind: skill
+  name: Alteration
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - alteration
+- id: skill_transmutation
+  origin: allora2
+  kind: skill
+  name: Transmutation
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - transmutation
+- id: skill_restoration
+  origin: allora2
+  kind: skill
+  name: Restoration
+  family: magic
+  text: A discipline of magic, kept as Allora I has it.
+  roots:
+    - restoration
