@@ -35,6 +35,8 @@ export interface Leg {
   road: string;
   to: string;
   hours: number;
+  /** True for a sea lane: the life is a passenger and can sleep aboard. */
+  sea?: true;
 }
 
 export interface Route {
@@ -52,8 +54,9 @@ export class World {
       this.links.set(place.id, []);
     }
     for (const road of data.roads) {
-      this.links.get(road.from)?.push({ road: road.id, to: road.to, hours: road.hours });
-      this.links.get(road.to)?.push({ road: road.id, to: road.from, hours: road.hours });
+      const sea = road.way === 'sea' ? ({ sea: true } as const) : {};
+      this.links.get(road.from)?.push({ road: road.id, to: road.to, hours: road.hours, ...sea });
+      this.links.get(road.to)?.push({ road: road.id, to: road.from, hours: road.hours, ...sea });
     }
   }
 

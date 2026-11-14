@@ -7,6 +7,7 @@
 import { HOURS_PER_DAY, dateAt, type GameDate } from './calendar';
 import { EventBus } from './events';
 import type { Order } from './protocol';
+import { needsSystem, type Needs, type StandingOrders } from './needs';
 import { type GameState } from './state';
 import { travelSystem, turnBack, setOut } from './travel';
 import { World } from './world';
@@ -44,6 +45,10 @@ export interface Snapshot {
   caughtUpHours: number;
   /** Game hours of the last time away that were not simulated (over the cap). */
   skippedHours: number;
+  needs: Needs;
+  asleep: boolean;
+  home: string;
+  orders: StandingOrders;
   /** The place the life is in, or last left. */
   place: string;
   journey: {
@@ -75,7 +80,7 @@ export class Engine {
   ) {
     this.msPerGameHour = options.msPerGameHour ?? MS_PER_GAME_HOUR;
     this.world = options.world ?? new World();
-    this.systems = [travelSystem, ...(options.systems ?? [])];
+    this.systems = [needsSystem, travelSystem, ...(options.systems ?? [])];
   }
 
   /** Runs one game hour. */
@@ -142,6 +147,9 @@ export class Engine {
       case 'travel':
         setOut(this.state, this.world, order.to);
         break;
+      case 'setOrders':
+        this.state.orders = { ...this.state.orders, ...order.orders };
+        break;
       case 'turnBack':
         turnBack(this.state);
         break;
@@ -156,6 +164,10 @@ export class Engine {
     const j = this.state.journey;
     const leg = j?.legs[0];
     return {
+      needs: { ...this.state.needs },
+      asleep: this.state.asleep,
+      home: this.state.home,
+      orders: { ...this.state.orders },
       place: this.state.place,
       journey:
         j && leg

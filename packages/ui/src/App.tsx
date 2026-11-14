@@ -26,6 +26,19 @@ export function App() {
           <div className="hour-bar" aria-hidden="true">
             <div style={{ width: `${snapshot.hourProgress * 100}%` }} />
           </div>
+          <ul className="needs" data-testid="needs">
+            {(['vigour', 'health', 'spirits'] as const).map((need) => (
+              <li key={need}>
+                <span>{need}</span>
+                <meter min={0} max={100} low={30} value={snapshot.needs[need]} aria-label={need} />
+              </li>
+            ))}
+          </ul>
+          {snapshot.asleep && (
+            <p className="quiet" data-testid="asleep">
+              {snapshot.journey ? 'In camp, asleep' : 'Asleep'}
+            </p>
+          )}
         </section>
       )}
       <MapView snapshot={snapshot} chosen={chosen} onChoose={setChosen} />

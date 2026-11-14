@@ -54,6 +54,17 @@ export function renderReport(run: BalanceRun, options: { timings?: boolean } = {
       .map(([id, n]) => `${nameOf(id)} (${n})`)
       .join(', ')}.`,
     '',
+    '### Needs',
+    '',
+    '| Need | Mean | Lowest any life fell |',
+    '| --- | ---: | ---: |',
+    ...(['vigour', 'health', 'spirits'] as const).map(
+      (k) =>
+        `| ${k} | ${mean(lives.map((l) => l.needs[k].mean)).toFixed(1)} | ${Math.min(...lives.map((l) => l.needs[k].low)).toFixed(1)} |`,
+    ),
+    '',
+    `- Sleep: ${(mean(lives.map((l) => l.hoursSlept)) / (run.gameYears * 112)).toFixed(1)} hours a day. Meals: ${(mean(lives.map((l) => l.meals)) / (run.gameYears * 112)).toFixed(1)} a day.`,
+    '',
     '### Dead content',
     '',
     never.length === 0

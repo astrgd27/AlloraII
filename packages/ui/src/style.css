@@ -149,3 +149,31 @@ button:focus-visible {
 .place-list button[aria-current='location'] {
   border-color: var(--accent);
 }
+
+.needs {
+  list-style: none;
+  padding: 0;
+  margin: 0.9rem 0 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+}
+
+.needs li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.needs span {
+  opacity: 0.7;
+  text-transform: capitalize;
+}
+
+.needs meter {
+  width: 5rem;
+  height: 0.4rem;
+}

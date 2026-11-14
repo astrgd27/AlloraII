@@ -23,6 +23,7 @@ const SMALL: WorldData = {
 
 const start = (place = 'a') => {
   const engine = new Engine({ ...newGame(1, 0), place }, { world: new World(SMALL) });
+  engine.state.orders.campAtNight = false;
   return engine;
 };
 
@@ -113,7 +114,10 @@ describe('the Phase 0 world: Eintenn and Marre', () => {
     const [farthest, time] = Object.entries(hours).sort((a, b) => b[1] - a[1])[0]!;
     const engine = new Engine(newGame(1, 0));
     engine.handle({ type: 'travel', to: farthest }, 0);
+    // The road takes its hours, plus the nights spent in camp on the way.
     engine.run(time);
+    expect(engine.state.journey).not.toBeNull();
+    engine.run(time * 2);
     expect(engine.state).toMatchObject({ place: farthest, journey: null });
   });
 

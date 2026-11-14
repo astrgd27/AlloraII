@@ -1,4 +1,5 @@
 /** The whole game state. The engine owns it; the UI only ever sees snapshots. */
+import { DEFAULT_ORDERS, FULL_NEEDS, type Needs, type StandingOrders } from './needs';
 import { createRng, type RngState } from './rng';
 import { START_PLACE, type Leg } from './world';
 
@@ -13,7 +14,7 @@ export interface Journey {
 }
 
 /** The save format version. Raise it with every change to GameState, and add a migration. */
-export const SAVE_VERSION = 2;
+export const SAVE_VERSION = 3;
 
 export interface GameState {
   version: typeof SAVE_VERSION;
@@ -30,6 +31,15 @@ export interface GameState {
   /** Where the life is. While travelling, the place last left. */
   place: string;
   journey: Journey | null;
+  /** Where the life has a bed. */
+  home: string;
+  needs: Needs;
+  orders: StandingOrders;
+  asleep: boolean;
+  hoursSinceMeal: number;
+  /** Running totals, for the report. */
+  meals: number;
+  hoursSlept: number;
 }
 
 export function newGame(seed: number, nowMs: number): GameState {
@@ -43,5 +53,12 @@ export function newGame(seed: number, nowMs: number): GameState {
     rng: createRng(),
     place: START_PLACE,
     journey: null,
+    home: START_PLACE,
+    needs: { ...FULL_NEEDS },
+    orders: { ...DEFAULT_ORDERS },
+    asleep: false,
+    hoursSinceMeal: 0,
+    meals: 0,
+    hoursSlept: 0,
   };
 }

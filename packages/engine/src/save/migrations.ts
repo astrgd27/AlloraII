@@ -5,6 +5,7 @@
  * To change the save format: raise SAVE_VERSION in state.ts, add a migration
  * here from the old version, and add a test with a save of the old version.
  */
+import { DEFAULT_ORDERS, FULL_NEEDS } from '../needs';
 import { createRng } from '../rng';
 import { SAVE_VERSION, type GameState } from '../state';
 import { START_PLACE } from '../world';
@@ -37,6 +38,18 @@ export const MIGRATIONS: Record<number, (save: AnySave) => AnySave> = {
   },
   // Version 2 adds the life's place and its journey (the map stub).
   1: (save) => ({ ...save, version: 2, place: START_PLACE, journey: null }),
+  // Version 3 adds needs, a home and standing orders. The home is where the life stands.
+  2: (save) => ({
+    ...save,
+    version: 3,
+    home: typeof save.place === 'string' ? save.place : START_PLACE,
+    needs: { ...FULL_NEEDS },
+    orders: { ...DEFAULT_ORDERS },
+    asleep: false,
+    hoursSinceMeal: 0,
+    meals: 0,
+    hoursSlept: 0,
+  }),
 };
 
 export function versionOf(save: unknown): number {
