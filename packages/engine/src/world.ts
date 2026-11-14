@@ -72,7 +72,7 @@ export interface WorldData {
   people?: Person[];
 }
 
-export const WORLD = data as WorldData;
+export const WORLD = data as unknown as WorldData;
 
 /** Where a new life begins: Ostwick, in Eintenn, as in Allora I. */
 export const START_PLACE = 'ostwick';
