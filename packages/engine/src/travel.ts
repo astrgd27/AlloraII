@@ -39,6 +39,8 @@ export const travelSystem: System = {
     const journey = state.journey;
     const leg = journey?.legs[0];
     if (!journey || !leg) return;
+    // Asleep on a road, the life is in camp and gets no further. At sea, the ship sails on.
+    if (state.asleep && leg.sea !== true) return;
     journey.legHours += 1;
     if (journey.legHours < leg.hours) return;
     const from = state.place;

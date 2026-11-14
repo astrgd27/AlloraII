@@ -15,7 +15,7 @@
 ## Issues (proposed order)
 
 1. **World plan.** *(done)* Places per realm for all five lands (total 2,200), and the place kinds (city quarter, town, village, site, wild) with their sizes.
-2. **Needs.** Vigour, health and spirits; sleep and meals; a home to sleep in.
+2. **Needs.** *(done)* Vigour, health and spirits; sleep and meals; a home to sleep in.
 3. **Activities.** Short acts tied to a place, an hour, tools and people. The first twenty in Ostwick.
 4. **People with routines.** Canon schedules (108 people in Allora I have one) drive who is where at each hour; meeting, talking, being known.
 5. **Skills and learning.** The smaller skill set, growth from work near the edge of ability, mastery gates.
@@ -49,3 +49,10 @@ Each is an addition, to be rooted on canon when it is built.
   - **Kinds per realm** follow the bible's mix: 5% city quarters, 15% towns, 35% villages, 35% sites, 10% wilds.
   - **Phase 1 aims lower than the final target:** about 150 places across Eintenn and Marre, of their final 160.
   - **Counting.** A place counts towards its `region`. A canon island counts as one place; a new place on an island names it in `island`.
+- **2026-11-14 · Needs (#23).** `packages/engine/src/needs.ts`: vigour, health and spirits (0 to 100), a home, and standing orders for sleep. Decisions:
+  - **Sleep and meals run themselves.** By default a life sleeps from the 22nd hour to the 6th and eats at the 7th, 13th and 19th. Meals are free until money exists (#32); then they will cost or come from the larder.
+  - **New mechanic, camping.** On a road at night a life makes camp and gets no further until morning, so a long road now takes its hours plus its nights. This fills a gap: travel had no rhythm of day and night. At sea the life sleeps aboard and the ship sails on. The standing order `campAtNight` can be turned off; walking through the night is faster and costs vigour.
+  - **A bed matters.** Sleep at home restores vigour faster than sleep elsewhere and lifts the spirits. This is the first reason to have a home and to come back to it.
+  - **Running out.** With no vigour left a life sleeps where it stands and loses health. Nothing kills: the bible's leaning is injuries that heal, not death.
+  - **The rates are first values** (`RATES` in `needs.ts`), to be tuned by the balance bot. The report now has a Needs section: the mean of each need and the lowest any life fell.
+  - **Save version 3,** with a migration from 2 and a test. An old save's home is wherever the life stands.

@@ -46,6 +46,10 @@ export interface LifeResult {
   arrivals: Record<string, number>;
   endPlace: string;
   endDate: string;
+  meals: number;
+  hoursSlept: number;
+  /** Each need: its mean over the life, and the lowest it fell. */
+  needs: Record<'vigour' | 'health' | 'spirits', { mean: number; low: number }>;
 }
 
 export function playLife(persona: Persona, seed: number, hours: number): LifeResult {
@@ -58,6 +62,13 @@ export function playLife(persona: Persona, seed: number, hours: number): LifeRes
     arrivals: {},
     endPlace: '',
     endDate: '',
+    meals: 0,
+    hoursSlept: 0,
+    needs: {
+      vigour: { mean: 0, low: 100 },
+      health: { mean: 0, low: 100 },
+      spirits: { mean: 0, low: 100 },
+    },
   };
   engine.bus.on('Arrived', ({ place }) => {
     result.journeys += 1;
@@ -67,7 +78,14 @@ export function playLife(persona: Persona, seed: number, hours: number): LifeRes
     persona.act(engine);
     if (engine.state.journey) result.hoursOnTheRoad += 1;
     engine.tick();
+    for (const key of ['vigour', 'health', 'spirits'] as const) {
+      const v = engine.state.needs[key];
+      result.needs[key].mean += v / hours;
+      if (v < result.needs[key].low) result.needs[key].low = v;
+    }
   }
+  result.meals = engine.state.meals;
+  result.hoursSlept = engine.state.hoursSlept;
   const date = dateAt(engine.state.hours);
   result.endPlace = engine.state.place;
   result.endDate = `Day ${date.day} of ${date.season}, ${date.year} AR`;

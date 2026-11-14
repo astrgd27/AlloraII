@@ -3,6 +3,7 @@
  * The UI sends orders; the engine sends state. Nothing else crosses.
  */
 import type { Snapshot } from './engine';
+import type { StandingOrders } from './needs';
 
 /** UI → engine. */
 export type Order =
@@ -12,6 +13,8 @@ export type Order =
   | { type: 'travel'; to: string }
   /** Turn back to the place last left. */
   | { type: 'turnBack' }
+  /** Change standing orders. */
+  | { type: 'setOrders'; orders: Partial<StandingOrders> }
   /** Write a save now. */
   | { type: 'save' }
   /** Delete all saves and start a new game. */

@@ -9,6 +9,9 @@ describe('the balance bot', () => {
     expect(life.endDate).toBe('Day 1 of Spring, 1348 AR');
     expect(life.journeys).toBeGreaterThan(10);
     expect(life.hoursOnTheRoad).toBeGreaterThan(HOURS_PER_YEAR * 0.9);
+    // A wanderer never sleeps at home, yet camps, eats and stays alive.
+    expect(life.hoursSlept).toBeGreaterThan(112 * 6);
+    expect(life.needs.health.low).toBeGreaterThan(50);
   });
 
   it('gives the same life for the same seed, and another for another', () => {

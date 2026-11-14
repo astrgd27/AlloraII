@@ -163,16 +163,18 @@ describe('saves and migrations', () => {
     const v0: SaveV0 = { seed: 42, hours: 500, savedAt: 1_000_000 };
     expect(versionOf(v0)).toBe(0);
     const state = migrate(v0);
-    expect(state).toEqual({
+    expect(state).toMatchObject({
       version: SAVE_VERSION,
       seed: 42,
       hours: 500,
       carryMs: 0,
       lastRealMs: 1_000_000,
       paused: false,
-      rng: { streams: {} },
       place: 'ostwick',
       journey: null,
+      home: 'ostwick',
+      needs: { vigour: 100, health: 100, spirits: 70 },
+      orders: { campAtNight: true },
     });
     // A migrated save plays on.
     const engine = new Engine(state);
@@ -190,7 +192,32 @@ describe('saves and migrations', () => {
       paused: true,
       rng: { streams: { world: 9 } },
     };
-    expect(migrate(v1)).toEqual({ ...v1, version: SAVE_VERSION, place: 'ostwick', journey: null });
+    expect(migrate(v1)).toMatchObject({
+      ...v1,
+      version: SAVE_VERSION,
+      place: 'ostwick',
+      journey: null,
+    });
+  });
+
+  it('migrates a v2 save: needs are full and home is where the life stands', () => {
+    const v2 = {
+      version: 2,
+      seed: 3,
+      hours: 40,
+      carryMs: 0,
+      lastRealMs: 5,
+      paused: false,
+      rng: { streams: {} },
+      place: 'tennfels',
+      journey: null,
+    };
+    expect(migrate(v2)).toMatchObject({
+      version: SAVE_VERSION,
+      home: 'tennfels',
+      asleep: false,
+      meals: 0,
+    });
   });
 
   it('leaves a current save as it is, and refuses a newer or broken one', () => {

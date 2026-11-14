@@ -9,6 +9,7 @@ export * from './calendar';
 export * from './engine';
 export * from './events';
 export * from './host';
+export * from './needs';
 export * from './protocol';
 export * from './rng';
 export * from './state';
