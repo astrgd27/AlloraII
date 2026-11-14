@@ -1,0 +1,306 @@
+# First batch of new places in Eintenn, around Ostwick and Burg Tennfels (Phase 1, issue 28).
+- id: activity_weirbeck_mill_carry_sacks
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_weirbeck_mill
+  name: 'Carry sacks to the stones'
+  text: 'Up the ladder with a sack on your back, and down again for the next.'
+  place: place_eintenn_weirbeck_mill
+  sub: wheelhouse
+  from: 7
+  to: 16
+  hours: 2
+  skill: skill_husbandry
+  effects:
+    vigour: -6
+- id: activity_netherwick_mow_meadow
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_netherwick
+  name: 'Mow the haymead'
+  text: 'Scythe low, step, scythe low. Keep the line with the man beside you.'
+  place: place_eintenn_netherwick
+  sub: haymeads
+  from: 6
+  to: 12
+  hours: 3
+  skill: skill_husbandry
+  effects:
+    vigour: -9
+- id: activity_tithe_barn_thresh_corn
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_tithe_barn
+  name: 'Thresh with the flail'
+  text: 'Swing, turn the sheaf, swing. The rhythm matters more than the arm.'
+  place: place_eintenn_tithe_barn
+  sub: threshing_floor
+  from: 8
+  to: 16
+  hours: 2
+  skill: skill_husbandry
+  effects:
+    vigour: -6
+- id: activity_crow_stone_count_ewes
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_crow_stone
+  name: 'Count the ewes at noon'
+  text: 'Every head on the common, twice, and the same number both times.'
+  place: place_eintenn_crow_stone
+  sub: stone
+  from: 11
+  to: 14
+  hours: 1
+  skill: skill_beastcraft
+  dc: 10
+  effects:
+    vigour: -3
+- id: activity_dunmere_pluck_down
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_dunmere
+  name: 'Pluck down'
+  text: 'A goose under one arm, a sack under the other, and patience.'
+  place: place_eintenn_dunmere
+  sub: green
+  from: 8
+  to: 15
+  hours: 2
+  skill: skill_beastcraft
+  effects:
+    vigour: -6
+- id: activity_three_ash_ford_read_water
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_three_ash_ford
+  name: 'Read the water'
+  text: 'Watch the stones, the colour and the speed, and say whether a cart may cross.'
+  place: place_eintenn_three_ash_ford
+  sub: ford
+  from: 6
+  to: 18
+  hours: 1
+  skill: skill_wayfaring
+  dc: 10
+  effects:
+    vigour: -3
+- id: activity_hollin_cross_carry_coal
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_hollin_cross
+  name: 'Carry a coal for a traveller'
+  text: 'Bank it in ash in a clay pot, and bring it a mile down the road alive.'
+  place: place_eintenn_hollin_cross
+  sub: hearth
+  from: 6
+  to: 20
+  hours: 1
+  skill: skill_devotion
+  effects:
+    vigour: -3
+- id: activity_sallowfield_prune_trees
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_sallowfield
+  name: 'Prune the outer trees'
+  text: 'Cut to the bud that faces out. Leave the tree room to breathe.'
+  place: place_eintenn_sallowfield
+  sub: orchard_edge
+  from: 8
+  to: 15
+  hours: 2
+  skill: skill_husbandry
+  effects:
+    vigour: -6
+- id: activity_hanging_oak_splice_rope
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_hanging_oak
+  name: 'Splice rope'
+  text: 'Unlay the strands, marry them, and tuck each one three times.'
+  place: place_eintenn_hanging_oak
+  sub: oak
+  from: 8
+  to: 16
+  hours: 1
+  skill: skill_seamanship
+  effects:
+    vigour: -3
+- id: activity_undercrag_beat_linen
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_undercrag
+  name: 'Beat the linen'
+  text: 'Soap, stone and paddle, until the water runs clear.'
+  place: place_eintenn_undercrag
+  sub: wash_stones
+  from: 6
+  to: 13
+  hours: 2
+  skill: skill_stewardship
+  effects:
+    vigour: -6
+- id: activity_broken_lance_walk_horses
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_broken_lance
+  name: 'Walk the hot horses'
+  text: 'Round the yard at a slow walk until the steam is off them.'
+  place: place_eintenn_broken_lance
+  sub: yard
+  from: 10
+  to: 19
+  hours: 1
+  skill: skill_beastcraft
+  effects:
+    vigour: -3
+- id: activity_falkenau_swing_lure
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_falkenau
+  name: 'Swing the lure'
+  text: 'A clean circle, a clean throw, and take it away before she binds to it.'
+  place: place_eintenn_falkenau
+  sub: weathering
+  from: 7
+  to: 12
+  hours: 1
+  skill: skill_beastcraft
+  dc: 10
+  effects:
+    vigour: -3
+- id: activity_black_quarry_dress_stone
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_black_quarry
+  name: 'Dress a kerbstone'
+  text: 'Pitch, punch and point, until the face is true.'
+  place: place_eintenn_black_quarry
+  sub: sheds
+  from: 7
+  to: 16
+  hours: 3
+  skill: skill_building
+  effects:
+    vigour: -9
+- id: activity_burners_ride_stack_cordwood
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_burners_ride
+  name: 'Stack cordwood'
+  text: 'Four feet high, eight feet long, and tight enough that a squirrel cannot pass.'
+  place: place_eintenn_burners_ride
+  sub: stacks
+  from: 7
+  to: 17
+  hours: 2
+  skill: skill_woodcraft
+  effects:
+    vigour: -6
+- id: activity_verderers_lodge_walk_bounds
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_verderers_lodge
+  name: 'Walk the forest bounds'
+  text: 'From marked oak to marked oak, noting every snare and every stump.'
+  place: place_eintenn_verderers_lodge
+  sub: paddock
+  from: 6
+  to: 15
+  hours: 3
+  skill: skill_woodcraft
+  dc: 10
+  effects:
+    vigour: -9
+- id: activity_reedmere_cut_reed
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_reedmere
+  name: 'Cut reed for thatch'
+  text: 'Sickle low to the water, bundle, tie and stack it in the punt.'
+  place: place_eintenn_reedmere
+  sub: reedbeds
+  from: 7
+  to: 15
+  hours: 2
+  skill: skill_husbandry
+  effects:
+    vigour: -6
+- id: activity_steinwick_mend_wall
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_steinwick
+  name: 'Mend a dry-stone wall'
+  text: 'Two over one, one over two, and a through-stone every yard.'
+  place: place_eintenn_steinwick
+  sub: walls
+  from: 7
+  to: 16
+  hours: 2
+  skill: skill_building
+  effects:
+    vigour: -6
+- id: activity_vintners_halt_raise_cask
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_vintners_halt
+  name: 'Raise a cask'
+  text: 'Staves in the hoop, fire inside, and bend them home before they cool.'
+  place: place_eintenn_vintners_halt
+  sub: cooperage
+  from: 8
+  to: 16
+  hours: 3
+  skill: skill_woodwork
+  dc: 10
+  effects:
+    vigour: -9
+- id: activity_pomerell_grange_yoke_oxen
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_pomerell_grange
+  name: 'Yoke the oxen'
+  text: 'Bow under the neck, pin through the bow, and a word before you ask them to pull.'
+  place: place_eintenn_pomerell_grange
+  sub: yard
+  from: 6
+  to: 10
+  hours: 1
+  skill: skill_beastcraft
+  effects:
+    vigour: -3
+- id: activity_beacon_knoll_keep_watch
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_beacon_knoll
+  name: 'Keep the beacon watch'
+  text: 'Eyes on the castle tower, and the flint dry.'
+  place: place_eintenn_beacon_knoll
+  sub: basket
+  from: 18
+  to: 22
+  hours: 3
+  skill: skill_insight
+  effects:
+    vigour: -9

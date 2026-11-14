@@ -31,7 +31,17 @@ async function main(): Promise<void> {
   const allRegions = await readYaml('content/canon/allora1/regions.yaml');
 
   const regions = allRegions.filter((r) => WORLD_REGIONS.includes(r.id as string));
-  const places = allPlaces.filter((p) => WORLD_REGIONS.includes(p.region as string));
+  const readDir = async (dir: string): Promise<Raw[]> => {
+    const out: Raw[] = [];
+    for (const file of (await readdir(join(ROOT, dir)).catch(() => [] as string[])).sort()) {
+      if (file.endsWith('.yaml')) out.push(...(await readYaml(`${dir}/${file}`)));
+    }
+    return out;
+  };
+  // Canon places first, then the places Allora II adds.
+  const places = [...allPlaces, ...(await readDir('content/world/places'))].filter((p) =>
+    WORLD_REGIONS.includes(p.region as string),
+  );
   const mapPlaces = places as unknown as MapPlace[];
 
   if (args.has('--roads')) {
@@ -49,17 +59,10 @@ async function main(): Promise<void> {
     console.log(`Wrote stub roads to ${ROADS_DIR}.`);
   }
 
-  const roads: Road[] = [];
-  for (const file of [...WORLD_REGIONS, 'sea-lanes']) {
-    roads.push(...((await readYaml(`${ROADS_DIR}/${file}.yaml`)) as unknown as Road[]));
-  }
+  const roads = (await readDir(ROADS_DIR)) as unknown as Road[];
 
   // Activities at the places of this world, with the name of the sub-place they belong to.
-  const activities: Raw[] = [];
-  const actDir = 'content/activities';
-  for (const file of (await readdir(join(ROOT, actDir)).catch(() => [] as string[])).sort()) {
-    if (file.endsWith('.yaml')) activities.push(...(await readYaml(`${actDir}/${file}`)));
-  }
+  const activities = await readDir('content/activities');
   const placeIds = new Set(places.map((p) => p.id));
   const subName = (placeId: unknown, subId: unknown): string | undefined => {
     const place = places.find((p) => p.id === placeId);
@@ -68,9 +71,10 @@ async function main(): Promise<void> {
   };
 
   // People of this world who keep a schedule (Allora I's NPCS). Wanderers with a route come later.
-  const npcs = (await readYaml('content/canon/allora1/npcs.yaml')).filter(
-    (n) => WORLD_REGIONS.includes(n.region as string) && Array.isArray(n.sched),
-  );
+  const npcs = [
+    ...(await readYaml('content/canon/allora1/npcs.yaml')),
+    ...(await readDir('content/people')),
+  ].filter((n) => WORLD_REGIONS.includes(n.region as string) && Array.isArray(n.sched));
 
   const world = {
     regions: regions.map((r) => ({ id: r.id, name: r.name })),
@@ -80,7 +84,8 @@ async function main(): Promise<void> {
       region: p.region,
       x: p.x,
       y: p.y,
-      kind: p.city ? 'city' : p.wild ? 'wild' : 'settled',
+      kind: p.city ? 'city' : p.wild || p.place_kind === 'wild' ? 'wild' : 'settled',
+      canon: p.origin === 'allora1',
       subs: Object.fromEntries(((p.subs as Raw[] | undefined) ?? []).map((x) => [x.id, x.name])),
     })),
     roads: roads.map((r) => ({ id: r.id, from: r.from, to: r.to, way: r.way, hours: r.hours })),

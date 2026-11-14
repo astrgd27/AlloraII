@@ -20,9 +20,13 @@ const at = (hour: number, place = 'ostwick') => {
 
 describe('routines', () => {
   it('covers the canon people of Eintenn and Marre who keep a schedule', () => {
-    expect(PEOPLE.map((p) => p.id).sort()).toEqual(
+    const canon = PEOPLE.filter((p) => !p.id.startsWith('person_')).map((p) => p.id);
+    expect(canon.sort()).toEqual(
       ['bastian', 'cateruccia', 'hanne', 'jory', 'mechthild', 'momolo', 'zanetta'].sort(),
     );
+    // And one new resident for each new place.
+    const added = WORLD.places.filter((p) => p.canon === false);
+    expect(PEOPLE.length - canon.length).toBe(added.length);
   });
 
   it('puts everyone in a real sub-place of a real place at every hour of every season', () => {
@@ -124,5 +128,25 @@ describe('meeting and talking', () => {
     delete v4.bonds;
     delete v4.words;
     expect(migrate(v4)).toMatchObject({ version: SAVE_VERSION, bonds: {}, words: null });
+  });
+});
+
+describe('the new neighbours', () => {
+  const added = WORLD.places.filter((p) => p.canon === false);
+
+  it('gives every new place a resident who is there by day and by night', () => {
+    for (const place of added) {
+      for (const hour of [3, 12, 21]) {
+        expect(peopleAt(world, place.id, when(hour)).length).toBeGreaterThanOrEqual(1);
+      }
+    }
+  });
+
+  it('gives every new place something to do and a way in', () => {
+    const reachable = world.hoursFrom('ostwick');
+    for (const place of added) {
+      expect((WORLD.activities ?? []).some((a) => a.place === place.id)).toBe(true);
+      expect(reachable[place.id]).toBeGreaterThan(0);
+    }
   });
 });

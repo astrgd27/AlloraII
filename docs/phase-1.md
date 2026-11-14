@@ -20,7 +20,7 @@
 4. **People with routines.** *(done)* Canon schedules (108 people in Allora I have one) drive who is where at each hour; meeting, talking, being known.
 5. **Skills and learning.** *(done)* The smaller skill set, growth from work near the edge of ability, mastery gates.
 6. **The challenge system.** *(done)* The roll, approaches, degrees of result, lasting consequences.
-7. **Eintenn, first batch.** About 20 new small places around Ostwick and Burg Tennfels, with residents, each rooted on canon.
+7. **Eintenn, first batch.** *(done)* About 20 new small places around Ostwick and Burg Tennfels, with residents, each rooted on canon.
 8. **Named roads.** Replace the stub roads in Eintenn with named roads, tracks and a river, and events on the way.
 9. **Profession skeleton and the Smith.** Guild-smith of the Anvil: duties, commissions, ladder.
 10. **The Butler.** Steward of Burg Tennfels.
@@ -85,3 +85,12 @@ Each is an addition, to be rooted on canon when it is built.
   - **Not yet:** approaches, ventures, strain, spending resolve, injuries and marks on the world. They need cases and expeditions to hang on (#30 onward). Resolve is stored (3 points) but cannot be spent yet.
   - **Balance.** The report's "Check odds" section is real, and flags a run whose checks are mostly trivial or mostly hopeless.
   - **Save version 7,** with a migration and a test.
+- **2026-11-14 · Eintenn, first batch of places (#28).** Twenty new small places around Ostwick and Burg Tennfels, in four files named `eintenn-01.yaml` (places, people, activities, roads). Decisions:
+  - **What every new place has:** two sub-places, one resident with a routine (one spot by day, one by night), one activity, and at least one road in. That is the gate's "a resident with a routine and a reason to return", built in from the start.
+  - **The twenty:** Weirbeck Mill, Netherwick, the Tithe Barn, the Crow Stone, Dunmere, Three Ash Ford, Hollin Cross, Sallowfield, the Hanging Oak, Undercrag, the Broken Lance, Falkenau, the Black Quarry, the Burners' Ride, the Verderer's Lodge, Reedmere, Steinwick, the Vintners' Halt, Pomerell Grange and Beacon Knoll. Each grows from something canon says: the reeve's eye on the fields, the Duke's tenth, the ducal mews and kennels, the basalt crag, the charcoal-burners, the abbey's numbered trees, Aschau's wine.
+  - **Names follow the Eintenn guide:** northern compounds (Netherwick, Steinwick, Falkenau, Dunmere) and plain speech (the Crow Stone, the Broken Lance); common folk with a short given name and a short plain family name (Gerd Sack, Lise Marsh, Hob Wade). The lint refused one name, "The Gallows Oak", as too near Polygoetia's Gallows Cay; it became the Hanging Oak.
+  - **Slight shifts to canon: none logged.** Nothing canon says is bent. The beck by Ostwick and the villages are new, on ground canon leaves empty.
+  - **Roads:** 36 new roads, with hours from the same Allora I formula as the stubs. They are unnamed until #29.
+  - **Residents keep a simple day.** Each is in one spot from the 6th hour to the 20th and another overnight. Richer routines (market days, visits to the inn) come with later batches.
+  - **Tooling.** `pnpm world` now reads every file under `content/world/places`, `content/world/roads`, `content/people` and `content/activities`. The reference check now also proves that a person's routine names real sub-places.
+  - **Count:** Eintenn has 39 of its 80 places; the world 318 of 2,200.

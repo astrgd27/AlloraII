@@ -1,0 +1,369 @@
+# First batch of new places in Eintenn, around Ostwick and Burg Tennfels (Phase 1, issue 28).
+- id: place_eintenn_weirbeck_mill
+  origin: allora2
+  kind: place
+  roots:
+    - ostwick
+  name: 'Weirbeck Mill'
+  place_kind: site
+  region: eintenn
+  x: 27
+  y: 61
+  description: "A timber mill on the beck below the village, where Ostwick's corn is weighed in and its flour weighed out. The wheel has turned for three generations of one family."
+  subs:
+    - id: wheelhouse
+      name: 'The Wheelhouse'
+      description: 'The great wheel, the stones and a floor white to the rafters.'
+    - id: millpool
+      name: 'The Mill Pool'
+      description: 'Deep, brown and slow, and full of what the weir stops.'
+- id: place_eintenn_netherwick
+  origin: allora2
+  kind: place
+  roots:
+    - ostwick
+  name: 'Netherwick'
+  place_kind: village
+  region: eintenn
+  x: 37
+  y: 64
+  description: 'A dozen cottages on the low ground east of Ostwick, where the fields flood in a wet spring and the hay is the best on the demesne.'
+  subs:
+    - id: haymeads
+      name: 'The Haymeads'
+      description: 'Long wet meadows, mown twice a year.'
+    - id: row
+      name: 'The Row'
+      description: 'One street of cottages, each with its hayrick.'
+- id: place_eintenn_tithe_barn
+  origin: allora2
+  kind: place
+  roots:
+    - ostwick
+    - tennfels
+  name: 'The Tithe Barn'
+  place_kind: site
+  region: eintenn
+  x: 34
+  y: 55
+  description: "A great aisled barn on the Ostwick road where the Duke's tenth is counted, stored and carted up to the castle."
+  subs:
+    - id: threshing_floor
+      name: 'The Threshing Floor'
+      description: 'Flails in winter, sparrows all year.'
+    - id: tally_room
+      name: 'The Tally Room'
+      description: 'A table, a tally-stick rack and a locked chest.'
+- id: place_eintenn_crow_stone
+  origin: allora2
+  kind: place
+  roots:
+    - ostwick
+  name: 'The Crow Stone'
+  place_kind: site
+  region: eintenn
+  x: 29
+  y: 52
+  description: 'A leaning grey stone on the common boundary, older than the village. The shepherds meet here at noon and will not say why it is unlucky to sit with your back to it.'
+  subs:
+    - id: stone
+      name: 'The Stone'
+      description: 'Taller than a man, and warm on the south side.'
+    - id: fold
+      name: 'The Lambing Fold'
+      description: 'Hurdles and a turf hut on the lee of the hill.'
+- id: place_eintenn_dunmere
+  origin: allora2
+  kind: place
+  roots:
+    - ostwick
+    - tennfels
+  name: 'Dunmere'
+  place_kind: village
+  region: eintenn
+  x: 38
+  y: 52
+  description: 'A village round a brown pond on the castle road, known for geese, goose-down and the noise of both.'
+  subs:
+    - id: pond
+      name: 'The Mere'
+      description: 'A wide brown pond, white with geese.'
+    - id: green
+      name: 'The Goose Green'
+      description: 'Trodden bare, and loud.'
+- id: place_eintenn_three_ash_ford
+  origin: allora2
+  kind: place
+  roots:
+    - ostwick
+  name: 'Three Ash Ford'
+  place_kind: site
+  region: eintenn
+  x: 41
+  y: 58
+  description: "A stony ford under three ash trees, where the Aschau road crosses the beck. A plank bridge serves in summer; in spring there is only the ford-keeper's rope."
+  subs:
+    - id: ford
+      name: 'The Ford'
+      description: 'Knee-deep in summer, and no place for a cart in spring.'
+    - id: hut
+      name: "The Ford-Keeper's Hut"
+      description: 'Turf, a fire, and a rope coiled by the door.'
+- id: place_eintenn_hollin_cross
+  origin: allora2
+  kind: place
+  roots:
+    - ostwick
+    - aschau
+  name: 'Hollin Cross'
+  place_kind: site
+  region: eintenn
+  x: 35
+  y: 70
+  description: 'A crossroads under holly trees with a wayside hearth of Ilvara, where travellers leave a stick for the fire and take a coal for their own.'
+  subs:
+    - id: hearth
+      name: 'The Wayside Hearth'
+      description: 'A stone bowl of embers under a slate roof.'
+    - id: crossroads
+      name: 'The Four Ways'
+      description: 'Four tracks, a holly hedge and a post with no sign.'
+- id: place_eintenn_sallowfield
+  origin: allora2
+  kind: place
+  roots:
+    - ostwick
+    - pomerell
+  name: 'Sallowfield'
+  place_kind: village
+  region: eintenn
+  x: 26
+  y: 70
+  description: "A hamlet at the edge of the abbey's orchards, whose people pick for the brothers in autumn and prune for them in winter."
+  subs:
+    - id: orchard_edge
+      name: 'The Orchard Edge'
+      description: 'The last numbered trees, and the first unnumbered ones.'
+    - id: cots
+      name: "The Pickers' Cots"
+      description: 'Low cottages with ladders along every wall.'
+- id: place_eintenn_hanging_oak
+  origin: allora2
+  kind: place
+  roots:
+    - tennfels
+    - grauwald
+  name: 'The Hanging Oak'
+  place_kind: site
+  region: eintenn
+  x: 36
+  y: 46
+  description: "A dead oak at the forest road's first turning, where the Duke's justice hangs outlaws in sight of the trees they came from."
+  subs:
+    - id: oak
+      name: 'The Oak'
+      description: 'Bare, grey, and never quite empty.'
+    - id: pit
+      name: 'The Lime Pit'
+      description: 'Where what is cut down is put.'
+- id: place_eintenn_undercrag
+  origin: allora2
+  kind: place
+  roots:
+    - tennfels
+  name: 'Undercrag'
+  place_kind: village
+  region: eintenn
+  x: 46
+  y: 49
+  description: "The servants' village under the basalt crag: laundresses, scullions and grooms, and wash-lines strung from the castle rock itself."
+  subs:
+    - id: wash_stones
+      name: 'The Wash-Stones'
+      description: 'Flat rocks in the Tenn, worn hollow by knees.'
+    - id: lines
+      name: 'The Lines'
+      description: 'A hundred shirts drying under a castle.'
+- id: place_eintenn_broken_lance
+  origin: allora2
+  kind: place
+  roots:
+    - tennfels
+  name: 'The Broken Lance'
+  place_kind: site
+  region: eintenn
+  x: 50
+  y: 50
+  description: 'An inn on the road below the tiltyard, kept by an old man-at-arms, where squires drink before a tourney and knights after one.'
+  subs:
+    - id: long_room
+      name: 'The Long Room'
+      description: 'Benches, a fire and a splintered lance over the mantel.'
+    - id: yard
+      name: 'The Stable Yard'
+      description: 'Somebody is always walking a hot horse.'
+- id: place_eintenn_falkenau
+  origin: allora2
+  kind: place
+  roots:
+    - tennfels
+  name: 'Falkenau'
+  place_kind: village
+  region: eintenn
+  x: 54
+  y: 42
+  description: 'A village on the windy side of the crag where the ducal falconers live, every roof with its block and every child with a glove.'
+  subs:
+    - id: weathering
+      name: 'The Weathering Ground'
+      description: 'Blocks and bow-perches in rows, and hooded birds in the sun.'
+    - id: lofts
+      name: "The Lure-Makers' Lofts"
+      description: 'Feathers, leather and bells.'
+- id: place_eintenn_black_quarry
+  origin: allora2
+  kind: place
+  roots:
+    - tennfels
+  name: 'The Black Quarry'
+  place_kind: site
+  region: eintenn
+  x: 51
+  y: 40
+  description: 'The basalt quarry that built the keep, still worked for kerbs and millstones by a few families who say the Duke owes them for a castle.'
+  subs:
+    - id: face
+      name: 'The Face'
+      description: 'Black columns, split along lines the stone chose.'
+    - id: sheds
+      name: 'The Dressing Sheds'
+      description: 'Chips to the ankle and the ring of mauls.'
+- id: place_eintenn_burners_ride
+  origin: allora2
+  kind: place
+  roots:
+    - grauwald
+  name: "The Burners' Ride"
+  place_kind: site
+  region: eintenn
+  x: 33
+  y: 40
+  description: 'A wide track where the charcoal carts come out of the Grauwald, black-rutted and lined with stacked cordwood waiting for the kilns.'
+  subs:
+    - id: stacks
+      name: 'The Cordwood Stacks'
+      description: "Beech in fathoms, each stack with its burner's mark."
+    - id: halt
+      name: "The Carters' Halt"
+      description: 'A trough, a fire-ring and a great deal of soot.'
+- id: place_eintenn_verderers_lodge
+  origin: allora2
+  kind: place
+  roots:
+    - grauwald
+    - tennfels
+  name: "The Verderer's Lodge"
+  place_kind: site
+  region: eintenn
+  x: 36
+  y: 36
+  description: "A timber lodge inside the forest where the Duke's foresters keep the hunting-rolls, the deer-count and a cellar for poachers."
+  subs:
+    - id: hall
+      name: 'The Lodge Hall'
+      description: 'Antlers to the roof-tree, each with a year carved under it.'
+    - id: paddock
+      name: 'The Deer-Hay'
+      description: 'A fenced lawn where the hinds are fed in hard winters.'
+- id: place_eintenn_reedmere
+  origin: allora2
+  kind: place
+  roots:
+    - wisewoman_hut
+    - ostwick
+  name: 'Reedmere'
+  place_kind: wild
+  region: eintenn
+  x: 22
+  y: 50
+  description: 'A shallow mere between the common and the forest edge, all reed, heron and mist, where thatch is cut in winter and eels are taken in summer.'
+  subs:
+    - id: reedbeds
+      name: 'The Reed-Beds'
+      description: 'Taller than a man, and louder than you would think.'
+    - id: staithe
+      name: "The Cutters' Staithe"
+      description: 'A plank landing, two punts and bundles of reed.'
+- id: place_eintenn_steinwick
+  origin: allora2
+  kind: place
+  roots:
+    - ostwick
+    - aschau
+  name: 'Steinwick'
+  place_kind: village
+  region: eintenn
+  x: 40
+  y: 66
+  description: 'A sheep village of dry-stone walls on the rising ground toward Aschau, where everything that is not a wall is a fold.'
+  subs:
+    - id: shearing_floor
+      name: 'The Shearing Floor'
+      description: 'Boards worn smooth by fleeces.'
+    - id: walls
+      name: 'The Long Walls'
+      description: "Miles of stone, each field's corner with its own builder's trick."
+- id: place_eintenn_vintners_halt
+  origin: allora2
+  kind: place
+  roots:
+    - aschau
+  name: "The Vintners' Halt"
+  place_kind: site
+  region: eintenn
+  x: 43
+  y: 70
+  description: "A carters' stop below the vine slopes, with a cooper's shed, a weighbridge and a pump that every carter swears is haunted."
+  subs:
+    - id: cooperage
+      name: 'The Cooperage'
+      description: 'Staves, hoops and the smell of scorched oak.'
+    - id: weighbridge
+      name: 'The Weighbridge'
+      description: 'A stone platform and an argument.'
+- id: place_eintenn_pomerell_grange
+  origin: allora2
+  kind: place
+  roots:
+    - pomerell
+  name: 'Pomerell Grange'
+  place_kind: site
+  region: eintenn
+  x: 30
+  y: 77
+  description: "The abbey's outlying farm on the Ostwick side of the hills: a walled yard, a dovecote and the brothers' plough-oxen."
+  subs:
+    - id: yard
+      name: 'The Grange Yard'
+      description: 'Barns on three sides and a midden on the fourth.'
+    - id: dovecote
+      name: 'The Dovecote'
+      description: 'Round, white-streaked, and never silent.'
+- id: place_eintenn_beacon_knoll
+  origin: allora2
+  kind: place
+  roots:
+    - tennfels
+  name: 'Beacon Knoll'
+  place_kind: site
+  region: eintenn
+  x: 44
+  y: 54
+  description: "A bald hill between Ostwick and the castle with an iron fire-basket on a post, kept ready to call the Duke's levy."
+  subs:
+    - id: basket
+      name: 'The Fire-Basket'
+      description: 'Pitch-wood under a tarred cloth, and a flint in a box.'
+    - id: watch_hut
+      name: 'The Watch-Hut'
+      description: 'One room, one window, facing the castle.'

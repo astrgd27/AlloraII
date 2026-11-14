@@ -1,0 +1,361 @@
+# First batch of new places in Eintenn, around Ostwick and Burg Tennfels (Phase 1, issue 28).
+- id: person_eintenn_gerd
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_weirbeck_mill
+  name: 'Gerd Sack'
+  title: 'Miller of Weirbeck'
+  region: eintenn
+  home: place_eintenn_weirbeck_mill
+  hint: 'a floury man with one shoulder higher than the other'
+  meet: "The miller looks at your hands before your face. “You can lift,” he says. “Good. I'm Gerd. Mind the stones.”"
+  talk:
+    - 'Gerd tells you which farmers bring damp corn and hope he will not notice.'
+    - '“A mill takes a sixteenth,” Gerd says. “Anyone who says I take more can turn the wheel himself.”'
+  sched:
+    - at: [place_eintenn_weirbeck_mill, wheelhouse]
+      h: [6, 20]
+    - at: [place_eintenn_weirbeck_mill, millpool]
+- id: person_eintenn_alder
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_netherwick
+  name: 'Alder Finch'
+  title: 'Hayward of Netherwick'
+  region: eintenn
+  home: place_eintenn_netherwick
+  hint: 'a lean man walking the hedge with a billhook, counting gaps'
+  meet: '“Mind the gate,” says the man with the billhook, before anything else. Then, when you have minded it: “Alder Finch. Hayward. That means the hedges are my fault.”'
+  talk:
+    - 'Alder can tell you whose cow got into whose corn, in what year, and what it cost.'
+    - '“Hedges are law you can see,” Alder says.'
+  sched:
+    - at: [place_eintenn_netherwick, haymeads]
+      h: [6, 20]
+    - at: [place_eintenn_netherwick, row]
+- id: person_eintenn_wilmar
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_tithe_barn
+  name: 'Wilmar Tally'
+  title: 'Clerk of the Tithe'
+  region: eintenn
+  home: place_eintenn_tithe_barn
+  hint: 'a neat young man with ink on his cuffs and a notched stick behind his ear'
+  meet: '“Name and holding,” says the clerk, without looking up. When you have neither, he looks up. “Wilmar. I count what is owed.”'
+  talk:
+    - 'Wilmar explains the split tally: one half for the tenant, one for the Duke, and no arguing with wood.'
+    - '“Everyone thinks the tenth is the sheaf I take,” Wilmar says. “It is the nine I leave.”'
+  sched:
+    - at: [place_eintenn_tithe_barn, tally_room]
+      h: [6, 20]
+    - at: [place_eintenn_tithe_barn, tally_room]
+- id: person_eintenn_nell
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_crow_stone
+  name: 'Old Nell Crook'
+  title: 'Shepherd of the Common'
+  region: eintenn
+  home: place_eintenn_crow_stone
+  hint: 'an old woman knitting as she walks, with two dogs that watch you instead of the sheep'
+  meet: "The old woman finishes her row before she speaks. “You'll be the new one. Nell. The dogs are Bit and Bother. Don't feed Bother.”"
+  talk:
+    - "Nell knows every ewe on the common by its face and most by its mother's."
+    - '“Sit facing the stone,” Nell says. “Never mind why. Your grandmother would have known.”'
+  sched:
+    - at: [place_eintenn_crow_stone, stone]
+      h: [6, 20]
+    - at: [place_eintenn_crow_stone, fold]
+- id: person_eintenn_lise
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_dunmere
+  name: 'Lise Marsh'
+  title: 'Goose-Girl of Dunmere'
+  region: eintenn
+  home: place_eintenn_dunmere
+  hint: 'a girl with a long switch and a flock that goes where she looks'
+  meet: "The geese reach you before she does. “They don't bite,” says the girl with the switch. “Well. That one bites. I'm Lise.”"
+  talk:
+    - 'Lise drives forty geese to the castle kitchens every week and comes home with thirty-nine fewer.'
+    - '“Geese know who is afraid of them,” Lise says. “So do I.”'
+  sched:
+    - at: [place_eintenn_dunmere, pond]
+      h: [6, 20]
+    - at: [place_eintenn_dunmere, green]
+- id: person_eintenn_hob
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_three_ash_ford
+  name: 'Hob Wade'
+  title: 'Keeper of the Ford'
+  region: eintenn
+  home: place_eintenn_three_ash_ford
+  hint: 'a broad man standing in the water as if it were a road'
+  meet: '“Wait,” says the man in the water, and you wait while he reads the beck. “Now.” On the far side: “Hob. I say when.”'
+  talk:
+    - 'Hob has pulled eleven carts, two friars and a bull out of the beck, and remembers the bull best.'
+    - '“Water tells you everything,” Hob says, “just before it is too late.”'
+  sched:
+    - at: [place_eintenn_three_ash_ford, ford]
+      h: [6, 20]
+    - at: [place_eintenn_three_ash_ford, hut]
+- id: person_eintenn_berta
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_hollin_cross
+  name: 'Berta Ash'
+  title: 'Hearth-Keeper of the Cross'
+  region: eintenn
+  home: place_eintenn_hollin_cross
+  hint: 'a woman with soot to the elbows, feeding a fire one stick at a time'
+  meet: "She takes your stick, looks it over and lays it on. “Dry. Good. I'm Berta. The fire is older than the road.”"
+  talk:
+    - 'Berta walks to the Ostwick shrine each week and carries a coal back in a clay pot.'
+    - '“People think a hearth is kept by wood,” Berta says. “It is kept by coming back.”'
+  sched:
+    - at: [place_eintenn_hollin_cross, hearth]
+      h: [6, 20]
+    - at: [place_eintenn_hollin_cross, hearth]
+- id: person_eintenn_tom
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_sallowfield
+  name: 'Tom Russet'
+  title: 'Picker of Sallowfield'
+  region: eintenn
+  home: place_eintenn_sallowfield
+  hint: 'a long-armed man who looks at trees the way other men look at horses'
+  meet: '“That one will crop heavy,” says the long-armed man, nodding at a tree. Then at you: “Tom. You pick?”'
+  talk:
+    - "Tom knows the abbey's trees by their numbers and disagrees with the brothers about four of them."
+    - '“A ladder is only as good as its foot,” Tom says.'
+  sched:
+    - at: [place_eintenn_sallowfield, orchard_edge]
+      h: [6, 20]
+    - at: [place_eintenn_sallowfield, cots]
+- id: person_eintenn_kunz
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_hanging_oak
+  name: 'Kunz Hemp'
+  title: "The Duke's Hangman"
+  region: eintenn
+  home: place_eintenn_hanging_oak
+  hint: "a quiet man mending a rope with a sailmaker's care"
+  meet: 'He does not offer a hand. “Folk would rather not,” he says. “Kunz. I am paid by the Duke and thanked by nobody.”'
+  talk:
+    - 'Kunz says a good knot is a kindness, and that he has never yet been asked what he thinks of a sentence.'
+    - '“They cross the road to miss me,” Kunz says. “Then they send for me when a tooth wants pulling.”'
+  sched:
+    - at: [place_eintenn_hanging_oak, oak]
+      h: [6, 20]
+    - at: [place_eintenn_hanging_oak, pit]
+- id: person_eintenn_anke
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_undercrag
+  name: 'Anke Dorn'
+  title: 'Laundress to the Castle'
+  region: eintenn
+  home: place_eintenn_undercrag
+  hint: 'a red-armed woman who can tell a knight by his shirts'
+  meet: "“Whose are you?” she asks, and when you are nobody's: “Then you can carry. Anke. Those are the Duke's. Don't drop them.”"
+  talk:
+    - 'Anke knows which knights are in debt, which are in love and which are ill, all from the linen.'
+    - '“There are no secrets in a castle,” Anke says. “There is only washing.”'
+  sched:
+    - at: [place_eintenn_undercrag, wash_stones]
+      h: [6, 20]
+    - at: [place_eintenn_undercrag, lines]
+- id: person_eintenn_dirk
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_broken_lance
+  name: 'Dirk Hale'
+  title: 'Host of the Broken Lance'
+  region: eintenn
+  home: place_eintenn_broken_lance
+  hint: "a grey man with a sergeant's voice and a limp he does not discuss"
+  meet: '“Sit,” says the host, in a voice that has moved pikemen. You sit. “Dirk. Served the Duke twenty years. Now I serve his squires, which is worse.”'
+  talk:
+    - "Dirk will tell you who unhorsed whom at any tourney for thirty years, and why it was the horse's fault."
+    - '“The lance over the fire is mine,” Dirk says. “The man who broke it paid for the inn.”'
+  sched:
+    - at: [place_eintenn_broken_lance, long_room]
+      h: [6, 20]
+    - at: [place_eintenn_broken_lance, long_room]
+- id: person_eintenn_jutta
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_falkenau
+  name: 'Jutta Lark'
+  title: 'Lure-Maker of Falkenau'
+  region: eintenn
+  home: place_eintenn_falkenau
+  hint: 'a small woman stitching a leather lure, with a hawk asleep on the chair-back'
+  meet: "“Don't look her in the eye,” says the woman with the needle, meaning the hawk. “Jutta. She is Thistle. She is in a mood.”"
+  talk:
+    - "Jutta makes lures for the ducal mews and can tell you which of the Duke's birds will never be any good."
+    - '“A hawk does not love you,” Jutta says. “She agrees with you. For now.”'
+  sched:
+    - at: [place_eintenn_falkenau, weathering]
+      h: [6, 20]
+    - at: [place_eintenn_falkenau, lofts]
+- id: person_eintenn_bruno
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_black_quarry
+  name: 'Bruno Slate'
+  title: 'Quarryman'
+  region: eintenn
+  home: place_eintenn_black_quarry
+  hint: 'a man the colour of his stone, with a maul over his shoulder'
+  meet: 'He raps the rock and listens. “Sound,” he says, to the rock, and then to you: “Bruno. Stand there. Not there.”'
+  talk:
+    - "Bruno's grandfather cut the keep's gate-arch and was paid, the family says, in promises."
+    - '“Stone splits where it wants,” Bruno says. “The craft is in wanting the same.”'
+  sched:
+    - at: [place_eintenn_black_quarry, face]
+      h: [6, 20]
+    - at: [place_eintenn_black_quarry, sheds]
+- id: person_eintenn_mats
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_burners_ride
+  name: 'Mats Cole'
+  title: 'Charcoal Carter'
+  region: eintenn
+  home: place_eintenn_burners_ride
+  hint: 'a man black to the eyes, leading an ox that is black to the knees'
+  meet: "White teeth in a black face. “Don't shake hands,” he says. “Mats. You'll want to stand upwind.”"
+  talk:
+    - 'Mats carries charcoal to the Silberhalde smelters and news back, and charges for neither.'
+    - '“The forest burns slow or it burns fast,” Mats says. “We are the slow.”'
+  sched:
+    - at: [place_eintenn_burners_ride, stacks]
+      h: [6, 20]
+    - at: [place_eintenn_burners_ride, halt]
+- id: person_eintenn_hilde
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_verderers_lodge
+  name: 'Hilde Bracken'
+  title: 'Forester of the Grauwald'
+  region: eintenn
+  home: place_eintenn_verderers_lodge
+  hint: 'a woman in green and grey who was standing there some time before you saw her'
+  meet: "“You walk loud,” she says, from much nearer than you thought. “Hilde. The Duke's forester. That was not a complaint. It was a warning.”"
+  talk:
+    - "Hilde keeps the deer-count in her head and the roll only for the Duke's clerks."
+    - '“Poachers I can forgive,” Hilde says. “It is the ones who leave the snare that I hang.”'
+  sched:
+    - at: [place_eintenn_verderers_lodge, paddock]
+      h: [6, 20]
+    - at: [place_eintenn_verderers_lodge, hall]
+- id: person_eintenn_wat
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_reedmere
+  name: 'Wat Rush'
+  title: 'Reed-Cutter'
+  region: eintenn
+  home: place_eintenn_reedmere
+  hint: 'a man in a punt, cutting without looking, with a pipe that is not lit'
+  meet: 'The punt noses in. “Step in the middle,” he says, “or step in the mere.” When you are aboard: “Wat. I thatch half of Ostwick.”'
+  talk:
+    - 'Wat sells thatch to the village and eels to the miller, and will not say what he sells to Mother Brindl.'
+    - '“Reed grows back,” Wat says. “That is the whole of what I know, and it has fed me fifty years.”'
+  sched:
+    - at: [place_eintenn_reedmere, reedbeds]
+      h: [6, 20]
+    - at: [place_eintenn_reedmere, staithe]
+- id: person_eintenn_else
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_steinwick
+  name: 'Else Fold'
+  title: 'Shearer of Steinwick'
+  region: eintenn
+  home: place_eintenn_steinwick
+  hint: 'a woman with forearms like a smith, sharpening shears on her boot'
+  meet: "“Hold that,” she says, and gives you a ewe. When the ewe has made its views known: “Else. You held on. That'll do.”"
+  talk:
+    - 'Else can shear a ewe while it is still deciding whether to object.'
+    - '“Wool is the only crop that walks to market,” Else says.'
+  sched:
+    - at: [place_eintenn_steinwick, shearing_floor]
+      h: [6, 20]
+    - at: [place_eintenn_steinwick, walls]
+- id: person_eintenn_henk
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_vintners_halt
+  name: 'Henk Stave'
+  title: 'Cooper'
+  region: eintenn
+  home: place_eintenn_vintners_halt
+  hint: 'a cheerful man rolling a cask with one foot while he talks'
+  meet: 'The cask rolls up to your feet and stops. “Good, you can catch,” says the cooper. “Henk. That one leaks. Tell me where.”'
+  talk:
+    - "Henk makes the casks for Aschau's wine and says the wine is only as honest as the wood."
+    - '“A cask is a hundred mistakes you did not make,” Henk says.'
+  sched:
+    - at: [place_eintenn_vintners_halt, cooperage]
+      h: [6, 20]
+    - at: [place_eintenn_vintners_halt, cooperage]
+- id: person_eintenn_otmar
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_pomerell_grange
+  name: 'Brother Otmar'
+  title: 'Granger of Pomerell'
+  region: eintenn
+  home: place_eintenn_pomerell_grange
+  hint: 'a monk with his sleeves tied back, talking to an ox as to a novice'
+  meet: '“He is called Patience,” says the monk, of the ox. “He is not. I am Brother Otmar, and I am learning it from him.”'
+  talk:
+    - 'Brother Otmar keeps the grange accounts in the same book as the apple-trees, a page to each ox.'
+    - '“The abbot prays for rain,” Otmar says. “I mend the roof.”'
+  sched:
+    - at: [place_eintenn_pomerell_grange, yard]
+      h: [6, 20]
+    - at: [place_eintenn_pomerell_grange, dovecote]
+- id: person_eintenn_rolf
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_beacon_knoll
+  name: 'Old Rolf'
+  title: 'Beacon-Ward'
+  region: eintenn
+  home: place_eintenn_beacon_knoll
+  hint: 'an old soldier asleep sitting up, with one eye that opens before the other'
+  meet: 'One eye opens. “I was not asleep,” says the old man. “I was listening. Rolf. I have lit that fire twice, and I would rather not a third time.”'
+  talk:
+    - 'Rolf was a levy spearman and will show you the scar, whether or not you ask.'
+    - '“A beacon is the Duke saying please,” Rolf says. “Loudly.”'
+  sched:
+    - at: [place_eintenn_beacon_knoll, basket]
+      h: [6, 20]
+    - at: [place_eintenn_beacon_knoll, watch_hut]

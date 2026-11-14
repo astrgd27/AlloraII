@@ -9,6 +9,8 @@ export interface Place {
   x: number;
   y: number;
   kind: 'city' | 'settled' | 'wild';
+  /** True for a place of Allora I; false for one Allora II adds. */
+  canon?: boolean;
   /** Sub-place id → its name. */
   subs?: Record<string, string>;
 }
