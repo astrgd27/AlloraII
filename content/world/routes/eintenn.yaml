@@ -1,0 +1,191 @@
+# The named roads, tracks and river of Eintenn. Each road segment names its route.
+- id: route_eintenn_dukes_road
+  origin: allora2
+  kind: route
+  roots:
+    - collegium
+    - ostwick
+    - tennfels
+  name: "The Duke's Road"
+  way: road
+  text: "The made road from Kesselhaven up to the castle and down to Ostwick, ditched and gravelled at the Duke's cost and tolled at his pleasure."
+- id: route_eintenn_levy_way
+  origin: allora2
+  kind: route
+  roots:
+    - ostwick
+    - tennfels
+  name: 'The Levy Way'
+  way: road
+  text: 'The straight way the levy marches when the beacon is lit: no bends, no shade and no inns.'
+- id: route_eintenn_wine_road
+  origin: allora2
+  kind: route
+  roots:
+    - aschau
+    - kess_undercroft
+    - ostwick
+  name: 'The Wine Road'
+  way: road
+  text: 'Rutted by casks from Aschau to the harbour, and sticky under the wheels every autumn.'
+- id: route_eintenn_abbey_way
+  origin: allora2
+  kind: route
+  roots:
+    - ostwick
+    - pomerell
+  name: 'The Abbey Way'
+  way: road
+  text: 'A quiet road between apple-trees, south to Pomerell. The brothers mend it themselves and count the stones.'
+- id: route_eintenn_cider_lane
+  origin: allora2
+  kind: route
+  roots:
+    - aschau
+    - pomerell
+  name: 'The Cider Lane'
+  way: road
+  text: "The back way between the abbey's cider and the town's wine. Each end claims the other's drink is the cause of the potholes."
+- id: route_eintenn_beck_path
+  origin: allora2
+  kind: route
+  roots:
+    - ostwick
+  name: 'The Beck Path'
+  way: road
+  text: 'It follows the beck from Ostwick down to the ford and up to the sheep-walls, and floods when the beck does.'
+- id: route_eintenn_holly_lane
+  origin: allora2
+  kind: route
+  roots:
+    - eintenn
+  name: 'The Holly Lane'
+  way: road
+  text: 'A sunk lane between holly hedges, dark at noon and green all winter.'
+- id: route_eintenn_beacon_path
+  origin: allora2
+  kind: route
+  roots:
+    - eintenn
+  name: 'The Beacon Path'
+  way: road
+  text: 'A footpath over the bald hill, kept clear so that a runner can find it in the dark.'
+- id: route_eintenn_hanging_road
+  origin: allora2
+  kind: route
+  roots:
+    - grauwald
+  name: 'The Hanging Road'
+  way: road
+  text: 'The road to the forest, past the oak. Carters whistle on it, and not from cheerfulness.'
+- id: route_eintenn_forest_rides
+  origin: allora2
+  kind: route
+  roots:
+    - grauwald
+  name: 'The Forest Rides'
+  way: road
+  text: "Broad green rides cut for the Duke's hunt, mown by deer and policed by foresters."
+- id: route_eintenn_charcoal_road
+  origin: allora2
+  kind: route
+  roots:
+    - grauwald
+    - silberhalde
+  name: 'The Charcoal Road'
+  way: track
+  text: 'Black ruts from the Grauwald to the smelters. Nothing grows in the wheel-tracks.'
+- id: route_eintenn_quarry_drag
+  origin: allora2
+  kind: route
+  roots:
+    - eintenn
+  name: 'The Quarry Drag'
+  way: road
+  text: 'Worn hollow by stone-sledges, from the black quarry round the back of the crag.'
+- id: route_eintenn_tourney_road
+  origin: allora2
+  kind: route
+  roots:
+    - tennfels
+  name: 'The Tourney Road'
+  way: road
+  text: 'The loop below the castle that fills with banners, farriers and pickpockets when the lists are open.'
+- id: route_eintenn_common_paths
+  origin: allora2
+  kind: route
+  roots:
+    - ostwick
+    - wisewoman_hut
+  name: 'The Common Paths'
+  way: track
+  text: 'Sheep-tracks over the common and the causeway through the reeds. They go where sheep would.'
+- id: route_eintenn_oak_ways
+  origin: allora2
+  kind: route
+  roots:
+    - grauwald
+    - greenwife_grove
+    - wisewoman_hut
+  name: 'The Oak Ways'
+  way: track
+  text: 'Old tracks under the oaks that were not made by the Duke and do not appear in his rolls.'
+- id: route_eintenn_high_tracks
+  origin: allora2
+  kind: route
+  roots:
+    - greenwife_grove
+    - hohenkamm
+    - thunder_caves
+  name: 'The High Tracks'
+  way: track
+  text: 'Goat-paths above the tree-line, marked by cairns and by the weather.'
+- id: route_eintenn_ruin_tracks
+  origin: allora2
+  kind: route
+  roots:
+    - silberhalde
+    - threshold_sanctum
+    - vaelis_ruins
+  name: 'The Ruin Tracks'
+  way: track
+  text: 'Paths between the mine and the old stones, kept open by people who would rather not say why.'
+- id: route_eintenn_ferry_road
+  origin: allora2
+  kind: route
+  roots:
+    - collegium
+    - kess_fondaco
+    - wp_ferry
+  name: 'The Ferry Road'
+  way: road
+  text: 'East along the river to the rope-ferry and Luggen beyond, busy with drovers and slow with their beasts.'
+- id: route_eintenn_salt_paths
+  origin: allora2
+  kind: route
+  roots:
+    - kess_harbor
+    - kess_undercroft
+    - salzmoor
+  name: 'The Salt Paths'
+  way: track
+  text: 'Plank-ways and firm ground through the Salzmoor, known to the salters and moved by the tide.'
+- id: route_eintenn_kesselhaven_streets
+  origin: allora2
+  kind: route
+  roots:
+    - collegium
+    - kess_fondaco
+    - kess_harbor
+  name: 'The Streets of Kesselhaven'
+  way: street
+  text: 'Cobbles, gutters and handcarts, and somebody shouting the price of herring.'
+- id: route_eintenn_the_tenn
+  origin: allora2
+  kind: route
+  roots:
+    - kess_harbor
+    - tennfels
+  name: 'The Tenn'
+  way: river
+  text: "The duchy's river, from the castle crag down to the harbour. Barges go down on the current and are hauled back by oxen."

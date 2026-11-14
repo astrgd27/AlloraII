@@ -46,6 +46,7 @@ export function renderReport(run: BalanceRun, options: { timings?: boolean } = {
       '### Travel',
       '',
       `- Journeys finished per life: ${mean(lives.map((l) => l.journeys)).toFixed(1)} on average.`,
+      `- Things that happened on the way: ${mean(lives.map((l) => l.roadEvents)).toFixed(0)} per life.`,
       `- Time on the road: ${((onRoad / totalHours) * 100).toFixed(1)}% of all hours.`,
       `- Most visited: ${ranked
         .slice(0, 3)

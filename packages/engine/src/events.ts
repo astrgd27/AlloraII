@@ -10,6 +10,7 @@ export interface EngineEvents {
   SeasonBegan: { hours: number; date: GameDate };
   YearBegan: { hours: number; date: GameDate };
   ActivityCompleted: { hours: number; activity: string; place: string };
+  RoadEvent: { hours: number; event: string; road: string };
   Arrived: { hours: number; place: string; from: string };
 }
 

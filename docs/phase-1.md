@@ -21,7 +21,7 @@
 5. **Skills and learning.** *(done)* The smaller skill set, growth from work near the edge of ability, mastery gates.
 6. **The challenge system.** *(done)* The roll, approaches, degrees of result, lasting consequences.
 7. **Eintenn, first batch.** *(done)* About 20 new small places around Ostwick and Burg Tennfels, with residents, each rooted on canon.
-8. **Named roads.** Replace the stub roads in Eintenn with named roads, tracks and a river, and events on the way.
+8. **Named roads.** *(done)* Replace the stub roads in Eintenn with named roads, tracks and a river, and events on the way.
 9. **Profession skeleton and the Smith.** Guild-smith of the Anvil: duties, commissions, ladder.
 10. **The Butler.** Steward of Burg Tennfels.
 11. **Money and markets.** One currency, shops with hours, prices that move.
@@ -94,3 +94,10 @@ Each is an addition, to be rooted on canon when it is built.
   - **Residents keep a simple day.** Each is in one spot from the 6th hour to the 20th and another overnight. Richer routines (market days, visits to the inn) come with later batches.
   - **Tooling.** `pnpm world` now reads every file under `content/world/places`, `content/world/roads`, `content/people` and `content/activities`. The reference check now also proves that a person's routine names real sub-places.
   - **Count:** Eintenn has 39 of its 80 places; the world 318 of 2,200.
+- **2026-11-14 · Named roads (#29).** Decisions:
+  - **A name belongs to a route, not a segment.** 21 named routes (`content/world/routes/eintenn.yaml`) cover all 64 road segments of Eintenn; each segment names its route. Main ways: the Duke's Road (Kesselhaven to the castle to Ostwick), the Wine Road (Ostwick to Aschau to the harbour), the Abbey Way, the Hanging Road, the Ferry Road. Lesser ways are grouped: the Common Paths, the Oak Ways, the High Tracks, the Salt Paths, the Streets of Kesselhaven. Each has a line of character.
+  - **A river.** The Tenn is canon ("a basalt crag above the Tenn"). One new segment carries barges between the castle and Kesselhaven harbour in 6 hours, quicker than the 8 by road. The life is a passenger and sleeps aboard, as at sea. That the Tenn reaches the sea at Kesselhaven is my reading; canon does not say where it runs.
+  - **Events on the way** (`content/events/roads-eintenn.yaml`): twelve small happenings, each tied to kinds of way (road, track, river). Each waking hour of travel has a 1 in 12 chance of one. They nudge vigour or spirits a little and show on the page while the journey lasts. They are colour for now; encounters that need a decision or a check come with ventures.
+  - **The lint refused one name:** "The Green Ways" was too near a canon school of magic, the Green Way. It became the Oak Ways.
+  - **Not done:** Sir Odo's route (he wanders across realms, most of them not built), road tolls, and choosing between a safe road and a fast track; the engine still takes the quickest way.
+  - **Save version 8,** with a migration and a test.

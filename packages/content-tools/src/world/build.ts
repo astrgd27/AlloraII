@@ -88,7 +88,22 @@ async function main(): Promise<void> {
       canon: p.origin === 'allora1',
       subs: Object.fromEntries(((p.subs as Raw[] | undefined) ?? []).map((x) => [x.id, x.name])),
     })),
-    roads: roads.map((r) => ({ id: r.id, from: r.from, to: r.to, way: r.way, hours: r.hours })),
+    roads: roads.map((r) => ({
+      id: r.id,
+      from: r.from,
+      to: r.to,
+      way: r.way,
+      hours: r.hours,
+      route: (r as unknown as Raw).route,
+    })),
+    routes: (await readDir('content/world/routes')).map((r) => ({
+      id: r.id,
+      name: r.name,
+      text: r.text,
+    })),
+    roadEvents: (await readDir('content/events'))
+      .filter((e) => e.kind === 'road_event')
+      .map((e) => ({ id: e.id, text: e.text, ways: e.ways, effects: e.effects ?? {} })),
     skills: (await readYaml('content/skills/skills.yaml')).map((k) => ({
       id: k.id,
       name: k.name,

@@ -4,6 +4,7 @@
 - id: road_aschau_kess_undercroft
   origin: allora2
   kind: road
+  route: route_eintenn_wine_road
   roots:
     - aschau
     - kess_undercroft
@@ -14,6 +15,7 @@
 - id: road_aschau_pomerell
   origin: allora2
   kind: road
+  route: route_eintenn_cider_lane
   roots:
     - aschau
     - pomerell
@@ -24,6 +26,7 @@
 - id: road_collegium_kess_market
   origin: allora2
   kind: road
+  route: route_eintenn_kesselhaven_streets
   roots:
     - collegium
     - kess_market
@@ -34,6 +37,7 @@
 - id: road_collegium_kess_undercroft
   origin: allora2
   kind: road
+  route: route_eintenn_kesselhaven_streets
   roots:
     - collegium
     - kess_undercroft
@@ -44,6 +48,7 @@
 - id: road_collegium_tennfels
   origin: allora2
   kind: road
+  route: route_eintenn_dukes_road
   roots:
     - collegium
     - tennfels
@@ -54,6 +59,7 @@
 - id: road_collegium_wp_ferry
   origin: allora2
   kind: road
+  route: route_eintenn_ferry_road
   roots:
     - collegium
     - wp_ferry
@@ -64,6 +70,7 @@
 - id: road_grauwald_greenwife_grove
   origin: allora2
   kind: road
+  route: route_eintenn_oak_ways
   roots:
     - grauwald
     - greenwife_grove
@@ -74,6 +81,7 @@
 - id: road_grauwald_silberhalde
   origin: allora2
   kind: road
+  route: route_eintenn_charcoal_road
   roots:
     - grauwald
     - silberhalde
@@ -84,6 +92,7 @@
 - id: road_grauwald_wisewoman_hut
   origin: allora2
   kind: road
+  route: route_eintenn_oak_ways
   roots:
     - grauwald
     - wisewoman_hut
@@ -94,6 +103,7 @@
 - id: road_greenwife_grove_hohenkamm
   origin: allora2
   kind: road
+  route: route_eintenn_high_tracks
   roots:
     - greenwife_grove
     - hohenkamm
@@ -104,6 +114,7 @@
 - id: road_greenwife_grove_thunder_caves
   origin: allora2
   kind: road
+  route: route_eintenn_high_tracks
   roots:
     - greenwife_grove
     - thunder_caves
@@ -114,6 +125,7 @@
 - id: road_greenwife_grove_wisewoman_hut
   origin: allora2
   kind: road
+  route: route_eintenn_oak_ways
   roots:
     - greenwife_grove
     - wisewoman_hut
@@ -124,6 +136,7 @@
 - id: road_hohenkamm_thunder_caves
   origin: allora2
   kind: road
+  route: route_eintenn_high_tracks
   roots:
     - hohenkamm
     - thunder_caves
@@ -134,6 +147,7 @@
 - id: road_kess_fondaco_kess_harbor
   origin: allora2
   kind: road
+  route: route_eintenn_kesselhaven_streets
   roots:
     - kess_fondaco
     - kess_harbor
@@ -144,6 +158,7 @@
 - id: road_kess_fondaco_kess_market
   origin: allora2
   kind: road
+  route: route_eintenn_kesselhaven_streets
   roots:
     - kess_fondaco
     - kess_market
@@ -154,6 +169,7 @@
 - id: road_kess_fondaco_wp_ferry
   origin: allora2
   kind: road
+  route: route_eintenn_ferry_road
   roots:
     - kess_fondaco
     - wp_ferry
@@ -164,6 +180,7 @@
 - id: road_kess_harbor_kess_market
   origin: allora2
   kind: road
+  route: route_eintenn_kesselhaven_streets
   roots:
     - kess_harbor
     - kess_market
@@ -174,6 +191,7 @@
 - id: road_kess_harbor_kess_undercroft
   origin: allora2
   kind: road
+  route: route_eintenn_kesselhaven_streets
   roots:
     - kess_harbor
     - kess_undercroft
@@ -184,6 +202,7 @@
 - id: road_kess_harbor_salzmoor
   origin: allora2
   kind: road
+  route: route_eintenn_salt_paths
   roots:
     - kess_harbor
     - salzmoor
@@ -194,6 +213,7 @@
 - id: road_kess_market_kess_undercroft
   origin: allora2
   kind: road
+  route: route_eintenn_kesselhaven_streets
   roots:
     - kess_market
     - kess_undercroft
@@ -204,6 +224,7 @@
 - id: road_kess_undercroft_salzmoor
   origin: allora2
   kind: road
+  route: route_eintenn_salt_paths
   roots:
     - kess_undercroft
     - salzmoor
@@ -214,6 +235,7 @@
 - id: road_ostwick_pomerell
   origin: allora2
   kind: road
+  route: route_eintenn_abbey_way
   roots:
     - ostwick
     - pomerell
@@ -224,6 +246,7 @@
 - id: road_ostwick_tennfels
   origin: allora2
   kind: road
+  route: route_eintenn_levy_way
   roots:
     - ostwick
     - tennfels
@@ -234,6 +257,7 @@
 - id: road_ostwick_wisewoman_hut
   origin: allora2
   kind: road
+  route: route_eintenn_common_paths
   roots:
     - ostwick
     - wisewoman_hut
@@ -244,6 +268,7 @@
 - id: road_silberhalde_threshold_sanctum
   origin: allora2
   kind: road
+  route: route_eintenn_ruin_tracks
   roots:
     - silberhalde
     - threshold_sanctum
@@ -254,6 +279,7 @@
 - id: road_silberhalde_vaelis_ruins
   origin: allora2
   kind: road
+  route: route_eintenn_ruin_tracks
   roots:
     - silberhalde
     - vaelis_ruins
@@ -264,6 +290,7 @@
 - id: road_threshold_sanctum_vaelis_ruins
   origin: allora2
   kind: road
+  route: route_eintenn_ruin_tracks
   roots:
     - threshold_sanctum
     - vaelis_ruins

@@ -32,7 +32,7 @@ export interface Road {
   from: string;
   to: string;
   /** street: inside one city. road: between settled places. track: to or through the wild. sea: a sea lane. */
-  way: 'street' | 'road' | 'track' | 'sea';
+  way: 'street' | 'road' | 'track' | 'sea' | 'river';
   hours: number;
 }
 

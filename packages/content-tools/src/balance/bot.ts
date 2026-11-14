@@ -63,6 +63,8 @@ export interface LifeResult {
   hoursSlept: number;
   /** Skill id → level reached. */
   skills: Record<string, number>;
+  /** Things that happened on the road. */
+  roadEvents: number;
   /** Degree of result → times it came up. */
   checks: Record<string, number>;
   /** Hours spent on activities. */
@@ -85,6 +87,7 @@ export function playLife(persona: Persona, seed: number, hours: number): LifeRes
     hoursSlept: 0,
     skills: {},
     checks: {},
+    roadEvents: 0,
     hoursWorked: 0,
     needs: {
       vigour: { mean: 0, low: 100 },
@@ -109,6 +112,7 @@ export function playLife(persona: Persona, seed: number, hours: number): LifeRes
   }
   for (const [id, k] of Object.entries(engine.state.skills)) result.skills[id] = k.level;
   result.checks = { ...engine.state.checks };
+  result.roadEvents = engine.state.roadEvents;
   result.meals = engine.state.meals;
   result.hoursSlept = engine.state.hoursSlept;
   const date = dateAt(engine.state.hours);

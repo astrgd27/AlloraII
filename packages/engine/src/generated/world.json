@@ -746,441 +746,512 @@
    "from": "ostwick",
    "to": "place_eintenn_weirbeck_mill",
    "way": "road",
-   "hours": 2
+   "hours": 2,
+   "route": "route_eintenn_abbey_way"
   },
   {
    "id": "road_ostwick_place_eintenn_netherwick",
    "from": "ostwick",
    "to": "place_eintenn_netherwick",
    "way": "road",
-   "hours": 3
+   "hours": 3,
+   "route": "route_eintenn_beck_path"
   },
   {
    "id": "road_ostwick_place_eintenn_tithe_barn",
    "from": "ostwick",
    "to": "place_eintenn_tithe_barn",
    "way": "road",
-   "hours": 1
+   "hours": 1,
+   "route": "route_eintenn_dukes_road"
   },
   {
    "id": "road_ostwick_place_eintenn_crow_stone",
    "from": "ostwick",
    "to": "place_eintenn_crow_stone",
    "way": "road",
-   "hours": 3
+   "hours": 3,
+   "route": "route_eintenn_common_paths"
   },
   {
    "id": "road_place_eintenn_dunmere_place_eintenn_tithe_barn",
    "from": "place_eintenn_dunmere",
    "to": "place_eintenn_tithe_barn",
    "way": "road",
-   "hours": 2
+   "hours": 2,
+   "route": "route_eintenn_dukes_road"
   },
   {
    "id": "road_ostwick_place_eintenn_dunmere",
    "from": "ostwick",
    "to": "place_eintenn_dunmere",
    "way": "road",
-   "hours": 3
+   "hours": 3,
+   "route": "route_eintenn_levy_way"
   },
   {
    "id": "road_place_eintenn_netherwick_place_eintenn_three_ash_ford",
    "from": "place_eintenn_netherwick",
    "to": "place_eintenn_three_ash_ford",
    "way": "road",
-   "hours": 3
+   "hours": 3,
+   "route": "route_eintenn_beck_path"
   },
   {
    "id": "road_place_eintenn_dunmere_place_eintenn_three_ash_ford",
    "from": "place_eintenn_dunmere",
    "to": "place_eintenn_three_ash_ford",
    "way": "road",
-   "hours": 3
+   "hours": 3,
+   "route": "route_eintenn_beacon_path"
   },
   {
    "id": "road_place_eintenn_hollin_cross_place_eintenn_netherwick",
    "from": "place_eintenn_hollin_cross",
    "to": "place_eintenn_netherwick",
    "way": "road",
-   "hours": 2
+   "hours": 2,
+   "route": "route_eintenn_holly_lane"
   },
   {
    "id": "road_ostwick_place_eintenn_hollin_cross",
    "from": "ostwick",
    "to": "place_eintenn_hollin_cross",
    "way": "road",
-   "hours": 5
+   "hours": 5,
+   "route": "route_eintenn_wine_road"
   },
   {
    "id": "road_place_eintenn_sallowfield_place_eintenn_weirbeck_mill",
    "from": "place_eintenn_sallowfield",
    "to": "place_eintenn_weirbeck_mill",
    "way": "road",
-   "hours": 3
+   "hours": 3,
+   "route": "route_eintenn_abbey_way"
   },
   {
    "id": "road_place_eintenn_hollin_cross_place_eintenn_sallowfield",
    "from": "place_eintenn_hollin_cross",
    "to": "place_eintenn_sallowfield",
    "way": "road",
-   "hours": 3
+   "hours": 3,
+   "route": "route_eintenn_holly_lane"
   },
   {
    "id": "road_place_eintenn_hanging_oak_place_eintenn_tithe_barn",
    "from": "place_eintenn_hanging_oak",
    "to": "place_eintenn_tithe_barn",
    "way": "road",
-   "hours": 4
+   "hours": 4,
+   "route": "route_eintenn_hanging_road"
   },
   {
    "id": "road_place_eintenn_dunmere_place_eintenn_hanging_oak",
    "from": "place_eintenn_dunmere",
    "to": "place_eintenn_hanging_oak",
    "way": "road",
-   "hours": 2
+   "hours": 2,
+   "route": "route_eintenn_hanging_road"
   },
   {
    "id": "road_place_eintenn_dunmere_place_eintenn_undercrag",
    "from": "place_eintenn_dunmere",
    "to": "place_eintenn_undercrag",
    "way": "road",
-   "hours": 3
+   "hours": 3,
+   "route": "route_eintenn_dukes_road"
   },
   {
    "id": "road_place_eintenn_undercrag_tennfels",
    "from": "place_eintenn_undercrag",
    "to": "tennfels",
    "way": "road",
-   "hours": 1
+   "hours": 1,
+   "route": "route_eintenn_dukes_road"
   },
   {
    "id": "road_place_eintenn_broken_lance_place_eintenn_undercrag",
    "from": "place_eintenn_broken_lance",
    "to": "place_eintenn_undercrag",
    "way": "road",
-   "hours": 2
+   "hours": 2,
+   "route": "route_eintenn_tourney_road"
   },
   {
    "id": "road_place_eintenn_broken_lance_tennfels",
    "from": "place_eintenn_broken_lance",
    "to": "tennfels",
    "way": "road",
-   "hours": 2
+   "hours": 2,
+   "route": "route_eintenn_tourney_road"
   },
   {
    "id": "road_place_eintenn_broken_lance_place_eintenn_falkenau",
    "from": "place_eintenn_broken_lance",
    "to": "place_eintenn_falkenau",
    "way": "road",
-   "hours": 3
+   "hours": 3,
+   "route": "route_eintenn_tourney_road"
   },
   {
    "id": "road_place_eintenn_falkenau_tennfels",
    "from": "place_eintenn_falkenau",
    "to": "tennfels",
    "way": "road",
-   "hours": 3
+   "hours": 3,
+   "route": "route_eintenn_tourney_road"
   },
   {
    "id": "road_place_eintenn_black_quarry_place_eintenn_falkenau",
    "from": "place_eintenn_black_quarry",
    "to": "place_eintenn_falkenau",
    "way": "road",
-   "hours": 1
+   "hours": 1,
+   "route": "route_eintenn_quarry_drag"
   },
   {
    "id": "road_place_eintenn_black_quarry_place_eintenn_hanging_oak",
    "from": "place_eintenn_black_quarry",
    "to": "place_eintenn_hanging_oak",
    "way": "road",
-   "hours": 6
+   "hours": 6,
+   "route": "route_eintenn_quarry_drag"
   },
   {
    "id": "road_place_eintenn_burners_ride_place_eintenn_hanging_oak",
    "from": "place_eintenn_burners_ride",
    "to": "place_eintenn_hanging_oak",
    "way": "road",
-   "hours": 3
+   "hours": 3,
+   "route": "route_eintenn_hanging_road"
   },
   {
    "id": "road_grauwald_place_eintenn_burners_ride",
    "from": "grauwald",
    "to": "place_eintenn_burners_ride",
    "way": "road",
-   "hours": 2
+   "hours": 2,
+   "route": "route_eintenn_hanging_road"
   },
   {
    "id": "road_place_eintenn_burners_ride_place_eintenn_verderers_lodge",
    "from": "place_eintenn_burners_ride",
    "to": "place_eintenn_verderers_lodge",
    "way": "road",
-   "hours": 2
+   "hours": 2,
+   "route": "route_eintenn_forest_rides"
   },
   {
    "id": "road_grauwald_place_eintenn_verderers_lodge",
    "from": "grauwald",
    "to": "place_eintenn_verderers_lodge",
    "way": "road",
-   "hours": 2
+   "hours": 2,
+   "route": "route_eintenn_forest_rides"
   },
   {
    "id": "road_place_eintenn_crow_stone_place_eintenn_reedmere",
    "from": "place_eintenn_crow_stone",
    "to": "place_eintenn_reedmere",
    "way": "track",
-   "hours": 3
+   "hours": 3,
+   "route": "route_eintenn_common_paths"
   },
   {
    "id": "road_place_eintenn_reedmere_wisewoman_hut",
    "from": "place_eintenn_reedmere",
    "to": "wisewoman_hut",
    "way": "track",
-   "hours": 2
+   "hours": 2,
+   "route": "route_eintenn_common_paths"
   },
   {
    "id": "road_place_eintenn_steinwick_place_eintenn_three_ash_ford",
    "from": "place_eintenn_steinwick",
    "to": "place_eintenn_three_ash_ford",
    "way": "road",
-   "hours": 3
+   "hours": 3,
+   "route": "route_eintenn_beck_path"
   },
   {
    "id": "road_place_eintenn_hollin_cross_place_eintenn_steinwick",
    "from": "place_eintenn_hollin_cross",
    "to": "place_eintenn_steinwick",
    "way": "road",
-   "hours": 2
+   "hours": 2,
+   "route": "route_eintenn_wine_road"
   },
   {
    "id": "road_place_eintenn_steinwick_place_eintenn_vintners_halt",
    "from": "place_eintenn_steinwick",
    "to": "place_eintenn_vintners_halt",
    "way": "road",
-   "hours": 2
+   "hours": 2,
+   "route": "route_eintenn_wine_road"
   },
   {
    "id": "road_aschau_place_eintenn_vintners_halt",
    "from": "aschau",
    "to": "place_eintenn_vintners_halt",
    "way": "road",
-   "hours": 2
+   "hours": 2,
+   "route": "route_eintenn_wine_road"
   },
   {
    "id": "road_place_eintenn_pomerell_grange_place_eintenn_sallowfield",
    "from": "place_eintenn_pomerell_grange",
    "to": "place_eintenn_sallowfield",
    "way": "road",
-   "hours": 3
+   "hours": 3,
+   "route": "route_eintenn_abbey_way"
   },
   {
    "id": "road_place_eintenn_pomerell_grange_pomerell",
    "from": "place_eintenn_pomerell_grange",
    "to": "pomerell",
    "way": "road",
-   "hours": 3
+   "hours": 3,
+   "route": "route_eintenn_abbey_way"
   },
   {
    "id": "road_place_eintenn_beacon_knoll_place_eintenn_dunmere",
    "from": "place_eintenn_beacon_knoll",
    "to": "place_eintenn_dunmere",
    "way": "road",
-   "hours": 2
+   "hours": 2,
+   "route": "route_eintenn_beacon_path"
   },
   {
    "id": "road_place_eintenn_beacon_knoll_place_eintenn_three_ash_ford",
    "from": "place_eintenn_beacon_knoll",
    "to": "place_eintenn_three_ash_ford",
    "way": "road",
-   "hours": 2
+   "hours": 2,
+   "route": "route_eintenn_beacon_path"
+  },
+  {
+   "id": "road_kess_harbor_tennfels",
+   "from": "kess_harbor",
+   "to": "tennfels",
+   "way": "river",
+   "hours": 6,
+   "route": "route_eintenn_the_tenn"
   },
   {
    "id": "road_aschau_kess_undercroft",
    "from": "aschau",
    "to": "kess_undercroft",
    "way": "road",
-   "hours": 8
+   "hours": 8,
+   "route": "route_eintenn_wine_road"
   },
   {
    "id": "road_aschau_pomerell",
    "from": "aschau",
    "to": "pomerell",
    "way": "road",
-   "hours": 7
+   "hours": 7,
+   "route": "route_eintenn_cider_lane"
   },
   {
    "id": "road_collegium_kess_market",
    "from": "collegium",
    "to": "kess_market",
    "way": "street",
-   "hours": 1
+   "hours": 1,
+   "route": "route_eintenn_kesselhaven_streets"
   },
   {
    "id": "road_collegium_kess_undercroft",
    "from": "collegium",
    "to": "kess_undercroft",
    "way": "street",
-   "hours": 1
+   "hours": 1,
+   "route": "route_eintenn_kesselhaven_streets"
   },
   {
    "id": "road_collegium_tennfels",
    "from": "collegium",
    "to": "tennfels",
    "way": "road",
-   "hours": 6
+   "hours": 6,
+   "route": "route_eintenn_dukes_road"
   },
   {
    "id": "road_collegium_wp_ferry",
    "from": "collegium",
    "to": "wp_ferry",
    "way": "road",
-   "hours": 12
+   "hours": 12,
+   "route": "route_eintenn_ferry_road"
   },
   {
    "id": "road_grauwald_greenwife_grove",
    "from": "grauwald",
    "to": "greenwife_grove",
    "way": "track",
-   "hours": 5
+   "hours": 5,
+   "route": "route_eintenn_oak_ways"
   },
   {
    "id": "road_grauwald_silberhalde",
    "from": "grauwald",
    "to": "silberhalde",
    "way": "track",
-   "hours": 6
+   "hours": 6,
+   "route": "route_eintenn_charcoal_road"
   },
   {
    "id": "road_grauwald_wisewoman_hut",
    "from": "grauwald",
    "to": "wisewoman_hut",
    "way": "track",
-   "hours": 5
+   "hours": 5,
+   "route": "route_eintenn_oak_ways"
   },
   {
    "id": "road_greenwife_grove_hohenkamm",
    "from": "greenwife_grove",
    "to": "hohenkamm",
    "way": "track",
-   "hours": 5
+   "hours": 5,
+   "route": "route_eintenn_high_tracks"
   },
   {
    "id": "road_greenwife_grove_thunder_caves",
    "from": "greenwife_grove",
    "to": "thunder_caves",
    "way": "track",
-   "hours": 9
+   "hours": 9,
+   "route": "route_eintenn_high_tracks"
   },
   {
    "id": "road_greenwife_grove_wisewoman_hut",
    "from": "greenwife_grove",
    "to": "wisewoman_hut",
    "way": "track",
-   "hours": 7
+   "hours": 7,
+   "route": "route_eintenn_oak_ways"
   },
   {
    "id": "road_hohenkamm_thunder_caves",
    "from": "hohenkamm",
    "to": "thunder_caves",
    "way": "track",
-   "hours": 5
+   "hours": 5,
+   "route": "route_eintenn_high_tracks"
   },
   {
    "id": "road_kess_fondaco_kess_harbor",
    "from": "kess_fondaco",
    "to": "kess_harbor",
    "way": "street",
-   "hours": 1
+   "hours": 1,
+   "route": "route_eintenn_kesselhaven_streets"
   },
   {
    "id": "road_kess_fondaco_kess_market",
    "from": "kess_fondaco",
    "to": "kess_market",
    "way": "street",
-   "hours": 1
+   "hours": 1,
+   "route": "route_eintenn_kesselhaven_streets"
   },
   {
    "id": "road_kess_fondaco_wp_ferry",
    "from": "kess_fondaco",
    "to": "wp_ferry",
    "way": "road",
-   "hours": 10
+   "hours": 10,
+   "route": "route_eintenn_ferry_road"
   },
   {
    "id": "road_kess_harbor_kess_market",
    "from": "kess_harbor",
    "to": "kess_market",
    "way": "street",
-   "hours": 1
+   "hours": 1,
+   "route": "route_eintenn_kesselhaven_streets"
   },
   {
    "id": "road_kess_harbor_kess_undercroft",
    "from": "kess_harbor",
    "to": "kess_undercroft",
    "way": "street",
-   "hours": 1
+   "hours": 1,
+   "route": "route_eintenn_kesselhaven_streets"
   },
   {
    "id": "road_kess_harbor_salzmoor",
    "from": "kess_harbor",
    "to": "salzmoor",
    "way": "track",
-   "hours": 8
+   "hours": 8,
+   "route": "route_eintenn_salt_paths"
   },
   {
    "id": "road_kess_market_kess_undercroft",
    "from": "kess_market",
    "to": "kess_undercroft",
    "way": "street",
-   "hours": 1
+   "hours": 1,
+   "route": "route_eintenn_kesselhaven_streets"
   },
   {
    "id": "road_kess_undercroft_salzmoor",
    "from": "kess_undercroft",
    "to": "salzmoor",
    "way": "track",
-   "hours": 11
+   "hours": 11,
+   "route": "route_eintenn_salt_paths"
   },
   {
    "id": "road_ostwick_pomerell",
    "from": "ostwick",
    "to": "pomerell",
    "way": "road",
-   "hours": 10
+   "hours": 10,
+   "route": "route_eintenn_abbey_way"
   },
   {
    "id": "road_ostwick_tennfels",
    "from": "ostwick",
    "to": "tennfels",
    "way": "road",
-   "hours": 8
+   "hours": 8,
+   "route": "route_eintenn_levy_way"
   },
   {
    "id": "road_ostwick_wisewoman_hut",
    "from": "ostwick",
    "to": "wisewoman_hut",
    "way": "track",
-   "hours": 7
+   "hours": 7,
+   "route": "route_eintenn_common_paths"
   },
   {
    "id": "road_silberhalde_threshold_sanctum",
    "from": "silberhalde",
    "to": "threshold_sanctum",
    "way": "road",
-   "hours": 9
+   "hours": 9,
+   "route": "route_eintenn_ruin_tracks"
   },
   {
    "id": "road_silberhalde_vaelis_ruins",
    "from": "silberhalde",
    "to": "vaelis_ruins",
    "way": "track",
-   "hours": 7
+   "hours": 7,
+   "route": "route_eintenn_ruin_tracks"
   },
   {
    "id": "road_threshold_sanctum_vaelis_ruins",
    "from": "threshold_sanctum",
    "to": "vaelis_ruins",
    "way": "track",
-   "hours": 3
+   "hours": 3,
+   "route": "route_eintenn_ruin_tracks"
   },
   {
    "id": "road_lazaretto_marre_palace",
@@ -1286,6 +1357,252 @@
    "to": "marre_city",
    "way": "sea",
    "hours": 110
+  }
+ ],
+ "routes": [
+  {
+   "id": "route_eintenn_dukes_road",
+   "name": "The Duke's Road",
+   "text": "The made road from Kesselhaven up to the castle and down to Ostwick, ditched and gravelled at the Duke's cost and tolled at his pleasure."
+  },
+  {
+   "id": "route_eintenn_levy_way",
+   "name": "The Levy Way",
+   "text": "The straight way the levy marches when the beacon is lit: no bends, no shade and no inns."
+  },
+  {
+   "id": "route_eintenn_wine_road",
+   "name": "The Wine Road",
+   "text": "Rutted by casks from Aschau to the harbour, and sticky under the wheels every autumn."
+  },
+  {
+   "id": "route_eintenn_abbey_way",
+   "name": "The Abbey Way",
+   "text": "A quiet road between apple-trees, south to Pomerell. The brothers mend it themselves and count the stones."
+  },
+  {
+   "id": "route_eintenn_cider_lane",
+   "name": "The Cider Lane",
+   "text": "The back way between the abbey's cider and the town's wine. Each end claims the other's drink is the cause of the potholes."
+  },
+  {
+   "id": "route_eintenn_beck_path",
+   "name": "The Beck Path",
+   "text": "It follows the beck from Ostwick down to the ford and up to the sheep-walls, and floods when the beck does."
+  },
+  {
+   "id": "route_eintenn_holly_lane",
+   "name": "The Holly Lane",
+   "text": "A sunk lane between holly hedges, dark at noon and green all winter."
+  },
+  {
+   "id": "route_eintenn_beacon_path",
+   "name": "The Beacon Path",
+   "text": "A footpath over the bald hill, kept clear so that a runner can find it in the dark."
+  },
+  {
+   "id": "route_eintenn_hanging_road",
+   "name": "The Hanging Road",
+   "text": "The road to the forest, past the oak. Carters whistle on it, and not from cheerfulness."
+  },
+  {
+   "id": "route_eintenn_forest_rides",
+   "name": "The Forest Rides",
+   "text": "Broad green rides cut for the Duke's hunt, mown by deer and policed by foresters."
+  },
+  {
+   "id": "route_eintenn_charcoal_road",
+   "name": "The Charcoal Road",
+   "text": "Black ruts from the Grauwald to the smelters. Nothing grows in the wheel-tracks."
+  },
+  {
+   "id": "route_eintenn_quarry_drag",
+   "name": "The Quarry Drag",
+   "text": "Worn hollow by stone-sledges, from the black quarry round the back of the crag."
+  },
+  {
+   "id": "route_eintenn_tourney_road",
+   "name": "The Tourney Road",
+   "text": "The loop below the castle that fills with banners, farriers and pickpockets when the lists are open."
+  },
+  {
+   "id": "route_eintenn_common_paths",
+   "name": "The Common Paths",
+   "text": "Sheep-tracks over the common and the causeway through the reeds. They go where sheep would."
+  },
+  {
+   "id": "route_eintenn_oak_ways",
+   "name": "The Oak Ways",
+   "text": "Old tracks under the oaks that were not made by the Duke and do not appear in his rolls."
+  },
+  {
+   "id": "route_eintenn_high_tracks",
+   "name": "The High Tracks",
+   "text": "Goat-paths above the tree-line, marked by cairns and by the weather."
+  },
+  {
+   "id": "route_eintenn_ruin_tracks",
+   "name": "The Ruin Tracks",
+   "text": "Paths between the mine and the old stones, kept open by people who would rather not say why."
+  },
+  {
+   "id": "route_eintenn_ferry_road",
+   "name": "The Ferry Road",
+   "text": "East along the river to the rope-ferry and Luggen beyond, busy with drovers and slow with their beasts."
+  },
+  {
+   "id": "route_eintenn_salt_paths",
+   "name": "The Salt Paths",
+   "text": "Plank-ways and firm ground through the Salzmoor, known to the salters and moved by the tide."
+  },
+  {
+   "id": "route_eintenn_kesselhaven_streets",
+   "name": "The Streets of Kesselhaven",
+   "text": "Cobbles, gutters and handcarts, and somebody shouting the price of herring."
+  },
+  {
+   "id": "route_eintenn_the_tenn",
+   "name": "The Tenn",
+   "text": "The duchy's river, from the castle crag down to the harbour. Barges go down on the current and are hauled back by oxen."
+  }
+ ],
+ "roadEvents": [
+  {
+   "id": "event_road_carter_news",
+   "text": "A carter going the other way calls the news without stopping: a ship in, a price up, a wedding off.",
+   "ways": [
+    "road"
+   ],
+   "effects": {
+    "vigour": 0,
+    "spirits": 1
+   }
+  },
+  {
+   "id": "event_road_thorn_ribbon",
+   "text": "A ribbon on a thorn, new since yesterday. Someone has come this way with something to ask.",
+   "ways": [
+    "track"
+   ],
+   "effects": {
+    "vigour": 0,
+    "spirits": 1
+   }
+  },
+  {
+   "id": "event_road_rain_squall",
+   "text": "Rain comes over the hill all at once. You walk the next mile with your head down.",
+   "ways": [
+    "road",
+    "track"
+   ],
+   "effects": {
+    "vigour": -3,
+    "spirits": 0
+   }
+  },
+  {
+   "id": "event_road_strayed_ewe",
+   "text": "A ewe on the wrong side of a wall. You put her back. She is not grateful.",
+   "ways": [
+    "road",
+    "track"
+   ],
+   "effects": {
+    "vigour": -2,
+    "spirits": 1
+   }
+  },
+  {
+   "id": "event_road_dukes_riders",
+   "text": "The Duke's riders come through at a canter, and the road stands aside for them.",
+   "ways": [
+    "road"
+   ],
+   "effects": {
+    "vigour": 0,
+    "spirits": 0
+   }
+  },
+  {
+   "id": "event_road_kiln_smoke",
+   "text": "Smoke hangs in the trees from a kiln you cannot see. The burners know you are here.",
+   "ways": [
+    "track",
+    "road"
+   ],
+   "effects": {
+    "vigour": 0,
+    "spirits": 0
+   }
+  },
+  {
+   "id": "event_road_cold_spring",
+   "text": "A spring by the way, cold enough to hurt your teeth.",
+   "ways": [
+    "road",
+    "track"
+   ],
+   "effects": {
+    "vigour": 3,
+    "spirits": 0
+   }
+  },
+  {
+   "id": "event_road_pecuttos_cup",
+   "text": "A wandering priest of Pecutto, already cheerful, offers you the cup and a verse to go with it.",
+   "ways": [
+    "road"
+   ],
+   "effects": {
+    "vigour": 0,
+    "spirits": 2
+   }
+  },
+  {
+   "id": "event_road_mere_mist",
+   "text": "Mist off the water. For a while there is only the path under your feet.",
+   "ways": [
+    "track"
+   ],
+   "effects": {
+    "vigour": 0,
+    "spirits": -1
+   }
+  },
+  {
+   "id": "event_road_barge_song",
+   "text": "The bargemen sing the same four lines from the castle to the sea.",
+   "ways": [
+    "river"
+   ],
+   "effects": {
+    "vigour": 0,
+    "spirits": 1
+   }
+  },
+  {
+   "id": "event_road_heron_rises",
+   "text": "A heron gets up from the shallows, slow as a man shaking out a cloak.",
+   "ways": [
+    "river",
+    "track"
+   ],
+   "effects": {
+    "vigour": 0,
+    "spirits": 1
+   }
+  },
+  {
+   "id": "event_road_drovers_dust",
+   "text": "A drove of cattle fills the road from hedge to hedge. You wait, and eat their dust.",
+   "ways": [
+    "road"
+   ],
+   "effects": {
+    "vigour": -1,
+    "spirits": -1
+   }
   }
  ],
  "skills": [

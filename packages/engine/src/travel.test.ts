@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { Engine } from './engine';
+import { migrate } from './save/migrations';
 import { newGame } from './state';
+import { eventsFor } from './travel';
 import { START_PLACE, WORLD, World, type WorldData } from './world';
 
 /** a —2— b —3— c, and a —9— c; d stands alone. */
@@ -31,7 +33,7 @@ describe('routes', () => {
   const world = new World(SMALL);
 
   it('finds the quickest way, not the fewest roads', () => {
-    expect(world.route('a', 'c')).toEqual({
+    expect(world.route('a', 'c')).toMatchObject({
       hours: 5,
       legs: [
         { road: 'ab', to: 'b', hours: 2 },
@@ -129,5 +131,64 @@ describe('the Phase 0 world: Eintenn and Marre', () => {
       expect(world.places.has(road.from) && world.places.has(road.to)).toBe(true);
       expect(Number.isInteger(road.hours) && road.hours >= 1).toBe(true);
     }
+  });
+});
+
+describe('named roads and what happens on them', () => {
+  const routes = new Set((WORLD.routes ?? []).map((r) => r.id));
+  const region = new Map(WORLD.places.map((p) => [p.id, p.region]));
+
+  it('leaves no road in Eintenn without a name', () => {
+    const eintenn = WORLD.roads.filter(
+      (r) => region.get(r.from) === 'eintenn' && region.get(r.to) === 'eintenn',
+    );
+    expect(eintenn.length).toBeGreaterThanOrEqual(64);
+    for (const road of eintenn) expect(routes.has(road.route ?? '')).toBe(true);
+    expect(routes.size).toBe(21);
+  });
+
+  it('carries barges on the Tenn, with the life asleep aboard at night', () => {
+    const river = WORLD.roads.find((r) => r.way === 'river');
+    expect(river).toMatchObject({
+      from: 'kess_harbor',
+      to: 'tennfels',
+      route: 'route_eintenn_the_tenn',
+    });
+    expect(new World().route('tennfels', 'kess_harbor')?.legs[0]).toMatchObject({
+      sea: true,
+      way: 'river',
+    });
+  });
+
+  it('gives every kind of way in Eintenn something that can happen', () => {
+    for (const way of ['road', 'track', 'river']) {
+      expect(eventsFor(way, WORLD.roadEvents ?? []).length).toBeGreaterThan(0);
+    }
+    expect(eventsFor(undefined, WORLD.roadEvents ?? [])).toEqual([]);
+  });
+
+  it('meets events on long journeys, and shows the last one until arrival', () => {
+    let met = 0;
+    let shown = false;
+    for (let seed = 1; seed <= 5; seed++) {
+      const engine = new Engine(newGame(seed, 0));
+      engine.bus.on('RoadEvent', () => (met += 1));
+      engine.handle({ type: 'travel', to: 'kess_harbor' }, 0);
+      for (let h = 0; h < 200 && engine.state.journey; h++) {
+        engine.tick();
+        if (engine.snapshot().roadEvent) shown = true;
+      }
+      expect(engine.state.journey).toBeNull();
+      expect(engine.snapshot().roadEvent).toBeNull();
+    }
+    expect(met).toBeGreaterThan(0);
+    expect(shown).toBe(true);
+  });
+
+  it('migrates a v7 save', () => {
+    const v7 = { ...newGame(1, 0), version: 7 } as Record<string, unknown>;
+    delete v7.roadEvent;
+    delete v7.roadEvents;
+    expect(migrate(v7)).toMatchObject({ roadEvent: null, roadEvents: 0 });
   });
 });

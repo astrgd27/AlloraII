@@ -17,7 +17,7 @@ export interface Journey {
 }
 
 /** The save format version. Raise it with every change to GameState, and add a migration. */
-export const SAVE_VERSION = 7;
+export const SAVE_VERSION = 8;
 
 export interface GameState {
   version: typeof SAVE_VERSION;
@@ -58,6 +58,9 @@ export interface GameState {
   checks: Record<string, number>;
   /** Resolve: a small pool to reroll a die with. Spending it comes with ventures. */
   resolve: number;
+  /** The last thing that happened on the way, and how many things have. */
+  roadEvent: { id: string; hours: number } | null;
+  roadEvents: number;
 }
 
 export function newGame(seed: number, nowMs: number): GameState {
@@ -86,5 +89,7 @@ export function newGame(seed: number, nowMs: number): GameState {
     lastCheck: null,
     checks: {},
     resolve: 3,
+    roadEvent: null,
+    roadEvents: 0,
   };
 }

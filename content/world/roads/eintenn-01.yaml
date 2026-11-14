@@ -2,6 +2,7 @@
 - id: road_ostwick_place_eintenn_weirbeck_mill
   origin: allora2
   kind: road
+  route: route_eintenn_abbey_way
   roots:
     - ostwick
     - place_eintenn_weirbeck_mill
@@ -12,6 +13,7 @@
 - id: road_ostwick_place_eintenn_netherwick
   origin: allora2
   kind: road
+  route: route_eintenn_beck_path
   roots:
     - ostwick
     - place_eintenn_netherwick
@@ -22,6 +24,7 @@
 - id: road_ostwick_place_eintenn_tithe_barn
   origin: allora2
   kind: road
+  route: route_eintenn_dukes_road
   roots:
     - ostwick
     - place_eintenn_tithe_barn
@@ -32,6 +35,7 @@
 - id: road_ostwick_place_eintenn_crow_stone
   origin: allora2
   kind: road
+  route: route_eintenn_common_paths
   roots:
     - ostwick
     - place_eintenn_crow_stone
@@ -42,6 +46,7 @@
 - id: road_place_eintenn_dunmere_place_eintenn_tithe_barn
   origin: allora2
   kind: road
+  route: route_eintenn_dukes_road
   roots:
     - place_eintenn_dunmere
     - place_eintenn_tithe_barn
@@ -52,6 +57,7 @@
 - id: road_ostwick_place_eintenn_dunmere
   origin: allora2
   kind: road
+  route: route_eintenn_levy_way
   roots:
     - ostwick
     - place_eintenn_dunmere
@@ -62,6 +68,7 @@
 - id: road_place_eintenn_netherwick_place_eintenn_three_ash_ford
   origin: allora2
   kind: road
+  route: route_eintenn_beck_path
   roots:
     - place_eintenn_netherwick
     - place_eintenn_three_ash_ford
@@ -72,6 +79,7 @@
 - id: road_place_eintenn_dunmere_place_eintenn_three_ash_ford
   origin: allora2
   kind: road
+  route: route_eintenn_beacon_path
   roots:
     - place_eintenn_dunmere
     - place_eintenn_three_ash_ford
@@ -82,6 +90,7 @@
 - id: road_place_eintenn_hollin_cross_place_eintenn_netherwick
   origin: allora2
   kind: road
+  route: route_eintenn_holly_lane
   roots:
     - place_eintenn_hollin_cross
     - place_eintenn_netherwick
@@ -92,6 +101,7 @@
 - id: road_ostwick_place_eintenn_hollin_cross
   origin: allora2
   kind: road
+  route: route_eintenn_wine_road
   roots:
     - ostwick
     - place_eintenn_hollin_cross
@@ -102,6 +112,7 @@
 - id: road_place_eintenn_sallowfield_place_eintenn_weirbeck_mill
   origin: allora2
   kind: road
+  route: route_eintenn_abbey_way
   roots:
     - place_eintenn_sallowfield
     - place_eintenn_weirbeck_mill
@@ -112,6 +123,7 @@
 - id: road_place_eintenn_hollin_cross_place_eintenn_sallowfield
   origin: allora2
   kind: road
+  route: route_eintenn_holly_lane
   roots:
     - place_eintenn_hollin_cross
     - place_eintenn_sallowfield
@@ -122,6 +134,7 @@
 - id: road_place_eintenn_hanging_oak_place_eintenn_tithe_barn
   origin: allora2
   kind: road
+  route: route_eintenn_hanging_road
   roots:
     - place_eintenn_hanging_oak
     - place_eintenn_tithe_barn
@@ -132,6 +145,7 @@
 - id: road_place_eintenn_dunmere_place_eintenn_hanging_oak
   origin: allora2
   kind: road
+  route: route_eintenn_hanging_road
   roots:
     - place_eintenn_dunmere
     - place_eintenn_hanging_oak
@@ -142,6 +156,7 @@
 - id: road_place_eintenn_dunmere_place_eintenn_undercrag
   origin: allora2
   kind: road
+  route: route_eintenn_dukes_road
   roots:
     - place_eintenn_dunmere
     - place_eintenn_undercrag
@@ -152,6 +167,7 @@
 - id: road_place_eintenn_undercrag_tennfels
   origin: allora2
   kind: road
+  route: route_eintenn_dukes_road
   roots:
     - place_eintenn_undercrag
     - tennfels
@@ -162,6 +178,7 @@
 - id: road_place_eintenn_broken_lance_place_eintenn_undercrag
   origin: allora2
   kind: road
+  route: route_eintenn_tourney_road
   roots:
     - place_eintenn_broken_lance
     - place_eintenn_undercrag
@@ -172,6 +189,7 @@
 - id: road_place_eintenn_broken_lance_tennfels
   origin: allora2
   kind: road
+  route: route_eintenn_tourney_road
   roots:
     - place_eintenn_broken_lance
     - tennfels
@@ -182,6 +200,7 @@
 - id: road_place_eintenn_broken_lance_place_eintenn_falkenau
   origin: allora2
   kind: road
+  route: route_eintenn_tourney_road
   roots:
     - place_eintenn_broken_lance
     - place_eintenn_falkenau
@@ -192,6 +211,7 @@
 - id: road_place_eintenn_falkenau_tennfels
   origin: allora2
   kind: road
+  route: route_eintenn_tourney_road
   roots:
     - place_eintenn_falkenau
     - tennfels
@@ -202,6 +222,7 @@
 - id: road_place_eintenn_black_quarry_place_eintenn_falkenau
   origin: allora2
   kind: road
+  route: route_eintenn_quarry_drag
   roots:
     - place_eintenn_black_quarry
     - place_eintenn_falkenau
@@ -212,6 +233,7 @@
 - id: road_place_eintenn_black_quarry_place_eintenn_hanging_oak
   origin: allora2
   kind: road
+  route: route_eintenn_quarry_drag
   roots:
     - place_eintenn_black_quarry
     - place_eintenn_hanging_oak
@@ -222,6 +244,7 @@
 - id: road_place_eintenn_burners_ride_place_eintenn_hanging_oak
   origin: allora2
   kind: road
+  route: route_eintenn_hanging_road
   roots:
     - place_eintenn_burners_ride
     - place_eintenn_hanging_oak
@@ -232,6 +255,7 @@
 - id: road_grauwald_place_eintenn_burners_ride
   origin: allora2
   kind: road
+  route: route_eintenn_hanging_road
   roots:
     - grauwald
     - place_eintenn_burners_ride
@@ -242,6 +266,7 @@
 - id: road_place_eintenn_burners_ride_place_eintenn_verderers_lodge
   origin: allora2
   kind: road
+  route: route_eintenn_forest_rides
   roots:
     - place_eintenn_burners_ride
     - place_eintenn_verderers_lodge
@@ -252,6 +277,7 @@
 - id: road_grauwald_place_eintenn_verderers_lodge
   origin: allora2
   kind: road
+  route: route_eintenn_forest_rides
   roots:
     - grauwald
     - place_eintenn_verderers_lodge
@@ -262,6 +288,7 @@
 - id: road_place_eintenn_crow_stone_place_eintenn_reedmere
   origin: allora2
   kind: road
+  route: route_eintenn_common_paths
   roots:
     - place_eintenn_crow_stone
     - place_eintenn_reedmere
@@ -272,6 +299,7 @@
 - id: road_place_eintenn_reedmere_wisewoman_hut
   origin: allora2
   kind: road
+  route: route_eintenn_common_paths
   roots:
     - place_eintenn_reedmere
     - wisewoman_hut
@@ -282,6 +310,7 @@
 - id: road_place_eintenn_steinwick_place_eintenn_three_ash_ford
   origin: allora2
   kind: road
+  route: route_eintenn_beck_path
   roots:
     - place_eintenn_steinwick
     - place_eintenn_three_ash_ford
@@ -292,6 +321,7 @@
 - id: road_place_eintenn_hollin_cross_place_eintenn_steinwick
   origin: allora2
   kind: road
+  route: route_eintenn_wine_road
   roots:
     - place_eintenn_hollin_cross
     - place_eintenn_steinwick
@@ -302,6 +332,7 @@
 - id: road_place_eintenn_steinwick_place_eintenn_vintners_halt
   origin: allora2
   kind: road
+  route: route_eintenn_wine_road
   roots:
     - place_eintenn_steinwick
     - place_eintenn_vintners_halt
@@ -312,6 +343,7 @@
 - id: road_aschau_place_eintenn_vintners_halt
   origin: allora2
   kind: road
+  route: route_eintenn_wine_road
   roots:
     - aschau
     - place_eintenn_vintners_halt
@@ -322,6 +354,7 @@
 - id: road_place_eintenn_pomerell_grange_place_eintenn_sallowfield
   origin: allora2
   kind: road
+  route: route_eintenn_abbey_way
   roots:
     - place_eintenn_pomerell_grange
     - place_eintenn_sallowfield
@@ -332,6 +365,7 @@
 - id: road_place_eintenn_pomerell_grange_pomerell
   origin: allora2
   kind: road
+  route: route_eintenn_abbey_way
   roots:
     - place_eintenn_pomerell_grange
     - pomerell
@@ -342,6 +376,7 @@
 - id: road_place_eintenn_beacon_knoll_place_eintenn_dunmere
   origin: allora2
   kind: road
+  route: route_eintenn_beacon_path
   roots:
     - place_eintenn_beacon_knoll
     - place_eintenn_dunmere
@@ -352,6 +387,7 @@
 - id: road_place_eintenn_beacon_knoll_place_eintenn_three_ash_ford
   origin: allora2
   kind: road
+  route: route_eintenn_beacon_path
   roots:
     - place_eintenn_beacon_knoll
     - place_eintenn_three_ash_ford
