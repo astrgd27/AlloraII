@@ -8,6 +8,7 @@ import { activitySystem, availableNow, begin } from './activities';
 import { HOURS_PER_DAY, dateAt, type GameDate } from './calendar';
 import { EventBus } from './events';
 import type { Order } from './protocol';
+import { meet, peopleAt, talk, type Words } from './people';
 import { needsSystem, type Needs, type StandingOrders } from './needs';
 import { type GameState } from './state';
 import { travelSystem, turnBack, setOut } from './travel';
@@ -51,6 +52,10 @@ export interface Snapshot {
   doing: { id: string; hoursLeft: number } | null;
   /** Ids of the activities that can be begun here and now. */
   canDo: string[];
+  /** The people at the life's place now. `known` is false until they have met. */
+  here: { id: string; sub: string; known: boolean; talks: number }[];
+  /** The last thing someone said. */
+  words: Words | null;
   asleep: boolean;
   home: string;
   orders: StandingOrders;
@@ -152,6 +157,12 @@ export class Engine {
       case 'do':
         begin(this.state, this.world, order.activity, dateAt(this.state.hours));
         break;
+      case 'meet':
+        meet(this.state, this.world, order.person, dateAt(this.state.hours));
+        break;
+      case 'talk':
+        talk(this.state, this.world, order.person, dateAt(this.state.hours));
+        break;
       case 'stop':
         this.state.doing = null;
         break;
@@ -181,6 +192,14 @@ export class Engine {
         ? { id: this.state.doing.id, hoursLeft: this.state.doing.hoursLeft }
         : null,
       canDo: availableNow(this.world, this.state, dateAt(this.state.hours)).map((a) => a.id),
+      here: j
+        ? []
+        : peopleAt(this.world, this.state.place, dateAt(this.state.hours)).map((p) => ({
+            ...p,
+            known: Boolean(this.state.bonds[p.id]),
+            talks: this.state.bonds[p.id]?.talks ?? 0,
+          })),
+      words: this.state.words,
       asleep: this.state.asleep,
       home: this.state.home,
       orders: { ...this.state.orders },

@@ -16,7 +16,19 @@
    "region": "eintenn",
    "x": 32,
    "y": 58,
-   "kind": "settled"
+   "kind": "settled",
+   "subs": {
+    "fields": "The Strip-Fields",
+    "pasture": "The Common Pasture",
+    "cottages": "Cottage Gardens & Hearths",
+    "tavern": "The Barley Sheaf",
+    "green": "The Village Green",
+    "shrine": "Hearth-Shrine of Ilvara",
+    "players": "Pecutto’s Players’ Wagons",
+    "harvesthome": "Harvest Home on the Green",
+    "plots": "The Cottage Plots",
+    "pecart": "Pecutto’s Cart"
+   }
   },
   {
    "id": "kess_harbor",
@@ -24,7 +36,14 @@
    "region": "eintenn",
    "x": 76,
    "y": 70,
-   "kind": "city"
+   "kind": "city",
+   "subs": {
+    "mole": "The Stone Mole",
+    "yard": "Shipyard & Ropewalk",
+    "cog": "Aboard a Coastal Cog",
+    "eel": "The Gilded Eel",
+    "chapel": "The Drowned Chapel"
+   }
   },
   {
    "id": "kess_market",
@@ -32,7 +51,21 @@
    "region": "eintenn",
    "x": 70,
    "y": 60,
-   "kind": "city"
+   "kind": "city",
+   "subs": {
+    "square": "The Salzmarkt Square",
+    "weigh": "The Weigh-House",
+    "guilds": "The Guild Quarter",
+    "barber": "The Barber’s Stall",
+    "school": "The Dame-School",
+    "hall": "The Hall of Currents",
+    "archives": "The Guild Archives",
+    "carnival": "The Travelling Carnival",
+    "tourney": "The Tourney Lists",
+    "pesthouse": "The Pest-Houses",
+    "progress": "The Royal Progress",
+    "pecart": "Pecutto’s Cart"
+   }
   },
   {
    "id": "kess_fondaco",
@@ -40,7 +73,14 @@
    "region": "eintenn",
    "x": 82,
    "y": 58,
-   "kind": "city"
+   "kind": "city",
+   "subs": {
+    "scuola": "Scuola di Scherma",
+    "teatro": "Teatro della Maschera",
+    "warehouses": "Warehouses & Counting-Rooms",
+    "workshops": "Marrean Workshops",
+    "court": "The Courtyard"
+   }
   },
   {
    "id": "kess_undercroft",
@@ -48,7 +88,12 @@
    "region": "eintenn",
    "x": 66,
    "y": 68,
-   "kind": "city"
+   "kind": "city",
+   "subs": {
+    "cellars": "The Old Salt-Cellars",
+    "backroom": "The Back Room",
+    "streets": "The Night Streets"
+   }
   },
   {
    "id": "collegium",
@@ -56,7 +101,16 @@
    "region": "eintenn",
    "x": 63,
    "y": 53,
-   "kind": "city"
+   "kind": "city",
+   "subs": {
+    "halls": "Lecture Halls",
+    "library": "The Chained Library",
+    "tower": "The Observatory Tower",
+    "lab": "The Laboratory",
+    "hermetic": "The Hermetic Faculty",
+    "comet": "The Comet",
+    "disput": "The Disputation Hall"
+   }
   },
   {
    "id": "tennfels",
@@ -64,7 +118,19 @@
    "region": "eintenn",
    "x": 48,
    "y": 46,
-   "kind": "settled"
+   "kind": "settled",
+   "subs": {
+    "yard": "The Training Yard",
+    "hall": "The Great Hall",
+    "stables": "Stables, Mews & Kennels",
+    "tilt": "The Tiltyard",
+    "chapel": "The Chapels",
+    "library": "The Duke’s Library",
+    "ford": "Norrae’s Ford",
+    "tourney": "The Tourney Lists",
+    "players": "Pecutto’s Players’ Wagons",
+    "pecart": "Pecutto’s Cart"
+   }
   },
   {
    "id": "aschau",
@@ -72,7 +138,13 @@
    "region": "eintenn",
    "x": 46,
    "y": 74,
-   "kind": "settled"
+   "kind": "settled",
+   "subs": {
+    "vineyards": "The Vineyards",
+    "chapel": "Hearth-Chapel & Seminary",
+    "pyre": "The Pyre Fields",
+    "players": "Pecutto’s Players’ Wagons"
+   }
   },
   {
    "id": "grauwald",
@@ -80,7 +152,15 @@
    "region": "eintenn",
    "x": 30,
    "y": 36,
-   "kind": "wild"
+   "kind": "wild",
+   "subs": {
+    "edge": "The Forest Edge",
+    "deep": "The Deep Wood",
+    "clearing": "The Charcoal-Burners’ Clearing",
+    "camp": "The Outlaws’ Camp",
+    "bounty": "The Bounty Post",
+    "wolfhunt": "The Wolf-Hunt"
+   }
   },
   {
    "id": "wisewoman_hut",
@@ -88,7 +168,10 @@
    "region": "eintenn",
    "x": 20,
    "y": 44,
-   "kind": "wild"
+   "kind": "wild",
+   "subs": {
+    "hut": "Mother Brindl’s Hut"
+   }
   },
   {
    "id": "greenwife_grove",
@@ -96,7 +179,10 @@
    "region": "eintenn",
    "x": 22,
    "y": 26,
-   "kind": "wild"
+   "kind": "wild",
+   "subs": {
+    "oaks": "Under the Ribboned Oaks"
+   }
   },
   {
    "id": "hohenkamm",
@@ -104,7 +190,13 @@
    "region": "eintenn",
    "x": 24,
    "y": 12,
-   "kind": "wild"
+   "kind": "wild",
+   "subs": {
+    "meadows": "The High Meadows",
+    "crags": "The Crags",
+    "carvers": "The Carvers’ Huts",
+    "eyrie": "The Eagle’s Eyrie"
+   }
   },
   {
    "id": "thunder_caves",
@@ -112,7 +204,10 @@
    "region": "eintenn",
    "x": 14,
    "y": 5,
-   "kind": "wild"
+   "kind": "wild",
+   "subs": {
+    "caves": "The Thunder-Caves"
+   }
   },
   {
    "id": "silberhalde",
@@ -120,7 +215,14 @@
    "region": "eintenn",
    "x": 42,
    "y": 24,
-   "kind": "settled"
+   "kind": "settled",
+   "subs": {
+    "shafts": "The Shafts",
+    "smelter": "Smelters & Stonecutters",
+    "lamp": "The Miner’s Lamp",
+    "drift": "The Old Drift",
+    "newseam": "The New Seam"
+   }
   },
   {
    "id": "salzmoor",
@@ -128,7 +230,13 @@
    "region": "eintenn",
    "x": 88,
    "y": 86,
-   "kind": "wild"
+   "kind": "wild",
+   "subs": {
+    "pans": "The Salt-Pans",
+    "flats": "The Tidal Flats",
+    "coves": "Smugglers’ Coves",
+    "wreck": "The Wreck of the Salt-Queen"
+   }
   },
   {
    "id": "vaelis_ruins",
@@ -136,7 +244,11 @@
    "region": "eintenn",
    "x": 52,
    "y": 10,
-   "kind": "wild"
+   "kind": "wild",
+   "subs": {
+    "forum": "The Fallen Forum",
+    "tombs": "The Tombs"
+   }
   },
   {
    "id": "threshold_sanctum",
@@ -144,7 +256,10 @@
    "region": "eintenn",
    "x": 58,
    "y": 5,
-   "kind": "settled"
+   "kind": "settled",
+   "subs": {
+    "hall": "The Hall of Doors"
+   }
   },
   {
    "id": "marre_city",
@@ -152,7 +267,21 @@
    "region": "marre",
    "x": 56,
    "y": 52,
-   "kind": "city"
+   "kind": "city",
+   "subs": {
+    "canals": "The Canals",
+    "palaces": "The Mirror-Palaces",
+    "arsenal": "The Arsenal",
+    "rialto": "The Rialto Exchange",
+    "temple": "The Little Temple of Pecutto",
+    "scuola": "The Scuola Grande of the Current",
+    "carnival": "The Travelling Carnival",
+    "carnevale": "Carnevale",
+    "regatta": "The Regatta",
+    "pesthouse": "The Pest-Houses",
+    "progress": "The Royal Progress",
+    "pecart": "Pecutto’s Cart"
+   }
   },
   {
    "id": "marre_isles",
@@ -160,7 +289,12 @@
    "region": "marre",
    "x": 78,
    "y": 32,
-   "kind": "settled"
+   "kind": "settled",
+   "subs": {
+    "strand": "The Glass Strand",
+    "furnaces": "The Furnaces",
+    "chapel": "The Glassmakers’ Chapel of Dolma"
+   }
   },
   {
    "id": "wp_ferry",
@@ -168,7 +302,11 @@
    "region": "eintenn",
    "x": 86,
    "y": 32,
-   "kind": "settled"
+   "kind": "settled",
+   "subs": {
+    "taproom": "The Taproom",
+    "stage": "The Ferry Stage"
+   }
   },
   {
    "id": "wp_lighthouse",
@@ -176,7 +314,12 @@
    "region": "marre",
    "x": 16,
    "y": 80,
-   "kind": "wild"
+   "kind": "wild",
+   "subs": {
+    "tower": "The Lighthouse",
+    "rocks": "The Wreck-Rocks",
+    "wreck": "The Fresh Wreck"
+   }
   },
   {
    "id": "xonia_shore",
@@ -184,7 +327,12 @@
    "region": "marre",
    "x": 88,
    "y": 68,
-   "kind": "wild"
+   "kind": "wild",
+   "subs": {
+    "stair": "The Marble Stair",
+    "pools": "The Column Shallows",
+    "wreck": "The Fresh Wreck"
+   }
   },
   {
    "id": "xonia_sunken",
@@ -192,7 +340,11 @@
    "region": "marre",
    "x": 90,
    "y": 18,
-   "kind": "wild"
+   "kind": "wild",
+   "subs": {
+    "agora": "The Drowned Agora",
+    "crucible": "The Great Crucible"
+   }
   },
   {
    "id": "selino",
@@ -200,7 +352,15 @@
    "region": "marre",
    "x": 30,
    "y": 28,
-   "kind": "city"
+   "kind": "city",
+   "subs": {
+    "mole": "The Eastern Mole",
+    "row": "Chandlers’ Row",
+    "loop": "The Lilac Loop",
+    "den": "The Back of the Loop",
+    "players": "Pecutto’s Players’ Wagons",
+    "pesthouse": "The Pest-Houses"
+   }
   },
   {
    "id": "marre_palace",
@@ -208,7 +368,17 @@
    "region": "marre",
    "x": 44,
    "y": 44,
-   "kind": "city"
+   "kind": "city",
+   "subs": {
+    "basilica": "The Basilica of the Serene Matron",
+    "council": "The Hall of the Great Council",
+    "cerdans": "The Office of the Cerdans",
+    "mirrorroom": "The Mirror-Room",
+    "leads": "The Leads",
+    "reliquary": "The Reliquary of Saint Calder",
+    "feast": "The Feast of the Lagoon",
+    "lampchapel": "The Dellian Lamp-Chapel"
+   }
   },
   {
    "id": "marre_canal",
@@ -216,7 +386,12 @@
    "region": "marre",
    "x": 68,
    "y": 47,
-   "kind": "city"
+   "kind": "city",
+   "subs": {
+    "grimassi": "Ca’ Grimassi",
+    "morvan": "Ca’ Morvan",
+    "loredel": "Ca’ Loredel"
+   }
   },
   {
    "id": "lazaretto",
@@ -224,7 +399,13 @@
    "region": "marre",
    "x": 24,
    "y": 62,
-   "kind": "settled"
+   "kind": "settled",
+   "subs": {
+    "wards": "The Wards",
+    "theatre": "The Theatre of Chirurgery",
+    "spezieria": "The Spezieria",
+    "quays": "The Quarantine Quays"
+   }
   },
   {
    "id": "terraferma",
@@ -232,7 +413,12 @@
    "region": "marre",
    "x": 8,
    "y": 40,
-   "kind": "wild"
+   "kind": "wild",
+   "subs": {
+    "villas": "The Villas",
+    "mulberries": "The Mulberry Groves",
+    "paddies": "The Rice-Fields"
+   }
   },
   {
    "id": "morena",
@@ -240,7 +426,13 @@
    "region": "marre",
    "x": 93,
    "y": 46,
-   "kind": "city"
+   "kind": "city",
+   "subs": {
+    "castello": "The Castello",
+    "fondaco": "The Factor’s Fondaco",
+    "quarter": "The Thoolman Quarter",
+    "groves": "The Mastic Groves"
+   }
   },
   {
    "id": "pomerell",
@@ -248,7 +440,14 @@
    "region": "eintenn",
    "x": 30,
    "y": 84,
-   "kind": "settled"
+   "kind": "settled",
+   "subs": {
+    "orchards": "The Long Orchards",
+    "press": "The Cider-House",
+    "cloister": "The Herb-Cloister",
+    "kitchen": "The Brothers’ Kitchen-Garden",
+    "church": "The Abbey Church"
+   }
   }
  ],
  "roads": [
@@ -545,6 +744,264 @@
    "to": "marre_city",
    "way": "sea",
    "hours": 110
+  }
+ ],
+ "people": [
+  {
+   "id": "hanne",
+   "name": "Hanne Brook",
+   "title": "Farmhand of Ostwick",
+   "hint": "a sunburnt young woman with a hayfork over her shoulder",
+   "meet": "The young woman with the hayfork has been watching you work all week. “You’re not hopeless,” she says at last. “I’m Hanne. Come and have an ale when the light goes.”",
+   "talk": [
+    "Hanne tells you which cows kick, which fields flood and which of the Brook cousins owes her money.",
+    "“One day I’ll have my own strip by the river,” Hanne says. “Barley. Nobody tells barley what to do.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "ostwick",
+      "tavern"
+     ],
+     "h": [
+      18,
+      23
+     ]
+    },
+    {
+     "at": [
+      "ostwick",
+      "pasture"
+     ],
+     "s": [
+      3
+     ],
+     "h": [
+      7,
+      17
+     ]
+    },
+    {
+     "at": [
+      "ostwick",
+      "fields"
+     ],
+     "h": [
+      6,
+      18
+     ]
+    },
+    {
+     "at": [
+      "ostwick",
+      "cottages"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jory",
+   "name": "Jory Pell",
+   "title": "Eel-Catcher of Kesselhaven",
+   "hint": "a gnarled old man mending eel-traps",
+   "meet": "The old eel-man spits, wipes his hand and holds it out. “Jory. Fifty years on this mole. You set a trap like a drunk priest, but you keep at it. I respect that.”",
+   "talk": [
+    "Jory tells you the harbour was twice as deep when he was a boy, and the eels twice as long.",
+    "“Never eat an eel you didn’t kill yourself,” Jory says, and will not explain."
+   ],
+   "sched": [
+    {
+     "at": [
+      "kess_harbor",
+      "eel"
+     ],
+     "h": [
+      4,
+      14
+     ]
+    },
+    {
+     "at": [
+      "kess_harbor",
+      "mole"
+     ],
+     "h": [
+      14,
+      21
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mechthild",
+   "name": "Mechthild Ambrosius",
+   "title": "Poor Scholar of the Collegium",
+   "hint": "an ink-stained woman asleep on a pile of books",
+   "meet": "The ink-stained woman wakes, looks at what you are reading, and corrects your Allorese. “Mechthild. I’m writing a history of everything. Sit down, you’re in my light.”",
+   "talk": [
+    "Mechthild has found a contradiction in the Collegium’s founding charter and is beside herself with joy.",
+    "“Nobody reads anymore,” Mechthild sighs, surrounded by four hundred people reading."
+   ],
+   "sched": [
+    {
+     "at": [
+      "kess_market",
+      "archives"
+     ],
+     "h": [
+      20,
+      24
+     ]
+    },
+    {
+     "at": [
+      "collegium",
+      "library"
+     ],
+     "h": [
+      7,
+      20
+     ]
+    }
+   ]
+  },
+  {
+   "id": "zanetta",
+   "name": "Zanetta Bon",
+   "title": "Gondolier of Marre",
+   "hint": "a gondolier singing as she rows",
+   "meet": "The gondolier rests her oar. “You row like a Luggish barge, but you’re learning. Zanetta. Get in, I’ll show you the canals nobody shows foreigners.”",
+   "talk": [
+    "Zanetta knows which palazzi have secret water-gates, and which families use them for what.",
+    "“Every gondolier in Marre is a spy for somebody,” Zanetta says. “I’m a spy for me.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "marre_city",
+      "canals"
+     ],
+     "h": [
+      6,
+      23
+     ]
+    },
+    {
+     "at": [
+      "marre_city",
+      "rialto"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bastian",
+   "name": "Bastian Caro",
+   "title": "Silverer’s Apprentice of the Glass Isles",
+   "hint": "a pale apprentice with silver on his fingertips",
+   "meet": "The apprentice catches your reflection in a half-silvered glass and smiles at it, not at you. “You have a good reflection. I’m Bastian. Don’t tell the masters I spoke to you.”",
+   "talk": [
+    "Bastian swears the Masque mirrors are just very good glass. He swears it a little too quickly.",
+    "“The Republic won’t let silverers leave the Isles,” Bastian says. “I’ve never wanted to. Mostly.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "marre_isles",
+      "strand"
+     ],
+     "h": [
+      18,
+      22
+     ]
+    },
+    {
+     "at": [
+      "marre_isles",
+      "furnaces"
+     ],
+     "h": [
+      6,
+      18
+     ]
+    }
+   ]
+  },
+  {
+   "id": "momolo",
+   "name": "Momolo Scarpa",
+   "title": "Smuggler of Selino",
+   "hint": "a lean man in a sailor’s cap who never sits with his back to the door",
+   "meet": "The lean man slides onto the bench beside you. “The Cerdans have your description. That makes you interesting. Momolo. I know a boat.”",
+   "talk": [
+    "Momolo knows every channel in the lagoon the customs boats can’t follow.",
+    "“Smuggling’s an honest trade,” Momolo says. “It’s the customs that’s the theft.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "selino",
+      "loop"
+     ],
+     "h": [
+      20,
+      24
+     ]
+    },
+    {
+     "at": [
+      "selino",
+      "loop"
+     ],
+     "h": [
+      0,
+      4
+     ]
+    },
+    {
+     "at": [
+      "selino",
+      "row"
+     ],
+     "h": [
+      4,
+      20
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cateruccia",
+   "name": "Cateruccia Vio",
+   "title": "Nurse of the Lazaretto",
+   "hint": "a brisk nurse smelling of vinegar and juniper",
+   "meet": "The nurse pushes a cup of vinegar-water at you. “Drink. You’ve been on the wards a week and you’re not dead, so you’re either lucky or careful. I’m Cateruccia. Be careful.”",
+   "talk": [
+    "Cateruccia has nursed through three Pestilences and has a theory about each of them.",
+    "“The Prior says it’s seeds too small to see,” Cateruccia says. “I say it’s dirt. We both say wash your hands.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "lazaretto",
+      "spezieria"
+     ],
+     "h": [
+      20,
+      24
+     ]
+    },
+    {
+     "at": [
+      "lazaretto",
+      "wards"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    }
+   ]
   }
  ],
  "activities": [

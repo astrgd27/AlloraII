@@ -3,6 +3,7 @@ import { Activities } from './Activities';
 import { engine } from './engine-client';
 import { formatDate, formatHour } from './format';
 import { MapView } from './map/MapView';
+import { People } from './People';
 import { PlaceList, PlacePanel } from './map/PlacePanel';
 import { TITLE } from './title';
 
@@ -46,6 +47,7 @@ export function App() {
       {snapshot && (
         <>
           <PlacePanel snapshot={snapshot} chosen={chosen} send={(order) => engine.send(order)} />
+          <People snapshot={snapshot} send={(order) => engine.send(order)} />
           <Activities snapshot={snapshot} send={(order) => engine.send(order)} />
           <PlaceList snapshot={snapshot} chosen={chosen} onChoose={setChosen} />
         </>

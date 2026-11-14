@@ -67,6 +67,11 @@ async function main(): Promise<void> {
     return subs.find((s) => s.id === subId)?.name as string | undefined;
   };
 
+  // People of this world who keep a schedule (Allora I's NPCS). Wanderers with a route come later.
+  const npcs = (await readYaml('content/canon/allora1/npcs.yaml')).filter(
+    (n) => WORLD_REGIONS.includes(n.region as string) && Array.isArray(n.sched),
+  );
+
   const world = {
     regions: regions.map((r) => ({ id: r.id, name: r.name })),
     places: places.map((p) => ({
@@ -76,8 +81,18 @@ async function main(): Promise<void> {
       x: p.x,
       y: p.y,
       kind: p.city ? 'city' : p.wild ? 'wild' : 'settled',
+      subs: Object.fromEntries(((p.subs as Raw[] | undefined) ?? []).map((x) => [x.id, x.name])),
     })),
     roads: roads.map((r) => ({ id: r.id, from: r.from, to: r.to, way: r.way, hours: r.hours })),
+    people: npcs.map((n) => ({
+      id: n.id,
+      name: n.name,
+      title: n.title,
+      hint: n.hint,
+      meet: n.meet,
+      talk: n.talk,
+      sched: n.sched,
+    })),
     activities: activities
       .filter((a) => placeIds.has(a.place))
       .map((a) => ({

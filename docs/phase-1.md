@@ -17,7 +17,7 @@
 1. **World plan.** *(done)* Places per realm for all five lands (total 2,200), and the place kinds (city quarter, town, village, site, wild) with their sizes.
 2. **Needs.** *(done)* Vigour, health and spirits; sleep and meals; a home to sleep in.
 3. **Activities.** *(done)* Short acts tied to a place, an hour, tools and people. The first twenty in Ostwick.
-4. **People with routines.** Canon schedules (108 people in Allora I have one) drive who is where at each hour; meeting, talking, being known.
+4. **People with routines.** *(done)* Canon schedules (108 people in Allora I have one) drive who is where at each hour; meeting, talking, being known.
 5. **Skills and learning.** The smaller skill set, growth from work near the edge of ability, mastery gates.
 6. **The challenge system.** The roll, approaches, degrees of result, lasting consequences.
 7. **Eintenn, first batch.** About 20 new small places around Ostwick and Burg Tennfels, with residents, each rooted on canon.
@@ -63,3 +63,10 @@ Each is an addition, to be rooted on canon when it is built.
   - **No pay, tools or people yet.** Those arrive with money (#32), items and people (#25).
   - **The first twenty are everyday village work,** from canon's own words for Ostwick: the strip-fields, the pasture and its bees, the bread-oven and loom, the Barley Sheaf's kegel-alley, the green, the hearth-shrine and the well.
   - **Save version 4,** with a migration and a test.
+- **2026-11-14 · People with routines (#25).** `packages/engine/src/people.ts`. Decisions:
+  - **Schedules are read exactly as Allora I reads them** (`npcSched` in the game): the first line of a person's day that fits the hour and season, hours that may wrap past midnight, and the first line as the fallback.
+  - **Who is covered.** The seven canon people of Eintenn and Marre who keep a schedule: Hanne Brook, Jory Pell, Mechthild Ambrosius, Zanetta Bon, Bastian Caro, Momolo Scarpa and Cateruccia Vio. Sir Odo of Hartsmoor walks a route across several realms; wanderers come with named roads (#29). Canon's rulers (the Duke, the Doge) have no schedule in Allora I and are not yet placed.
+  - **Seven people is far too few for a place you live in.** Canon gives Ostwick one resident. The place batches (#28, #35, #36) add neighbours with routines to every place; this issue builds what they will run on.
+  - **Meeting and talking.** A stranger shows by canon's own `hint` ("a sunburnt young woman with a hayfork over her shoulder"). Meeting gives canon's `meet` text and their name; talking walks through canon's `talk` lines. Meeting lifts the spirits by 3; a talk by 2, once a day for each person. This is the first source of spirits that is not food or bed.
+  - **Left for later:** canon's skill requirements to meet some people (`need`), gifts, the three-step stories (`tiers`) and bonuses. They wait on skills (#26), items and relationships.
+  - **Save version 5,** with a migration and a test.

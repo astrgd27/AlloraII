@@ -196,3 +196,24 @@ button:focus-visible {
   gap: 0.4rem;
   justify-content: center;
 }
+
+.people {
+  max-width: 40rem;
+  width: 100%;
+}
+
+.people ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+}
+
+.said {
+  margin: 0.8rem 0 0;
+  font-style: italic;
+  line-height: 1.5;
+}

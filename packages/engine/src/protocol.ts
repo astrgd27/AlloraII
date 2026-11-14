@@ -17,6 +17,10 @@ export type Order =
   | { type: 'do'; activity: string }
   /** Set down the activity in hand. */
   | { type: 'stop' }
+  /** Meet someone here for the first time. */
+  | { type: 'meet'; person: string }
+  /** Talk with someone here whom the life has met. */
+  | { type: 'talk'; person: string }
   /** Change standing orders. */
   | { type: 'setOrders'; orders: Partial<StandingOrders> }
   /** Write a save now. */
