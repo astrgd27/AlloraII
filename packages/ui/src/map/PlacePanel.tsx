@@ -8,6 +8,12 @@ interface Props {
 }
 
 const nameOf = (id: string): string => WORLD.places.find((p) => p.id === id)?.name ?? id;
+const routeOf = (roadId: string): string | undefined => {
+  const route = WORLD.roads.find((r) => r.id === roadId)?.route;
+  return WORLD.routes?.find((r) => r.id === route)?.name;
+};
+const eventText = (id: string | null): string | undefined =>
+  WORLD.roadEvents?.find((e) => e.id === id)?.text;
 
 /** One quiet line under the map: where you are, and the way to the chosen place. */
 export function PlacePanel({ snapshot, chosen, send }: Props) {
@@ -19,10 +25,21 @@ export function PlacePanel({ snapshot, chosen, send }: Props) {
         <p>
           <span data-testid="travelling-to">{nameOf(journey.to)}</span>
           <span className="quiet"> · {hoursText(Math.ceil(journey.hoursLeft))}</span>
+          {routeOf(journey.road) && (
+            <span className="quiet" data-testid="route">
+              {' '}
+              · {routeOf(journey.road)}
+            </span>
+          )}
         </p>
         <button type="button" onClick={() => send({ type: 'turnBack' })}>
           Turn back
         </button>
+        {eventText(snapshot.roadEvent) && (
+          <p className="said" data-testid="road-event">
+            {eventText(snapshot.roadEvent)}
+          </p>
+        )}
       </div>
     );
   }

@@ -127,7 +127,7 @@ export class MapScene {
       const a = this.point(road.from);
       const b = this.point(road.to);
       const style =
-        road.way === 'sea'
+        road.way === 'sea' || road.way === 'river'
           ? { width: 1.5, color: sea, alpha: 0.7 }
           : road.way === 'track'
             ? { width: 1, color: wild, alpha: 0.6 }

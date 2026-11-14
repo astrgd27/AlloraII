@@ -19,8 +19,26 @@ export interface Road {
   id: string;
   from: string;
   to: string;
-  way: 'street' | 'road' | 'track' | 'sea';
+  way: 'street' | 'road' | 'track' | 'sea' | 'river';
   hours: number;
+  /** The named route this segment belongs to, if it has one. */
+  route?: string;
+}
+
+/** A named road, track or river. */
+export interface NamedRoute {
+  id: string;
+  name: string;
+  text: string;
+}
+
+/** Something that can happen on the way. */
+export interface RoadEvent {
+  id: string;
+  text: string;
+  /** The kinds of way it belongs to. */
+  ways: Road['way'][];
+  effects: { vigour?: number; health?: number; spirits?: number };
 }
 
 /** A short act tied to a place and an hour. */
@@ -77,6 +95,8 @@ export interface WorldData {
   activities?: Activity[];
   people?: Person[];
   skills?: { id: string; name: string; family: string }[];
+  routes?: NamedRoute[];
+  roadEvents?: RoadEvent[];
 }
 
 export const WORLD = data as unknown as WorldData;
@@ -89,8 +109,9 @@ export interface Leg {
   road: string;
   to: string;
   hours: number;
-  /** True for a sea lane: the life is a passenger and can sleep aboard. */
+  /** True on water (a sea lane or a river): the life is a passenger and can sleep aboard. */
   sea?: true;
+  way?: Road['way'];
 }
 
 export interface Route {
@@ -112,9 +133,10 @@ export class World {
     for (const activity of data.activities ?? []) this.activities.set(activity.id, activity);
     for (const person of data.people ?? []) this.people.set(person.id, person);
     for (const road of data.roads) {
-      const sea = road.way === 'sea' ? ({ sea: true } as const) : {};
-      this.links.get(road.from)?.push({ road: road.id, to: road.to, hours: road.hours, ...sea });
-      this.links.get(road.to)?.push({ road: road.id, to: road.from, hours: road.hours, ...sea });
+      const water = road.way === 'sea' || road.way === 'river';
+      const extra = { way: road.way, ...(water ? ({ sea: true } as const) : {}) };
+      this.links.get(road.from)?.push({ road: road.id, to: road.to, hours: road.hours, ...extra });
+      this.links.get(road.to)?.push({ road: road.id, to: road.from, hours: road.hours, ...extra });
     }
   }
 

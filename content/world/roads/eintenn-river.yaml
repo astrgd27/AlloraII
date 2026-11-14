@@ -1,0 +1,12 @@
+# The river, by barge. New to Allora II.
+- id: road_kess_harbor_tennfels
+  origin: allora2
+  kind: road
+  route: route_eintenn_the_tenn
+  roots:
+    - kess_harbor
+    - tennfels
+  from: kess_harbor
+  to: tennfels
+  way: river
+  hours: 6

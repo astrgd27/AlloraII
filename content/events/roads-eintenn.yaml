@@ -1,0 +1,133 @@
+# Things that happen on the roads of Eintenn. `ways` says which kinds of way they belong to.
+- id: event_road_carter_news
+  origin: allora2
+  kind: road_event
+  roots:
+    - eintenn
+  region: eintenn
+  ways: [road]
+  text: 'A carter going the other way calls the news without stopping: a ship in, a price up, a wedding off.'
+  effects:
+    vigour: 0
+    spirits: 1
+- id: event_road_thorn_ribbon
+  origin: allora2
+  kind: road_event
+  roots:
+    - eintenn
+  region: eintenn
+  ways: [track]
+  text: 'A ribbon on a thorn, new since yesterday. Someone has come this way with something to ask.'
+  effects:
+    vigour: 0
+    spirits: 1
+- id: event_road_rain_squall
+  origin: allora2
+  kind: road_event
+  roots:
+    - eintenn
+  region: eintenn
+  ways: [road, track]
+  text: 'Rain comes over the hill all at once. You walk the next mile with your head down.'
+  effects:
+    vigour: -3
+    spirits: 0
+- id: event_road_strayed_ewe
+  origin: allora2
+  kind: road_event
+  roots:
+    - eintenn
+  region: eintenn
+  ways: [road, track]
+  text: 'A ewe on the wrong side of a wall. You put her back. She is not grateful.'
+  effects:
+    vigour: -2
+    spirits: 1
+- id: event_road_dukes_riders
+  origin: allora2
+  kind: road_event
+  roots:
+    - eintenn
+  region: eintenn
+  ways: [road]
+  text: "The Duke's riders come through at a canter, and the road stands aside for them."
+  effects:
+    vigour: 0
+    spirits: 0
+- id: event_road_kiln_smoke
+  origin: allora2
+  kind: road_event
+  roots:
+    - eintenn
+  region: eintenn
+  ways: [track, road]
+  text: 'Smoke hangs in the trees from a kiln you cannot see. The burners know you are here.'
+  effects:
+    vigour: 0
+    spirits: 0
+- id: event_road_cold_spring
+  origin: allora2
+  kind: road_event
+  roots:
+    - eintenn
+  region: eintenn
+  ways: [road, track]
+  text: 'A spring by the way, cold enough to hurt your teeth.'
+  effects:
+    vigour: 3
+    spirits: 0
+- id: event_road_pecuttos_cup
+  origin: allora2
+  kind: road_event
+  roots:
+    - eintenn
+  region: eintenn
+  ways: [road]
+  text: 'A wandering priest of Pecutto, already cheerful, offers you the cup and a verse to go with it.'
+  effects:
+    vigour: 0
+    spirits: 2
+- id: event_road_mere_mist
+  origin: allora2
+  kind: road_event
+  roots:
+    - eintenn
+  region: eintenn
+  ways: [track]
+  text: 'Mist off the water. For a while there is only the path under your feet.'
+  effects:
+    vigour: 0
+    spirits: -1
+- id: event_road_barge_song
+  origin: allora2
+  kind: road_event
+  roots:
+    - eintenn
+  region: eintenn
+  ways: [river]
+  text: 'The bargemen sing the same four lines from the castle to the sea.'
+  effects:
+    vigour: 0
+    spirits: 1
+- id: event_road_heron_rises
+  origin: allora2
+  kind: road_event
+  roots:
+    - eintenn
+  region: eintenn
+  ways: [river, track]
+  text: 'A heron gets up from the shallows, slow as a man shaking out a cloak.'
+  effects:
+    vigour: 0
+    spirits: 1
+- id: event_road_drovers_dust
+  origin: allora2
+  kind: road_event
+  roots:
+    - eintenn
+  region: eintenn
+  ways: [road]
+  text: 'A drove of cattle fills the road from hedge to hedge. You wait, and eat their dust.'
+  effects:
+    vigour: -1
+    spirits: -1

@@ -63,6 +63,8 @@ export interface Snapshot {
   here: { id: string; sub: string; known: boolean; talks: number }[];
   /** The last thing someone said. */
   words: Words | null;
+  /** The last thing that happened on the way, while still on the way. */
+  roadEvent: string | null;
   asleep: boolean;
   home: string;
   orders: StandingOrders;
@@ -71,6 +73,8 @@ export interface Snapshot {
   journey: {
     from: string;
     to: string;
+    /** The road segment being travelled. */
+    road: string;
     /** The place the current leg leads to. */
     next: string;
     /** The place the current leg started from. */
@@ -231,6 +235,7 @@ export class Engine {
         ]),
       ),
       words: this.state.words,
+      roadEvent: j ? (this.state.roadEvent?.id ?? null) : null,
       asleep: this.state.asleep,
       home: this.state.home,
       orders: { ...this.state.orders },
@@ -240,6 +245,7 @@ export class Engine {
           ? {
               from: j.from,
               to: j.to,
+              road: leg.road,
               next: leg.to,
               last: this.state.place,
               legProgress: Math.min(
