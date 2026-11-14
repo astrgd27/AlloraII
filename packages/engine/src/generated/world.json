@@ -1480,6 +1480,7 @@
    "to": 15,
    "hours": 1,
    "skill": "skill_husbandry",
+   "dc": 10,
    "effects": {
     "vigour": -3,
     "spirits": 1
@@ -1608,6 +1609,7 @@
    "to": 22,
    "hours": 1,
    "skill": "skill_revelry",
+   "dc": 10,
    "effects": {
     "vigour": -2,
     "spirits": 4
@@ -1624,6 +1626,7 @@
    "to": 22,
    "hours": 1,
    "skill": "skill_stagecraft",
+   "dc": 10,
    "effects": {
     "vigour": -1,
     "spirits": 3
@@ -1639,7 +1642,8 @@
    "from": 16,
    "to": 20,
    "hours": 1,
-   "skill": "attribute_might",
+   "skill": "skill_games",
+   "dc": 10,
    "effects": {
     "vigour": -8,
     "spirits": 2

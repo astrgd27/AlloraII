@@ -1,4 +1,4 @@
-import { WORLD, type Order, type Snapshot } from '@allora/engine';
+import { WORLD, oddsWord, type Order, type Snapshot } from '@allora/engine';
 import { hoursText } from './format';
 
 const byId = new Map((WORLD.activities ?? []).map((a) => [a.id, a]));
@@ -42,6 +42,12 @@ export function Activities({
               <span className="quiet">
                 {' '}
                 · {a.subName} · {hoursText(a.hours)}
+                {snapshot.chances[a.id] !== undefined && (
+                  <span title={`${Math.round((snapshot.chances[a.id] ?? 0) * 100)} in 100`}>
+                    {' '}
+                    · {oddsWord(snapshot.chances[a.id] ?? 0)}
+                  </span>
+                )}
               </span>
             </button>
           </li>

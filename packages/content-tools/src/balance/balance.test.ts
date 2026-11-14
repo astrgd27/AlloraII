@@ -40,6 +40,7 @@ describe('the villager', () => {
     expect(life.skills.skill_husbandry).toBeGreaterThan(3);
     expect(Math.max(...Object.values(life.skills))).toBeLessThanOrEqual(10);
     expect(life.needs.health.low).toBeGreaterThan(80);
+    expect(Object.values(life.checks).reduce((a, b) => a + b, 0)).toBeGreaterThan(50);
   });
 });
 
@@ -64,8 +65,9 @@ describe('the report', () => {
     }
     expect(report).toContain('One game day simulates in **1.0000 ms**');
     expect(report).toContain('within budget');
-    expect(report.match(/No data yet/g)).toHaveLength(5);
+    expect(report.match(/No data yet/g)).toHaveLength(4);
     expect(report).toContain('does no work that trains a skill');
+    expect(report).toContain('faces no checks');
   });
 
   it('is the same every time once timings are left out', () => {

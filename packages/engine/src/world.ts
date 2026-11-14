@@ -40,6 +40,8 @@ export interface Activity {
   effects: { vigour?: number; health?: number; spirits?: number };
   /** How hard it is, as a skill level. 1 if left out. */
   level?: number;
+  /** If set, finishing it is a check against this difficulty. */
+  dc?: number;
 }
 
 /** One line of a person's day: where they are, in which hours and seasons. */

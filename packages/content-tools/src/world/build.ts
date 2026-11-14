@@ -112,6 +112,7 @@ async function main(): Promise<void> {
         hours: a.hours,
         seasons: a.seasons,
         skill: a.skill,
+        dc: a.dc,
         effects: a.effects ?? {},
       })),
   };

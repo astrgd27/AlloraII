@@ -4,7 +4,8 @@
  * It has no knowledge of the screen, the worker or storage, so the same code
  * runs in the browser, in tests and in the balance bot.
  */
-import { activitySystem, availableNow, begin } from './activities';
+import { activitySystem, availableNow, begin, type LastCheck } from './activities';
+import { chanceOfSuccess } from './challenge';
 import { HOURS_PER_DAY, dateAt, type GameDate } from './calendar';
 import { EventBus } from './events';
 import type { Order } from './protocol';
@@ -53,6 +54,9 @@ export interface Snapshot {
   doing: { id: string; hoursLeft: number } | null;
   /** Ids of the activities that can be begun here and now. */
   canDo: string[];
+  /** For those that end in a check: the chance of success, 0 to 1. */
+  chances: Record<string, number>;
+  lastCheck: LastCheck | null;
   /** The skills the life has used: level, progress to the next (0 to 1), and whether a gate holds it. */
   skills: Record<string, { level: number; progress: number; atGate: boolean }>;
   /** The people at the life's place now. `known` is false until they have met. */
@@ -188,13 +192,27 @@ export class Engine {
 
   snapshot(): Snapshot {
     const j = this.state.journey;
+    const can = availableNow(this.world, this.state, dateAt(this.state.hours));
     const leg = j?.legs[0];
     return {
       needs: { ...this.state.needs },
       doing: this.state.doing
         ? { id: this.state.doing.id, hoursLeft: this.state.doing.hoursLeft }
         : null,
-      canDo: availableNow(this.world, this.state, dateAt(this.state.hours)).map((a) => a.id),
+      canDo: can.map((a) => a.id),
+      chances: Object.fromEntries(
+        can
+          .filter((a) => a.dc)
+          .map((a) => [
+            a.id,
+            chanceOfSuccess({
+              dc: a.dc ?? 0,
+              skillLevel: (a.skill && this.state.skills[a.skill]?.level) || 0,
+              allowsCost: false,
+            }),
+          ]),
+      ),
+      lastCheck: this.state.lastCheck,
       here: j
         ? []
         : peopleAt(this.world, this.state.place, dateAt(this.state.hours)).map((p) => ({

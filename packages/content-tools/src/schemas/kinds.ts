@@ -124,6 +124,8 @@ export const activitySchema = entrySchema('activity', {
   /** Season indexes (0 spring to 3 winter) it belongs to. All, if left out. */
   seasons: z.array(z.number().int().min(0).max(3)).optional(),
   skill: text.optional(),
+  /** If set, finishing it is a check against this difficulty. */
+  dc: z.number().int().min(5).max(35).optional(),
   effects: z
     .object({
       vigour: z.number().optional(),

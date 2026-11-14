@@ -1,7 +1,8 @@
 /** Activities: beginning one, working at it hour by hour, finishing, stopping. */
 import type { GameDate } from './calendar';
+import { edgeOf, lessonFactor, rollCheck, type CheckResult } from './challenge';
 import type { System } from './engine';
-import { gain, newSkill, workXp } from './skills';
+import { XP_PER_HOUR, edgeFactor, gain, newSkill, workXp } from './skills';
 import type { GameState } from './state';
 import type { Activity, World } from './world';
 
@@ -14,7 +15,16 @@ export interface Doing {
   skill?: string;
   hours?: number;
   level?: number;
+  dc?: number;
 }
+
+/** The last check a life made, for the page to show. */
+export interface LastCheck extends CheckResult {
+  activity: string;
+}
+
+/** What a triumph adds to the spirits, and a disaster takes. */
+export const CHECK_SPIRITS = { triumph: 2, disaster: -3 };
 
 const clamp = (n: number): number => Math.max(0, Math.min(100, n));
 
@@ -46,6 +56,7 @@ export function begin(state: GameState, world: World, id: string, date: GameDate
     hours: activity.hours,
     ...(activity.skill?.startsWith('skill_') ? { skill: activity.skill } : {}),
     ...(activity.level ? { level: activity.level } : {}),
+    ...(activity.dc ? { dc: activity.dc } : {}),
   };
 }
 
@@ -60,8 +71,24 @@ export const activitySystem: System = {
     for (const key of ['vigour', 'health', 'spirits'] as const) {
       state.needs[key] = clamp(state.needs[key] + (doing.effects[key] ?? 0));
     }
-    if (doing.skill) {
-      const skill = (state.skills[doing.skill] ??= newSkill());
+    const skill = doing.skill ? (state.skills[doing.skill] ??= newSkill()) : undefined;
+    if (doing.dc) {
+      // The work ends in a check. Its edge sets what it teaches; failure teaches half.
+      const spec = { dc: doing.dc, skillLevel: skill?.level ?? 0, allowsCost: false };
+      const result = rollCheck(spec, state.rng, state.seed, 'checks');
+      state.lastCheck = { ...result, activity: doing.id };
+      state.checks[result.degree] = (state.checks[result.degree] ?? 0) + 1;
+      if (result.degree === 'triumph')
+        state.needs.spirits = clamp(state.needs.spirits + CHECK_SPIRITS.triumph);
+      if (result.degree === 'disaster')
+        state.needs.spirits = clamp(state.needs.spirits + CHECK_SPIRITS.disaster);
+      if (skill) {
+        gain(
+          skill,
+          (doing.hours ?? 1) * XP_PER_HOUR * edgeFactor(edgeOf(spec)) * lessonFactor(result.degree),
+        );
+      }
+    } else if (skill) {
       gain(skill, workXp(doing.hours ?? 1, doing.level ?? 1, skill.level));
     }
     state.done[doing.id] = (state.done[doing.id] ?? 0) + 1;
