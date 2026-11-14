@@ -30,6 +30,7 @@ const NOT_TEXT = new Set([
   'skills',
   'gate',
   'people',
+  'sub',
 ]);
 
 /** Every piece of game text in an entry, with the path of its field. */

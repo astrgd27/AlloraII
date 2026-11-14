@@ -1,0 +1,324 @@
+# Activities in Ostwick: short acts tied to a sub-place and an hour. New to Allora II.
+# from/to: the hours of the day it can be begun. hours: how long it takes.
+- id: activity_ostwick_plough_strip
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Plough a strip
+  text: Walk the ox down your furrow and back, and keep the line the reeve can see.
+  place: ostwick
+  sub: fields
+  from: 6
+  to: 12
+  hours: 3
+  skill: farming
+  effects:
+    vigour: -10
+    spirits: 0
+- id: activity_ostwick_sow_corn
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Sow the spring corn
+  text: Seed from the apron, a handful to every third step.
+  place: ostwick
+  sub: fields
+  from: 7
+  to: 11
+  hours: 2
+  skill: farming
+  seasons: [0]
+  effects:
+    vigour: -6
+    spirits: 1
+- id: activity_ostwick_weed_furrows
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Weed the furrows
+  text: Dock and thistle out by the root, strip after strip.
+  place: ostwick
+  sub: fields
+  from: 6
+  to: 18
+  hours: 2
+  skill: farming
+  effects:
+    vigour: -6
+    spirits: 0
+- id: activity_ostwick_glean_stubble
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Glean the stubble
+  text: What the reapers dropped is yours, if you are quick.
+  place: ostwick
+  sub: fields
+  from: 15
+  to: 19
+  hours: 1
+  skill: foraging
+  seasons: [2]
+  effects:
+    vigour: -3
+    spirits: 1
+- id: activity_ostwick_drive_flock
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Drive the flock up
+  text: Up the hill before the dew is off, with the dogs wide on either side.
+  place: ostwick
+  sub: pasture
+  from: 6
+  to: 8
+  hours: 2
+  skill: herding
+  effects:
+    vigour: -6
+    spirits: 0
+- id: activity_ostwick_watch_flock
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Watch the flock
+  text: Sit where you can count them. Count them again.
+  place: ostwick
+  sub: pasture
+  from: 8
+  to: 17
+  hours: 3
+  skill: herding
+  effects:
+    vigour: -4
+    spirits: 2
+- id: activity_ostwick_tend_hives
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Tend the hives
+  text: Smoke first, slow hands, and no talking near the skeps.
+  place: ostwick
+  sub: pasture
+  from: 10
+  to: 15
+  hours: 1
+  skill: apiculture
+  effects:
+    vigour: -3
+    spirits: 1
+- id: activity_ostwick_gather_hill_herbs
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Gather hill herbs
+  text: Yarrow and thyme from the high side, cut while the dew holds.
+  place: ostwick
+  sub: pasture
+  from: 6
+  to: 10
+  hours: 1
+  skill: herbalism
+  effects:
+    vigour: -3
+    spirits: 1
+- id: activity_ostwick_bake_bread
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Bake the bread
+  text: Fire the oven, shape the loaves, and mark yours with a thumb.
+  place: ostwick
+  sub: cottages
+  from: 6
+  to: 9
+  hours: 2
+  skill: cooking
+  effects:
+    vigour: -4
+    spirits: 2
+- id: activity_ostwick_work_loom
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Work the loom
+  text: Shuttle and beat, shuttle and beat, a hand of cloth by noon.
+  place: ostwick
+  sub: cottages
+  from: 8
+  to: 20
+  hours: 2
+  skill: weaving
+  effects:
+    vigour: -4
+    spirits: 0
+- id: activity_ostwick_brew_small_ale
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Brew small ale
+  text: Mash, boil and cool, and keep the neighbours out of the wort.
+  place: ostwick
+  sub: cottages
+  from: 9
+  to: 15
+  hours: 3
+  skill: brewing
+  effects:
+    vigour: -6
+    spirits: 1
+- id: activity_ostwick_hoe_onions
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Hoe the onions
+  text: Between the rows, shallow, before the sun is high.
+  place: ostwick
+  sub: plots
+  from: 6
+  to: 10
+  hours: 1
+  skill: gardening
+  effects:
+    vigour: -3
+    spirits: 0
+- id: activity_ostwick_water_plots
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Water the plots
+  text: Two pails from the well to every bed, in the cool of the evening.
+  place: ostwick
+  sub: plots
+  from: 17
+  to: 20
+  hours: 1
+  skill: gardening
+  effects:
+    vigour: -3
+    spirits: 1
+- id: activity_ostwick_serve_evening
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Serve the evening crowd
+  text: Jugs out, pots back, and an ear for who owes whom.
+  place: ostwick
+  sub: tavern
+  from: 18
+  to: 22
+  hours: 3
+  skill: insight
+  effects:
+    vigour: -8
+    spirits: 1
+- id: activity_ostwick_roll_kegel
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Roll at the kegel-alley
+  text: Nine pins, three balls, and the loser fills the jug.
+  place: ostwick
+  sub: tavern
+  from: 17
+  to: 22
+  hours: 1
+  skill: carousing
+  effects:
+    vigour: -2
+    spirits: 4
+- id: activity_ostwick_swap_stories
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Swap stories by the fire
+  text: Yours for theirs. The ale-wife has heard both.
+  place: ostwick
+  sub: tavern
+  from: 19
+  to: 22
+  hours: 1
+  skill: storytelling
+  effects:
+    vigour: -1
+    spirits: 3
+- id: activity_ostwick_wrestle_green
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Wrestle on the green
+  text: Collar and elbow, best of three falls.
+  place: ostwick
+  sub: green
+  from: 16
+  to: 20
+  hours: 1
+  skill: strength
+  effects:
+    vigour: -8
+    spirits: 2
+- id: activity_ostwick_fiddle_green
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Play for the green
+  text: A reel to start with, and whatever they shout for after.
+  place: ostwick
+  sub: green
+  from: 17
+  to: 21
+  hours: 1
+  skill: fiddle
+  effects:
+    vigour: -2
+    spirits: 3
+- id: activity_ostwick_feed_village_fire
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Feed the village fire
+  text: A log for the hearth that never goes out, and a word to Ilvara.
+  place: ostwick
+  sub: shrine
+  from: 6
+  to: 8
+  hours: 1
+  skill: prayer
+  effects:
+    vigour: -1
+    spirits: 3
+- id: activity_ostwick_draw_well_water
+  origin: allora2
+  kind: activity
+  roots:
+    - ostwick
+  name: Draw water at the well
+  text: Rope, pail and a wet sleeve, four turns to the top.
+  place: ostwick
+  sub: shrine
+  from: 6
+  to: 9
+  hours: 1
+  skill: endurance
+  effects:
+    vigour: -3
+    spirits: 0

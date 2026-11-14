@@ -4,6 +4,7 @@
  * It has no knowledge of the screen, the worker or storage, so the same code
  * runs in the browser, in tests and in the balance bot.
  */
+import { activitySystem, availableNow, begin } from './activities';
 import { HOURS_PER_DAY, dateAt, type GameDate } from './calendar';
 import { EventBus } from './events';
 import type { Order } from './protocol';
@@ -46,6 +47,10 @@ export interface Snapshot {
   /** Game hours of the last time away that were not simulated (over the cap). */
   skippedHours: number;
   needs: Needs;
+  /** The activity in hand, and the hours it still needs. */
+  doing: { id: string; hoursLeft: number } | null;
+  /** Ids of the activities that can be begun here and now. */
+  canDo: string[];
   asleep: boolean;
   home: string;
   orders: StandingOrders;
@@ -80,7 +85,7 @@ export class Engine {
   ) {
     this.msPerGameHour = options.msPerGameHour ?? MS_PER_GAME_HOUR;
     this.world = options.world ?? new World();
-    this.systems = [needsSystem, travelSystem, ...(options.systems ?? [])];
+    this.systems = [needsSystem, travelSystem, activitySystem, ...(options.systems ?? [])];
   }
 
   /** Runs one game hour. */
@@ -144,7 +149,14 @@ export class Engine {
         this.state.lastRealMs = nowMs;
         this.state.paused = false;
         break;
+      case 'do':
+        begin(this.state, this.world, order.activity, dateAt(this.state.hours));
+        break;
+      case 'stop':
+        this.state.doing = null;
+        break;
       case 'travel':
+        if (this.state.doing) throw new Error('Busy');
         setOut(this.state, this.world, order.to);
         break;
       case 'setOrders':
@@ -165,6 +177,10 @@ export class Engine {
     const leg = j?.legs[0];
     return {
       needs: { ...this.state.needs },
+      doing: this.state.doing
+        ? { id: this.state.doing.id, hoursLeft: this.state.doing.hoursLeft }
+        : null,
+      canDo: availableNow(this.world, this.state, dateAt(this.state.hours)).map((a) => a.id),
       asleep: this.state.asleep,
       home: this.state.home,
       orders: { ...this.state.orders },

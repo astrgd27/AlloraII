@@ -177,3 +177,22 @@ button:focus-visible {
   width: 5rem;
   height: 0.4rem;
 }
+
+.activities {
+  max-width: 1160px;
+  width: 100%;
+}
+
+.activities p {
+  margin: 0.2rem 0;
+}
+
+.activities ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+}

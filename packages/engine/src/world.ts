@@ -19,10 +19,30 @@ export interface Road {
   hours: number;
 }
 
+/** A short act tied to a place and an hour. */
+export interface Activity {
+  id: string;
+  name: string;
+  text: string;
+  place: string;
+  sub?: string;
+  subName?: string;
+  /** The hours of the day between which it can be begun. */
+  from: number;
+  to: number;
+  /** How long it takes. */
+  hours: number;
+  /** Season indexes it belongs to; all, if left out. */
+  seasons?: number[];
+  skill?: string;
+  effects: { vigour?: number; health?: number; spirits?: number };
+}
+
 export interface WorldData {
   regions: { id: string; name: string }[];
   places: Place[];
   roads: Road[];
+  activities?: Activity[];
 }
 
 export const WORLD = data as WorldData;
@@ -46,6 +66,7 @@ export interface Route {
 
 export class World {
   readonly places = new Map<string, Place>();
+  readonly activities = new Map<string, Activity>();
   private readonly links = new Map<string, Leg[]>();
 
   constructor(readonly data: WorldData = WORLD) {
@@ -53,6 +74,7 @@ export class World {
       this.places.set(place.id, place);
       this.links.set(place.id, []);
     }
+    for (const activity of data.activities ?? []) this.activities.set(activity.id, activity);
     for (const road of data.roads) {
       const sea = road.way === 'sea' ? ({ sea: true } as const) : {};
       this.links.get(road.from)?.push({ road: road.id, to: road.to, hours: road.hours, ...sea });

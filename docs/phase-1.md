@@ -16,7 +16,7 @@
 
 1. **World plan.** *(done)* Places per realm for all five lands (total 2,200), and the place kinds (city quarter, town, village, site, wild) with their sizes.
 2. **Needs.** *(done)* Vigour, health and spirits; sleep and meals; a home to sleep in.
-3. **Activities.** Short acts tied to a place, an hour, tools and people. The first twenty in Ostwick.
+3. **Activities.** *(done)* Short acts tied to a place, an hour, tools and people. The first twenty in Ostwick.
 4. **People with routines.** Canon schedules (108 people in Allora I have one) drive who is where at each hour; meeting, talking, being known.
 5. **Skills and learning.** The smaller skill set, growth from work near the edge of ability, mastery gates.
 6. **The challenge system.** The roll, approaches, degrees of result, lasting consequences.
@@ -56,3 +56,10 @@ Each is an addition, to be rooted on canon when it is built.
   - **Running out.** With no vigour left a life sleeps where it stands and loses health. Nothing kills: the bible's leaning is injuries that heal, not death.
   - **The rates are first values** (`RATES` in `needs.ts`), to be tuned by the balance bot. The report now has a Needs section: the mean of each need and the lowest any life fell.
   - **Save version 3,** with a migration from 2 and a test. An old save's home is wherever the life stands.
+- **2026-11-14 · Activities (#24).** Twenty activities in Ostwick (`content/activities/ostwick.yaml`), each an addition rooted on Ostwick and set in one of its canon sub-places. Decisions:
+  - **What an activity is:** a name, one line of text, a place and sub-place, the hours of the day it can be begun, how long it takes, the seasons it belongs to (if any), a canon skill, and what it does to the needs when finished.
+  - **Rules** (`packages/engine/src/activities.ts`): one thing at a time; not on the road; not asleep; only at its place, hour and season. Sleep sets the work down and morning takes it up. Travel is refused while busy; `stop` sets the work down.
+  - **Skills are named but not yet trained.** Each activity names the canon skill it will train; growth comes with #26.
+  - **No pay, tools or people yet.** Those arrive with money (#32), items and people (#25).
+  - **The first twenty are everyday village work,** from canon's own words for Ostwick: the strip-fields, the pasture and its bees, the bread-oven and loom, the Barley Sheaf's kegel-alley, the green, the hearth-shrine and the well.
+  - **Save version 4,** with a migration and a test.
