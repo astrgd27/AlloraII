@@ -107,5 +107,31 @@ export const postSchema = entrySchema('post', {
   group: text.optional(),
 });
 
+const hourOfDay = z.number().int().min(0).max(23);
+
+/** A short act tied to a place and an hour (design bible, Micro-activities). New to Allora II. */
+export const activitySchema = entrySchema('activity', {
+  name: text,
+  text: text,
+  place: text,
+  /** The sub-place of `place` where it is done. */
+  sub: text.optional(),
+  /** The hours of the day between which it can be begun. */
+  from: hourOfDay,
+  to: hourOfDay,
+  /** How long it takes. */
+  hours: z.number().int().min(1).max(12),
+  /** Season indexes (0 spring to 3 winter) it belongs to. All, if left out. */
+  seasons: z.array(z.number().int().min(0).max(3)).optional(),
+  skill: text.optional(),
+  effects: z
+    .object({
+      vigour: z.number().optional(),
+      health: z.number().optional(),
+      spirits: z.number().optional(),
+    })
+    .optional(),
+});
+
 /** Any other kind (workings, skills, recipes, lore, Weathers, …): the base fields only, for now. */
 export const otherSchema = entrySchema(null, {});

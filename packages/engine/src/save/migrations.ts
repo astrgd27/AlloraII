@@ -50,6 +50,8 @@ export const MIGRATIONS: Record<number, (save: AnySave) => AnySave> = {
     meals: 0,
     hoursSlept: 0,
   }),
+  // Version 4 adds the activity in hand and the count of activities finished.
+  3: (save) => ({ ...save, version: 4, doing: null, done: {} }),
 };
 
 export function versionOf(save: unknown): number {

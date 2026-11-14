@@ -5,7 +5,7 @@
  *
  * Phase 0 covers Eintenn and Marre only (the map stub).
  */
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse, stringify } from 'yaml';
@@ -54,6 +54,19 @@ async function main(): Promise<void> {
     roads.push(...((await readYaml(`${ROADS_DIR}/${file}.yaml`)) as unknown as Road[]));
   }
 
+  // Activities at the places of this world, with the name of the sub-place they belong to.
+  const activities: Raw[] = [];
+  const actDir = 'content/activities';
+  for (const file of (await readdir(join(ROOT, actDir)).catch(() => [] as string[])).sort()) {
+    if (file.endsWith('.yaml')) activities.push(...(await readYaml(`${actDir}/${file}`)));
+  }
+  const placeIds = new Set(places.map((p) => p.id));
+  const subName = (placeId: unknown, subId: unknown): string | undefined => {
+    const place = places.find((p) => p.id === placeId);
+    const subs = (place?.subs as Raw[] | undefined) ?? [];
+    return subs.find((s) => s.id === subId)?.name as string | undefined;
+  };
+
   const world = {
     regions: regions.map((r) => ({ id: r.id, name: r.name })),
     places: places.map((p) => ({
@@ -65,6 +78,22 @@ async function main(): Promise<void> {
       kind: p.city ? 'city' : p.wild ? 'wild' : 'settled',
     })),
     roads: roads.map((r) => ({ id: r.id, from: r.from, to: r.to, way: r.way, hours: r.hours })),
+    activities: activities
+      .filter((a) => placeIds.has(a.place))
+      .map((a) => ({
+        id: a.id,
+        name: a.name,
+        text: a.text,
+        place: a.place,
+        sub: a.sub,
+        subName: subName(a.place, a.sub),
+        from: a.from,
+        to: a.to,
+        hours: a.hours,
+        seasons: a.seasons,
+        skill: a.skill,
+        effects: a.effects ?? {},
+      })),
   };
   const text = `${JSON.stringify(world, null, 1)}\n`;
 
@@ -80,7 +109,7 @@ async function main(): Promise<void> {
   await mkdir(dirname(join(ROOT, OUT)), { recursive: true });
   await writeFile(join(ROOT, OUT), text);
   console.log(
-    `Wrote ${OUT}: ${world.places.length} places, ${world.roads.length} roads, ${world.regions.length} regions.`,
+    `Wrote ${OUT}: ${world.places.length} places, ${world.roads.length} roads, ${world.activities.length} activities.`,
   );
 }
 

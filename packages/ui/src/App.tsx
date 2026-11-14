@@ -1,4 +1,5 @@
 import { useEffect, useState, useSyncExternalStore } from 'react';
+import { Activities } from './Activities';
 import { engine } from './engine-client';
 import { formatDate, formatHour } from './format';
 import { MapView } from './map/MapView';
@@ -45,6 +46,7 @@ export function App() {
       {snapshot && (
         <>
           <PlacePanel snapshot={snapshot} chosen={chosen} send={(order) => engine.send(order)} />
+          <Activities snapshot={snapshot} send={(order) => engine.send(order)} />
           <PlaceList snapshot={snapshot} chosen={chosen} onChoose={setChosen} />
         </>
       )}

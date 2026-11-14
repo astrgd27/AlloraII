@@ -18,8 +18,7 @@ export const REFERENCE_FIELDS = [
   'people',
   'superior',
   'rival',
-  'from',
-  'to',
+  'skill',
 ];
 
 export function lintReferences(additions: Loaded[], index: CanonIndex): Problem[] {
@@ -34,7 +33,19 @@ export function lintReferences(additions: Loaded[], index: CanonIndex): Problem[
     }
   }
   for (const { entry, file } of additions) {
-    for (const field of REFERENCE_FIELDS) {
+    // Roads name their two ends in `from` and `to`; activities use those for hours.
+    const fields = entry.kind === 'road' ? [...REFERENCE_FIELDS, 'from', 'to'] : REFERENCE_FIELDS;
+    if (typeof entry.sub === 'string' && !known.has(`${String(entry.place)}/${entry.sub}`)) {
+      problems.push({
+        rule: 'reference',
+        code: 'missing-reference',
+        severity: 'error',
+        file,
+        id: entry.id,
+        message: `\`sub: ${entry.sub}\` is not a sub-place of \`${String(entry.place)}\`.`,
+      });
+    }
+    for (const field of fields) {
       const value = entry[field];
       const ids = Array.isArray(value) ? value : value === undefined ? [] : [value];
       for (const id of ids) {

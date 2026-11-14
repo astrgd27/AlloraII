@@ -1,6 +1,7 @@
 /** Picks the schema for an entry's kind and reports what fails. */
 import type { z } from 'zod';
 import {
+  activitySchema,
   faithSchema,
   groupSchema,
   itemSchema,
@@ -27,6 +28,7 @@ export const SCHEMA_BY_KIND: Record<string, { name: string; schema: z.ZodType }>
   item: { name: 'item', schema: itemSchema },
   item_variant: { name: 'item', schema: itemSchema },
   post: { name: 'post', schema: postSchema },
+  activity: { name: 'activity', schema: activitySchema },
 };
 
 export interface Failure {

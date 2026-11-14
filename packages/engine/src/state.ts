@@ -1,4 +1,5 @@
 /** The whole game state. The engine owns it; the UI only ever sees snapshots. */
+import type { Doing } from './activities';
 import { DEFAULT_ORDERS, FULL_NEEDS, type Needs, type StandingOrders } from './needs';
 import { createRng, type RngState } from './rng';
 import { START_PLACE, type Leg } from './world';
@@ -14,7 +15,7 @@ export interface Journey {
 }
 
 /** The save format version. Raise it with every change to GameState, and add a migration. */
-export const SAVE_VERSION = 3;
+export const SAVE_VERSION = 4;
 
 export interface GameState {
   version: typeof SAVE_VERSION;
@@ -40,6 +41,10 @@ export interface GameState {
   /** Running totals, for the report. */
   meals: number;
   hoursSlept: number;
+  /** The activity in hand, if any. */
+  doing: Doing | null;
+  /** Activity id → times finished. */
+  done: Record<string, number>;
 }
 
 export function newGame(seed: number, nowMs: number): GameState {
@@ -60,5 +65,7 @@ export function newGame(seed: number, nowMs: number): GameState {
     hoursSinceMeal: 0,
     meals: 0,
     hoursSlept: 0,
+    doing: null,
+    done: {},
   };
 }

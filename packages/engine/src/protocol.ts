@@ -13,6 +13,10 @@ export type Order =
   | { type: 'travel'; to: string }
   /** Turn back to the place last left. */
   | { type: 'turnBack' }
+  /** Begin an activity here and now. */
+  | { type: 'do'; activity: string }
+  /** Set down the activity in hand. */
+  | { type: 'stop' }
   /** Change standing orders. */
   | { type: 'setOrders'; orders: Partial<StandingOrders> }
   /** Write a save now. */
