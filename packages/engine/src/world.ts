@@ -9,6 +9,8 @@ export interface Place {
   x: number;
   y: number;
   kind: 'city' | 'settled' | 'wild';
+  /** Sub-place id → its name. */
+  subs?: Record<string, string>;
 }
 
 export interface Road {
@@ -38,11 +40,36 @@ export interface Activity {
   effects: { vigour?: number; health?: number; spirits?: number };
 }
 
+/** One line of a person's day: where they are, in which hours and seasons. */
+export interface SchedEntry {
+  /** [place, sub-place] */
+  at: [string, string];
+  /** [from, to) hours of the day; may wrap past midnight. Always, if left out. */
+  h?: [number, number];
+  /** Season indexes. All, if left out. */
+  s?: number[];
+}
+
+/** A person who keeps a routine. */
+export interface Person {
+  id: string;
+  name: string;
+  title: string;
+  /** How they look before you know their name. */
+  hint: string;
+  /** What happens when you first meet. */
+  meet: string;
+  /** Things they say once you know them. */
+  talk: string[];
+  sched: SchedEntry[];
+}
+
 export interface WorldData {
   regions: { id: string; name: string }[];
   places: Place[];
   roads: Road[];
   activities?: Activity[];
+  people?: Person[];
 }
 
 export const WORLD = data as WorldData;
@@ -67,6 +94,7 @@ export interface Route {
 export class World {
   readonly places = new Map<string, Place>();
   readonly activities = new Map<string, Activity>();
+  readonly people = new Map<string, Person>();
   private readonly links = new Map<string, Leg[]>();
 
   constructor(readonly data: WorldData = WORLD) {
@@ -75,6 +103,7 @@ export class World {
       this.links.set(place.id, []);
     }
     for (const activity of data.activities ?? []) this.activities.set(activity.id, activity);
+    for (const person of data.people ?? []) this.people.set(person.id, person);
     for (const road of data.roads) {
       const sea = road.way === 'sea' ? ({ sea: true } as const) : {};
       this.links.get(road.from)?.push({ road: road.id, to: road.to, hours: road.hours, ...sea });
