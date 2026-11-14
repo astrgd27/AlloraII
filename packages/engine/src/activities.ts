@@ -1,6 +1,7 @@
 /** Activities: beginning one, working at it hour by hour, finishing, stopping. */
 import type { GameDate } from './calendar';
 import type { System } from './engine';
+import { gain, newSkill, workXp } from './skills';
 import type { GameState } from './state';
 import type { Activity, World } from './world';
 
@@ -9,6 +10,10 @@ export interface Doing {
   id: string;
   hoursLeft: number;
   effects: Activity['effects'];
+  /** The skill it trains, how long it takes and how hard it is. */
+  skill?: string;
+  hours?: number;
+  level?: number;
 }
 
 const clamp = (n: number): number => Math.max(0, Math.min(100, n));
@@ -34,7 +39,14 @@ export function begin(state: GameState, world: World, id: string, date: GameDate
   if (!activity) throw new Error(`No such activity: ${id}`);
   const reason = whyNot(activity, state, date);
   if (reason) throw new Error(reason);
-  state.doing = { id, hoursLeft: activity.hours, effects: activity.effects };
+  state.doing = {
+    id,
+    hoursLeft: activity.hours,
+    effects: activity.effects,
+    hours: activity.hours,
+    ...(activity.skill?.startsWith('skill_') ? { skill: activity.skill } : {}),
+    ...(activity.level ? { level: activity.level } : {}),
+  };
 }
 
 /** Each waking hour is an hour of the work in hand. Sleep sets it down until morning. */
@@ -47,6 +59,10 @@ export const activitySystem: System = {
     if (doing.hoursLeft > 0) return;
     for (const key of ['vigour', 'health', 'spirits'] as const) {
       state.needs[key] = clamp(state.needs[key] + (doing.effects[key] ?? 0));
+    }
+    if (doing.skill) {
+      const skill = (state.skills[doing.skill] ??= newSkill());
+      gain(skill, workXp(doing.hours ?? 1, doing.level ?? 1, skill.level));
     }
     state.done[doing.id] = (state.done[doing.id] ?? 0) + 1;
     state.doing = null;

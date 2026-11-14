@@ -5,6 +5,7 @@ import { formatDate, formatHour } from './format';
 import { MapView } from './map/MapView';
 import { People } from './People';
 import { PlaceList, PlacePanel } from './map/PlacePanel';
+import { Skills } from './Skills';
 import { TITLE } from './title';
 
 /** The frame. The UI only displays state and sends orders; no game logic lives here. */
@@ -49,6 +50,7 @@ export function App() {
           <PlacePanel snapshot={snapshot} chosen={chosen} send={(order) => engine.send(order)} />
           <People snapshot={snapshot} send={(order) => engine.send(order)} />
           <Activities snapshot={snapshot} send={(order) => engine.send(order)} />
+          <Skills snapshot={snapshot} />
           <PlaceList snapshot={snapshot} chosen={chosen} onChoose={setChosen} />
         </>
       )}

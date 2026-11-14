@@ -18,7 +18,7 @@
 2. **Needs.** *(done)* Vigour, health and spirits; sleep and meals; a home to sleep in.
 3. **Activities.** *(done)* Short acts tied to a place, an hour, tools and people. The first twenty in Ostwick.
 4. **People with routines.** *(done)* Canon schedules (108 people in Allora I have one) drive who is where at each hour; meeting, talking, being known.
-5. **Skills and learning.** The smaller skill set, growth from work near the edge of ability, mastery gates.
+5. **Skills and learning.** *(done)* The smaller skill set, growth from work near the edge of ability, mastery gates.
 6. **The challenge system.** The roll, approaches, degrees of result, lasting consequences.
 7. **Eintenn, first batch.** About 20 new small places around Ostwick and Burg Tennfels, with residents, each rooted on canon.
 8. **Named roads.** Replace the stub roads in Eintenn with named roads, tracks and a river, and events on the way.
@@ -70,3 +70,11 @@ Each is an addition, to be rooted on canon when it is built.
   - **Meeting and talking.** A stranger shows by canon's own `hint` ("a sunburnt young woman with a hayfork over her shoulder"). Meeting gives canon's `meet` text and their name; talking walks through canon's `talk` lines. Meeting lifts the spirits by 3; a talk by 2, once a day for each person. This is the first source of spirits that is not food or bed.
   - **Left for later:** canon's skill requirements to meet some people (`need`), gifts, the three-step stories (`tiers`) and bonuses. They wait on skills (#26), items and relationships.
   - **Save version 5,** with a migration and a test.
+- **2026-11-14 · Skills and learning (#26).** Decisions:
+  - **72 skills in eight families** (`content/skills/skills.yaml`): 47 gathered from Allora I's skills, plus its 25 magic disciplines kept one for one, as the magic design notes want. Each skill is an addition whose `roots` are the canon skills it gathers; a test proves every one of Allora I's 275 skills is gathered exactly once. The 33 languages become one skill, Tongues; which languages a life speaks will be knowledge, not levels.
+  - **Five attributes** (`content/skills/attributes.yaml`) gather Allora I's nine attribute skills. They do not grow yet.
+  - **The curve** (`packages/engine/src/skills.ts`): 75 experience for the first level, 4% more each level, 10 experience for an hour of work at the edge. A life that works a third of its hours reaches 50 in about 57 real hours and 100 in about 464; the bible asks for roughly 55 and 400.
+  - **The edge.** The bible's table, joined by straight lines. For plain activities the edge is counted in levels (difficulty less skill level); checks will use the bible's own edge when challenges arrive (#27). Village work is difficulty 1, so it stops teaching as a skill nears 10.
+  - **Gates** cap a skill at 10, 25, 50 and 75 and bank at most one level beyond. What passes a gate (a teacher, a trial piece) comes with professions (#30). Countermagic carries canon's note that it can never work witch magic.
+  - **Balance.** A second persona, the villager, stays in Ostwick and takes any work to hand; the report's "Hours to level" section is now real.
+  - **Save version 6,** with a migration and a test.

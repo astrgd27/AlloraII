@@ -10,6 +10,7 @@ import { EventBus } from './events';
 import type { Order } from './protocol';
 import { meet, peopleAt, talk, type Words } from './people';
 import { needsSystem, type Needs, type StandingOrders } from './needs';
+import { capOf, xpToNext, type SkillState } from './skills';
 import { type GameState } from './state';
 import { travelSystem, turnBack, setOut } from './travel';
 import { World } from './world';
@@ -52,6 +53,8 @@ export interface Snapshot {
   doing: { id: string; hoursLeft: number } | null;
   /** Ids of the activities that can be begun here and now. */
   canDo: string[];
+  /** The skills the life has used: level, progress to the next (0 to 1), and whether a gate holds it. */
+  skills: Record<string, { level: number; progress: number; atGate: boolean }>;
   /** The people at the life's place now. `known` is false until they have met. */
   here: { id: string; sub: string; known: boolean; talks: number }[];
   /** The last thing someone said. */
@@ -199,6 +202,16 @@ export class Engine {
             known: Boolean(this.state.bonds[p.id]),
             talks: this.state.bonds[p.id]?.talks ?? 0,
           })),
+      skills: Object.fromEntries(
+        Object.entries(this.state.skills).map(([id, k]: [string, SkillState]) => [
+          id,
+          {
+            level: k.level,
+            progress: Math.min(1, k.xp / xpToNext(k.level)),
+            atGate: k.level >= capOf(k) && k.level < 100,
+          },
+        ]),
+      ),
       words: this.state.words,
       asleep: this.state.asleep,
       home: this.state.home,

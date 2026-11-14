@@ -746,6 +746,368 @@
    "hours": 110
   }
  ],
+ "skills": [
+  {
+   "id": "skill_smithing",
+   "name": "Smithing",
+   "family": "crafts"
+  },
+  {
+   "id": "skill_woodwork",
+   "name": "Woodwork",
+   "family": "crafts"
+  },
+  {
+   "id": "skill_building",
+   "name": "Building",
+   "family": "crafts"
+  },
+  {
+   "id": "skill_clothwork",
+   "name": "Clothwork",
+   "family": "crafts"
+  },
+  {
+   "id": "skill_cookery",
+   "name": "Cookery",
+   "family": "crafts"
+  },
+  {
+   "id": "skill_kilncraft",
+   "name": "Kilncraft",
+   "family": "crafts"
+  },
+  {
+   "id": "skill_alchemy",
+   "name": "Alchemy",
+   "family": "crafts"
+  },
+  {
+   "id": "skill_bookcraft",
+   "name": "Bookcraft",
+   "family": "crafts"
+  },
+  {
+   "id": "skill_artifice",
+   "name": "Artifice",
+   "family": "crafts"
+  },
+  {
+   "id": "skill_husbandry",
+   "name": "Husbandry",
+   "family": "land"
+  },
+  {
+   "id": "skill_beastcraft",
+   "name": "Beastcraft",
+   "family": "land"
+  },
+  {
+   "id": "skill_herblore",
+   "name": "Herblore",
+   "family": "land"
+  },
+  {
+   "id": "skill_woodcraft",
+   "name": "Woodcraft",
+   "family": "land"
+  },
+  {
+   "id": "skill_mining",
+   "name": "Mining",
+   "family": "land"
+  },
+  {
+   "id": "skill_seamanship",
+   "name": "Seamanship",
+   "family": "land"
+  },
+  {
+   "id": "skill_fishing",
+   "name": "Fishing",
+   "family": "land"
+  },
+  {
+   "id": "skill_wayfaring",
+   "name": "Wayfaring",
+   "family": "land"
+  },
+  {
+   "id": "skill_arms",
+   "name": "Arms",
+   "family": "body"
+  },
+  {
+   "id": "skill_marksmanship",
+   "name": "Marksmanship",
+   "family": "body"
+  },
+  {
+   "id": "skill_riding",
+   "name": "Riding to war",
+   "family": "body"
+  },
+  {
+   "id": "skill_athletics",
+   "name": "Athletics",
+   "family": "body"
+  },
+  {
+   "id": "skill_games",
+   "name": "Games",
+   "family": "body"
+  },
+  {
+   "id": "skill_letters",
+   "name": "Letters",
+   "family": "mind"
+  },
+  {
+   "id": "skill_numbers",
+   "name": "Numbers",
+   "family": "mind"
+  },
+  {
+   "id": "skill_physick",
+   "name": "Physick",
+   "family": "mind"
+  },
+  {
+   "id": "skill_philosophy",
+   "name": "Natural philosophy",
+   "family": "mind"
+  },
+  {
+   "id": "skill_antiquities",
+   "name": "Antiquities",
+   "family": "mind"
+  },
+  {
+   "id": "skill_tongues",
+   "name": "Tongues",
+   "family": "mind"
+  },
+  {
+   "id": "skill_command",
+   "name": "Command",
+   "family": "mind"
+  },
+  {
+   "id": "skill_persuasion",
+   "name": "Persuasion",
+   "family": "people"
+  },
+  {
+   "id": "skill_courtesy",
+   "name": "Courtesy",
+   "family": "people"
+  },
+  {
+   "id": "skill_insight",
+   "name": "Insight",
+   "family": "people"
+  },
+  {
+   "id": "skill_trade",
+   "name": "Trade",
+   "family": "people"
+  },
+  {
+   "id": "skill_stewardship",
+   "name": "Stewardship",
+   "family": "people"
+  },
+  {
+   "id": "skill_music",
+   "name": "Music",
+   "family": "people"
+  },
+  {
+   "id": "skill_stagecraft",
+   "name": "Stagecraft",
+   "family": "people"
+  },
+  {
+   "id": "skill_revelry",
+   "name": "Revelry",
+   "family": "people"
+  },
+  {
+   "id": "skill_stealth",
+   "name": "Stealth",
+   "family": "shadow"
+  },
+  {
+   "id": "skill_thievery",
+   "name": "Thievery",
+   "family": "shadow"
+  },
+  {
+   "id": "skill_streetwise",
+   "name": "Streetwise",
+   "family": "shadow"
+  },
+  {
+   "id": "skill_deceit",
+   "name": "Deceit",
+   "family": "shadow"
+  },
+  {
+   "id": "skill_poisoncraft",
+   "name": "Poisoncraft",
+   "family": "shadow"
+  },
+  {
+   "id": "skill_devotion",
+   "name": "Devotion",
+   "family": "faith"
+  },
+  {
+   "id": "skill_theology",
+   "name": "Theology",
+   "family": "faith"
+  },
+  {
+   "id": "skill_contemplation",
+   "name": "Contemplation",
+   "family": "faith"
+  },
+  {
+   "id": "skill_rites",
+   "name": "Rites of power",
+   "family": "faith"
+  },
+  {
+   "id": "skill_augury",
+   "name": "Augury",
+   "family": "faith"
+  },
+  {
+   "id": "skill_hedgecraft",
+   "name": "Charms",
+   "family": "magic"
+  },
+  {
+   "id": "skill_evocation",
+   "name": "Evocation",
+   "family": "magic"
+  },
+  {
+   "id": "skill_warding",
+   "name": "Warding",
+   "family": "magic"
+  },
+  {
+   "id": "skill_illusion",
+   "name": "Illusion",
+   "family": "magic"
+  },
+  {
+   "id": "skill_divination",
+   "name": "Divination",
+   "family": "magic"
+  },
+  {
+   "id": "skill_summoning",
+   "name": "Summoning",
+   "family": "magic"
+  },
+  {
+   "id": "skill_necromancy",
+   "name": "Necromancy",
+   "family": "magic"
+  },
+  {
+   "id": "skill_druidism",
+   "name": "Nature Magic",
+   "family": "magic"
+  },
+  {
+   "id": "skill_runecraft",
+   "name": "Rune Magic",
+   "family": "magic"
+  },
+  {
+   "id": "skill_feybargain",
+   "name": "Fae Magic",
+   "family": "magic"
+  },
+  {
+   "id": "skill_lumencraft",
+   "name": "Light Magic",
+   "family": "magic"
+  },
+  {
+   "id": "skill_grandeur",
+   "name": "Gigantism",
+   "family": "magic"
+  },
+  {
+   "id": "skill_hushcraft",
+   "name": "Oblivion",
+   "family": "magic"
+  },
+  {
+   "id": "skill_witchlore",
+   "name": "Countermagic",
+   "family": "magic"
+  },
+  {
+   "id": "skill_battlemagic",
+   "name": "Pyromancy",
+   "family": "magic"
+  },
+  {
+   "id": "skill_dreaming",
+   "name": "Dream Magic",
+   "family": "magic"
+  },
+  {
+   "id": "skill_geomancy",
+   "name": "Geomancy",
+   "family": "magic"
+  },
+  {
+   "id": "skill_namebinding",
+   "name": "Name Magic",
+   "family": "magic"
+  },
+  {
+   "id": "skill_redreading",
+   "name": "Blood Magic",
+   "family": "magic"
+  },
+  {
+   "id": "skill_demonology",
+   "name": "Demonology",
+   "family": "magic"
+  },
+  {
+   "id": "skill_facetcraft",
+   "name": "Crystal Magic",
+   "family": "magic"
+  },
+  {
+   "id": "skill_verseburning",
+   "name": "Inscription",
+   "family": "magic"
+  },
+  {
+   "id": "skill_alteration",
+   "name": "Alteration",
+   "family": "magic"
+  },
+  {
+   "id": "skill_transmutation",
+   "name": "Transmutation",
+   "family": "magic"
+  },
+  {
+   "id": "skill_restoration",
+   "name": "Restoration",
+   "family": "magic"
+  }
+ ],
  "people": [
   {
    "id": "hanne",
@@ -1015,7 +1377,7 @@
    "from": 6,
    "to": 12,
    "hours": 3,
-   "skill": "farming",
+   "skill": "skill_husbandry",
    "effects": {
     "vigour": -10,
     "spirits": 0
@@ -1034,7 +1396,7 @@
    "seasons": [
     0
    ],
-   "skill": "farming",
+   "skill": "skill_husbandry",
    "effects": {
     "vigour": -6,
     "spirits": 1
@@ -1050,7 +1412,7 @@
    "from": 6,
    "to": 18,
    "hours": 2,
-   "skill": "farming",
+   "skill": "skill_husbandry",
    "effects": {
     "vigour": -6,
     "spirits": 0
@@ -1069,7 +1431,7 @@
    "seasons": [
     2
    ],
-   "skill": "foraging",
+   "skill": "skill_herblore",
    "effects": {
     "vigour": -3,
     "spirits": 1
@@ -1085,7 +1447,7 @@
    "from": 6,
    "to": 8,
    "hours": 2,
-   "skill": "herding",
+   "skill": "skill_beastcraft",
    "effects": {
     "vigour": -6,
     "spirits": 0
@@ -1101,7 +1463,7 @@
    "from": 8,
    "to": 17,
    "hours": 3,
-   "skill": "herding",
+   "skill": "skill_beastcraft",
    "effects": {
     "vigour": -4,
     "spirits": 2
@@ -1117,7 +1479,7 @@
    "from": 10,
    "to": 15,
    "hours": 1,
-   "skill": "apiculture",
+   "skill": "skill_husbandry",
    "effects": {
     "vigour": -3,
     "spirits": 1
@@ -1133,7 +1495,7 @@
    "from": 6,
    "to": 10,
    "hours": 1,
-   "skill": "herbalism",
+   "skill": "skill_herblore",
    "effects": {
     "vigour": -3,
     "spirits": 1
@@ -1149,7 +1511,7 @@
    "from": 6,
    "to": 9,
    "hours": 2,
-   "skill": "cooking",
+   "skill": "skill_cookery",
    "effects": {
     "vigour": -4,
     "spirits": 2
@@ -1165,7 +1527,7 @@
    "from": 8,
    "to": 20,
    "hours": 2,
-   "skill": "weaving",
+   "skill": "skill_clothwork",
    "effects": {
     "vigour": -4,
     "spirits": 0
@@ -1181,7 +1543,7 @@
    "from": 9,
    "to": 15,
    "hours": 3,
-   "skill": "brewing",
+   "skill": "skill_cookery",
    "effects": {
     "vigour": -6,
     "spirits": 1
@@ -1197,7 +1559,7 @@
    "from": 6,
    "to": 10,
    "hours": 1,
-   "skill": "gardening",
+   "skill": "skill_husbandry",
    "effects": {
     "vigour": -3,
     "spirits": 0
@@ -1213,7 +1575,7 @@
    "from": 17,
    "to": 20,
    "hours": 1,
-   "skill": "gardening",
+   "skill": "skill_husbandry",
    "effects": {
     "vigour": -3,
     "spirits": 1
@@ -1229,7 +1591,7 @@
    "from": 18,
    "to": 22,
    "hours": 3,
-   "skill": "insight",
+   "skill": "skill_insight",
    "effects": {
     "vigour": -8,
     "spirits": 1
@@ -1245,7 +1607,7 @@
    "from": 17,
    "to": 22,
    "hours": 1,
-   "skill": "carousing",
+   "skill": "skill_revelry",
    "effects": {
     "vigour": -2,
     "spirits": 4
@@ -1261,7 +1623,7 @@
    "from": 19,
    "to": 22,
    "hours": 1,
-   "skill": "storytelling",
+   "skill": "skill_stagecraft",
    "effects": {
     "vigour": -1,
     "spirits": 3
@@ -1277,7 +1639,7 @@
    "from": 16,
    "to": 20,
    "hours": 1,
-   "skill": "strength",
+   "skill": "attribute_might",
    "effects": {
     "vigour": -8,
     "spirits": 2
@@ -1293,7 +1655,7 @@
    "from": 17,
    "to": 21,
    "hours": 1,
-   "skill": "fiddle",
+   "skill": "skill_music",
    "effects": {
     "vigour": -2,
     "spirits": 3
@@ -1309,7 +1671,7 @@
    "from": 6,
    "to": 8,
    "hours": 1,
-   "skill": "prayer",
+   "skill": "skill_devotion",
    "effects": {
     "vigour": -1,
     "spirits": 3
@@ -1325,7 +1687,7 @@
    "from": 6,
    "to": 9,
    "hours": 1,
-   "skill": "endurance",
+   "skill": "attribute_might",
    "effects": {
     "vigour": -3,
     "spirits": 0
