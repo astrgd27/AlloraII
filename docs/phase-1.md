@@ -19,7 +19,7 @@
 3. **Activities.** *(done)* Short acts tied to a place, an hour, tools and people. The first twenty in Ostwick.
 4. **People with routines.** *(done)* Canon schedules (108 people in Allora I have one) drive who is where at each hour; meeting, talking, being known.
 5. **Skills and learning.** *(done)* The smaller skill set, growth from work near the edge of ability, mastery gates.
-6. **The challenge system.** The roll, approaches, degrees of result, lasting consequences.
+6. **The challenge system.** *(done)* The roll, approaches, degrees of result, lasting consequences.
 7. **Eintenn, first batch.** About 20 new small places around Ostwick and Burg Tennfels, with residents, each rooted on canon.
 8. **Named roads.** Replace the stub roads in Eintenn with named roads, tracks and a river, and events on the way.
 9. **Profession skeleton and the Smith.** Guild-smith of the Anvil: duties, commissions, ladder.
@@ -78,3 +78,10 @@ Each is an addition, to be rooted on canon when it is built.
   - **Gates** cap a skill at 10, 25, 50 and 75 and bank at most one level beyond. What passes a gate (a teacher, a trial piece) comes with professions (#30). Countermagic carries canon's note that it can never work witch magic.
   - **Balance.** A second persona, the villager, stays in Ostwick and takes any work to hand; the report's "Hours to level" section is now real.
   - **Save version 6,** with a migration and a test.
+- **2026-11-14 · The challenge system (#27).** `packages/engine/src/challenge.ts`, as the bible sets it out: d20 plus bonus against a difficulty; skill adds level ÷ 5; modifiers each carry their source; advantage and disadvantage roll twice; the margin gives five degrees; a natural 20 or 1 shifts one degree. Decisions:
+  - **Odds are computed exactly,** not sampled, and shown in the bible's words (Sure, Likely, Even, Risky, Long shot, Hopeless) with the number on hover. The bible's own example is a test: a master at +26 wins a Heroic check 85% of the time and a Legendary one 60%.
+  - **First use.** Four Ostwick activities now end in an Easy check (tending the hives, the kegel-alley, swapping stories, wrestling). The result sets the lesson (failure teaches half) and a triumph or disaster moves the spirits a little. Wrestling now trains Games, which gathers Allora I's wrestling.
+  - **Learning from checks** uses the bible's edge: difficulty less (10 + bonus).
+  - **Not yet:** approaches, ventures, strain, spending resolve, injuries and marks on the world. They need cases and expeditions to hang on (#30 onward). Resolve is stored (3 points) but cannot be spent yet.
+  - **Balance.** The report's "Check odds" section is real, and flags a run whose checks are mostly trivial or mostly hopeless.
+  - **Save version 7,** with a migration and a test.

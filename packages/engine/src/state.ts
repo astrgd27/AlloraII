@@ -1,5 +1,5 @@
 /** The whole game state. The engine owns it; the UI only ever sees snapshots. */
-import type { Doing } from './activities';
+import type { Doing, LastCheck } from './activities';
 import type { Bond, Words } from './people';
 import { DEFAULT_ORDERS, FULL_NEEDS, type Needs, type StandingOrders } from './needs';
 import type { SkillState } from './skills';
@@ -17,7 +17,7 @@ export interface Journey {
 }
 
 /** The save format version. Raise it with every change to GameState, and add a migration. */
-export const SAVE_VERSION = 6;
+export const SAVE_VERSION = 7;
 
 export interface GameState {
   version: typeof SAVE_VERSION;
@@ -53,6 +53,11 @@ export interface GameState {
   words: Words | null;
   /** Skill id → its level, experience and gates passed. Only skills the life has used. */
   skills: Record<string, SkillState>;
+  /** The last check made, and a count of every result so far. */
+  lastCheck: LastCheck | null;
+  checks: Record<string, number>;
+  /** Resolve: a small pool to reroll a die with. Spending it comes with ventures. */
+  resolve: number;
 }
 
 export function newGame(seed: number, nowMs: number): GameState {
@@ -78,5 +83,8 @@ export function newGame(seed: number, nowMs: number): GameState {
     bonds: {},
     words: null,
     skills: {},
+    lastCheck: null,
+    checks: {},
+    resolve: 3,
   };
 }

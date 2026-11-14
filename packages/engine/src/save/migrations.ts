@@ -56,6 +56,8 @@ export const MIGRATIONS: Record<number, (save: AnySave) => AnySave> = {
   4: (save) => ({ ...save, version: 5, bonds: {}, words: null }),
   // Version 6 adds skills.
   5: (save) => ({ ...save, version: 6, skills: {} }),
+  // Version 7 adds checks and resolve.
+  6: (save) => ({ ...save, version: 7, lastCheck: null, checks: {}, resolve: 3 }),
 };
 
 export function versionOf(save: unknown): number {

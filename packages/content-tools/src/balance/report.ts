@@ -93,7 +93,7 @@ export function renderReport(run: BalanceRun, options: { timings?: boolean } = {
     '',
     '### Check odds',
     '',
-    NOT_YET,
+    ...checkLines(run),
     '',
     '### Legend pace',
     '',
@@ -117,5 +117,21 @@ function skillLines(run: BalanceRun): string[] {
       const levels = run.lives.map((l) => l.skills[id] ?? 0);
       return `| ${WORLD.skills?.find((s) => s.id === id)?.name ?? id} | ${mean(levels).toFixed(1)} | ${Math.max(...levels)} |`;
     }),
+  ];
+}
+
+/** The results of the checks lives actually faced. */
+function checkLines(run: BalanceRun): string[] {
+  const order = ['triumph', 'success', 'cost', 'failure', 'disaster'];
+  const total = (d: string) => run.lives.reduce((n, l) => n + (l.checks[d] ?? 0), 0);
+  const all = order.reduce((n, d) => n + total(d), 0);
+  if (all === 0) return ['_This persona faces no checks._'];
+  const won = (total('triumph') + total('success')) / all;
+  return [
+    `${all} checks faced. Won ${(won * 100).toFixed(0)}% of them${won > 0.9 ? ' (**mostly trivial**)' : won < 0.2 ? ' (**mostly hopeless**)' : ''}.`,
+    '',
+    '| Result | Share |',
+    '| --- | ---: |',
+    ...order.map((d) => `| ${d} | ${((total(d) / all) * 100).toFixed(1)}% |`),
   ];
 }
