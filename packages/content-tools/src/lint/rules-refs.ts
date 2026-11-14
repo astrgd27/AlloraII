@@ -45,6 +45,20 @@ export function lintReferences(additions: Loaded[], index: CanonIndex): Problem[
         message: `\`sub: ${entry.sub}\` is not a sub-place of \`${String(entry.place)}\`.`,
       });
     }
+    // A person's routine must name real sub-places.
+    for (const line of Array.isArray(entry.sched) ? entry.sched : []) {
+      const at = isRecord(line) && Array.isArray(line.at) ? line.at.join('/') : '';
+      if (!known.has(at)) {
+        problems.push({
+          rule: 'reference',
+          code: 'missing-reference',
+          severity: 'error',
+          file,
+          id: entry.id,
+          message: `The routine names \`${at}\`, which is not a sub-place.`,
+        });
+      }
+    }
     for (const field of fields) {
       const value = entry[field];
       const ids = Array.isArray(value) ? value : value === undefined ? [] : [value];

@@ -1,0 +1,361 @@
+# First batch of new places in Eintenn, around Ostwick and Burg Tennfels (Phase 1, issue 28).
+- id: road_ostwick_place_eintenn_weirbeck_mill
+  origin: allora2
+  kind: road
+  roots:
+    - ostwick
+    - place_eintenn_weirbeck_mill
+  from: ostwick
+  to: place_eintenn_weirbeck_mill
+  way: road
+  hours: 2
+- id: road_ostwick_place_eintenn_netherwick
+  origin: allora2
+  kind: road
+  roots:
+    - ostwick
+    - place_eintenn_netherwick
+  from: ostwick
+  to: place_eintenn_netherwick
+  way: road
+  hours: 3
+- id: road_ostwick_place_eintenn_tithe_barn
+  origin: allora2
+  kind: road
+  roots:
+    - ostwick
+    - place_eintenn_tithe_barn
+  from: ostwick
+  to: place_eintenn_tithe_barn
+  way: road
+  hours: 1
+- id: road_ostwick_place_eintenn_crow_stone
+  origin: allora2
+  kind: road
+  roots:
+    - ostwick
+    - place_eintenn_crow_stone
+  from: ostwick
+  to: place_eintenn_crow_stone
+  way: road
+  hours: 3
+- id: road_place_eintenn_dunmere_place_eintenn_tithe_barn
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_dunmere
+    - place_eintenn_tithe_barn
+  from: place_eintenn_dunmere
+  to: place_eintenn_tithe_barn
+  way: road
+  hours: 2
+- id: road_ostwick_place_eintenn_dunmere
+  origin: allora2
+  kind: road
+  roots:
+    - ostwick
+    - place_eintenn_dunmere
+  from: ostwick
+  to: place_eintenn_dunmere
+  way: road
+  hours: 3
+- id: road_place_eintenn_netherwick_place_eintenn_three_ash_ford
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_netherwick
+    - place_eintenn_three_ash_ford
+  from: place_eintenn_netherwick
+  to: place_eintenn_three_ash_ford
+  way: road
+  hours: 3
+- id: road_place_eintenn_dunmere_place_eintenn_three_ash_ford
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_dunmere
+    - place_eintenn_three_ash_ford
+  from: place_eintenn_dunmere
+  to: place_eintenn_three_ash_ford
+  way: road
+  hours: 3
+- id: road_place_eintenn_hollin_cross_place_eintenn_netherwick
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_hollin_cross
+    - place_eintenn_netherwick
+  from: place_eintenn_hollin_cross
+  to: place_eintenn_netherwick
+  way: road
+  hours: 2
+- id: road_ostwick_place_eintenn_hollin_cross
+  origin: allora2
+  kind: road
+  roots:
+    - ostwick
+    - place_eintenn_hollin_cross
+  from: ostwick
+  to: place_eintenn_hollin_cross
+  way: road
+  hours: 5
+- id: road_place_eintenn_sallowfield_place_eintenn_weirbeck_mill
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_sallowfield
+    - place_eintenn_weirbeck_mill
+  from: place_eintenn_sallowfield
+  to: place_eintenn_weirbeck_mill
+  way: road
+  hours: 3
+- id: road_place_eintenn_hollin_cross_place_eintenn_sallowfield
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_hollin_cross
+    - place_eintenn_sallowfield
+  from: place_eintenn_hollin_cross
+  to: place_eintenn_sallowfield
+  way: road
+  hours: 3
+- id: road_place_eintenn_hanging_oak_place_eintenn_tithe_barn
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_hanging_oak
+    - place_eintenn_tithe_barn
+  from: place_eintenn_hanging_oak
+  to: place_eintenn_tithe_barn
+  way: road
+  hours: 4
+- id: road_place_eintenn_dunmere_place_eintenn_hanging_oak
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_dunmere
+    - place_eintenn_hanging_oak
+  from: place_eintenn_dunmere
+  to: place_eintenn_hanging_oak
+  way: road
+  hours: 2
+- id: road_place_eintenn_dunmere_place_eintenn_undercrag
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_dunmere
+    - place_eintenn_undercrag
+  from: place_eintenn_dunmere
+  to: place_eintenn_undercrag
+  way: road
+  hours: 3
+- id: road_place_eintenn_undercrag_tennfels
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_undercrag
+    - tennfels
+  from: place_eintenn_undercrag
+  to: tennfels
+  way: road
+  hours: 1
+- id: road_place_eintenn_broken_lance_place_eintenn_undercrag
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_broken_lance
+    - place_eintenn_undercrag
+  from: place_eintenn_broken_lance
+  to: place_eintenn_undercrag
+  way: road
+  hours: 2
+- id: road_place_eintenn_broken_lance_tennfels
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_broken_lance
+    - tennfels
+  from: place_eintenn_broken_lance
+  to: tennfels
+  way: road
+  hours: 2
+- id: road_place_eintenn_broken_lance_place_eintenn_falkenau
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_broken_lance
+    - place_eintenn_falkenau
+  from: place_eintenn_broken_lance
+  to: place_eintenn_falkenau
+  way: road
+  hours: 3
+- id: road_place_eintenn_falkenau_tennfels
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_falkenau
+    - tennfels
+  from: place_eintenn_falkenau
+  to: tennfels
+  way: road
+  hours: 3
+- id: road_place_eintenn_black_quarry_place_eintenn_falkenau
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_black_quarry
+    - place_eintenn_falkenau
+  from: place_eintenn_black_quarry
+  to: place_eintenn_falkenau
+  way: road
+  hours: 1
+- id: road_place_eintenn_black_quarry_place_eintenn_hanging_oak
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_black_quarry
+    - place_eintenn_hanging_oak
+  from: place_eintenn_black_quarry
+  to: place_eintenn_hanging_oak
+  way: road
+  hours: 6
+- id: road_place_eintenn_burners_ride_place_eintenn_hanging_oak
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_burners_ride
+    - place_eintenn_hanging_oak
+  from: place_eintenn_burners_ride
+  to: place_eintenn_hanging_oak
+  way: road
+  hours: 3
+- id: road_grauwald_place_eintenn_burners_ride
+  origin: allora2
+  kind: road
+  roots:
+    - grauwald
+    - place_eintenn_burners_ride
+  from: grauwald
+  to: place_eintenn_burners_ride
+  way: road
+  hours: 2
+- id: road_place_eintenn_burners_ride_place_eintenn_verderers_lodge
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_burners_ride
+    - place_eintenn_verderers_lodge
+  from: place_eintenn_burners_ride
+  to: place_eintenn_verderers_lodge
+  way: road
+  hours: 2
+- id: road_grauwald_place_eintenn_verderers_lodge
+  origin: allora2
+  kind: road
+  roots:
+    - grauwald
+    - place_eintenn_verderers_lodge
+  from: grauwald
+  to: place_eintenn_verderers_lodge
+  way: road
+  hours: 2
+- id: road_place_eintenn_crow_stone_place_eintenn_reedmere
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_crow_stone
+    - place_eintenn_reedmere
+  from: place_eintenn_crow_stone
+  to: place_eintenn_reedmere
+  way: track
+  hours: 3
+- id: road_place_eintenn_reedmere_wisewoman_hut
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_reedmere
+    - wisewoman_hut
+  from: place_eintenn_reedmere
+  to: wisewoman_hut
+  way: track
+  hours: 2
+- id: road_place_eintenn_steinwick_place_eintenn_three_ash_ford
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_steinwick
+    - place_eintenn_three_ash_ford
+  from: place_eintenn_steinwick
+  to: place_eintenn_three_ash_ford
+  way: road
+  hours: 3
+- id: road_place_eintenn_hollin_cross_place_eintenn_steinwick
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_hollin_cross
+    - place_eintenn_steinwick
+  from: place_eintenn_hollin_cross
+  to: place_eintenn_steinwick
+  way: road
+  hours: 2
+- id: road_place_eintenn_steinwick_place_eintenn_vintners_halt
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_steinwick
+    - place_eintenn_vintners_halt
+  from: place_eintenn_steinwick
+  to: place_eintenn_vintners_halt
+  way: road
+  hours: 2
+- id: road_aschau_place_eintenn_vintners_halt
+  origin: allora2
+  kind: road
+  roots:
+    - aschau
+    - place_eintenn_vintners_halt
+  from: aschau
+  to: place_eintenn_vintners_halt
+  way: road
+  hours: 2
+- id: road_place_eintenn_pomerell_grange_place_eintenn_sallowfield
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_pomerell_grange
+    - place_eintenn_sallowfield
+  from: place_eintenn_pomerell_grange
+  to: place_eintenn_sallowfield
+  way: road
+  hours: 3
+- id: road_place_eintenn_pomerell_grange_pomerell
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_pomerell_grange
+    - pomerell
+  from: place_eintenn_pomerell_grange
+  to: pomerell
+  way: road
+  hours: 3
+- id: road_place_eintenn_beacon_knoll_place_eintenn_dunmere
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_beacon_knoll
+    - place_eintenn_dunmere
+  from: place_eintenn_beacon_knoll
+  to: place_eintenn_dunmere
+  way: road
+  hours: 2
+- id: road_place_eintenn_beacon_knoll_place_eintenn_three_ash_ford
+  origin: allora2
+  kind: road
+  roots:
+    - place_eintenn_beacon_knoll
+    - place_eintenn_three_ash_ford
+  from: place_eintenn_beacon_knoll
+  to: place_eintenn_three_ash_ford
+  way: road
+  hours: 2

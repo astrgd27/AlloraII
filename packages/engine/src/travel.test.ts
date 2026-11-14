@@ -100,8 +100,11 @@ describe('the Phase 0 world: Eintenn and Marre', () => {
 
   it('holds every canon place of both realms', () => {
     const count = (region: string) => WORLD.places.filter((p) => p.region === region).length;
-    expect(count('eintenn')).toBe(19);
-    expect(count('marre')).toBe(11);
+    const canon = (region: string) =>
+      WORLD.places.filter((p) => p.region === region && p.canon !== false).length;
+    expect(canon('eintenn')).toBe(19);
+    expect(canon('marre')).toBe(11);
+    expect(count('eintenn')).toBeGreaterThanOrEqual(39);
   });
 
   it('lets a life travel from the start to every place', () => {

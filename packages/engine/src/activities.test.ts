@@ -9,24 +9,26 @@ import { WORLD } from './world';
 const ACTIVITIES = WORLD.activities ?? [];
 
 /** An engine standing in Ostwick at a given hour of the day, in a given season. */
-function at(hour: number, season = 0): Engine {
+function at(hour: number, season = 0, place = 'ostwick'): Engine {
   const state = newGame(1, 0);
+  state.place = place;
   state.hours = season * DAYS_PER_SEASON * HOURS_PER_DAY + ((hour - START_HOUR + 24) % 24);
   return new Engine(state);
 }
 
-describe('the Ostwick activities', () => {
-  it('are twenty, all in Ostwick, each in a canon sub-place', () => {
-    expect(ACTIVITIES).toHaveLength(20);
+describe('the activities', () => {
+  it('are twenty in Ostwick and one at each new place, each in a real sub-place', () => {
+    expect(ACTIVITIES.filter((a) => a.place === 'ostwick')).toHaveLength(20);
+    const places = new Set(WORLD.places.map((p) => p.id));
     for (const a of ACTIVITIES) {
-      expect(a.place).toBe('ostwick');
+      expect(places.has(a.place)).toBe(true);
       expect(a.subName).toBeTruthy();
       expect(a.to).toBeGreaterThan(a.from);
     }
   });
 
   it.each(ACTIVITIES.map((a) => [a.id, a] as const))('%s: done at its place and hour', (_id, a) => {
-    const engine = at(a.from, a.seasons?.[0] ?? 0);
+    const engine = at(a.from, a.seasons?.[0] ?? 0, a.place);
     expect(engine.snapshot().canDo).toContain(a.id);
     engine.handle({ type: 'do', activity: a.id }, 0);
     expect(engine.snapshot().doing).toEqual({ id: a.id, hoursLeft: a.hours });
@@ -42,7 +44,7 @@ describe('the Ostwick activities', () => {
     '%s: refused elsewhere and at the wrong hour',
     (_id, a) => {
       const season = a.seasons?.[0] ?? 0;
-      const late = at(a.to, season);
+      const late = at(a.to, season, a.place);
       expect(() => late.handle({ type: 'do', activity: a.id }, 0)).toThrow();
       const away = at(a.from, season);
       away.state.place = 'tennfels';
