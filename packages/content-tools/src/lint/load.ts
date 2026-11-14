@@ -22,8 +22,8 @@ export function entriesOf(parsed: unknown): Entry[] {
   );
 }
 
-/** Generated canon files that are not lists of entries. */
-const NOT_ENTRIES = /^content\/canon\/index\//;
+/** Generated files that are not lists of entries. */
+const NOT_ENTRIES = /^content\/(canon\/index|plan)\//;
 
 export async function loadContent(root: string): Promise<Loaded[]> {
   const loaded: Loaded[] = [];

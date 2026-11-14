@@ -1,6 +1,6 @@
-# Phase 1 · A place you live in (draft)
+# Phase 1 · A place you live in
 
-**Status: draft plan, for the owner to approve or reorder.** Starts when the Phase 0 gate passes.
+**Status: approved by the owner, 2026-11-13.** The Phase 0 gate passed on 2026-11-13. Issues are #22–#37, in the order below.
 
 **Goal:** Eintenn and Marre made deep enough to live in. One life can wake, eat, work a trade, know its neighbours, travel and come home, and three trades are each worth playing: a smith, a butler and a Cerdan inquirer.
 
@@ -14,7 +14,7 @@
 
 ## Issues (proposed order)
 
-1. **World plan.** Places per realm for all five lands (total 2,200), and the place kinds (city quarter, town, village, site, wild) with their sizes.
+1. **World plan.** *(done)* Places per realm for all five lands (total 2,200), and the place kinds (city quarter, town, village, site, wild) with their sizes.
 2. **Needs.** Vigour, health and spirits; sleep and meals; a home to sleep in.
 3. **Activities.** Short acts tied to a place, an hour, tools and people. The first twenty in Ostwick.
 4. **People with routines.** Canon schedules (108 people in Allora I have one) drive who is where at each hour; meeting, talking, being known.
@@ -43,3 +43,9 @@ Each is an addition, to be rooted on canon when it is built.
 ## Decisions
 
 (Record decisions here as they are made, with the date and the reason.)
+
+- **2026-11-14 · World plan (#22).** `pnpm world:plan` writes `content/plan/world-plan.yaml` (a target for each of the 30 canon regions and 16 islands) and `docs/world-plan.md` (places built against target). CI checks both are current. Decisions:
+  - **Even split inside a land.** Each realm of the Seven gets 80 places; Gallar and Qoul 60 each; Thoolma 60; each island 16 or 17. Canon is uneven (Eintenn has 19 places, Luggen 8), and an even split stops the first-built realm from staying the biggest. The owner can change any target in `plan.ts`.
+  - **Kinds per realm** follow the bible's mix: 5% city quarters, 15% towns, 35% villages, 35% sites, 10% wilds.
+  - **Phase 1 aims lower than the final target:** about 150 places across Eintenn and Marre, of their final 160.
+  - **Counting.** A place counts towards its `region`. A canon island counts as one place; a new place on an island names it in `island`.
