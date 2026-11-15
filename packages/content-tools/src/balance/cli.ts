@@ -5,7 +5,7 @@
  *   --years <n>    game years per life (default 1)
  */
 import { writeFile } from 'node:fs/promises';
-import { DAY_BUDGET_MS, runBalance, villager, wanderer } from './bot';
+import { DAY_BUDGET_MS, runBalance, smith, villager, wanderer } from './bot';
 import { REPORT_MARKER, renderReport } from './report';
 
 const arg = (name: string): string | undefined => {
@@ -18,7 +18,13 @@ async function main(): Promise<void> {
   const gameYears = Number(arg('--years') ?? 1);
   const run = runBalance({ lives, gameYears, persona: wanderer });
   const village = runBalance({ lives, gameYears, persona: villager });
-  const report = `${renderReport(run)}\n---\n\n${renderReport(village, { timings: false }).replace(REPORT_MARKER, '').replace('## Balance report', '## Balance report: the villager')}`;
+  // A career takes years: fewer lives, played longer.
+  const forge = runBalance({ lives: 5, gameYears: 6, persona: smith });
+  const section = (r: typeof run, title: string) =>
+    renderReport(r, { timings: false })
+      .replace(REPORT_MARKER, '')
+      .replace('## Balance report', title);
+  const report = `${renderReport(run)}\n---\n\n${section(village, '## Balance report: the villager')}\n---\n\n${section(forge, '## Balance report: the smith')}`;
   console.log(report);
   const out = arg('--out');
   if (out) await writeFile(out, report);

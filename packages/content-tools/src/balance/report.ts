@@ -80,6 +80,7 @@ export function renderReport(run: BalanceRun, options: { timings?: boolean } = {
         : `- **Places nobody visited (${never.length}):** ${never.join(', ')}.`,
     '- Items nobody makes, cases nobody finishes: ' + NOT_YET,
     '',
+    ...careerLines(run),
     '### Hours to level',
     '',
     ...skillLines(run),
@@ -135,4 +136,25 @@ function checkLines(run: BalanceRun): string[] {
     '| --- | ---: |',
     ...order.map((d) => `| ${d} | ${((total(d) / all) * 100).toFixed(1)}% |`),
   ];
+}
+
+/** How far lives climbed a post's ladder, and when. Empty for a persona with no post. */
+function careerLines(run: BalanceRun): string[] {
+  const held = run.lives.filter((l) => l.rank >= 0);
+  if (held.length === 0) return [];
+  const post = WORLD.posts?.[0];
+  const lines = [
+    '### Career',
+    '',
+    '| Rank | Lives that reached it | Mean game day |',
+    '| --- | ---: | ---: |',
+  ];
+  for (let rank = 0; rank < 4; rank++) {
+    const days = held.filter((l) => l.rank >= rank).map((l) => l.rankDays[rank] ?? 0);
+    lines.push(
+      `| ${post?.ranks[rank] ?? rank} | ${days.length} of ${held.length} | ${days.length ? mean(days).toFixed(0) : '—'} |`,
+    );
+  }
+  lines.push('', `- Works finished per life: ${mean(held.map((l) => l.works)).toFixed(0)}.`, '');
+  return lines;
 }

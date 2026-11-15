@@ -5,6 +5,16 @@
  * runs in the browser, in tests and in the balance bot.
  */
 import { activitySystem, availableNow, begin, type LastCheck } from './activities';
+import {
+  beginStep,
+  choices,
+  offers,
+  takeCase,
+  takePost,
+  withdraw,
+  workHour,
+  type Held,
+} from './career';
 import { chanceOfSuccess } from './challenge';
 import { HOURS_PER_DAY, dateAt, type GameDate } from './calendar';
 import { EventBus } from './events';
@@ -57,6 +67,25 @@ export interface Snapshot {
   /** For those that end in a check: the chance of success, 0 to 1. */
   chances: Record<string, number>;
   lastCheck: LastCheck | null;
+  /** The post held, if any. */
+  post: Held | null;
+  /** Posts that can be taken up at this place. */
+  postsHere: string[];
+  /** Cases on offer. */
+  offers: string[];
+  /** The case in hand: its step, quality and strain, and the ways through the step. */
+  venture: {
+    case: string;
+    step: number;
+    steps: number;
+    quality: number;
+    strain: number;
+    hoursLeft: number;
+    choices: { id: string; chance: number }[];
+  } | null;
+  /** How many pieces of work are finished, and the last one. */
+  works: number;
+  lastWork: { case: string; quality: number; trial: boolean } | null;
   /** The skills the life has used: level, progress to the next (0 to 1), and whether a gate holds it. */
   skills: Record<string, { level: number; progress: number; atGate: boolean }>;
   /** The people at the life's place now. `known` is false until they have met. */
@@ -110,6 +139,15 @@ export class Engine {
     this.state.hours += 1;
     const date = dateAt(this.state.hours);
     for (const system of this.systems) system.tick(this.state, date, this.bus);
+    const done = workHour(this.state, this.world).finished;
+    if (done) {
+      this.bus.emit('CaseFinished', {
+        hours: this.state.hours,
+        case: done.case,
+        quality: done.quality,
+        trial: done.trial,
+      });
+    }
     const payload = { hours: this.state.hours, date };
     this.bus.emit('HourPassed', payload);
     if (date.hour === 0) this.bus.emit('DayBegan', payload);
@@ -168,6 +206,18 @@ export class Engine {
       case 'do':
         begin(this.state, this.world, order.activity, dateAt(this.state.hours));
         break;
+      case 'takePost':
+        takePost(this.state, this.world, order.post);
+        break;
+      case 'takeCase':
+        takeCase(this.state, this.world, order.case);
+        break;
+      case 'step':
+        beginStep(this.state, this.world, order.approach, dateAt(this.state.hours));
+        break;
+      case 'withdraw':
+        withdraw(this.state);
+        break;
       case 'meet':
         meet(this.state, this.world, order.person, dateAt(this.state.hours));
         break;
@@ -178,7 +228,7 @@ export class Engine {
         this.state.doing = null;
         break;
       case 'travel':
-        if (this.state.doing) throw new Error('Busy');
+        if (this.state.doing || this.state.venture?.working) throw new Error('Busy');
         setOut(this.state, this.world, order.to);
         break;
       case 'setOrders':
@@ -217,6 +267,30 @@ export class Engine {
           ]),
       ),
       lastCheck: this.state.lastCheck,
+      post: this.state.post ? { ...this.state.post } : null,
+      postsHere:
+        j || this.state.post
+          ? []
+          : [...this.world.posts.values()]
+              .filter((p) => p.place === this.state.place)
+              .map((p) => p.id),
+      offers: offers(this.state, this.world).map((c) => c.id),
+      venture: this.state.venture
+        ? {
+            case: this.state.venture.case,
+            step: this.state.venture.step,
+            steps: this.world.posts.get(this.state.post?.id ?? '')?.work.length ?? 0,
+            quality: this.state.venture.quality,
+            strain: this.state.venture.strain,
+            hoursLeft: this.state.venture.working?.hoursLeft ?? 0,
+            choices: choices(this.state, this.world).map((c) => ({
+              id: c.approach.id,
+              chance: c.chance,
+            })),
+          }
+        : null,
+      works: this.state.works.length,
+      lastWork: this.state.works.at(-1) ?? null,
       here: j
         ? []
         : peopleAt(this.world, this.state.place, dateAt(this.state.hours)).map((p) => ({

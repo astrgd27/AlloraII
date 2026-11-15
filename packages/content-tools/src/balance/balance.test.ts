@@ -1,6 +1,6 @@
 import { HOURS_PER_YEAR, WORLD } from '@allora/engine';
 import { describe, expect, it } from 'vitest';
-import { DAY_BUDGET_MS, playLife, runBalance, villager, wanderer } from './bot';
+import { DAY_BUDGET_MS, playLife, runBalance, smith, villager, wanderer } from './bot';
 import { REPORT_MARKER, renderReport } from './report';
 
 describe('the balance bot', () => {
@@ -41,6 +41,21 @@ describe('the villager', () => {
     expect(Math.max(...Object.values(life.skills))).toBeLessThanOrEqual(10);
     expect(life.needs.health.low).toBeGreaterThan(80);
     expect(Object.values(life.checks).reduce((a, b) => a + b, 0)).toBeGreaterThan(50);
+  });
+});
+
+describe('the smith', () => {
+  it('climbs from apprentice to grandmaster, rank by rank', () => {
+    const life = playLife(smith, 1, 6 * HOURS_PER_YEAR);
+    expect(life.rank).toBe(3);
+    expect(life.rankDays).toHaveLength(4);
+    expect(life.rankDays[1]).toBeLessThan(life.rankDays[2]!);
+    expect(life.rankDays[2]).toBeLessThan(life.rankDays[3]!);
+    expect(life.works).toBeGreaterThan(100);
+    expect(life.needs.health.low).toBeGreaterThan(50);
+    const report = renderReport(runBalance({ lives: 2, gameYears: 6, persona: smith }));
+    expect(report).toContain('### Career');
+    expect(report).toContain('| Grandmaster | 2 of 2 |');
   });
 });
 

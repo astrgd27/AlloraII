@@ -96,6 +96,21 @@ export const itemSchema = entrySchema(['item', 'item_variant'], {
 
 const rankSchema = z.looseObject({ name: text, trial: text.optional() });
 
+const approachSchema = z.looseObject({
+  id: text,
+  name: text,
+  /** Added to the case's difficulty. */
+  dc: z.number().int(),
+  /** A bold way: harder, and better if it comes off. */
+  bold: z.boolean().optional(),
+});
+const workStepSchema = z.looseObject({
+  id: text,
+  name: text,
+  hours: z.number().int().min(1),
+  approaches: z.array(approachSchema).min(1),
+});
+
 /** A local post: a trade lived in one place (design bible, Local posts). New to Allora II. */
 export const postSchema = entrySchema('post', {
   name: text,
@@ -105,6 +120,21 @@ export const postSchema = entrySchema('post', {
   ranks: z.array(rankSchema).length(4),
   patron: text.optional(),
   group: text.optional(),
+  /** The steps of a case in this post, each a check with one or more approaches. */
+  work: z.array(workStepSchema).min(3).max(6).optional(),
+});
+
+/** A case: a venture offered to those who hold a post. A trial names the rank it wins. */
+export const caseSchema = entrySchema('case', {
+  name: text,
+  text: text,
+  post: text,
+  /** The base difficulty of every step. */
+  dc: z.number().int().min(5).max(35),
+  /** The lowest rank (0 to 3) it is offered to. */
+  rank: z.number().int().min(0).max(3).optional(),
+  /** For a trial: the rank (1 to 3) it wins. */
+  trial_for: z.number().int().min(1).max(3).optional(),
 });
 
 const hourOfDay = z.number().int().min(0).max(23);

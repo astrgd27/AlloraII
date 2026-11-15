@@ -15,11 +15,14 @@ import {
   dateAt,
   newGame,
   nextRandom,
+  offers,
 } from '@allora/engine';
 
 export interface Persona {
   name: string;
   about: string;
+  /** Where this persona's lives begin and have their bed. Ostwick, if left out. */
+  home?: string;
   /** Called once per game hour, before the tick. May give the engine orders. */
   act(engine: Engine): void;
 }
@@ -50,6 +53,45 @@ export const villager: Persona = {
   },
 };
 
+const SMITH_POST = 'post_kesselhaven_guild_smith';
+
+/** Holds the guild-smith's post: duties, commissions, and each trial as soon as it is offered. */
+export const smith: Persona = {
+  name: 'Smith',
+  about:
+    'Holds the post of guild-smith in Kesselhaven, takes commissions and sits each trial when it is offered.',
+  home: 'kess_market',
+  act(engine) {
+    const state = engine.state;
+    if (state.asleep) return;
+    if (!state.post) {
+      engine.handle({ type: 'takePost', post: SMITH_POST }, 0);
+      return;
+    }
+    const snap = engine.snapshot();
+    if (snap.venture) {
+      if (snap.venture.hoursLeft > 0 || state.doing) return;
+      // The bold way when it is likely enough; otherwise the safe one.
+      const bold = snap.venture.choices.slice(1).find((c) => c.chance >= 0.6);
+      const pick = bold ?? snap.venture.choices[0];
+      if (pick) engine.handle({ type: 'step', approach: pick.id }, 0);
+      return;
+    }
+    if (state.doing) return;
+    const offered = offers(state, engine.world);
+    const trial = offered.find((c) => c.trialFor !== undefined);
+    const roll = nextRandom(state.rng, state.seed, 'bot');
+    const hardest = offered.filter((c) => c.trialFor === undefined).sort((a, b) => b.dc - a.dc)[0];
+    if (trial) engine.handle({ type: 'takeCase', case: trial.id }, 0);
+    else if (hardest && roll < 0.6) engine.handle({ type: 'takeCase', case: hardest.id }, 0);
+    else {
+      const duties = snap.canDo.filter((id) => id.startsWith('activity_smith_'));
+      const duty = duties[Math.floor(roll * duties.length) % Math.max(1, duties.length)];
+      if (duty) engine.handle({ type: 'do', activity: duty }, 0);
+    }
+  },
+};
+
 export interface LifeResult {
   seed: number;
   hours: number;
@@ -63,6 +105,10 @@ export interface LifeResult {
   hoursSlept: number;
   /** Skill id → level reached. */
   skills: Record<string, number>;
+  /** Rank reached in a post (0 to 3), or −1 with no post; and the game day each rank was won. */
+  rank: number;
+  rankDays: number[];
+  works: number;
   /** Things that happened on the road. */
   roadEvents: number;
   /** Degree of result → times it came up. */
@@ -74,7 +120,12 @@ export interface LifeResult {
 }
 
 export function playLife(persona: Persona, seed: number, hours: number): LifeResult {
-  const engine = new Engine(newGame(seed, 0));
+  const start = newGame(seed, 0);
+  if (persona.home) {
+    start.place = persona.home;
+    start.home = persona.home;
+  }
+  const engine = new Engine(start);
   const result: LifeResult = {
     seed,
     hours,
@@ -87,6 +138,9 @@ export function playLife(persona: Persona, seed: number, hours: number): LifeRes
     hoursSlept: 0,
     skills: {},
     checks: {},
+    rank: -1,
+    rankDays: [],
+    works: 0,
     roadEvents: 0,
     hoursWorked: 0,
     needs: {
@@ -104,6 +158,11 @@ export function playLife(persona: Persona, seed: number, hours: number): LifeRes
     if (engine.state.journey) result.hoursOnTheRoad += 1;
     if (engine.state.doing && !engine.state.asleep) result.hoursWorked += 1;
     engine.tick();
+    const rank = engine.state.post?.rank ?? -1;
+    if (rank > result.rank) {
+      result.rank = rank;
+      result.rankDays[rank] = Math.floor(h / HOURS_PER_DAY);
+    }
     for (const key of ['vigour', 'health', 'spirits'] as const) {
       const v = engine.state.needs[key];
       result.needs[key].mean += v / hours;
@@ -113,6 +172,7 @@ export function playLife(persona: Persona, seed: number, hours: number): LifeRes
   for (const [id, k] of Object.entries(engine.state.skills)) result.skills[id] = k.level;
   result.checks = { ...engine.state.checks };
   result.roadEvents = engine.state.roadEvents;
+  result.works = engine.state.works.length;
   result.meals = engine.state.meals;
   result.hoursSlept = engine.state.hoursSlept;
   const date = dateAt(engine.state.hours);

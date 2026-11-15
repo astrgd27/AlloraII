@@ -1,0 +1,48 @@
+# The duties of a guild-smith: steady work at the guild forges. Only for those who hold the post.
+- id: activity_smith_forge_nails
+  origin: allora2
+  kind: activity
+  roots: [post_kesselhaven_guild_smith]
+  post: post_kesselhaven_guild_smith
+  name: Forge nails
+  text: 'Rod, heat, point, head, cut. A hundred before noon.'
+  place: kess_market
+  sub: guilds
+  from: 6
+  to: 17
+  hours: 2
+  skill: skill_smithing
+  standing: 1
+  effects: { vigour: -6 }
+- id: activity_smith_mend_tools
+  origin: allora2
+  kind: activity
+  roots: [post_kesselhaven_guild_smith]
+  post: post_kesselhaven_guild_smith
+  name: Mend tools for the market
+  text: 'Sickles, hinges and a pot with no handle. Each wants a different heat.'
+  place: kess_market
+  sub: guilds
+  from: 6
+  to: 17
+  hours: 2
+  skill: skill_smithing
+  level: 6
+  standing: 1
+  effects: { vigour: -6 }
+- id: activity_smith_strike_for_master
+  origin: allora2
+  kind: activity
+  roots: [post_kesselhaven_guild_smith, person_eintenn_reinhild]
+  post: post_kesselhaven_guild_smith
+  name: Strike for the master
+  text: 'She holds and turns. You swing the sledge where she taps, and nowhere else.'
+  place: kess_market
+  sub: guilds
+  from: 7
+  to: 16
+  hours: 3
+  skill: skill_smithing
+  level: 12
+  standing: 2
+  effects: { vigour: -12 }
