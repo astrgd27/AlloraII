@@ -1,0 +1,37 @@
+# People of the guild forges in Kesselhaven.
+- id: person_eintenn_reinhild
+  origin: allora2
+  kind: person
+  roots: [g_anvil, kess_market]
+  name: Master Reinhild Stark
+  title: Master of the Guild Forges
+  region: eintenn
+  home: kess_market
+  group: g_anvil
+  hint: a square-built woman who tests each bar by ringing it on the anvil
+  meet: 'She rings a bar on the anvil and listens. “Hear that? No. You will.” She holds out a hand like a vice. “Reinhild Stark. If you waste my iron I will know.”'
+  talk:
+    - 'Reinhild says the guild keeps three rules: fair weight, true temper, and no selling to the Rats.'
+    - '“Anyone can make a thing hot,” Reinhild says. “The craft is in when you stop.”'
+  sched:
+    - at: [kess_market, guilds]
+      h: [6, 19]
+    - at: [kess_market, archives]
+- id: person_eintenn_till
+  origin: allora2
+  kind: person
+  roots: [g_anvil, kess_market]
+  name: Till Ember
+  title: Journeyman of the Anvil
+  region: eintenn
+  home: kess_market
+  group: g_anvil
+  hint: a young smith with burn-scars to the elbow, watching your hammer-hand
+  meet: '“You hold it like a spoon,” says the young smith. He shows you. “Till. I was worse. Not much worse.”'
+  talk:
+    - 'Till means to walk his journeyman years in Luggen, where they pay by the piece.'
+    - '“Reinhild failed my first piece,” Till says. “She was right. Do not tell her.”'
+  sched:
+    - at: [kess_market, guilds]
+      h: [7, 18]
+    - at: [kess_market, square]

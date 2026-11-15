@@ -2,6 +2,7 @@
 import type { z } from 'zod';
 import {
   activitySchema,
+  caseSchema,
   faithSchema,
   groupSchema,
   itemSchema,
@@ -29,6 +30,7 @@ export const SCHEMA_BY_KIND: Record<string, { name: string; schema: z.ZodType }>
   item_variant: { name: 'item', schema: itemSchema },
   post: { name: 'post', schema: postSchema },
   activity: { name: 'activity', schema: activitySchema },
+  case: { name: 'case', schema: caseSchema },
 };
 
 export interface Failure {

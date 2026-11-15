@@ -20,6 +20,7 @@ export const REFERENCE_FIELDS = [
   'rival',
   'skill',
   'route',
+  'post',
 ];
 
 export function lintReferences(additions: Loaded[], index: CanonIndex): Problem[] {

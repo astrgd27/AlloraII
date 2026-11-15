@@ -1,5 +1,6 @@
 /** The whole game state. The engine owns it; the UI only ever sees snapshots. */
 import type { Doing, LastCheck } from './activities';
+import type { Held, Venture, Work } from './career';
 import type { Bond, Words } from './people';
 import { DEFAULT_ORDERS, FULL_NEEDS, type Needs, type StandingOrders } from './needs';
 import type { SkillState } from './skills';
@@ -17,7 +18,7 @@ export interface Journey {
 }
 
 /** The save format version. Raise it with every change to GameState, and add a migration. */
-export const SAVE_VERSION = 8;
+export const SAVE_VERSION = 9;
 
 export interface GameState {
   version: typeof SAVE_VERSION;
@@ -61,6 +62,10 @@ export interface GameState {
   /** The last thing that happened on the way, and how many things have. */
   roadEvent: { id: string; hours: number } | null;
   roadEvents: number;
+  /** The post held, the case in hand, and the record of finished work. */
+  post: Held | null;
+  venture: Venture | null;
+  works: Work[];
 }
 
 export function newGame(seed: number, nowMs: number): GameState {
@@ -91,5 +96,8 @@ export function newGame(seed: number, nowMs: number): GameState {
     resolve: 3,
     roadEvent: null,
     roadEvents: 0,
+    post: null,
+    venture: null,
+    works: [],
   };
 }

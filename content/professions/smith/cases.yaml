@@ -1,0 +1,82 @@
+# Commissions and trials for the Guild-smith of the Anvil. `dc` is the base difficulty of every step.
+- id: case_smith_harbour_nails
+  origin: allora2
+  kind: case
+  roots: [post_kesselhaven_guild_smith, kess_harbor]
+  post: post_kesselhaven_guild_smith
+  name: A keg of ship's nails
+  text: "The shipyard wants a keg of clench-nails by the week's end, every one the same."
+  rank: 0
+  dc: 10
+- id: case_smith_ploughshare
+  origin: allora2
+  kind: case
+  roots: [post_kesselhaven_guild_smith, ostwick]
+  post: post_kesselhaven_guild_smith
+  name: A ploughshare for Ostwick
+  text: 'A farmer from Ostwick has broken his share on a stone. He wants one that will not break on the next.'
+  rank: 0
+  dc: 10
+- id: case_smith_guard_halberds
+  origin: allora2
+  kind: case
+  roots: [post_kesselhaven_guild_smith, tennfels]
+  post: post_kesselhaven_guild_smith
+  name: Halberd heads for the castle guard
+  text: "Six halberd heads for Burg Tennfels, to the sergeant's pattern and no other."
+  rank: 1
+  dc: 15
+- id: case_smith_marrean_hinges
+  origin: allora2
+  kind: case
+  roots: [post_kesselhaven_guild_smith, kess_fondaco]
+  post: post_kesselhaven_guild_smith
+  name: Strongroom hinges for the Fondaco
+  text: 'The Marrean factors want hinges for a strongroom door, and want them quiet.'
+  rank: 1
+  dc: 15
+- id: case_smith_knights_blade
+  origin: allora2
+  kind: case
+  roots: [post_kesselhaven_guild_smith, calder]
+  post: post_kesselhaven_guild_smith
+  name: A blade for a sworn knight
+  text: 'A knight of Saint Calder wants a longsword fit to swear on. He will know if it is not.'
+  rank: 2
+  dc: 20
+- id: case_smith_collegium_instruments
+  origin: allora2
+  kind: case
+  roots: [post_kesselhaven_guild_smith, collegium]
+  post: post_kesselhaven_guild_smith
+  name: Fittings for the observatory
+  text: "The Collegium wants brass and steel fittings for the tower, true to a hair's breadth."
+  rank: 3
+  dc: 25
+- id: case_smith_trial_journeyman
+  origin: allora2
+  kind: case
+  roots: [post_kesselhaven_guild_smith]
+  post: post_kesselhaven_guild_smith
+  name: The journeyman's piece
+  text: 'One piece, your own design, made at the guild forge with the master watching.'
+  trial_for: 1
+  dc: 15
+- id: case_smith_trial_master
+  origin: allora2
+  kind: case
+  roots: [post_kesselhaven_guild_smith]
+  post: post_kesselhaven_guild_smith
+  name: The masterpiece
+  text: 'The guild sits in judgement on one work. It may refuse, and a refusal waits a season.'
+  trial_for: 2
+  dc: 20
+- id: case_smith_trial_grandmaster
+  origin: allora2
+  kind: case
+  roots: [post_kesselhaven_guild_smith]
+  post: post_kesselhaven_guild_smith
+  name: The great work
+  text: 'A work the guild will still be showing to apprentices in a hundred years.'
+  trial_for: 3
+  dc: 25

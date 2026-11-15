@@ -96,6 +96,28 @@ async function main(): Promise<void> {
       hours: r.hours,
       route: (r as unknown as Raw).route,
     })),
+    posts: (await readDir('content/professions/smith'))
+      .filter((e) => e.kind === 'post')
+      .map((e) => ({
+        id: e.id,
+        name: e.name,
+        skill: e.skill,
+        place: e.place,
+        sub: e.sub,
+        ranks: (e.ranks as Raw[]).map((r) => r.name),
+        work: e.work,
+      })),
+    cases: (await readDir('content/professions/smith'))
+      .filter((e) => e.kind === 'case')
+      .map((e) => ({
+        id: e.id,
+        name: e.name,
+        text: e.text,
+        post: e.post,
+        dc: e.dc,
+        rank: e.rank,
+        trialFor: e.trial_for,
+      })),
     routes: (await readDir('content/world/routes')).map((r) => ({
       id: r.id,
       name: r.name,
@@ -133,6 +155,9 @@ async function main(): Promise<void> {
         seasons: a.seasons,
         skill: a.skill,
         dc: a.dc,
+        level: a.level,
+        post: a.post,
+        standing: a.standing,
         effects: a.effects ?? {},
       })),
   };

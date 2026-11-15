@@ -16,6 +16,7 @@ export interface Doing {
   hours?: number;
   level?: number;
   dc?: number;
+  standing?: number;
 }
 
 /** The last check a life made, for the page to show. */
@@ -33,7 +34,8 @@ export function whyNot(activity: Activity, state: GameState, date: GameDate): st
   if (state.journey) return 'On the road';
   if (state.place !== activity.place) return 'Not here';
   if (state.asleep) return 'Asleep';
-  if (state.doing) return 'Busy';
+  if (state.doing || state.venture?.working) return 'Busy';
+  if (activity.post && state.post?.id !== activity.post) return 'Not your post';
   if (activity.seasons && !activity.seasons.includes(date.seasonIndex)) return 'Out of season';
   if (date.hour < activity.from || date.hour >= activity.to) return 'Not at this hour';
   return undefined;
@@ -57,6 +59,7 @@ export function begin(state: GameState, world: World, id: string, date: GameDate
     ...(activity.skill?.startsWith('skill_') ? { skill: activity.skill } : {}),
     ...(activity.level ? { level: activity.level } : {}),
     ...(activity.dc ? { dc: activity.dc } : {}),
+    ...(activity.standing ? { standing: activity.standing } : {}),
   };
 }
 
@@ -91,6 +94,7 @@ export const activitySystem: System = {
     } else if (skill) {
       gain(skill, workXp(doing.hours ?? 1, doing.level ?? 1, skill.level));
     }
+    if (doing.standing && state.post) state.post.standing += doing.standing;
     state.done[doing.id] = (state.done[doing.id] ?? 0) + 1;
     state.doing = null;
     bus.emit('ActivityCompleted', { hours: state.hours, activity: doing.id, place: state.place });

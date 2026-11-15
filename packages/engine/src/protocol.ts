@@ -21,6 +21,14 @@ export type Order =
   | { type: 'meet'; person: string }
   /** Talk with someone here whom the life has met. */
   | { type: 'talk'; person: string }
+  /** Take up a post, at its place. */
+  | { type: 'takePost'; post: string }
+  /** Take a case that is on offer. */
+  | { type: 'takeCase'; case: string }
+  /** Work the step in hand by one of its approaches. */
+  | { type: 'step'; approach: string }
+  /** Give up the case in hand. */
+  | { type: 'withdraw' }
   /** Change standing orders. */
   | { type: 'setOrders'; orders: Partial<StandingOrders> }
   /** Write a save now. */

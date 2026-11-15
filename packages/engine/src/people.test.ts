@@ -26,7 +26,7 @@ describe('routines', () => {
     );
     // And one new resident for each new place.
     const added = WORLD.places.filter((p) => p.canon === false);
-    expect(PEOPLE.length - canon.length).toBe(added.length);
+    expect(PEOPLE.length - canon.length).toBeGreaterThanOrEqual(added.length);
   });
 
   it('puts everyone in a real sub-place of a real place at every hour of every season', () => {

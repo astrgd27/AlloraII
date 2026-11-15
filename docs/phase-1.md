@@ -22,7 +22,7 @@
 6. **The challenge system.** *(done)* The roll, approaches, degrees of result, lasting consequences.
 7. **Eintenn, first batch.** *(done)* About 20 new small places around Ostwick and Burg Tennfels, with residents, each rooted on canon.
 8. **Named roads.** *(done)* Replace the stub roads in Eintenn with named roads, tracks and a river, and events on the way.
-9. **Profession skeleton and the Smith.** Guild-smith of the Anvil: duties, commissions, ladder.
+9. **Profession skeleton and the Smith.** *(done)* Guild-smith of the Anvil: duties, commissions, ladder.
 10. **The Butler.** Steward of Burg Tennfels.
 11. **Money and markets.** One currency, shops with hours, prices that move.
 12. **Scenes.** A place view that changes with the hour, season and who is there.
@@ -101,3 +101,11 @@ Each is an addition, to be rooted on canon when it is built.
   - **The lint refused one name:** "The Green Ways" was too near a canon school of magic, the Green Way. It became the Oak Ways.
   - **Not done:** Sir Odo's route (he wanders across realms, most of them not built), road tolls, and choosing between a safe road and a fast track; the engine still takes the quickest way.
   - **Save version 8,** with a migration and a test.
+- **2026-11-15 · Profession skeleton and the Smith (#30).** `packages/engine/src/career.ts`, with content in `content/professions/smith/`. Decisions:
+  - **The skeleton.** A post has a trade, a skill, a place, a ladder of four ranks and the steps of its work. A life holds one post. Duties are activities only the holder can do; they build standing. Cases are ventures: a chain of checks, each with a safe approach and sometimes a bold one (harder, and worth more if it comes off). Quality adds up over the steps; each cost or failure adds strain, and at three strain the rest is rolled at disadvantage.
+  - **The first post:** Guild-smith of the Anvil, at the guild forges of Kesselhaven (canon: the Guild of the Anvil "controls the guild forges"). The work is the bible's five steps: heat and draw, shape and weld, quench, temper, finish. Six commissions from canon neighbours (the shipyard, an Ostwick farmer, the castle guard, the Marrean Fondaco, a knight of Saint Calder, the Collegium) and three trials.
+  - **Rank needs a trial.** Taking the post is the Apprenticeship gate (a master accepts you). The journeyman's piece, the masterpiece and the great work are offered when the skill stands at its gate (25, 50, 75) and standing is enough (20, 60, 150). A piece good enough wins the rank and lifts the cap; a refused piece costs 10 standing.
+  - **New people:** Master Reinhild Stark and the journeyman Till Ember, at the guild forges.
+  - **Balance.** A third persona, the smith, climbs every rank: journeyman about day 45, master about day 180, grandmaster about day 540 (4.8 game years, about 216 real hours). The report has a Career section.
+  - **Not yet:** pay (wages and prices wait on money, #32); materials with properties; the finished item itself (it is recorded as a work with a quality, not yet an object); techniques; a client who remembers; deadlines; named masterworks; the Chronicle. The page has a small career panel, not the bible's full Career page.
+  - **Save version 9,** with a migration and a test.

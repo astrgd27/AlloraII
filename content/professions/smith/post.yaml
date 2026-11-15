@@ -1,0 +1,54 @@
+# The Smith, and its first post: Guild-smith of the Anvil in Kesselhaven (design bible, The Smith).
+- id: post_kesselhaven_guild_smith
+  origin: allora2
+  kind: post
+  roots:
+    - g_anvil
+    - kess_market
+  name: Guild-smith of the Anvil
+  trade: smith
+  skill: skill_smithing
+  place: kess_market
+  sub: guilds
+  group: g_anvil
+  patron: person_eintenn_reinhild
+  text: "A bench at the guild forges of Kesselhaven, under guild law and a master's eye."
+  ranks:
+    - name: Apprentice
+    - name: Journeyman
+      trial: A journeyman's piece, judged by a master.
+    - name: Master
+      trial: A masterpiece, judged by the guild.
+    - name: Grandmaster
+      trial: A legendary work.
+  # The work of a commission: each step is a check, and each offers a safe way and a bold one.
+  work:
+    - id: heat
+      name: Heat and draw
+      hours: 1
+      approaches:
+        - { id: safe_heat, name: A safe heat, dc: 0 }
+        - { id: hot_heat, name: A hotter heat, dc: 5, bold: true }
+    - id: weld
+      name: Shape and weld
+      hours: 2
+      approaches:
+        - { id: plain_weld, name: A plain weld, dc: 0 }
+        - { id: folded_weld, name: A folded weld, dc: 5, bold: true }
+    - id: quench
+      name: Quench
+      hours: 1
+      approaches:
+        - { id: oil, name: In oil, dc: 0 }
+        - { id: water, name: In water, dc: 5, bold: true }
+    - id: temper
+      name: Temper
+      hours: 1
+      approaches:
+        - { id: even_temper, name: An even temper, dc: 0 }
+    - id: finish
+      name: Finish
+      hours: 1
+      approaches:
+        - { id: plain_finish, name: Polished and marked, dc: 0 }
+        - { id: fine_finish, name: Engraved, dc: 5, bold: true }

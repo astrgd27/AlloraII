@@ -29,6 +29,7 @@ describe('the activities', () => {
 
   it.each(ACTIVITIES.map((a) => [a.id, a] as const))('%s: done at its place and hour', (_id, a) => {
     const engine = at(a.from, a.seasons?.[0] ?? 0, a.place);
+    if (a.post) engine.state.post = { id: a.post, rank: 0, standing: 0 };
     expect(engine.snapshot().canDo).toContain(a.id);
     engine.handle({ type: 'do', activity: a.id }, 0);
     expect(engine.snapshot().doing).toEqual({ id: a.id, hoursLeft: a.hours });
@@ -45,6 +46,7 @@ describe('the activities', () => {
     (_id, a) => {
       const season = a.seasons?.[0] ?? 0;
       const late = at(a.to, season, a.place);
+      if (a.post) late.state.post = { id: a.post, rank: 0, standing: 0 };
       expect(() => late.handle({ type: 'do', activity: a.id }, 0)).toThrow();
       const away = at(a.from, season);
       away.state.place = 'tennfels';

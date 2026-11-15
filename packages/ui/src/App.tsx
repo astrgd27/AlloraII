@@ -1,5 +1,6 @@
 import { useEffect, useState, useSyncExternalStore } from 'react';
 import { Activities } from './Activities';
+import { Career } from './Career';
 import { engine } from './engine-client';
 import { formatDate, formatHour } from './format';
 import { MapView } from './map/MapView';
@@ -49,6 +50,7 @@ export function App() {
         <>
           <PlacePanel snapshot={snapshot} chosen={chosen} send={(order) => engine.send(order)} />
           <People snapshot={snapshot} send={(order) => engine.send(order)} />
+          <Career snapshot={snapshot} send={(order) => engine.send(order)} />
           <Activities snapshot={snapshot} send={(order) => engine.send(order)} />
           <Skills snapshot={snapshot} />
           <PlaceList snapshot={snapshot} chosen={chosen} onChoose={setChosen} />

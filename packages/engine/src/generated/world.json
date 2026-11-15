@@ -1359,6 +1359,181 @@
    "hours": 110
   }
  ],
+ "posts": [
+  {
+   "id": "post_kesselhaven_guild_smith",
+   "name": "Guild-smith of the Anvil",
+   "skill": "skill_smithing",
+   "place": "kess_market",
+   "sub": "guilds",
+   "ranks": [
+    "Apprentice",
+    "Journeyman",
+    "Master",
+    "Grandmaster"
+   ],
+   "work": [
+    {
+     "id": "heat",
+     "name": "Heat and draw",
+     "hours": 1,
+     "approaches": [
+      {
+       "id": "safe_heat",
+       "name": "A safe heat",
+       "dc": 0
+      },
+      {
+       "id": "hot_heat",
+       "name": "A hotter heat",
+       "dc": 5,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": "weld",
+     "name": "Shape and weld",
+     "hours": 2,
+     "approaches": [
+      {
+       "id": "plain_weld",
+       "name": "A plain weld",
+       "dc": 0
+      },
+      {
+       "id": "folded_weld",
+       "name": "A folded weld",
+       "dc": 5,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": "quench",
+     "name": "Quench",
+     "hours": 1,
+     "approaches": [
+      {
+       "id": "oil",
+       "name": "In oil",
+       "dc": 0
+      },
+      {
+       "id": "water",
+       "name": "In water",
+       "dc": 5,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": "temper",
+     "name": "Temper",
+     "hours": 1,
+     "approaches": [
+      {
+       "id": "even_temper",
+       "name": "An even temper",
+       "dc": 0
+      }
+     ]
+    },
+    {
+     "id": "finish",
+     "name": "Finish",
+     "hours": 1,
+     "approaches": [
+      {
+       "id": "plain_finish",
+       "name": "Polished and marked",
+       "dc": 0
+      },
+      {
+       "id": "fine_finish",
+       "name": "Engraved",
+       "dc": 5,
+       "bold": true
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "cases": [
+  {
+   "id": "case_smith_harbour_nails",
+   "name": "A keg of ship's nails",
+   "text": "The shipyard wants a keg of clench-nails by the week's end, every one the same.",
+   "post": "post_kesselhaven_guild_smith",
+   "dc": 10,
+   "rank": 0
+  },
+  {
+   "id": "case_smith_ploughshare",
+   "name": "A ploughshare for Ostwick",
+   "text": "A farmer from Ostwick has broken his share on a stone. He wants one that will not break on the next.",
+   "post": "post_kesselhaven_guild_smith",
+   "dc": 10,
+   "rank": 0
+  },
+  {
+   "id": "case_smith_guard_halberds",
+   "name": "Halberd heads for the castle guard",
+   "text": "Six halberd heads for Burg Tennfels, to the sergeant's pattern and no other.",
+   "post": "post_kesselhaven_guild_smith",
+   "dc": 15,
+   "rank": 1
+  },
+  {
+   "id": "case_smith_marrean_hinges",
+   "name": "Strongroom hinges for the Fondaco",
+   "text": "The Marrean factors want hinges for a strongroom door, and want them quiet.",
+   "post": "post_kesselhaven_guild_smith",
+   "dc": 15,
+   "rank": 1
+  },
+  {
+   "id": "case_smith_knights_blade",
+   "name": "A blade for a sworn knight",
+   "text": "A knight of Saint Calder wants a longsword fit to swear on. He will know if it is not.",
+   "post": "post_kesselhaven_guild_smith",
+   "dc": 20,
+   "rank": 2
+  },
+  {
+   "id": "case_smith_collegium_instruments",
+   "name": "Fittings for the observatory",
+   "text": "The Collegium wants brass and steel fittings for the tower, true to a hair's breadth.",
+   "post": "post_kesselhaven_guild_smith",
+   "dc": 25,
+   "rank": 3
+  },
+  {
+   "id": "case_smith_trial_journeyman",
+   "name": "The journeyman's piece",
+   "text": "One piece, your own design, made at the guild forge with the master watching.",
+   "post": "post_kesselhaven_guild_smith",
+   "dc": 15,
+   "trialFor": 1
+  },
+  {
+   "id": "case_smith_trial_master",
+   "name": "The masterpiece",
+   "text": "The guild sits in judgement on one work. It may refuse, and a refusal waits a season.",
+   "post": "post_kesselhaven_guild_smith",
+   "dc": 20,
+   "trialFor": 2
+  },
+  {
+   "id": "case_smith_trial_grandmaster",
+   "name": "The great work",
+   "text": "A work the guild will still be showing to apprentices in a hundred years.",
+   "post": "post_kesselhaven_guild_smith",
+   "dc": 25,
+   "trialFor": 3
+  }
+ ],
  "routes": [
   {
    "id": "route_eintenn_dukes_road",
@@ -2803,6 +2978,64 @@
      ]
     }
    ]
+  },
+  {
+   "id": "person_eintenn_reinhild",
+   "name": "Master Reinhild Stark",
+   "title": "Master of the Guild Forges",
+   "hint": "a square-built woman who tests each bar by ringing it on the anvil",
+   "meet": "She rings a bar on the anvil and listens. “Hear that? No. You will.” She holds out a hand like a vice. “Reinhild Stark. If you waste my iron I will know.”",
+   "talk": [
+    "Reinhild says the guild keeps three rules: fair weight, true temper, and no selling to the Rats.",
+    "“Anyone can make a thing hot,” Reinhild says. “The craft is in when you stop.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "kess_market",
+      "guilds"
+     ],
+     "h": [
+      6,
+      19
+     ]
+    },
+    {
+     "at": [
+      "kess_market",
+      "archives"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_eintenn_till",
+   "name": "Till Ember",
+   "title": "Journeyman of the Anvil",
+   "hint": "a young smith with burn-scars to the elbow, watching your hammer-hand",
+   "meet": "“You hold it like a spoon,” says the young smith. He shows you. “Till. I was worse. Not much worse.”",
+   "talk": [
+    "Till means to walk his journeyman years in Luggen, where they pay by the piece.",
+    "“Reinhild failed my first piece,” Till says. “She was right. Do not tell her.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "kess_market",
+      "guilds"
+     ],
+     "h": [
+      7,
+      18
+     ]
+    },
+    {
+     "at": [
+      "kess_market",
+      "square"
+     ]
+    }
+   ]
   }
  ],
  "activities": [
@@ -3439,6 +3672,59 @@
    "effects": {
     "vigour": -3,
     "spirits": 0
+   }
+  },
+  {
+   "id": "activity_smith_forge_nails",
+   "name": "Forge nails",
+   "text": "Rod, heat, point, head, cut. A hundred before noon.",
+   "place": "kess_market",
+   "sub": "guilds",
+   "subName": "The Guild Quarter",
+   "from": 6,
+   "to": 17,
+   "hours": 2,
+   "skill": "skill_smithing",
+   "post": "post_kesselhaven_guild_smith",
+   "standing": 1,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_smith_mend_tools",
+   "name": "Mend tools for the market",
+   "text": "Sickles, hinges and a pot with no handle. Each wants a different heat.",
+   "place": "kess_market",
+   "sub": "guilds",
+   "subName": "The Guild Quarter",
+   "from": 6,
+   "to": 17,
+   "hours": 2,
+   "skill": "skill_smithing",
+   "level": 6,
+   "post": "post_kesselhaven_guild_smith",
+   "standing": 1,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_smith_strike_for_master",
+   "name": "Strike for the master",
+   "text": "She holds and turns. You swing the sledge where she taps, and nowhere else.",
+   "place": "kess_market",
+   "sub": "guilds",
+   "subName": "The Guild Quarter",
+   "from": 7,
+   "to": 16,
+   "hours": 3,
+   "skill": "skill_smithing",
+   "level": 12,
+   "post": "post_kesselhaven_guild_smith",
+   "standing": 2,
+   "effects": {
+    "vigour": -12
    }
   }
  ]

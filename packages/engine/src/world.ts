@@ -62,6 +62,51 @@ export interface Activity {
   level?: number;
   /** If set, finishing it is a check against this difficulty. */
   dc?: number;
+  /** If set, only for a life that holds this post. */
+  post?: string;
+  /** Standing with the post's employer gained when it is done. */
+  standing?: number;
+}
+
+export interface Approach {
+  id: string;
+  name: string;
+  /** Added to the case's difficulty. */
+  dc: number;
+  /** A bold way: harder, and better if it comes off. */
+  bold?: boolean;
+}
+
+export interface WorkStep {
+  id: string;
+  name: string;
+  hours: number;
+  approaches: Approach[];
+}
+
+/** A post: a trade lived in one place, with a ladder of four ranks. */
+export interface Post {
+  id: string;
+  name: string;
+  skill: string;
+  place: string;
+  sub?: string;
+  ranks: string[];
+  work: WorkStep[];
+}
+
+/** A case: a venture offered to those who hold a post. */
+export interface Case {
+  id: string;
+  name: string;
+  text: string;
+  post: string;
+  /** The base difficulty of every step. */
+  dc: number;
+  /** The lowest rank (0 to 3) it is offered to. */
+  rank?: number;
+  /** For a trial: the rank (1 to 3) it wins. */
+  trialFor?: number;
 }
 
 /** One line of a person's day: where they are, in which hours and seasons. */
@@ -96,6 +141,8 @@ export interface WorldData {
   people?: Person[];
   skills?: { id: string; name: string; family: string }[];
   routes?: NamedRoute[];
+  posts?: Post[];
+  cases?: Case[];
   roadEvents?: RoadEvent[];
 }
 
@@ -123,7 +170,11 @@ export class World {
   readonly places = new Map<string, Place>();
   readonly activities = new Map<string, Activity>();
   readonly people = new Map<string, Person>();
+  readonly posts = new Map<string, Post>();
+  readonly cases = new Map<string, Case>();
   private readonly links = new Map<string, Leg[]>();
+  /** The roads do not change, so travel hours from a place are worked out once. */
+  private readonly hoursCache = new Map<string, Record<string, number>>();
 
   constructor(readonly data: WorldData = WORLD) {
     for (const place of data.places) {
@@ -132,6 +183,8 @@ export class World {
     }
     for (const activity of data.activities ?? []) this.activities.set(activity.id, activity);
     for (const person of data.people ?? []) this.people.set(person.id, person);
+    for (const post of data.posts ?? []) this.posts.set(post.id, post);
+    for (const c of data.cases ?? []) this.cases.set(c.id, c);
     for (const road of data.roads) {
       const water = road.way === 'sea' || road.way === 'river';
       const extra = { way: road.way, ...(water ? ({ sea: true } as const) : {}) };
@@ -181,11 +234,14 @@ export class World {
 
   /** Travel hours from one place to every place that can be reached. */
   hoursFrom(from: string): Record<string, number> {
+    const known = this.hoursCache.get(from);
+    if (known) return known;
     const out: Record<string, number> = {};
     for (const id of this.places.keys()) {
       const route = this.route(from, id);
       if (route) out[id] = route.hours;
     }
+    this.hoursCache.set(from, out);
     return out;
   }
 }
