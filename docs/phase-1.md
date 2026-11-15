@@ -23,7 +23,7 @@
 7. **Eintenn, first batch.** *(done)* About 20 new small places around Ostwick and Burg Tennfels, with residents, each rooted on canon.
 8. **Named roads.** *(done)* Replace the stub roads in Eintenn with named roads, tracks and a river, and events on the way.
 9. **Profession skeleton and the Smith.** *(done)* Guild-smith of the Anvil: duties, commissions, ladder.
-10. **The Butler.** Steward of Burg Tennfels.
+10. **The Butler.** *(done)* Steward of Burg Tennfels.
 11. **Money and markets.** One currency, shops with hours, prices that move.
 12. **Scenes.** A place view that changes with the hour, season and who is there.
 13. **Standing orders and the report.** What a life does while you are away, and what you read when you return.
@@ -109,3 +109,13 @@ Each is an addition, to be rooted on canon when it is built.
   - **Balance.** A third persona, the smith, climbs every rank: journeyman about day 45, master about day 180, grandmaster about day 540 (4.8 game years, about 216 real hours). The report has a Career section.
   - **Not yet:** pay (wages and prices wait on money, #32); materials with properties; the finished item itself (it is recorded as a work with a quality, not yet an object); techniques; a client who remembers; deadlines; named masterworks; the Chronicle. The page has a small career panel, not the bible's full Career page.
   - **Save version 9,** with a migration and a test.
+- **2026-11-15 · The Butler (#31).** The second post, Steward of Burg Tennfels (`content/professions/butler/`), built on the same skeleton with no new engine code. Decisions:
+  - **Four ranks, not the bible's five:** Footman, Valet, Under-Butler, Steward of the House. The skeleton and the phase gate both say four; the bible's "Butler" rank is folded into the last.
+  - **The household is the Duke's,** not a lord's manor as in the bible's example: canon gives Burg Tennfels the Great Hall, the Duke's Library, the chapels and the Ducal Household. The new cast sits below the Duke and his family and changes nothing about them: the seneschal Ludolf von Ehrenau, the housekeeper Adelheid Korn and the cook Bodo Rind.
+  - **A day of duties** as the bible lists them: assign the staff at dawn, attend the family in the morning, accounts and the cellar after noon, dinner service in the evening (the day's one check).
+  - **Six incidents** grown from canon: the Dellian legate and the hounds, the sworn knights at the high table, Aschau wine in the cellar, the Heiress's letters, the two chapels. Three trials: dinner for twenty, the house for a season, and the Royal Progress (a canon event at the castle).
+  - **The work of an incident** is four steps: keep it quiet, question the household, search the house, settle it. Each has a safe and a bold way.
+  - **One skill for the whole post** (Stewardship). The bible gives each step its own skill (etiquette, persuasion, perception); the skeleton does not do that yet.
+  - **Not yet:** the Lord's Trust and Household Harmony as separate measures (standing stands in for both), endings that shape later cases, techniques, and the household's moods.
+  - **Balance.** A butler persona climbs every rank; the report has its section. The report's "hours worked" now counts case hours as well as duties.
+  - **Build.** `pnpm world` reads every folder under `content/professions`.

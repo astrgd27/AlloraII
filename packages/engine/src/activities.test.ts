@@ -49,7 +49,8 @@ describe('the activities', () => {
       if (a.post) late.state.post = { id: a.post, rank: 0, standing: 0 };
       expect(() => late.handle({ type: 'do', activity: a.id }, 0)).toThrow();
       const away = at(a.from, season);
-      away.state.place = 'tennfels';
+      away.state.place = a.place === 'salzmoor' ? 'ostwick' : 'salzmoor';
+      if (a.post) away.state.post = { id: a.post, rank: 0, standing: 0 };
       expect(whyNot(a, away.state, dateAt(away.state.hours))).toBe('Not here');
     },
   );

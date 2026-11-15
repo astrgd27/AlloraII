@@ -1,0 +1,49 @@
+# The Butler, and its first post: Steward of Burg Tennfels (design bible, The Butler).
+- id: post_tennfels_steward
+  origin: allora2
+  kind: post
+  roots:
+    - tennfels
+    - o_household
+  name: Steward of Burg Tennfels
+  trade: butler
+  skill: skill_stewardship
+  place: tennfels
+  sub: hall
+  group: o_household
+  patron: person_eintenn_ludolf
+  text: "Service in the Salt-Duke's household: sworn knights, a hundred hounds, a Dellian legate, and the Duke's moods."
+  ranks:
+    - name: Footman
+    - name: Valet
+      trial: Serve a formal dinner for twenty without fault.
+    - name: Under-Butler
+      trial: Run the house for a season while the seneschal is away.
+    - name: Steward of the House
+      trial: Carry the household through the Royal Progress.
+  # The work of an incident in a great house.
+  work:
+    - id: contain
+      name: Keep it quiet
+      hours: 1
+      approaches:
+        - { id: say_nothing, name: Say nothing, dc: 0 }
+        - { id: brief_the_staff, name: Brief the staff first, dc: 5, bold: true }
+    - id: question
+      name: Question the household
+      hours: 2
+      approaches:
+        - { id: kindness, name: With kindness, dc: 0 }
+        - { id: pressure, name: With pressure, dc: 5, bold: true }
+    - id: search
+      name: Search the house
+      hours: 2
+      approaches:
+        - { id: room_by_room, name: Room by room, dc: 0 }
+        - { id: keys_and_corridors, name: By the back stairs, dc: 5, bold: true }
+    - id: settle
+      name: Settle it
+      hours: 1
+      approaches:
+        - { id: tell_the_seneschal, name: Tell the seneschal, dc: 0 }
+        - { id: mend_it_unseen, name: Mend it unseen, dc: 5, bold: true }
