@@ -1,6 +1,6 @@
 import { HOURS_PER_YEAR, WORLD } from '@allora/engine';
 import { describe, expect, it } from 'vitest';
-import { DAY_BUDGET_MS, playLife, runBalance, smith, villager, wanderer } from './bot';
+import { DAY_BUDGET_MS, butler, playLife, runBalance, smith, villager, wanderer } from './bot';
 import { REPORT_MARKER, renderReport } from './report';
 
 describe('the balance bot', () => {
@@ -56,6 +56,19 @@ describe('the smith', () => {
     const report = renderReport(runBalance({ lives: 2, gameYears: 6, persona: smith }));
     expect(report).toContain('### Career');
     expect(report).toContain('| Grandmaster | 2 of 2 |');
+  });
+});
+
+describe('the butler', () => {
+  it('climbs from footman to Steward of the House, rank by rank', () => {
+    const life = playLife(butler, 1, 6 * HOURS_PER_YEAR);
+    expect(life.post).toBe('post_tennfels_steward');
+    expect(life.rank).toBe(3);
+    expect(life.rankDays[1]).toBeLessThan(life.rankDays[2]!);
+    expect(life.rankDays[2]).toBeLessThan(life.rankDays[3]!);
+    expect(life.skills.skill_stewardship).toBeGreaterThan(75);
+    const report = renderReport(runBalance({ lives: 2, gameYears: 6, persona: butler }));
+    expect(report).toContain('| Steward of the House | 2 of 2 |');
   });
 });
 

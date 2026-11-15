@@ -1,0 +1,55 @@
+# The household of Burg Tennfels, below the Duke and his family.
+- id: person_eintenn_ludolf
+  origin: allora2
+  kind: person
+  roots: [tennfels, o_household]
+  name: Ludolf von Ehrenau
+  title: Seneschal of Burg Tennfels
+  region: eintenn
+  home: tennfels
+  group: o_household
+  hint: a tall, tired man with a ring of keys he never puts down
+  meet: "He counts you as he would a delivery. “Ludolf von Ehrenau. I keep the Duke's house. You will find that it keeps you.”"
+  talk:
+    - 'Ludolf has served the Salt-Duke since before the Duke was gouty, and will not say which he preferred.'
+    - '“A house is run on what nobody notices,” Ludolf says. “The day they notice, you have failed.”'
+  sched:
+    - at: [tennfels, hall]
+      h: [6, 21]
+    - at: [tennfels, library]
+- id: person_eintenn_adelheid
+  origin: allora2
+  kind: person
+  roots: [tennfels, o_household]
+  name: Adelheid Korn
+  title: Housekeeper of Burg Tennfels
+  region: eintenn
+  home: tennfels
+  group: o_household
+  hint: a brisk woman counting linen aloud and losing her place when you come in
+  meet: '“Forty-one. Forty… you have made me lose it.” She looks you up and down. “Adelheid Korn. If you are staying, you can count.”'
+  talk:
+    - "Adelheid knows which maids can be trusted with the Heiress's rooms, and it is fewer than you would hope."
+    - '“The seneschal has the keys,” Adelheid says. “I have the doors.”'
+  sched:
+    - at: [tennfels, hall]
+      h: [5, 20]
+    - at: [tennfels, chapel]
+- id: person_eintenn_bodo
+  origin: allora2
+  kind: person
+  roots: [tennfels, o_household]
+  name: Bodo Rind
+  title: Cook to the Duke
+  region: eintenn
+  home: tennfels
+  group: o_household
+  hint: a vast man in a scorched apron, shouting at a pot
+  meet: 'The pot has done something wrong. So, it seems, have you. “Out of my light! … Bodo. Cook. Taste that. No, with the other spoon.”'
+  talk:
+    - "Bodo cooks for the Duke's gout, the legate's conscience and sixty hungry men-at-arms, from one fire."
+    - '“They send it back if it is cold,” Bodo says. “They send it back if it is hot. I have stopped listening.”'
+  sched:
+    - at: [tennfels, hall]
+      h: [4, 22]
+    - at: [tennfels, stables]

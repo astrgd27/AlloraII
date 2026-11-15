@@ -1,0 +1,64 @@
+# The duties of the household of Burg Tennfels. Only for those who hold the post.
+- id: activity_butler_assign_staff
+  origin: allora2
+  kind: activity
+  roots: [post_tennfels_steward]
+  post: post_tennfels_steward
+  name: Assign the staff
+  text: 'Who lays the fires, who carries water, and who is kept away from the legate.'
+  place: tennfels
+  sub: hall
+  from: 5
+  to: 8
+  hours: 1
+  skill: skill_stewardship
+  standing: 1
+  effects: { vigour: -2 }
+- id: activity_butler_attend_family
+  origin: allora2
+  kind: activity
+  roots: [post_tennfels_steward]
+  post: post_tennfels_steward
+  name: Attend the family
+  text: 'Be where you are wanted a moment before you are wanted there.'
+  place: tennfels
+  sub: hall
+  from: 8
+  to: 13
+  hours: 2
+  skill: skill_stewardship
+  level: 6
+  standing: 1
+  effects: { vigour: -4 }
+- id: activity_butler_cellar_accounts
+  origin: allora2
+  kind: activity
+  roots: [post_tennfels_steward]
+  post: post_tennfels_steward
+  name: Accounts and the cellar
+  text: 'Candles, oats, wine and wages, each in its column, and the columns made to agree.'
+  place: tennfels
+  sub: library
+  from: 13
+  to: 18
+  hours: 2
+  skill: skill_stewardship
+  level: 12
+  standing: 1
+  effects: { vigour: -4 }
+- id: activity_butler_dinner_service
+  origin: allora2
+  kind: activity
+  roots: [post_tennfels_steward]
+  post: post_tennfels_steward
+  name: Dinner service
+  text: 'The high table first, the salt in its place, and no dish set down with a sound.'
+  place: tennfels
+  sub: hall
+  from: 18
+  to: 21
+  hours: 3
+  skill: skill_stewardship
+  dc: 12
+  standing: 2
+  effects: { vigour: -6 }

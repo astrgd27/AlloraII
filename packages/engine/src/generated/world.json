@@ -1361,6 +1361,93 @@
  ],
  "posts": [
   {
+   "id": "post_tennfels_steward",
+   "name": "Steward of Burg Tennfels",
+   "skill": "skill_stewardship",
+   "place": "tennfels",
+   "sub": "hall",
+   "ranks": [
+    "Footman",
+    "Valet",
+    "Under-Butler",
+    "Steward of the House"
+   ],
+   "work": [
+    {
+     "id": "contain",
+     "name": "Keep it quiet",
+     "hours": 1,
+     "approaches": [
+      {
+       "id": "say_nothing",
+       "name": "Say nothing",
+       "dc": 0
+      },
+      {
+       "id": "brief_the_staff",
+       "name": "Brief the staff first",
+       "dc": 5,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": "question",
+     "name": "Question the household",
+     "hours": 2,
+     "approaches": [
+      {
+       "id": "kindness",
+       "name": "With kindness",
+       "dc": 0
+      },
+      {
+       "id": "pressure",
+       "name": "With pressure",
+       "dc": 5,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": "search",
+     "name": "Search the house",
+     "hours": 2,
+     "approaches": [
+      {
+       "id": "room_by_room",
+       "name": "Room by room",
+       "dc": 0
+      },
+      {
+       "id": "keys_and_corridors",
+       "name": "By the back stairs",
+       "dc": 5,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": "settle",
+     "name": "Settle it",
+     "hours": 1,
+     "approaches": [
+      {
+       "id": "tell_the_seneschal",
+       "name": "Tell the seneschal",
+       "dc": 0
+      },
+      {
+       "id": "mend_it_unseen",
+       "name": "Mend it unseen",
+       "dc": 5,
+       "bold": true
+      }
+     ]
+    }
+   ]
+  },
+  {
    "id": "post_kesselhaven_guild_smith",
    "name": "Guild-smith of the Anvil",
    "skill": "skill_smithing",
@@ -1461,6 +1548,78 @@
   }
  ],
  "cases": [
+  {
+   "id": "case_butler_legates_glove",
+   "name": "The legate's glove",
+   "text": "One of the Duke's hounds has carried off the Dellian legate's glove, an hour before he dines.",
+   "post": "post_tennfels_steward",
+   "dc": 10,
+   "rank": 0
+  },
+  {
+   "id": "case_butler_missing_spoons",
+   "name": "Three spoons short",
+   "text": "The silver was counted in at dusk and counted out at dawn, and the counts do not agree.",
+   "post": "post_tennfels_steward",
+   "dc": 10,
+   "rank": 0
+  },
+  {
+   "id": "case_butler_high_table",
+   "name": "Two knights and one seat",
+   "text": "Two sworn knights each hold that the seat nearest the salt is theirs by right. Both are armed.",
+   "post": "post_tennfels_steward",
+   "dc": 15,
+   "rank": 1
+  },
+  {
+   "id": "case_butler_cellar_book",
+   "name": "The cellar book",
+   "text": "The cellar book and the cellar differ by a tun of Aschau wine, and the Duke has asked for that vintage.",
+   "post": "post_tennfels_steward",
+   "dc": 15,
+   "rank": 1
+  },
+  {
+   "id": "case_butler_opened_letter",
+   "name": "The opened letter",
+   "text": "A letter for the Heiress has come up from the gate with its seal already cracked.",
+   "post": "post_tennfels_steward",
+   "dc": 20,
+   "rank": 2
+  },
+  {
+   "id": "case_butler_lamp_hour",
+   "name": "The lamp-hour",
+   "text": "The legate's lamp-chapel and Saint Calder's chapter have both been promised the side-court at the same hour.",
+   "post": "post_tennfels_steward",
+   "dc": 25,
+   "rank": 3
+  },
+  {
+   "id": "case_butler_trial_valet",
+   "name": "Dinner for twenty",
+   "text": "A formal dinner in the Great Hall, twenty covers, and the seneschal watching your hands.",
+   "post": "post_tennfels_steward",
+   "dc": 15,
+   "trialFor": 1
+  },
+  {
+   "id": "case_butler_trial_under_butler",
+   "name": "The house for a season",
+   "text": "The seneschal rides to Kesselhaven for a season. The keys are yours until he is back.",
+   "post": "post_tennfels_steward",
+   "dc": 20,
+   "trialFor": 2
+  },
+  {
+   "id": "case_butler_trial_steward",
+   "name": "The Royal Progress",
+   "text": "Banners on the road, a banquet in the open air, and more strangers under the roof than the castle has beds.",
+   "post": "post_tennfels_steward",
+   "dc": 25,
+   "trialFor": 3
+  },
   {
    "id": "case_smith_harbour_nails",
    "name": "A keg of ship's nails",
@@ -2980,6 +3139,93 @@
    ]
   },
   {
+   "id": "person_eintenn_ludolf",
+   "name": "Ludolf von Ehrenau",
+   "title": "Seneschal of Burg Tennfels",
+   "hint": "a tall, tired man with a ring of keys he never puts down",
+   "meet": "He counts you as he would a delivery. “Ludolf von Ehrenau. I keep the Duke's house. You will find that it keeps you.”",
+   "talk": [
+    "Ludolf has served the Salt-Duke since before the Duke was gouty, and will not say which he preferred.",
+    "“A house is run on what nobody notices,” Ludolf says. “The day they notice, you have failed.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "tennfels",
+      "hall"
+     ],
+     "h": [
+      6,
+      21
+     ]
+    },
+    {
+     "at": [
+      "tennfels",
+      "library"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_eintenn_adelheid",
+   "name": "Adelheid Korn",
+   "title": "Housekeeper of Burg Tennfels",
+   "hint": "a brisk woman counting linen aloud and losing her place when you come in",
+   "meet": "“Forty-one. Forty… you have made me lose it.” She looks you up and down. “Adelheid Korn. If you are staying, you can count.”",
+   "talk": [
+    "Adelheid knows which maids can be trusted with the Heiress's rooms, and it is fewer than you would hope.",
+    "“The seneschal has the keys,” Adelheid says. “I have the doors.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "tennfels",
+      "hall"
+     ],
+     "h": [
+      5,
+      20
+     ]
+    },
+    {
+     "at": [
+      "tennfels",
+      "chapel"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_eintenn_bodo",
+   "name": "Bodo Rind",
+   "title": "Cook to the Duke",
+   "hint": "a vast man in a scorched apron, shouting at a pot",
+   "meet": "The pot has done something wrong. So, it seems, have you. “Out of my light! … Bodo. Cook. Taste that. No, with the other spoon.”",
+   "talk": [
+    "Bodo cooks for the Duke's gout, the legate's conscience and sixty hungry men-at-arms, from one fire.",
+    "“They send it back if it is cold,” Bodo says. “They send it back if it is hot. I have stopped listening.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "tennfels",
+      "hall"
+     ],
+     "h": [
+      4,
+      22
+     ]
+    },
+    {
+     "at": [
+      "tennfels",
+      "stables"
+     ]
+    }
+   ]
+  },
+  {
    "id": "person_eintenn_reinhild",
    "name": "Master Reinhild Stark",
    "title": "Master of the Guild Forges",
@@ -3039,6 +3285,77 @@
   }
  ],
  "activities": [
+  {
+   "id": "activity_butler_assign_staff",
+   "name": "Assign the staff",
+   "text": "Who lays the fires, who carries water, and who is kept away from the legate.",
+   "place": "tennfels",
+   "sub": "hall",
+   "subName": "The Great Hall",
+   "from": 5,
+   "to": 8,
+   "hours": 1,
+   "skill": "skill_stewardship",
+   "post": "post_tennfels_steward",
+   "standing": 1,
+   "effects": {
+    "vigour": -2
+   }
+  },
+  {
+   "id": "activity_butler_attend_family",
+   "name": "Attend the family",
+   "text": "Be where you are wanted a moment before you are wanted there.",
+   "place": "tennfels",
+   "sub": "hall",
+   "subName": "The Great Hall",
+   "from": 8,
+   "to": 13,
+   "hours": 2,
+   "skill": "skill_stewardship",
+   "level": 6,
+   "post": "post_tennfels_steward",
+   "standing": 1,
+   "effects": {
+    "vigour": -4
+   }
+  },
+  {
+   "id": "activity_butler_cellar_accounts",
+   "name": "Accounts and the cellar",
+   "text": "Candles, oats, wine and wages, each in its column, and the columns made to agree.",
+   "place": "tennfels",
+   "sub": "library",
+   "subName": "The Duke’s Library",
+   "from": 13,
+   "to": 18,
+   "hours": 2,
+   "skill": "skill_stewardship",
+   "level": 12,
+   "post": "post_tennfels_steward",
+   "standing": 1,
+   "effects": {
+    "vigour": -4
+   }
+  },
+  {
+   "id": "activity_butler_dinner_service",
+   "name": "Dinner service",
+   "text": "The high table first, the salt in its place, and no dish set down with a sound.",
+   "place": "tennfels",
+   "sub": "hall",
+   "subName": "The Great Hall",
+   "from": 18,
+   "to": 21,
+   "hours": 3,
+   "skill": "skill_stewardship",
+   "dc": 12,
+   "post": "post_tennfels_steward",
+   "standing": 2,
+   "effects": {
+    "vigour": -6
+   }
+  },
   {
    "id": "activity_weirbeck_mill_carry_sacks",
    "name": "Carry sacks to the stones",

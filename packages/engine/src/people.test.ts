@@ -74,7 +74,7 @@ describe('routines', () => {
 
   it('lists who is at a place', () => {
     expect(peopleAt(world, 'ostwick', when(19))).toEqual([{ id: 'hanne', sub: 'tavern' }]);
-    expect(peopleAt(world, 'tennfels', when(19))).toEqual([]);
+    expect(peopleAt(world, 'salzmoor', when(19))).toEqual([]);
   });
 });
 

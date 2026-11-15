@@ -76,6 +76,14 @@ async function main(): Promise<void> {
     ...(await readDir('content/people')),
   ].filter((n) => WORLD_REGIONS.includes(n.region as string) && Array.isArray(n.sched));
 
+  // Every profession has a folder of its own under content/professions.
+  const professions: Raw[] = [];
+  for (const dir of (
+    await readdir(join(ROOT, 'content/professions')).catch(() => [] as string[])
+  ).sort()) {
+    professions.push(...(await readDir(`content/professions/${dir}`)));
+  }
+
   const world = {
     regions: regions.map((r) => ({ id: r.id, name: r.name })),
     places: places.map((p) => ({
@@ -96,7 +104,7 @@ async function main(): Promise<void> {
       hours: r.hours,
       route: (r as unknown as Raw).route,
     })),
-    posts: (await readDir('content/professions/smith'))
+    posts: professions
       .filter((e) => e.kind === 'post')
       .map((e) => ({
         id: e.id,
@@ -107,7 +115,7 @@ async function main(): Promise<void> {
         ranks: (e.ranks as Raw[]).map((r) => r.name),
         work: e.work,
       })),
-    cases: (await readDir('content/professions/smith'))
+    cases: professions
       .filter((e) => e.kind === 'case')
       .map((e) => ({
         id: e.id,

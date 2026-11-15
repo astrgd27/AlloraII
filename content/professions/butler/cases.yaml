@@ -1,0 +1,82 @@
+# Incidents and trials for the household of Burg Tennfels. `dc` is the base difficulty of every step.
+- id: case_butler_legates_glove
+  origin: allora2
+  kind: case
+  roots: [post_tennfels_steward, tennfels]
+  post: post_tennfels_steward
+  name: The legate's glove
+  text: "One of the Duke's hounds has carried off the Dellian legate's glove, an hour before he dines."
+  rank: 0
+  dc: 10
+- id: case_butler_missing_spoons
+  origin: allora2
+  kind: case
+  roots: [post_tennfels_steward, tennfels]
+  post: post_tennfels_steward
+  name: Three spoons short
+  text: 'The silver was counted in at dusk and counted out at dawn, and the counts do not agree.'
+  rank: 0
+  dc: 10
+- id: case_butler_high_table
+  origin: allora2
+  kind: case
+  roots: [post_tennfels_steward, calder]
+  post: post_tennfels_steward
+  name: Two knights and one seat
+  text: 'Two sworn knights each hold that the seat nearest the salt is theirs by right. Both are armed.'
+  rank: 1
+  dc: 15
+- id: case_butler_cellar_book
+  origin: allora2
+  kind: case
+  roots: [post_tennfels_steward, aschau]
+  post: post_tennfels_steward
+  name: The cellar book
+  text: 'The cellar book and the cellar differ by a tun of Aschau wine, and the Duke has asked for that vintage.'
+  rank: 1
+  dc: 15
+- id: case_butler_opened_letter
+  origin: allora2
+  kind: case
+  roots: [post_tennfels_steward, ppl_margarethe]
+  post: post_tennfels_steward
+  name: The opened letter
+  text: 'A letter for the Heiress has come up from the gate with its seal already cracked.'
+  rank: 2
+  dc: 20
+- id: case_butler_lamp_hour
+  origin: allora2
+  kind: case
+  roots: [post_tennfels_steward, dell]
+  post: post_tennfels_steward
+  name: The lamp-hour
+  text: "The legate's lamp-chapel and Saint Calder's chapter have both been promised the side-court at the same hour."
+  rank: 3
+  dc: 25
+- id: case_butler_trial_valet
+  origin: allora2
+  kind: case
+  roots: [post_tennfels_steward]
+  post: post_tennfels_steward
+  name: Dinner for twenty
+  text: 'A formal dinner in the Great Hall, twenty covers, and the seneschal watching your hands.'
+  trial_for: 1
+  dc: 15
+- id: case_butler_trial_under_butler
+  origin: allora2
+  kind: case
+  roots: [post_tennfels_steward]
+  post: post_tennfels_steward
+  name: The house for a season
+  text: 'The seneschal rides to Kesselhaven for a season. The keys are yours until he is back.'
+  trial_for: 2
+  dc: 20
+- id: case_butler_trial_steward
+  origin: allora2
+  kind: case
+  roots: [post_tennfels_steward]
+  post: post_tennfels_steward
+  name: The Royal Progress
+  text: 'Banners on the road, a banquet in the open air, and more strangers under the roof than the castle has beds.'
+  trial_for: 3
+  dc: 25

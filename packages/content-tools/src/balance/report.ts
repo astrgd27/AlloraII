@@ -142,7 +142,7 @@ function checkLines(run: BalanceRun): string[] {
 function careerLines(run: BalanceRun): string[] {
   const held = run.lives.filter((l) => l.rank >= 0);
   if (held.length === 0) return [];
-  const post = WORLD.posts?.[0];
+  const post = WORLD.posts?.find((p) => p.id === held[0]?.post);
   const lines = [
     '### Career',
     '',
