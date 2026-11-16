@@ -738,6 +738,266 @@
     "basket": "The Fire-Basket",
     "watch_hut": "The Watch-Hut"
    }
+  },
+  {
+   "id": "place_marre_calle_inchiostro",
+   "name": "Calle dell'Inchiostro",
+   "region": "marre",
+   "x": 41,
+   "y": 47,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "desks": "The Copy-Desks",
+    "stair": "The Paper Stair"
+   }
+  },
+  {
+   "id": "place_marre_molo_grano",
+   "name": "Molo del Grano",
+   "region": "marre",
+   "x": 46,
+   "y": 41,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "quay": "The Grain Quay",
+    "measure": "The Measuring Shed"
+   }
+  },
+  {
+   "id": "place_marre_campo_leoni",
+   "name": "Campo dei Due Leoni",
+   "region": "marre",
+   "x": 42,
+   "y": 41,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "well": "The Lion Well",
+    "houses": "The Keepers’ Houses"
+   }
+  },
+  {
+   "id": "place_marre_riva_ombra",
+   "name": "Riva dell'Ombra",
+   "region": "marre",
+   "x": 47,
+   "y": 46,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "steps": "The Water-Steps",
+    "grating": "The Low Grating"
+   }
+  },
+  {
+   "id": "place_marre_osteria_bauta",
+   "name": "Osteria della Bauta",
+   "region": "marre",
+   "x": 45,
+   "y": 49,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "taproom": "The Front Room",
+    "snug": "The Room Behind"
+   }
+  },
+  {
+   "id": "place_marre_squero_storto",
+   "name": "Squero Storto",
+   "region": "marre",
+   "x": 53,
+   "y": 56,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "slip": "The Slip",
+    "loft": "The Rib Loft"
+   }
+  },
+  {
+   "id": "place_marre_pescaria",
+   "name": "The Pescaria",
+   "region": "marre",
+   "x": 58,
+   "y": 49,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "slabs": "The Slabs",
+    "boats": "The Night Boats"
+   }
+  },
+  {
+   "id": "place_marre_corte_tinta",
+   "name": "Corte della Tinta",
+   "region": "marre",
+   "x": 59,
+   "y": 55,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "vats": "The Vats",
+    "lines": "The Drying Lines"
+   }
+  },
+  {
+   "id": "place_marre_ponte_maschere",
+   "name": "Ponte delle Maschere",
+   "region": "marre",
+   "x": 62,
+   "y": 50,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "stalls": "The Stalls",
+    "span": "The Span"
+   }
+  },
+  {
+   "id": "place_marre_fondamenta_specchi",
+   "name": "Fondamenta degli Specchi",
+   "region": "marre",
+   "x": 70,
+   "y": 42,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "shops": "The Mirror Shops",
+    "landing": "The Guarded Landing"
+   }
+  },
+  {
+   "id": "place_marre_waiting_roads",
+   "name": "The Waiting Roads",
+   "region": "marre",
+   "x": 27,
+   "y": 58,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "anchorage": "The Anchorage",
+    "guardboat": "The Health Boat"
+   }
+  },
+  {
+   "id": "place_marre_quiet_isle",
+   "name": "The Quiet Isle",
+   "region": "marre",
+   "x": 20,
+   "y": 66,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "pits": "The Lime Pits",
+    "hut": "The List-Keeper’s Hut"
+   }
+  },
+  {
+   "id": "place_marre_isle_of_simples",
+   "name": "The Isle of Simples",
+   "region": "marre",
+   "x": 28,
+   "y": 66,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "beds": "The Physic Beds",
+    "stillroom": "The Still-Room"
+   }
+  },
+  {
+   "id": "place_marre_stilt_huts",
+   "name": "The Stilt Huts",
+   "region": "marre",
+   "x": 36,
+   "y": 54,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "platform": "The Net Platform",
+    "traps": "The Eel Traps"
+   }
+  },
+  {
+   "id": "place_marre_pilots_rest",
+   "name": "Pilots' Rest",
+   "region": "marre",
+   "x": 34,
+   "y": 70,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "lookout": "The Lookout",
+    "boathouse": "The Boathouse"
+   }
+  },
+  {
+   "id": "place_marre_barge_stair",
+   "name": "The Barge Stair",
+   "region": "marre",
+   "x": 14,
+   "y": 44,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "stair": "The Stair",
+    "sheds": "The Toll Sheds"
+   }
+  },
+  {
+   "id": "place_marre_silk_sheds",
+   "name": "The Silk Sheds",
+   "region": "marre",
+   "x": 10,
+   "y": 36,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "sheds": "The Worm Sheds",
+    "reels": "The Reeling Yard"
+   }
+  },
+  {
+   "id": "place_marre_chiusa_vecchia",
+   "name": "Chiusa Vecchia",
+   "region": "marre",
+   "x": 6,
+   "y": 46,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "gates": "The Sluice Gates",
+    "dyke": "The Dyke Path"
+   }
+  },
+  {
+   "id": "place_marre_ash_isle",
+   "name": "Ash Isle",
+   "region": "marre",
+   "x": 82,
+   "y": 36,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "tips": "The Tips",
+    "sieves": "The Sieves"
+   }
+  },
+  {
+   "id": "place_marre_guard_boats",
+   "name": "The Guard Boats",
+   "region": "marre",
+   "x": 74,
+   "y": 36,
+   "kind": "settled",
+   "canon": false,
+   "subs": {
+    "pontoon": "The Pontoon",
+    "watch": "The Watch-Hut"
+   }
   }
  ],
  "roads": [
@@ -1254,6 +1514,202 @@
    "route": "route_eintenn_ruin_tracks"
   },
   {
+   "id": "road_marre_palace_place_marre_calle_inchiostro",
+   "from": "marre_palace",
+   "to": "place_marre_calle_inchiostro",
+   "way": "river",
+   "hours": 2
+  },
+  {
+   "id": "road_marre_palace_place_marre_molo_grano",
+   "from": "marre_palace",
+   "to": "place_marre_molo_grano",
+   "way": "street",
+   "hours": 1
+  },
+  {
+   "id": "road_marre_palace_place_marre_campo_leoni",
+   "from": "marre_palace",
+   "to": "place_marre_campo_leoni",
+   "way": "street",
+   "hours": 1
+  },
+  {
+   "id": "road_marre_palace_place_marre_riva_ombra",
+   "from": "marre_palace",
+   "to": "place_marre_riva_ombra",
+   "way": "street",
+   "hours": 1
+  },
+  {
+   "id": "road_marre_city_place_marre_riva_ombra",
+   "from": "marre_city",
+   "to": "place_marre_riva_ombra",
+   "way": "river",
+   "hours": 4
+  },
+  {
+   "id": "road_marre_palace_place_marre_osteria_bauta",
+   "from": "marre_palace",
+   "to": "place_marre_osteria_bauta",
+   "way": "river",
+   "hours": 2
+  },
+  {
+   "id": "road_marre_city_place_marre_osteria_bauta",
+   "from": "marre_city",
+   "to": "place_marre_osteria_bauta",
+   "way": "river",
+   "hours": 4
+  },
+  {
+   "id": "road_marre_city_place_marre_squero_storto",
+   "from": "marre_city",
+   "to": "place_marre_squero_storto",
+   "way": "river",
+   "hours": 2
+  },
+  {
+   "id": "road_marre_city_place_marre_pescaria",
+   "from": "marre_city",
+   "to": "place_marre_pescaria",
+   "way": "street",
+   "hours": 1
+  },
+  {
+   "id": "road_marre_canal_place_marre_pescaria",
+   "from": "marre_canal",
+   "to": "place_marre_pescaria",
+   "way": "river",
+   "hours": 4
+  },
+  {
+   "id": "road_marre_city_place_marre_corte_tinta",
+   "from": "marre_city",
+   "to": "place_marre_corte_tinta",
+   "way": "river",
+   "hours": 2
+  },
+  {
+   "id": "road_marre_city_place_marre_ponte_maschere",
+   "from": "marre_city",
+   "to": "place_marre_ponte_maschere",
+   "way": "river",
+   "hours": 2
+  },
+  {
+   "id": "road_marre_canal_place_marre_ponte_maschere",
+   "from": "marre_canal",
+   "to": "place_marre_ponte_maschere",
+   "way": "river",
+   "hours": 3
+  },
+  {
+   "id": "road_marre_canal_place_marre_fondamenta_specchi",
+   "from": "marre_canal",
+   "to": "place_marre_fondamenta_specchi",
+   "way": "river",
+   "hours": 2
+  },
+  {
+   "id": "road_lazaretto_place_marre_waiting_roads",
+   "from": "lazaretto",
+   "to": "place_marre_waiting_roads",
+   "way": "river",
+   "hours": 2
+  },
+  {
+   "id": "road_lazaretto_place_marre_quiet_isle",
+   "from": "lazaretto",
+   "to": "place_marre_quiet_isle",
+   "way": "river",
+   "hours": 2
+  },
+  {
+   "id": "road_lazaretto_place_marre_isle_of_simples",
+   "from": "lazaretto",
+   "to": "place_marre_isle_of_simples",
+   "way": "river",
+   "hours": 2
+  },
+  {
+   "id": "road_marre_palace_place_marre_stilt_huts",
+   "from": "marre_palace",
+   "to": "place_marre_stilt_huts",
+   "way": "river",
+   "hours": 5
+  },
+  {
+   "id": "road_lazaretto_place_marre_stilt_huts",
+   "from": "lazaretto",
+   "to": "place_marre_stilt_huts",
+   "way": "river",
+   "hours": 5
+  },
+  {
+   "id": "road_lazaretto_place_marre_pilots_rest",
+   "from": "lazaretto",
+   "to": "place_marre_pilots_rest",
+   "way": "river",
+   "hours": 5
+  },
+  {
+   "id": "road_place_marre_pilots_rest_wp_lighthouse",
+   "from": "place_marre_pilots_rest",
+   "to": "wp_lighthouse",
+   "way": "river",
+   "hours": 8
+  },
+  {
+   "id": "road_place_marre_barge_stair_terraferma",
+   "from": "place_marre_barge_stair",
+   "to": "terraferma",
+   "way": "river",
+   "hours": 3
+  },
+  {
+   "id": "road_place_marre_barge_stair_place_marre_stilt_huts",
+   "from": "place_marre_barge_stair",
+   "to": "place_marre_stilt_huts",
+   "way": "river",
+   "hours": 9
+  },
+  {
+   "id": "road_place_marre_silk_sheds_terraferma",
+   "from": "place_marre_silk_sheds",
+   "to": "terraferma",
+   "way": "river",
+   "hours": 2
+  },
+  {
+   "id": "road_place_marre_chiusa_vecchia_terraferma",
+   "from": "place_marre_chiusa_vecchia",
+   "to": "terraferma",
+   "way": "river",
+   "hours": 2
+  },
+  {
+   "id": "road_marre_isles_place_marre_ash_isle",
+   "from": "marre_isles",
+   "to": "place_marre_ash_isle",
+   "way": "river",
+   "hours": 2
+  },
+  {
+   "id": "road_marre_isles_place_marre_guard_boats",
+   "from": "marre_isles",
+   "to": "place_marre_guard_boats",
+   "way": "river",
+   "hours": 2
+  },
+  {
+   "id": "road_place_marre_fondamenta_specchi_place_marre_guard_boats",
+   "from": "place_marre_fondamenta_specchi",
+   "to": "place_marre_guard_boats",
+   "way": "river",
+   "hours": 3
+  },
+  {
    "id": "road_lazaretto_marre_palace",
    "from": "lazaretto",
    "to": "marre_palace",
@@ -1454,6 +1910,118 @@
    ]
   },
   {
+   "id": "post_cerdans_inquirer",
+   "name": "Inquirer of the Cerdans",
+   "skill": "skill_insight",
+   "pay": [
+    0.45,
+    0.9,
+    1.8,
+    4
+   ],
+   "place": "marre_palace",
+   "sub": "cerdans",
+   "ranks": [
+    "Informer",
+    "Constable",
+    "Inquirer",
+    "Capo's Deputy"
+   ],
+   "work": [
+    {
+     "id": "scene",
+     "name": "Read the scene",
+     "hours": 1,
+     "approaches": [
+      {
+       "id": "look_slowly",
+       "name": "Look slowly",
+       "dc": 0
+      },
+      {
+       "id": "ask_what_is_missing",
+       "name": "Ask what is missing",
+       "dc": 5,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": "witnesses",
+     "name": "Question the witnesses",
+     "hours": 2,
+     "approaches": [
+      {
+       "id": "let_them_talk",
+       "name": "Let them talk",
+       "dc": 0
+      },
+      {
+       "id": "catch_the_lie",
+       "name": "Catch the lie",
+       "dc": 5,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": "records",
+     "name": "Read the files",
+     "hours": 2,
+     "approaches": [
+      {
+       "id": "page_by_page",
+       "name": "Page by page",
+       "dc": 0
+      },
+      {
+       "id": "follow_one_name",
+       "name": "Follow one name",
+       "dc": 5,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": "tail",
+     "name": "Follow your man",
+     "hours": 2,
+     "approaches": [
+      {
+       "id": "from_a_bridge_away",
+       "name": "From a bridge away",
+       "dc": 0
+      },
+      {
+       "id": "at_his_elbow",
+       "name": "At his elbow",
+       "dc": 5,
+       "bold": true
+      }
+     ]
+    },
+    {
+     "id": "accuse",
+     "name": "Name the culprit",
+     "hours": 1,
+     "accuse": true,
+     "approaches": [
+      {
+       "id": "lay_out_the_proof",
+       "name": "Lay out the proof",
+       "dc": 0
+      },
+      {
+       "id": "before_the_capo",
+       "name": "Before the Capo",
+       "dc": 5,
+       "bold": true
+      }
+     ]
+    }
+   ]
+  },
+  {
    "id": "post_kesselhaven_guild_smith",
    "name": "Guild-smith of the Anvil",
    "skill": "skill_smithing",
@@ -1629,6 +2197,94 @@
    "name": "The Royal Progress",
    "text": "Banners on the road, a banquet in the open air, and more strangers under the roof than the castle has beds.",
    "post": "post_tennfels_steward",
+   "dc": 25,
+   "trialFor": 3
+  },
+  {
+   "id": "case_cerdans_short_measure",
+   "name": "The short measure",
+   "text": "A bronze measure at the Molo del Grano gives a finger less than it should. Somebody shaved it.",
+   "post": "post_cerdans_inquirer",
+   "dc": 10,
+   "rank": 0
+  },
+  {
+   "id": "case_cerdans_cut_nets",
+   "name": "Cut nets",
+   "text": "An eel-man of the Stilt Huts found his nets slashed three nights running. He has a name in mind, and it is the wrong one.",
+   "post": "post_cerdans_inquirer",
+   "dc": 10,
+   "rank": 0
+  },
+  {
+   "id": "case_cerdans_two_faces",
+   "name": "One mask, two faces",
+   "text": "A mask-maker on the Ponte swears she sold a mask once. It was seen in two places on the same night.",
+   "post": "post_cerdans_inquirer",
+   "dc": 11,
+   "rank": 0
+  },
+  {
+   "id": "case_cerdans_pescaria_purses",
+   "name": "Purses at the Pescaria",
+   "text": "Purses go missing at the fish market before dawn, always from cooks of the great houses.",
+   "post": "post_cerdans_inquirer",
+   "dc": 15,
+   "rank": 1
+  },
+  {
+   "id": "case_cerdans_silk_no_seal",
+   "name": "Silk without a seal",
+   "text": "Bales come up the Barge Stair counted and leave it short. The toll-book agrees with itself too well.",
+   "post": "post_cerdans_inquirer",
+   "dc": 15,
+   "rank": 1
+  },
+  {
+   "id": "case_cerdans_watered_theriac",
+   "name": "Watered theriac",
+   "text": "A jar in the Spezieria was thinned, and a man in the wards died who should not have.",
+   "post": "post_cerdans_inquirer",
+   "dc": 20,
+   "rank": 2
+  },
+  {
+   "id": "case_cerdans_mirror_abroad",
+   "name": "The mirror that left",
+   "text": "A master's mirror has turned up for sale across the sea. On the night it left, a guard boat was late on its circuit.",
+   "post": "post_cerdans_inquirer",
+   "dc": 20,
+   "rank": 2
+  },
+  {
+   "id": "case_cerdans_golden_book",
+   "name": "A line in the Golden Book",
+   "text": "A name has been written into the Golden Book in a hand that is nearly the clerk's.",
+   "post": "post_cerdans_inquirer",
+   "dc": 25,
+   "rank": 3
+  },
+  {
+   "id": "case_cerdans_trial_petty",
+   "name": "Three petty matters",
+   "text": "Three small complaints in one week. Close each, and accuse nobody you cannot prove.",
+   "post": "post_cerdans_inquirer",
+   "dc": 15,
+   "trialFor": 1
+  },
+  {
+   "id": "case_cerdans_trial_death",
+   "name": "A death by the Rialto",
+   "text": "A broker was found in the canal at first light, with his rings on and his ledger gone.",
+   "post": "post_cerdans_inquirer",
+   "dc": 20,
+   "trialFor": 2
+  },
+  {
+   "id": "case_cerdans_trial_great_house",
+   "name": "The house that is watched",
+   "text": "The trail runs to a water-gate on the Grand Canal. Close it, and let the Republic sleep.",
+   "post": "post_cerdans_inquirer",
    "dc": 25,
    "trialFor": 3
   },
@@ -2109,6 +2765,177 @@
     "h_chamomile",
     "fruit"
    ]
+  },
+  {
+   "id": "market_marre_city",
+   "name": "Rialto stalls",
+   "place": "marre_city",
+   "sub": "rialto",
+   "from": 7,
+   "to": 19,
+   "day": 3,
+   "sells": [
+    "mirror",
+    "spices",
+    "glass",
+    "sea_glass",
+    "perfume",
+    "lute",
+    "rapier",
+    "crossbow",
+    "windows",
+    "silk",
+    "citrus",
+    "incense",
+    "bauta",
+    "doublet",
+    "spiced_wine",
+    "neroli",
+    "glass_t2",
+    "sugar_cube",
+    "catnip",
+    "chew_bone",
+    "feather_lure",
+    "leather_ball",
+    "grooming_kit",
+    "halter",
+    "fodder_mash",
+    "hound_biscuit",
+    "eggs"
+   ],
+   "makes": [
+    "sea_glass",
+    "silk"
+   ]
+  },
+  {
+   "id": "market_marre_palace",
+   "name": "Piazza arcades",
+   "place": "marre_palace",
+   "sub": "council",
+   "from": 8,
+   "to": 18,
+   "day": 6,
+   "sells": [
+    "lion_pin",
+    "candle",
+    "glass",
+    "parchment",
+    "ink",
+    "candle_t2",
+    "parch_t2",
+    "ink_t2",
+    "glass_t2",
+    "candle_branch"
+   ],
+   "makes": []
+  },
+  {
+   "id": "market_marre_isles",
+   "name": "Glass Strand sellers",
+   "place": "marre_isles",
+   "sub": "strand",
+   "from": 7,
+   "to": 17,
+   "day": 2,
+   "sells": [
+    "mirror",
+    "glass",
+    "sea_glass",
+    "coal",
+    "sand",
+    "spectacles"
+   ],
+   "makes": [
+    "sea_glass",
+    "sand"
+   ]
+  },
+  {
+   "id": "market_selino",
+   "name": "Chandlers' Row counters",
+   "place": "selino",
+   "sub": "row",
+   "from": 6,
+   "to": 20,
+   "day": 4,
+   "sells": [
+    "rope",
+    "salt",
+    "smoked_fish",
+    "spices",
+    "incense",
+    "silk",
+    "citrus",
+    "compass",
+    "oilskin",
+    "sea_boots",
+    "cordial",
+    "crossbow",
+    "lockpicks",
+    "rope_t2",
+    "ws_sailcloth",
+    "sugar_cube",
+    "catnip",
+    "chew_bone",
+    "feather_lure",
+    "leather_ball",
+    "grooming_kit",
+    "halter",
+    "fodder_mash",
+    "hound_biscuit"
+   ],
+   "makes": [
+    "salt"
+   ]
+  },
+  {
+   "id": "market_lazaretto",
+   "name": "Spezieria counter",
+   "place": "lazaretto",
+   "sub": "spezieria",
+   "from": 8,
+   "to": 16,
+   "day": 1,
+   "sells": [
+    "theriac",
+    "fever_bark",
+    "plague_mask",
+    "herbs",
+    "surgeon_kit"
+   ],
+   "makes": [
+    "herbs"
+   ]
+  },
+  {
+   "id": "market_morena",
+   "name": "Morena fondaco floor",
+   "place": "morena",
+   "sub": "fondaco",
+   "from": 7,
+   "to": 18,
+   "day": 5,
+   "sells": [
+    "mastic",
+    "purple",
+    "fever_bark",
+    "spices",
+    "icon",
+    "silk",
+    "sugar_cube",
+    "catnip",
+    "chew_bone",
+    "feather_lure",
+    "leather_ball",
+    "grooming_kit",
+    "halter",
+    "fodder_mash",
+    "hound_biscuit"
+   ],
+   "makes": [
+    "mastic"
+   ]
   }
  ],
  "items": [
@@ -2132,6 +2959,11 @@
    "id": "axe",
    "name": "Felling Axe",
    "value": 15
+  },
+  {
+   "id": "bauta",
+   "name": "Marrean Bauta",
+   "value": 35
   },
   {
    "id": "bench1",
@@ -2185,6 +3017,11 @@
    "value": 2
   },
   {
+   "id": "citrus",
+   "name": "Bitter Oranges",
+   "value": 2
+  },
+  {
    "id": "clay",
    "name": "Clay",
    "value": 0.5
@@ -2230,6 +3067,11 @@
    "value": 1.8
   },
   {
+   "id": "compass",
+   "name": "Lodestone Compass",
+   "value": 90
+  },
+  {
    "id": "copper_ingot",
    "name": "Copper Bar",
    "value": 9
@@ -2238,6 +3080,11 @@
    "id": "copper_ore",
    "name": "Copper Ore",
    "value": 2.5
+  },
+  {
+   "id": "cordial",
+   "name": "Mariner’s Cordial",
+   "value": 20
   },
   {
    "id": "crossbow",
@@ -2283,6 +3130,11 @@
    "id": "felt_hat",
    "name": "Felt Hat",
    "value": 12
+  },
+  {
+   "id": "fever_bark",
+   "name": "Fever-Bark",
+   "value": 14
   },
   {
    "id": "fiddle",
@@ -2417,6 +3269,11 @@
    "value": 21.875
   },
   {
+   "id": "herbs",
+   "name": "Herbs",
+   "value": 1.5
+  },
+  {
    "id": "hide",
    "name": "Raw Hide",
    "value": 2
@@ -2435,6 +3292,11 @@
    "id": "hunting_bow",
    "name": "Hunting Bow",
    "value": 30
+  },
+  {
+   "id": "icon",
+   "name": "Thoolman Icon",
+   "value": 120
   },
   {
    "id": "incense",
@@ -2487,6 +3349,11 @@
    "value": 4
   },
   {
+   "id": "lion_pin",
+   "name": "Glass Lion Brooch",
+   "value": 40
+  },
+  {
    "id": "lockpicks",
    "name": "Lockpicks",
    "value": 25
@@ -2533,6 +3400,11 @@
    "value": 28.125
   },
   {
+   "id": "mastic",
+   "name": "Mastic Tears",
+   "value": 9
+  },
+  {
    "id": "mirror",
    "name": "Marrean Mirror",
    "value": 60
@@ -2541,6 +3413,11 @@
    "id": "needle1",
    "name": "Sewing Table",
    "value": 31.25
+  },
+  {
+   "id": "neroli",
+   "name": "Marrean Neroli",
+   "value": 70
   },
   {
    "id": "o_apple",
@@ -2578,9 +3455,19 @@
    "value": 25
   },
   {
+   "id": "perfume",
+   "name": "Flower-Water",
+   "value": 30
+  },
+  {
    "id": "pickaxe",
    "name": "Pickaxe",
    "value": 18
+  },
+  {
+   "id": "plague_mask",
+   "name": "Plague-Doctor’s Mask",
+   "value": 30
   },
   {
    "id": "potion",
@@ -2591,6 +3478,11 @@
    "id": "primer",
    "name": "Primer of Letters",
    "value": 30
+  },
+  {
+   "id": "purple",
+   "name": "Thoolman Purple",
+   "value": 101.4
   },
   {
    "id": "rapier",
@@ -2718,6 +3610,11 @@
    "value": 26
   },
   {
+   "id": "sea_glass",
+   "name": "Sea-Glass",
+   "value": 0.8
+  },
+  {
    "id": "shawm",
    "name": "Shawm",
    "value": 20
@@ -2764,6 +3661,17 @@
    "value": 20
   },
   {
+   "id": "spectacles",
+   "name": "Spectacles",
+   "value": 75
+  },
+  {
+   "id": "spiced_wine",
+   "name": "Marrean Spiced Wine",
+   "value": 16,
+   "food": true
+  },
+  {
    "id": "spices",
    "name": "Southern Spices",
    "value": 15
@@ -2800,6 +3708,11 @@
    "value": 60
   },
   {
+   "id": "surgeon_kit",
+   "name": "Surgeon’s Case",
+   "value": 35
+  },
+  {
    "id": "sword",
    "name": "Arming Sword",
    "value": 60
@@ -2813,6 +3726,11 @@
    "id": "tabor",
    "name": "Tabor",
    "value": 15
+  },
+  {
+   "id": "theriac",
+   "name": "Theriac",
+   "value": 28
   },
   {
    "id": "tin_ore",
@@ -2848,6 +3766,11 @@
    "id": "veg",
    "name": "Vegetables",
    "value": 0.7
+  },
+  {
+   "id": "windows",
+   "name": "Glazed Windows",
+   "value": 200
   },
   {
    "id": "wine",
@@ -4470,6 +5393,663 @@
      ]
     }
    ]
+  },
+  {
+   "id": "person_marre_tonina",
+   "name": "Tonina Sgarb",
+   "title": "Scrivener of the Calle",
+   "hint": "a woman with a black thumb and a pen behind each ear",
+   "meet": "She blots the line before she looks up. “Tonina Sgarb. I copy what I am given and forget it by supper. That is the trade.”",
+   "talk": [
+    "Tonina can tell a clerk of the Council from a clerk of the Cerdans by the paper they bring.",
+    "“A fair hand is worth more than a fair face here,” Tonina says. “Faces change at Carnevale.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_calle_inchiostro",
+      "desks"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_calle_inchiostro",
+      "stair"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_bortolo",
+   "name": "Bortolo Pes",
+   "title": "Measurer of Grain",
+   "hint": "a broad man with chaff in his beard and a tally-board on a cord",
+   "meet": "“Stand off the plank,” he says, and then, when the sack has passed: “Bortolo Pes. I measure. The Republic believes me, so the bargemen must.”",
+   "talk": [
+    "Bortolo says the barges ride lower in a good year, and that he can read the harvest from the bridge.",
+    "“Level measure,” Bortolo says. “Not heaped, not shaken. Level.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_molo_grano",
+      "quay"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_molo_grano",
+      "measure"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_marietta",
+   "name": "Marietta Zan",
+   "title": "Lion-Keeper of the Matron",
+   "hint": "an old woman polishing a stone lion with her sleeve",
+   "meet": "“Rub his nose,” she says. “This one you may.” She watches you do it. “Marietta Zan. I keep the glass ones. These keep me.”",
+   "talk": [
+    "Marietta has dusted the sleeping lion every morning for forty years and says he has never once stirred.",
+    "“One awake, one asleep,” Marietta says. “That is how to run a city.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_campo_leoni",
+      "well"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_campo_leoni",
+      "houses"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_nane",
+   "name": "Nane Tosat",
+   "title": "Boatman of the Riva",
+   "hint": "a boatman resting on his oar with his cap over his eyes",
+   "meet": "He lifts the cap an inch. “Nane Tosat. I carry bread in and letters out. I do not read either.”",
+   "talk": [
+    "Nane knows which families have been waiting a week and which a year, by where they moor.",
+    "“In summer the roof is the punishment,” Nane says. “The judge only chooses how long.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_riva_ombra",
+      "steps"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_riva_ombra",
+      "grating"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_catina",
+   "name": "Catina Fol",
+   "title": "Keeper of the Bauta",
+   "hint": "a woman who fills your cup without asking and listens without seeming to",
+   "meet": "She sets the cup down. “Catina Fol. Drink, pay, and talk about the weather. Everyone here does.”",
+   "talk": [
+    "Catina can tell who is watching whom by which bench they choose.",
+    "“I hear nothing,” Catina says. “I am paid twice for it.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_osteria_bauta",
+      "taproom"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_osteria_bauta",
+      "snug"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_menego",
+   "name": "Menego Rui",
+   "title": "Boatwright of the Squero",
+   "hint": "a man sighting along a plank with one eye shut",
+   "meet": "“Crooked,” he says, pleased, and puts the plank down. “Menego Rui. If it were straight it would go in circles.”",
+   "talk": [
+    "Menego builds one boat in a season and says the Arsenal builds a galley a day because nobody has to love a galley.",
+    "“Eight woods in a gondola,” Menego says. “And one man’s temper.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_squero_storto",
+      "slip"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_squero_storto",
+      "loft"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_betta",
+   "name": "Betta Guss",
+   "title": "Fishwife of the Pescaria",
+   "hint": "a woman gutting sardines faster than you can count them",
+   "meet": "“Fresh,” she says, before you ask. “Betta Guss. If it winks at you it is too fresh.”",
+   "talk": [
+    "Betta knows which cook buys for which palazzo, and what each house is eating less of this month.",
+    "“The Ten Families eat what I say is good,” Betta says. “They think their cooks choose.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_pescaria",
+      "slabs"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_pescaria",
+      "boats"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_zuane",
+   "name": "Zuane Tinto",
+   "title": "Dyer of the Corte",
+   "hint": "a man whose hands are blue to the wrist and red above it",
+   "meet": "He holds up both hands. “Zuane Tinto. Do not shake them. It does not come off.”",
+   "talk": [
+    "Zuane will not say which house’s colour is hardest to match, only that one of them never pays on time.",
+    "“Every house has a colour,” Zuane says. “I am the only man in Marre who wears them all.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_corte_tinta",
+      "vats"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_corte_tinta",
+      "lines"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_lucieta",
+   "name": "Lucieta Bas",
+   "title": "Mask-Maker of the Ponte",
+   "hint": "a young woman painting a white mask with a brush of three hairs",
+   "meet": "“Hold still,” she says, and measures your face with her thumb. “Lucieta Bas. You would suit a plain one. Most people do.”",
+   "talk": [
+    "Lucieta remembers every face she has fitted, which is more than her customers would like.",
+    "“By law nobody may ask who you are in a mask,” Lucieta says. “Nobody said I could not know.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_ponte_maschere",
+      "stalls"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_ponte_maschere",
+      "span"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_anzolo",
+   "name": "Anzolo Fri",
+   "title": "Mirror-Dealer of the Fondamenta",
+   "hint": "a thin man who looks at your reflection instead of at you",
+   "meet": "He speaks to the glass. “Anzolo Fri. Every mirror here is honest. That is why they are dear.”",
+   "talk": [
+    "Anzolo can name the master of any mirror by the colour of its silver.",
+    "“A cheap mirror flatters,” Anzolo says. “Ours do not, and people pay for it. Explain that.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_fondamenta_specchi",
+      "shops"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_fondamenta_specchi",
+      "landing"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_stae",
+   "name": "Stae Dolfi",
+   "title": "Oarsman of the Health Boat",
+   "hint": "a sunburnt man who keeps an oar’s length from everyone",
+   "meet": "He holds up a hand before you come closer. “Stae Dolfi. I row the officers round. Stay upwind and we shall get on.”",
+   "talk": [
+    "Stae counts days for forty ships at once and has never been wrong by one.",
+    "“Day thirty-nine is the long one,” Stae says."
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_waiting_roads",
+      "guardboat"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_waiting_roads",
+      "anchorage"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_tita",
+   "name": "Tita Nard",
+   "title": "Corpse-Bearer of the Quiet Isle",
+   "hint": "a big, gentle man with lime on his boots and a ledger under his arm",
+   "meet": "He takes off his cap. “Tita Nard. I write them all down. Somebody comes asking, in the end.”",
+   "talk": [
+    "Tita says the island is the only place in the lagoon where nobody lies to him.",
+    "“A name and a day,” Tita says. “It is not much. It is more than the sea gives.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_quiet_isle",
+      "pits"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_quiet_isle",
+      "hut"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_agnesina",
+   "name": "Agnesina Rov",
+   "title": "Herb-Wife of the Simples",
+   "hint": "a small woman in a straw hat, crushing a leaf under your nose",
+   "meet": "“Smell,” she says. “Now you will not forget it. Agnesina Rov. Half of physic is not picking the wrong one.”",
+   "talk": [
+    "Agnesina sends a basket to the wards every dawn and gets it back empty every dusk.",
+    "“The fever-bark comes from across the sea,” Agnesina says. “Everything else comes from me.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_isle_of_simples",
+      "beds"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_isle_of_simples",
+      "stillroom"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_checo",
+   "name": "Checo Bisat",
+   "title": "Eel-Man of the Shallows",
+   "hint": "a wiry man hauling a wicker trap hand over hand",
+   "meet": "“Wet feet,” he says, looking at yours. “Checo Bisat. Sit on the dry side. There is one.”",
+   "talk": [
+    "Checo knows the lagoon’s channels by the colour of the water and has never owned a chart.",
+    "“The city thinks the lagoon is its moat,” Checo says. “It is its larder.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_stilt_huts",
+      "platform"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_stilt_huts",
+      "traps"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_iseppo",
+   "name": "Iseppo Lanz",
+   "title": "Pilot of the Bar",
+   "hint": "a grey man watching the water as if it owed him money",
+   "meet": "He does not turn round. “Iseppo Lanz. The bar moved a boat’s length last winter. Nobody told the charts.”",
+   "talk": [
+    "Iseppo has brought in every spice-galley for twenty autumns and says they ride lower each year.",
+    "“A foreign captain asks how deep,” Iseppo says. “A wise one asks me to take the helm.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_pilots_rest",
+      "lookout"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_pilots_rest",
+      "boathouse"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_gasparo",
+   "name": "Gasparo Ton",
+   "title": "Barge-Master of the Stair",
+   "hint": "a heavy man shouting at a barge as if it could hear",
+   "meet": "He stops shouting to look you over. “Gasparo Ton. If it floats and it is slow, it is mine.”",
+   "talk": [
+    "Gasparo says the city would starve in a week without his barges and has said so to a senator.",
+    "“Glass goes out on galleys,” Gasparo says. “Supper comes in on me.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_barge_stair",
+      "stair"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_barge_stair",
+      "sheds"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_orsetta",
+   "name": "Orsetta Brun",
+   "title": "Silk-Wife of the Sheds",
+   "hint": "a woman carrying a tray of leaves as if it were asleep",
+   "meet": "“Softly,” she says. “They can hear you.” She sets the tray down. “Orsetta Brun. No shouting, no smoke, no thunder if you can help it.”",
+   "talk": [
+    "Orsetta has not slept a whole night in silk season since she was a girl.",
+    "“The city wears it,” Orsetta says. “We raise it. Ask which is harder.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_silk_sheds",
+      "sheds"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_silk_sheds",
+      "reels"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_bepi",
+   "name": "Bepi Sguaz",
+   "title": "Keeper of the Chiusa",
+   "hint": "a man in mud to the knee with a heron standing beside him",
+   "meet": "“Mind the heron,” he says. “He was here first. Bepi Sguaz. I let the water in and I let it out.”",
+   "talk": [
+    "Bepi is offered a bribe by every farmer each spring and takes them all, in order.",
+    "“Water is patient,” Bepi says. “Farmers are not. I stand between.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_chiusa_vecchia",
+      "gates"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_chiusa_vecchia",
+      "dyke"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_nineta",
+   "name": "Nineta Scoa",
+   "title": "Cullet-Picker of Ash Isle",
+   "hint": "a girl with rag-bound hands and a sack that clinks",
+   "meet": "She shakes the sack at you. “Nineta Scoa. Do not pick anything up. You will bleed, and then you will know why.”",
+   "talk": [
+    "Nineta can tell which furnace a shard came from by its green.",
+    "“They burn it, they break it, they buy it back,” Nineta says. “I am the only one who gets paid twice.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_ash_isle",
+      "tips"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_ash_isle",
+      "sieves"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_vettor",
+   "name": "Vettor Stagn",
+   "title": "Captain of the Guard Boats",
+   "hint": "a patient man counting lit windows on the far shore",
+   "meet": "He finishes counting first. “Vettor Stagn. Every master is at his furnace tonight. That is all I am asked.”",
+   "talk": [
+    "Vettor has rowed round the Isles for eleven years and knows every glassmaker by his silhouette.",
+    "“They are the richest prisoners in the world,” Vettor says. “I am the poorest gaoler.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "place_marre_guard_boats",
+      "pontoon"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_guard_boats",
+      "watch"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_lunardo",
+   "name": "Lunardo Zorz",
+   "title": "Keeper of the Files",
+   "hint": "a stooped man carrying a file box as if it were a child",
+   "meet": "“Do not touch,” he says, mildly. “Ask. Lunardo Zorz. Everything in this room is in order, and I am the order.”",
+   "talk": [
+    "Lunardo can find any name in the lagoon in the time it takes to say it.",
+    "“A file is a person who cannot argue,” Lunardo says. “Be fair to it.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "marre_palace",
+      "cerdans"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "place_marre_osteria_bauta",
+      "taproom"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_chiara",
+   "name": "Chiara Dand",
+   "title": "Constable of the Cerdans",
+   "hint": "a square-shouldered woman who stands where she can see both doors",
+   "meet": "“You walk too fast,” she says. “People look at fast.” A nod. “Chiara Dand. Constable. Slow down and you will see more.”",
+   "talk": [
+    "Chiara has walked the Piazza every day for nine years and can tell a stranger by his shoes.",
+    "“Arrest the right one,” Chiara says. “The Capo forgives slow. He does not forgive wrong.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "marre_palace",
+      "council"
+     ],
+     "h": [
+      8,
+      18
+     ]
+    },
+    {
+     "at": [
+      "marre_palace",
+      "cerdans"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_felicita",
+   "name": "Felicita Brol",
+   "title": "Mirror-Scryer of the Cerdans",
+   "hint": "a pale young woman who blinks in daylight like someone come up from a cellar",
+   "meet": "“You are standing in my light,” she says, though the room has none. “Felicita Brol. I watch the glasses. Do not ask what I see.”",
+   "talk": [
+    "Felicita says the mirrors show what is there, which on feast nights is less than you would think.",
+    "“The Blind Mirror sees further than any of us,” Felicita says. “I only see sooner.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "marre_palace",
+      "mirrorroom"
+     ]
+    }
+   ]
   }
  ],
  "activities": [
@@ -4542,6 +6122,77 @@
    "standing": 2,
    "effects": {
     "vigour": -6
+   }
+  },
+  {
+   "id": "activity_cerdans_night_reports",
+   "name": "Read the night reports",
+   "text": "What the informers saw, in forty hands, most of it nothing.",
+   "place": "marre_palace",
+   "sub": "cerdans",
+   "subName": "The Office of the Cerdans",
+   "from": 6,
+   "to": 9,
+   "hours": 1,
+   "skill": "skill_insight",
+   "post": "post_cerdans_inquirer",
+   "standing": 1,
+   "effects": {
+    "vigour": -2
+   }
+  },
+  {
+   "id": "activity_cerdans_walk_piazza",
+   "name": "Walk the Piazza",
+   "text": "Twice round the square at a stroll, noticing who notices you.",
+   "place": "marre_palace",
+   "sub": "council",
+   "subName": "The Hall of the Great Council",
+   "from": 9,
+   "to": 14,
+   "hours": 2,
+   "skill": "skill_insight",
+   "level": 6,
+   "post": "post_cerdans_inquirer",
+   "standing": 1,
+   "effects": {
+    "vigour": -4
+   }
+  },
+  {
+   "id": "activity_cerdans_petty_complaints",
+   "name": "Hear petty complaints",
+   "text": "A neighbour, a debt, a wife, a cat. Write each one down as if it mattered. One will.",
+   "place": "marre_palace",
+   "sub": "cerdans",
+   "subName": "The Office of the Cerdans",
+   "from": 13,
+   "to": 17,
+   "hours": 2,
+   "skill": "skill_insight",
+   "level": 6,
+   "post": "post_cerdans_inquirer",
+   "standing": 1,
+   "effects": {
+    "vigour": -4
+   }
+  },
+  {
+   "id": "activity_cerdans_write_files",
+   "name": "Write up the files",
+   "text": "Name, street, habit, friends. Leave out what you think and put in what you saw.",
+   "place": "marre_palace",
+   "sub": "cerdans",
+   "subName": "The Office of the Cerdans",
+   "from": 17,
+   "to": 21,
+   "hours": 1,
+   "skill": "skill_insight",
+   "dc": 12,
+   "post": "post_cerdans_inquirer",
+   "standing": 2,
+   "effects": {
+    "vigour": -2
    }
   },
   {
@@ -4845,6 +6496,310 @@
    "to": 22,
    "hours": 3,
    "skill": "skill_insight",
+   "effects": {
+    "vigour": -9
+   }
+  },
+  {
+   "id": "activity_calle_inchiostro_copy_fair",
+   "name": "Copy a page fair",
+   "text": "A page of someone else’s words, set down without one of your own.",
+   "place": "place_marre_calle_inchiostro",
+   "sub": "desks",
+   "subName": "The Copy-Desks",
+   "from": 8,
+   "to": 17,
+   "hours": 2,
+   "skill": "skill_letters",
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_molo_grano_carry_grain",
+   "name": "Carry sacks ashore",
+   "text": "Down the plank with a sack on your shoulder, and the measurer counting.",
+   "place": "place_marre_molo_grano",
+   "sub": "quay",
+   "subName": "The Grain Quay",
+   "from": 6,
+   "to": 14,
+   "hours": 2,
+   "skill": "skill_athletics",
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_campo_leoni_trim_lamps",
+   "name": "Trim the green lamps",
+   "text": "Wick, oil and glass, house by house round the square.",
+   "place": "place_marre_campo_leoni",
+   "sub": "houses",
+   "subName": "The Keepers’ Houses",
+   "from": 16,
+   "to": 20,
+   "hours": 1,
+   "skill": "skill_devotion",
+   "effects": {
+    "vigour": -3
+   }
+  },
+  {
+   "id": "activity_riva_ombra_carry_parcels",
+   "name": "Carry parcels to the grating",
+   "text": "Bread, a clean shirt, a note folded small. Hand each one in and say the name.",
+   "place": "place_marre_riva_ombra",
+   "sub": "steps",
+   "subName": "The Water-Steps",
+   "from": 7,
+   "to": 18,
+   "hours": 1,
+   "skill": "skill_seamanship",
+   "effects": {
+    "vigour": -3
+   }
+  },
+  {
+   "id": "activity_osteria_bauta_listen_benches",
+   "name": "Listen along the benches",
+   "text": "A cup that lasts an hour, and both ears open.",
+   "place": "place_marre_osteria_bauta",
+   "sub": "taproom",
+   "subName": "The Front Room",
+   "from": 18,
+   "to": 23,
+   "hours": 2,
+   "skill": "skill_streetwise",
+   "dc": 12,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_squero_storto_pitch_hull",
+   "name": "Pitch a hull",
+   "text": "Hot pitch and a long brush, seam by seam.",
+   "place": "place_marre_squero_storto",
+   "sub": "slip",
+   "subName": "The Slip",
+   "from": 7,
+   "to": 16,
+   "hours": 2,
+   "skill": "skill_woodwork",
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_pescaria_gut_sardines",
+   "name": "Gut sardines",
+   "text": "Thumb in, thumb out, into the basket. Mind the knife.",
+   "place": "place_marre_pescaria",
+   "sub": "slabs",
+   "subName": "The Slabs",
+   "from": 6,
+   "to": 10,
+   "hours": 2,
+   "skill": "skill_fishing",
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_corte_tinta_stir_vats",
+   "name": "Stir the vats",
+   "text": "A long paddle, slow and even, or the colour takes in streaks.",
+   "place": "place_marre_corte_tinta",
+   "sub": "vats",
+   "subName": "The Vats",
+   "from": 6,
+   "to": 15,
+   "hours": 2,
+   "skill": "skill_clothwork",
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_ponte_maschere_gild_masks",
+   "name": "Gild a row of masks",
+   "text": "Size, leaf, and a breath to lay it. Do not sneeze.",
+   "place": "place_marre_ponte_maschere",
+   "sub": "stalls",
+   "subName": "The Stalls",
+   "from": 9,
+   "to": 18,
+   "hours": 2,
+   "skill": "skill_stagecraft",
+   "dc": 12,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_fondamenta_specchi_polish_mirrors",
+   "name": "Polish the stock",
+   "text": "Chalk and a soft cloth, in circles, until you can see what you would rather not.",
+   "place": "place_marre_fondamenta_specchi",
+   "sub": "shops",
+   "subName": "The Mirror Shops",
+   "from": 8,
+   "to": 17,
+   "hours": 1,
+   "skill": "skill_trade",
+   "effects": {
+    "vigour": -3
+   }
+  },
+  {
+   "id": "activity_waiting_roads_row_line",
+   "name": "Row the line",
+   "text": "Ship to ship at an oar’s length, while the officer calls up his questions.",
+   "place": "place_marre_waiting_roads",
+   "sub": "guardboat",
+   "subName": "The Health Boat",
+   "from": 5,
+   "to": 9,
+   "hours": 2,
+   "skill": "skill_seamanship",
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_quiet_isle_keep_list",
+   "name": "Keep the list",
+   "text": "Name, ship and day, in a fair hand, and the bell rung once for each.",
+   "place": "place_marre_quiet_isle",
+   "sub": "hut",
+   "subName": "The List-Keeper’s Hut",
+   "from": 7,
+   "to": 16,
+   "hours": 1,
+   "skill": "skill_letters",
+   "effects": {
+    "vigour": -3
+   }
+  },
+  {
+   "id": "activity_isle_of_simples_gather_simples",
+   "name": "Gather simples",
+   "text": "The right leaf at the right hour, into the right basket.",
+   "place": "place_marre_isle_of_simples",
+   "sub": "beds",
+   "subName": "The Physic Beds",
+   "from": 6,
+   "to": 11,
+   "hours": 1,
+   "skill": "skill_herblore",
+   "dc": 12,
+   "effects": {
+    "vigour": -3
+   }
+  },
+  {
+   "id": "activity_stilt_huts_lift_traps",
+   "name": "Lift the eel traps",
+   "text": "Hand over hand up the line, and a quick grip behind the head.",
+   "place": "place_marre_stilt_huts",
+   "sub": "traps",
+   "subName": "The Eel Traps",
+   "from": 16,
+   "to": 20,
+   "hours": 2,
+   "skill": "skill_fishing",
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_pilots_rest_sound_channel",
+   "name": "Sound the channel",
+   "text": "Lead over the bow, call the mark, and again.",
+   "place": "place_marre_pilots_rest",
+   "sub": "boathouse",
+   "subName": "The Boathouse",
+   "from": 6,
+   "to": 15,
+   "hours": 2,
+   "skill": "skill_seamanship",
+   "dc": 12,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_barge_stair_load_barge",
+   "name": "Load a barge",
+   "text": "Bales to the plank, plank to the hold, and trim her level.",
+   "place": "place_marre_barge_stair",
+   "sub": "stair",
+   "subName": "The Stair",
+   "from": 6,
+   "to": 16,
+   "hours": 2,
+   "skill": "skill_athletics",
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_silk_sheds_feed_worms",
+   "name": "Feed the worms",
+   "text": "Fresh leaves on every tray, the old ones lifted away, and not a sound.",
+   "place": "place_marre_silk_sheds",
+   "sub": "sheds",
+   "subName": "The Worm Sheds",
+   "from": 5,
+   "to": 21,
+   "hours": 2,
+   "skill": "skill_husbandry",
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_chiusa_vecchia_turn_wheel",
+   "name": "Turn the sluice wheel",
+   "text": "Shoulder to the spoke, and round, and the gate comes up a finger.",
+   "place": "place_marre_chiusa_vecchia",
+   "sub": "gates",
+   "subName": "The Sluice Gates",
+   "from": 6,
+   "to": 12,
+   "hours": 1,
+   "skill": "skill_athletics",
+   "effects": {
+    "vigour": -3
+   }
+  },
+  {
+   "id": "activity_ash_isle_sift_cullet",
+   "name": "Sift for cullet",
+   "text": "Shake the sieve, pick the glass, and keep your fingers.",
+   "place": "place_marre_ash_isle",
+   "sub": "sieves",
+   "subName": "The Sieves",
+   "from": 7,
+   "to": 17,
+   "hours": 2,
+   "skill": "skill_kilncraft",
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_guard_boats_row_circuit",
+   "name": "Row the circuit",
+   "text": "Once round the Isles, slowly, counting lamps.",
+   "place": "place_marre_guard_boats",
+   "sub": "pontoon",
+   "subName": "The Pontoon",
+   "from": 18,
+   "to": 23,
+   "hours": 3,
+   "skill": "skill_seamanship",
    "effects": {
     "vigour": -9
    }

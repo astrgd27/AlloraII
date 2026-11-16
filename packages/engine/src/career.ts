@@ -96,8 +96,16 @@ export function takeCase(state: GameState, world: World, id: string): void {
   state.venture = { case: id, step: 0, quality: 0, strain: 0, working: null };
 }
 
+/** An accusation starts harder than the case, and each clue (point of quality) makes it surer. */
+export const ACCUSE = { harder: 5, perClue: 2, wrongStanding: 8 };
+
 const specFor = (state: GameState, post: Post, c: Case, approach: Approach) => ({
-  dc: c.dc + approach.dc,
+  dc:
+    c.dc +
+    approach.dc +
+    (post.work[state.venture?.step ?? -1]?.accuse
+      ? ACCUSE.harder - ACCUSE.perClue * Math.max(0, state.venture?.quality ?? 0)
+      : 0),
   skillLevel: state.skills[post.skill]?.level ?? 0,
   // Past the strain limit, you press on at disadvantage.
   advantage: (state.venture && state.venture.strain >= STRAIN_LIMIT ? -1 : 0) as -1 | 0,
@@ -168,6 +176,11 @@ export function workHour(state: GameState, world: World): { finished?: Work; deg
   const won = result.degree === 'success' || result.degree === 'triumph';
   venture.quality += QUALITY[result.degree] + (approach.bold && won ? 1 : 0);
   venture.strain += STRAIN[result.degree];
+  if (step.accuse && !won) {
+    // A wrong accusation: the case is spoiled and the office remembers.
+    venture.quality = Math.min(venture.quality, -1);
+    held.standing = Math.max(0, held.standing - ACCUSE.wrongStanding);
+  }
   const skill = (state.skills[post.skill] ??= newSkill());
   gain(
     skill,

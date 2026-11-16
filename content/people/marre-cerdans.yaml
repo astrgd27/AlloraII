@@ -1,0 +1,53 @@
+# The Office of the Cerdans, below the Capo and the Blind Mirror.
+- id: person_marre_lunardo
+  origin: allora2
+  kind: person
+  roots: [marre_palace, o_cerdans]
+  name: Lunardo Zorz
+  title: Keeper of the Files
+  region: marre
+  home: marre_palace
+  group: o_cerdans
+  hint: a stooped man carrying a file box as if it were a child
+  meet: '“Do not touch,” he says, mildly. “Ask. Lunardo Zorz. Everything in this room is in order, and I am the order.”'
+  talk:
+    - 'Lunardo can find any name in the lagoon in the time it takes to say it.'
+    - '“A file is a person who cannot argue,” Lunardo says. “Be fair to it.”'
+  sched:
+    - at: [marre_palace, cerdans]
+      h: [6, 20]
+    - at: [place_marre_osteria_bauta, taproom]
+- id: person_marre_chiara
+  origin: allora2
+  kind: person
+  roots: [marre_palace, o_cerdans]
+  name: Chiara Dand
+  title: Constable of the Cerdans
+  region: marre
+  home: marre_palace
+  group: o_cerdans
+  hint: a square-shouldered woman who stands where she can see both doors
+  meet: '“You walk too fast,” she says. “People look at fast.” A nod. “Chiara Dand. Constable. Slow down and you will see more.”'
+  talk:
+    - 'Chiara has walked the Piazza every day for nine years and can tell a stranger by his shoes.'
+    - '“Arrest the right one,” Chiara says. “The Capo forgives slow. He does not forgive wrong.”'
+  sched:
+    - at: [marre_palace, council]
+      h: [8, 18]
+    - at: [marre_palace, cerdans]
+- id: person_marre_felicita
+  origin: allora2
+  kind: person
+  roots: [marre_palace, o_cerdans]
+  name: Felicita Brol
+  title: Mirror-Scryer of the Cerdans
+  region: marre
+  home: marre_palace
+  group: o_cerdans
+  hint: a pale young woman who blinks in daylight like someone come up from a cellar
+  meet: '“You are standing in my light,” she says, though the room has none. “Felicita Brol. I watch the glasses. Do not ask what I see.”'
+  talk:
+    - 'Felicita says the mirrors show what is there, which on feast nights is less than you would think.'
+    - '“The Blind Mirror sees further than any of us,” Felicita says. “I only see sooner.”'
+  sched:
+    - at: [marre_palace, mirrorroom]

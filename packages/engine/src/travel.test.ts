@@ -119,8 +119,8 @@ describe('the Phase 0 world: Eintenn and Marre', () => {
     const [farthest, time] = Object.entries(hours).sort((a, b) => b[1] - a[1])[0]!;
     const engine = new Engine(newGame(1, 0));
     engine.handle({ type: 'travel', to: farthest }, 0);
-    // The road takes its hours, plus the nights spent in camp on the way.
-    engine.run(time);
+    // The way takes its hours, plus any nights spent in camp on land.
+    engine.run(time - 1);
     expect(engine.state.journey).not.toBeNull();
     engine.run(time * 2);
     expect(engine.state).toMatchObject({ place: farthest, journey: null });

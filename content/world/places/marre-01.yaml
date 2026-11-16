@@ -1,0 +1,369 @@
+# Marre, first batch: twenty small places round the Piazza, the city, the Lazaretto, the mainland and the Glass Isles.
+- id: place_marre_calle_inchiostro
+  origin: allora2
+  kind: place
+  roots:
+    - marre_palace
+    - o_cerdans
+  name: "Calle dell'Inchiostro"
+  place_kind: site
+  region: marre
+  x: 41
+  y: 47
+  description: 'A narrow lane behind the Piazza where scriveners copy for the Council and the Cerdans by the page. Every window has a desk in it and every desk a lamp.'
+  subs:
+    - id: desks
+      name: 'The Copy-Desks'
+      description: 'Rows of slanted desks, and nobody speaking.'
+    - id: stair
+      name: 'The Paper Stair'
+      description: 'Bales of rag-paper stacked to the landing.'
+- id: place_marre_molo_grano
+  origin: allora2
+  kind: place
+  roots:
+    - marre_palace
+  name: 'Molo del Grano'
+  place_kind: site
+  region: marre
+  x: 46
+  y: 41
+  description: 'The quay at the lagoon end of the Piazza where the grain barges tie up. The Republic counts every sack ashore, because a hungry city is not a serene one.'
+  subs:
+    - id: quay
+      name: 'The Grain Quay'
+      description: 'Barges three deep, and a plank to each.'
+    - id: measure
+      name: 'The Measuring Shed'
+      description: 'Bronze measures chained to the wall, stamped with the lion.'
+- id: place_marre_campo_leoni
+  origin: allora2
+  kind: place
+  roots:
+    - marre_palace
+    - c_dolma
+  name: 'Campo dei Due Leoni'
+  place_kind: site
+  region: marre
+  x: 42
+  y: 41
+  description: 'A small square behind the Basilica where the lion-keepers of the Serene Matron live. Two worn stone lions sit at its well, copies of the glass ones nobody may touch.'
+  subs:
+    - id: well
+      name: 'The Lion Well'
+      description: 'A well-head between two stone lions, their noses rubbed smooth.'
+    - id: houses
+      name: 'The Keepers’ Houses'
+      description: 'A row of narrow houses, each with a green lamp.'
+- id: place_marre_riva_ombra
+  origin: allora2
+  kind: place
+  roots:
+    - marre_palace
+  name: "Riva dell'Ombra"
+  place_kind: site
+  region: marre
+  x: 47
+  y: 46
+  description: 'The shaded quay under the palace roof, where families wait in boats for word of someone in the Leads. Nobody raises their voice here.'
+  subs:
+    - id: steps
+      name: 'The Water-Steps'
+      description: 'Green steps, and boats that do not tie up.'
+    - id: grating
+      name: 'The Low Grating'
+      description: 'A barred window at the waterline, for parcels.'
+- id: place_marre_osteria_bauta
+  origin: allora2
+  kind: place
+  roots:
+    - marre_palace
+    - o_cerdans
+  name: 'Osteria della Bauta'
+  place_kind: site
+  region: marre
+  x: 45
+  y: 49
+  description: 'A wine-shop a bridge away from the black door, where informers drink and are careful what about. Its sign is a white mask with no mouth.'
+  subs:
+    - id: taproom
+      name: 'The Front Room'
+      description: 'Low benches, spiced wine and long silences.'
+    - id: snug
+      name: 'The Room Behind'
+      description: 'One table, one lamp, and a door to the canal.'
+- id: place_marre_squero_storto
+  origin: allora2
+  kind: place
+  roots:
+    - marre_city
+  name: 'Squero Storto'
+  place_kind: site
+  region: marre
+  x: 53
+  y: 56
+  description: 'A boatyard on a bent side-canal where gondolas are built by eye, each a hand’s breadth crooked so that one oar drives it straight.'
+  subs:
+    - id: slip
+      name: 'The Slip'
+      description: 'A black hull on trestles, and pitch on the boil.'
+    - id: loft
+      name: 'The Rib Loft'
+      description: 'Oak ribs hung to season, each chalked with a name.'
+- id: place_marre_pescaria
+  origin: allora2
+  kind: place
+  roots:
+    - marre_city
+  name: 'The Pescaria'
+  place_kind: site
+  region: marre
+  x: 58
+  y: 49
+  description: 'The fish market by the Rialto, loud before dawn and washed down by the third hour. Everything on the slabs was in the lagoon yesterday.'
+  subs:
+    - id: slabs
+      name: 'The Slabs'
+      description: 'Marble slabs, running water and silver heaps.'
+    - id: boats
+      name: 'The Night Boats'
+      description: 'Fishing boats unloading by lantern.'
+- id: place_marre_corte_tinta
+  origin: allora2
+  kind: place
+  roots:
+    - marre_city
+  name: 'Corte della Tinta'
+  place_kind: site
+  region: marre
+  x: 59
+  y: 55
+  description: 'A dyers’ court where the canal runs three colours by noon. Silk from the Terraferma comes in white and leaves in the colours of the great houses.'
+  subs:
+    - id: vats
+      name: 'The Vats'
+      description: 'Steaming vats, and arms stained to the elbow.'
+    - id: lines
+      name: 'The Drying Lines'
+      description: 'Silk hung across the court like flags.'
+- id: place_marre_ponte_maschere
+  origin: allora2
+  kind: place
+  roots:
+    - marre_city
+    - marre_canal
+  name: 'Ponte delle Maschere'
+  place_kind: site
+  region: marre
+  x: 62
+  y: 50
+  description: 'A covered bridge of mask-makers’ stalls between the city and the great palazzi. A hundred white faces hang in every window.'
+  subs:
+    - id: stalls
+      name: 'The Stalls'
+      description: 'Masks drying on pegs, gilt and plain.'
+    - id: span
+      name: 'The Span'
+      description: 'The crown of the bridge, and the best view of who is going where.'
+- id: place_marre_fondamenta_specchi
+  origin: allora2
+  kind: place
+  roots:
+    - marre_canal
+    - marre_isles
+  name: 'Fondamenta degli Specchi'
+  place_kind: site
+  region: marre
+  x: 70
+  y: 42
+  description: 'The mirror-sellers’ quay, facing the Glass Isles across the water. The glass comes over by guarded barge; the men who made it do not.'
+  subs:
+    - id: shops
+      name: 'The Mirror Shops'
+      description: 'Shop after shop of your own face.'
+    - id: landing
+      name: 'The Guarded Landing'
+      description: 'Where the glass barges unload under seal.'
+- id: place_marre_waiting_roads
+  origin: allora2
+  kind: place
+  roots:
+    - lazaretto
+  name: 'The Waiting Roads'
+  place_kind: site
+  region: marre
+  x: 27
+  y: 58
+  description: 'The anchorage off the Lazaretto where ships from the east ride out their forty days. From the island they look like a town that is not allowed ashore.'
+  subs:
+    - id: anchorage
+      name: 'The Anchorage'
+      description: 'Ships at two anchors, hatches open to the air.'
+    - id: guardboat
+      name: 'The Health Boat'
+      description: 'A grey boat that rows the line at dawn and dusk.'
+- id: place_marre_quiet_isle
+  origin: allora2
+  kind: place
+  roots:
+    - lazaretto
+  name: 'The Quiet Isle'
+  place_kind: site
+  region: marre
+  x: 20
+  y: 66
+  description: 'A low island south of the Lazaretto where its dead are buried in lime. One man lives on it and keeps the list.'
+  subs:
+    - id: pits
+      name: 'The Lime Pits'
+      description: 'Long white trenches, and gulls that will not land.'
+    - id: hut
+      name: 'The List-Keeper’s Hut'
+      description: 'A hut, a ledger and a bell.'
+- id: place_marre_isle_of_simples
+  origin: allora2
+  kind: place
+  roots:
+    - lazaretto
+  name: 'The Isle of Simples'
+  place_kind: site
+  region: marre
+  x: 28
+  y: 66
+  description: 'A walled physic garden on its own islet, which grows what the Spezieria cannot wait a season’s sailing for.'
+  subs:
+    - id: beds
+      name: 'The Physic Beds'
+      description: 'Square beds, each with a slate.'
+    - id: stillroom
+      name: 'The Still-Room'
+      description: 'Copper stills and a smell that clears the head.'
+- id: place_marre_stilt_huts
+  origin: allora2
+  kind: place
+  roots:
+    - marre_palace
+    - lazaretto
+  name: 'The Stilt Huts'
+  place_kind: site
+  region: marre
+  x: 36
+  y: 54
+  description: 'Fishermen’s huts on stilts in the middle of the lagoon, an hour from anywhere. The eel-men live on them from spring to autumn.'
+  subs:
+    - id: platform
+      name: 'The Net Platform'
+      description: 'Nets drying, and a brazier on a slate.'
+    - id: traps
+      name: 'The Eel Traps'
+      description: 'Wicker traps on a line, lifted at dusk.'
+- id: place_marre_pilots_rest
+  origin: allora2
+  kind: place
+  roots:
+    - lazaretto
+    - wp_lighthouse
+  name: "Pilots' Rest"
+  place_kind: site
+  region: marre
+  x: 34
+  y: 70
+  description: 'The pilot station at the lagoon mouth. No ship crosses the bar without a Marrean pilot, and the Republic means it that way.'
+  subs:
+    - id: lookout
+      name: 'The Lookout'
+      description: 'A tower of four poles and a platform.'
+    - id: boathouse
+      name: 'The Boathouse'
+      description: 'Six-oared pilot boats, kept wet.'
+- id: place_marre_barge_stair
+  origin: allora2
+  kind: place
+  roots:
+    - terraferma
+  name: 'The Barge Stair'
+  place_kind: site
+  region: marre
+  x: 14
+  y: 44
+  description: 'The landing where the mainland barges load for the city: rice, silk, firewood and wine, and the Families going out to their villas in summer.'
+  subs:
+    - id: stair
+      name: 'The Stair'
+      description: 'Wide stone steps, half of them under water.'
+    - id: sheds
+      name: 'The Toll Sheds'
+      description: 'Where every bale is counted for the Republic.'
+- id: place_marre_silk_sheds
+  origin: allora2
+  kind: place
+  roots:
+    - terraferma
+  name: 'The Silk Sheds'
+  place_kind: village
+  region: marre
+  x: 10
+  y: 36
+  description: 'A hamlet among the mulberry groves where the worms are fed day and night for six weeks, and the whole place holds its breath.'
+  subs:
+    - id: sheds
+      name: 'The Worm Sheds'
+      description: 'Trays to the rafters, and a sound like rain.'
+    - id: reels
+      name: 'The Reeling Yard'
+      description: 'Cauldrons, cocoons and women with quick fingers.'
+- id: place_marre_chiusa_vecchia
+  origin: allora2
+  kind: place
+  roots:
+    - terraferma
+  name: 'Chiusa Vecchia'
+  place_kind: site
+  region: marre
+  x: 6
+  y: 46
+  description: 'The old sluice that floods the rice-fields in spring and drains them for harvest. Its keeper decides whose field drinks first.'
+  subs:
+    - id: gates
+      name: 'The Sluice Gates'
+      description: 'Black oak gates and a wheel two men can barely turn.'
+    - id: dyke
+      name: 'The Dyke Path'
+      description: 'A raised path between water and water.'
+- id: place_marre_ash_isle
+  origin: allora2
+  kind: place
+  roots:
+    - marre_isles
+  name: 'Ash Isle'
+  place_kind: site
+  region: marre
+  x: 82
+  y: 36
+  description: 'A grey islet off the Glass Isles where the furnaces’ ash and broken glass are tipped. Pickers sift it for cullet to sell back.'
+  subs:
+    - id: tips
+      name: 'The Tips'
+      description: 'Grey heaps that glitter when the sun is low.'
+    - id: sieves
+      name: 'The Sieves'
+      description: 'Long sieves on trestles, and bandaged hands.'
+- id: place_marre_guard_boats
+  origin: allora2
+  kind: place
+  roots:
+    - marre_isles
+    - marre_canal
+  name: 'The Guard Boats'
+  place_kind: site
+  region: marre
+  x: 74
+  y: 36
+  description: 'The station of the boats that circle the Glass Isles day and night. They are there to keep pirates out, the Republic says.'
+  subs:
+    - id: pontoon
+      name: 'The Pontoon'
+      description: 'Four black boats and a brazier.'
+    - id: watch
+      name: 'The Watch-Hut'
+      description: 'A slate of names, each crossed off at dusk.'

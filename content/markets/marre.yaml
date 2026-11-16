@@ -1,0 +1,79 @@
+# Markets of Marre. What each sells is its place's canon shop list (Allora I).
+- id: market_marre_city
+  origin: allora2
+  kind: market
+  roots:
+    - marre_city
+  name: 'Rialto stalls'
+  place: marre_city
+  sub: rialto
+  from: 7
+  to: 19
+  day: 3
+  makes:
+    - sea_glass
+    - silk
+- id: market_marre_palace
+  origin: allora2
+  kind: market
+  roots:
+    - marre_palace
+  name: 'Piazza arcades'
+  place: marre_palace
+  sub: council
+  from: 8
+  to: 18
+  day: 6
+- id: market_marre_isles
+  origin: allora2
+  kind: market
+  roots:
+    - marre_isles
+  name: 'Glass Strand sellers'
+  place: marre_isles
+  sub: strand
+  from: 7
+  to: 17
+  day: 2
+  makes:
+    - sea_glass
+    - sand
+- id: market_selino
+  origin: allora2
+  kind: market
+  roots:
+    - selino
+  name: "Chandlers' Row counters"
+  place: selino
+  sub: row
+  from: 6
+  to: 20
+  day: 4
+  makes:
+    - salt
+- id: market_lazaretto
+  origin: allora2
+  kind: market
+  roots:
+    - lazaretto
+  name: 'Spezieria counter'
+  place: lazaretto
+  sub: spezieria
+  from: 8
+  to: 16
+  day: 1
+  makes:
+    - herbs
+- id: market_morena
+  origin: allora2
+  kind: market
+  roots:
+    - morena
+  name: 'Morena fondaco floor'
+  place: morena
+  sub: fondaco
+  from: 7
+  to: 18
+  day: 5
+  makes:
+    - mastic

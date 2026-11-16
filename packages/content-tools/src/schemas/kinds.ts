@@ -113,6 +113,8 @@ const workStepSchema = z.looseObject({
   id: text,
   name: text,
   hours: z.number().int().min(1),
+  /** An accusation: surer for every clue found, and costly if wrong. */
+  accuse: z.boolean().optional(),
   approaches: z.array(approachSchema).min(1),
 });
 

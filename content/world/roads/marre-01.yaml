@@ -1,0 +1,281 @@
+# Marre, first batch: twenty small places round the Piazza, the city, the Lazaretto, the mainland and the Glass Isles.
+- id: road_marre_palace_place_marre_calle_inchiostro
+  origin: allora2
+  kind: road
+  roots:
+    - marre_palace
+    - place_marre_calle_inchiostro
+  from: marre_palace
+  to: place_marre_calle_inchiostro
+  way: river
+  hours: 2
+- id: road_marre_palace_place_marre_molo_grano
+  origin: allora2
+  kind: road
+  roots:
+    - marre_palace
+    - place_marre_molo_grano
+  from: marre_palace
+  to: place_marre_molo_grano
+  way: street
+  hours: 1
+- id: road_marre_palace_place_marre_campo_leoni
+  origin: allora2
+  kind: road
+  roots:
+    - marre_palace
+    - place_marre_campo_leoni
+  from: marre_palace
+  to: place_marre_campo_leoni
+  way: street
+  hours: 1
+- id: road_marre_palace_place_marre_riva_ombra
+  origin: allora2
+  kind: road
+  roots:
+    - marre_palace
+    - place_marre_riva_ombra
+  from: marre_palace
+  to: place_marre_riva_ombra
+  way: street
+  hours: 1
+- id: road_marre_city_place_marre_riva_ombra
+  origin: allora2
+  kind: road
+  roots:
+    - marre_city
+    - place_marre_riva_ombra
+  from: marre_city
+  to: place_marre_riva_ombra
+  way: river
+  hours: 4
+- id: road_marre_palace_place_marre_osteria_bauta
+  origin: allora2
+  kind: road
+  roots:
+    - marre_palace
+    - place_marre_osteria_bauta
+  from: marre_palace
+  to: place_marre_osteria_bauta
+  way: river
+  hours: 2
+- id: road_marre_city_place_marre_osteria_bauta
+  origin: allora2
+  kind: road
+  roots:
+    - marre_city
+    - place_marre_osteria_bauta
+  from: marre_city
+  to: place_marre_osteria_bauta
+  way: river
+  hours: 4
+- id: road_marre_city_place_marre_squero_storto
+  origin: allora2
+  kind: road
+  roots:
+    - marre_city
+    - place_marre_squero_storto
+  from: marre_city
+  to: place_marre_squero_storto
+  way: river
+  hours: 2
+- id: road_marre_city_place_marre_pescaria
+  origin: allora2
+  kind: road
+  roots:
+    - marre_city
+    - place_marre_pescaria
+  from: marre_city
+  to: place_marre_pescaria
+  way: street
+  hours: 1
+- id: road_marre_canal_place_marre_pescaria
+  origin: allora2
+  kind: road
+  roots:
+    - marre_canal
+    - place_marre_pescaria
+  from: marre_canal
+  to: place_marre_pescaria
+  way: river
+  hours: 4
+- id: road_marre_city_place_marre_corte_tinta
+  origin: allora2
+  kind: road
+  roots:
+    - marre_city
+    - place_marre_corte_tinta
+  from: marre_city
+  to: place_marre_corte_tinta
+  way: river
+  hours: 2
+- id: road_marre_city_place_marre_ponte_maschere
+  origin: allora2
+  kind: road
+  roots:
+    - marre_city
+    - place_marre_ponte_maschere
+  from: marre_city
+  to: place_marre_ponte_maschere
+  way: river
+  hours: 2
+- id: road_marre_canal_place_marre_ponte_maschere
+  origin: allora2
+  kind: road
+  roots:
+    - marre_canal
+    - place_marre_ponte_maschere
+  from: marre_canal
+  to: place_marre_ponte_maschere
+  way: river
+  hours: 3
+- id: road_marre_canal_place_marre_fondamenta_specchi
+  origin: allora2
+  kind: road
+  roots:
+    - marre_canal
+    - place_marre_fondamenta_specchi
+  from: marre_canal
+  to: place_marre_fondamenta_specchi
+  way: river
+  hours: 2
+- id: road_lazaretto_place_marre_waiting_roads
+  origin: allora2
+  kind: road
+  roots:
+    - lazaretto
+    - place_marre_waiting_roads
+  from: lazaretto
+  to: place_marre_waiting_roads
+  way: river
+  hours: 2
+- id: road_lazaretto_place_marre_quiet_isle
+  origin: allora2
+  kind: road
+  roots:
+    - lazaretto
+    - place_marre_quiet_isle
+  from: lazaretto
+  to: place_marre_quiet_isle
+  way: river
+  hours: 2
+- id: road_lazaretto_place_marre_isle_of_simples
+  origin: allora2
+  kind: road
+  roots:
+    - lazaretto
+    - place_marre_isle_of_simples
+  from: lazaretto
+  to: place_marre_isle_of_simples
+  way: river
+  hours: 2
+- id: road_marre_palace_place_marre_stilt_huts
+  origin: allora2
+  kind: road
+  roots:
+    - marre_palace
+    - place_marre_stilt_huts
+  from: marre_palace
+  to: place_marre_stilt_huts
+  way: river
+  hours: 5
+- id: road_lazaretto_place_marre_stilt_huts
+  origin: allora2
+  kind: road
+  roots:
+    - lazaretto
+    - place_marre_stilt_huts
+  from: lazaretto
+  to: place_marre_stilt_huts
+  way: river
+  hours: 5
+- id: road_lazaretto_place_marre_pilots_rest
+  origin: allora2
+  kind: road
+  roots:
+    - lazaretto
+    - place_marre_pilots_rest
+  from: lazaretto
+  to: place_marre_pilots_rest
+  way: river
+  hours: 5
+- id: road_place_marre_pilots_rest_wp_lighthouse
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_pilots_rest
+    - wp_lighthouse
+  from: place_marre_pilots_rest
+  to: wp_lighthouse
+  way: river
+  hours: 8
+- id: road_place_marre_barge_stair_terraferma
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_barge_stair
+    - terraferma
+  from: place_marre_barge_stair
+  to: terraferma
+  way: river
+  hours: 3
+- id: road_place_marre_barge_stair_place_marre_stilt_huts
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_barge_stair
+    - place_marre_stilt_huts
+  from: place_marre_barge_stair
+  to: place_marre_stilt_huts
+  way: river
+  hours: 9
+- id: road_place_marre_silk_sheds_terraferma
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_silk_sheds
+    - terraferma
+  from: place_marre_silk_sheds
+  to: terraferma
+  way: river
+  hours: 2
+- id: road_place_marre_chiusa_vecchia_terraferma
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_chiusa_vecchia
+    - terraferma
+  from: place_marre_chiusa_vecchia
+  to: terraferma
+  way: river
+  hours: 2
+- id: road_marre_isles_place_marre_ash_isle
+  origin: allora2
+  kind: road
+  roots:
+    - marre_isles
+    - place_marre_ash_isle
+  from: marre_isles
+  to: place_marre_ash_isle
+  way: river
+  hours: 2
+- id: road_marre_isles_place_marre_guard_boats
+  origin: allora2
+  kind: road
+  roots:
+    - marre_isles
+    - place_marre_guard_boats
+  from: marre_isles
+  to: place_marre_guard_boats
+  way: river
+  hours: 2
+- id: road_place_marre_fondamenta_specchi_place_marre_guard_boats
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_fondamenta_specchi
+    - place_marre_guard_boats
+  from: place_marre_fondamenta_specchi
+  to: place_marre_guard_boats
+  way: river
+  hours: 3

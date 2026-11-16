@@ -1,0 +1,100 @@
+# Cases and trials of the Cerdans. `dc` is the base difficulty of every step.
+- id: case_cerdans_short_measure
+  origin: allora2
+  kind: case
+  roots: [post_cerdans_inquirer, place_marre_molo_grano]
+  post: post_cerdans_inquirer
+  name: 'The short measure'
+  text: 'A bronze measure at the Molo del Grano gives a finger less than it should. Somebody shaved it.'
+  rank: 0
+  dc: 10
+- id: case_cerdans_cut_nets
+  origin: allora2
+  kind: case
+  roots: [post_cerdans_inquirer, place_marre_stilt_huts]
+  post: post_cerdans_inquirer
+  name: 'Cut nets'
+  text: 'An eel-man of the Stilt Huts found his nets slashed three nights running. He has a name in mind, and it is the wrong one.'
+  rank: 0
+  dc: 10
+- id: case_cerdans_two_faces
+  origin: allora2
+  kind: case
+  roots: [post_cerdans_inquirer, place_marre_ponte_maschere]
+  post: post_cerdans_inquirer
+  name: 'One mask, two faces'
+  text: 'A mask-maker on the Ponte swears she sold a mask once. It was seen in two places on the same night.'
+  rank: 0
+  dc: 11
+- id: case_cerdans_pescaria_purses
+  origin: allora2
+  kind: case
+  roots: [post_cerdans_inquirer, place_marre_pescaria]
+  post: post_cerdans_inquirer
+  name: 'Purses at the Pescaria'
+  text: 'Purses go missing at the fish market before dawn, always from cooks of the great houses.'
+  rank: 1
+  dc: 15
+- id: case_cerdans_silk_no_seal
+  origin: allora2
+  kind: case
+  roots: [post_cerdans_inquirer, place_marre_barge_stair]
+  post: post_cerdans_inquirer
+  name: 'Silk without a seal'
+  text: 'Bales come up the Barge Stair counted and leave it short. The toll-book agrees with itself too well.'
+  rank: 1
+  dc: 15
+- id: case_cerdans_watered_theriac
+  origin: allora2
+  kind: case
+  roots: [post_cerdans_inquirer, lazaretto]
+  post: post_cerdans_inquirer
+  name: 'Watered theriac'
+  text: 'A jar in the Spezieria was thinned, and a man in the wards died who should not have.'
+  rank: 2
+  dc: 20
+- id: case_cerdans_mirror_abroad
+  origin: allora2
+  kind: case
+  roots: [post_cerdans_inquirer, place_marre_guard_boats, marre_isles]
+  post: post_cerdans_inquirer
+  name: 'The mirror that left'
+  text: "A master's mirror has turned up for sale across the sea. On the night it left, a guard boat was late on its circuit."
+  rank: 2
+  dc: 20
+- id: case_cerdans_golden_book
+  origin: allora2
+  kind: case
+  roots: [post_cerdans_inquirer, marre_palace]
+  post: post_cerdans_inquirer
+  name: 'A line in the Golden Book'
+  text: "A name has been written into the Golden Book in a hand that is nearly the clerk's."
+  rank: 3
+  dc: 25
+- id: case_cerdans_trial_petty
+  origin: allora2
+  kind: case
+  roots: [post_cerdans_inquirer, marre_palace]
+  post: post_cerdans_inquirer
+  name: 'Three petty matters'
+  text: 'Three small complaints in one week. Close each, and accuse nobody you cannot prove.'
+  trial_for: 1
+  dc: 15
+- id: case_cerdans_trial_death
+  origin: allora2
+  kind: case
+  roots: [post_cerdans_inquirer, marre_city]
+  post: post_cerdans_inquirer
+  name: 'A death by the Rialto'
+  text: 'A broker was found in the canal at first light, with his rings on and his ledger gone.'
+  trial_for: 2
+  dc: 20
+- id: case_cerdans_trial_great_house
+  origin: allora2
+  kind: case
+  roots: [post_cerdans_inquirer, marre_canal]
+  post: post_cerdans_inquirer
+  name: 'The house that is watched'
+  text: 'The trail runs to a water-gate on the Grand Canal. Close it, and let the Republic sleep.'
+  trial_for: 3
+  dc: 25
