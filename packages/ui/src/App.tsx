@@ -7,6 +7,7 @@ import { MapView } from './map/MapView';
 import { Market } from './Market';
 import { People } from './People';
 import { PlaceList, PlacePanel } from './map/PlacePanel';
+import { SceneView } from './scene/SceneView';
 import { Skills } from './Skills';
 import { TITLE } from './title';
 
@@ -46,6 +47,7 @@ export function App() {
           )}
         </section>
       )}
+      {snapshot && <SceneView snapshot={snapshot} />}
       <MapView snapshot={snapshot} chosen={chosen} onChoose={setChosen} />
       {snapshot && (
         <>
