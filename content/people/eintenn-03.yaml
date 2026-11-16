@@ -1,0 +1,361 @@
+# Eintenn, third batch: twenty small places in the west, the hills, the river and round Kesselhaven.
+- id: person_eintenn_ortwin
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_brackenfell
+  name: 'Ortwin Peat'
+  title: 'Turf-Cutter of Brackenfell'
+  region: eintenn
+  home: place_eintenn_brackenfell
+  hint: 'a stooped man with a long narrow spade'
+  meet: '“Step on the brown, not the green,” he says. “Ortwin Peat. The green is water with a skin on.”'
+  talk:
+    - 'Ortwin once cut a pair of boots out of the moor, a thousand years old and better made than his.'
+    - '“It burns slow and it burns all night,” Ortwin says. “Like a grudge.”'
+  sched:
+    - at: [place_eintenn_brackenfell, cuttings]
+      h: [6, 20]
+    - at: [place_eintenn_brackenfell, stacks]
+- id: person_eintenn_gundel
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_standing_sisters
+  name: 'Mother Gundel'
+  title: 'Keeper of the Sisters'
+  region: eintenn
+  home: place_eintenn_standing_sisters
+  hint: 'an old woman untying faded rags and tying on fresh ones'
+  meet: '“Do not walk between them,” she says, not unkindly. “Round. Mother Gundel. I keep count of the wishes.”'
+  talk:
+    - 'Mother Gundel says the stones lean a finger further each year, toward each other.'
+    - '“People ask them for small things,” she says. “That is why it works.”'
+  sched:
+    - at: [place_eintenn_standing_sisters, thorn]
+      h: [6, 20]
+    - at: [place_eintenn_standing_sisters, stones]
+- id: person_eintenn_falk
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_cloudgate_pass
+  name: 'Falk Scree'
+  title: 'Guide of the Pass'
+  region: eintenn
+  home: place_eintenn_cloudgate_pass
+  hint: 'a lean man watching a cloud as if it had spoken'
+  meet: '“Not today,” he says, before you ask. “Falk Scree. Tomorrow before noon, or not at all.”'
+  talk:
+    - 'Falk leaves firewood in the shelter every autumn and has never found out who uses it.'
+    - '“The mountain does not hate you,” Falk says. “It has not noticed you.”'
+  sched:
+    - at: [place_eintenn_cloudgate_pass, shelter]
+      h: [6, 20]
+    - at: [place_eintenn_cloudgate_pass, cairns]
+- id: person_eintenn_imke
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_the_antler
+  name: 'Imke Spile'
+  title: 'Alewife of the Antler'
+  region: eintenn
+  home: place_eintenn_the_antler
+  hint: 'a red-armed woman carrying four mugs in each hand'
+  meet: 'She puts eight mugs down without spilling. “Imke Spile. Sit anywhere that is not under the big one. It falls.”'
+  talk:
+    - 'Imke settles every argument about who shot what by pointing at the wall.'
+    - '“Foresters drink like men who work alone,” Imke says. “All at once.”'
+  sched:
+    - at: [place_eintenn_the_antler, taproom]
+      h: [6, 20]
+    - at: [place_eintenn_the_antler, woodyard]
+- id: person_eintenn_tilo
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_mossbeck
+  name: 'Tilo Wand'
+  title: 'Basket-Maker of Mossbeck'
+  region: eintenn
+  home: place_eintenn_mossbeck
+  hint: 'a man weaving without looking at his hands'
+  meet: 'His hands keep going. “Tilo Wand. Ask me anything. They do not need me for this part.”'
+  talk:
+    - 'Tilo makes a cradle for every child born in the village and a creel for every man who dies.'
+    - '“Willow forgives,” Tilo says. “Oak holds a grudge.”'
+  sched:
+    - at: [place_eintenn_mossbeck, doorsteps]
+      h: [6, 20]
+    - at: [place_eintenn_mossbeck, osiers]
+- id: person_eintenn_arno
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_silverford
+  name: 'Arno Axle'
+  title: 'Wheelwright of Silverford'
+  region: eintenn
+  home: place_eintenn_silverford
+  hint: 'a man rolling a wheel along with one finger'
+  meet: 'He lets the wheel lean against you. “Hold that. Arno Axle. An ore cart breaks here every day. I thank the Duke’s roads.”'
+  talk:
+    - 'Arno can tell a carter’s temper from the wear on his wheels.'
+    - '“Round is easy,” Arno says. “Round and true is the trade.”'
+  sched:
+    - at: [place_eintenn_silverford, wrights]
+      h: [6, 20]
+    - at: [place_eintenn_silverford, ford]
+- id: person_eintenn_veit
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_burgmill
+  name: 'Veit Grist'
+  title: 'Miller of the Burgmill'
+  region: eintenn
+  home: place_eintenn_burgmill
+  hint: 'a man with flour in his eyebrows and a short measure in his hand'
+  meet: '“Castle corn first,” he says. “Then yours. Veit Grist. I did not make the law, I only like it.”'
+  talk:
+    - 'Veit knows the size of every holding on the demesne by the sacks that come from it.'
+    - '“They must come here,” Veit says. “So I need not be pleasant.”'
+  sched:
+    - at: [place_eintenn_burgmill, stones]
+      h: [6, 20]
+    - at: [place_eintenn_burgmill, race]
+- id: person_eintenn_wolfram
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_rabenstein
+  name: 'Wolfram Ember'
+  title: 'Beacon-Keeper of Rabenstein'
+  region: eintenn
+  home: place_eintenn_rabenstein
+  hint: 'a grey man feeding a raven from his hand'
+  meet: '“He bites,” he says, as the raven does not. “Wolfram Ember. I have kept this fire ready thirty years and lit it once.”'
+  talk:
+    - 'Wolfram will not say what the once was for.'
+    - '“A beacon is a promise,” Wolfram says. “Mostly you keep it by doing nothing.”'
+  sched:
+    - at: [place_eintenn_rabenstein, beacon]
+      h: [6, 20]
+    - at: [place_eintenn_rabenstein, tower]
+- id: person_eintenn_elke
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_nordwick
+  name: 'Elke Roe'
+  title: 'Fisher of Nordwick'
+  region: eintenn
+  home: place_eintenn_nordwick
+  hint: 'a woman knee-deep in the river with a hand-net'
+  meet: '“Stand still,” she says. “You are frightening my supper.” Later: “Elke Roe. They only run a fortnight. Then we wait.”'
+  talk:
+    - 'Elke says the salmon come back to the very gravel they were born on, and that people are the same.'
+    - '“You cannot hurry the run,” Elke says. “You can only be here.”'
+  sched:
+    - at: [place_eintenn_nordwick, staithe]
+      h: [6, 20]
+    - at: [place_eintenn_nordwick, saltsheds]
+- id: person_eintenn_udo
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_chainhouse
+  name: 'Udo Winch'
+  title: 'Chainman of the Ferry'
+  region: eintenn
+  home: place_eintenn_chainhouse
+  hint: 'a thick-necked man leaning on a capstan bar'
+  meet: '“When the horn goes, push,” he says. “Udo Winch. When it goes twice, push harder.”'
+  talk:
+    - 'Udo has crossed the river ten thousand times and never been to the other side’s village.'
+    - '“The ferryman takes the coin,” Udo says. “I take the river.”'
+  sched:
+    - at: [place_eintenn_chainhouse, capstan]
+      h: [6, 20]
+    - at: [place_eintenn_chainhouse, landing]
+- id: person_eintenn_kai
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_sandhaven
+  name: 'Kai Lead'
+  title: 'Pilot of Sandhaven'
+  region: eintenn
+  home: place_eintenn_sandhaven
+  hint: 'a man squinting at a sail nobody else can see yet'
+  meet: '“Marrean,” he says, of a speck. “Deep-laden. Kai Lead. First boat out gets the fee.”'
+  talk:
+    - 'Kai knows the bar the way Ostwick farmers know their strips.'
+    - '“The sand moves every storm,” Kai says. “The charts are a year behind. I am not.”'
+  sched:
+    - at: [place_eintenn_sandhaven, dunes]
+      h: [6, 20]
+    - at: [place_eintenn_sandhaven, boats]
+- id: person_eintenn_rike
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_pitch_kilns
+  name: 'Rike Kettle'
+  title: 'Tar-Boiler of the Kilns'
+  region: eintenn
+  home: place_eintenn_pitch_kilns
+  hint: 'a woman black to the elbow, stirring with a paddle'
+  meet: '“Do not touch anything,” she says. “Including me. Rike Kettle.”'
+  talk:
+    - 'Rike says every ship out of Kesselhaven floats on her work and smells of it too.'
+    - '“Tar keeps the sea out,” Rike says. “And company.”'
+  sched:
+    - at: [place_eintenn_pitch_kilns, kilns]
+      h: [6, 20]
+    - at: [place_eintenn_pitch_kilns, barrels]
+- id: person_eintenn_meta
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_herring_stairs
+  name: 'Meta Scale'
+  title: 'Fish-Seller of the Stairs'
+  region: eintenn
+  home: place_eintenn_herring_stairs
+  hint: 'a woman shouting a price and dropping it as she shouts'
+  meet: '“Six! Five and a half!” She looks at you. “Meta Scale. Four to you if you take the barrel.”'
+  talk:
+    - 'Meta says the price of herring is whatever the last boat in will take.'
+    - '“By noon it is cat-food,” Meta says. “So I talk fast.”'
+  sched:
+    - at: [place_eintenn_herring_stairs, steps]
+      h: [6, 20]
+    - at: [place_eintenn_herring_stairs, barrow_rank]
+- id: person_eintenn_volker
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_lantern_court
+  name: 'Volker Wick'
+  title: 'Night-Watchman of the Court'
+  region: eintenn
+  home: place_eintenn_lantern_court
+  hint: 'a heavy man lighting a lantern from another lantern'
+  meet: '“Curfew is for other people,” he says. “You are other people. Volker Wick.”'
+  talk:
+    - 'Volker knows which doors in the Undercroft to knock on and which to walk past.'
+    - '“I am paid to be seen,” Volker says. “Catching anyone is extra.”'
+  sched:
+    - at: [place_eintenn_lantern_court, watchhouse]
+      h: [6, 20]
+    - at: [place_eintenn_lantern_court, oilshops]
+- id: person_eintenn_ilse
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_bleaching_fields
+  name: 'Ilse White'
+  title: 'Bleacher of the Fields'
+  region: eintenn
+  home: place_eintenn_bleaching_fields
+  hint: 'a woman sprinkling a strip of linen from a can'
+  meet: '“Mind the cloth!” Then, calmer: “Ilse White. Sun, water and time. And no boots.”'
+  talk:
+    - 'Ilse can tell Osterau linen from any other by how fast it whitens.'
+    - '“Six weeks to turn it white,” Ilse says. “One muddy dog to turn it back.”'
+  sched:
+    - at: [place_eintenn_bleaching_fields, greens]
+      h: [6, 20]
+    - at: [place_eintenn_bleaching_fields, lyehouse]
+- id: person_eintenn_jorg
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_mittelau
+  name: 'Jorg Bine'
+  title: 'Hop-Grower of Mittelau'
+  region: eintenn
+  home: place_eintenn_mittelau
+  hint: 'a man on stilts tying a string to the top of a pole'
+  meet: 'He looks down. “Jorg Bine. Yes, stilts. You try reaching it.”'
+  talk:
+    - 'Jorg says the brewers of Kesselhaven would be selling sweet barley-water without him.'
+    - '“Ale is my hops and somebody else’s credit,” Jorg says.'
+  sched:
+    - at: [place_eintenn_mittelau, gardens]
+      h: [6, 20]
+    - at: [place_eintenn_mittelau, kiln]
+- id: person_eintenn_regine
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_sonnhalde
+  name: 'Regine Prune'
+  title: 'Vine-Dresser of Sonnhalde'
+  region: eintenn
+  home: place_eintenn_sonnhalde
+  hint: 'a woman with a curved knife, cutting more off a vine than she leaves'
+  meet: '“It looks cruel,” she says, cutting. “Regine Prune. A vine left alone makes leaves. I want grapes.”'
+  talk:
+    - 'Regine rebuilds a stretch of wall every winter and says the hill is trying to lie down.'
+    - '“Poor soil, good wine,” Regine says. “It is the only thing poor soil is good for.”'
+  sched:
+    - at: [place_eintenn_sonnhalde, terraces]
+      h: [6, 20]
+    - at: [place_eintenn_sonnhalde, hut]
+- id: person_eintenn_hanno
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_southmere
+  name: 'Hanno Reed'
+  title: 'Reed-Cutter of Southmere'
+  region: eintenn
+  home: place_eintenn_southmere
+  hint: 'a man in a flat boat, cutting below the waterline with a long hook'
+  meet: '“Winter work,” he says. “When the leaf is off. Hanno Reed. You have come at the right time or the wrong one.”'
+  talk:
+    - 'Hanno says a good reed roof outlasts the man who laid it and the man who paid.'
+    - '“Straw is for barns,” Hanno says.'
+  sched:
+    - at: [place_eintenn_southmere, reedbeds]
+      h: [6, 20]
+    - at: [place_eintenn_southmere, stacks]
+- id: person_eintenn_wido
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_red_scar
+  name: 'Brother Wido'
+  title: 'Recluse of the Red Scar'
+  region: eintenn
+  home: place_eintenn_red_scar
+  hint: 'a thin man lowering a basket on a rope, very slowly'
+  meet: 'A voice from above: “If it is advice, I have none. If it is bread, thank you. Brother Wido.”'
+  talk:
+    - 'Wido came up for a week of quiet, eleven years ago.'
+    - '“I do not dislike people,” Wido says. “I like them better from here.”'
+  sched:
+    - at: [place_eintenn_red_scar, cell]
+      h: [6, 20]
+    - at: [place_eintenn_red_scar, foot]
+- id: person_eintenn_benno
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_westmark_stone
+  name: 'Benno Bar'
+  title: 'Border-Rider of the Westmark'
+  region: eintenn
+  home: place_eintenn_westmark_stone
+  hint: 'a rider asleep in the saddle, on a horse that is wide awake'
+  meet: 'The horse nudges him. “Hm. Benno Bar. Anything to declare? No? Good. I hate the ledger.”'
+  talk:
+    - 'Benno says more goes round the stone than past it, and that he is not paid enough to mind.'
+    - '“The Duchy stops here,” Benno says. “The mud keeps going.”'
+  sched:
+    - at: [place_eintenn_westmark_stone, hut]
+      h: [6, 20]
+    - at: [place_eintenn_westmark_stone, stone]

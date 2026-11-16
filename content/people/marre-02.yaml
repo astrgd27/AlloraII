@@ -1,0 +1,451 @@
+# Marre, second batch: twenty-five small places in Selino, the city, the Grand Canal, the Glass Isles and the outer waters.
+- id: person_marre_pasqua
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_biscuit_ovens
+  name: 'Pasqua Forn'
+  title: 'Baker of the Ovens'
+  region: marre
+  home: place_marre_biscuit_ovens
+  hint: 'a floury woman knocking two biscuits together and listening'
+  meet: '“Hear that?” she says. “That will last to the spice-coasts. Pasqua Forn. Do not try to eat one dry.”'
+  talk:
+    - 'Pasqua says a galley rows on her biscuit and complains about it the whole way.'
+    - '“Twice baked,” Pasqua says. “Once for the weevils, once for the sea.”'
+  sched:
+    - at: [place_marre_biscuit_ovens, ovens]
+      h: [6, 20]
+    - at: [place_marre_biscuit_ovens, racks]
+- id: person_marre_tofolo
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_water_stairs
+  name: 'Tofolo Secc'
+  title: 'Water-Seller of the Stairs'
+  region: marre
+  home: place_marre_water_stairs
+  hint: 'a man with a dipper on a chain, tasting before he sells'
+  meet: 'He sips, nods, and holds out the dipper. “Tofolo Secc. Taste it now. In a month at sea you will dream of it.”'
+  talk:
+    - 'Tofolo can tell which cistern a cup came from, and which captain watered his crew from the cheap one.'
+    - '“Gold buys spice,” Tofolo says. “Water buys coming home.”'
+  sched:
+    - at: [place_marre_water_stairs, cisterns]
+      h: [6, 20]
+    - at: [place_marre_water_stairs, caskway]
+- id: person_marre_jacomo
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_marines_yard
+  name: 'Jacomo Bolz'
+  title: 'Drill-Master of the Yard'
+  region: marre
+  home: place_marre_marines_yard
+  hint: 'a scarred man winding a crossbow without looking at it'
+  meet: '“Feet apart,” he says. “Wider. Jacomo Bolz. The sea will not hold still for you, so learn not to need it.”'
+  talk:
+    - 'Jacomo has made the run east nine times and counts that as nine times lucky.'
+    - '“Anyone can hit a man on land,” Jacomo says.'
+  sched:
+    - at: [place_marre_marines_yard, butts]
+      h: [6, 20]
+    - at: [place_marre_marines_yard, platform]
+- id: person_marre_sabina
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_pawn_arch
+  name: 'Sabina Pegn'
+  title: 'Pawnbroker of the Arch'
+  region: marre
+  home: place_marre_pawn_arch
+  hint: 'a woman weighing a ring and the man who brought it, both at a glance'
+  meet: '“Two months,” she says, to the ring. Then to you: “Sabina Pegn. I do not buy. I keep.”'
+  talk:
+    - 'Sabina has coats in the loft whose owners sailed ten autumns ago, and will not sell them.'
+    - '“They all mean to come back for it,” Sabina says.'
+  sched:
+    - at: [place_marre_pawn_arch, counters]
+      h: [6, 20]
+    - at: [place_marre_pawn_arch, lofts]
+- id: person_marre_bettina
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_widows_lookout
+  name: 'Bettina Spiz'
+  title: 'Watcher of the Lookout'
+  region: marre
+  home: place_marre_widows_lookout
+  hint: 'a woman in a shawl, knitting without looking down from the horizon'
+  meet: '“Sit,” she says. “It is a long watch. Bettina Spiz. I count sails in and I count sails out.”'
+  talk:
+    - 'Bettina has been right about every overdue galley for twenty years, and wishes she were not.'
+    - '“Low in the water is good news,” Bettina says. “It means they found something to carry.”'
+  sched:
+    - at: [place_marre_widows_lookout, headland]
+      h: [6, 20]
+    - at: [place_marre_widows_lookout, cairn]
+- id: person_marre_zorzi
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_breaming_hard
+  name: 'Zorzi Rasp'
+  title: 'Scraper of the Hard'
+  region: marre
+  home: place_marre_breaming_hard
+  hint: 'a man with a long iron scraper and a face full of flakes'
+  meet: '“Mind the tallow,” he says. “Zorzi Rasp. A clean hull is a week sooner home.”'
+  talk:
+    - 'Zorzi can tell which sea a galley has been in by what is growing on her.'
+    - '“Nobody thanks the man underneath,” Zorzi says.'
+  sched:
+    - at: [place_marre_breaming_hard, hard]
+      h: [6, 20]
+    - at: [place_marre_breaming_hard, fires]
+- id: person_marre_nadalin
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_campo_remi
+  name: 'Nadalin Forcol'
+  title: 'Oar-Maker of the Campo'
+  region: marre
+  home: place_marre_campo_remi
+  hint: 'a man balancing an oar on one finger'
+  meet: 'It tips, and he shaves a curl off. “Nadalin Forcol. Too heavy by that much. Now it is right.”'
+  talk:
+    - 'Nadalin makes the oars for the Doge’s barge and for half the smugglers in the lagoon, and will not say which pay sooner.'
+    - '“A boat is a box,” Nadalin says. “The oar is the craft.”'
+  sched:
+    - at: [place_marre_campo_remi, benches]
+      h: [6, 20]
+    - at: [place_marre_campo_remi, racks]
+- id: person_marre_fantin
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_calle_cambi
+  name: 'Fantin Dobl'
+  title: 'Money-Changer of the Calle'
+  region: marre
+  home: place_marre_calle_cambi
+  hint: 'a man ringing coins on a stone, one after another'
+  meet: 'He rings one twice and sets it aside. “Fantin Dobl. That one is Thoolman, and clipped. Everybody clips.”'
+  talk:
+    - 'Fantin can tell a mint by the ring and a forger by the hesitation.'
+    - '“I do not make money,” Fantin says. “I only stand where it turns round.”'
+  sched:
+    - at: [place_marre_calle_cambi, tables]
+      h: [6, 20]
+    - at: [place_marre_calle_cambi, strongroom]
+- id: person_marre_samaritana
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_fondaco_spezie
+  name: 'Samaritana Pevr'
+  title: 'Garbler of Spice'
+  region: marre
+  home: place_marre_fondaco_spezie
+  hint: 'a woman sifting pepper with a cloth over her nose'
+  meet: 'She pulls the cloth down. “Samaritana Pevr. I take the dust and the stones out. You would be surprised at the stones.”'
+  talk:
+    - 'Samaritana says every sack is a tenth heavier leaving Thoolma than arriving here, and nobody is to blame.'
+    - '“It is worth its weight,” Samaritana says. “So people add weight.”'
+  sched:
+    - at: [place_marre_fondaco_spezie, floor]
+      h: [6, 20]
+    - at: [place_marre_fondaco_spezie, vaults]
+- id: person_marre_ortensia
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_teatro_remo
+  name: 'Ortensia Burat'
+  title: 'Puppet-Mistress of the Barge'
+  region: marre
+  home: place_marre_teatro_remo
+  hint: 'a woman with a puppet on each hand, arguing with both'
+  meet: 'The left puppet bows. “Ortensia Burat,” says the right one. “She does the voices.”'
+  talk:
+    - 'Ortensia’s puppets say what nobody in Marre may say with a face on.'
+    - '“A puppet cannot be sent to the Leads,” Ortensia says. “I have asked.”'
+  sched:
+    - at: [place_marre_teatro_remo, stage]
+      h: [6, 20]
+    - at: [place_marre_teatro_remo, hold]
+- id: person_marre_marcuola
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_corte_barcaroli
+  name: 'Marcuola Stali'
+  title: 'Steward of the Barcaroli'
+  region: marre
+  home: place_marre_corte_barcaroli
+  hint: 'a broad woman chalking names on a slate and rubbing one out'
+  meet: '“He overcharged a senator,” she says, of the name. “Marcuola Stali. A senator! There are foreigners for that.”'
+  talk:
+    - 'Marcuola knows who was rowed where last night, and has been offered money to say.'
+    - '“A gondolier sees everything and has seen nothing,” Marcuola says.'
+  sched:
+    - at: [place_marre_corte_barcaroli, court]
+      h: [6, 20]
+    - at: [place_marre_corte_barcaroli, moorings]
+- id: person_marre_pierina
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_caulkers_bell
+  name: 'Pierina Stopp'
+  title: 'Hostess of the Bell'
+  region: marre
+  home: place_marre_caulkers_bell
+  hint: 'a woman pouring a row of cups before the door has opened'
+  meet: 'The bell rings. “Stand clear,” she says. Afterwards: “Pierina Stopp. A galley a day, and a barrel an hour.”'
+  talk:
+    - 'Pierina says the Arsenal’s secrets are safe because its men only talk about each other.'
+    - '“They build the fleet,” Pierina says. “I launch the builders.”'
+  sched:
+    - at: [place_marre_caulkers_bell, room]
+      h: [6, 20]
+    - at: [place_marre_caulkers_bell, gate]
+- id: person_marre_simon
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_long_ropewalk
+  name: 'Simon Canev'
+  title: 'Rope-Maker of the Walk'
+  region: marre
+  home: place_marre_long_ropewalk
+  hint: 'a man walking backwards with hemp round his waist'
+  meet: 'He does not turn. “Simon Canev. I have walked to Thoolma and back in this shed, and never seen where I was going.”'
+  talk:
+    - 'Simon tests every cable by hanging from it, and says that is the only honest way.'
+    - '“A ship is hung on my work,” Simon says.'
+  sched:
+    - at: [place_marre_long_ropewalk, walk]
+      h: [6, 20]
+    - at: [place_marre_long_ropewalk, wheel]
+- id: person_marre_gnese
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_isola_orti
+  name: 'Gnese Verz'
+  title: 'Gardener of the Orti'
+  region: marre
+  home: place_marre_isola_orti
+  hint: 'a woman cutting artichokes into a basket on her hip'
+  meet: '“Take one,” she says. “Gnese Verz. The city thinks food comes from the Rialto.”'
+  talk:
+    - 'Gnese says salt wind makes the sweetest artichokes and the sourest gardeners.'
+    - '“A hundred islands of stone,” Gnese says, “and one of dirt. Guess which they would miss.”'
+  sched:
+    - at: [place_marre_isola_orti, beds]
+      h: [6, 20]
+    - at: [place_marre_isola_orti, landing]
+- id: person_marre_lucrezia
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_matrons_foundlings
+  name: 'Madre Lucrezia Pist'
+  title: 'Mother of the Foundlings'
+  region: marre
+  home: place_marre_matrons_foundlings
+  hint: 'a brisk woman with a baby on one arm and a ledger under the other'
+  meet: '“This one came at midnight,” she says. “Madre Lucrezia. We name them after the day. There are a great many Sundays.”'
+  talk:
+    - 'Lucrezia says half the choirs and a third of the counting-houses of Marre learned their notes and numbers here.'
+    - '“The Matron keeps what the city leaves,” Lucrezia says.'
+  sched:
+    - at: [place_marre_matrons_foundlings, choir]
+      h: [6, 20]
+    - at: [place_marre_matrons_foundlings, wheel]
+- id: person_marre_mafio
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_traghetto_giglio
+  name: 'Mafio Parad'
+  title: 'Ferryman of the Giglio'
+  region: marre
+  home: place_marre_traghetto_giglio
+  hint: 'a man who rows standing, facing forward, and talks the whole way'
+  meet: '“Stand in the middle,” he says. “Mafio Parad. Only foreigners sit.”'
+  talk:
+    - 'Mafio has crossed the same hundred yards of water for thirty years and says it is never the same twice.'
+    - '“The Families have water-gates,” Mafio says. “Everyone else has me.”'
+  sched:
+    - at: [place_marre_traghetto_giglio, boat]
+      h: [6, 20]
+    - at: [place_marre_traghetto_giglio, stand]
+- id: person_marre_giacomina
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_rio_servi
+  name: 'Giacomina Scov'
+  title: 'Laundress of the Rio'
+  region: marre
+  home: place_marre_rio_servi
+  hint: 'a woman wringing a sheet with a great house’s crest on it'
+  meet: '“Look,” she says, holding up a wine stain. “Somebody had a good night. Giacomina Scov. I know all of them by their linen.”'
+  talk:
+    - 'Giacomina says a house’s troubles show in the wash a month before they show at the front door.'
+    - '“Up there they wear masks,” Giacomina says. “Down here I wash what is under them.”'
+  sched:
+    - at: [place_marre_rio_servi, steps]
+      h: [6, 20]
+    - at: [place_marre_rio_servi, doors]
+- id: person_marre_agostin
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_ca_zorzan
+  name: 'Agostin Mezan'
+  title: 'Steward of the house'
+  region: marre
+  home: place_marre_ca_zorzan
+  hint: 'a careful man straightening a picture that was already straight'
+  meet: '“Do not lean on that,” he says. “It is new. Everything is. Agostin Mezan. I serve the house.”'
+  talk:
+    - 'Agostin has served an old house and a new one, and says the new one counts the spoons.'
+    - '“Money takes a year,” Agostin says. “A name takes a hundred.”'
+  sched:
+    - at: [place_marre_ca_zorzan, hall]
+      h: [6, 20]
+    - at: [place_marre_ca_zorzan, counting]
+- id: person_marre_rocco
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_sand_barges
+  name: 'Rocco Sabion'
+  title: 'Bargeman of the Sand'
+  region: marre
+  home: place_marre_sand_barges
+  hint: 'a man shovelling white sand in an easy, endless swing'
+  meet: '“Glass is sand, ash and a secret,” he says. “Rocco Sabion. I bring the sand. Nobody tells me the secret.”'
+  talk:
+    - 'Rocco has landed sand here for twenty years and never been past the second shed.'
+    - '“I can leave,” Rocco says. “That is the difference between us.”'
+  sched:
+    - at: [place_marre_sand_barges, landing]
+      h: [6, 20]
+    - at: [place_marre_sand_barges, sheds]
+- id: person_marre_maddalena
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_bead_row
+  name: 'Maddalena Perl'
+  title: 'Bead-Stringer of the Row'
+  region: marre
+  home: place_marre_bead_row
+  hint: 'a woman dipping a fan of wires into a tray of beads'
+  meet: 'She lifts the wires, full. “Maddalena Perl. Forty strings before noon. Talk if you like. I do not need my eyes for it.”'
+  talk:
+    - 'Maddalena says the beads are worth more across the sea than the pepper that comes back.'
+    - '“The masters make mirrors for doges,” Maddalena says. “We make money.”'
+  sched:
+    - at: [place_marre_bead_row, doorways]
+      h: [6, 20]
+    - at: [place_marre_bead_row, lampshop]
+- id: person_marre_domenego
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_old_masters_isle
+  name: 'Domenego Sofi'
+  title: 'Master of the Isle, retired'
+  region: marre
+  home: place_marre_old_masters_isle
+  hint: 'an old man with burn-scarred forearms, blowing a soap bubble through a straw'
+  meet: 'The bubble floats off. “My lungs still know how,” he says. “Domenego Sofi. Forty years at the furnace. Now I do that.”'
+  talk:
+    - 'Domenego can describe a mirror he made in his youth, and says it hangs in a palace he will never see.'
+    - '“They buried the secret in us,” Domenego says. “So they must keep the graves close.”'
+  sched:
+    - at: [place_marre_old_masters_isle, loggia]
+      h: [6, 20]
+    - at: [place_marre_old_masters_isle, garden]
+- id: person_marre_polo
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_goat_rock
+  name: 'Polo Segn'
+  title: 'Signalman of Goat Rock'
+  region: marre
+  home: place_marre_goat_rock
+  hint: 'a man hauling a flag up hand over hand, squinting east'
+  meet: '“Two sail, friendly, slow,” he says, and makes fast. “Polo Segn. I tell the castle what is coming. They decide if it is welcome.”'
+  talk:
+    - 'Polo has not been off the rock since spring, and says the goats have better manners than the garrison.'
+    - '“Both empires sail past me,” Polo says. “Neither waves.”'
+  sched:
+    - at: [place_marre_goat_rock, mast]
+      h: [6, 20]
+    - at: [place_marre_goat_rock, hut]
+- id: person_marre_olivo
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_salvage_camp
+  name: 'Olivo Tuff'
+  title: 'Foreman of the Salvage'
+  region: marre
+  home: place_marre_salvage_camp
+  hint: 'a sunburnt man reading the tide off a notched pole'
+  meet: '“An hour,” he says. “Then it is over our heads again. Olivo Tuff. We work when the sea lets us.”'
+  talk:
+    - 'Olivo says half the new palazzi stand on steps somebody else carved, long ago.'
+    - '“We do not ask who built it,” Olivo says. “We ask what it weighs.”'
+  sched:
+    - at: [place_marre_salvage_camp, sledges]
+      h: [6, 20]
+    - at: [place_marre_salvage_camp, tents]
+- id: person_marre_fosca
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_divers_raft
+  name: 'Fosca Spong'
+  title: 'Diver of the Raft'
+  region: marre
+  home: place_marre_divers_raft
+  hint: 'a woman breathing slowly with her eyes shut, a stone in her lap'
+  meet: 'She opens her eyes. “Do not talk to a diver before she goes down. Fosca Spong. After, I will talk all you like.”'
+  talk:
+    - 'Fosca has walked on the drowned square and says the statues watch you leave.'
+    - '“Forty feet is not far,” Fosca says. “Except straight down.”'
+  sched:
+    - at: [place_marre_divers_raft, raft]
+      h: [6, 20]
+    - at: [place_marre_divers_raft, line]
+- id: person_marre_bernardo
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_keepers_cove
+  name: 'Bernardo Oli'
+  title: 'Oil-Carrier of the Cove'
+  region: marre
+  home: place_marre_keepers_cove
+  hint: 'a man with a jar on his back and a hand on the rope'
+  meet: 'He sets the jar down with care. “Bernardo Oli. Forty jars a month. The lamp drinks more than I do.”'
+  talk:
+    - 'Bernardo says he has kept more ships off the rocks than any captain, one jar at a time.'
+    - '“If I stop, the lamp stops,” Bernardo says. “So I do not stop.”'
+  sched:
+    - at: [place_marre_keepers_cove, path]
+      h: [6, 20]
+    - at: [place_marre_keepers_cove, landing]

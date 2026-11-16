@@ -1,0 +1,370 @@
+# Eintenn, third batch: twenty small places in the west, the hills, the river and round Kesselhaven.
+- id: place_eintenn_brackenfell
+  origin: allora2
+  kind: place
+  roots:
+    - wisewoman_hut
+  name: 'Brackenfell'
+  place_kind: village
+  region: eintenn
+  x: 12
+  y: 38
+  description: 'A turf-cutters’ village on the western moor. Every house has a peat stack taller than its door.'
+  subs:
+    - id: cuttings
+      name: 'The Peat Cuttings'
+      description: 'Black trenches, squared off like graves.'
+    - id: stacks
+      name: 'The Stacks'
+      description: 'Peat drying in herringbone walls.'
+- id: place_eintenn_standing_sisters
+  origin: allora2
+  kind: place
+  roots:
+    - greenwife_grove
+  name: 'The Standing Sisters'
+  place_kind: wild
+  region: eintenn
+  x: 10
+  y: 26
+  description: 'Three leaning stones on a rise, tied with rags by people who would not say why. The grass inside them is never grazed.'
+  subs:
+    - id: stones
+      name: 'The Three Stones'
+      description: 'Grey, lichened, and warmer than they should be.'
+    - id: thorn
+      name: 'The Rag Thorn'
+      description: 'A thorn tree heavy with knotted cloth.'
+- id: place_eintenn_cloudgate_pass
+  origin: allora2
+  kind: place
+  roots:
+    - hohenkamm
+    - thunder_caves
+  name: 'Cloudgate Pass'
+  place_kind: wild
+  region: eintenn
+  x: 18
+  y: 8
+  description: 'The notch in the ridge where the track crosses the Hohenkamm. It is open four months in the year, and the cairns are there for the other eight.'
+  subs:
+    - id: cairns
+      name: 'The Cairns'
+      description: 'A line of stone piles, each a rope’s length from the last.'
+    - id: shelter
+      name: 'The Stone Shelter'
+      description: 'Four walls, half a roof and a stack of someone else’s firewood.'
+- id: place_eintenn_the_antler
+  origin: allora2
+  kind: place
+  roots:
+    - grauwald
+  name: 'The Antler'
+  place_kind: site
+  region: eintenn
+  x: 26
+  y: 32
+  description: 'A foresters’ alehouse just inside the Grauwald. Every beam has horns nailed to it, and every horn has a story that gets longer.'
+  subs:
+    - id: taproom
+      name: 'The Taproom'
+      description: 'Low, smoky and loud after dark.'
+    - id: woodyard
+      name: 'The Woodyard'
+      description: 'Cut logs, a chopping block and a dog.'
+- id: place_eintenn_mossbeck
+  origin: allora2
+  kind: place
+  roots:
+    - grauwald
+    - wisewoman_hut
+  name: 'Mossbeck'
+  place_kind: village
+  region: eintenn
+  x: 16
+  y: 34
+  description: 'A village of basket-makers on a willow stream. Half the eel-traps, bee-skeps and cradles in the west were woven here.'
+  subs:
+    - id: osiers
+      name: 'The Osier Beds'
+      description: 'Willow cut to the stump and grown again.'
+    - id: doorsteps
+      name: 'The Doorsteps'
+      description: 'Where the weaving is done, in the light.'
+- id: place_eintenn_silverford
+  origin: allora2
+  kind: place
+  roots:
+    - silberhalde
+    - tennfels
+  name: 'Silverford'
+  place_kind: village
+  region: eintenn
+  x: 48
+  y: 34
+  description: 'The ford where the ore carts cross on their way to the castle and the coast. A wheelwright, a smith and an inn live off broken axles.'
+  subs:
+    - id: ford
+      name: 'The Ford'
+      description: 'A paved crossing, rutted a hand deep.'
+    - id: wrights
+      name: 'The Wrights’ Yard'
+      description: 'Wheels in every stage of becoming round.'
+- id: place_eintenn_burgmill
+  origin: allora2
+  kind: place
+  roots:
+    - tennfels
+  name: 'Burgmill'
+  place_kind: site
+  region: eintenn
+  x: 44
+  y: 43
+  description: 'The castle’s mill under the rock of Tennfels. The Duke’s tenants must bring their corn here and nowhere else, by law.'
+  subs:
+    - id: stones
+      name: 'The Mill Floor'
+      description: 'Two pairs of stones and a miller who weighs twice.'
+    - id: race
+      name: 'The Mill Race'
+      description: 'Fast water in a stone channel.'
+- id: place_eintenn_rabenstein
+  origin: allora2
+  kind: place
+  roots:
+    - silberhalde
+    - wp_ferry
+  name: 'Rabenstein'
+  place_kind: site
+  region: eintenn
+  x: 58
+  y: 26
+  description: 'A broken watchtower on a crag, with a beacon basket still kept filled. Ravens nest in what is left of the top floor.'
+  subs:
+    - id: tower
+      name: 'The Tower'
+      description: 'Three floors, two of them open to the sky.'
+    - id: beacon
+      name: 'The Beacon'
+      description: 'An iron basket of dry furze under a tarred hood.'
+- id: place_eintenn_nordwick
+  origin: allora2
+  kind: place
+  roots:
+    - wp_ferry
+  name: 'Nordwick'
+  place_kind: village
+  region: eintenn
+  x: 70
+  y: 22
+  description: 'A river hamlet upstream of the ferry, where salmon are netted in the run and salted for the rest of the year.'
+  subs:
+    - id: staithe
+      name: 'The Staithe'
+      description: 'A plank landing and six flat boats.'
+    - id: saltsheds
+      name: 'The Salting Sheds'
+      description: 'Split fish in rows, grey with salt.'
+- id: place_eintenn_chainhouse
+  origin: allora2
+  kind: place
+  roots:
+    - wp_ferry
+  name: 'The Chainhouse'
+  place_kind: site
+  region: eintenn
+  x: 90
+  y: 26
+  description: 'The far-bank house where the ferry’s chain is winched. Four men and a horse walk the capstan every time the horn sounds.'
+  subs:
+    - id: capstan
+      name: 'The Capstan'
+      description: 'A drum as tall as a man, wound with wet chain.'
+    - id: landing
+      name: 'The Far Landing'
+      description: 'Mud, planks and the road going on east.'
+- id: place_eintenn_sandhaven
+  origin: allora2
+  kind: place
+  roots:
+    - kess_fondaco
+    - kess_harbor
+  name: 'Sandhaven'
+  place_kind: village
+  region: eintenn
+  x: 92
+  y: 50
+  description: 'A pilots’ hamlet on the dunes east of the town. They row out to meet anything with a foreign rig and bring it in over the bar.'
+  subs:
+    - id: dunes
+      name: 'The Lookout Dune'
+      description: 'A pole, a flag and a boy with good eyes.'
+    - id: boats
+      name: 'The Pilot Boats'
+      description: 'Clinker-built, tarred, and always bows-out.'
+- id: place_eintenn_pitch_kilns
+  origin: allora2
+  kind: place
+  roots:
+    - kess_harbor
+  name: 'The Pitch Kilns'
+  place_kind: site
+  region: eintenn
+  x: 86
+  y: 64
+  description: 'Kilns east of the shipyard where pine is burned down to tar. The smoke is why nobody else lives on that side.'
+  subs:
+    - id: kilns
+      name: 'The Kilns'
+      description: 'Turf-covered mounds that drip black.'
+    - id: barrels
+      name: 'The Tar Barrels'
+      description: 'Rows of barrels nobody leans on twice.'
+- id: place_eintenn_herring_stairs
+  origin: allora2
+  kind: place
+  roots:
+    - kess_harbor
+    - kess_market
+  name: 'The Herring Stairs'
+  place_kind: site
+  region: eintenn
+  x: 78
+  y: 66
+  description: 'Wide steps down to the water where the herring boats sell straight off the gunwale. By noon it is scales and gulls.'
+  subs:
+    - id: steps
+      name: 'The Steps'
+      description: 'Slick, crowded and loud.'
+    - id: barrow_rank
+      name: 'The Barrow Rank'
+      description: 'Hand-barrows waiting for a load to wheel uphill.'
+- id: place_eintenn_lantern_court
+  origin: allora2
+  kind: place
+  roots:
+    - kess_undercroft
+    - kess_market
+  name: 'Lantern Court'
+  place_kind: site
+  region: eintenn
+  x: 64
+  y: 63
+  description: 'A yard of lamp-oil sellers above the Undercroft, and the watch-house of the night patrol. It is the last lit place before the streets that are not.'
+  subs:
+    - id: watchhouse
+      name: 'The Watch-House'
+      description: 'A bench, a rack of staves and a slate of streets.'
+    - id: oilshops
+      name: 'The Oil Shops'
+      description: 'Jars, wicks and a smell of fish.'
+- id: place_eintenn_bleaching_fields
+  origin: allora2
+  kind: place
+  roots:
+    - kess_market
+  name: 'The Bleaching Fields'
+  place_kind: site
+  region: eintenn
+  x: 56
+  y: 62
+  description: 'Meadows south-west of the town where new linen is pegged out to whiten. From the walls it looks like snow that has been ironed.'
+  subs:
+    - id: greens
+      name: 'The Greens'
+      description: 'Cloth in long strips, pegged at the corners.'
+    - id: lyehouse
+      name: 'The Lye-House'
+      description: 'Vats of ash-water and red hands.'
+- id: place_eintenn_mittelau
+  origin: allora2
+  kind: place
+  roots:
+    - ostwick
+    - aschau
+  name: 'Mittelau'
+  place_kind: village
+  region: eintenn
+  x: 44
+  y: 62
+  description: 'A hop-growing village half-way between Ostwick and the wine country. The poles stand in rows like a leafless wood all winter.'
+  subs:
+    - id: gardens
+      name: 'The Hop Gardens'
+      description: 'Poles, strings and green climbing both.'
+    - id: kiln
+      name: 'The Drying Kiln'
+      description: 'A round kiln with a cowl that turns with the wind.'
+- id: place_eintenn_sonnhalde
+  origin: allora2
+  kind: place
+  roots:
+    - aschau
+    - pomerell
+  name: 'Sonnhalde'
+  place_kind: village
+  region: eintenn
+  x: 40
+  y: 78
+  description: 'A south-facing slope of terraces between the wine country and the abbey. The walls hold the day’s heat for the grapes at night.'
+  subs:
+    - id: terraces
+      name: 'The Terraces'
+      description: 'Dry-stone steps of vines, a man’s height each.'
+    - id: hut
+      name: 'The Vine-Watcher’s Hut'
+      description: 'A hut on the top wall with a rattle for the birds.'
+- id: place_eintenn_southmere
+  origin: allora2
+  kind: place
+  roots:
+    - pomerell
+  name: 'Southmere'
+  place_kind: village
+  region: eintenn
+  x: 14
+  y: 76
+  description: 'A reed-cutters’ village on a shallow lake. Every roof for a day’s walk is thatched from here.'
+  subs:
+    - id: reedbeds
+      name: 'The Reed Beds'
+      description: 'Head-high reed, and paths only the cutters know.'
+    - id: stacks
+      name: 'The Bundle Stacks'
+      description: 'Reed tied in sheaves, butt-ends down.'
+- id: place_eintenn_red_scar
+  origin: allora2
+  kind: place
+  roots:
+    - wisewoman_hut
+  name: 'The Red Scar'
+  place_kind: wild
+  region: eintenn
+  x: 8
+  y: 60
+  description: 'A cliff of red stone with a cell cut into it half-way up. A basket goes down on a rope each morning and comes up with bread or without.'
+  subs:
+    - id: foot
+      name: 'The Foot of the Scar'
+      description: 'A flat stone where people leave things.'
+    - id: cell
+      name: 'The Cell'
+      description: 'One room, one window, reached by a ladder that is usually drawn up.'
+- id: place_eintenn_westmark_stone
+  origin: allora2
+  kind: place
+  roots:
+    - wisewoman_hut
+  name: 'Westmark Stone'
+  place_kind: site
+  region: eintenn
+  x: 4
+  y: 46
+  description: 'The boundary stone of the Duchy on the west road, with a customs hut beside it. The stone has the Duke’s salt-pan on one face and nothing on the other.'
+  subs:
+    - id: stone
+      name: 'The Stone'
+      description: 'Shoulder-high, and worn where carters touch it for luck.'
+    - id: hut
+      name: 'The Customs Hut'
+      description: 'A bar across the road and a man who lifts it.'

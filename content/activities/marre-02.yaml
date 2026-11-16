@@ -1,0 +1,380 @@
+# Marre, second batch: twenty-five small places in Selino, the city, the Grand Canal, the Glass Isles and the outer waters.
+- id: activity_biscuit_ovens_stack_biscuit
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_biscuit_ovens
+  name: 'Stack biscuit'
+  text: 'Off the peel, on to the rack, and count by the hundred.'
+  place: place_marre_biscuit_ovens
+  sub: racks
+  from: 5
+  to: 14
+  hours: 2
+  skill: skill_cookery
+  effects:
+    vigour: -6
+- id: activity_water_stairs_roll_casks
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_water_stairs
+  name: 'Roll casks to the mole'
+  text: 'Tip it, turn it, and keep your toes out of the way.'
+  place: place_marre_water_stairs
+  sub: caskway
+  from: 6
+  to: 17
+  hours: 2
+  skill: skill_athletics
+  effects:
+    vigour: -6
+- id: activity_marines_yard_shoot_butts
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_marines_yard
+  name: 'Shoot at the butts'
+  text: 'Wind, lay the bolt, and loose on the roll.'
+  place: place_marre_marines_yard
+  sub: butts
+  from: 7
+  to: 16
+  hours: 2
+  skill: skill_marksmanship
+  dc: 12
+  effects:
+    vigour: -6
+- id: activity_pawn_arch_tag_pledges
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_pawn_arch
+  name: 'Tag the pledges'
+  text: 'A ticket for each, a line in the book, and up the ladder.'
+  place: place_marre_pawn_arch
+  sub: lofts
+  from: 8
+  to: 18
+  hours: 2
+  skill: skill_trade
+  effects:
+    vigour: -6
+- id: activity_widows_lookout_watch_sails
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_widows_lookout
+  name: 'Watch for the fleet'
+  text: 'Eyes east, and call the number of sails.'
+  place: place_marre_widows_lookout
+  sub: headland
+  from: 6
+  to: 19
+  hours: 2
+  skill: skill_seamanship
+  effects:
+    vigour: -6
+- id: activity_breaming_hard_scrape_hull
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_breaming_hard
+  name: 'Scrape a hull'
+  text: 'Weed, shell and old tallow, down to the wood.'
+  place: place_marre_breaming_hard
+  sub: hard
+  from: 6
+  to: 16
+  hours: 3
+  skill: skill_woodwork
+  effects:
+    vigour: -9
+- id: activity_campo_remi_shave_oars
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_campo_remi
+  name: 'Shave an oar blank'
+  text: 'Long strokes with the grain, and stop before you think you should.'
+  place: place_marre_campo_remi
+  sub: benches
+  from: 7
+  to: 17
+  hours: 2
+  skill: skill_woodwork
+  effects:
+    vigour: -6
+- id: activity_calle_cambi_weigh_coin
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_calle_cambi
+  name: 'Weigh foreign coin'
+  text: 'On the scale, in the book, and a mark for every light one.'
+  place: place_marre_calle_cambi
+  sub: tables
+  from: 8
+  to: 17
+  hours: 2
+  skill: skill_numbers
+  dc: 12
+  effects:
+    vigour: -6
+- id: activity_fondaco_spezie_sift_pepper
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_fondaco_spezie
+  name: 'Sift pepper'
+  text: 'Shake, pick, and weigh what is left.'
+  place: place_marre_fondaco_spezie
+  sub: floor
+  from: 8
+  to: 17
+  hours: 2
+  skill: skill_trade
+  effects:
+    vigour: -6
+- id: activity_teatro_remo_work_strings
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_teatro_remo
+  name: 'Work the strings'
+  text: 'Two hands, four strings, and never look at your own fingers.'
+  place: place_marre_teatro_remo
+  sub: stage
+  from: 16
+  to: 22
+  hours: 2
+  skill: skill_stagecraft
+  dc: 12
+  effects:
+    vigour: -6
+- id: activity_corte_barcaroli_bail_boats
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_corte_barcaroli
+  name: 'Bail the boats'
+  text: 'A scoop, a sponge and forty hulls before the first fare.'
+  place: place_marre_corte_barcaroli
+  sub: moorings
+  from: 5
+  to: 9
+  hours: 1
+  skill: skill_seamanship
+  effects:
+    vigour: -3
+- id: activity_caulkers_bell_pour_cups
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_caulkers_bell
+  name: 'Pour for the shift'
+  text: 'A row of cups, filled before the bell stops.'
+  place: place_marre_caulkers_bell
+  sub: room
+  from: 17
+  to: 22
+  hours: 2
+  skill: skill_revelry
+  effects:
+    vigour: -6
+- id: activity_long_ropewalk_walk_rope
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_long_ropewalk
+  name: 'Walk the rope'
+  text: 'Backwards, feeding hemp, at the pace of the wheel.'
+  place: place_marre_long_ropewalk
+  sub: walk
+  from: 6
+  to: 16
+  hours: 2
+  skill: skill_athletics
+  effects:
+    vigour: -6
+- id: activity_isola_orti_cut_greens
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_isola_orti
+  name: 'Cut greens for the boats'
+  text: 'Knife low, basket full, and down to the landing.'
+  place: place_marre_isola_orti
+  sub: beds
+  from: 5
+  to: 10
+  hours: 2
+  skill: skill_husbandry
+  effects:
+    vigour: -6
+- id: activity_matrons_foundlings_teach_notes
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_matrons_foundlings
+  name: 'Teach the choir its notes'
+  text: 'One line at a time, until forty voices make one.'
+  place: place_marre_matrons_foundlings
+  sub: choir
+  from: 9
+  to: 16
+  hours: 2
+  skill: skill_music
+  effects:
+    vigour: -6
+- id: activity_traghetto_giglio_row_crossing
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_traghetto_giglio
+  name: 'Row the crossing'
+  text: 'Over and back, standing, and never touch another boat.'
+  place: place_marre_traghetto_giglio
+  sub: boat
+  from: 6
+  to: 20
+  hours: 2
+  skill: skill_seamanship
+  effects:
+    vigour: -6
+- id: activity_rio_servi_wring_sheets
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_rio_servi
+  name: 'Wring the sheets'
+  text: 'Two to a sheet, twist against each other, and hang it square.'
+  place: place_marre_rio_servi
+  sub: steps
+  from: 6
+  to: 15
+  hours: 2
+  skill: skill_clothwork
+  effects:
+    vigour: -6
+- id: activity_ca_zorzan_polish_hall
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_ca_zorzan
+  name: 'Polish the water-hall'
+  text: 'Wax, cloth, and every tile until it shows the ceiling.'
+  place: place_marre_ca_zorzan
+  sub: hall
+  from: 6
+  to: 12
+  hours: 2
+  skill: skill_stewardship
+  effects:
+    vigour: -6
+- id: activity_sand_barges_shovel_sand
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_sand_barges
+  name: 'Shovel sand ashore'
+  text: 'Swing, throw, swing. The barge rises as you empty it.'
+  place: place_marre_sand_barges
+  sub: landing
+  from: 6
+  to: 16
+  hours: 2
+  skill: skill_athletics
+  effects:
+    vigour: -6
+- id: activity_bead_row_string_beads
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_bead_row
+  name: 'String beads'
+  text: 'Dip the wires, shake, and slide them down the thread.'
+  place: place_marre_bead_row
+  sub: doorways
+  from: 7
+  to: 18
+  hours: 2
+  skill: skill_kilncraft
+  effects:
+    vigour: -6
+- id: activity_old_masters_isle_read_to_masters
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_old_masters_isle
+  name: 'Read to the old masters'
+  text: 'The news from the city, slowly, and twice for the deaf ones.'
+  place: place_marre_old_masters_isle
+  sub: loggia
+  from: 9
+  to: 17
+  hours: 1
+  skill: skill_letters
+  effects:
+    vigour: -3
+- id: activity_goat_rock_hoist_flags
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_goat_rock
+  name: 'Hoist the signals'
+  text: 'Bend on, haul up, and hold until the castle answers.'
+  place: place_marre_goat_rock
+  sub: mast
+  from: 6
+  to: 19
+  hours: 1
+  skill: skill_seamanship
+  effects:
+    vigour: -3
+- id: activity_salvage_camp_haul_marble
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_salvage_camp
+  name: 'Haul a block ashore'
+  text: 'Rope, rollers and the ox-team, before the tide turns.'
+  place: place_marre_salvage_camp
+  sub: sledges
+  from: 6
+  to: 18
+  hours: 2
+  skill: skill_athletics
+  effects:
+    vigour: -6
+- id: activity_divers_raft_tend_line
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_divers_raft
+  name: 'Tend a diver’s line'
+  text: 'Pay out, feel for the tug, and haul like your own life.'
+  place: place_marre_divers_raft
+  sub: line
+  from: 7
+  to: 16
+  hours: 2
+  skill: skill_seamanship
+  dc: 12
+  effects:
+    vigour: -6
+- id: activity_keepers_cove_carry_oil
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_keepers_cove
+  name: 'Carry oil up the path'
+  text: 'One jar, four hundred steps, and do not look down.'
+  place: place_marre_keepers_cove
+  sub: path
+  from: 6
+  to: 17
+  hours: 2
+  skill: skill_athletics
+  effects:
+    vigour: -6

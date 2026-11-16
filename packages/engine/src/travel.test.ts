@@ -144,7 +144,7 @@ describe('named roads and what happens on them', () => {
     );
     expect(eintenn.length).toBeGreaterThanOrEqual(64);
     for (const road of eintenn) expect(routes.has(road.route ?? '')).toBe(true);
-    expect(routes.size).toBe(21);
+    expect(routes.size).toBe(36);
   });
 
   it('carries barges on the Tenn, with the life asleep aboard at night', () => {

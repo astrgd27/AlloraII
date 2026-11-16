@@ -1,0 +1,128 @@
+# Named ways for the second and third Eintenn batches.
+- id: route_eintenn_salt_carters_way
+  origin: allora2
+  kind: route
+  roots:
+    - kess_harbor
+    - salzmoor
+  name: "The Salt Carters' Way"
+  way: road
+  text: 'The rutted road from the harbour gate out to the pans, white at the edges where the carts have shed.'
+- id: route_eintenn_strand_path
+  origin: allora2
+  kind: route
+  roots:
+    - kess_harbor
+  name: 'The Strand Path'
+  way: track
+  text: 'A shingle path along the shore east of the harbour, moved a little by every storm.'
+- id: route_eintenn_haulers_path
+  origin: allora2
+  kind: route
+  roots:
+    - wp_ferry
+  name: "The Haulers' Path"
+  way: track
+  text: 'The towpath up the river, worn by men walking barges against the stream.'
+- id: route_eintenn_scholars_lane
+  origin: allora2
+  kind: route
+  roots:
+    - collegium
+    - kess_market
+  name: "Scholars' Lane"
+  way: road
+  text: 'The lanes between the Collegium and the town, walked by students with books under their arms and debts behind them.'
+- id: route_eintenn_fen_causeway
+  origin: allora2
+  kind: route
+  roots:
+    - kess_undercroft
+    - aschau
+  name: 'The Fen Causeway'
+  way: track
+  text: 'A raised way of faggots and clay across the wet ground south of the town.'
+- id: route_eintenn_horse_fair_road
+  origin: allora2
+  kind: route
+  roots:
+    - tennfels
+    - silberhalde
+  name: 'The Horse-Fair Road'
+  way: road
+  text: 'The road the dealers take to the fair, wide enough for a string of horses abreast.'
+- id: route_eintenn_grey_lane
+  origin: allora2
+  kind: route
+  roots:
+    - silberhalde
+  name: 'The Grey Lane'
+  way: track
+  text: "The miners' lane below the workings, grey with spoil in every weather."
+- id: route_eintenn_wolf_ride
+  origin: allora2
+  kind: route
+  roots:
+    - grauwald
+  name: 'The Wolf Ride'
+  way: track
+  text: 'A cut through the trees at the edge of the Grauwald, kept clear so that nothing can cross it unseen.'
+- id: route_eintenn_drovers_climb
+  origin: allora2
+  kind: route
+  roots:
+    - hohenkamm
+  name: "The Drovers' Climb"
+  way: track
+  text: 'The cattle track up to the summer grass and on to the pass, hoof-cut and steep.'
+- id: route_eintenn_swept_way
+  origin: allora2
+  kind: route
+  roots:
+    - threshold_sanctum
+    - vaelis_ruins
+  name: 'The Swept Way'
+  way: track
+  text: "The pilgrims' path north, kept clear of leaves by people who do not say why."
+- id: route_eintenn_cider_road
+  origin: allora2
+  kind: route
+  roots:
+    - pomerell
+  name: 'The Cider Road'
+  way: road
+  text: 'The cart-road through the orchard country, sticky in autumn and loud with wasps.'
+- id: route_eintenn_weir_path
+  origin: allora2
+  kind: route
+  roots:
+    - ostwick
+    - wisewoman_hut
+  name: 'The Weir Path'
+  way: track
+  text: 'A wet path along the stream west of Ostwick.'
+- id: route_eintenn_peat_road
+  origin: allora2
+  kind: route
+  roots:
+    - wisewoman_hut
+  name: 'The Peat Road'
+  way: track
+  text: 'A black track across the western moor, laid on bundles of heather where the ground will not hold.'
+- id: route_eintenn_mill_lane
+  origin: allora2
+  kind: route
+  roots:
+    - tennfels
+  name: 'Castle Mill Lane'
+  way: road
+  text: 'The lane every tenant of the demesne must walk with a sack on his back.'
+- id: route_eintenn_hop_lane
+  origin: allora2
+  kind: route
+  roots:
+    - ostwick
+    - aschau
+  name: 'Hop Lane'
+  way: road
+  text: 'A lane between hop gardens, green-walled in summer and bare poles in winter.'

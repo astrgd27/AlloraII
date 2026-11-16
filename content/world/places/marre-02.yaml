@@ -1,0 +1,452 @@
+# Marre, second batch: twenty-five small places in Selino, the city, the Grand Canal, the Glass Isles and the outer waters.
+- id: place_marre_biscuit_ovens
+  origin: allora2
+  kind: place
+  roots:
+    - selino
+  name: 'The Biscuit Ovens'
+  place_kind: site
+  region: marre
+  x: 27
+  y: 25
+  description: 'A street of ovens that bake nothing but ship’s biscuit, twice, until it rings like a tile. Every galley bound east carries a season of it.'
+  subs:
+    - id: ovens
+      name: 'The Ovens'
+      description: 'Forty mouths of fire in a row.'
+    - id: racks
+      name: 'The Cooling Racks'
+      description: 'Biscuit stacked like roof-slates.'
+- id: place_marre_water_stairs
+  origin: allora2
+  kind: place
+  roots:
+    - selino
+  name: 'The Water Stairs'
+  place_kind: site
+  region: marre
+  x: 33
+  y: 25
+  description: 'Steps down to the great cisterns where the galleys fill their casks. Sweet water is the one thing Selino sells dearer than rope.'
+  subs:
+    - id: cisterns
+      name: 'The Cisterns'
+      description: 'Dark vaults with a cold breath.'
+    - id: caskway
+      name: 'The Cask Way'
+      description: 'A ramp worn smooth by rolling.'
+- id: place_marre_marines_yard
+  origin: allora2
+  kind: place
+  roots:
+    - selino
+  name: "The Marines' Yard"
+  place_kind: site
+  region: marre
+  x: 28
+  y: 31
+  description: 'A walled yard where the galley marines shoot at straw men from a rocking platform, because a deck does not stand still.'
+  subs:
+    - id: butts
+      name: 'The Butts'
+      description: 'Straw men in a row, much mended.'
+    - id: platform
+      name: 'The Rocking Stage'
+      description: 'A deck on a pivot, heaved about by four boys.'
+- id: place_marre_pawn_arch
+  origin: allora2
+  kind: place
+  roots:
+    - selino
+  name: "The Pawnbrokers' Arch"
+  place_kind: site
+  region: marre
+  x: 32
+  y: 31
+  description: 'An archway of pawnshops between the Loop and the mole. Sailors leave their coats here in spring and buy them back in autumn, if they come back.'
+  subs:
+    - id: counters
+      name: 'The Counters'
+      description: 'Grilles, scales and tickets on nails.'
+    - id: lofts
+      name: 'The Pledge Lofts'
+      description: 'A season of other men’s belongings.'
+- id: place_marre_widows_lookout
+  origin: allora2
+  kind: place
+  roots:
+    - selino
+  name: "Widows' Lookout"
+  place_kind: site
+  region: marre
+  x: 34
+  y: 22
+  description: 'A bare headland east of the town where families wait for the autumn fleet. Someone is always there from the first cold wind.'
+  subs:
+    - id: headland
+      name: 'The Headland'
+      description: 'Turf, wind and a long view east.'
+    - id: cairn
+      name: 'The Name Cairn'
+      description: 'A heap of stones, one for each ship that did not come.'
+- id: place_marre_breaming_hard
+  origin: allora2
+  kind: place
+  roots:
+    - selino
+  name: 'The Breaming Hard'
+  place_kind: site
+  region: marre
+  x: 24
+  y: 22
+  description: 'A shelving beach where galleys are hauled over on their sides and scraped clean before the run east.'
+  subs:
+    - id: hard
+      name: 'The Hard'
+      description: 'A hull on its side like a stranded whale.'
+    - id: fires
+      name: 'The Breaming Fires'
+      description: 'Reed torches run along the planks to burn off the weed.'
+- id: place_marre_campo_remi
+  origin: allora2
+  kind: place
+  roots:
+    - marre_city
+  name: 'Campo dei Remi'
+  place_kind: site
+  region: marre
+  x: 50
+  y: 58
+  description: 'A square of oar-makers. Every doorway has a rack of pale ash blades, and the paving is ankle-deep in shavings.'
+  subs:
+    - id: benches
+      name: 'The Shaving Benches'
+      description: 'Long benches and longer oars.'
+    - id: racks
+      name: 'The Oar Racks'
+      description: 'Blades leaning in the sun to season.'
+- id: place_marre_calle_cambi
+  origin: allora2
+  kind: place
+  roots:
+    - marre_city
+  name: 'Calle dei Cambi'
+  place_kind: site
+  region: marre
+  x: 57
+  y: 46
+  description: 'The money-changers’ lane by the Exchange, where every coin in the known world is weighed and found a little light.'
+  subs:
+    - id: tables
+      name: 'The Changing Tables'
+      description: 'Green cloth, small scales and quick fingers.'
+    - id: strongroom
+      name: 'The Barred Room'
+      description: 'A door with three locks and three keyholders.'
+- id: place_marre_fondaco_spezie
+  origin: allora2
+  kind: place
+  roots:
+    - marre_city
+  name: 'Fondaco delle Spezie'
+  place_kind: site
+  region: marre
+  x: 61
+  y: 45
+  description: 'The spice warehouse behind the Exchange. The whole street sneezes when the autumn galleys unload.'
+  subs:
+    - id: floor
+      name: 'The Sorting Floor'
+      description: 'Sacks slit open, sieves and scales.'
+    - id: vaults
+      name: 'The Sealed Vaults'
+      description: 'Pepper under the Republic’s own seal.'
+- id: place_marre_teatro_remo
+  origin: allora2
+  kind: place
+  roots:
+    - marre_city
+  name: 'Teatro del Remo'
+  place_kind: site
+  region: marre
+  x: 65
+  y: 54
+  description: 'A puppet theatre on a moored barge. The audience sits on the quay steps, and the stage rocks when a boat goes by.'
+  subs:
+    - id: stage
+      name: 'The Barge Stage'
+      description: 'A painted booth with a canal behind it.'
+    - id: hold
+      name: 'The Puppet Hold'
+      description: 'A hundred small people hanging by their strings.'
+- id: place_marre_corte_barcaroli
+  origin: allora2
+  kind: place
+  roots:
+    - marre_city
+  name: 'Corte dei Barcaroli'
+  place_kind: site
+  region: marre
+  x: 52
+  y: 49
+  description: 'The gondoliers’ court, where the stands are shared out and quarrels over fares are settled by men who all know each other’s fathers.'
+  subs:
+    - id: court
+      name: 'The Court'
+      description: 'A well, a bench and a slate of stands.'
+    - id: moorings
+      name: 'The Night Moorings'
+      description: 'Black boats nosed in like sleeping fish.'
+- id: place_marre_caulkers_bell
+  origin: allora2
+  kind: place
+  roots:
+    - marre_city
+  name: "The Caulkers' Bell"
+  place_kind: site
+  region: marre
+  x: 60
+  y: 58
+  description: 'A tavern at the Arsenal gate that opens when the work-bell rings and fills in a hundred breaths.'
+  subs:
+    - id: room
+      name: 'The Long Room'
+      description: 'Trestles, pitch-stained sleeves and noise.'
+    - id: gate
+      name: 'The Gate Bench'
+      description: 'Where wives wait on pay-day.'
+- id: place_marre_long_ropewalk
+  origin: allora2
+  kind: place
+  roots:
+    - marre_city
+  name: 'The Long Ropewalk'
+  place_kind: site
+  region: marre
+  x: 64
+  y: 58
+  description: 'A shed as long as a galley’s cable, where rope is laid by men walking backwards all day.'
+  subs:
+    - id: walk
+      name: 'The Walk'
+      description: 'A quarter-mile of roof and hemp.'
+    - id: wheel
+      name: 'The Laying Wheel'
+      description: 'A great wheel turned by a boy.'
+- id: place_marre_isola_orti
+  origin: allora2
+  kind: place
+  roots:
+    - marre_city
+  name: 'Isola degli Orti'
+  place_kind: site
+  region: marre
+  x: 50
+  y: 64
+  description: 'A flat island of kitchen gardens south of the city. Its boats go in before dawn, loaded to the gunwale with greens.'
+  subs:
+    - id: beds
+      name: 'The Beds'
+      description: 'Artichokes, onions and beans in ruler-straight rows.'
+    - id: landing
+      name: 'The Green Landing'
+      description: 'Flat boats, baskets and a scale.'
+- id: place_marre_matrons_foundlings
+  origin: allora2
+  kind: place
+  roots:
+    - marre_city
+    - c_dolma
+  name: "The Matron's Foundlings"
+  place_kind: site
+  region: marre
+  x: 48
+  y: 53
+  description: 'The foundling house of the Serene Matron. There is a wheel in the wall where a child can be left without a face being seen.'
+  subs:
+    - id: wheel
+      name: 'The Wheel'
+      description: 'A turning cradle set in the street wall.'
+    - id: choir
+      name: 'The Choir Loft'
+      description: 'Where the girls sing behind a grille.'
+- id: place_marre_traghetto_giglio
+  origin: allora2
+  kind: place
+  roots:
+    - marre_canal
+  name: 'Traghetto del Giglio'
+  place_kind: site
+  region: marre
+  x: 66
+  y: 44
+  description: 'A ferry-stand on the Grand Canal: two oars, one long boat and everybody standing up.'
+  subs:
+    - id: stand
+      name: 'The Stand'
+      description: 'A hut, a lamp and a brass lily.'
+    - id: boat
+      name: 'The Crossing Boat'
+      description: 'Twelve passengers and no seats.'
+- id: place_marre_rio_servi
+  origin: allora2
+  kind: place
+  roots:
+    - marre_canal
+  name: 'Rio dei Servi'
+  place_kind: site
+  region: marre
+  x: 71
+  y: 50
+  description: 'The narrow back-canal behind the great palazzi, where the laundry, the kitchen boats and the gossip come and go.'
+  subs:
+    - id: steps
+      name: 'The Washing Steps'
+      description: 'Sheets on lines across the water.'
+    - id: doors
+      name: 'The Kitchen Doors'
+      description: 'Low doors at the waterline, each with its house colour.'
+- id: place_marre_ca_zorzan
+  origin: allora2
+  kind: place
+  roots:
+    - marre_canal
+  name: "Ca' Zorzan"
+  place_kind: site
+  region: marre
+  x: 73
+  y: 45
+  description: 'The new house of a spice family that is not one of the Ten and would like its grandchildren to be. Everything in it is a little too gilded.'
+  subs:
+    - id: hall
+      name: 'The Water-Hall'
+      description: 'Marble that still smells of the mason.'
+    - id: counting
+      name: 'The Counting-Room'
+      description: 'Where the house’s real business is done.'
+- id: place_marre_sand_barges
+  origin: allora2
+  kind: place
+  roots:
+    - marre_isles
+  name: 'The Sand Barges'
+  place_kind: site
+  region: marre
+  x: 76
+  y: 28
+  description: 'The landing on the Isles where white sand and soda-ash come in. It is the only part of the Isles a stranger may walk on unwatched.'
+  subs:
+    - id: landing
+      name: 'The Landing'
+      description: 'Barges of sand like low white hills.'
+    - id: sheds
+      name: 'The Ash Sheds'
+      description: 'Sacks of soda-ash kept dry under tile.'
+- id: place_marre_bead_row
+  origin: allora2
+  kind: place
+  roots:
+    - marre_isles
+  name: "Bead-Stringers' Row"
+  place_kind: site
+  region: marre
+  x: 80
+  y: 30
+  description: 'A lane of women stringing glass beads by the thousand, on wires fanned out like a hand. The galleys carry them east by the barrel.'
+  subs:
+    - id: doorways
+      name: 'The Doorways'
+      description: 'A tray of beads on every knee.'
+    - id: lampshop
+      name: 'The Lamp-Workers’ Shop'
+      description: 'Rods of glass turned to beads over a flame.'
+- id: place_marre_old_masters_isle
+  origin: allora2
+  kind: place
+  roots:
+    - marre_isles
+  name: "The Old Masters' Isle"
+  place_kind: site
+  region: marre
+  x: 84
+  y: 28
+  description: 'A small island where glassmakers too old for the furnace live out their days, well fed, well housed and still not allowed to leave.'
+  subs:
+    - id: loggia
+      name: 'The Loggia'
+      description: 'Chairs in the sun, facing the furnaces.'
+    - id: garden
+      name: 'The Glass Garden'
+      description: 'Flowers of coloured glass, made for no one.'
+- id: place_marre_goat_rock
+  origin: allora2
+  kind: place
+  roots:
+    - morena
+  name: 'Goat Rock'
+  place_kind: wild
+  region: marre
+  x: 96
+  y: 40
+  description: 'A steep islet off Morena with a signal mast and a few goats. Flags from here reach the castle before a ship does.'
+  subs:
+    - id: mast
+      name: 'The Signal Mast'
+      description: 'A mast, a locker of flags and a great deal of wind.'
+    - id: hut
+      name: 'The Signalman’s Hut'
+      description: 'Stone, low and roped down.'
+- id: place_marre_salvage_camp
+  origin: allora2
+  kind: place
+  roots:
+    - xonia_shore
+  name: 'The Salvage Camp'
+  place_kind: site
+  region: marre
+  x: 86
+  y: 72
+  description: 'A camp of tents on the white beach, where a crew raises marble from the shallows at low tide and ships it to the city’s masons.'
+  subs:
+    - id: sledges
+      name: 'The Sledges'
+      description: 'Timber sledges and a team of oxen, knee-deep.'
+    - id: tents
+      name: 'The Tents'
+      description: 'Canvas, cook-smoke and salt-stiff rope.'
+- id: place_marre_divers_raft
+  origin: allora2
+  kind: place
+  roots:
+    - xonia_sunken
+  name: "The Divers' Raft"
+  place_kind: wild
+  region: marre
+  x: 88
+  y: 22
+  description: 'A raft anchored over the drowned streets, where sponge-divers go down on a stone and come up with whatever they can carry.'
+  subs:
+    - id: raft
+      name: 'The Raft'
+      description: 'Planks, a brazier and a rack of flat stones.'
+    - id: line
+      name: 'The Stone Line'
+      description: 'A rope straight down into the blue.'
+- id: place_marre_keepers_cove
+  origin: allora2
+  kind: place
+  roots:
+    - wp_lighthouse
+  name: "Keeper's Cove"
+  place_kind: site
+  region: marre
+  x: 20
+  y: 76
+  description: 'The one safe landing below Cape Drown, where the oil for the great lamp is brought ashore and carried up the cliff by hand.'
+  subs:
+    - id: landing
+      name: 'The Landing'
+      description: 'A shelf of rock and an iron ring.'
+    - id: path
+      name: 'The Oil Path'
+      description: 'Four hundred steps, with a rope.'

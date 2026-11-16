@@ -1,0 +1,363 @@
+# Marre, third batch: twenty-four small places on the mainland, in the lagoon and in the outer waters.
+- id: activity_villa_dandri_clip_hedges
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_villa_dandri
+  name: 'Clip the hedges'
+  text: 'Shears along the string, and sweep up after.'
+  place: place_marre_villa_dandri
+  sub: garden
+  from: 6
+  to: 17
+  hours: 2
+  skill: skill_husbandry
+  effects:
+    vigour: -6
+- id: activity_heron_marsh_lie_in_wait
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_heron_marsh
+  name: 'Lie in wait for duck'
+  text: 'Flat in the punt, bolt ready, until they come in to land.'
+  place: place_marre_heron_marsh
+  sub: hides
+  from: 5
+  to: 9
+  hours: 2
+  skill: skill_marksmanship
+  dc: 12
+  effects:
+    vigour: -6
+- id: activity_rice_floors_turn_rice
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_rice_floors
+  name: 'Turn the drying rice'
+  text: 'Rake it over, every row, every hour.'
+  place: place_marre_rice_floors
+  sub: floors
+  from: 7
+  to: 17
+  hours: 2
+  skill: skill_husbandry
+  effects:
+    vigour: -6
+- id: activity_fever_chapel_ladle_bark
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_fever_chapel
+  name: 'Ladle out the bark-water'
+  text: 'A cup each, and watch that they swallow.'
+  place: place_marre_fever_chapel
+  sub: porch
+  from: 6
+  to: 10
+  hours: 1
+  skill: skill_physick
+  effects:
+    vigour: -3
+- id: activity_locanda_baco_serve_table
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_locanda_baco
+  name: 'Serve the common table'
+  text: 'Bread, the pot, the jug, and round again.'
+  place: place_marre_locanda_baco
+  sub: table
+  from: 17
+  to: 22
+  hours: 2
+  skill: skill_revelry
+  effects:
+    vigour: -6
+- id: activity_shore_kilns_stack_bricks
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_shore_kilns
+  name: 'Stack green bricks'
+  text: 'On edge, a finger apart, so the fire can walk between.'
+  place: place_marre_shore_kilns
+  sub: kilns
+  from: 6
+  to: 16
+  hours: 2
+  skill: skill_kilncraft
+  effects:
+    vigour: -6
+- id: activity_timber_rafts_lash_logs
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_timber_rafts
+  name: 'Lash a raft'
+  text: 'Chain through the dogs, haul tight, and hammer the wedge.'
+  place: place_marre_timber_rafts
+  sub: rafts
+  from: 6
+  to: 16
+  hours: 2
+  skill: skill_woodcraft
+  effects:
+    vigour: -6
+- id: activity_pile_shoal_haul_weight
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_pile_shoal
+  name: 'Haul on the weight'
+  text: 'Up on the line, drop on the word.'
+  place: place_marre_pile_shoal
+  sub: staging
+  from: 6
+  to: 15
+  hours: 2
+  skill: skill_athletics
+  effects:
+    vigour: -6
+- id: activity_south_pans_rake_pans
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_south_pans
+  name: 'Rake the pans'
+  text: 'Push the crust to the edge and heap it to drain.'
+  place: place_marre_south_pans
+  sub: pans
+  from: 6
+  to: 12
+  hours: 2
+  skill: skill_athletics
+  effects:
+    vigour: -6
+- id: activity_mussel_poles_strip_poles
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_mussel_poles
+  name: 'Strip a pole'
+  text: 'Twist the rope of shell free and into the boat.'
+  place: place_marre_mussel_poles
+  sub: poles
+  from: 7
+  to: 13
+  hours: 2
+  skill: skill_fishing
+  effects:
+    vigour: -6
+- id: activity_the_dredger_wind_spoon
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_the_dredger
+  name: 'Wind up the spoon'
+  text: 'Round the windlass until the mud breaks surface.'
+  place: place_marre_the_dredger
+  sub: deck
+  from: 6
+  to: 16
+  hours: 2
+  skill: skill_athletics
+  effects:
+    vigour: -6
+- id: activity_lamp_posts_fill_lamps
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_lamp_posts
+  name: 'Fill the lamps'
+  text: 'Oil, wick, and light each one from the last.'
+  place: place_marre_lamp_posts
+  sub: shrine
+  from: 17
+  to: 21
+  hours: 1
+  skill: skill_devotion
+  effects:
+    vigour: -3
+- id: activity_long_bar_haul_seine
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_long_bar
+  name: 'Haul the seine'
+  text: 'Twenty hands on the rope, and walk it up the beach.'
+  place: place_marre_long_bar
+  sub: seaside
+  from: 5
+  to: 10
+  hours: 2
+  skill: skill_fishing
+  effects:
+    vigour: -6
+- id: activity_sea_gate_fort_grease_chain
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_sea_gate_fort
+  name: 'Grease the chain'
+  text: 'Link by link, tallow to the elbow.'
+  place: place_marre_sea_gate_fort
+  sub: chainroom
+  from: 7
+  to: 15
+  hours: 2
+  skill: skill_athletics
+  effects:
+    vigour: -6
+- id: activity_airing_sheds_turn_bales
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_airing_sheds
+  name: 'Turn the bales'
+  text: 'Hook, heave, and let the air at the other side.'
+  place: place_marre_airing_sheds
+  sub: sheds
+  from: 7
+  to: 16
+  hours: 2
+  skill: skill_physick
+  effects:
+    vigour: -6
+- id: activity_proveditors_landing_copy_bills
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_proveditors_landing
+  name: 'Copy bills of health'
+  text: 'Ship, port, crew, deaths. In a fair hand, twice.'
+  place: place_marre_proveditors_landing
+  sub: office
+  from: 8
+  to: 16
+  hours: 2
+  skill: skill_letters
+  effects:
+    vigour: -6
+- id: activity_deaf_bell_isle_ring_deaf_bell
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_deaf_bell_isle
+  name: 'Ring the hours'
+  text: 'Pull, clank, count, and pull again.'
+  place: place_marre_deaf_bell_isle
+  sub: belltower
+  from: 6
+  to: 20
+  hours: 1
+  skill: skill_devotion
+  effects:
+    vigour: -3
+- id: activity_market_raft_cry_wares
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_market_raft
+  name: 'Cry the wares'
+  text: 'Loud, fast, and cheaper than the next boat.'
+  place: place_marre_market_raft
+  sub: boats
+  from: 5
+  to: 9
+  hours: 2
+  skill: skill_trade
+  effects:
+    vigour: -6
+- id: activity_cuttle_flats_spear_cuttle
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_cuttle_flats
+  name: 'Spear cuttlefish'
+  text: 'Lantern low, look for the eye, and strike behind it.'
+  place: place_marre_cuttle_flats
+  sub: flats
+  from: 19
+  to: 23
+  hours: 2
+  skill: skill_fishing
+  dc: 12
+  effects:
+    vigour: -6
+- id: activity_founders_isle_ram_mould
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_founders_isle
+  name: 'Ram the mould'
+  text: 'Sand, tamp, sand, tamp, until it rings solid.'
+  place: place_marre_founders_isle
+  sub: pit
+  from: 7
+  to: 16
+  hours: 2
+  skill: skill_smithing
+  effects:
+    vigour: -6
+- id: activity_tanners_isle_scrape_hides
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_tanners_isle
+  name: 'Scrape a hide'
+  text: 'Over the beam, flesh side up, long strokes.'
+  place: place_marre_tanners_isle
+  sub: frames
+  from: 7
+  to: 16
+  hours: 2
+  skill: skill_clothwork
+  effects:
+    vigour: -6
+- id: activity_lace_isle_wind_bobbins
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_lace_isle
+  name: 'Wind bobbins'
+  text: 'Thread on to each, even and tight, a hundred before noon.'
+  place: place_marre_lace_isle
+  sub: doorways
+  from: 8
+  to: 17
+  hours: 2
+  skill: skill_clothwork
+  effects:
+    vigour: -6
+- id: activity_oyster_beds_turn_tiles
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_oyster_beds
+  name: 'Turn the oyster tiles'
+  text: 'Lift, scrape the weed off, and set them back.'
+  place: place_marre_oyster_beds
+  sub: beds
+  from: 6
+  to: 12
+  hours: 2
+  skill: skill_fishing
+  effects:
+    vigour: -6
+- id: activity_coral_rock_sort_coral
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_coral_rock
+  name: 'Sort the coral'
+  text: 'By colour, by thickness, and the dead white thrown back.'
+  place: place_marre_coral_rock
+  sub: boat
+  from: 8
+  to: 16
+  hours: 1
+  skill: skill_trade
+  effects:
+    vigour: -3

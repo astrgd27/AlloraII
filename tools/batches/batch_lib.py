@@ -6,9 +6,13 @@ def canon_coords(root):
         i = block.split('\n', 1)[0].strip()
         x = re.search(r'^  x: (\d+)', block, re.M); y = re.search(r'^  y: (\d+)', block, re.M)
         if x and y: out[i] = (int(x.group(1)), int(y.group(1)))
+    # Places added by earlier batches, from the built world.
+    import json
+    for p in json.load(open(root + '/packages/engine/src/generated/world.json'))['places']:
+        out.setdefault(p['id'], (p['x'], p['y']))
     return out
 q = lambda s: '"' + s.replace('\\', '\\\\').replace('"', '\\"') + '"'
-def write_batch(root, region, tag, P, title, extra_pos=None, water=False):
+def write_batch(root, region, tag, P, title, extra_pos=None, water=False, routes=None):
     canon = canon_coords(root); canon.update(extra_pos or {})
     ids = {p[0] for p in P}
     pid = lambda x: f'place_{region}_{x}' if x in ids else x
@@ -31,7 +35,7 @@ def write_batch(root, region, tag, P, title, extra_pos=None, water=False):
             way = 'track' if kind == 'wild' else 'road'
             # In a lagoon a short hop is a street and bridge; anything longer is a boat.
             if water: way = 'street' if round(d * 0.38) <= 1 else 'river'
-            roads += f"- id: road_{a}_{b}\n  origin: allora2\n  kind: road\n  roots:\n    - {a}\n    - {b}\n  from: {a}\n  to: {b}\n  way: {way}\n  hours: {max(1, round(d * 0.38))}\n"
+            roads += f"- id: road_{a}_{b}\n  origin: allora2\n  kind: road\n" + (f"  route: {routes[i]}\n" if routes and i in routes else '') + f"  roots:\n    - {a}\n    - {b}\n  from: {a}\n  to: {b}\n  way: {way}\n  hours: {max(1, round(d * 0.38))}\n"
     for path, text in [(f'content/world/places/{tag}.yaml', places), (f'content/people/{tag}.yaml', people), (f'content/activities/{tag}.yaml', acts), (f'content/world/roads/{tag}.yaml', roads)]:
         open(root + '/' + path, 'w').write(text)
     print(len(P), 'places', len(seen), 'roads')

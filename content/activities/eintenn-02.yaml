@@ -1,0 +1,317 @@
+# Eintenn, second batch: twenty-one small places round Kesselhaven, the river, the mines, the hills and the south.
+- id: activity_salters_gate_count_carts
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_salters_gate
+  name: 'Count the carts through'
+  text: 'A notch for each cart, and a second for each that rides too low.'
+  place: place_eintenn_salters_gate
+  sub: arch
+  from: 6
+  to: 18
+  hours: 2
+  skill: skill_numbers
+  effects:
+    vigour: -6
+- id: activity_netmenders_strand_mend_nets
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_netmenders_strand
+  name: 'Mend nets'
+  text: 'Find the hole, knot it shut, find the next.'
+  place: place_eintenn_netmenders_strand
+  sub: shingle
+  from: 7
+  to: 17
+  hours: 2
+  skill: skill_fishing
+  effects:
+    vigour: -6
+- id: activity_coopers_yard_shave_staves
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_coopers_yard
+  name: 'Shave staves'
+  text: 'Drawknife along the grain, until the curve is right by eye.'
+  place: place_eintenn_coopers_yard
+  sub: sheds
+  from: 7
+  to: 16
+  hours: 2
+  skill: skill_woodwork
+  effects:
+    vigour: -6
+- id: activity_eelwater_hang_eels
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_eelwater
+  name: 'Hang the eels to smoke'
+  text: 'A hook through each, a pole of twenty, and into the dark.'
+  place: place_eintenn_eelwater
+  sub: smokehouses
+  from: 8
+  to: 16
+  hours: 2
+  skill: skill_cookery
+  effects:
+    vigour: -6
+- id: activity_inkwell_row_sort_books
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_inkwell_row
+  name: 'Sort a crate of books'
+  text: 'By subject, then by size, then by how much is missing.'
+  place: place_eintenn_inkwell_row
+  sub: stalls
+  from: 9
+  to: 18
+  hours: 2
+  skill: skill_letters
+  effects:
+    vigour: -6
+- id: activity_starwatch_hill_keep_sheep
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_starwatch_hill
+  name: 'Keep the sheep off the stones'
+  text: 'Walk the ring, whistle the dog, and count them twice.'
+  place: place_eintenn_starwatch_hill
+  sub: fold
+  from: 6
+  to: 19
+  hours: 2
+  skill: skill_beastcraft
+  effects:
+    vigour: -6
+- id: activity_panners_row_rake_salt
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_panners_row
+  name: 'Rake the salt'
+  text: 'Long strokes, into ridges, and let it drain.'
+  place: place_eintenn_panners_row
+  sub: store
+  from: 6
+  to: 15
+  hours: 2
+  skill: skill_athletics
+  effects:
+    vigour: -6
+- id: activity_mud_chapel_ring_fog_bell
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_mud_chapel
+  name: 'Ring the fog bell'
+  text: 'Three pulls, a count of sixty, three pulls.'
+  place: place_eintenn_mud_chapel
+  sub: belfry
+  from: 5
+  to: 22
+  hours: 1
+  skill: skill_devotion
+  effects:
+    vigour: -3
+- id: activity_haverford_cut_oats
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_haverford
+  name: 'Cut oats'
+  text: 'Sickle low, bind the sheaf, stand it up.'
+  place: place_eintenn_haverford
+  sub: oatfields
+  from: 6
+  to: 17
+  hours: 3
+  skill: skill_husbandry
+  effects:
+    vigour: -9
+- id: activity_long_reach_haul_barge
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_long_reach
+  name: 'Haul a barge'
+  text: 'Rope over the shoulder, lean, and walk.'
+  place: place_eintenn_long_reach
+  sub: towpath
+  from: 6
+  to: 17
+  hours: 3
+  skill: skill_athletics
+  effects:
+    vigour: -9
+- id: activity_osterau_scutch_flax
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_osterau
+  name: 'Scutch flax'
+  text: 'Beat it, shake it, beat it again, until the straw falls out.'
+  place: place_eintenn_osterau
+  sub: green
+  from: 7
+  to: 17
+  hours: 2
+  skill: skill_clothwork
+  effects:
+    vigour: -6
+- id: activity_lindenau_walk_horses
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_lindenau
+  name: 'Walk the horses'
+  text: 'Round the ring at a walk, so the buyers can see them move.'
+  place: place_eintenn_lindenau
+  sub: paddocks
+  from: 7
+  to: 16
+  hours: 2
+  skill: skill_beastcraft
+  effects:
+    vigour: -6
+- id: activity_slag_heaps_pick_slag
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_slag_heaps
+  name: 'Pick over the slag'
+  text: 'Crack it, look, throw it behind you. Keep the ones that shine.'
+  place: place_eintenn_slag_heaps
+  sub: heaps
+  from: 7
+  to: 17
+  hours: 2
+  skill: skill_mining
+  dc: 12
+  effects:
+    vigour: -6
+- id: activity_stollenwick_wash_greys
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_stollenwick
+  name: 'Wash the greys'
+  text: 'Soak, beat, rinse. The water runs like slate.'
+  place: place_eintenn_stollenwick
+  sub: washhouse
+  from: 7
+  to: 15
+  hours: 2
+  skill: skill_clothwork
+  effects:
+    vigour: -6
+- id: activity_wolf_pits_lay_brush
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_wolf_pits
+  name: 'Lay fresh brush'
+  text: 'Light sticks, then leaves, then walk away backwards.'
+  place: place_eintenn_wolf_pits
+  sub: pits
+  from: 6
+  to: 12
+  hours: 1
+  skill: skill_woodcraft
+  effects:
+    vigour: -3
+- id: activity_high_byre_turn_cheeses
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_high_byre
+  name: 'Turn the cheeses'
+  text: 'Every wheel, every day, and a rub of salt.'
+  place: place_eintenn_high_byre
+  sub: byre
+  from: 6
+  to: 18
+  hours: 1
+  skill: skill_cookery
+  effects:
+    vigour: -3
+- id: activity_pilgrim_stair_sweep_stair
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_pilgrim_stair
+  name: 'Sweep the stair'
+  text: 'Top to bottom, a step at a time, leaves over the edge.'
+  place: place_eintenn_pilgrim_stair
+  sub: steps
+  from: 6
+  to: 11
+  hours: 2
+  skill: skill_wayfaring
+  effects:
+    vigour: -6
+- id: activity_kelterwick_turn_press
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_kelterwick
+  name: 'Turn the press'
+  text: 'Four to the beam, and round, and listen for the run.'
+  place: place_eintenn_kelterwick
+  sub: press
+  from: 7
+  to: 18
+  hours: 2
+  skill: skill_cookery
+  effects:
+    vigour: -6
+- id: activity_appleford_guide_carts
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_appleford
+  name: 'Guide carts over the ford'
+  text: 'Stand at the white stone and point. Shout if you must.'
+  place: place_eintenn_appleford
+  sub: ford
+  from: 6
+  to: 18
+  hours: 2
+  skill: skill_wayfaring
+  effects:
+    vigour: -6
+- id: activity_bee_garth_strain_honey
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_bee_garth
+  name: 'Strain the honey'
+  text: 'Comb into the cloth, and let it take its time.'
+  place: place_eintenn_bee_garth
+  sub: honeyhouse
+  from: 8
+  to: 16
+  hours: 1
+  skill: skill_husbandry
+  effects:
+    vigour: -3
+- id: activity_greywater_weir_clear_weir
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_greywater_weir
+  name: 'Clear the weir'
+  text: 'Branches, weed and worse, hauled out by hand.'
+  place: place_eintenn_greywater_weir
+  sub: weir
+  from: 6
+  to: 16
+  hours: 2
+  skill: skill_fishing
+  effects:
+    vigour: -6
