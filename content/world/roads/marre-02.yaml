@@ -1,0 +1,431 @@
+# Marre, second batch: twenty-five small places in Selino, the city, the Grand Canal, the Glass Isles and the outer waters.
+- id: road_place_marre_biscuit_ovens_selino
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_biscuit_ovens
+    - selino
+  from: place_marre_biscuit_ovens
+  to: selino
+  way: river
+  hours: 2
+- id: road_place_marre_water_stairs_selino
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_water_stairs
+    - selino
+  from: place_marre_water_stairs
+  to: selino
+  way: river
+  hours: 2
+- id: road_place_marre_biscuit_ovens_place_marre_water_stairs
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_biscuit_ovens
+    - place_marre_water_stairs
+  from: place_marre_biscuit_ovens
+  to: place_marre_water_stairs
+  way: river
+  hours: 2
+- id: road_place_marre_marines_yard_selino
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_marines_yard
+    - selino
+  from: place_marre_marines_yard
+  to: selino
+  way: street
+  hours: 1
+- id: road_place_marre_pawn_arch_selino
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_pawn_arch
+    - selino
+  from: place_marre_pawn_arch
+  to: selino
+  way: street
+  hours: 1
+- id: road_place_marre_marines_yard_place_marre_pawn_arch
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_marines_yard
+    - place_marre_pawn_arch
+  from: place_marre_marines_yard
+  to: place_marre_pawn_arch
+  way: river
+  hours: 2
+- id: road_place_marre_water_stairs_place_marre_widows_lookout
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_water_stairs
+    - place_marre_widows_lookout
+  from: place_marre_water_stairs
+  to: place_marre_widows_lookout
+  way: street
+  hours: 1
+- id: road_place_marre_biscuit_ovens_place_marre_breaming_hard
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_biscuit_ovens
+    - place_marre_breaming_hard
+  from: place_marre_biscuit_ovens
+  to: place_marre_breaming_hard
+  way: river
+  hours: 2
+- id: road_marre_city_place_marre_campo_remi
+  origin: allora2
+  kind: road
+  roots:
+    - marre_city
+    - place_marre_campo_remi
+  from: marre_city
+  to: place_marre_campo_remi
+  way: river
+  hours: 3
+- id: road_place_marre_campo_remi_place_marre_squero_storto
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_campo_remi
+    - place_marre_squero_storto
+  from: place_marre_campo_remi
+  to: place_marre_squero_storto
+  way: street
+  hours: 1
+- id: road_marre_city_place_marre_calle_cambi
+  origin: allora2
+  kind: road
+  roots:
+    - marre_city
+    - place_marre_calle_cambi
+  from: marre_city
+  to: place_marre_calle_cambi
+  way: river
+  hours: 2
+- id: road_place_marre_calle_cambi_place_marre_pescaria
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_calle_cambi
+    - place_marre_pescaria
+  from: place_marre_calle_cambi
+  to: place_marre_pescaria
+  way: street
+  hours: 1
+- id: road_place_marre_calle_cambi_place_marre_fondaco_spezie
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_calle_cambi
+    - place_marre_fondaco_spezie
+  from: place_marre_calle_cambi
+  to: place_marre_fondaco_spezie
+  way: river
+  hours: 2
+- id: road_place_marre_fondaco_spezie_place_marre_ponte_maschere
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_fondaco_spezie
+    - place_marre_ponte_maschere
+  from: place_marre_fondaco_spezie
+  to: place_marre_ponte_maschere
+  way: river
+  hours: 2
+- id: road_marre_canal_place_marre_teatro_remo
+  origin: allora2
+  kind: road
+  roots:
+    - marre_canal
+    - place_marre_teatro_remo
+  from: marre_canal
+  to: place_marre_teatro_remo
+  way: river
+  hours: 3
+- id: road_place_marre_corte_tinta_place_marre_teatro_remo
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_corte_tinta
+    - place_marre_teatro_remo
+  from: place_marre_corte_tinta
+  to: place_marre_teatro_remo
+  way: river
+  hours: 2
+- id: road_marre_city_place_marre_corte_barcaroli
+  origin: allora2
+  kind: road
+  roots:
+    - marre_city
+    - place_marre_corte_barcaroli
+  from: marre_city
+  to: place_marre_corte_barcaroli
+  way: river
+  hours: 2
+- id: road_place_marre_corte_barcaroli_place_marre_osteria_bauta
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_corte_barcaroli
+    - place_marre_osteria_bauta
+  from: place_marre_corte_barcaroli
+  to: place_marre_osteria_bauta
+  way: river
+  hours: 3
+- id: road_marre_city_place_marre_caulkers_bell
+  origin: allora2
+  kind: road
+  roots:
+    - marre_city
+    - place_marre_caulkers_bell
+  from: marre_city
+  to: place_marre_caulkers_bell
+  way: river
+  hours: 3
+- id: road_place_marre_caulkers_bell_place_marre_corte_tinta
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_caulkers_bell
+    - place_marre_corte_tinta
+  from: place_marre_caulkers_bell
+  to: place_marre_corte_tinta
+  way: street
+  hours: 1
+- id: road_place_marre_caulkers_bell_place_marre_long_ropewalk
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_caulkers_bell
+    - place_marre_long_ropewalk
+  from: place_marre_caulkers_bell
+  to: place_marre_long_ropewalk
+  way: river
+  hours: 2
+- id: road_place_marre_long_ropewalk_place_marre_teatro_remo
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_long_ropewalk
+    - place_marre_teatro_remo
+  from: place_marre_long_ropewalk
+  to: place_marre_teatro_remo
+  way: river
+  hours: 2
+- id: road_place_marre_campo_remi_place_marre_isola_orti
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_campo_remi
+    - place_marre_isola_orti
+  from: place_marre_campo_remi
+  to: place_marre_isola_orti
+  way: river
+  hours: 2
+- id: road_place_marre_isola_orti_place_marre_stilt_huts
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_isola_orti
+    - place_marre_stilt_huts
+  from: place_marre_isola_orti
+  to: place_marre_stilt_huts
+  way: river
+  hours: 7
+- id: road_place_marre_corte_barcaroli_place_marre_matrons_foundlings
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_corte_barcaroli
+    - place_marre_matrons_foundlings
+  from: place_marre_corte_barcaroli
+  to: place_marre_matrons_foundlings
+  way: river
+  hours: 2
+- id: road_place_marre_matrons_foundlings_place_marre_riva_ombra
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_matrons_foundlings
+    - place_marre_riva_ombra
+  from: place_marre_matrons_foundlings
+  to: place_marre_riva_ombra
+  way: river
+  hours: 3
+- id: road_marre_canal_place_marre_traghetto_giglio
+  origin: allora2
+  kind: road
+  roots:
+    - marre_canal
+    - place_marre_traghetto_giglio
+  from: marre_canal
+  to: place_marre_traghetto_giglio
+  way: street
+  hours: 1
+- id: road_place_marre_fondamenta_specchi_place_marre_traghetto_giglio
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_fondamenta_specchi
+    - place_marre_traghetto_giglio
+  from: place_marre_fondamenta_specchi
+  to: place_marre_traghetto_giglio
+  way: river
+  hours: 2
+- id: road_marre_canal_place_marre_rio_servi
+  origin: allora2
+  kind: road
+  roots:
+    - marre_canal
+    - place_marre_rio_servi
+  from: marre_canal
+  to: place_marre_rio_servi
+  way: river
+  hours: 2
+- id: road_marre_canal_place_marre_ca_zorzan
+  origin: allora2
+  kind: road
+  roots:
+    - marre_canal
+    - place_marre_ca_zorzan
+  from: marre_canal
+  to: place_marre_ca_zorzan
+  way: river
+  hours: 2
+- id: road_place_marre_ca_zorzan_place_marre_rio_servi
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_ca_zorzan
+    - place_marre_rio_servi
+  from: place_marre_ca_zorzan
+  to: place_marre_rio_servi
+  way: river
+  hours: 2
+- id: road_marre_isles_place_marre_sand_barges
+  origin: allora2
+  kind: road
+  roots:
+    - marre_isles
+    - place_marre_sand_barges
+  from: marre_isles
+  to: place_marre_sand_barges
+  way: river
+  hours: 2
+- id: road_place_marre_guard_boats_place_marre_sand_barges
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_guard_boats
+    - place_marre_sand_barges
+  from: place_marre_guard_boats
+  to: place_marre_sand_barges
+  way: river
+  hours: 3
+- id: road_marre_isles_place_marre_bead_row
+  origin: allora2
+  kind: road
+  roots:
+    - marre_isles
+    - place_marre_bead_row
+  from: marre_isles
+  to: place_marre_bead_row
+  way: street
+  hours: 1
+- id: road_place_marre_bead_row_place_marre_sand_barges
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_bead_row
+    - place_marre_sand_barges
+  from: place_marre_bead_row
+  to: place_marre_sand_barges
+  way: river
+  hours: 2
+- id: road_place_marre_bead_row_place_marre_old_masters_isle
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_bead_row
+    - place_marre_old_masters_isle
+  from: place_marre_bead_row
+  to: place_marre_old_masters_isle
+  way: river
+  hours: 2
+- id: road_place_marre_ash_isle_place_marre_old_masters_isle
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_ash_isle
+    - place_marre_old_masters_isle
+  from: place_marre_ash_isle
+  to: place_marre_old_masters_isle
+  way: river
+  hours: 3
+- id: road_morena_place_marre_goat_rock
+  origin: allora2
+  kind: road
+  roots:
+    - morena
+    - place_marre_goat_rock
+  from: morena
+  to: place_marre_goat_rock
+  way: river
+  hours: 3
+- id: road_place_marre_salvage_camp_xonia_shore
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_salvage_camp
+    - xonia_shore
+  from: place_marre_salvage_camp
+  to: xonia_shore
+  way: river
+  hours: 2
+- id: road_place_marre_divers_raft_xonia_sunken
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_divers_raft
+    - xonia_sunken
+  from: place_marre_divers_raft
+  to: xonia_sunken
+  way: river
+  hours: 2
+- id: road_place_marre_ash_isle_place_marre_divers_raft
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_ash_isle
+    - place_marre_divers_raft
+  from: place_marre_ash_isle
+  to: place_marre_divers_raft
+  way: river
+  hours: 6
+- id: road_place_marre_keepers_cove_wp_lighthouse
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_keepers_cove
+    - wp_lighthouse
+  from: place_marre_keepers_cove
+  to: wp_lighthouse
+  way: river
+  hours: 2
+- id: road_place_marre_keepers_cove_place_marre_pilots_rest
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_keepers_cove
+    - place_marre_pilots_rest
+  from: place_marre_keepers_cove
+  to: place_marre_pilots_rest
+  way: river
+  hours: 6

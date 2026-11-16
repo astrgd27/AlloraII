@@ -1,0 +1,379 @@
+# Eintenn, second batch: twenty-one small places round Kesselhaven, the river, the mines, the hills and the south.
+- id: person_eintenn_jost
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_salters_gate
+  name: 'Jost Marsh'
+  title: "Toll-Clerk of the Salters' Gate"
+  region: eintenn
+  home: place_eintenn_salters_gate
+  hint: 'a young man counting carts aloud without moving his lips'
+  meet: '“Forty-one,” he says, to nobody. Then, to you: “Jost Marsh. Do not speak to me while a cart is under the arch.”'
+  talk:
+    - 'Jost knows which carters water their salt, and charges them by the wet weight.'
+    - '“Salt goes out, silver comes in,” Jost says. “I am the hinge.”'
+  sched:
+    - at: [place_eintenn_salters_gate, arch]
+      h: [6, 20]
+    - at: [place_eintenn_salters_gate, tollhouse]
+- id: person_eintenn_wiebke
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_netmenders_strand
+  name: 'Wiebke Tarn'
+  title: 'Netmender of the Strand'
+  region: eintenn
+  home: place_eintenn_netmenders_strand
+  hint: 'a woman with a bone needle in her teeth and a net over her knees'
+  meet: 'She speaks round the needle. “Wiebke Tarn. Hold that end. No, the other end.”'
+  talk:
+    - 'Wiebke can tell which boat a net came off by the knots.'
+    - '“A fish only needs one hole,” Wiebke says. “I need to find all of them.”'
+  sched:
+    - at: [place_eintenn_netmenders_strand, shingle]
+      h: [6, 20]
+    - at: [place_eintenn_netmenders_strand, racks]
+- id: person_eintenn_anselm
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_coopers_yard
+  name: 'Anselm Hoop'
+  title: 'Cooper of the Yard'
+  region: eintenn
+  home: place_eintenn_coopers_yard
+  hint: 'a thick-armed man knocking a hoop down with a mallet'
+  meet: 'He finishes the hoop first. “Anselm Hoop. And yes, that is the name, and no, I did not choose the trade to fit it.”'
+  talk:
+    - 'Anselm says a good barrel is tight without glue or nails, and so is a good guild.'
+    - '“Everything in this town travels in my work,” Anselm says. “Nobody looks at the barrel.”'
+  sched:
+    - at: [place_eintenn_coopers_yard, fire]
+      h: [6, 20]
+    - at: [place_eintenn_coopers_yard, sheds]
+- id: person_eintenn_frauke
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_eelwater
+  name: 'Frauke Fenn'
+  title: 'Eel-Smoker of Eelwater'
+  region: eintenn
+  home: place_eintenn_eelwater
+  hint: 'a woman with smoke-red eyes and a string of eels over her shoulder'
+  meet: '“Shut the door,” she says. “The smoke is the money.” Then: “Frauke Fenn. You get used to it.”'
+  talk:
+    - 'Frauke sells half her catch in the market and the other half, she says, to people who do not use the market.'
+    - '“Alder, not oak,” Frauke says. “Oak is for people who do not like eels.”'
+  sched:
+    - at: [place_eintenn_eelwater, smokehouses]
+      h: [6, 20]
+    - at: [place_eintenn_eelwater, dykes]
+- id: person_eintenn_konrad
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_inkwell_row
+  name: 'Konrad Vellum'
+  title: 'Bookseller of the Row'
+  region: eintenn
+  home: place_eintenn_inkwell_row
+  hint: 'a dusty man reading his own stock with a finger on the line'
+  meet: 'He keeps his finger where it is. “Konrad Vellum. You may read standing up for nothing. Sitting down costs.”'
+  talk:
+    - 'Konrad buys the same books back from the same students every spring.'
+    - '“A scholar sells his books in this order,” Konrad says. “Theology first. Then the rest.”'
+  sched:
+    - at: [place_eintenn_inkwell_row, stalls]
+      h: [6, 20]
+    - at: [place_eintenn_inkwell_row, garrets]
+- id: person_eintenn_lena
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_starwatch_hill
+  name: 'Lena Hale'
+  title: 'Shepherd of Starwatch'
+  region: eintenn
+  home: place_eintenn_starwatch_hill
+  hint: 'a girl with a crook, scratching numbers on a slate'
+  meet: '“They pay me to keep the sheep off the stones,” she says. “Lena Hale. I learned the rest by listening.”'
+  talk:
+    - 'Lena can name more stars than most of the students who climb the hill.'
+    - '“The sheep do not care which way is north,” Lena says. “I do, now.”'
+  sched:
+    - at: [place_eintenn_starwatch_hill, fold]
+      h: [6, 20]
+    - at: [place_eintenn_starwatch_hill, stones]
+- id: person_eintenn_ebbo
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_panners_row
+  name: 'Ebbo Rake'
+  title: 'Salt-Panner of the Row'
+  region: eintenn
+  home: place_eintenn_panners_row
+  hint: 'a man with cracked hands and a wide wooden rake'
+  meet: 'He shows you his palms. “Ebbo Rake. That is what salt does. Still better than the mines.”'
+  talk:
+    - 'Ebbo says the moor gives salt to anyone and takes a cart, a horse or a man every few years in exchange.'
+    - '“Wind and sun do the work,” Ebbo says. “I only tidy up after them.”'
+  sched:
+    - at: [place_eintenn_panners_row, store]
+      h: [6, 20]
+    - at: [place_eintenn_panners_row, row]
+- id: person_eintenn_ansgar
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_mud_chapel
+  name: 'Brother Ansgar'
+  title: 'Keeper of the Mud Chapel'
+  region: eintenn
+  home: place_eintenn_mud_chapel
+  hint: 'a monk with his habit tucked up and mud to the knee'
+  meet: '“Boots off,” he says. “The floor is the cleanest thing for a mile.” Then: “Brother Ansgar. I ring the bell and I cut the names.”'
+  talk:
+    - 'Ansgar has pulled eleven people off the flats by following his own bell back.'
+    - '“The tide keeps no hours you can trust,” Ansgar says. “So I keep mine.”'
+  sched:
+    - at: [place_eintenn_mud_chapel, nave]
+      h: [6, 20]
+    - at: [place_eintenn_mud_chapel, belfry]
+- id: person_eintenn_greta
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_haverford
+  name: 'Greta Stile'
+  title: 'Farmer of Haverford'
+  region: eintenn
+  home: place_eintenn_haverford
+  hint: 'a brisk woman with a sack of oats on one hip'
+  meet: '“If you are going to the moor, you are going the wrong way,” she says. “Greta Stile. Everyone asks.”'
+  talk:
+    - 'Greta charges carters for oats and for pulling them out of the ford, and says the second pays better.'
+    - '“A horse works on oats,” Greta says. “So this town works on me.”'
+  sched:
+    - at: [place_eintenn_haverford, oatfields]
+      h: [6, 20]
+    - at: [place_eintenn_haverford, ford]
+- id: person_eintenn_dierk
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_long_reach
+  name: 'Dierk Tow'
+  title: 'Hauler of the Reach'
+  region: eintenn
+  home: place_eintenn_long_reach
+  hint: 'a broad man leaning into a rope as if into a wind'
+  meet: 'He does not stop. “Walk with me if you want to talk. Dierk Tow. The barge will not wait.”'
+  talk:
+    - 'Dierk has walked from the sea to the ferry more times than he can count, and never once back by water.'
+    - '“Downstream is free,” Dierk says. “Upstream is me.”'
+  sched:
+    - at: [place_eintenn_long_reach, towpath]
+      h: [6, 20]
+    - at: [place_eintenn_long_reach, hut]
+- id: person_eintenn_gesche
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_osterau
+  name: 'Gesche Retter'
+  title: 'Flax-Wife of Osterau'
+  region: eintenn
+  home: place_eintenn_osterau
+  hint: 'a tall woman beating a bundle of flax as if it had insulted her'
+  meet: 'She gives it one more blow. “Gesche Retter. You will stop noticing the smell in a day. Or a year.”'
+  talk:
+    - 'Gesche sells her best line to the Fondaco and says they pay in promises and thin silver.'
+    - '“Linen is patience you can wear,” Gesche says.'
+  sched:
+    - at: [place_eintenn_osterau, green]
+      h: [6, 20]
+    - at: [place_eintenn_osterau, retting]
+- id: person_eintenn_rupp
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_lindenau
+  name: 'Rupp Halter'
+  title: 'Horse-Coper of Lindenau'
+  region: eintenn
+  home: place_eintenn_lindenau
+  hint: 'a bow-legged man looking at a horse’s teeth'
+  meet: 'He lets the lip go. “Seven, not five. Rupp Halter. Never buy a horse from a man in a hurry.”'
+  talk:
+    - 'Rupp remembers every horse he has sold and what became of it.'
+    - '“The knights want height,” Rupp says. “The carters want sense. I breed for the carters.”'
+  sched:
+    - at: [place_eintenn_lindenau, paddocks]
+      h: [6, 20]
+    - at: [place_eintenn_lindenau, green]
+- id: person_eintenn_detlef
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_slag_heaps
+  name: 'Detlef Clink'
+  title: 'Picker of the Heaps'
+  region: eintenn
+  home: place_eintenn_slag_heaps
+  hint: 'a boy with a hammer, cracking stones and looking inside'
+  meet: 'He cracks one more. “Nothing. Detlef Clink. One in fifty has colour in it.”'
+  talk:
+    - 'Detlef sells what he finds back to the smelter that threw it away.'
+    - '“They are in a hurry up there,” Detlef says. “I am not.”'
+  sched:
+    - at: [place_eintenn_slag_heaps, heaps]
+      h: [6, 20]
+    - at: [place_eintenn_slag_heaps, washing]
+- id: person_eintenn_marta
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_stollenwick
+  name: 'Marta Pick'
+  title: 'Washerwoman of Stollenwick'
+  region: eintenn
+  home: place_eintenn_stollenwick
+  hint: 'a woman wringing a grey shirt over a grey trough'
+  meet: '“Do not lean on that wall, it is drying,” she says. “Marta Pick. Three sons below. I count them up every night.”'
+  talk:
+    - 'Marta knows which seam is being worked by the colour of the dirt that comes home.'
+    - '“Silver comes out white,” Marta says. “Everything else comes out grey.”'
+  sched:
+    - at: [place_eintenn_stollenwick, washhouse]
+      h: [6, 20]
+    - at: [place_eintenn_stollenwick, lane]
+- id: person_eintenn_gunther
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_wolf_pits
+  name: 'Gunther Snare'
+  title: 'Wolf-Warden of the Pits'
+  region: eintenn
+  home: place_eintenn_wolf_pits
+  hint: 'a quiet man with a spear and a limp'
+  meet: '“Walk where I walk,” he says. “Exactly.” When you are across: “Gunther Snare. That is how I got the limp.”'
+  talk:
+    - 'Gunther has taken four wolves in nine years, and says the pits mostly catch drunkards.'
+    - '“The wolves know where the pits are,” Gunther says. “That is the point.”'
+  sched:
+    - at: [place_eintenn_wolf_pits, pits]
+      h: [6, 20]
+    - at: [place_eintenn_wolf_pits, bothy]
+- id: person_eintenn_irmel
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_high_byre
+  name: 'Irmel Horn'
+  title: 'Herdswoman of the High Byre'
+  region: eintenn
+  home: place_eintenn_high_byre
+  hint: 'a sunburnt woman with a cow-horn slung on a cord'
+  meet: 'She blows one note on the horn and every cow looks up. “Irmel Horn. That is all the magic I have.”'
+  talk:
+    - 'Irmel has not been below the tree-line between thaw and frost since she was twelve.'
+    - '“Up here the weather tells you first,” Irmel says. “Down there you find out.”'
+  sched:
+    - at: [place_eintenn_high_byre, pasture]
+      h: [6, 20]
+    - at: [place_eintenn_high_byre, byre]
+- id: person_eintenn_odila
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_pilgrim_stair
+  name: 'Odila Staff'
+  title: 'Sweeper of the Stair'
+  region: eintenn
+  home: place_eintenn_pilgrim_stair
+  hint: 'an old woman with a birch broom, working downward'
+  meet: '“Mind the wet ones,” she says. “Odila Staff. My mother swept it. Do not ask me why. It wants sweeping.”'
+  talk:
+    - 'Odila says you can tell a pilgrim from a scholar by which of them looks at the steps.'
+    - '“Going up, they pray,” Odila says. “Coming down, they are hungry.”'
+  sched:
+    - at: [place_eintenn_pilgrim_stair, steps]
+      h: [6, 20]
+    - at: [place_eintenn_pilgrim_stair, rest]
+- id: person_eintenn_lutz
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_kelterwick
+  name: 'Lutz Tread'
+  title: 'Pressman of Kelterwick'
+  region: eintenn
+  home: place_eintenn_kelterwick
+  hint: 'a man with purple feet and a contented look'
+  meet: 'He looks down at his feet with you. “Lutz Tread. They go white again by spring.”'
+  talk:
+    - 'Lutz can tell the slope a grape grew on by treading it.'
+    - '“The press does the work,” Lutz says. “The feet do the first kindness.”'
+  sched:
+    - at: [place_eintenn_kelterwick, press]
+      h: [6, 20]
+    - at: [place_eintenn_kelterwick, cellars]
+- id: person_eintenn_sanne
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_appleford
+  name: 'Sanne Withy'
+  title: 'Ford-Keeper of Appleford'
+  region: eintenn
+  home: place_eintenn_appleford
+  hint: 'a girl with a pole, standing in the stream to her knees'
+  meet: '“Left of the white stone,” she calls. “Left!” Then, wading out: “Sanne Withy. They never listen the first time.”'
+  talk:
+    - 'Sanne has fished nine barrels and one abbot out of the ford.'
+    - '“The river is polite in summer,” Sanne says. “Do not trust it.”'
+  sched:
+    - at: [place_eintenn_appleford, ford]
+      h: [6, 20]
+    - at: [place_eintenn_appleford, yard]
+- id: person_eintenn_emmeran
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_bee_garth
+  name: 'Brother Emmeran'
+  title: 'Bee-Ward of the Garth'
+  region: eintenn
+  home: place_eintenn_bee_garth
+  hint: 'a monk walking slowly along a wall, talking under his breath'
+  meet: 'He holds up a finger until he has finished the sentence. “I was telling them the news. Brother Emmeran. They like to know.”'
+  talk:
+    - 'Emmeran says the bees are told of every death at the abbey before the bell is rung.'
+    - '“No orchard without them,” Emmeran says. “The abbot knows it, too.”'
+  sched:
+    - at: [place_eintenn_bee_garth, niches]
+      h: [6, 20]
+    - at: [place_eintenn_bee_garth, honeyhouse]
+- id: person_eintenn_wendel
+  origin: allora2
+  kind: person
+  roots:
+    - place_eintenn_greywater_weir
+  name: 'Wendel Sluice'
+  title: 'Weir-Keeper of Greywater'
+  region: eintenn
+  home: place_eintenn_greywater_weir
+  hint: 'a wet man lifting a wicker trap and peering in'
+  meet: '“Trout,” he says, pleased, and then sees you. “Wendel Sluice. The Duke gets every third one. I choose which.”'
+  talk:
+    - 'Wendel clears the weir after every storm and finds something odd in it each time.'
+    - '“Water wants to go round,” Wendel says. “My whole trade is saying no.”'
+  sched:
+    - at: [place_eintenn_greywater_weir, trap]
+      h: [6, 20]
+    - at: [place_eintenn_greywater_weir, weir]

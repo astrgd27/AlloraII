@@ -28,7 +28,7 @@
 12. **Scenes.** A place view that changes with the hour, season and who is there. *(done)*
 13. **Standing orders and the report.** What a life does while you are away, and what you read when you return. *(done)*
 14. **Marre slice.** The Piazza of the Doges and the Lazaretto, about 20 new small places, and the Inquirer of the Cerdans. *(done)*
-15. **Eintenn and Marre, remaining batches.** To ~150 places.
+15. **Eintenn and Marre, remaining batches.** To ~150 places. *(done)*
 16. **Balance personas** for the three trades, and the gate review.
 
 ## New mechanics and lore to add (gaps the wider game needs)
@@ -157,3 +157,10 @@ Each is an addition, to be rooted on canon when it is built.
   - **Not yet:** the case board and theories, named roles in a case (victim, culprit, witnesses), time pressure, rivals, trust on the streets as its own measure, the Mirror-Room, a skill for each step, and standing orders never accusing (they already never take a case).
   - **Balance.** New inquirer persona: all five lives reach Capo's Deputy, about game day 480, a little faster than the smith. Wages are first values.
   - **Kept:** the batch scripts now live in `tools/batches/`.
+- **2026-11-16 · Eintenn and Marre, remaining batches (#36).** The slice now has **160 places** (Eintenn 80, Marre 80), up from 70. Decisions:
+  - **Ninety new small places in four batches** (`eintenn-02`, `eintenn-03`, `marre-02`, `marre-03` under `content/world/places/`), each with a resident who keeps hours and one piece of work, linked by 186 new roads and boat-ways.
+  - **Eintenn** grows round Kesselhaven (gates, strands, kilns, the fen), along the river, below the mines, up to the pass, across a new western moor and through the orchard country. **Marre** grows in Selino, the city's working quarters, the Grand Canal's back-water, the Glass Isles, the mainland, the lagoon's shoals and the outer rocks.
+  - **Fifteen new named ways in Eintenn** (`content/world/routes/eintenn-02.yaml`), so no road there is nameless. Marre's ways are not named yet.
+  - **Every place is a working place:** what its people do is what a life can do there. None of the new work is paid yet; pay belongs with the tuning in #37.
+  - **Canon:** no canon place is moved or renamed. Names that came too near a canon name were changed at lint (the Salters' Gate, the Red Scar, the Breaming Hard, the Rice Floors, Mother Gundel).
+  - **Not yet:** paid work and markets at the new places, people who move between places, events on Marre's waters, named ways in Marre, and a second resident anywhere.

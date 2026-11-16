@@ -1,0 +1,437 @@
+# Marre, third batch: twenty-four small places on the mainland, in the lagoon and in the outer waters.
+- id: place_marre_villa_dandri
+  origin: allora2
+  kind: place
+  roots:
+    - terraferma
+  name: 'Villa Dandri'
+  place_kind: site
+  region: marre
+  x: 12
+  y: 32
+  description: 'The summer villa of a lesser merchant house: a portico, a frescoed hall and a garden laid out with string.'
+  subs:
+    - id: garden
+      name: 'The Formal Garden'
+      description: 'Box hedges clipped into the house’s arms.'
+    - id: portico
+      name: 'The Portico'
+      description: 'Shade, a breeze and wicker chairs.'
+- id: place_marre_heron_marsh
+  origin: allora2
+  kind: place
+  roots:
+    - terraferma
+  name: 'The Heron Marsh'
+  place_kind: wild
+  region: marre
+  x: 4
+  y: 52
+  description: 'Reed and standing water past the last rice-field, where fowlers lie in punts for the Families’ tables.'
+  subs:
+    - id: hides
+      name: 'The Hides'
+      description: 'Reed screens with a slit to shoot through.'
+    - id: channels
+      name: 'The Channels'
+      description: 'Black water a punt wide.'
+- id: place_marre_rice_floors
+  origin: allora2
+  kind: place
+  roots:
+    - terraferma
+  name: 'The Rice Floors'
+  place_kind: site
+  region: marre
+  x: 10
+  y: 50
+  description: 'Brick floors where the rice is trodden out by oxen at harvest and spread to dry, turned with rakes every hour.'
+  subs:
+    - id: floors
+      name: 'The Brick Floors'
+      description: 'Red brick under a gold skin of grain.'
+    - id: barn
+      name: 'The Rice Barn'
+      description: 'Sacks to the tie-beams.'
+- id: place_marre_fever_chapel
+  origin: allora2
+  kind: place
+  roots:
+    - terraferma
+    - c_dolma
+  name: 'The Chapel of the Fevers'
+  place_kind: site
+  region: marre
+  x: 6
+  y: 34
+  description: 'A whitewashed chapel among the paddies, where the field-workers ask the Matron to keep the marsh-fever off for one more summer.'
+  subs:
+    - id: nave
+      name: 'The Nave'
+      description: 'Bare walls hung with small wax limbs.'
+    - id: porch
+      name: 'The Porch'
+      description: 'A bench in the shade and a jar of bitter bark-water.'
+- id: place_marre_locanda_baco
+  origin: allora2
+  kind: place
+  roots:
+    - terraferma
+  name: 'Locanda del Baco'
+  place_kind: site
+  region: marre
+  x: 16
+  y: 38
+  description: 'An inn on the mulberry road where silk-buyers from the city sleep, and talk prices too loudly at supper.'
+  subs:
+    - id: table
+      name: 'The Common Table'
+      description: 'One long table and one pot.'
+    - id: stable
+      name: 'The Stable Yard'
+      description: 'Mules, bales and a boy asleep on both.'
+- id: place_marre_shore_kilns
+  origin: allora2
+  kind: place
+  roots:
+    - terraferma
+  name: 'The Shore Kilns'
+  place_kind: site
+  region: marre
+  x: 18
+  y: 48
+  description: 'Brick and lime kilns on the mainland shore. The city is built of what is burned here and floated across.'
+  subs:
+    - id: kilns
+      name: 'The Kilns'
+      description: 'Square stacks that glow at the seams.'
+    - id: claypits
+      name: 'The Clay Pits'
+      description: 'Grey pits with a plank road.'
+- id: place_marre_timber_rafts
+  origin: allora2
+  kind: place
+  roots:
+    - terraferma
+  name: 'The Timber Rafts'
+  place_kind: site
+  region: marre
+  x: 20
+  y: 34
+  description: 'The river mouth where logs from the hills arrive lashed into rafts, with a hut built on top. Every pile under Marre came this way.'
+  subs:
+    - id: rafts
+      name: 'The Rafts'
+      description: 'Acres of floating logs, chained.'
+    - id: boom
+      name: 'The Boom'
+      description: 'A chain of trunks across the mouth.'
+- id: place_marre_pile_shoal
+  origin: allora2
+  kind: place
+  roots:
+    - marre_city
+  name: 'The Pile-Drivers’ Shoal'
+  place_kind: site
+  region: marre
+  x: 40
+  y: 60
+  description: 'A shoal being turned into ground: gangs drive oak piles into the mud to a song, one blow to a line.'
+  subs:
+    - id: staging
+      name: 'The Staging'
+      description: 'A frame, a weight and eight men on eight ropes.'
+    - id: mudflat
+      name: 'The New Ground'
+      description: 'A forest of pile-heads, level with the water.'
+- id: place_marre_south_pans
+  origin: allora2
+  kind: place
+  roots:
+    - lazaretto
+  name: 'The South Pans'
+  place_kind: site
+  region: marre
+  x: 30
+  y: 74
+  description: 'Salt-pans at the quiet end of the lagoon: shallow squares of sea left for the sun to finish.'
+  subs:
+    - id: pans
+      name: 'The Pans'
+      description: 'Mirrors of brine with white edges.'
+    - id: heaps
+      name: 'The Salt Heaps'
+      description: 'Cones of salt under reed thatch.'
+- id: place_marre_mussel_poles
+  origin: allora2
+  kind: place
+  roots:
+    - marre_city
+  name: 'The Mussel Poles'
+  place_kind: site
+  region: marre
+  x: 40
+  y: 66
+  description: 'Rows of poles in a tidal channel, each furred black with mussels. The pickers work from flat boats at slack water.'
+  subs:
+    - id: poles
+      name: 'The Poles'
+      description: 'A drowned orchard of black posts.'
+    - id: raft
+      name: 'The Sorting Raft'
+      description: 'Baskets, knives and gulls.'
+- id: place_marre_the_dredger
+  origin: allora2
+  kind: place
+  roots:
+    - marre_palace
+  name: 'The Dredger'
+  place_kind: site
+  region: marre
+  x: 38
+  y: 48
+  description: 'A great flat barge with a spoon on a beam, which does nothing all year but dig the channels the lagoon wants to fill.'
+  subs:
+    - id: deck
+      name: 'The Spoon Deck'
+      description: 'A beam, a windlass and a heap of stinking mud.'
+    - id: scow
+      name: 'The Mud Scow'
+      description: 'A second barge, to carry away the first one’s work.'
+- id: place_marre_lamp_posts
+  origin: allora2
+  kind: place
+  roots:
+    - lazaretto
+    - c_dolma
+  name: 'The Shrine on the Posts'
+  place_kind: site
+  region: marre
+  x: 32
+  y: 62
+  description: 'A small shrine to the Serene Matron on four posts in open water. Boatmen bound for the Lazaretto leave a lamp, and take one coming back.'
+  subs:
+    - id: shrine
+      name: 'The Shrine'
+      description: 'A roofed image and a shelf of little lamps.'
+    - id: ladder
+      name: 'The Mooring Ladder'
+      description: 'Iron rungs, green and slippery.'
+- id: place_marre_long_bar
+  origin: allora2
+  kind: place
+  roots:
+    - marre_city
+  name: 'The Long Bar'
+  place_kind: village
+  region: marre
+  x: 44
+  y: 74
+  description: 'A fishing village on the sandbar between lagoon and sea. Its houses are painted so each man can find his own in fog.'
+  subs:
+    - id: seaside
+      name: 'The Sea Side'
+      description: 'Surf, nets and boats drawn up.'
+    - id: lagoonside
+      name: 'The Lagoon Side'
+      description: 'Still water and painted doors.'
+- id: place_marre_sea_gate_fort
+  origin: allora2
+  kind: place
+  roots:
+    - marre_palace
+  name: 'The Sea-Gate Fort'
+  place_kind: site
+  region: marre
+  x: 38
+  y: 76
+  description: 'A low fort at the lagoon mouth with a chain that can be raised across the channel. It has not been raised in anger for a lifetime, and is greased weekly.'
+  subs:
+    - id: rampart
+      name: 'The Rampart'
+      description: 'Crossbow slits facing the sea.'
+    - id: chainroom
+      name: 'The Chain-Room'
+      description: 'A windlass and links as thick as a thigh.'
+- id: place_marre_airing_sheds
+  origin: allora2
+  kind: place
+  roots:
+    - lazaretto
+  name: 'The Airing Sheds'
+  place_kind: site
+  region: marre
+  x: 22
+  y: 58
+  description: 'Open-sided sheds where cargo from the east is spread, turned and smoked for forty days before the city may touch it.'
+  subs:
+    - id: sheds
+      name: 'The Sheds'
+      description: 'Bales cut open and silk hung like washing.'
+    - id: smokepits
+      name: 'The Smoke Pits'
+      description: 'Juniper and pitch, burning slow.'
+- id: place_marre_proveditors_landing
+  origin: allora2
+  kind: place
+  roots:
+    - lazaretto
+  name: "The Proveditors' Landing"
+  place_kind: site
+  region: marre
+  x: 24
+  y: 56
+  description: 'The office where the health officers stamp a ship’s bill clean, or do not. A captain can wait a morning here and a season after.'
+  subs:
+    - id: office
+      name: 'The Stamp Office'
+      description: 'A desk, a seal and a queue.'
+    - id: jetty
+      name: 'The Jetty'
+      description: 'Boats held off with poles.'
+- id: place_marre_deaf_bell_isle
+  origin: allora2
+  kind: place
+  roots:
+    - marre_palace
+    - selino
+  name: 'The Isle of the Deaf Bell'
+  place_kind: site
+  region: marre
+  x: 38
+  y: 36
+  description: 'A speck of an island with a house of six brothers and a cracked bell that makes no more than a clank. They ring it anyway.'
+  subs:
+    - id: cloister
+      name: 'The Cloister'
+      description: 'Four sides, one well, six cells.'
+    - id: belltower
+      name: 'The Bell-Tower'
+      description: 'A short tower and a long crack.'
+- id: place_marre_market_raft
+  origin: allora2
+  kind: place
+  roots:
+    - marre_palace
+  name: 'The Morning Raft'
+  place_kind: site
+  region: marre
+  x: 48
+  y: 36
+  description: 'A floating market that ties up north of the Piazza before dawn and is gone by the fourth hour: boats lashed gunwale to gunwale, each one a stall.'
+  subs:
+    - id: boats
+      name: 'The Boat Stalls'
+      description: 'Greens, eggs, eels and shouting.'
+    - id: gangway
+      name: 'The Plank Walk'
+      description: 'Planks from boat to boat, never quite still.'
+- id: place_marre_cuttle_flats
+  origin: allora2
+  kind: place
+  roots:
+    - marre_city
+  name: 'The Cuttle Flats'
+  place_kind: wild
+  region: marre
+  x: 54
+  y: 38
+  description: 'Mudflats north of the city that show at low water. Children and old men walk them with lanterns for cuttlefish.'
+  subs:
+    - id: flats
+      name: 'The Flats'
+      description: 'Grey mud, bright pools and a long walk back.'
+    - id: markers
+      name: 'The Withy Markers'
+      description: 'Sticks that show where the mud will hold you.'
+- id: place_marre_founders_isle
+  origin: allora2
+  kind: place
+  roots:
+    - marre_city
+  name: "The Founders' Isle"
+  place_kind: site
+  region: marre
+  x: 60
+  y: 36
+  description: 'The bell- and anchor-foundry, kept on its own island so that if it burns it burns alone.'
+  subs:
+    - id: pit
+      name: 'The Casting Pit'
+      description: 'A mould buried to the neck in sand.'
+    - id: furnace
+      name: 'The Furnace'
+      description: 'A roar you feel in your teeth.'
+- id: place_marre_tanners_isle
+  origin: allora2
+  kind: place
+  roots:
+    - marre_city
+  name: "The Tanners' Isle"
+  place_kind: site
+  region: marre
+  x: 64
+  y: 62
+  description: 'The island the city sent its smells to: tan-pits, lime-pits and hides on frames, downwind of everyone.'
+  subs:
+    - id: pits
+      name: 'The Tan Pits'
+      description: 'Brown water, oak bark and patience.'
+    - id: frames
+      name: 'The Stretching Frames'
+      description: 'Hides laced tight as drums.'
+- id: place_marre_lace_isle
+  origin: allora2
+  kind: place
+  roots:
+    - marre_isles
+  name: 'The Lace Isle'
+  place_kind: village
+  region: marre
+  x: 72
+  y: 24
+  description: 'A fishing island where the women make lace while the men are out, on pillows in the doorways. It sells for more than the fish.'
+  subs:
+    - id: doorways
+      name: 'The Doorways'
+      description: 'A pillow, a hundred pins and a pattern.'
+    - id: nets
+      name: 'The Net Lofts'
+      description: 'Where the men’s plainer knots are mended.'
+- id: place_marre_oyster_beds
+  origin: allora2
+  kind: place
+  roots:
+    - xonia_shore
+    - marre_canal
+  name: 'The Oyster Beds'
+  place_kind: site
+  region: marre
+  x: 84
+  y: 56
+  description: 'Staked beds in the clean water east of the city, watched from a hut on legs. The Families’ feasts begin here.'
+  subs:
+    - id: beds
+      name: 'The Beds'
+      description: 'Tiles and stakes under a foot of clear water.'
+    - id: hut
+      name: 'The Watch Hut'
+      description: 'A hut on legs with a crossbow on the wall.'
+- id: place_marre_coral_rock
+  origin: allora2
+  kind: place
+  roots:
+    - morena
+  name: 'Coral Rock'
+  place_kind: wild
+  region: marre
+  x: 96
+  y: 58
+  description: 'A reef south of Morena where divers cut red coral for the bead-makers and the reliquaries.'
+  subs:
+    - id: reef
+      name: 'The Reef'
+      description: 'Red branches under green water.'
+    - id: boat
+      name: 'The Anchored Boat'
+      description: 'A boat, a ladder and a basket on a rope.'

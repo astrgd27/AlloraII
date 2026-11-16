@@ -1,0 +1,511 @@
+# Marre, third batch: twenty-four small places on the mainland, in the lagoon and in the outer waters.
+- id: road_place_marre_villa_dandri_terraferma
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_villa_dandri
+    - terraferma
+  from: place_marre_villa_dandri
+  to: terraferma
+  way: river
+  hours: 3
+- id: road_place_marre_silk_sheds_place_marre_villa_dandri
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_silk_sheds
+    - place_marre_villa_dandri
+  from: place_marre_silk_sheds
+  to: place_marre_villa_dandri
+  way: river
+  hours: 2
+- id: road_place_marre_chiusa_vecchia_place_marre_heron_marsh
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_chiusa_vecchia
+    - place_marre_heron_marsh
+  from: place_marre_chiusa_vecchia
+  to: place_marre_heron_marsh
+  way: river
+  hours: 2
+- id: road_place_marre_rice_floors_terraferma
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_rice_floors
+    - terraferma
+  from: place_marre_rice_floors
+  to: terraferma
+  way: river
+  hours: 4
+- id: road_place_marre_chiusa_vecchia_place_marre_rice_floors
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_chiusa_vecchia
+    - place_marre_rice_floors
+  from: place_marre_chiusa_vecchia
+  to: place_marre_rice_floors
+  way: river
+  hours: 2
+- id: road_place_marre_barge_stair_place_marre_rice_floors
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_barge_stair
+    - place_marre_rice_floors
+  from: place_marre_barge_stair
+  to: place_marre_rice_floors
+  way: river
+  hours: 3
+- id: road_place_marre_fever_chapel_place_marre_villa_dandri
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_fever_chapel
+    - place_marre_villa_dandri
+  from: place_marre_fever_chapel
+  to: place_marre_villa_dandri
+  way: river
+  hours: 2
+- id: road_place_marre_fever_chapel_place_marre_silk_sheds
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_fever_chapel
+    - place_marre_silk_sheds
+  from: place_marre_fever_chapel
+  to: place_marre_silk_sheds
+  way: river
+  hours: 2
+- id: road_place_marre_barge_stair_place_marre_locanda_baco
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_barge_stair
+    - place_marre_locanda_baco
+  from: place_marre_barge_stair
+  to: place_marre_locanda_baco
+  way: river
+  hours: 2
+- id: road_place_marre_locanda_baco_place_marre_silk_sheds
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_locanda_baco
+    - place_marre_silk_sheds
+  from: place_marre_locanda_baco
+  to: place_marre_silk_sheds
+  way: river
+  hours: 2
+- id: road_place_marre_locanda_baco_place_marre_villa_dandri
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_locanda_baco
+    - place_marre_villa_dandri
+  from: place_marre_locanda_baco
+  to: place_marre_villa_dandri
+  way: river
+  hours: 3
+- id: road_place_marre_barge_stair_place_marre_shore_kilns
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_barge_stair
+    - place_marre_shore_kilns
+  from: place_marre_barge_stair
+  to: place_marre_shore_kilns
+  way: river
+  hours: 2
+- id: road_place_marre_rice_floors_place_marre_shore_kilns
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_rice_floors
+    - place_marre_shore_kilns
+  from: place_marre_rice_floors
+  to: place_marre_shore_kilns
+  way: river
+  hours: 3
+- id: road_place_marre_locanda_baco_place_marre_timber_rafts
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_locanda_baco
+    - place_marre_timber_rafts
+  from: place_marre_locanda_baco
+  to: place_marre_timber_rafts
+  way: river
+  hours: 2
+- id: road_place_marre_timber_rafts_selino
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_timber_rafts
+    - selino
+  from: place_marre_timber_rafts
+  to: selino
+  way: river
+  hours: 4
+- id: road_place_marre_pile_shoal_place_marre_stilt_huts
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_pile_shoal
+    - place_marre_stilt_huts
+  from: place_marre_pile_shoal
+  to: place_marre_stilt_huts
+  way: river
+  hours: 3
+- id: road_place_marre_isola_orti_place_marre_pile_shoal
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_isola_orti
+    - place_marre_pile_shoal
+  from: place_marre_isola_orti
+  to: place_marre_pile_shoal
+  way: river
+  hours: 4
+- id: road_place_marre_pilots_rest_place_marre_south_pans
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_pilots_rest
+    - place_marre_south_pans
+  from: place_marre_pilots_rest
+  to: place_marre_south_pans
+  way: river
+  hours: 2
+- id: road_place_marre_isle_of_simples_place_marre_south_pans
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_isle_of_simples
+    - place_marre_south_pans
+  from: place_marre_isle_of_simples
+  to: place_marre_south_pans
+  way: river
+  hours: 3
+- id: road_place_marre_mussel_poles_place_marre_pile_shoal
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_mussel_poles
+    - place_marre_pile_shoal
+  from: place_marre_mussel_poles
+  to: place_marre_pile_shoal
+  way: river
+  hours: 2
+- id: road_place_marre_mussel_poles_place_marre_pilots_rest
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_mussel_poles
+    - place_marre_pilots_rest
+  from: place_marre_mussel_poles
+  to: place_marre_pilots_rest
+  way: river
+  hours: 3
+- id: road_marre_palace_place_marre_the_dredger
+  origin: allora2
+  kind: road
+  roots:
+    - marre_palace
+    - place_marre_the_dredger
+  from: marre_palace
+  to: place_marre_the_dredger
+  way: river
+  hours: 3
+- id: road_place_marre_stilt_huts_place_marre_the_dredger
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_stilt_huts
+    - place_marre_the_dredger
+  from: place_marre_stilt_huts
+  to: place_marre_the_dredger
+  way: river
+  hours: 2
+- id: road_lazaretto_place_marre_lamp_posts
+  origin: allora2
+  kind: road
+  roots:
+    - lazaretto
+    - place_marre_lamp_posts
+  from: lazaretto
+  to: place_marre_lamp_posts
+  way: river
+  hours: 3
+- id: road_place_marre_lamp_posts_place_marre_stilt_huts
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_lamp_posts
+    - place_marre_stilt_huts
+  from: place_marre_lamp_posts
+  to: place_marre_stilt_huts
+  way: river
+  hours: 3
+- id: road_place_marre_lamp_posts_place_marre_waiting_roads
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_lamp_posts
+    - place_marre_waiting_roads
+  from: place_marre_lamp_posts
+  to: place_marre_waiting_roads
+  way: river
+  hours: 2
+- id: road_place_marre_long_bar_place_marre_mussel_poles
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_long_bar
+    - place_marre_mussel_poles
+  from: place_marre_long_bar
+  to: place_marre_mussel_poles
+  way: river
+  hours: 3
+- id: road_place_marre_long_bar_place_marre_pilots_rest
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_long_bar
+    - place_marre_pilots_rest
+  from: place_marre_long_bar
+  to: place_marre_pilots_rest
+  way: river
+  hours: 4
+- id: road_place_marre_long_bar_place_marre_sea_gate_fort
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_long_bar
+    - place_marre_sea_gate_fort
+  from: place_marre_long_bar
+  to: place_marre_sea_gate_fort
+  way: river
+  hours: 2
+- id: road_place_marre_pilots_rest_place_marre_sea_gate_fort
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_pilots_rest
+    - place_marre_sea_gate_fort
+  from: place_marre_pilots_rest
+  to: place_marre_sea_gate_fort
+  way: river
+  hours: 3
+- id: road_lazaretto_place_marre_airing_sheds
+  origin: allora2
+  kind: road
+  roots:
+    - lazaretto
+    - place_marre_airing_sheds
+  from: lazaretto
+  to: place_marre_airing_sheds
+  way: river
+  hours: 2
+- id: road_place_marre_airing_sheds_place_marre_waiting_roads
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_airing_sheds
+    - place_marre_waiting_roads
+  from: place_marre_airing_sheds
+  to: place_marre_waiting_roads
+  way: river
+  hours: 2
+- id: road_place_marre_airing_sheds_place_marre_proveditors_landing
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_airing_sheds
+    - place_marre_proveditors_landing
+  from: place_marre_airing_sheds
+  to: place_marre_proveditors_landing
+  way: street
+  hours: 1
+- id: road_place_marre_proveditors_landing_place_marre_waiting_roads
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_proveditors_landing
+    - place_marre_waiting_roads
+  from: place_marre_proveditors_landing
+  to: place_marre_waiting_roads
+  way: street
+  hours: 1
+- id: road_marre_palace_place_marre_deaf_bell_isle
+  origin: allora2
+  kind: road
+  roots:
+    - marre_palace
+    - place_marre_deaf_bell_isle
+  from: marre_palace
+  to: place_marre_deaf_bell_isle
+  way: river
+  hours: 4
+- id: road_place_marre_deaf_bell_isle_place_marre_the_dredger
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_deaf_bell_isle
+    - place_marre_the_dredger
+  from: place_marre_deaf_bell_isle
+  to: place_marre_the_dredger
+  way: river
+  hours: 5
+- id: road_place_marre_market_raft_place_marre_molo_grano
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_market_raft
+    - place_marre_molo_grano
+  from: place_marre_market_raft
+  to: place_marre_molo_grano
+  way: river
+  hours: 2
+- id: road_place_marre_deaf_bell_isle_place_marre_market_raft
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_deaf_bell_isle
+    - place_marre_market_raft
+  from: place_marre_deaf_bell_isle
+  to: place_marre_market_raft
+  way: river
+  hours: 4
+- id: road_place_marre_cuttle_flats_place_marre_market_raft
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_cuttle_flats
+    - place_marre_market_raft
+  from: place_marre_cuttle_flats
+  to: place_marre_market_raft
+  way: river
+  hours: 2
+- id: road_place_marre_cuttle_flats_place_marre_fondamenta_specchi
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_cuttle_flats
+    - place_marre_fondamenta_specchi
+  from: place_marre_cuttle_flats
+  to: place_marre_fondamenta_specchi
+  way: river
+  hours: 6
+- id: road_place_marre_cuttle_flats_place_marre_founders_isle
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_cuttle_flats
+    - place_marre_founders_isle
+  from: place_marre_cuttle_flats
+  to: place_marre_founders_isle
+  way: river
+  hours: 2
+- id: road_place_marre_founders_isle_place_marre_guard_boats
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_founders_isle
+    - place_marre_guard_boats
+  from: place_marre_founders_isle
+  to: place_marre_guard_boats
+  way: river
+  hours: 5
+- id: road_place_marre_long_ropewalk_place_marre_tanners_isle
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_long_ropewalk
+    - place_marre_tanners_isle
+  from: place_marre_long_ropewalk
+  to: place_marre_tanners_isle
+  way: river
+  hours: 2
+- id: road_place_marre_caulkers_bell_place_marre_tanners_isle
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_caulkers_bell
+    - place_marre_tanners_isle
+  from: place_marre_caulkers_bell
+  to: place_marre_tanners_isle
+  way: river
+  hours: 2
+- id: road_place_marre_lace_isle_place_marre_sand_barges
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_lace_isle
+    - place_marre_sand_barges
+  from: place_marre_lace_isle
+  to: place_marre_sand_barges
+  way: river
+  hours: 2
+- id: road_place_marre_guard_boats_place_marre_lace_isle
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_guard_boats
+    - place_marre_lace_isle
+  from: place_marre_guard_boats
+  to: place_marre_lace_isle
+  way: river
+  hours: 5
+- id: road_place_marre_oyster_beds_xonia_shore
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_oyster_beds
+    - xonia_shore
+  from: place_marre_oyster_beds
+  to: xonia_shore
+  way: river
+  hours: 5
+- id: road_place_marre_oyster_beds_place_marre_salvage_camp
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_oyster_beds
+    - place_marre_salvage_camp
+  from: place_marre_oyster_beds
+  to: place_marre_salvage_camp
+  way: river
+  hours: 6
+- id: road_morena_place_marre_oyster_beds
+  origin: allora2
+  kind: road
+  roots:
+    - morena
+    - place_marre_oyster_beds
+  from: morena
+  to: place_marre_oyster_beds
+  way: river
+  hours: 5
+- id: road_morena_place_marre_coral_rock
+  origin: allora2
+  kind: road
+  roots:
+    - morena
+    - place_marre_coral_rock
+  from: morena
+  to: place_marre_coral_rock
+  way: river
+  hours: 5
+- id: road_place_marre_coral_rock_place_marre_oyster_beds
+  origin: allora2
+  kind: road
+  roots:
+    - place_marre_coral_rock
+    - place_marre_oyster_beds
+  from: place_marre_coral_rock
+  to: place_marre_oyster_beds
+  way: river
+  hours: 5

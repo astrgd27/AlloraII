@@ -1,0 +1,303 @@
+# Eintenn, third batch: twenty small places in the west, the hills, the river and round Kesselhaven.
+- id: activity_brackenfell_cut_peat
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_brackenfell
+  name: 'Cut peat'
+  text: 'Spade down, lever, lift, and lay it to dry.'
+  place: place_eintenn_brackenfell
+  sub: cuttings
+  from: 6
+  to: 16
+  hours: 2
+  skill: skill_athletics
+  effects:
+    vigour: -6
+- id: activity_standing_sisters_gather_moor_herbs
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_standing_sisters
+  name: 'Gather by the stones'
+  text: 'What grows inside the ring is not what grows outside it.'
+  place: place_eintenn_standing_sisters
+  sub: stones
+  from: 6
+  to: 12
+  hours: 1
+  skill: skill_herblore
+  dc: 12
+  effects:
+    vigour: -3
+- id: activity_cloudgate_pass_mend_cairns
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_cloudgate_pass
+  name: 'Mend the cairns'
+  text: 'Stone on stone, high enough to show above snow.'
+  place: place_eintenn_cloudgate_pass
+  sub: cairns
+  from: 7
+  to: 14
+  hours: 2
+  skill: skill_wayfaring
+  effects:
+    vigour: -6
+- id: activity_the_antler_split_logs
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_the_antler
+  name: 'Split logs for the fire'
+  text: 'Axe, block, and a rhythm you can keep.'
+  place: place_eintenn_the_antler
+  sub: woodyard
+  from: 7
+  to: 17
+  hours: 1
+  skill: skill_woodcraft
+  effects:
+    vigour: -3
+- id: activity_mossbeck_strip_osiers
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_mossbeck
+  name: 'Strip osiers'
+  text: 'Pull each rod through the brake until it comes out white.'
+  place: place_eintenn_mossbeck
+  sub: osiers
+  from: 7
+  to: 16
+  hours: 2
+  skill: skill_woodwork
+  effects:
+    vigour: -6
+- id: activity_silverford_shape_spokes
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_silverford
+  name: 'Shape spokes'
+  text: 'Spokeshave and a good eye, twelve to a wheel.'
+  place: place_eintenn_silverford
+  sub: wrights
+  from: 7
+  to: 17
+  hours: 2
+  skill: skill_woodwork
+  effects:
+    vigour: -6
+- id: activity_burgmill_dress_stones
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_burgmill
+  name: 'Dress the millstones'
+  text: 'Pick and bill, furrow by furrow, with grit in your teeth.'
+  place: place_eintenn_burgmill
+  sub: stones
+  from: 7
+  to: 15
+  hours: 2
+  skill: skill_building
+  effects:
+    vigour: -6
+- id: activity_rabenstein_cut_furze
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_rabenstein
+  name: 'Cut furze for the beacon'
+  text: 'Gloves, a hook and a bundle bigger than you are.'
+  place: place_eintenn_rabenstein
+  sub: beacon
+  from: 7
+  to: 16
+  hours: 2
+  skill: skill_woodcraft
+  effects:
+    vigour: -6
+- id: activity_nordwick_salt_fish
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_nordwick
+  name: 'Salt the catch'
+  text: 'Split, gut, pack in salt, and turn the barrel.'
+  place: place_eintenn_nordwick
+  sub: saltsheds
+  from: 8
+  to: 17
+  hours: 2
+  skill: skill_fishing
+  effects:
+    vigour: -6
+- id: activity_chainhouse_walk_capstan
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_chainhouse
+  name: 'Walk the capstan'
+  text: 'Chest to the bar, and round, and the ferry comes.'
+  place: place_eintenn_chainhouse
+  sub: capstan
+  from: 6
+  to: 20
+  hours: 2
+  skill: skill_athletics
+  effects:
+    vigour: -6
+- id: activity_sandhaven_watch_bar
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_sandhaven
+  name: 'Watch for sails'
+  text: 'Eyes on the edge of the sea, and shout the rig.'
+  place: place_eintenn_sandhaven
+  sub: dunes
+  from: 5
+  to: 19
+  hours: 2
+  skill: skill_seamanship
+  dc: 12
+  effects:
+    vigour: -6
+- id: activity_pitch_kilns_tend_kiln
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_pitch_kilns
+  name: 'Tend a kiln'
+  text: 'Keep it smouldering, never burning, and watch the run.'
+  place: place_eintenn_pitch_kilns
+  sub: kilns
+  from: 6
+  to: 18
+  hours: 3
+  skill: skill_kilncraft
+  effects:
+    vigour: -9
+- id: activity_herring_stairs_wheel_barrows
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_herring_stairs
+  name: 'Wheel herring up the hill'
+  text: 'A full barrow, a steep street, and a fair penny at the top.'
+  place: place_eintenn_herring_stairs
+  sub: barrow_rank
+  from: 6
+  to: 12
+  hours: 1
+  skill: skill_trade
+  effects:
+    vigour: -3
+- id: activity_lantern_court_walk_rounds
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_lantern_court
+  name: 'Walk the rounds'
+  text: 'Lantern high, stave low, and call the hour at each corner.'
+  place: place_eintenn_lantern_court
+  sub: watchhouse
+  from: 19
+  to: 23
+  hours: 2
+  skill: skill_streetwise
+  effects:
+    vigour: -6
+- id: activity_bleaching_fields_water_linen
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_bleaching_fields
+  name: 'Water the linen'
+  text: 'Along each strip with the can, and never let it dry in the sun.'
+  place: place_eintenn_bleaching_fields
+  sub: greens
+  from: 6
+  to: 18
+  hours: 2
+  skill: skill_clothwork
+  effects:
+    vigour: -6
+- id: activity_mittelau_string_hops
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_mittelau
+  name: 'String the hop poles'
+  text: 'Ground to pole-top and down again, four strings to a hill.'
+  place: place_eintenn_mittelau
+  sub: gardens
+  from: 6
+  to: 16
+  hours: 2
+  skill: skill_husbandry
+  effects:
+    vigour: -6
+- id: activity_sonnhalde_mend_terrace
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_sonnhalde
+  name: 'Mend a terrace wall'
+  text: 'Stone on stone with no mortar, and each one chosen.'
+  place: place_eintenn_sonnhalde
+  sub: terraces
+  from: 7
+  to: 16
+  hours: 2
+  skill: skill_building
+  effects:
+    vigour: -6
+- id: activity_southmere_bundle_reed
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_southmere
+  name: 'Bundle reed'
+  text: 'Comb it, butt it level on the board, and tie it twice.'
+  place: place_eintenn_southmere
+  sub: stacks
+  from: 7
+  to: 16
+  hours: 2
+  skill: skill_building
+  effects:
+    vigour: -6
+- id: activity_red_scar_fill_basket
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_red_scar
+  name: 'Fill the hermit’s basket'
+  text: 'Bread, an onion, and a question on a scrap of bark.'
+  place: place_eintenn_red_scar
+  sub: foot
+  from: 6
+  to: 10
+  hours: 1
+  skill: skill_devotion
+  effects:
+    vigour: -3
+- id: activity_westmark_stone_lift_bar
+  origin: allora2
+  kind: activity
+  roots:
+    - place_eintenn_westmark_stone
+  name: 'Keep the bar'
+  text: 'Lift it for carts, count the wheels, and ask what is under the canvas.'
+  place: place_eintenn_westmark_stone
+  sub: hut
+  from: 6
+  to: 19
+  hours: 2
+  skill: skill_wayfaring
+  effects:
+    vigour: -6

@@ -1,0 +1,433 @@
+# Marre, third batch: twenty-four small places on the mainland, in the lagoon and in the outer waters.
+- id: person_marre_meneghina
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_villa_dandri
+  name: 'Meneghina Sies'
+  title: 'Gardener of the villa'
+  region: marre
+  home: place_marre_villa_dandri
+  hint: 'a woman on her knees with shears, clipping a hedge to a string'
+  meet: '“They come for six weeks,” she says. “I am here for fifty-two. Meneghina Sies. The garden is for them. The work is for me.”'
+  talk:
+    - 'Meneghina says the family walks the paths once, admires them, and goes in to play cards.'
+    - '“A hedge is a wall that needs feeding,” Meneghina says.'
+  sched:
+    - at: [place_marre_villa_dandri, garden]
+      h: [6, 20]
+    - at: [place_marre_villa_dandri, portico]
+- id: person_marre_nardo
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_heron_marsh
+  name: 'Nardo Val'
+  title: 'Fowler of the Marsh'
+  region: marre
+  home: place_marre_heron_marsh
+  hint: 'a man lying flat in a punt, moving only his eyes'
+  meet: 'A long silence, then a whisper. “Nardo Val. Lie down or go away. They can see a man standing from the city.”'
+  talk:
+    - 'Nardo sells duck to the villas and sleeps under the punt, turned over.'
+    - '“The mosquitoes are the rent,” Nardo says.'
+  sched:
+    - at: [place_marre_heron_marsh, hides]
+      h: [6, 20]
+    - at: [place_marre_heron_marsh, channels]
+- id: person_marre_togna
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_rice_floors
+  name: 'Togna Pil'
+  title: 'Rice-Wife of the Floors'
+  region: marre
+  home: place_marre_rice_floors
+  hint: 'a woman turning grain with a wooden rake and watching the sky'
+  meet: '“If it rains, we run,” she says. “Togna Pil. A wet floor is a lost month.”'
+  talk:
+    - 'Togna can smell rain an hour off and has never lost a floor.'
+    - '“The city eats it with saffron,” Togna says. “We eat it with more rice.”'
+  sched:
+    - at: [place_marre_rice_floors, floors]
+      h: [6, 20]
+    - at: [place_marre_rice_floors, barn]
+- id: person_marre_zanina
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_fever_chapel
+  name: 'Zanina Febr'
+  title: 'Keeper of the Chapel'
+  region: marre
+  home: place_marre_fever_chapel
+  hint: 'a thin woman ladling something bitter into a row of cups'
+  meet: '“Drink,” she says. “It is vile. Zanina Febr. The Lazaretto sends the bark. I send the prayers. Between us some of them live.”'
+  talk:
+    - 'Zanina has had the fever six times and says it gets bored.'
+    - '“The Matron loves the city,” Zanina says. “I remind her the city eats.”'
+  sched:
+    - at: [place_marre_fever_chapel, porch]
+      h: [6, 20]
+    - at: [place_marre_fever_chapel, nave]
+- id: person_marre_tranquillo
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_locanda_baco
+  name: 'Tranquillo Ost'
+  title: 'Host of the Locanda'
+  region: marre
+  home: place_marre_locanda_baco
+  hint: 'a slow, smiling man carrying a pot too heavy to hurry with'
+  meet: '“Sit,” he says. “It will be ready when it is ready. Tranquillo Ost. My mother named me well.”'
+  talk:
+    - 'Tranquillo hears every buyer’s best price by the second jug, and has never used it.'
+    - '“Silk makes men whisper,” Tranquillo says. “Wine fixes that.”'
+  sched:
+    - at: [place_marre_locanda_baco, table]
+      h: [6, 20]
+    - at: [place_marre_locanda_baco, stable]
+- id: person_marre_vido
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_shore_kilns
+  name: 'Vido Fornas'
+  title: 'Brick-Burner of the Kilns'
+  region: marre
+  home: place_marre_shore_kilns
+  hint: 'a man reading the colour of a fire through a spy-hole'
+  meet: '“Cherry,” he says, and shuts the hole. “Vido Fornas. Too pale is mud. Too dark is glass. Cherry is brick.”'
+  talk:
+    - 'Vido says the Isles get the glory and the kilns get the palaces to hold up.'
+    - '“Nobody looks at a brick,” Vido says. “They look at what it keeps out of the water.”'
+  sched:
+    - at: [place_marre_shore_kilns, kilns]
+      h: [6, 20]
+    - at: [place_marre_shore_kilns, claypits]
+- id: person_marre_zamaria
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_timber_rafts
+  name: 'Zamaria Zatt'
+  title: 'Raftsman of the River'
+  region: marre
+  home: place_marre_timber_rafts
+  hint: 'a man walking across floating logs as if across a floor'
+  meet: 'He steps from log to log without looking. “Zamaria Zatt. Do not try it. The river keeps the ones who try.”'
+  talk:
+    - 'Zamaria lives on his raft for a month coming down and sells his house at the end of every journey.'
+    - '“The city stands on a forest,” Zamaria says. “Upside down.”'
+  sched:
+    - at: [place_marre_timber_rafts, rafts]
+      h: [6, 20]
+    - at: [place_marre_timber_rafts, boom]
+- id: person_marre_battista
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_pile_shoal
+  name: 'Battista Maz'
+  title: 'Leader of the pile-gang'
+  region: marre
+  home: place_marre_pile_shoal
+  hint: 'a hoarse man singing a line and letting eight others answer with a blow'
+  meet: 'He finishes the verse. “Battista Maz. I do not lift. I sing. It is harder than it looks.”'
+  talk:
+    - 'Battista knows two hundred verses and says a pile wants about ninety.'
+    - '“My grandfather sang this island up,” Battista says, pointing at the city.'
+  sched:
+    - at: [place_marre_pile_shoal, staging]
+      h: [6, 20]
+    - at: [place_marre_pile_shoal, mudflat]
+- id: person_marre_orsolina
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_south_pans
+  name: 'Orsolina Sal'
+  title: 'Salt-Raker of the Pans'
+  region: marre
+  home: place_marre_south_pans
+  hint: 'a barefoot woman pushing a wide board through shallow brine'
+  meet: '“Hat,” she says, pointing at the sun. “Orsolina Sal. It will cook you as it cooks the sea.”'
+  talk:
+    - 'Orsolina says the Republic taxes salt harder than gold, because everyone needs it.'
+    - '“The sea gives it away,” Orsolina says. “The Republic sells it.”'
+  sched:
+    - at: [place_marre_south_pans, pans]
+      h: [6, 20]
+    - at: [place_marre_south_pans, heaps]
+- id: person_marre_cristofolo
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_mussel_poles
+  name: 'Cristofolo Peoc'
+  title: 'Mussel-Man of the Poles'
+  region: marre
+  home: place_marre_mussel_poles
+  hint: 'a man twisting a rope of mussels off a pole with both arms'
+  meet: '“Mind your hands,” he says. “They cut. Cristofolo Peoc. Three years to grow a pole, an hour to strip it.”'
+  talk:
+    - 'Cristofolo says he farms the sea, and the fishermen say he only waits.'
+    - '“A fisherman chases,” Cristofolo says. “I plant.”'
+  sched:
+    - at: [place_marre_mussel_poles, poles]
+      h: [6, 20]
+    - at: [place_marre_mussel_poles, raft]
+- id: person_marre_ferigo
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_the_dredger
+  name: 'Ferigo Fang'
+  title: 'Master of the Dredger'
+  region: marre
+  home: place_marre_the_dredger
+  hint: 'a mud-spattered man sounding the channel with a marked pole'
+  meet: '“A hand shallower than last month,” he says. “Ferigo Fang. The lagoon is always trying to become a field.”'
+  talk:
+    - 'Ferigo says if he stopped for ten years the galleys would be rowing through grass.'
+    - '“Doges come and go,” Ferigo says. “Mud stays. So do I.”'
+  sched:
+    - at: [place_marre_the_dredger, deck]
+      h: [6, 20]
+    - at: [place_marre_the_dredger, scow]
+- id: person_marre_anzoleta
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_lamp_posts
+  name: 'Anzoleta Lum'
+  title: 'Lamp-Keeper of the Shrine'
+  region: marre
+  home: place_marre_lamp_posts
+  hint: 'a girl in a skiff, filling small lamps from a can'
+  meet: '“One going, one coming,” she says. “Anzoleta Lum. I count them at dusk. The numbers should match.”'
+  talk:
+    - 'Anzoleta says in a bad year there are lamps left over, and she lights those too.'
+    - '“The Matron cannot see in the dark either,” Anzoleta says.'
+  sched:
+    - at: [place_marre_lamp_posts, shrine]
+      h: [6, 20]
+    - at: [place_marre_lamp_posts, ladder]
+- id: person_marre_jacopo
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_long_bar
+  name: 'Jacopo Tartan'
+  title: 'Fisherman of the Bar'
+  region: marre
+  home: place_marre_long_bar
+  hint: 'a man painting his door a red that hurts to look at'
+  meet: '“So I know it,” he says. “Jacopo Tartan. My neighbour is yellow. We do not speak.”'
+  talk:
+    - 'Jacopo fishes the open sea and says lagoon fish taste of the city.'
+    - '“We are the wall,” Jacopo says. “The sea has to get past us first.”'
+  sched:
+    - at: [place_marre_long_bar, seaside]
+      h: [6, 20]
+    - at: [place_marre_long_bar, lagoonside]
+- id: person_marre_zaccaria
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_sea_gate_fort
+  name: 'Zaccaria Bomb'
+  title: 'Sergeant of the Sea-Gate'
+  region: marre
+  home: place_marre_sea_gate_fort
+  hint: 'a stout man greasing a chain link with great tenderness'
+  meet: '“She has not gone up since my grandfather,” he says. “Zaccaria Bomb. She will go up tomorrow if the Doge says.”'
+  talk:
+    - 'Zaccaria drills the garrison every week against a fleet that has never come.'
+    - '“A chain you never use is the best kind,” Zaccaria says.'
+  sched:
+    - at: [place_marre_sea_gate_fort, chainroom]
+      h: [6, 20]
+    - at: [place_marre_sea_gate_fort, rampart]
+- id: person_marre_lorenza
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_airing_sheds
+  name: 'Lorenza Fum'
+  title: 'Fumigator of the Sheds'
+  region: marre
+  home: place_marre_airing_sheds
+  hint: 'a woman in a waxed coat, turning bales with a long hook'
+  meet: '“Do not touch,” she says, through a cloth. “Day twelve. Lorenza Fum. On day forty you may hug it.”'
+  talk:
+    - 'Lorenza has handled a fortune in silk and never once with her hands.'
+    - '“The merchants hate me for forty days,” Lorenza says. “Then they forget me for a year.”'
+  sched:
+    - at: [place_marre_airing_sheds, sheds]
+      h: [6, 20]
+    - at: [place_marre_airing_sheds, smokepits]
+- id: person_marre_hieronimo
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_proveditors_landing
+  name: 'Hieronimo Fed'
+  title: 'Writer to the Proveditors'
+  region: marre
+  home: place_marre_proveditors_landing
+  hint: 'a clerk holding a letter with tongs over a dish of vinegar'
+  meet: 'He reads it at arm’s length. “Hieronimo Fed. Port of sailing? Deaths aboard? Do not hand me anything.”'
+  talk:
+    - 'Hieronimo has been offered gold for a clean bill and says the vinegar is for that, too.'
+    - '“One false stamp,” Hieronimo says, “and the Republic is a graveyard with good views.”'
+  sched:
+    - at: [place_marre_proveditors_landing, office]
+      h: [6, 20]
+    - at: [place_marre_proveditors_landing, jetty]
+- id: person_marre_serafin
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_deaf_bell_isle
+  name: 'Fra Serafin'
+  title: 'Brother of the Deaf Bell'
+  region: marre
+  home: place_marre_deaf_bell_isle
+  hint: 'a small monk hauling on a bell-rope and wincing at the result'
+  meet: 'Clank. “It was cast wrong,” he says. “Fra Serafin. We could not afford another, and now we are fond of it.”'
+  talk:
+    - 'Serafin says boatmen steer by the clank in fog, because no other bell sounds so bad.'
+    - '“The Matron hears intention,” Serafin says. “Luckily.”'
+  sched:
+    - at: [place_marre_deaf_bell_isle, belltower]
+      h: [6, 20]
+    - at: [place_marre_deaf_bell_isle, cloister]
+- id: person_marre_pasquetta
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_market_raft
+  name: 'Pasquetta Zuc'
+  title: 'Stallwoman of the Raft'
+  region: marre
+  home: place_marre_market_raft
+  hint: 'a woman selling pumpkins from a boat so full she is sitting on them'
+  meet: '“Careful, the plank moves,” she says. “Pasquetta Zuc. Everything here was in the ground yesterday.”'
+  talk:
+    - 'Pasquetta rows two hours each way and says the city pays double for the dew.'
+    - '“By the time the senators wake,” Pasquetta says, “we have fed them and gone.”'
+  sched:
+    - at: [place_marre_market_raft, boats]
+      h: [6, 20]
+    - at: [place_marre_market_raft, gangway]
+- id: person_marre_sandro
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_cuttle_flats
+  name: 'Sandro Sepa'
+  title: 'Cuttle-Catcher of the Flats'
+  region: marre
+  home: place_marre_cuttle_flats
+  hint: 'an old man with a lantern and a small three-pronged spear'
+  meet: '“Follow the sticks,” he says. “Sandro Sepa. I have walked here sixty years. The mud took my brother in the first.”'
+  talk:
+    - 'Sandro sells the ink to the scriveners and the rest to the cooks.'
+    - '“The tide gives you two hours,” Sandro says. “It does not give three.”'
+  sched:
+    - at: [place_marre_cuttle_flats, flats]
+      h: [6, 20]
+    - at: [place_marre_cuttle_flats, markers]
+- id: person_marre_liberal
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_founders_isle
+  name: 'Liberal Bronz'
+  title: 'Founder of the Isle'
+  region: marre
+  home: place_marre_founders_isle
+  hint: 'a man with his ear against a new bell, tapping it with a knuckle'
+  meet: 'He listens, and nods. “She will do. Liberal Bronz. You get one pour. If it is wrong you break it and weep.”'
+  talk:
+    - 'Liberal cast the anchor of the Doge’s barge and a bell for a house of monks who could not pay.'
+    - '“Metal remembers how it was poured,” Liberal says.'
+  sched:
+    - at: [place_marre_founders_isle, pit]
+      h: [6, 20]
+    - at: [place_marre_founders_isle, furnace]
+- id: person_marre_momola
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_tanners_isle
+  name: 'Momola Scorz'
+  title: 'Tanner of the Isle'
+  region: marre
+  home: place_marre_tanners_isle
+  hint: 'a woman scraping a hide over a beam with a two-handled knife'
+  meet: '“You will stop noticing,” she says. “Momola Scorz. Then you go to the city and they notice for you.”'
+  talk:
+    - 'Momola says the Ten Families all wear her gloves and none would cross to thank her.'
+    - '“A year in the pit,” Momola says. “Leather cannot be hurried. Neither can I.”'
+  sched:
+    - at: [place_marre_tanners_isle, pits]
+      h: [6, 20]
+    - at: [place_marre_tanners_isle, frames]
+- id: person_marre_cecilia
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_lace_isle
+  name: 'Cecilia Merl'
+  title: 'Lace-Maker of the Isle'
+  region: marre
+  home: place_marre_lace_isle
+  hint: 'a woman moving a dozen bobbins without seeming to choose among them'
+  meet: '“A thumb’s width a day,” she says. “Cecilia Merl. A collar is a season. A bride’s veil is a winter and my eyes.”'
+  talk:
+    - 'Cecilia says the pattern came from mending nets, and the nets are still better made.'
+    - '“He knots to catch fish,” Cecilia says. “I knot to catch senators’ wives.”'
+  sched:
+    - at: [place_marre_lace_isle, doorways]
+      h: [6, 20]
+    - at: [place_marre_lace_isle, nets]
+- id: person_marre_ambrogio
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_oyster_beds
+  name: 'Ambrogio Ostreg'
+  title: 'Oysterman of the Beds'
+  region: marre
+  home: place_marre_oyster_beds
+  hint: 'a man opening an oyster with a twist and holding it out'
+  meet: '“Eat,” he says. “Ambrogio Ostreg. Now you know why I sleep with a crossbow.”'
+  talk:
+    - 'Ambrogio counts his beds every dawn and has names for the thieves he has not caught.'
+    - '“Three years growing,” Ambrogio says. “Gone in a swallow.”'
+  sched:
+    - at: [place_marre_oyster_beds, beds]
+      h: [6, 20]
+    - at: [place_marre_oyster_beds, hut]
+- id: person_marre_rigo
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_coral_rock
+  name: 'Rigo Coral'
+  title: 'Coral-Diver of the Rock'
+  region: marre
+  home: place_marre_coral_rock
+  hint: 'a man with a net bag at his belt and ears that do not quite work'
+  meet: 'He speaks too loudly. “Rigo Coral! The deep took my hearing. It was a fair price.”'
+  talk:
+    - 'Rigo says the best coral is always one breath deeper than is wise.'
+    - '“Red for the saints,” Rigo says. “And for the men who fetch it.”'
+  sched:
+    - at: [place_marre_coral_rock, boat]
+      h: [6, 20]
+    - at: [place_marre_coral_rock, reef]

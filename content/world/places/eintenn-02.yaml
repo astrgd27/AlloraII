@@ -1,0 +1,388 @@
+# Eintenn, second batch: twenty-one small places round Kesselhaven, the river, the mines, the hills and the south.
+- id: place_eintenn_salters_gate
+  origin: allora2
+  kind: place
+  roots:
+    - kess_market
+    - kess_harbor
+  name: "The Salters' Gate"
+  place_kind: site
+  region: eintenn
+  x: 72
+  y: 65
+  description: 'The gate between the Salzmarkt and the harbour, where every salt cart is counted through. The arch is white to head height.'
+  subs:
+    - id: arch
+      name: 'The Arch'
+      description: 'A low arch with a tally-board nailed inside it.'
+    - id: tollhouse
+      name: 'The Toll-House'
+      description: 'One room, one stove, one very large ledger.'
+- id: place_eintenn_netmenders_strand
+  origin: allora2
+  kind: place
+  roots:
+    - kess_harbor
+  name: "Netmenders' Strand"
+  place_kind: site
+  region: eintenn
+  x: 80
+  y: 74
+  description: 'A shingle beach east of the harbour where the nets are spread and mended. It smells of tar and yesterday.'
+  subs:
+    - id: racks
+      name: 'The Drying Racks'
+      description: 'Nets hung like brown sails.'
+    - id: shingle
+      name: 'The Shingle'
+      description: 'Boats drawn up and women with needles.'
+- id: place_eintenn_coopers_yard
+  origin: allora2
+  kind: place
+  roots:
+    - kess_market
+  name: "The Coopers' Yard"
+  place_kind: site
+  region: eintenn
+  x: 73
+  y: 56
+  description: 'A yard of barrel-makers north of the Salzmarkt. Salt, herring and ale all leave Kesselhaven in their work.'
+  subs:
+    - id: sheds
+      name: 'The Stave Sheds'
+      description: 'Oak staves stacked to dry, every one numbered.'
+    - id: fire
+      name: 'The Hooping Fire'
+      description: 'A ring of fire and men walking round it with hammers.'
+- id: place_eintenn_eelwater
+  origin: allora2
+  kind: place
+  roots:
+    - kess_undercroft
+    - kess_harbor
+  name: 'Eelwater'
+  place_kind: village
+  region: eintenn
+  x: 60
+  y: 72
+  description: 'A fen village west of the harbour, built on its own smoke. The eels are caught at night and hung over alder fires by day.'
+  subs:
+    - id: smokehouses
+      name: 'The Smokehouses'
+      description: 'Black sheds that leak blue smoke.'
+    - id: dykes
+      name: 'The Dykes'
+      description: 'Narrow water between reeds, with a punt in each.'
+- id: place_eintenn_inkwell_row
+  origin: allora2
+  kind: place
+  roots:
+    - collegium
+    - kess_market
+  name: 'Inkwell Row'
+  place_kind: site
+  region: eintenn
+  x: 60
+  y: 57
+  description: 'A street of booksellers, copyists and cheap lodgings between the Collegium and the town. Students owe money at every door.'
+  subs:
+    - id: stalls
+      name: 'The Bookstalls'
+      description: 'Trestles of second-hand learning.'
+    - id: garrets
+      name: 'The Garrets'
+      description: 'Rooms let by the term, stairs by the dozen.'
+- id: place_eintenn_starwatch_hill
+  origin: allora2
+  kind: place
+  roots:
+    - collegium
+  name: 'Starwatch Hill'
+  place_kind: site
+  region: eintenn
+  x: 66
+  y: 48
+  description: 'A bare hill north of the Collegium with a ring of sighting stones on top. Students come up at night; sheep keep it by day.'
+  subs:
+    - id: stones
+      name: 'The Sighting Stones'
+      description: 'Seven waist-high stones, each with a notch.'
+    - id: fold
+      name: 'The Sheepfold'
+      description: 'A dry-stone fold on the lee side.'
+- id: place_eintenn_panners_row
+  origin: allora2
+  kind: place
+  roots:
+    - salzmoor
+  name: "Panners' Row"
+  place_kind: village
+  region: eintenn
+  x: 84
+  y: 80
+  description: 'A row of low houses at the edge of the Salzmoor where the pan-workers live. Everything here is crusted white, the children included.'
+  subs:
+    - id: row
+      name: 'The Row'
+      description: 'Twelve houses, one pump, no trees.'
+    - id: store
+      name: 'The Salt Store'
+      description: 'A barn of grey salt waiting for the carts.'
+- id: place_eintenn_mud_chapel
+  origin: allora2
+  kind: place
+  roots:
+    - salzmoor
+  name: 'The Mud Chapel'
+  place_kind: site
+  region: eintenn
+  x: 90
+  y: 78
+  description: 'A small chapel on stilts above the tidal flats, kept for those the moor has taken. Its bell rings in fog.'
+  subs:
+    - id: nave
+      name: 'The Nave'
+      description: 'Six benches and a wall of names cut in driftwood.'
+    - id: belfry
+      name: 'The Fog Bell'
+      description: 'A bell on a frame, with a long wet rope.'
+- id: place_eintenn_haverford
+  origin: allora2
+  kind: place
+  roots:
+    - kess_harbor
+    - salzmoor
+  name: 'Haverford'
+  place_kind: village
+  region: eintenn
+  x: 74
+  y: 78
+  description: 'A farm village at the ford on the way to the Salzmoor. Its oats feed half the cart-horses of Kesselhaven.'
+  subs:
+    - id: ford
+      name: 'The Ford'
+      description: 'Wide, shallow and full of carts.'
+    - id: oatfields
+      name: 'The Oatfields'
+      description: 'Pale fields to the edge of the marsh.'
+- id: place_eintenn_long_reach
+  origin: allora2
+  kind: place
+  roots:
+    - wp_ferry
+    - kess_fondaco
+  name: 'The Long Reach'
+  place_kind: site
+  region: eintenn
+  x: 80
+  y: 42
+  description: 'A straight mile of river where the barges are hauled upstream by men on a towpath. There is a hut, a fire and a great deal of rope.'
+  subs:
+    - id: towpath
+      name: 'The Towpath'
+      description: 'A worn path with a groove where the rope runs.'
+    - id: hut
+      name: 'The Haulers’ Hut'
+      description: 'A fire that never goes out and boots drying round it.'
+- id: place_eintenn_osterau
+  origin: allora2
+  kind: place
+  roots:
+    - wp_ferry
+    - collegium
+  name: 'Osterau'
+  place_kind: village
+  region: eintenn
+  x: 72
+  y: 38
+  description: 'A flax village in the river meadows. In summer the fields are blue for a week; in autumn the whole place stinks of retting.'
+  subs:
+    - id: retting
+      name: 'The Retting Ponds'
+      description: 'Flax rotting under stones, on purpose.'
+    - id: green
+      name: 'The Scutching Green'
+      description: 'Women beating flax on boards.'
+- id: place_eintenn_lindenau
+  origin: allora2
+  kind: place
+  roots:
+    - tennfels
+    - silberhalde
+  name: 'Lindenau'
+  place_kind: village
+  region: eintenn
+  x: 62
+  y: 34
+  description: 'A village round a great lime tree, known for its horse fair. Half the cart-horses and a few of the destriers of Eintenn were first sold under that tree.'
+  subs:
+    - id: green
+      name: 'The Lime Green'
+      description: 'A tree four men cannot span, and a ring of posts.'
+    - id: paddocks
+      name: 'The Paddocks'
+      description: 'Long fields with good fences.'
+- id: place_eintenn_slag_heaps
+  origin: allora2
+  kind: place
+  roots:
+    - silberhalde
+  name: 'The Slag Heaps'
+  place_kind: site
+  region: eintenn
+  x: 45
+  y: 28
+  description: 'Grey hills of waste below Silberhalde. Pickers go over them for the ore the smelters missed.'
+  subs:
+    - id: heaps
+      name: 'The Heaps'
+      description: 'Loose grey slopes that slide underfoot.'
+    - id: washing
+      name: 'The Washing Trough'
+      description: 'A trough and a sieve, and cold hands.'
+- id: place_eintenn_stollenwick
+  origin: allora2
+  kind: place
+  roots:
+    - silberhalde
+  name: 'Stollenwick'
+  place_kind: village
+  region: eintenn
+  x: 38
+  y: 20
+  description: 'A miners’ village on the slope above the workings. The men go down before light and come up after it, so the village belongs to the women.'
+  subs:
+    - id: lane
+      name: 'The Steep Lane'
+      description: 'One lane, cobbled, with a rope to hold in winter.'
+    - id: washhouse
+      name: 'The Wash-House'
+      description: 'Where the grey comes out of the clothes, mostly.'
+- id: place_eintenn_wolf_pits
+  origin: allora2
+  kind: place
+  roots:
+    - grauwald
+  name: 'The Wolf Pits'
+  place_kind: site
+  region: eintenn
+  x: 34
+  y: 28
+  description: 'Old pits at the edge of the Grauwald, dug for wolves in a hard winter and kept ever since. A warden walks them at dawn.'
+  subs:
+    - id: pits
+      name: 'The Pits'
+      description: 'Deep, stake-floored and roofed with brush.'
+    - id: bothy
+      name: 'The Warden’s Bothy'
+      description: 'A hut with pelts on the wall.'
+- id: place_eintenn_high_byre
+  origin: allora2
+  kind: place
+  roots:
+    - hohenkamm
+  name: 'The High Byre'
+  place_kind: site
+  region: eintenn
+  x: 26
+  y: 18
+  description: 'A summer byre below the Hohenkamm where the cattle are driven up at the thaw. The cheese comes down in autumn, and the herders with it.'
+  subs:
+    - id: byre
+      name: 'The Byre'
+      description: 'A long stone byre with a turf roof.'
+    - id: pasture
+      name: 'The Summer Pasture'
+      description: 'Short grass, bells and a great deal of sky.'
+- id: place_eintenn_pilgrim_stair
+  origin: allora2
+  kind: place
+  roots:
+    - threshold_sanctum
+    - vaelis_ruins
+  name: 'The Pilgrim Stair'
+  place_kind: site
+  region: eintenn
+  x: 55
+  y: 12
+  description: 'A stair of worn steps cut into the hillside on the way north. Someone has swept it every morning for longer than anyone remembers.'
+  subs:
+    - id: steps
+      name: 'The Steps'
+      description: 'Three hundred and some. Nobody agrees on the count.'
+    - id: rest
+      name: 'The Half-Way Rest'
+      description: 'A stone bench and a spring.'
+- id: place_eintenn_kelterwick
+  origin: allora2
+  kind: place
+  roots:
+    - aschau
+  name: 'Kelterwick'
+  place_kind: village
+  region: eintenn
+  x: 52
+  y: 72
+  description: 'A village east of Aschau built round one great wine-press. At vintage the whole street runs purple.'
+  subs:
+    - id: press
+      name: 'The Great Press'
+      description: 'A beam the length of a barn, and a screw taller than a man.'
+    - id: cellars
+      name: 'The Cool Cellars'
+      description: 'Rows of casks chalked with the year.'
+- id: place_eintenn_appleford
+  origin: allora2
+  kind: place
+  roots:
+    - pomerell
+  name: 'Appleford'
+  place_kind: village
+  region: eintenn
+  x: 36
+  y: 80
+  description: 'A ford and a few houses on the cart-road to Pomerell. In autumn the cider carts queue to the bend.'
+  subs:
+    - id: ford
+      name: 'The Ford'
+      description: 'Gravel-bottomed, and sweet-smelling in October.'
+    - id: yard
+      name: 'The Carters’ Yard'
+      description: 'A trough, a smith’s lean-to and a bench.'
+- id: place_eintenn_bee_garth
+  origin: allora2
+  kind: place
+  roots:
+    - pomerell
+  name: 'The Bee Garth'
+  place_kind: site
+  region: eintenn
+  x: 24
+  y: 80
+  description: 'The abbey’s walled bee yard, west of the orchards. Forty straw skeps stand in niches in the wall.'
+  subs:
+    - id: niches
+      name: 'The Bee Wall'
+      description: 'A south wall of niches, each with a skep.'
+    - id: honeyhouse
+      name: 'The Honey-House'
+      description: 'Crocks, cloths and a sticky floor.'
+- id: place_eintenn_greywater_weir
+  origin: allora2
+  kind: place
+  roots:
+    - ostwick
+    - wisewoman_hut
+  name: 'Greywater Weir'
+  place_kind: site
+  region: eintenn
+  x: 18
+  y: 58
+  description: 'A stone weir west of Ostwick with a fish-trap in its teeth. It is older than the village and nobody admits to building it.'
+  subs:
+    - id: weir
+      name: 'The Weir'
+      description: 'A line of stones, and white water over them.'
+    - id: trap
+      name: 'The Fish-Trap'
+      description: 'A wicker funnel as long as a boat.'
