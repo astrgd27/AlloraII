@@ -301,3 +301,14 @@ button:disabled {
   opacity: 0.4;
   cursor: default;
 }
+
+.scene {
+  width: 100%;
+  max-width: 40rem;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.scene canvas {
+  display: block;
+}

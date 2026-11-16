@@ -25,7 +25,7 @@
 9. **Profession skeleton and the Smith.** *(done)* Guild-smith of the Anvil: duties, commissions, ladder.
 10. **The Butler.** *(done)* Steward of Burg Tennfels.
 11. **Money and markets.** One currency, shops with hours, prices that move. *(done)*
-12. **Scenes.** A place view that changes with the hour, season and who is there.
+12. **Scenes.** A place view that changes with the hour, season and who is there. *(done)*
 13. **Standing orders and the report.** What a life does while you are away, and what you read when you return.
 14. **Marre slice.** The Piazza of the Doges and the Lazaretto, about 20 new small places, and the Inquirer of the Cerdans.
 15. **Eintenn and Marre, remaining batches.** To ~150 places.
@@ -130,3 +130,10 @@ Each is an addition, to be rooted on canon when it is built.
   - **Not yet:** lodging and rent (home is free), tools and their upkeep, dues, fares and tolls, season and event prices, production by trade, prices known only where you are, markets in Marre (#35), recipes, and using goods other than food.
   - **Balance.** New pedlar persona; careers now run ten years. The report has "Earnings per hour" and "Money supply" and flags a purse that grows more than 3% a year. **It flags every earning persona,** as expected: food is the only sink so far. A grandmaster smith takes in about 45 pf a day against 1.5 spent. The pedlar nets about 2 pf a day, so no route runs away.
   - **Save version 10,** with a migration and a test. Systems now receive the world.
+- **2026-11-16 · Scenes (#33).** The page now opens on the scene of where the life stands, above the map. Decisions:
+  - **Composed, not drawn.** `packages/ui/src/scene/compose.ts` turns a snapshot into layers: sky, sun or moon and stars, far hills, buildings, trees, figures. `SceneView.tsx` draws them with PixiJS. Plain shapes stand in for the art kits; no art is made yet.
+  - **A place always looks like itself:** its buildings and trees are laid out from its id. A city has nine buildings, a settled place four, the wild none and more trees.
+  - **The hour** moves the sun and moon, colours the sky, lights lamps from the 18th hour to the 6th, and raises hearth-smoke morning and evening. **The season** colours hills, ground and leaves; trees are bare in winter. **Figures** are the people the simulation puts there (up to eight).
+  - **On the way** the scene is the road or the water, with no buildings.
+  - **Words for the scene:** every scene carries a one-line description for screen readers.
+  - **Not yet:** weather (no weather system yet), the sky's Houses and Wanderers, kits by land, signature pieces, sub-place views, tapping a figure to meet them, festival dressing.
