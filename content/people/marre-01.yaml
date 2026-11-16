@@ -332,7 +332,7 @@
   title: 'Cullet-Picker of Ash Isle'
   region: marre
   home: place_marre_ash_isle
-  hint: 'a girl with rag-bound hands and a sack that clinks'
+  hint: 'a young woman with rag-bound hands and a sack that clinks'
   meet: 'She shakes the sack at you. “Nineta Scoa. Do not pick anything up. You will bleed, and then you will know why.”'
   talk:
     - 'Nineta can tell which furnace a shard came from by its green.'

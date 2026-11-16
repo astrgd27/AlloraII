@@ -98,7 +98,7 @@
   title: 'Shepherd of Starwatch'
   region: eintenn
   home: place_eintenn_starwatch_hill
-  hint: 'a girl with a crook, scratching numbers on a slate'
+  hint: 'a young woman with a crook, scratching numbers on a slate'
   meet: '“They pay me to keep the sheep off the stones,” she says. “Lena Hale. I learned the rest by listening.”'
   talk:
     - 'Lena can name more stars than most of the students who climb the hill.'
@@ -224,7 +224,7 @@
   title: 'Picker of the Heaps'
   region: eintenn
   home: place_eintenn_slag_heaps
-  hint: 'a boy with a hammer, cracking stones and looking inside'
+  hint: 'a young man with a hammer, cracking stones and looking inside'
   meet: 'He cracks one more. “Nothing. Detlef Clink. One in fifty has colour in it.”'
   talk:
     - 'Detlef sells what he finds back to the smelter that threw it away.'
@@ -332,7 +332,7 @@
   title: 'Ford-Keeper of Appleford'
   region: eintenn
   home: place_eintenn_appleford
-  hint: 'a girl with a pole, standing in the stream to her knees'
+  hint: 'a young woman with a pole, standing in the stream to her knees'
   meet: '“Left of the white stone,” she calls. “Left!” Then, wading out: “Sanne Withy. They never listen the first time.”'
   talk:
     - 'Sanne has fished nine barrels and one abbot out of the ford.'

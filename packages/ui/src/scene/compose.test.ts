@@ -46,7 +46,7 @@ describe('the scene', () => {
       const scene = composeScene(snap, WORLD);
       expect(scene.figures).toHaveLength(Math.min(snap.here.length, 8));
     }
-    const empty = composeScene(at('salzmoor', 6), WORLD);
+    const empty = composeScene({ ...at('salzmoor', 6), here: [] }, WORLD);
     expect(empty.figures).toHaveLength(0);
     expect(empty.description).toContain('Nobody is about');
   });

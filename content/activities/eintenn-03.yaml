@@ -11,6 +11,7 @@
   from: 6
   to: 16
   hours: 2
+  pay: 0.6
   skill: skill_athletics
   effects:
     vigour: -6
@@ -26,6 +27,7 @@
   from: 6
   to: 12
   hours: 1
+  pay: 0.4
   skill: skill_herblore
   dc: 12
   effects:
@@ -42,6 +44,7 @@
   from: 7
   to: 14
   hours: 2
+  pay: 0.6
   skill: skill_wayfaring
   effects:
     vigour: -6
@@ -57,6 +60,7 @@
   from: 7
   to: 17
   hours: 1
+  pay: 0.3
   skill: skill_woodcraft
   effects:
     vigour: -3
@@ -72,6 +76,7 @@
   from: 7
   to: 16
   hours: 2
+  pay: 0.6
   skill: skill_woodwork
   effects:
     vigour: -6
@@ -87,6 +92,7 @@
   from: 7
   to: 17
   hours: 2
+  pay: 0.6
   skill: skill_woodwork
   effects:
     vigour: -6
@@ -102,6 +108,7 @@
   from: 7
   to: 15
   hours: 2
+  pay: 0.6
   skill: skill_building
   effects:
     vigour: -6
@@ -117,6 +124,7 @@
   from: 7
   to: 16
   hours: 2
+  pay: 0.6
   skill: skill_woodcraft
   effects:
     vigour: -6
@@ -132,6 +140,7 @@
   from: 8
   to: 17
   hours: 2
+  pay: 0.6
   skill: skill_fishing
   effects:
     vigour: -6
@@ -147,6 +156,7 @@
   from: 6
   to: 20
   hours: 2
+  pay: 0.6
   skill: skill_athletics
   effects:
     vigour: -6
@@ -162,6 +172,7 @@
   from: 5
   to: 19
   hours: 2
+  pay: 0.8
   skill: skill_seamanship
   dc: 12
   effects:
@@ -178,6 +189,7 @@
   from: 6
   to: 18
   hours: 3
+  pay: 0.9
   skill: skill_kilncraft
   effects:
     vigour: -9
@@ -193,6 +205,7 @@
   from: 6
   to: 12
   hours: 1
+  pay: 0.3
   skill: skill_trade
   effects:
     vigour: -3
@@ -208,6 +221,7 @@
   from: 19
   to: 23
   hours: 2
+  pay: 0.6
   skill: skill_streetwise
   effects:
     vigour: -6
@@ -223,6 +237,7 @@
   from: 6
   to: 18
   hours: 2
+  pay: 0.6
   skill: skill_clothwork
   effects:
     vigour: -6
@@ -238,6 +253,7 @@
   from: 6
   to: 16
   hours: 2
+  pay: 0.6
   skill: skill_husbandry
   effects:
     vigour: -6
@@ -253,6 +269,7 @@
   from: 7
   to: 16
   hours: 2
+  pay: 0.6
   skill: skill_building
   effects:
     vigour: -6
@@ -268,6 +285,7 @@
   from: 7
   to: 16
   hours: 2
+  pay: 0.6
   skill: skill_building
   effects:
     vigour: -6
@@ -283,6 +301,7 @@
   from: 6
   to: 10
   hours: 1
+  pay: 0.3
   skill: skill_devotion
   effects:
     vigour: -3
@@ -298,6 +317,7 @@
   from: 6
   to: 19
   hours: 2
+  pay: 0.6
   skill: skill_wayfaring
   effects:
     vigour: -6

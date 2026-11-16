@@ -73,8 +73,8 @@ export function renderReport(run: BalanceRun, options: { timings?: boolean } = {
     '',
     '### Dead content',
     '',
-    !travels
-      ? '- Places nobody visited: not measured for a persona that stays at home.'
+    run.persona.name !== 'Wanderer'
+      ? '- Places nobody visited: measured by the wanderer only.'
       : never.length === 0
         ? `- Places nobody visited: none (all ${WORLD.places.length} were reached).`
         : `- **Places nobody visited (${never.length}):** ${never.join(', ')}.`,
