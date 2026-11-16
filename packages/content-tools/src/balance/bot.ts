@@ -182,6 +182,14 @@ export const pedlar: Persona = {
   },
 };
 
+export const inquirer = careerist(
+  'Inquirer',
+  'Holds a place in the Office of the Cerdans in Marre, works cases to an accusation and sits each trial when it is offered.',
+  'post_cerdans_inquirer',
+  'marre_palace',
+  'activity_cerdans_',
+);
+
 export interface LifeResult {
   seed: number;
   hours: number;

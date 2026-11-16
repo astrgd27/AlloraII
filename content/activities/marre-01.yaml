@@ -1,0 +1,305 @@
+# Marre, first batch: twenty small places round the Piazza, the city, the Lazaretto, the mainland and the Glass Isles.
+- id: activity_calle_inchiostro_copy_fair
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_calle_inchiostro
+  name: 'Copy a page fair'
+  text: 'A page of someone else’s words, set down without one of your own.'
+  place: place_marre_calle_inchiostro
+  sub: desks
+  from: 8
+  to: 17
+  hours: 2
+  skill: skill_letters
+  effects:
+    vigour: -6
+- id: activity_molo_grano_carry_grain
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_molo_grano
+  name: 'Carry sacks ashore'
+  text: 'Down the plank with a sack on your shoulder, and the measurer counting.'
+  place: place_marre_molo_grano
+  sub: quay
+  from: 6
+  to: 14
+  hours: 2
+  skill: skill_athletics
+  effects:
+    vigour: -6
+- id: activity_campo_leoni_trim_lamps
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_campo_leoni
+  name: 'Trim the green lamps'
+  text: 'Wick, oil and glass, house by house round the square.'
+  place: place_marre_campo_leoni
+  sub: houses
+  from: 16
+  to: 20
+  hours: 1
+  skill: skill_devotion
+  effects:
+    vigour: -3
+- id: activity_riva_ombra_carry_parcels
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_riva_ombra
+  name: 'Carry parcels to the grating'
+  text: 'Bread, a clean shirt, a note folded small. Hand each one in and say the name.'
+  place: place_marre_riva_ombra
+  sub: steps
+  from: 7
+  to: 18
+  hours: 1
+  skill: skill_seamanship
+  effects:
+    vigour: -3
+- id: activity_osteria_bauta_listen_benches
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_osteria_bauta
+  name: 'Listen along the benches'
+  text: 'A cup that lasts an hour, and both ears open.'
+  place: place_marre_osteria_bauta
+  sub: taproom
+  from: 18
+  to: 23
+  hours: 2
+  skill: skill_streetwise
+  dc: 12
+  effects:
+    vigour: -6
+- id: activity_squero_storto_pitch_hull
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_squero_storto
+  name: 'Pitch a hull'
+  text: 'Hot pitch and a long brush, seam by seam.'
+  place: place_marre_squero_storto
+  sub: slip
+  from: 7
+  to: 16
+  hours: 2
+  skill: skill_woodwork
+  effects:
+    vigour: -6
+- id: activity_pescaria_gut_sardines
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_pescaria
+  name: 'Gut sardines'
+  text: 'Thumb in, thumb out, into the basket. Mind the knife.'
+  place: place_marre_pescaria
+  sub: slabs
+  from: 6
+  to: 10
+  hours: 2
+  skill: skill_fishing
+  effects:
+    vigour: -6
+- id: activity_corte_tinta_stir_vats
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_corte_tinta
+  name: 'Stir the vats'
+  text: 'A long paddle, slow and even, or the colour takes in streaks.'
+  place: place_marre_corte_tinta
+  sub: vats
+  from: 6
+  to: 15
+  hours: 2
+  skill: skill_clothwork
+  effects:
+    vigour: -6
+- id: activity_ponte_maschere_gild_masks
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_ponte_maschere
+  name: 'Gild a row of masks'
+  text: 'Size, leaf, and a breath to lay it. Do not sneeze.'
+  place: place_marre_ponte_maschere
+  sub: stalls
+  from: 9
+  to: 18
+  hours: 2
+  skill: skill_stagecraft
+  dc: 12
+  effects:
+    vigour: -6
+- id: activity_fondamenta_specchi_polish_mirrors
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_fondamenta_specchi
+  name: 'Polish the stock'
+  text: 'Chalk and a soft cloth, in circles, until you can see what you would rather not.'
+  place: place_marre_fondamenta_specchi
+  sub: shops
+  from: 8
+  to: 17
+  hours: 1
+  skill: skill_trade
+  effects:
+    vigour: -3
+- id: activity_waiting_roads_row_line
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_waiting_roads
+  name: 'Row the line'
+  text: 'Ship to ship at an oar’s length, while the officer calls up his questions.'
+  place: place_marre_waiting_roads
+  sub: guardboat
+  from: 5
+  to: 9
+  hours: 2
+  skill: skill_seamanship
+  effects:
+    vigour: -6
+- id: activity_quiet_isle_keep_list
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_quiet_isle
+  name: 'Keep the list'
+  text: 'Name, ship and day, in a fair hand, and the bell rung once for each.'
+  place: place_marre_quiet_isle
+  sub: hut
+  from: 7
+  to: 16
+  hours: 1
+  skill: skill_letters
+  effects:
+    vigour: -3
+- id: activity_isle_of_simples_gather_simples
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_isle_of_simples
+  name: 'Gather simples'
+  text: 'The right leaf at the right hour, into the right basket.'
+  place: place_marre_isle_of_simples
+  sub: beds
+  from: 6
+  to: 11
+  hours: 1
+  skill: skill_herblore
+  dc: 12
+  effects:
+    vigour: -3
+- id: activity_stilt_huts_lift_traps
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_stilt_huts
+  name: 'Lift the eel traps'
+  text: 'Hand over hand up the line, and a quick grip behind the head.'
+  place: place_marre_stilt_huts
+  sub: traps
+  from: 16
+  to: 20
+  hours: 2
+  skill: skill_fishing
+  effects:
+    vigour: -6
+- id: activity_pilots_rest_sound_channel
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_pilots_rest
+  name: 'Sound the channel'
+  text: 'Lead over the bow, call the mark, and again.'
+  place: place_marre_pilots_rest
+  sub: boathouse
+  from: 6
+  to: 15
+  hours: 2
+  skill: skill_seamanship
+  dc: 12
+  effects:
+    vigour: -6
+- id: activity_barge_stair_load_barge
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_barge_stair
+  name: 'Load a barge'
+  text: 'Bales to the plank, plank to the hold, and trim her level.'
+  place: place_marre_barge_stair
+  sub: stair
+  from: 6
+  to: 16
+  hours: 2
+  skill: skill_athletics
+  effects:
+    vigour: -6
+- id: activity_silk_sheds_feed_worms
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_silk_sheds
+  name: 'Feed the worms'
+  text: 'Fresh leaves on every tray, the old ones lifted away, and not a sound.'
+  place: place_marre_silk_sheds
+  sub: sheds
+  from: 5
+  to: 21
+  hours: 2
+  skill: skill_husbandry
+  effects:
+    vigour: -6
+- id: activity_chiusa_vecchia_turn_wheel
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_chiusa_vecchia
+  name: 'Turn the sluice wheel'
+  text: 'Shoulder to the spoke, and round, and the gate comes up a finger.'
+  place: place_marre_chiusa_vecchia
+  sub: gates
+  from: 6
+  to: 12
+  hours: 1
+  skill: skill_athletics
+  effects:
+    vigour: -3
+- id: activity_ash_isle_sift_cullet
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_ash_isle
+  name: 'Sift for cullet'
+  text: 'Shake the sieve, pick the glass, and keep your fingers.'
+  place: place_marre_ash_isle
+  sub: sieves
+  from: 7
+  to: 17
+  hours: 2
+  skill: skill_kilncraft
+  effects:
+    vigour: -6
+- id: activity_guard_boats_row_circuit
+  origin: allora2
+  kind: activity
+  roots:
+    - place_marre_guard_boats
+  name: 'Row the circuit'
+  text: 'Once round the Isles, slowly, counting lamps.'
+  place: place_marre_guard_boats
+  sub: pontoon
+  from: 18
+  to: 23
+  hours: 3
+  skill: skill_seamanship
+  effects:
+    vigour: -9

@@ -1,0 +1,61 @@
+# The Inquirer of the Cerdans (design bible, The Inquirer of the Cerdans): a post in the Office of the
+# Cerdans on the Piazza of the Doges. Ranks and their order follow Allora I's career of the Cerdans.
+- id: post_cerdans_inquirer
+  origin: allora2
+  kind: post
+  roots:
+    - o_cerdans
+    - marre_palace
+  name: Inquirer of the Cerdans
+  trade: investigator
+  skill: skill_insight
+  place: marre_palace
+  sub: cerdans
+  group: o_cerdans
+  patron: ppl_querzi
+  text: 'A place behind the plain black door on the Piazza: long tables of files, and a great deal of quiet.'
+  ranks:
+    - name: Informer
+      pay: 0.45
+    - name: Constable
+      pay: 0.9
+      trial: Close three petty matters without a wrong accusation.
+    - name: Inquirer
+      pay: 1.8
+      trial: Close a death.
+    - name: "Capo's Deputy"
+      pay: 4
+      trial: Close a case that reaches into a great house, quietly.
+  # The work of a case: four ways to find clues, then the accusation. Each clue makes the accusation surer.
+  work:
+    - id: scene
+      name: Read the scene
+      hours: 1
+      approaches:
+        - { id: look_slowly, name: Look slowly, dc: 0 }
+        - { id: ask_what_is_missing, name: Ask what is missing, dc: 5, bold: true }
+    - id: witnesses
+      name: Question the witnesses
+      hours: 2
+      approaches:
+        - { id: let_them_talk, name: Let them talk, dc: 0 }
+        - { id: catch_the_lie, name: Catch the lie, dc: 5, bold: true }
+    - id: records
+      name: Read the files
+      hours: 2
+      approaches:
+        - { id: page_by_page, name: Page by page, dc: 0 }
+        - { id: follow_one_name, name: Follow one name, dc: 5, bold: true }
+    - id: tail
+      name: Follow your man
+      hours: 2
+      approaches:
+        - { id: from_a_bridge_away, name: From a bridge away, dc: 0 }
+        - { id: at_his_elbow, name: At his elbow, dc: 5, bold: true }
+    - id: accuse
+      name: Name the culprit
+      hours: 1
+      accuse: true
+      approaches:
+        - { id: lay_out_the_proof, name: Lay out the proof, dc: 0 }
+        - { id: before_the_capo, name: Before the Capo, dc: 5, bold: true }

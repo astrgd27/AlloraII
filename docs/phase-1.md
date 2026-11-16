@@ -27,7 +27,7 @@
 11. **Money and markets.** One currency, shops with hours, prices that move. *(done)*
 12. **Scenes.** A place view that changes with the hour, season and who is there. *(done)*
 13. **Standing orders and the report.** What a life does while you are away, and what you read when you return. *(done)*
-14. **Marre slice.** The Piazza of the Doges and the Lazaretto, about 20 new small places, and the Inquirer of the Cerdans.
+14. **Marre slice.** The Piazza of the Doges and the Lazaretto, about 20 new small places, and the Inquirer of the Cerdans. *(done)*
 15. **Eintenn and Marre, remaining batches.** To ~150 places.
 16. **Balance personas** for the three trades, and the gate review.
 
@@ -145,3 +145,15 @@ Each is an addition, to be rooted on canon when it is built.
   - **Not yet:** orders about buying food, lodging, taking commissions under a price, or travel; weighty decisions that wait; a longer report with named events; reports for several lives.
   - **Balance.** New idler persona (orders "always", then hands off).
   - **Save version 11,** with a migration and a test.
+- **2026-11-16 · The Marre slice and the Inquirer of the Cerdans (#35).** Decisions:
+  - **Twenty new small places in Marre** (`content/world/places/marre-01.yaml`), each with a resident who keeps hours and one thing to do: five round the Piazza, five in the city, five in the lagoon by the Lazaretto, three on the mainland, two by the Glass Isles. Names follow the Marre guide: southern forms for the city's own things, plain speech for islets and shoals.
+  - **Getting about the lagoon.** A hop of an hour is a street and a bridge; anything longer is a boat (`river`: the life is a passenger and can sleep aboard). The canon stub roads of Marre are unchanged.
+  - **The post** is `post_cerdans_inquirer`, in the Office of the Cerdans on the Piazza, under the Capo (`ppl_querzi`). Three new colleagues: a keeper of the files, a constable, a mirror-scryer.
+  - **Four ranks: Informer, Constable, Inquirer, Capo's Deputy.** Canon's career has five; the bible has four and calls the last "the Capo's Hand". Canon wins on the name (logged in `conflicts.md`), the skeleton on the number. Mirror-Scryer waits for the Mirror-Room branch.
+  - **New mechanic: the accusation,** filling the gap between the skeleton's chain of checks and the bible's "accusation is the climax". A step marked `accuse` starts 5 harder than the case and gets 2 easier for each point of quality (each clue) found before it. If it fails, the case is spoiled and standing falls by 8. The first four steps are the bible's sources of clues: the scene, witnesses, files, tailing.
+  - **Eight cases and three trials,** set in canon and new Marrean places. No canon person is accused of anything.
+  - **A day of duties:** night reports, walking the Piazza, petty complaints, writing up the files (the day's check).
+  - **Six markets in Marre** (`content/markets/marre.yaml`), from canon shop lists.
+  - **Not yet:** the case board and theories, named roles in a case (victim, culprit, witnesses), time pressure, rivals, trust on the streets as its own measure, the Mirror-Room, a skill for each step, and standing orders never accusing (they already never take a case).
+  - **Balance.** New inquirer persona: all five lives reach Capo's Deputy, about game day 480, a little faster than the smith. Wages are first values.
+  - **Kept:** the batch scripts now live in `tools/batches/`.

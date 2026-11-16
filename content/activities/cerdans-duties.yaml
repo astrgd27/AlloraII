@@ -1,0 +1,64 @@
+# The duties of the Office of the Cerdans. Only for those who hold the post.
+- id: activity_cerdans_night_reports
+  origin: allora2
+  kind: activity
+  roots: [post_cerdans_inquirer]
+  post: post_cerdans_inquirer
+  name: Read the night reports
+  text: 'What the informers saw, in forty hands, most of it nothing.'
+  place: marre_palace
+  sub: cerdans
+  from: 6
+  to: 9
+  hours: 1
+  skill: skill_insight
+  standing: 1
+  effects: { vigour: -2 }
+- id: activity_cerdans_walk_piazza
+  origin: allora2
+  kind: activity
+  roots: [post_cerdans_inquirer]
+  post: post_cerdans_inquirer
+  name: Walk the Piazza
+  text: 'Twice round the square at a stroll, noticing who notices you.'
+  place: marre_palace
+  sub: council
+  from: 9
+  to: 14
+  hours: 2
+  skill: skill_insight
+  level: 6
+  standing: 1
+  effects: { vigour: -4 }
+- id: activity_cerdans_petty_complaints
+  origin: allora2
+  kind: activity
+  roots: [post_cerdans_inquirer]
+  post: post_cerdans_inquirer
+  name: Hear petty complaints
+  text: 'A neighbour, a debt, a wife, a cat. Write each one down as if it mattered. One will.'
+  place: marre_palace
+  sub: cerdans
+  from: 13
+  to: 17
+  hours: 2
+  skill: skill_insight
+  level: 6
+  standing: 1
+  effects: { vigour: -4 }
+- id: activity_cerdans_write_files
+  origin: allora2
+  kind: activity
+  roots: [post_cerdans_inquirer]
+  post: post_cerdans_inquirer
+  name: Write up the files
+  text: 'Name, street, habit, friends. Leave out what you think and put in what you saw.'
+  place: marre_palace
+  sub: cerdans
+  from: 17
+  to: 21
+  hours: 1
+  skill: skill_insight
+  dc: 12
+  standing: 2
+  effects: { vigour: -2 }

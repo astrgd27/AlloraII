@@ -108,6 +108,8 @@ export interface WorkStep {
   id: string;
   name: string;
   hours: number;
+  /** An accusation: surer for every clue found, and costly if wrong. */
+  accuse?: boolean;
   approaches: Approach[];
 }
 

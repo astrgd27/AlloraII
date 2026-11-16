@@ -1,0 +1,361 @@
+# Marre, first batch: twenty small places round the Piazza, the city, the Lazaretto, the mainland and the Glass Isles.
+- id: person_marre_tonina
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_calle_inchiostro
+  name: 'Tonina Sgarb'
+  title: 'Scrivener of the Calle'
+  region: marre
+  home: place_marre_calle_inchiostro
+  hint: 'a woman with a black thumb and a pen behind each ear'
+  meet: 'She blots the line before she looks up. “Tonina Sgarb. I copy what I am given and forget it by supper. That is the trade.”'
+  talk:
+    - 'Tonina can tell a clerk of the Council from a clerk of the Cerdans by the paper they bring.'
+    - '“A fair hand is worth more than a fair face here,” Tonina says. “Faces change at Carnevale.”'
+  sched:
+    - at: [place_marre_calle_inchiostro, desks]
+      h: [6, 20]
+    - at: [place_marre_calle_inchiostro, stair]
+- id: person_marre_bortolo
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_molo_grano
+  name: 'Bortolo Pes'
+  title: 'Measurer of Grain'
+  region: marre
+  home: place_marre_molo_grano
+  hint: 'a broad man with chaff in his beard and a tally-board on a cord'
+  meet: '“Stand off the plank,” he says, and then, when the sack has passed: “Bortolo Pes. I measure. The Republic believes me, so the bargemen must.”'
+  talk:
+    - 'Bortolo says the barges ride lower in a good year, and that he can read the harvest from the bridge.'
+    - '“Level measure,” Bortolo says. “Not heaped, not shaken. Level.”'
+  sched:
+    - at: [place_marre_molo_grano, quay]
+      h: [6, 20]
+    - at: [place_marre_molo_grano, measure]
+- id: person_marre_marietta
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_campo_leoni
+  name: 'Marietta Zan'
+  title: 'Lion-Keeper of the Matron'
+  region: marre
+  home: place_marre_campo_leoni
+  hint: 'an old woman polishing a stone lion with her sleeve'
+  meet: '“Rub his nose,” she says. “This one you may.” She watches you do it. “Marietta Zan. I keep the glass ones. These keep me.”'
+  talk:
+    - 'Marietta has dusted the sleeping lion every morning for forty years and says he has never once stirred.'
+    - '“One awake, one asleep,” Marietta says. “That is how to run a city.”'
+  sched:
+    - at: [place_marre_campo_leoni, well]
+      h: [6, 20]
+    - at: [place_marre_campo_leoni, houses]
+- id: person_marre_nane
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_riva_ombra
+  name: 'Nane Tosat'
+  title: 'Boatman of the Riva'
+  region: marre
+  home: place_marre_riva_ombra
+  hint: 'a boatman resting on his oar with his cap over his eyes'
+  meet: 'He lifts the cap an inch. “Nane Tosat. I carry bread in and letters out. I do not read either.”'
+  talk:
+    - 'Nane knows which families have been waiting a week and which a year, by where they moor.'
+    - '“In summer the roof is the punishment,” Nane says. “The judge only chooses how long.”'
+  sched:
+    - at: [place_marre_riva_ombra, steps]
+      h: [6, 20]
+    - at: [place_marre_riva_ombra, grating]
+- id: person_marre_catina
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_osteria_bauta
+  name: 'Catina Fol'
+  title: 'Keeper of the Bauta'
+  region: marre
+  home: place_marre_osteria_bauta
+  hint: 'a woman who fills your cup without asking and listens without seeming to'
+  meet: 'She sets the cup down. “Catina Fol. Drink, pay, and talk about the weather. Everyone here does.”'
+  talk:
+    - 'Catina can tell who is watching whom by which bench they choose.'
+    - '“I hear nothing,” Catina says. “I am paid twice for it.”'
+  sched:
+    - at: [place_marre_osteria_bauta, taproom]
+      h: [6, 20]
+    - at: [place_marre_osteria_bauta, snug]
+- id: person_marre_menego
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_squero_storto
+  name: 'Menego Rui'
+  title: 'Boatwright of the Squero'
+  region: marre
+  home: place_marre_squero_storto
+  hint: 'a man sighting along a plank with one eye shut'
+  meet: '“Crooked,” he says, pleased, and puts the plank down. “Menego Rui. If it were straight it would go in circles.”'
+  talk:
+    - 'Menego builds one boat in a season and says the Arsenal builds a galley a day because nobody has to love a galley.'
+    - '“Eight woods in a gondola,” Menego says. “And one man’s temper.”'
+  sched:
+    - at: [place_marre_squero_storto, slip]
+      h: [6, 20]
+    - at: [place_marre_squero_storto, loft]
+- id: person_marre_betta
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_pescaria
+  name: 'Betta Guss'
+  title: 'Fishwife of the Pescaria'
+  region: marre
+  home: place_marre_pescaria
+  hint: 'a woman gutting sardines faster than you can count them'
+  meet: '“Fresh,” she says, before you ask. “Betta Guss. If it winks at you it is too fresh.”'
+  talk:
+    - 'Betta knows which cook buys for which palazzo, and what each house is eating less of this month.'
+    - '“The Ten Families eat what I say is good,” Betta says. “They think their cooks choose.”'
+  sched:
+    - at: [place_marre_pescaria, slabs]
+      h: [6, 20]
+    - at: [place_marre_pescaria, boats]
+- id: person_marre_zuane
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_corte_tinta
+  name: 'Zuane Tinto'
+  title: 'Dyer of the Corte'
+  region: marre
+  home: place_marre_corte_tinta
+  hint: 'a man whose hands are blue to the wrist and red above it'
+  meet: 'He holds up both hands. “Zuane Tinto. Do not shake them. It does not come off.”'
+  talk:
+    - 'Zuane will not say which house’s colour is hardest to match, only that one of them never pays on time.'
+    - '“Every house has a colour,” Zuane says. “I am the only man in Marre who wears them all.”'
+  sched:
+    - at: [place_marre_corte_tinta, vats]
+      h: [6, 20]
+    - at: [place_marre_corte_tinta, lines]
+- id: person_marre_lucieta
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_ponte_maschere
+  name: 'Lucieta Bas'
+  title: 'Mask-Maker of the Ponte'
+  region: marre
+  home: place_marre_ponte_maschere
+  hint: 'a young woman painting a white mask with a brush of three hairs'
+  meet: '“Hold still,” she says, and measures your face with her thumb. “Lucieta Bas. You would suit a plain one. Most people do.”'
+  talk:
+    - 'Lucieta remembers every face she has fitted, which is more than her customers would like.'
+    - '“By law nobody may ask who you are in a mask,” Lucieta says. “Nobody said I could not know.”'
+  sched:
+    - at: [place_marre_ponte_maschere, stalls]
+      h: [6, 20]
+    - at: [place_marre_ponte_maschere, span]
+- id: person_marre_anzolo
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_fondamenta_specchi
+  name: 'Anzolo Fri'
+  title: 'Mirror-Dealer of the Fondamenta'
+  region: marre
+  home: place_marre_fondamenta_specchi
+  hint: 'a thin man who looks at your reflection instead of at you'
+  meet: 'He speaks to the glass. “Anzolo Fri. Every mirror here is honest. That is why they are dear.”'
+  talk:
+    - 'Anzolo can name the master of any mirror by the colour of its silver.'
+    - '“A cheap mirror flatters,” Anzolo says. “Ours do not, and people pay for it. Explain that.”'
+  sched:
+    - at: [place_marre_fondamenta_specchi, shops]
+      h: [6, 20]
+    - at: [place_marre_fondamenta_specchi, landing]
+- id: person_marre_stae
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_waiting_roads
+  name: 'Stae Dolfi'
+  title: 'Oarsman of the Health Boat'
+  region: marre
+  home: place_marre_waiting_roads
+  hint: 'a sunburnt man who keeps an oar’s length from everyone'
+  meet: 'He holds up a hand before you come closer. “Stae Dolfi. I row the officers round. Stay upwind and we shall get on.”'
+  talk:
+    - 'Stae counts days for forty ships at once and has never been wrong by one.'
+    - '“Day thirty-nine is the long one,” Stae says.'
+  sched:
+    - at: [place_marre_waiting_roads, guardboat]
+      h: [6, 20]
+    - at: [place_marre_waiting_roads, anchorage]
+- id: person_marre_tita
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_quiet_isle
+  name: 'Tita Nard'
+  title: 'Corpse-Bearer of the Quiet Isle'
+  region: marre
+  home: place_marre_quiet_isle
+  hint: 'a big, gentle man with lime on his boots and a ledger under his arm'
+  meet: 'He takes off his cap. “Tita Nard. I write them all down. Somebody comes asking, in the end.”'
+  talk:
+    - 'Tita says the island is the only place in the lagoon where nobody lies to him.'
+    - '“A name and a day,” Tita says. “It is not much. It is more than the sea gives.”'
+  sched:
+    - at: [place_marre_quiet_isle, pits]
+      h: [6, 20]
+    - at: [place_marre_quiet_isle, hut]
+- id: person_marre_agnesina
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_isle_of_simples
+  name: 'Agnesina Rov'
+  title: 'Herb-Wife of the Simples'
+  region: marre
+  home: place_marre_isle_of_simples
+  hint: 'a small woman in a straw hat, crushing a leaf under your nose'
+  meet: '“Smell,” she says. “Now you will not forget it. Agnesina Rov. Half of physic is not picking the wrong one.”'
+  talk:
+    - 'Agnesina sends a basket to the wards every dawn and gets it back empty every dusk.'
+    - '“The fever-bark comes from across the sea,” Agnesina says. “Everything else comes from me.”'
+  sched:
+    - at: [place_marre_isle_of_simples, beds]
+      h: [6, 20]
+    - at: [place_marre_isle_of_simples, stillroom]
+- id: person_marre_checo
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_stilt_huts
+  name: 'Checo Bisat'
+  title: 'Eel-Man of the Shallows'
+  region: marre
+  home: place_marre_stilt_huts
+  hint: 'a wiry man hauling a wicker trap hand over hand'
+  meet: '“Wet feet,” he says, looking at yours. “Checo Bisat. Sit on the dry side. There is one.”'
+  talk:
+    - 'Checo knows the lagoon’s channels by the colour of the water and has never owned a chart.'
+    - '“The city thinks the lagoon is its moat,” Checo says. “It is its larder.”'
+  sched:
+    - at: [place_marre_stilt_huts, platform]
+      h: [6, 20]
+    - at: [place_marre_stilt_huts, traps]
+- id: person_marre_iseppo
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_pilots_rest
+  name: 'Iseppo Lanz'
+  title: 'Pilot of the Bar'
+  region: marre
+  home: place_marre_pilots_rest
+  hint: 'a grey man watching the water as if it owed him money'
+  meet: 'He does not turn round. “Iseppo Lanz. The bar moved a boat’s length last winter. Nobody told the charts.”'
+  talk:
+    - 'Iseppo has brought in every spice-galley for twenty autumns and says they ride lower each year.'
+    - '“A foreign captain asks how deep,” Iseppo says. “A wise one asks me to take the helm.”'
+  sched:
+    - at: [place_marre_pilots_rest, lookout]
+      h: [6, 20]
+    - at: [place_marre_pilots_rest, boathouse]
+- id: person_marre_gasparo
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_barge_stair
+  name: 'Gasparo Ton'
+  title: 'Barge-Master of the Stair'
+  region: marre
+  home: place_marre_barge_stair
+  hint: 'a heavy man shouting at a barge as if it could hear'
+  meet: 'He stops shouting to look you over. “Gasparo Ton. If it floats and it is slow, it is mine.”'
+  talk:
+    - 'Gasparo says the city would starve in a week without his barges and has said so to a senator.'
+    - '“Glass goes out on galleys,” Gasparo says. “Supper comes in on me.”'
+  sched:
+    - at: [place_marre_barge_stair, stair]
+      h: [6, 20]
+    - at: [place_marre_barge_stair, sheds]
+- id: person_marre_orsetta
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_silk_sheds
+  name: 'Orsetta Brun'
+  title: 'Silk-Wife of the Sheds'
+  region: marre
+  home: place_marre_silk_sheds
+  hint: 'a woman carrying a tray of leaves as if it were asleep'
+  meet: '“Softly,” she says. “They can hear you.” She sets the tray down. “Orsetta Brun. No shouting, no smoke, no thunder if you can help it.”'
+  talk:
+    - 'Orsetta has not slept a whole night in silk season since she was a girl.'
+    - '“The city wears it,” Orsetta says. “We raise it. Ask which is harder.”'
+  sched:
+    - at: [place_marre_silk_sheds, sheds]
+      h: [6, 20]
+    - at: [place_marre_silk_sheds, reels]
+- id: person_marre_bepi
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_chiusa_vecchia
+  name: 'Bepi Sguaz'
+  title: 'Keeper of the Chiusa'
+  region: marre
+  home: place_marre_chiusa_vecchia
+  hint: 'a man in mud to the knee with a heron standing beside him'
+  meet: '“Mind the heron,” he says. “He was here first. Bepi Sguaz. I let the water in and I let it out.”'
+  talk:
+    - 'Bepi is offered a bribe by every farmer each spring and takes them all, in order.'
+    - '“Water is patient,” Bepi says. “Farmers are not. I stand between.”'
+  sched:
+    - at: [place_marre_chiusa_vecchia, gates]
+      h: [6, 20]
+    - at: [place_marre_chiusa_vecchia, dyke]
+- id: person_marre_nineta
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_ash_isle
+  name: 'Nineta Scoa'
+  title: 'Cullet-Picker of Ash Isle'
+  region: marre
+  home: place_marre_ash_isle
+  hint: 'a girl with rag-bound hands and a sack that clinks'
+  meet: 'She shakes the sack at you. “Nineta Scoa. Do not pick anything up. You will bleed, and then you will know why.”'
+  talk:
+    - 'Nineta can tell which furnace a shard came from by its green.'
+    - '“They burn it, they break it, they buy it back,” Nineta says. “I am the only one who gets paid twice.”'
+  sched:
+    - at: [place_marre_ash_isle, tips]
+      h: [6, 20]
+    - at: [place_marre_ash_isle, sieves]
+- id: person_marre_vettor
+  origin: allora2
+  kind: person
+  roots:
+    - place_marre_guard_boats
+  name: 'Vettor Stagn'
+  title: 'Captain of the Guard Boats'
+  region: marre
+  home: place_marre_guard_boats
+  hint: 'a patient man counting lit windows on the far shore'
+  meet: 'He finishes counting first. “Vettor Stagn. Every master is at his furnace tonight. That is all I am asked.”'
+  talk:
+    - 'Vettor has rowed round the Isles for eleven years and knows every glassmaker by his silhouette.'
+    - '“They are the richest prisoners in the world,” Vettor says. “I am the poorest gaoler.”'
+  sched:
+    - at: [place_marre_guard_boats, pontoon]
+      h: [6, 20]
+    - at: [place_marre_guard_boats, watch]
