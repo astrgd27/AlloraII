@@ -73,6 +73,14 @@ export const MIGRATIONS: Record<number, (save: AnySave) => AnySave> = {
     markets: {},
     poorMeals: 0,
   }),
+  // Version 11 adds the orders to work alone and to turn back hurt, and the report.
+  10: (save) => ({
+    ...save,
+    version: 11,
+    orders: { ...DEFAULT_ORDERS, ...(save.orders as object) },
+    report: null,
+    turnedBack: false,
+  }),
 };
 
 export function versionOf(save: unknown): number {

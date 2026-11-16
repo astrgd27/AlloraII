@@ -312,3 +312,34 @@ button:disabled {
 .scene canvas {
   display: block;
 }
+
+.report,
+.orders {
+  max-width: 40rem;
+  width: 100%;
+}
+
+.report {
+  border: 1px solid color-mix(in srgb, var(--ink) 25%, transparent);
+  border-radius: 6px;
+  padding: 0.8rem;
+  box-sizing: border-box;
+}
+
+.report p,
+.orders p {
+  margin: 0.25rem 0;
+}
+
+.orders summary {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.orders p {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}

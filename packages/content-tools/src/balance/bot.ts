@@ -59,6 +59,16 @@ export const villager: Persona = {
   },
 };
 
+/** Sets standing orders and leaves the life to itself. */
+export const idler: Persona = {
+  name: 'Idler',
+  about: 'Orders the life to keep at paid work, and never touches it again.',
+  act(engine) {
+    if (engine.state.orders.work !== 'always')
+      engine.handle({ type: 'setOrders', orders: { work: 'always' } }, 0);
+  },
+};
+
 /** A persona that holds a post: duties, cases, and each trial as soon as it is offered. */
 function careerist(
   name: string,

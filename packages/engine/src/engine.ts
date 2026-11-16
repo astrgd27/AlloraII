@@ -22,6 +22,7 @@ import type { Order } from './protocol';
 import { buy, buyPrice, isMarketDay, isOpen, marketHere, sell, sellPrice } from './market';
 import { meet, peopleAt, talk, type Words } from './people';
 import { needsSystem, type Needs, type StandingOrders } from './needs';
+import { mark, routine, writeReport, type Report } from './routine';
 import { capOf, xpToNext, type SkillState } from './skills';
 import { type GameState } from './state';
 import { travelSystem, turnBack, setOut } from './travel';
@@ -87,6 +88,8 @@ export interface Snapshot {
   /** How many pieces of work are finished, and the last one. */
   works: number;
   lastWork: { case: string; quality: number; trial: boolean } | null;
+  /** What happened while the player was away, until it is read. */
+  report: Report | null;
   /** The purse, in pf, and what the life carries. */
   money: number;
   goods: Record<string, number>;
@@ -134,6 +137,8 @@ export class Engine {
   private readonly systems: System[];
   private caughtUpHours = 0;
   private skippedHours = 0;
+  /** True while catching up on time away. */
+  private away = false;
 
   constructor(
     public state: GameState,
@@ -149,6 +154,7 @@ export class Engine {
     const before = dateAt(this.state.hours);
     this.state.hours += 1;
     const date = dateAt(this.state.hours);
+    routine(this.state, this.world, before, this.away);
     for (const system of this.systems) system.tick(this.state, date, this.bus, this.world);
     const done = workHour(this.state, this.world).finished;
     if (done) {
@@ -198,7 +204,11 @@ export class Engine {
     const cap = Math.ceil(away / REAL_DAY_MS) * CATCH_UP_DAYS_PER_REAL_DAY * HOURS_PER_DAY;
     const hours = Math.min(due, cap);
     this.state.carryMs = due > cap ? 0 : total - due * this.msPerGameHour;
+    const before = mark(this.state);
+    this.away = true;
     this.run(hours);
+    this.away = false;
+    writeReport(this.state, this.world, before);
     this.caughtUpHours = hours;
     this.skippedHours = due - hours;
   }
@@ -248,6 +258,9 @@ export class Engine {
       case 'sell':
         sell(this.state, this.world, order.item, dateAt(this.state.hours));
         break;
+      case 'readReport':
+        this.state.report = null;
+        break;
       case 'setOrders':
         this.state.orders = { ...this.state.orders, ...order.orders };
         break;
@@ -268,6 +281,7 @@ export class Engine {
     const date = dateAt(this.state.hours);
     const market = marketHere(this.state, this.world);
     return {
+      report: this.state.report,
       money: this.state.money,
       goods: { ...this.state.goods },
       market: market

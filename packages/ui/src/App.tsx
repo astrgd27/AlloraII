@@ -1,5 +1,6 @@
 import { useEffect, useState, useSyncExternalStore } from 'react';
 import { Activities } from './Activities';
+import { Orders, Report } from './Away';
 import { Career } from './Career';
 import { engine } from './engine-client';
 import { formatDate, formatHour } from './format';
@@ -47,6 +48,7 @@ export function App() {
           )}
         </section>
       )}
+      {snapshot && <Report snapshot={snapshot} send={(order) => engine.send(order)} />}
       {snapshot && <SceneView snapshot={snapshot} />}
       <MapView snapshot={snapshot} chosen={chosen} onChoose={setChosen} />
       {snapshot && (
@@ -57,6 +59,7 @@ export function App() {
           <Career snapshot={snapshot} send={(order) => engine.send(order)} />
           <Activities snapshot={snapshot} send={(order) => engine.send(order)} />
           <Skills snapshot={snapshot} />
+          <Orders snapshot={snapshot} send={(order) => engine.send(order)} />
           <PlaceList snapshot={snapshot} chosen={chosen} onChoose={setChosen} />
         </>
       )}
