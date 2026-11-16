@@ -94,7 +94,12 @@ export const itemSchema = entrySchema(['item', 'item_variant'], {
   tier: z.number().int().optional(),
 });
 
-const rankSchema = z.looseObject({ name: text, trial: text.optional() });
+const rankSchema = z.looseObject({
+  name: text,
+  trial: text.optional(),
+  /** Pay for an hour's work at this rank, in pf. */
+  pay: z.number().nonnegative().optional(),
+});
 
 const approachSchema = z.looseObject({
   id: text,
@@ -154,6 +159,8 @@ export const activitySchema = entrySchema('activity', {
   /** Season indexes (0 spring to 3 winter) it belongs to. All, if left out. */
   seasons: z.array(z.number().int().min(0).max(3)).optional(),
   skill: text.optional(),
+  /** What it pays when done, in pf. */
+  pay: z.number().nonnegative().optional(),
   /** If set, finishing it is a check against this difficulty. */
   dc: z.number().int().min(5).max(35).optional(),
   effects: z
@@ -163,6 +170,19 @@ export const activitySchema = entrySchema('activity', {
       spirits: z.number().optional(),
     })
     .optional(),
+});
+
+/** A market: hours, a market day, and what the place makes. What it sells comes from canon. */
+export const marketSchema = entrySchema('market', {
+  name: text,
+  place: text,
+  sub: text.optional(),
+  from: hourOfDay,
+  to: z.number().int().min(1).max(24),
+  /** The weekday (1 to 7) of its market day. */
+  day: z.number().int().min(1).max(7),
+  /** Item ids the place makes itself: plentiful there. */
+  makes: z.array(text).optional(),
 });
 
 /** Any other kind (workings, skills, recipes, lore, Weathers, …): the base fields only, for now. */

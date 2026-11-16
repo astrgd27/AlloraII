@@ -5,6 +5,7 @@
  */
 import type { GameDate } from './calendar';
 import { chanceOfSuccess, edgeOf, lessonFactor, rollCheck, type Degree } from './challenge';
+import { earn, round2 } from './money';
 import { GATES, XP_PER_HOUR, capOf, edgeFactor, gain, newSkill, passGate } from './skills';
 import type { GameState } from './state';
 import type { Approach, Case, Post, World } from './world';
@@ -135,6 +136,9 @@ export function beginStep(
   void date;
 }
 
+/** How much each point of quality adds to what a case pays. */
+export const CASE_PAY_PER_QUALITY = 0.15;
+
 export function withdraw(state: GameState): void {
   if (!state.venture) throw new Error('No case in hand');
   state.venture = null;
@@ -192,6 +196,10 @@ export function workHour(state: GameState, world: World): { finished?: Work; deg
     }
   } else {
     held.standing += Math.max(0, work.quality);
+    // A case pays its hours at the rank's wage, more for good work and less for poor.
+    const hours = post.work.reduce((n, s) => n + s.hours, 0);
+    const worth = Math.max(0.5, Math.min(2, 1 + CASE_PAY_PER_QUALITY * work.quality));
+    earn(state, round2(hours * (post.pay?.[held.rank] ?? 0) * worth));
   }
   return { finished: work, degree: result.degree };
 }

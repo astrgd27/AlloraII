@@ -19,6 +19,7 @@ import { chanceOfSuccess } from './challenge';
 import { HOURS_PER_DAY, dateAt, type GameDate } from './calendar';
 import { EventBus } from './events';
 import type { Order } from './protocol';
+import { buy, buyPrice, isMarketDay, isOpen, marketHere, sell, sellPrice } from './market';
 import { meet, peopleAt, talk, type Words } from './people';
 import { needsSystem, type Needs, type StandingOrders } from './needs';
 import { capOf, xpToNext, type SkillState } from './skills';
@@ -39,7 +40,7 @@ const REAL_DAY_MS = 24 * 60 * 60 * 1000;
 /** A system runs once per tick. Systems are added in the order they must run. */
 export interface System {
   name: string;
-  tick(state: GameState, date: GameDate, bus: EventBus): void;
+  tick(state: GameState, date: GameDate, bus: EventBus, world: World): void;
 }
 
 export interface EngineOptions {
@@ -86,6 +87,16 @@ export interface Snapshot {
   /** How many pieces of work are finished, and the last one. */
   works: number;
   lastWork: { case: string; quality: number; trial: boolean } | null;
+  /** The purse, in pf, and what the life carries. */
+  money: number;
+  goods: Record<string, number>;
+  /** The market here: whether it is open, and what one of each thing costs and fetches now. */
+  market: {
+    id: string;
+    open: boolean;
+    marketDay: boolean;
+    stock: { item: string; buy: number | null; sell: number | null; held: number }[];
+  } | null;
   /** The skills the life has used: level, progress to the next (0 to 1), and whether a gate holds it. */
   skills: Record<string, { level: number; progress: number; atGate: boolean }>;
   /** The people at the life's place now. `known` is false until they have met. */
@@ -138,7 +149,7 @@ export class Engine {
     const before = dateAt(this.state.hours);
     this.state.hours += 1;
     const date = dateAt(this.state.hours);
-    for (const system of this.systems) system.tick(this.state, date, this.bus);
+    for (const system of this.systems) system.tick(this.state, date, this.bus, this.world);
     const done = workHour(this.state, this.world).finished;
     if (done) {
       this.bus.emit('CaseFinished', {
@@ -231,6 +242,12 @@ export class Engine {
         if (this.state.doing || this.state.venture?.working) throw new Error('Busy');
         setOut(this.state, this.world, order.to);
         break;
+      case 'buy':
+        buy(this.state, this.world, order.item, dateAt(this.state.hours));
+        break;
+      case 'sell':
+        sell(this.state, this.world, order.item, dateAt(this.state.hours));
+        break;
       case 'setOrders':
         this.state.orders = { ...this.state.orders, ...order.orders };
         break;
@@ -248,7 +265,28 @@ export class Engine {
     const j = this.state.journey;
     const can = availableNow(this.world, this.state, dateAt(this.state.hours));
     const leg = j?.legs[0];
+    const date = dateAt(this.state.hours);
+    const market = marketHere(this.state, this.world);
     return {
+      money: this.state.money,
+      goods: { ...this.state.goods },
+      market: market
+        ? {
+            id: market.id,
+            open: isOpen(market, date),
+            marketDay: isMarketDay(market, date),
+            stock: [...new Set([...market.sells, ...Object.keys(this.state.goods)])].map(
+              (item) => ({
+                item,
+                buy: buyPrice(this.state, this.world, market, item, date) ?? null,
+                sell: this.state.goods[item]
+                  ? (sellPrice(this.state, this.world, market, item, date) ?? null)
+                  : null,
+                held: this.state.goods[item] ?? 0,
+              }),
+            ),
+          }
+        : null,
       needs: { ...this.state.needs },
       doing: this.state.doing
         ? { id: this.state.doing.id, hoursLeft: this.state.doing.hoursLeft }

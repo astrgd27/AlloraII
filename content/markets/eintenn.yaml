@@ -1,0 +1,152 @@
+# Markets of Eintenn. What each sells is its place's canon shop list (Allora I); these add hours,
+# a market day (weekday 1 to 7) and what the place makes itself, which is plentiful there.
+- id: market_ostwick
+  origin: allora2
+  kind: market
+  roots:
+    - ostwick
+  name: 'Ostwick Green stalls'
+  place: ostwick
+  sub: green
+  from: 7
+  to: 18
+  day: 6
+  makes:
+    - grain
+    - wool
+    - flax
+    - veg
+    - v_onion
+    - v_turnip
+    - eggs
+- id: market_kess_harbor
+  origin: allora2
+  kind: market
+  roots:
+    - kess_harbor
+  name: 'Stalls on the Stone Mole'
+  place: kess_harbor
+  sub: mole
+  from: 5
+  to: 17
+  day: 2
+  makes:
+    - fish
+    - salt
+- id: market_kess_market
+  origin: allora2
+  kind: market
+  roots:
+    - kess_market
+  name: 'Salzmarkt stalls'
+  place: kess_market
+  sub: square
+  from: 7
+  to: 19
+  day: 3
+- id: market_kess_fondaco
+  origin: allora2
+  kind: market
+  roots:
+    - kess_fondaco
+  name: 'Fondaco counters'
+  place: kess_fondaco
+  sub: warehouses
+  from: 8
+  to: 18
+  day: 4
+  makes:
+    - silk
+    - incense
+- id: market_kess_undercroft
+  origin: allora2
+  kind: market
+  roots:
+    - kess_undercroft
+  name: 'Undercroft dealers'
+  place: kess_undercroft
+  sub: backroom
+  from: 18
+  to: 23
+  day: 5
+- id: market_collegium
+  origin: allora2
+  kind: market
+  roots:
+    - collegium
+  name: 'Collegium stationers'
+  place: collegium
+  sub: halls
+  from: 9
+  to: 17
+  day: 1
+- id: market_tennfels
+  origin: allora2
+  kind: market
+  roots:
+    - tennfels
+  name: 'Tennfels sutlers'
+  place: tennfels
+  sub: yard
+  from: 8
+  to: 17
+  day: 7
+- id: market_aschau
+  origin: allora2
+  kind: market
+  roots:
+    - aschau
+  name: "Aschau vintners' tables"
+  place: aschau
+  sub: vineyards
+  from: 7
+  to: 17
+  day: 5
+  makes:
+    - grapes
+- id: market_silberhalde
+  origin: allora2
+  kind: market
+  roots:
+    - silberhalde
+  name: 'Silberhalde ore-floor'
+  place: silberhalde
+  sub: smelter
+  from: 6
+  to: 18
+  day: 1
+  makes:
+    - coal
+    - iron_ore
+    - clay
+    - copper_ore
+    - tin_ore
+- id: market_wp_ferry
+  origin: allora2
+  kind: market
+  roots:
+    - wp_ferry
+  name: "Ferryman's counter"
+  place: wp_ferry
+  sub: taproom
+  from: 6
+  to: 22
+  day: 4
+- id: market_pomerell
+  origin: allora2
+  kind: market
+  roots:
+    - pomerell
+  name: 'Pomerell abbey stalls'
+  place: pomerell
+  sub: press
+  from: 8
+  to: 16
+  day: 2
+  makes:
+    - o_apple
+    - o_pear
+    - o_plum
+    - h_sage
+    - h_chamomile
+    - fruit

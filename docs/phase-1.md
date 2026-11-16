@@ -24,7 +24,7 @@
 8. **Named roads.** *(done)* Replace the stub roads in Eintenn with named roads, tracks and a river, and events on the way.
 9. **Profession skeleton and the Smith.** *(done)* Guild-smith of the Anvil: duties, commissions, ladder.
 10. **The Butler.** *(done)* Steward of Burg Tennfels.
-11. **Money and markets.** One currency, shops with hours, prices that move.
+11. **Money and markets.** One currency, shops with hours, prices that move. *(done)*
 12. **Scenes.** A place view that changes with the hour, season and who is there.
 13. **Standing orders and the report.** What a life does while you are away, and what you read when you return.
 14. **Marre slice.** The Piazza of the Doges and the Lazaretto, about 20 new small places, and the Inquirer of the Cerdans.
@@ -50,7 +50,7 @@ Each is an addition, to be rooted on canon when it is built.
   - **Phase 1 aims lower than the final target:** about 150 places across Eintenn and Marre, of their final 160.
   - **Counting.** A place counts towards its `region`. A canon island counts as one place; a new place on an island names it in `island`.
 - **2026-11-14 · Needs (#23).** `packages/engine/src/needs.ts`: vigour, health and spirits (0 to 100), a home, and standing orders for sleep. Decisions:
-  - **Sleep and meals run themselves.** By default a life sleeps from the 22nd hour to the 6th and eats at the 7th, 13th and 19th. Meals are free until money exists (#32); then they will cost or come from the larder.
+  - **Sleep and meals run themselves.** By default a life sleeps from the 22nd hour to the 6th and eats at the 7th, 13th and 19th. Meals were free until money (#32); see that entry.
   - **New mechanic, camping.** On a road at night a life makes camp and gets no further until morning, so a long road now takes its hours plus its nights. This fills a gap: travel had no rhythm of day and night. At sea the life sleeps aboard and the ship sails on. The standing order `campAtNight` can be turned off; walking through the night is faster and costs vigour.
   - **A bed matters.** Sleep at home restores vigour faster than sleep elsewhere and lifts the spirits. This is the first reason to have a home and to come back to it.
   - **Running out.** With no vigour left a life sleeps where it stands and loses health. Nothing kills: the bible's leaning is injuries that heal, not death.
@@ -119,3 +119,14 @@ Each is an addition, to be rooted on canon when it is built.
   - **Not yet:** the Lord's Trust and Household Harmony as separate measures (standing stands in for both), endings that shape later cases, techniques, and the household's moods.
   - **Balance.** A butler persona climbs every rank; the report has its section. The report's "hours worked" now counts case hours as well as duties.
   - **Build.** `pnpm world` reads every folder under `content/professions`.
+- **2026-11-16 · Money and markets (#32).** A life can earn, buy and sell in Eintenn, and the report shows the money it holds over ten game years. Decisions:
+  - **The pf,** counted to the hundredth. A new life starts with 20 pf.
+  - **Work pays.** A duty pays by the hour at the rank held (`pay` on each rank of a post); a case pays its hours at that wage, times 0.5 to 2 by quality (15% a point); a trial pays nothing. Village work says what it pays (`pay` on an activity; about 0.3 pf an hour). First wages: smith 0.4, 0.8, 1.6, 3.5 pf an hour; butler 0.35, 0.7, 1.4, 3. Allora I's ladder (farm: 0.2 to 3.5) set the spread.
+  - **Meals cost.** A plain meal is 0.5 pf where people live (and on a city street). On the road or in the wild it comes from the pack: any food carried. With neither money nor food it is scraps: less vigour, no lift to the spirits. Nobody starves out of play.
+  - **Markets** (`content/markets/`, kind `market`, 11 in Eintenn). What each sells is its place's canon shop list, less recipes and guild-gated goods; the entry adds opening hours, a market day and what the place makes.
+  - **Price = value × demand,** demand 0.6 to 1.6. A good rests at 0.7 where it is made, 1.0 where it is merely sold, 1.4 where it is not sold at all. Each unit bought or sold moves the price (cheap goods are deep, dear ones shallow); a glut or shortage loses 15% a day. A seller gets 85% of the price, so the same stalls never pay both ways. On market day goods are 5% cheaper and a seller gets 92%.
+  - **A pack holds 20 things.** No weight or bulk yet.
+  - **New mechanic, and the gap it fills:** scraps (a poor meal). Without it a life with no money would either eat for nothing or waste away; the bible says needs shape a life and never lock it out.
+  - **Not yet:** lodging and rent (home is free), tools and their upkeep, dues, fares and tolls, season and event prices, production by trade, prices known only where you are, markets in Marre (#35), recipes, and using goods other than food.
+  - **Balance.** New pedlar persona; careers now run ten years. The report has "Earnings per hour" and "Money supply" and flags a purse that grows more than 3% a year. **It flags every earning persona,** as expected: food is the only sink so far. A grandmaster smith takes in about 45 pf a day against 1.5 spent. The pedlar nets about 2 pf a day, so no route runs away.
+  - **Save version 10,** with a migration and a test. Systems now receive the world.

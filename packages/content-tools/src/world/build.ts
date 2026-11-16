@@ -84,6 +84,30 @@ async function main(): Promise<void> {
     professions.push(...(await readDir(`content/professions/${dir}`)));
   }
 
+  // Markets: what each sells is its place's canon shop list, less recipes and guild-gated goods.
+  const allItems = new Map(
+    (await readYaml('content/canon/allora1/items.yaml')).map((i) => [i.id as string, i]),
+  );
+  const markets = (await readDir('content/markets'))
+    .filter((m) => placeIds.has(m.place))
+    .map((m) => {
+      const shop = (places.find((p) => p.id === m.place)?.shop as string[] | undefined) ?? [];
+      const makes = (m.makes as string[] | undefined) ?? [];
+      const sells = [...new Set([...shop, ...makes])].filter((id) => allItems.has(id));
+      return {
+        id: m.id,
+        name: m.name,
+        place: m.place,
+        sub: m.sub,
+        from: m.from,
+        to: m.to,
+        day: m.day,
+        sells,
+        makes,
+      };
+    });
+  const traded = [...new Set(markets.flatMap((m) => m.sells))].sort();
+
   const world = {
     regions: regions.map((r) => ({ id: r.id, name: r.name })),
     places: places.map((p) => ({
@@ -110,6 +134,7 @@ async function main(): Promise<void> {
         id: e.id,
         name: e.name,
         skill: e.skill,
+        pay: (e.ranks as Raw[]).map((r) => r.pay ?? 0),
         place: e.place,
         sub: e.sub,
         ranks: (e.ranks as Raw[]).map((r) => r.name),
@@ -126,6 +151,16 @@ async function main(): Promise<void> {
         rank: e.rank,
         trialFor: e.trial_for,
       })),
+    markets,
+    items: traded.map((id) => {
+      const item = allItems.get(id) as Raw;
+      return {
+        id,
+        name: item.name,
+        value: item.value,
+        ...(item.type === 'food' ? { food: true } : {}),
+      };
+    }),
     routes: (await readDir('content/world/routes')).map((r) => ({
       id: r.id,
       name: r.name,
@@ -162,6 +197,7 @@ async function main(): Promise<void> {
         hours: a.hours,
         seasons: a.seasons,
         skill: a.skill,
+        pay: a.pay,
         dc: a.dc,
         level: a.level,
         post: a.post,

@@ -15,7 +15,13 @@ import {
   dateAt,
   newGame,
   nextRandom,
+  buy,
+  buyPrice,
+  carried,
+  isOpen,
   offers,
+  PACK,
+  sell,
 } from '@allora/engine';
 
 export interface Persona {
@@ -115,6 +121,57 @@ export const butler = careerist(
   'activity_butler_',
 );
 
+/** Buys what a place makes, carries it to the nearest market that lacks it, and sells it there. */
+export const pedlar: Persona = {
+  name: 'Pedlar',
+  about: 'Buys what one market makes and sells it at the nearest market that lacks it.',
+  act(engine) {
+    const { state, world } = engine;
+    if (state.journey || state.asleep) return;
+    const date = dateAt(state.hours);
+    const here = world.markets.get(state.place);
+    const others = [...world.markets.values()].filter((m) => m.place !== state.place);
+    const nearest = (ms: typeof others) => {
+      const hours = world.hoursFrom(state.place);
+      return ms.sort((a, b) => (hours[a.place] ?? 1e9) - (hours[b.place] ?? 1e9))[0];
+    };
+    const go = (to: string | undefined) => {
+      if (to) engine.handle({ type: 'travel', to }, 0);
+    };
+    const held = Object.keys(state.goods).filter((id) => !world.items.get(id)?.food);
+    if (!here) return go(nearest(others)?.place);
+    if (!isOpen(here, date)) return;
+    // Sell whatever is scarce here.
+    for (const id of held) {
+      if (here.sells.includes(id)) continue;
+      while (state.goods[id]) sell(state, world, id, date);
+    }
+    const left = Object.keys(state.goods).filter((id) => !world.items.get(id)?.food);
+    if (left.length > 0)
+      return go(nearest(others.filter((m) => !m.sells.includes(left[0] ?? '')))?.place);
+    // Bread for the road, then a load of the dearest thing made here that sells elsewhere.
+    while ((state.goods.bread ?? 0) < 3 && here.sells.includes('bread') && state.money > 5)
+      buy(state, world, 'bread', date);
+    const load = here.makes
+      .filter((id) => others.some((m) => !m.sells.includes(id)))
+      .sort((a, b) => (world.items.get(b)?.value ?? 0) - (world.items.get(a)?.value ?? 0))[0];
+    if (!load) return go(nearest(others.filter((m) => m.makes.length > 0))?.place);
+    const target = nearest(others.filter((m) => !m.sells.includes(load)));
+    // Only while it is still cheap enough to sell on at a gain.
+    const cap = (world.items.get(load)?.value ?? 1) * 0.9;
+    while (carried(state) < PACK) {
+      const price = buyPrice(state, world, here, load, date);
+      if (price === undefined || price > cap || price > state.money - 2) break;
+      buy(state, world, load, date);
+    }
+    if (state.goods[load]) return go(target?.place);
+    // Nothing worth carrying from here today: try another place that makes things.
+    const makers = others.filter((m) => m.makes.length > 0);
+    const roll = nextRandom(state.rng, state.seed, 'bot');
+    go(makers[Math.floor(roll * makers.length)]?.place);
+  },
+};
+
 export interface LifeResult {
   seed: number;
   hours: number;
@@ -139,6 +196,11 @@ export interface LifeResult {
   checks: Record<string, number>;
   /** Hours spent on activities. */
   hoursWorked: number;
+  /** Money: earned, spent, meals of scraps, and the purse at the end of each game year. */
+  earned: number;
+  spent: number;
+  poorMeals: number;
+  purse: number[];
   /** Each need: its mean over the life, and the lowest it fell. */
   needs: Record<'vigour' | 'health' | 'spirits', { mean: number; low: number }>;
 }
@@ -168,6 +230,10 @@ export function playLife(persona: Persona, seed: number, hours: number): LifeRes
     works: 0,
     roadEvents: 0,
     hoursWorked: 0,
+    earned: 0,
+    spent: 0,
+    poorMeals: 0,
+    purse: [],
     needs: {
       vigour: { mean: 0, low: 100 },
       health: { mean: 0, low: 100 },
@@ -184,6 +250,7 @@ export function playLife(persona: Persona, seed: number, hours: number): LifeRes
     const busy = engine.state.doing || engine.state.venture?.working;
     if (busy && !engine.state.asleep) result.hoursWorked += 1;
     engine.tick();
+    if ((h + 1) % HOURS_PER_YEAR === 0) result.purse.push(engine.state.money);
     const rank = engine.state.post?.rank ?? -1;
     if (rank > result.rank) {
       result.rank = rank;
@@ -200,6 +267,9 @@ export function playLife(persona: Persona, seed: number, hours: number): LifeRes
   result.roadEvents = engine.state.roadEvents;
   result.works = engine.state.works.length;
   result.post = engine.state.post?.id ?? '';
+  result.earned = engine.state.earned;
+  result.spent = engine.state.spent;
+  result.poorMeals = engine.state.poorMeals;
   result.meals = engine.state.meals;
   result.hoursSlept = engine.state.hoursSlept;
   const date = dateAt(engine.state.hours);

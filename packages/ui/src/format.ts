@@ -31,3 +31,6 @@ export function hoursText(hours: number): string {
   const d = `${days} ${days === 1 ? 'day' : 'days'}`;
   return rest === 0 ? d : `${d}, ${h}`;
 }
+
+/** "12.5 pf". */
+export const pf = (amount: number): string => `${Math.round(amount * 100) / 100} pf`;

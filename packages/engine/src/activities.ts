@@ -2,6 +2,7 @@
 import type { GameDate } from './calendar';
 import { edgeOf, lessonFactor, rollCheck, type CheckResult } from './challenge';
 import type { System } from './engine';
+import { earn, round2 } from './money';
 import { XP_PER_HOUR, edgeFactor, gain, newSkill, workXp } from './skills';
 import type { GameState } from './state';
 import type { Activity, World } from './world';
@@ -17,6 +18,8 @@ export interface Doing {
   level?: number;
   dc?: number;
   standing?: number;
+  /** What it pays when done. */
+  pay?: number;
 }
 
 /** The last check a life made, for the page to show. */
@@ -51,6 +54,11 @@ export function begin(state: GameState, world: World, id: string, date: GameDate
   if (!activity) throw new Error(`No such activity: ${id}`);
   const reason = whyNot(activity, state, date);
   if (reason) throw new Error(reason);
+  // A duty is paid by the hour at the rank held; other work pays what it says.
+  const wage = activity.post
+    ? (world.posts.get(activity.post)?.pay?.[state.post?.rank ?? 0] ?? 0)
+    : 0;
+  const pay = activity.pay ?? round2(wage * activity.hours);
   state.doing = {
     id,
     hoursLeft: activity.hours,
@@ -60,6 +68,7 @@ export function begin(state: GameState, world: World, id: string, date: GameDate
     ...(activity.level ? { level: activity.level } : {}),
     ...(activity.dc ? { dc: activity.dc } : {}),
     ...(activity.standing ? { standing: activity.standing } : {}),
+    ...(pay > 0 ? { pay } : {}),
   };
 }
 
@@ -94,6 +103,7 @@ export const activitySystem: System = {
     } else if (skill) {
       gain(skill, workXp(doing.hours ?? 1, doing.level ?? 1, skill.level));
     }
+    if (doing.pay) earn(state, doing.pay);
     if (doing.standing && state.post) state.post.standing += doing.standing;
     state.done[doing.id] = (state.done[doing.id] ?? 0) + 1;
     state.doing = null;

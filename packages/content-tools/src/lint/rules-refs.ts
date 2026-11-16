@@ -21,6 +21,7 @@ export const REFERENCE_FIELDS = [
   'skill',
   'route',
   'post',
+  'makes',
 ];
 
 export function lintReferences(additions: Loaded[], index: CanonIndex): Problem[] {

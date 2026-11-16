@@ -5,7 +5,7 @@
  *   --years <n>    game years per life (default 1)
  */
 import { writeFile } from 'node:fs/promises';
-import { DAY_BUDGET_MS, butler, runBalance, smith, villager, wanderer } from './bot';
+import { DAY_BUDGET_MS, butler, pedlar, runBalance, smith, villager, wanderer } from './bot';
 import { REPORT_MARKER, renderReport } from './report';
 
 const arg = (name: string): string | undefined => {
@@ -19,13 +19,14 @@ async function main(): Promise<void> {
   const run = runBalance({ lives, gameYears, persona: wanderer });
   const village = runBalance({ lives, gameYears, persona: villager });
   // A career takes years: fewer lives, played longer.
-  const forge = runBalance({ lives: 5, gameYears: 6, persona: smith });
-  const house = runBalance({ lives: 5, gameYears: 6, persona: butler });
+  const forge = runBalance({ lives: 5, gameYears: 10, persona: smith });
+  const house = runBalance({ lives: 5, gameYears: 10, persona: butler });
+  const pack = runBalance({ lives: 5, gameYears: 10, persona: pedlar });
   const section = (r: typeof run, title: string) =>
     renderReport(r, { timings: false })
       .replace(REPORT_MARKER, '')
       .replace('## Balance report', title);
-  const report = `${renderReport(run)}\n---\n\n${section(village, '## Balance report: the villager')}\n---\n\n${section(forge, '## Balance report: the smith')}\n---\n\n${section(house, '## Balance report: the butler')}`;
+  const report = `${renderReport(run)}\n---\n\n${section(village, '## Balance report: the villager')}\n---\n\n${section(forge, '## Balance report: the smith')}\n---\n\n${section(house, '## Balance report: the butler')}\n---\n\n${section(pack, '## Balance report: the pedlar')}`;
   console.log(report);
   const out = arg('--out');
   if (out) await writeFile(out, report);

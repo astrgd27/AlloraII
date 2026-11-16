@@ -1,6 +1,8 @@
 /** The whole game state. The engine owns it; the UI only ever sees snapshots. */
 import type { Doing, LastCheck } from './activities';
 import type { Held, Venture, Work } from './career';
+import type { Stall } from './market';
+import { START_MONEY } from './money';
 import type { Bond, Words } from './people';
 import { DEFAULT_ORDERS, FULL_NEEDS, type Needs, type StandingOrders } from './needs';
 import type { SkillState } from './skills';
@@ -18,7 +20,7 @@ export interface Journey {
 }
 
 /** The save format version. Raise it with every change to GameState, and add a migration. */
-export const SAVE_VERSION = 9;
+export const SAVE_VERSION = 10;
 
 export interface GameState {
   version: typeof SAVE_VERSION;
@@ -66,6 +68,16 @@ export interface GameState {
   post: Held | null;
   venture: Venture | null;
   works: Work[];
+  /** The purse, in pf, and running totals of what came in and went out. */
+  money: number;
+  earned: number;
+  spent: number;
+  /** Item id → how many the life carries. */
+  goods: Record<string, number>;
+  /** Place id → item id → how far its stall is from its usual stock. */
+  markets: Record<string, Record<string, Stall>>;
+  /** Meals made of scraps, for want of money or bread. */
+  poorMeals: number;
 }
 
 export function newGame(seed: number, nowMs: number): GameState {
@@ -99,5 +111,11 @@ export function newGame(seed: number, nowMs: number): GameState {
     post: null,
     venture: null,
     works: [],
+    money: START_MONEY,
+    earned: 0,
+    spent: 0,
+    goods: {},
+    markets: {},
+    poorMeals: 0,
   };
 }

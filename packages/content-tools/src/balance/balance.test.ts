@@ -93,7 +93,8 @@ describe('the report', () => {
     }
     expect(report).toContain('One game day simulates in **1.0000 ms**');
     expect(report).toContain('within budget');
-    expect(report.match(/No data yet/g)).toHaveLength(4);
+    expect(report.match(/No data yet/g)).toHaveLength(2);
+    expect(report).toContain('| Game year | Mean purse (pf) | Growth |');
     expect(report).toContain('does no work that trains a skill');
     expect(report).toContain('faces no checks');
   });
