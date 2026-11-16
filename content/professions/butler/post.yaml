@@ -15,11 +15,15 @@
   text: "Service in the Salt-Duke's household: sworn knights, a hundred hounds, a Dellian legate, and the Duke's moods."
   ranks:
     - name: Footman
+      pay: 0.35
     - name: Valet
+      pay: 0.7
       trial: Serve a formal dinner for twenty without fault.
     - name: Under-Butler
+      pay: 1.4
       trial: Run the house for a season while the seneschal is away.
     - name: Steward of the House
+      pay: 3
       trial: Carry the household through the Royal Progress.
   # The work of an incident in a great house.
   work:

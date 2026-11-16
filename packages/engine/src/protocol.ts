@@ -29,6 +29,9 @@ export type Order =
   | { type: 'step'; approach: string }
   /** Give up the case in hand. */
   | { type: 'withdraw' }
+  /** Buy or sell one of a thing at the market here. */
+  | { type: 'buy'; item: string }
+  | { type: 'sell'; item: string }
   /** Change standing orders. */
   | { type: 'setOrders'; orders: Partial<StandingOrders> }
   /** Write a save now. */

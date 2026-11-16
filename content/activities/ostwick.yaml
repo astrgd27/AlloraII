@@ -12,6 +12,7 @@
   from: 6
   to: 12
   hours: 3
+  pay: 0.9
   skill: skill_husbandry
   effects:
     vigour: -10
@@ -28,6 +29,7 @@
   from: 7
   to: 11
   hours: 2
+  pay: 0.6
   skill: skill_husbandry
   seasons: [0]
   effects:
@@ -45,6 +47,7 @@
   from: 6
   to: 18
   hours: 2
+  pay: 0.6
   skill: skill_husbandry
   effects:
     vigour: -6
@@ -61,6 +64,7 @@
   from: 15
   to: 19
   hours: 1
+  pay: 0.2
   skill: skill_herblore
   seasons: [2]
   effects:
@@ -78,6 +82,7 @@
   from: 6
   to: 8
   hours: 2
+  pay: 0.6
   skill: skill_beastcraft
   effects:
     vigour: -6
@@ -94,6 +99,7 @@
   from: 8
   to: 17
   hours: 3
+  pay: 0.9
   skill: skill_beastcraft
   effects:
     vigour: -4
@@ -110,6 +116,7 @@
   from: 10
   to: 15
   hours: 1
+  pay: 0.3
   skill: skill_husbandry
   dc: 10
   effects:
@@ -127,6 +134,7 @@
   from: 6
   to: 10
   hours: 1
+  pay: 0.2
   skill: skill_herblore
   effects:
     vigour: -3
@@ -143,6 +151,7 @@
   from: 6
   to: 9
   hours: 2
+  pay: 0.6
   skill: skill_cookery
   effects:
     vigour: -4
@@ -159,6 +168,7 @@
   from: 8
   to: 20
   hours: 2
+  pay: 0.6
   skill: skill_clothwork
   effects:
     vigour: -4
@@ -175,6 +185,7 @@
   from: 9
   to: 15
   hours: 3
+  pay: 0.9
   skill: skill_cookery
   effects:
     vigour: -6
@@ -191,6 +202,7 @@
   from: 6
   to: 10
   hours: 1
+  pay: 0.3
   skill: skill_husbandry
   effects:
     vigour: -3
@@ -207,6 +219,7 @@
   from: 17
   to: 20
   hours: 1
+  pay: 0.3
   skill: skill_husbandry
   effects:
     vigour: -3
@@ -223,6 +236,7 @@
   from: 18
   to: 22
   hours: 3
+  pay: 1.05
   skill: skill_insight
   effects:
     vigour: -8
@@ -290,6 +304,7 @@
   from: 17
   to: 21
   hours: 1
+  pay: 0.3
   skill: skill_music
   effects:
     vigour: -2

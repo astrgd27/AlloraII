@@ -4,6 +4,7 @@ import { Career } from './Career';
 import { engine } from './engine-client';
 import { formatDate, formatHour } from './format';
 import { MapView } from './map/MapView';
+import { Market } from './Market';
 import { People } from './People';
 import { PlaceList, PlacePanel } from './map/PlacePanel';
 import { Skills } from './Skills';
@@ -50,6 +51,7 @@ export function App() {
         <>
           <PlacePanel snapshot={snapshot} chosen={chosen} send={(order) => engine.send(order)} />
           <People snapshot={snapshot} send={(order) => engine.send(order)} />
+          <Market snapshot={snapshot} send={(order) => engine.send(order)} />
           <Career snapshot={snapshot} send={(order) => engine.send(order)} />
           <Activities snapshot={snapshot} send={(order) => engine.send(order)} />
           <Skills snapshot={snapshot} />

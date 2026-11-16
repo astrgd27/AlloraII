@@ -12,6 +12,8 @@ export * from './challenge';
 export * from './engine';
 export * from './events';
 export * from './host';
+export * from './market';
+export * from './money';
 export * from './needs';
 export * from './people';
 export * from './protocol';

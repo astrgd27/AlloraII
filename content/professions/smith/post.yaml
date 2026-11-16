@@ -15,11 +15,15 @@
   text: "A bench at the guild forges of Kesselhaven, under guild law and a master's eye."
   ranks:
     - name: Apprentice
+      pay: 0.4
     - name: Journeyman
+      pay: 0.8
       trial: A journeyman's piece, judged by a master.
     - name: Master
+      pay: 1.6
       trial: A masterpiece, judged by the guild.
     - name: Grandmaster
+      pay: 3.5
       trial: A legendary work.
   # The work of a commission: each step is a check, and each offers a safe way and a bold one.
   work:

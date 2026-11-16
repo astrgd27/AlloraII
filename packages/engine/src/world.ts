@@ -15,6 +15,31 @@ export interface Place {
   subs?: Record<string, string>;
 }
 
+/** A thing that can be carried, bought and sold. */
+export interface Item {
+  id: string;
+  name: string;
+  /** Its worth in pf, before demand. */
+  value: number;
+  food?: boolean;
+}
+
+/** A market: where it stands, when it is open, and what it trades in. */
+export interface Market {
+  id: string;
+  name: string;
+  place: string;
+  sub?: string;
+  /** Open between these hours of the day. */
+  from: number;
+  to: number;
+  /** The weekday (1 to 7) of its market day. */
+  day: number;
+  sells: string[];
+  /** Of what it sells, what the place makes itself. */
+  makes: string[];
+}
+
 export interface Road {
   id: string;
   from: string;
@@ -57,6 +82,8 @@ export interface Activity {
   /** Season indexes it belongs to; all, if left out. */
   seasons?: number[];
   skill?: string;
+  /** What it pays when done, in pf. */
+  pay?: number;
   effects: { vigour?: number; health?: number; spirits?: number };
   /** How hard it is, as a skill level. 1 if left out. */
   level?: number;
@@ -92,6 +119,8 @@ export interface Post {
   place: string;
   sub?: string;
   ranks: string[];
+  /** Pay for an hour's work at each rank, in pf. */
+  pay?: number[];
   work: WorkStep[];
 }
 
@@ -144,6 +173,8 @@ export interface WorldData {
   posts?: Post[];
   cases?: Case[];
   roadEvents?: RoadEvent[];
+  items?: Item[];
+  markets?: Market[];
 }
 
 export const WORLD = data as unknown as WorldData;
@@ -172,6 +203,9 @@ export class World {
   readonly people = new Map<string, Person>();
   readonly posts = new Map<string, Post>();
   readonly cases = new Map<string, Case>();
+  readonly items = new Map<string, Item>();
+  /** Place id → its market. */
+  readonly markets = new Map<string, Market>();
   private readonly links = new Map<string, Leg[]>();
   /** The roads do not change, so travel hours from a place are worked out once. */
   private readonly hoursCache = new Map<string, Record<string, number>>();
@@ -185,6 +219,8 @@ export class World {
     for (const person of data.people ?? []) this.people.set(person.id, person);
     for (const post of data.posts ?? []) this.posts.set(post.id, post);
     for (const c of data.cases ?? []) this.cases.set(c.id, c);
+    for (const item of data.items ?? []) this.items.set(item.id, item);
+    for (const market of data.markets ?? []) this.markets.set(market.place, market);
     for (const road of data.roads) {
       const water = road.way === 'sea' || road.way === 'river';
       const extra = { way: road.way, ...(water ? ({ sea: true } as const) : {}) };

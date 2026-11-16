@@ -1364,6 +1364,12 @@
    "id": "post_tennfels_steward",
    "name": "Steward of Burg Tennfels",
    "skill": "skill_stewardship",
+   "pay": [
+    0.35,
+    0.7,
+    1.4,
+    3
+   ],
    "place": "tennfels",
    "sub": "hall",
    "ranks": [
@@ -1451,6 +1457,12 @@
    "id": "post_kesselhaven_guild_smith",
    "name": "Guild-smith of the Anvil",
    "skill": "skill_smithing",
+   "pay": [
+    0.4,
+    0.8,
+    1.6,
+    3.5
+   ],
    "place": "kess_market",
    "sub": "guilds",
    "ranks": [
@@ -1691,6 +1703,1182 @@
    "post": "post_kesselhaven_guild_smith",
    "dc": 25,
    "trialFor": 3
+  }
+ ],
+ "markets": [
+  {
+   "id": "market_ostwick",
+   "name": "Ostwick Green stalls",
+   "place": "ostwick",
+   "sub": "green",
+   "from": 7,
+   "to": 18,
+   "day": 6,
+   "sells": [
+    "grain",
+    "wool",
+    "flax",
+    "axe",
+    "tabor",
+    "fiddle",
+    "primer",
+    "bread",
+    "ale",
+    "straw_bed",
+    "table",
+    "herb_rack",
+    "loom1",
+    "bench1",
+    "smock",
+    "straw_hat",
+    "tunic",
+    "sugar_cube",
+    "catnip",
+    "chew_bone",
+    "feather_lure",
+    "leather_ball",
+    "grooming_kit",
+    "halter",
+    "fodder_mash",
+    "hound_biscuit",
+    "veg",
+    "v_onion",
+    "v_turnip",
+    "cn_nails",
+    "cn_fence",
+    "sd_gr_wheat",
+    "sd_v_onion",
+    "sd_v_turnip",
+    "sd_v_pea",
+    "sd_h_parsley",
+    "eggs",
+    "lv_butter",
+    "fu_churn",
+    "fu_stool",
+    "lv_soap"
+   ],
+   "makes": [
+    "grain",
+    "wool",
+    "flax",
+    "veg",
+    "v_onion",
+    "v_turnip",
+    "eggs"
+   ]
+  },
+  {
+   "id": "market_kess_harbor",
+   "name": "Stalls on the Stone Mole",
+   "place": "kess_harbor",
+   "sub": "mole",
+   "from": 5,
+   "to": 17,
+   "day": 2,
+   "sells": [
+    "fish",
+    "salt",
+    "rope",
+    "fishing_net",
+    "flax",
+    "slops",
+    "oilskin",
+    "sea_boots",
+    "rope_t2",
+    "ws_sailcloth",
+    "sugar_cube",
+    "catnip",
+    "chew_bone",
+    "feather_lure",
+    "leather_ball",
+    "grooming_kit",
+    "halter",
+    "fodder_mash",
+    "hound_biscuit"
+   ],
+   "makes": [
+    "fish",
+    "salt"
+   ]
+  },
+  {
+   "id": "market_kess_market",
+   "name": "Salzmarkt stalls",
+   "place": "kess_market",
+   "sub": "square",
+   "from": 7,
+   "to": 19,
+   "day": 3,
+   "sells": [
+    "wood",
+    "stone",
+    "hide",
+    "salt",
+    "flax",
+    "wool",
+    "iron_ingot",
+    "coal",
+    "axe",
+    "pickaxe",
+    "hunting_bow",
+    "fishing_net",
+    "shawm",
+    "primer",
+    "parchment",
+    "ink",
+    "spear",
+    "gambeson",
+    "buckler",
+    "lute",
+    "fiddle",
+    "potion",
+    "bench1",
+    "table",
+    "rope_bed",
+    "needle1",
+    "desk1",
+    "vats1",
+    "mason1",
+    "pell",
+    "tunic",
+    "hood",
+    "wool_cloak",
+    "boots",
+    "work_gloves",
+    "felt_hat",
+    "habit",
+    "rosary",
+    "parch_t2",
+    "ink_t2",
+    "iron_t2",
+    "copper_ore",
+    "tin_ore",
+    "copper_ingot",
+    "bronze_ingot",
+    "gold_ingot",
+    "ws_sailcloth",
+    "sugar_cube",
+    "catnip",
+    "chew_bone",
+    "feather_lure",
+    "leather_ball",
+    "grooming_kit",
+    "halter",
+    "fodder_mash",
+    "hound_biscuit",
+    "veg",
+    "fruit",
+    "o_apple",
+    "v_onion",
+    "h_thyme",
+    "cn_nails",
+    "cn_hinges",
+    "cn_beam",
+    "cn_bricks",
+    "cn_mortar",
+    "sd_v_onion",
+    "sd_v_carrot",
+    "sd_h_thyme",
+    "sd_b_chanterelle",
+    "eggs",
+    "lv_butter",
+    "lv_pork",
+    "lv_beef",
+    "fu_block"
+   ],
+   "makes": []
+  },
+  {
+   "id": "market_kess_fondaco",
+   "name": "Fondaco counters",
+   "place": "kess_fondaco",
+   "sub": "warehouses",
+   "from": 8,
+   "to": 18,
+   "day": 4,
+   "sells": [
+    "lute",
+    "harp",
+    "fiddle",
+    "mirror",
+    "spices",
+    "wine",
+    "glass",
+    "sand",
+    "rapier",
+    "crossbow",
+    "alembic",
+    "jewel1",
+    "easel1",
+    "silk",
+    "incense",
+    "doublet",
+    "glass_t2"
+   ],
+   "makes": [
+    "silk",
+    "incense"
+   ]
+  },
+  {
+   "id": "market_kess_undercroft",
+   "name": "Undercroft dealers",
+   "place": "kess_undercroft",
+   "sub": "backroom",
+   "from": 18,
+   "to": 23,
+   "day": 5,
+   "sells": [
+    "lockpicks",
+    "sugar_cube",
+    "catnip",
+    "chew_bone",
+    "feather_lure",
+    "leather_ball",
+    "grooming_kit",
+    "halter",
+    "fodder_mash",
+    "hound_biscuit"
+   ],
+   "makes": []
+  },
+  {
+   "id": "market_collegium",
+   "name": "Collegium stationers",
+   "place": "collegium",
+   "sub": "halls",
+   "from": 9,
+   "to": 17,
+   "day": 1,
+   "sells": [
+    "astrolabe",
+    "primer",
+    "parchment",
+    "ink",
+    "candle",
+    "potion",
+    "shelves",
+    "dig_kit",
+    "scholar_gown",
+    "scholar_cap",
+    "candle_t2",
+    "parch_t2",
+    "ink_t2",
+    "candle_branch"
+   ],
+   "makes": []
+  },
+  {
+   "id": "market_tennfels",
+   "name": "Tennfels sutlers",
+   "place": "tennfels",
+   "sub": "yard",
+   "from": 8,
+   "to": 17,
+   "day": 7,
+   "sells": [
+    "sword",
+    "hunting_bow",
+    "spear",
+    "buckler",
+    "gambeson",
+    "mail",
+    "pell",
+    "shift_white",
+    "surcoat",
+    "riding_boots",
+    "kettle_hat",
+    "sugar_cube",
+    "catnip",
+    "chew_bone",
+    "feather_lure",
+    "leather_ball",
+    "grooming_kit",
+    "halter",
+    "falcon_hood",
+    "training_whistle",
+    "fodder_mash",
+    "hound_biscuit",
+    "stable_stout",
+    "cn_stone",
+    "cn_mortar"
+   ],
+   "makes": []
+  },
+  {
+   "id": "market_aschau",
+   "name": "Aschau vintners' tables",
+   "place": "aschau",
+   "sub": "vineyards",
+   "from": 7,
+   "to": 17,
+   "day": 5,
+   "sells": [
+    "wine",
+    "grapes"
+   ],
+   "makes": [
+    "grapes"
+   ]
+  },
+  {
+   "id": "market_silberhalde",
+   "name": "Silberhalde ore-floor",
+   "place": "silberhalde",
+   "sub": "smelter",
+   "from": 6,
+   "to": 18,
+   "day": 1,
+   "sells": [
+    "pickaxe",
+    "coal",
+    "iron_ore",
+    "clay",
+    "forge1",
+    "smelter1",
+    "kiln1",
+    "mason1",
+    "copper_ore",
+    "tin_ore",
+    "copper_ingot",
+    "gold_ingot"
+   ],
+   "makes": [
+    "coal",
+    "iron_ore",
+    "clay",
+    "copper_ore",
+    "tin_ore"
+   ]
+  },
+  {
+   "id": "market_wp_ferry",
+   "name": "Ferryman's counter",
+   "place": "wp_ferry",
+   "sub": "taproom",
+   "from": 6,
+   "to": 22,
+   "day": 4,
+   "sells": [
+    "ale",
+    "bread",
+    "smoked_fish",
+    "rope",
+    "sugar_cube",
+    "catnip",
+    "chew_bone",
+    "feather_lure",
+    "leather_ball",
+    "grooming_kit",
+    "halter",
+    "fodder_mash",
+    "hound_biscuit"
+   ],
+   "makes": []
+  },
+  {
+   "id": "market_pomerell",
+   "name": "Pomerell abbey stalls",
+   "place": "pomerell",
+   "sub": "press",
+   "from": 8,
+   "to": 16,
+   "day": 2,
+   "sells": [
+    "o_apple",
+    "o_pear",
+    "o_plum",
+    "fr_cider",
+    "fr_apple_pie",
+    "h_sage",
+    "h_chamomile",
+    "veg",
+    "fruit",
+    "sd_o_apple",
+    "sd_o_pear",
+    "sd_o_plum",
+    "sd_h_sage",
+    "sd_h_chamomile",
+    "sd_v_leek"
+   ],
+   "makes": [
+    "o_apple",
+    "o_pear",
+    "o_plum",
+    "h_sage",
+    "h_chamomile",
+    "fruit"
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ale",
+   "name": "Ale",
+   "value": 3,
+   "food": true
+  },
+  {
+   "id": "alembic",
+   "name": "Alembic & Still",
+   "value": 81.25
+  },
+  {
+   "id": "astrolabe",
+   "name": "Astrolabe",
+   "value": 120
+  },
+  {
+   "id": "axe",
+   "name": "Felling Axe",
+   "value": 15
+  },
+  {
+   "id": "bench1",
+   "name": "Rough Workbench",
+   "value": 18.75
+  },
+  {
+   "id": "boots",
+   "name": "Stout Boots",
+   "value": 18
+  },
+  {
+   "id": "bread",
+   "name": "Bread",
+   "value": 1.5,
+   "food": true
+  },
+  {
+   "id": "bronze_ingot",
+   "name": "Bronze Bar",
+   "value": 20
+  },
+  {
+   "id": "buckler",
+   "name": "Buckler",
+   "value": 20
+  },
+  {
+   "id": "candle",
+   "name": "Rough Stub",
+   "value": 1.6
+  },
+  {
+   "id": "candle_branch",
+   "name": "Iron Candle-Branch",
+   "value": 30
+  },
+  {
+   "id": "candle_t2",
+   "name": "Smooth Pillar",
+   "value": 4
+  },
+  {
+   "id": "catnip",
+   "name": "Dried Catnip",
+   "value": 2
+  },
+  {
+   "id": "chew_bone",
+   "name": "Chew-Bone",
+   "value": 2
+  },
+  {
+   "id": "clay",
+   "name": "Clay",
+   "value": 0.5
+  },
+  {
+   "id": "cn_beam",
+   "name": "Squared Beams",
+   "value": 4
+  },
+  {
+   "id": "cn_bricks",
+   "name": "Fired Bricks",
+   "value": 2.5
+  },
+  {
+   "id": "cn_fence",
+   "name": "Fence Rails",
+   "value": 2
+  },
+  {
+   "id": "cn_hinges",
+   "name": "Iron Fittings",
+   "value": 13.3
+  },
+  {
+   "id": "cn_mortar",
+   "name": "Lime Mortar",
+   "value": 2
+  },
+  {
+   "id": "cn_nails",
+   "name": "Box of Nails",
+   "value": 3.3
+  },
+  {
+   "id": "cn_stone",
+   "name": "Dressed Stone",
+   "value": 3.3
+  },
+  {
+   "id": "coal",
+   "name": "Charcoal",
+   "value": 1.8
+  },
+  {
+   "id": "copper_ingot",
+   "name": "Copper Bar",
+   "value": 9
+  },
+  {
+   "id": "copper_ore",
+   "name": "Copper Ore",
+   "value": 2.5
+  },
+  {
+   "id": "crossbow",
+   "name": "Crossbow",
+   "value": 45
+  },
+  {
+   "id": "desk1",
+   "name": "Writing Desk",
+   "value": 43.75
+  },
+  {
+   "id": "dig_kit",
+   "name": "Excavator’s Kit",
+   "value": 30
+  },
+  {
+   "id": "doublet",
+   "name": "Fine Doublet",
+   "value": 55
+  },
+  {
+   "id": "easel1",
+   "name": "Painter’s Easel",
+   "value": 34.375
+  },
+  {
+   "id": "eggs",
+   "name": "Hen’s Eggs",
+   "value": 0.4
+  },
+  {
+   "id": "falcon_hood",
+   "name": "Falconer’s Hood",
+   "value": 25
+  },
+  {
+   "id": "feather_lure",
+   "name": "Feather Lure",
+   "value": 3
+  },
+  {
+   "id": "felt_hat",
+   "name": "Felt Hat",
+   "value": 12
+  },
+  {
+   "id": "fiddle",
+   "name": "Fiddle",
+   "value": 35
+  },
+  {
+   "id": "fish",
+   "name": "Fish",
+   "value": 1
+  },
+  {
+   "id": "fishing_net",
+   "name": "Fishing Net",
+   "value": 25
+  },
+  {
+   "id": "flax",
+   "name": "Flax",
+   "value": 1
+  },
+  {
+   "id": "fodder_mash",
+   "name": "Warm Fodder-Mash",
+   "value": 3
+  },
+  {
+   "id": "forge1",
+   "name": "Rough Forge",
+   "value": 100
+  },
+  {
+   "id": "fr_apple_pie",
+   "name": "Apple Pie",
+   "value": 6.3,
+   "food": true
+  },
+  {
+   "id": "fr_cider",
+   "name": "Cider",
+   "value": 3,
+   "food": true
+  },
+  {
+   "id": "fruit",
+   "name": "Orchard Fruit",
+   "value": 0.8
+  },
+  {
+   "id": "fu_block",
+   "name": "Butcher’s Block",
+   "value": 22.1
+  },
+  {
+   "id": "fu_churn",
+   "name": "Butter Churn",
+   "value": 49.3
+  },
+  {
+   "id": "fu_stool",
+   "name": "Milking Stool and Pails",
+   "value": 6.6
+  },
+  {
+   "id": "gambeson",
+   "name": "Padded Gambeson",
+   "value": 30
+  },
+  {
+   "id": "glass",
+   "name": "Green Glass",
+   "value": 5
+  },
+  {
+   "id": "glass_t2",
+   "name": "Clear Glass",
+   "value": 12
+  },
+  {
+   "id": "gold_ingot",
+   "name": "Gold Bar",
+   "value": 60
+  },
+  {
+   "id": "grain",
+   "name": "Grain",
+   "value": 0.6
+  },
+  {
+   "id": "grapes",
+   "name": "Grapes",
+   "value": 1
+  },
+  {
+   "id": "grooming_kit",
+   "name": "Grooming Kit",
+   "value": 30
+  },
+  {
+   "id": "h_chamomile",
+   "name": "Chamomile",
+   "value": 1.6
+  },
+  {
+   "id": "h_sage",
+   "name": "Sage",
+   "value": 1.4
+  },
+  {
+   "id": "h_thyme",
+   "name": "Thyme",
+   "value": 1.2
+  },
+  {
+   "id": "habit",
+   "name": "Hooded Robe",
+   "value": 18
+  },
+  {
+   "id": "halter",
+   "name": "Tamer’s Halter",
+   "value": 35
+  },
+  {
+   "id": "harp",
+   "name": "Harp",
+   "value": 70
+  },
+  {
+   "id": "herb_rack",
+   "name": "Herb-Drying Racks",
+   "value": 21.875
+  },
+  {
+   "id": "hide",
+   "name": "Raw Hide",
+   "value": 2
+  },
+  {
+   "id": "hood",
+   "name": "Hood",
+   "value": 6
+  },
+  {
+   "id": "hound_biscuit",
+   "name": "Hound-Biscuits",
+   "value": 3
+  },
+  {
+   "id": "hunting_bow",
+   "name": "Hunting Bow",
+   "value": 30
+  },
+  {
+   "id": "incense",
+   "name": "Frankincense",
+   "value": 10
+  },
+  {
+   "id": "ink",
+   "name": "Oak-Gall Ink",
+   "value": 3
+  },
+  {
+   "id": "ink_t2",
+   "name": "Lamp-Black Ink",
+   "value": 8
+  },
+  {
+   "id": "iron_ingot",
+   "name": "Bloomery Iron",
+   "value": 6
+  },
+  {
+   "id": "iron_ore",
+   "name": "Iron Ore",
+   "value": 2
+  },
+  {
+   "id": "iron_t2",
+   "name": "Wrought Iron",
+   "value": 16
+  },
+  {
+   "id": "jewel1",
+   "name": "Jeweller’s Bench",
+   "value": 100
+  },
+  {
+   "id": "kettle_hat",
+   "name": "Kettle Hat",
+   "value": 20
+  },
+  {
+   "id": "kiln1",
+   "name": "Pottery Kiln",
+   "value": 75
+  },
+  {
+   "id": "leather_ball",
+   "name": "Leather Ball",
+   "value": 4
+  },
+  {
+   "id": "lockpicks",
+   "name": "Lockpicks",
+   "value": 25
+  },
+  {
+   "id": "loom1",
+   "name": "Hand-Loom",
+   "value": 50
+  },
+  {
+   "id": "lute",
+   "name": "Lute",
+   "value": 40
+  },
+  {
+   "id": "lv_beef",
+   "name": "Beef",
+   "value": 3
+  },
+  {
+   "id": "lv_butter",
+   "name": "Fresh Butter",
+   "value": 3.4,
+   "food": true
+  },
+  {
+   "id": "lv_pork",
+   "name": "Pork",
+   "value": 2.5
+  },
+  {
+   "id": "lv_soap",
+   "name": "Lye Soap",
+   "value": 2.9
+  },
+  {
+   "id": "mail",
+   "name": "Mail Hauberk",
+   "value": 150
+  },
+  {
+   "id": "mason1",
+   "name": "Mason’s Banker",
+   "value": 28.125
+  },
+  {
+   "id": "mirror",
+   "name": "Marrean Mirror",
+   "value": 60
+  },
+  {
+   "id": "needle1",
+   "name": "Sewing Table",
+   "value": 31.25
+  },
+  {
+   "id": "o_apple",
+   "name": "Apples",
+   "value": 0.7
+  },
+  {
+   "id": "o_pear",
+   "name": "Pears",
+   "value": 0.8
+  },
+  {
+   "id": "o_plum",
+   "name": "Plums",
+   "value": 0.8
+  },
+  {
+   "id": "oilskin",
+   "name": "Oilskin Cloak",
+   "value": 24
+  },
+  {
+   "id": "parch_t2",
+   "name": "Rag Paper",
+   "value": 9
+  },
+  {
+   "id": "parchment",
+   "name": "Rough Parchment",
+   "value": 4
+  },
+  {
+   "id": "pell",
+   "name": "Pell & Practice Dummy",
+   "value": 25
+  },
+  {
+   "id": "pickaxe",
+   "name": "Pickaxe",
+   "value": 18
+  },
+  {
+   "id": "potion",
+   "name": "Healing Draught",
+   "value": 12
+  },
+  {
+   "id": "primer",
+   "name": "Primer of Letters",
+   "value": 30
+  },
+  {
+   "id": "rapier",
+   "name": "Rapier",
+   "value": 70
+  },
+  {
+   "id": "riding_boots",
+   "name": "Riding Boots",
+   "value": 45
+  },
+  {
+   "id": "rope",
+   "name": "Hemp Rope",
+   "value": 3
+  },
+  {
+   "id": "rope_bed",
+   "name": "Rope Bed",
+   "value": 50
+  },
+  {
+   "id": "rope_t2",
+   "name": "Tarred Line",
+   "value": 8
+  },
+  {
+   "id": "rosary",
+   "name": "Prayer Beads",
+   "value": 8
+  },
+  {
+   "id": "salt",
+   "name": "Salt",
+   "value": 1
+  },
+  {
+   "id": "sand",
+   "name": "Sand",
+   "value": 0.2
+  },
+  {
+   "id": "scholar_cap",
+   "name": "Scholar’s Cap",
+   "value": 14
+  },
+  {
+   "id": "scholar_gown",
+   "name": "Scholar’s Gown",
+   "value": 30
+  },
+  {
+   "id": "sd_b_chanterelle",
+   "name": "Chanterelles (spawn)",
+   "value": 5
+  },
+  {
+   "id": "sd_gr_wheat",
+   "name": "Wheat (seed)",
+   "value": 1
+  },
+  {
+   "id": "sd_h_chamomile",
+   "name": "Chamomile (seed)",
+   "value": 2.4
+  },
+  {
+   "id": "sd_h_parsley",
+   "name": "Parsley (seed)",
+   "value": 1.7
+  },
+  {
+   "id": "sd_h_sage",
+   "name": "Sage (seed)",
+   "value": 2.1
+  },
+  {
+   "id": "sd_h_thyme",
+   "name": "Thyme (seed)",
+   "value": 1.8
+  },
+  {
+   "id": "sd_o_apple",
+   "name": "Apples (sapling)",
+   "value": 4.2
+  },
+  {
+   "id": "sd_o_pear",
+   "name": "Pears (sapling)",
+   "value": 4.8
+  },
+  {
+   "id": "sd_o_plum",
+   "name": "Plums (sapling)",
+   "value": 4.8
+  },
+  {
+   "id": "sd_v_carrot",
+   "name": "Carrots (seed)",
+   "value": 0.9
+  },
+  {
+   "id": "sd_v_leek",
+   "name": "Leeks (seed)",
+   "value": 1
+  },
+  {
+   "id": "sd_v_onion",
+   "name": "Onions (seed)",
+   "value": 0.9
+  },
+  {
+   "id": "sd_v_pea",
+   "name": "Peas (seed)",
+   "value": 1
+  },
+  {
+   "id": "sd_v_turnip",
+   "name": "Turnips (seed)",
+   "value": 0.8
+  },
+  {
+   "id": "sea_boots",
+   "name": "Sea-Boots",
+   "value": 26
+  },
+  {
+   "id": "shawm",
+   "name": "Shawm",
+   "value": 20
+  },
+  {
+   "id": "shelves",
+   "name": "Bookshelves",
+   "value": 137.5
+  },
+  {
+   "id": "shift_white",
+   "name": "White Linen Shift",
+   "value": 12
+  },
+  {
+   "id": "silk",
+   "name": "Raw Silk",
+   "value": 14
+  },
+  {
+   "id": "slops",
+   "name": "Sailor’s Slops & Jersey",
+   "value": 16
+  },
+  {
+   "id": "smelter1",
+   "name": "Bloomery",
+   "value": 106.25
+  },
+  {
+   "id": "smock",
+   "name": "Work Smock",
+   "value": 6
+  },
+  {
+   "id": "smoked_fish",
+   "name": "Smoked Fish",
+   "value": 2.5,
+   "food": true
+  },
+  {
+   "id": "spear",
+   "name": "Spear",
+   "value": 20
+  },
+  {
+   "id": "spices",
+   "name": "Southern Spices",
+   "value": 15
+  },
+  {
+   "id": "stable_stout",
+   "name": "Stable Stout",
+   "value": 4,
+   "food": true
+  },
+  {
+   "id": "stone",
+   "name": "Stone",
+   "value": 1
+  },
+  {
+   "id": "straw_bed",
+   "name": "Straw Pallet",
+   "value": 9.375
+  },
+  {
+   "id": "straw_hat",
+   "name": "Straw Hat",
+   "value": 3
+  },
+  {
+   "id": "sugar_cube",
+   "name": "Honey-Sugar Cubes",
+   "value": 2
+  },
+  {
+   "id": "surcoat",
+   "name": "Armorial Surcoat",
+   "value": 60
+  },
+  {
+   "id": "sword",
+   "name": "Arming Sword",
+   "value": 60
+  },
+  {
+   "id": "table",
+   "name": "Trestle Table & Benches",
+   "value": 28.125
+  },
+  {
+   "id": "tabor",
+   "name": "Tabor",
+   "value": 15
+  },
+  {
+   "id": "tin_ore",
+   "name": "Tin Ore",
+   "value": 4
+  },
+  {
+   "id": "training_whistle",
+   "name": "Training Whistle",
+   "value": 20
+  },
+  {
+   "id": "tunic",
+   "name": "Wool Tunic & Hose",
+   "value": 14
+  },
+  {
+   "id": "v_onion",
+   "name": "Onions",
+   "value": 0.6
+  },
+  {
+   "id": "v_turnip",
+   "name": "Turnips",
+   "value": 0.5
+  },
+  {
+   "id": "vats1",
+   "name": "Tanning & Dye Vats",
+   "value": 62.5
+  },
+  {
+   "id": "veg",
+   "name": "Vegetables",
+   "value": 0.7
+  },
+  {
+   "id": "wine",
+   "name": "Wine",
+   "value": 7,
+   "food": true
+  },
+  {
+   "id": "wood",
+   "name": "Timber",
+   "value": 1
+  },
+  {
+   "id": "wool",
+   "name": "Wool",
+   "value": 1.5
+  },
+  {
+   "id": "wool_cloak",
+   "name": "Wool Cloak",
+   "value": 14
+  },
+  {
+   "id": "work_gloves",
+   "name": "Work Gloves",
+   "value": 8
+  },
+  {
+   "id": "ws_sailcloth",
+   "name": "Bolt of Sailcloth",
+   "value": 15.3
   }
  ],
  "routes": [
@@ -3672,6 +4860,7 @@
    "to": 12,
    "hours": 3,
    "skill": "skill_husbandry",
+   "pay": 0.9,
    "effects": {
     "vigour": -10,
     "spirits": 0
@@ -3691,6 +4880,7 @@
     0
    ],
    "skill": "skill_husbandry",
+   "pay": 0.6,
    "effects": {
     "vigour": -6,
     "spirits": 1
@@ -3707,6 +4897,7 @@
    "to": 18,
    "hours": 2,
    "skill": "skill_husbandry",
+   "pay": 0.6,
    "effects": {
     "vigour": -6,
     "spirits": 0
@@ -3726,6 +4917,7 @@
     2
    ],
    "skill": "skill_herblore",
+   "pay": 0.2,
    "effects": {
     "vigour": -3,
     "spirits": 1
@@ -3742,6 +4934,7 @@
    "to": 8,
    "hours": 2,
    "skill": "skill_beastcraft",
+   "pay": 0.6,
    "effects": {
     "vigour": -6,
     "spirits": 0
@@ -3758,6 +4951,7 @@
    "to": 17,
    "hours": 3,
    "skill": "skill_beastcraft",
+   "pay": 0.9,
    "effects": {
     "vigour": -4,
     "spirits": 2
@@ -3774,6 +4968,7 @@
    "to": 15,
    "hours": 1,
    "skill": "skill_husbandry",
+   "pay": 0.3,
    "dc": 10,
    "effects": {
     "vigour": -3,
@@ -3791,6 +4986,7 @@
    "to": 10,
    "hours": 1,
    "skill": "skill_herblore",
+   "pay": 0.2,
    "effects": {
     "vigour": -3,
     "spirits": 1
@@ -3807,6 +5003,7 @@
    "to": 9,
    "hours": 2,
    "skill": "skill_cookery",
+   "pay": 0.6,
    "effects": {
     "vigour": -4,
     "spirits": 2
@@ -3823,6 +5020,7 @@
    "to": 20,
    "hours": 2,
    "skill": "skill_clothwork",
+   "pay": 0.6,
    "effects": {
     "vigour": -4,
     "spirits": 0
@@ -3839,6 +5037,7 @@
    "to": 15,
    "hours": 3,
    "skill": "skill_cookery",
+   "pay": 0.9,
    "effects": {
     "vigour": -6,
     "spirits": 1
@@ -3855,6 +5054,7 @@
    "to": 10,
    "hours": 1,
    "skill": "skill_husbandry",
+   "pay": 0.3,
    "effects": {
     "vigour": -3,
     "spirits": 0
@@ -3871,6 +5071,7 @@
    "to": 20,
    "hours": 1,
    "skill": "skill_husbandry",
+   "pay": 0.3,
    "effects": {
     "vigour": -3,
     "spirits": 1
@@ -3887,6 +5088,7 @@
    "to": 22,
    "hours": 3,
    "skill": "skill_insight",
+   "pay": 1.05,
    "effects": {
     "vigour": -8,
     "spirits": 1
@@ -3954,6 +5156,7 @@
    "to": 21,
    "hours": 1,
    "skill": "skill_music",
+   "pay": 0.3,
    "effects": {
     "vigour": -2,
     "spirits": 3

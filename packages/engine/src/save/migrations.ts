@@ -62,6 +62,17 @@ export const MIGRATIONS: Record<number, (save: AnySave) => AnySave> = {
   7: (save) => ({ ...save, version: 8, roadEvent: null, roadEvents: 0 }),
   // Version 9 adds careers: a post, a case in hand and finished works.
   8: (save) => ({ ...save, version: 9, post: null, venture: null, works: [] }),
+  // Version 10 adds money, goods carried and the state of the markets.
+  9: (save) => ({
+    ...save,
+    version: 10,
+    money: 20,
+    earned: 0,
+    spent: 0,
+    goods: {},
+    markets: {},
+    poorMeals: 0,
+  }),
 };
 
 export function versionOf(save: unknown): number {

@@ -260,3 +260,44 @@ button:focus-visible {
   gap: 0.4rem;
   justify-content: center;
 }
+
+.market {
+  max-width: 40rem;
+  width: 100%;
+}
+
+.market p {
+  margin: 0.2rem 0;
+}
+
+.market summary {
+  cursor: pointer;
+}
+
+.market ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  text-align: left;
+}
+
+.market li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.15rem 0;
+}
+
+.market li span {
+  flex: 1;
+}
+
+.market li button {
+  padding: 0.2rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}

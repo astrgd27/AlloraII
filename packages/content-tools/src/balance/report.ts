@@ -85,13 +85,7 @@ export function renderReport(run: BalanceRun, options: { timings?: boolean } = {
     '',
     ...skillLines(run),
     '',
-    '### Earnings per hour',
-    '',
-    NOT_YET,
-    '',
-    '### Money supply',
-    '',
-    NOT_YET,
+    ...moneyLines(run),
     '',
     '### Check odds',
     '',
@@ -103,6 +97,47 @@ export function renderReport(run: BalanceRun, options: { timings?: boolean } = {
     '',
   );
   return lines.join('\n');
+}
+
+/** Flag the money held by lives when it grows faster than this a year (design bible, Guarding the balance). */
+export const INFLATION_LIMIT = 0.03;
+
+/** What lives earned and spent, and the money they hold year by year. */
+function moneyLines(run: BalanceRun): string[] {
+  const { lives, gameYears } = run;
+  const days = gameYears * 112;
+  const earned = mean(lives.map((l) => l.earned));
+  const spent = mean(lives.map((l) => l.spent));
+  const worked = mean(lives.map((l) => l.hoursWorked));
+  const scraps = mean(lives.map((l) => l.poorMeals)) / Math.max(1, mean(lives.map((l) => l.meals)));
+  const lines = [
+    '### Earnings per hour',
+    '',
+    `- Took in ${(earned / days).toFixed(2)} pf a day${worked > 0 ? ` (${(earned / worked).toFixed(2)} pf for each hour worked)` : ''}; spent ${(spent / days).toFixed(2)} pf a day.`,
+    `- Meals of scraps, for want of money or bread: ${(scraps * 100).toFixed(0)}%${scraps > 0.25 && mean(lives.map((l) => l.purse.at(-1) ?? 0)) < 10 ? ' (**this life cannot afford to live**)' : ''}.`,
+    '',
+    '### Money supply',
+    '',
+    '| Game year | Mean purse (pf) | Growth |',
+    '| ---: | ---: | ---: |',
+  ];
+  let last: number | undefined;
+  let flagged = false;
+  for (let y = 0; y < gameYears; y++) {
+    const purse = mean(lives.map((l) => l.purse[y] ?? 0));
+    const growth = last !== undefined && last > 0 ? purse / last - 1 : undefined;
+    if (growth !== undefined && y >= 2 && growth > INFLATION_LIMIT) flagged = true;
+    lines.push(
+      `| ${y + 1} | ${purse.toFixed(1)} | ${growth === undefined ? '—' : `${(growth * 100).toFixed(1)}%`} |`,
+    );
+    last = purse;
+  }
+  if (flagged)
+    lines.push(
+      '',
+      `- **The money these lives hold grows by more than ${INFLATION_LIMIT * 100}% a year.** Their sinks are too few.`,
+    );
+  return lines;
 }
 
 /** Levels reached in the run, against the hours the curve says they should take. */
