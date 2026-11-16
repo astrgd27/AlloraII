@@ -26,7 +26,7 @@
 10. **The Butler.** *(done)* Steward of Burg Tennfels.
 11. **Money and markets.** One currency, shops with hours, prices that move. *(done)*
 12. **Scenes.** A place view that changes with the hour, season and who is there. *(done)*
-13. **Standing orders and the report.** What a life does while you are away, and what you read when you return.
+13. **Standing orders and the report.** What a life does while you are away, and what you read when you return. *(done)*
 14. **Marre slice.** The Piazza of the Doges and the Lazaretto, about 20 new small places, and the Inquirer of the Cerdans.
 15. **Eintenn and Marre, remaining batches.** To ~150 places.
 16. **Balance personas** for the three trades, and the gate review.
@@ -137,3 +137,11 @@ Each is an addition, to be rooted on canon when it is built.
   - **On the way** the scene is the road or the water, with no buildings.
   - **Words for the scene:** every scene carries a one-line description for screen readers.
   - **Not yet:** weather (no weather system yet), the sky's Houses and Wanderers, kits by land, signature pieces, sub-place views, tapping a figure to meet them, festival dressing.
+- **2026-11-16 · Standing orders and the report (#34).** Decisions:
+  - **Two new standing orders.** *Work unasked:* never, while away (the default), or always. *Turn back if hurt* (on by default): on the road with health under 35, the life turns back once.
+  - **Safe work only.** A life working alone does the duties of its post first, then whatever pays best by the hour, and rests under 25 vigour. It never takes a case or a trial: those wait (bible: "the game never auto-solves a case").
+  - **"Away" is the catch-up** after the page was closed. While the page is open, a life works alone only if ordered "always".
+  - **The report** is written at the end of a catch-up: hours away, tasks done, pf earned and spent, skill levels gained, meals of scraps, whether it turned back, and how many cases (or a trial) wait. It sits in place above the scene until put away, and a second absence adds to an unread one. No pop-up.
+  - **Not yet:** orders about buying food, lodging, taking commissions under a price, or travel; weighty decisions that wait; a longer report with named events; reports for several lives.
+  - **Balance.** New idler persona (orders "always", then hands off).
+  - **Save version 11,** with a migration and a test.

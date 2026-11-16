@@ -32,6 +32,8 @@ export type Order =
   /** Buy or sell one of a thing at the market here. */
   | { type: 'buy'; item: string }
   | { type: 'sell'; item: string }
+  /** Put the report away, once read. */
+  | { type: 'readReport' }
   /** Change standing orders. */
   | { type: 'setOrders'; orders: Partial<StandingOrders> }
   /** Write a save now. */

@@ -18,6 +18,7 @@ export * from './needs';
 export * from './people';
 export * from './protocol';
 export * from './rng';
+export * from './routine';
 export * from './skills';
 export * from './state';
 export * from './travel';

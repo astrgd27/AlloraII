@@ -28,9 +28,19 @@ export interface StandingOrders {
   wakeAt: number;
   /** On a road at night, stop and make camp instead of walking on. */
   campAtNight: boolean;
+  /** Keep at safe, paid work unasked: never, only while the player is away, or always. */
+  work: 'never' | 'away' | 'always';
+  /** On the road, turn back when badly hurt. */
+  turnBackIfHurt: boolean;
 }
 
-export const DEFAULT_ORDERS: StandingOrders = { sleepFrom: 22, wakeAt: 6, campAtNight: true };
+export const DEFAULT_ORDERS: StandingOrders = {
+  sleepFrom: 22,
+  wakeAt: 6,
+  campAtNight: true,
+  work: 'away',
+  turnBackIfHurt: true,
+};
 export const FULL_NEEDS: Needs = { vigour: 100, health: 100, spirits: 70 };
 
 /** The hours of the day at which a waking life eats. */

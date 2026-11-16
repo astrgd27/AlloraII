@@ -5,6 +5,7 @@ import type { Stall } from './market';
 import { START_MONEY } from './money';
 import type { Bond, Words } from './people';
 import { DEFAULT_ORDERS, FULL_NEEDS, type Needs, type StandingOrders } from './needs';
+import type { Report } from './routine';
 import type { SkillState } from './skills';
 import { createRng, type RngState } from './rng';
 import { START_PLACE, type Leg } from './world';
@@ -17,10 +18,12 @@ export interface Journey {
   legs: Leg[];
   /** Hours already spent on the first leg. */
   legHours: number;
+  /** Set once the life has turned back hurt, so it does not turn again. */
+  homeward?: boolean;
 }
 
 /** The save format version. Raise it with every change to GameState, and add a migration. */
-export const SAVE_VERSION = 10;
+export const SAVE_VERSION = 11;
 
 export interface GameState {
   version: typeof SAVE_VERSION;
@@ -78,6 +81,9 @@ export interface GameState {
   markets: Record<string, Record<string, Stall>>;
   /** Meals made of scraps, for want of money or bread. */
   poorMeals: number;
+  /** What happened while the player was away, until it is read. */
+  report: Report | null;
+  turnedBack: boolean;
 }
 
 export function newGame(seed: number, nowMs: number): GameState {
@@ -117,5 +123,7 @@ export function newGame(seed: number, nowMs: number): GameState {
     goods: {},
     markets: {},
     poorMeals: 0,
+    report: null,
+    turnedBack: false,
   };
 }
