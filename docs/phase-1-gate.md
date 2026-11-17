@@ -6,12 +6,14 @@ Reviewed 2026-11-16. Phase 2 may start when all four gate lines hold.
 
 | Gate line | Holds? | Evidence |
 | --- | --- | --- |
-| A new player can live a game week in Ostwick without reading the codex | **For the owner to judge** | What a test can show holds: a life left to itself in Ostwick for seven days eats 21 bought meals, never eats scraps, never drops below 20 vigour and ends a little richer (`packages/engine/src/gate.test.ts`). Whether the page explains itself to a person is a question only play can answer. See "What to try" below. |
+| A new player can live a game week in Ostwick without reading the codex | **No** | What a test can show holds: a life left to itself in Ostwick for seven days eats 21 bought meals, never eats scraps, never drops below 20 vigour and ends a little richer (`packages/engine/src/gate.test.ts`). Whether the page explains itself to a person is a question only play can answer. See "What to try" below. |
 | Each of the three trades has duties, at least four cases and a ladder of four ranks, and the balance bot finishes a career in each | **Yes** | Smith: 3 duties, 6 commissions, 3 trials. Butler: 4 duties, 6 incidents, 3 trials. Inquirer: 4 duties, 8 cases, 3 trials. Each has four ranks with pay. In the balance run all five lives of each persona reach the top rank: smith about game day 539, butler 536, inquirer 480. Held by tests in `gate.test.ts` and `balance.test.ts`. |
 | Every place in the two realms has at least one resident with a routine and one reason to return | **Yes** | 160 places (Eintenn 80, Marre 80). Each has a resident who keeps hours and at least one thing to do that needs no post. 20 canon places had no resident and 29 had nothing to do; #37 filled them. Held by a test. |
 | One game day simulates in under 20 ms; `pnpm lint:content` is clean | **Yes** | 0.045 ms per game day with 160 places. 9,485 canon entries and 945 additions: 0 errors, 0 warnings. |
 
-**Three lines hold. The first waits on the owner playing a week.**
+**Three lines hold. The first does not (owner, 2026-11-17).** The owner played the build and found it confusing: clicks that seemed to do nothing, and no clear sign of what the life was doing. The interface is to be rebuilt for tablets and computers, to look like a heavy simulation game (see CLAUDE.md). That rebuild is the first work of Phase 2, and this line is judged again after it.
+
+Two causes are known. A refused order (asleep, busy, the market shut) reports its reason in one line at the foot of the page, far from the button. And the work in hand is one unframed line among many.
 
 ## What to try (about half an hour)
 
