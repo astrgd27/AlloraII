@@ -47,7 +47,7 @@ P=[
  ('wind_spoon','Wind up the spoon','Round the windlass until the mud breaks surface.','deck',6,16,2,'skill_athletics',None)),
 ('lamp_posts','The Shrine on the Posts','site',32,62,['lazaretto','c_dolma'],"A small shrine to the Serene Matron on four posts in open water. Boatmen bound for the Lazaretto leave a lamp, and take one coming back.",
  [('shrine','The Shrine','A roofed image and a shelf of little lamps.'),('ladder','The Mooring Ladder','Iron rungs, green and slippery.')],['lazaretto',M('stilt_huts'),M('waiting_roads')],
- ('anzoleta','Anzoleta Lum','Lamp-Keeper of the Shrine','a girl in a skiff, filling small lamps from a can',"“One going, one coming,” she says. “Anzoleta Lum. I count them at dusk. The numbers should match.”","Anzoleta says in a bad year there are lamps left over, and she lights those too.","“The Matron cannot see in the dark either,” Anzoleta says.",'shrine','ladder'),
+ ('anzoleta','Anzoleta Lum','Lamp-Keeper of the Shrine','a young woman in a skiff, filling small lamps from a can',"“One going, one coming,” she says. “Anzoleta Lum. I count them at dusk. The numbers should match.”","Anzoleta says in a bad year there are lamps left over, and she lights those too.","“The Matron cannot see in the dark either,” Anzoleta says.",'shrine','ladder'),
  ('fill_lamps','Fill the lamps','Oil, wick, and light each one from the last.','shrine',17,21,1,'skill_devotion',None)),
 ('long_bar','The Long Bar','village',44,74,['marre_city'],"A fishing village on the sandbar between lagoon and sea. Its houses are painted so each man can find his own in fog.",
  [('seaside','The Sea Side','Surf, nets and boats drawn up.'),('lagoonside','The Lagoon Side','Still water and painted doors.')],['mussel_poles',M('pilots_rest')],

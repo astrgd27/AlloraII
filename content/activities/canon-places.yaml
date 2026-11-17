@@ -1,0 +1,469 @@
+# One thing to do at every canon place of Eintenn and Marre that had none (Phase 1 gate).
+- id: activity_kess_fondaco_tally_bales
+  origin: allora2
+  kind: activity
+  roots:
+    - kess_fondaco
+  name: 'Tally bales'
+  text: 'Count them in, in whichever language the ledger wants.'
+  place: kess_fondaco
+  sub: warehouses
+  from: 8
+  to: 17
+  hours: 2
+  pay: 0.6
+  skill: skill_numbers
+  effects:
+    vigour: -6
+- id: activity_kess_undercroft_dice_backroom
+  origin: allora2
+  kind: activity
+  roots:
+    - kess_undercroft
+  name: 'Dice in the back room'
+  text: 'Three bones, a cup, and a table that remembers debts.'
+  place: kess_undercroft
+  sub: backroom
+  from: 19
+  to: 23
+  hours: 1
+  skill: skill_games
+  dc: 12
+  effects:
+    vigour: -1
+    spirits: 3
+- id: activity_aschau_tie_vines
+  origin: allora2
+  kind: activity
+  roots:
+    - aschau
+  name: 'Tie the vines'
+  text: 'A twist of straw to each shoot, along the terrace and back.'
+  place: aschau
+  sub: vineyards
+  from: 6
+  to: 17
+  hours: 2
+  pay: 0.6
+  skill: skill_husbandry
+  effects:
+    vigour: -6
+- id: activity_grauwald_gather_fuel
+  origin: allora2
+  kind: activity
+  roots:
+    - grauwald
+  name: 'Gather fuel-wood'
+  text: 'Dead wood only, by forest law, bundled and carried out.'
+  place: grauwald
+  sub: edge
+  from: 6
+  to: 17
+  hours: 2
+  pay: 0.6
+  skill: skill_woodcraft
+  effects:
+    vigour: -6
+- id: activity_wisewoman_hut_bundle_herbs
+  origin: allora2
+  kind: activity
+  roots:
+    - wisewoman_hut
+  name: 'Bundle herbs to dry'
+  text: "Small bunches, stems up, tied to a beam out of the hen's reach."
+  place: wisewoman_hut
+  sub: hut
+  from: 7
+  to: 17
+  hours: 1
+  pay: 0.3
+  skill: skill_herblore
+  effects:
+    vigour: -3
+- id: activity_greenwife_grove_sit_oaks
+  origin: allora2
+  kind: activity
+  roots:
+    - greenwife_grove
+  name: 'Sit under the oaks'
+  text: 'Say nothing. After a while, the wind does not sound like wind.'
+  place: greenwife_grove
+  sub: oaks
+  from: 5
+  to: 21
+  hours: 1
+  skill: skill_contemplation
+  effects:
+    vigour: -1
+    spirits: 3
+- id: activity_hohenkamm_herd_goats
+  origin: allora2
+  kind: activity
+  roots:
+    - hohenkamm
+  name: 'Herd the goats'
+  text: 'Up to the grass at dawn, and count the bells home.'
+  place: hohenkamm
+  sub: meadows
+  from: 5
+  to: 18
+  hours: 3
+  pay: 0.9
+  skill: skill_beastcraft
+  effects:
+    vigour: -9
+- id: activity_thunder_caves_carry_iron
+  origin: allora2
+  kind: activity
+  roots:
+    - thunder_caves
+  name: 'Carry iron up'
+  text: 'A sack of old iron on your back, and a long stair of rock.'
+  place: thunder_caves
+  sub: caves
+  from: 6
+  to: 15
+  hours: 2
+  pay: 0.6
+  skill: skill_devotion
+  effects:
+    vigour: -6
+- id: activity_silberhalde_break_ore
+  origin: allora2
+  kind: activity
+  roots:
+    - silberhalde
+  name: 'Break ore'
+  text: 'A hammer, a block and a heap that never shrinks.'
+  place: silberhalde
+  sub: smelter
+  from: 6
+  to: 17
+  hours: 2
+  pay: 0.6
+  skill: skill_mining
+  effects:
+    vigour: -6
+- id: activity_salzmoor_set_eel_pots
+  origin: allora2
+  kind: activity
+  roots:
+    - salzmoor
+  name: 'Set eel-pots'
+  text: 'Wicker pots in the channels, staked against the tide.'
+  place: salzmoor
+  sub: flats
+  from: 6
+  to: 16
+  hours: 2
+  pay: 0.8
+  skill: skill_fishing
+  dc: 12
+  effects:
+    vigour: -6
+- id: activity_vaelis_ruins_sift_spoil
+  origin: allora2
+  kind: activity
+  roots:
+    - vaelis_ruins
+  name: 'Sift the spoil'
+  text: 'Earth through the sieve, and look at what stays behind.'
+  place: vaelis_ruins
+  sub: forum
+  from: 7
+  to: 17
+  hours: 2
+  pay: 0.8
+  skill: skill_antiquities
+  dc: 12
+  effects:
+    vigour: -6
+- id: activity_threshold_sanctum_trim_lamps
+  origin: allora2
+  kind: activity
+  roots:
+    - threshold_sanctum
+  name: 'Trim the lamps'
+  text: 'Oil and wick for each, down the long wall of painted doors.'
+  place: threshold_sanctum
+  sub: hall
+  from: 8
+  to: 17
+  hours: 1
+  pay: 0.3
+  skill: skill_devotion
+  effects:
+    vigour: -3
+- id: activity_wp_ferry_haul_ferry
+  origin: allora2
+  kind: activity
+  roots:
+    - wp_ferry
+  name: 'Haul the ferry rope'
+  text: 'Hand over hand across the brown river, and back.'
+  place: wp_ferry
+  sub: stage
+  from: 6
+  to: 19
+  hours: 2
+  pay: 0.6
+  skill: skill_athletics
+  effects:
+    vigour: -6
+- id: activity_pomerell_pick_by_number
+  origin: allora2
+  kind: activity
+  roots:
+    - pomerell
+  name: 'Pick by number'
+  text: 'Up the ladder at the tree you are told, and down with a full basket.'
+  place: pomerell
+  sub: orchards
+  from: 6
+  to: 17
+  hours: 2
+  pay: 0.6
+  skill: skill_husbandry
+  effects:
+    vigour: -6
+- id: activity_wp_lighthouse_polish_mirror
+  origin: allora2
+  kind: activity
+  roots:
+    - wp_lighthouse
+  name: 'Polish the great mirror'
+  text: 'A soft cloth, small circles, and no breath on the glass.'
+  place: wp_lighthouse
+  sub: tower
+  from: 8
+  to: 17
+  hours: 2
+  pay: 0.6
+  skill: skill_seamanship
+  effects:
+    vigour: -6
+- id: activity_xonia_shore_gather_shells
+  origin: allora2
+  kind: activity
+  roots:
+    - xonia_shore
+  name: 'Gather shells at low water'
+  text: 'Between the columns while the tide is out, and back before it is not.'
+  place: xonia_shore
+  sub: pools
+  from: 6
+  to: 16
+  hours: 1
+  pay: 0.3
+  skill: skill_fishing
+  effects:
+    vigour: -3
+- id: activity_xonia_sunken_listen_crucible
+  origin: allora2
+  kind: activity
+  roots:
+    - xonia_sunken
+  name: 'Listen at the Crucible'
+  text: 'Strike the stone, put your ear to it, and count how long it rings.'
+  place: xonia_sunken
+  sub: crucible
+  from: 6
+  to: 19
+  hours: 1
+  skill: skill_contemplation
+  effects:
+    vigour: -1
+    spirits: 3
+- id: activity_marre_canal_carry_bales
+  origin: allora2
+  kind: activity
+  roots:
+    - marre_canal
+  name: 'Carry bales at the water-gate'
+  text: 'From the barge up the wet steps, and set each on its mark.'
+  place: marre_canal
+  sub: loredel
+  from: 6
+  to: 16
+  hours: 2
+  pay: 0.6
+  skill: skill_athletics
+  effects:
+    vigour: -6
+- id: activity_terraferma_pick_mulberry
+  origin: allora2
+  kind: activity
+  roots:
+    - terraferma
+  name: 'Pick mulberry leaves'
+  text: 'A sackful of fresh leaf for the silk sheds, twice a day.'
+  place: terraferma
+  sub: mulberries
+  from: 5
+  to: 18
+  hours: 2
+  pay: 0.6
+  skill: skill_husbandry
+  effects:
+    vigour: -6
+- id: activity_morena_score_mastic
+  origin: allora2
+  kind: activity
+  roots:
+    - morena
+  name: 'Score the mastic trees'
+  text: 'A shallow cut, a clean floor beneath, and wait for the tears.'
+  place: morena
+  sub: groves
+  from: 6
+  to: 16
+  hours: 2
+  pay: 0.6
+  skill: skill_herblore
+  effects:
+    vigour: -6
+- id: activity_kess_harbor_unload_cog
+  origin: allora2
+  kind: activity
+  roots:
+    - kess_harbor
+  name: 'Unload a cog'
+  text: 'Sacks up from the hold and along the mole to the carts.'
+  place: kess_harbor
+  sub: mole
+  from: 6
+  to: 17
+  hours: 2
+  pay: 0.6
+  skill: skill_athletics
+  effects:
+    vigour: -6
+- id: activity_kess_market_work_weighbeam
+  origin: allora2
+  kind: activity
+  roots:
+    - kess_market
+  name: 'Work the weigh-beam'
+  text: 'Hook it on, call the weight, and chalk it on the sack.'
+  place: kess_market
+  sub: weigh
+  from: 7
+  to: 17
+  hours: 2
+  pay: 0.6
+  skill: skill_numbers
+  effects:
+    vigour: -6
+- id: activity_collegium_dust_books
+  origin: allora2
+  kind: activity
+  roots:
+    - collegium
+  name: 'Dust the chained books'
+  text: 'Shelf by shelf, with a goose-wing, and never pull on a chain.'
+  place: collegium
+  sub: library
+  from: 8
+  to: 17
+  hours: 2
+  pay: 0.6
+  skill: skill_letters
+  effects:
+    vigour: -6
+- id: activity_tennfels_muck_stables
+  origin: allora2
+  kind: activity
+  roots:
+    - tennfels
+  name: 'Muck out the stables'
+  text: 'Fork, barrow and fresh straw, stall by stall.'
+  place: tennfels
+  sub: stables
+  from: 5
+  to: 10
+  hours: 2
+  pay: 0.6
+  skill: skill_beastcraft
+  effects:
+    vigour: -6
+- id: activity_marre_city_run_messages
+  origin: allora2
+  kind: activity
+  roots:
+    - marre_city
+  name: 'Run messages on the Exchange'
+  text: 'A folded note, a name, and four bridges at a trot.'
+  place: marre_city
+  sub: rialto
+  from: 8
+  to: 17
+  hours: 1
+  pay: 0.3
+  skill: skill_trade
+  effects:
+    vigour: -3
+- id: activity_marre_isles_comb_strand
+  origin: allora2
+  kind: activity
+  roots:
+    - marre_isles
+  name: 'Comb the strand for sea-glass'
+  text: 'Walk the tideline with your eyes down. Green is common. Blue is not.'
+  place: marre_isles
+  sub: strand
+  from: 6
+  to: 18
+  hours: 1
+  pay: 0.4
+  skill: skill_kilncraft
+  dc: 12
+  effects:
+    vigour: -3
+- id: activity_selino_load_stores
+  origin: allora2
+  kind: activity
+  roots:
+    - selino
+  name: 'Load stores at the mole'
+  text: 'Biscuit, water and rope, down the plank and stowed.'
+  place: selino
+  sub: mole
+  from: 6
+  to: 17
+  hours: 2
+  pay: 0.6
+  skill: skill_athletics
+  effects:
+    vigour: -6
+- id: activity_marre_palace_sweep_steps
+  origin: allora2
+  kind: activity
+  roots:
+    - marre_palace
+  name: 'Sweep the Basilica steps'
+  text: 'Between the two glass lions, without touching either.'
+  place: marre_palace
+  sub: basilica
+  from: 5
+  to: 9
+  hours: 1
+  pay: 0.3
+  skill: skill_devotion
+  effects:
+    vigour: -3
+- id: activity_lazaretto_carry_water
+  origin: allora2
+  kind: activity
+  roots:
+    - lazaretto
+  name: 'Carry water in the wards'
+  text: 'Two pails, the long ward, and a cup at every bed.'
+  place: lazaretto
+  sub: wards
+  from: 6
+  to: 19
+  hours: 2
+  pay: 0.6
+  skill: skill_physick
+  effects:
+    vigour: -6

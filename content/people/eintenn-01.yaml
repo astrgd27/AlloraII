@@ -80,7 +80,7 @@
   title: 'Goose-Girl of Dunmere'
   region: eintenn
   home: place_eintenn_dunmere
-  hint: 'a girl with a long switch and a flock that goes where she looks'
+  hint: 'a young woman with a long switch and a flock that goes where she looks'
   meet: "The geese reach you before she does. “They don't bite,” says the girl with the switch. “Well. That one bites. I'm Lise.”"
   talk:
     - 'Lise drives forty geese to the castle kitchens every week and comes home with thirty-nine fewer.'

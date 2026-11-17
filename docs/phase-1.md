@@ -29,7 +29,7 @@
 13. **Standing orders and the report.** What a life does while you are away, and what you read when you return. *(done)*
 14. **Marre slice.** The Piazza of the Doges and the Lazaretto, about 20 new small places, and the Inquirer of the Cerdans. *(done)*
 15. **Eintenn and Marre, remaining batches.** To ~150 places. *(done)*
-16. **Balance personas** for the three trades, and the gate review.
+16. **Balance personas** for the three trades, and the gate review. *(done)*
 
 ## New mechanics and lore to add (gaps the wider game needs)
 
@@ -164,3 +164,9 @@ Each is an addition, to be rooted on canon when it is built.
   - **Every place is a working place:** what its people do is what a life can do there. None of the new work is paid yet; pay belongs with the tuning in #37.
   - **Canon:** no canon place is moved or renamed. Names that came too near a canon name were changed at lint (the Salters' Gate, the Red Scar, the Breaming Hard, the Rice Floors, Mother Gundel).
   - **Not yet:** paid work and markets at the new places, people who move between places, events on Marre's waters, named ways in Marre, and a second resident anywhere.
+- **2026-11-16 · Balance personas and the gate review (#37).** See `docs/phase-1-gate.md`. Decisions:
+  - **Every canon place now has a resident and something to do.** 20 new residents (`content/people/canon-places.yaml`) and 29 new pieces of work (`content/activities/canon-places.yaml`), each written from the place's canon text. Where canon already puts an unnamed figure in a place (the ferryman with the wooden leg, the old lighthouse keeper, Mother Brindl by her fire, the silent Cave-Sworn), the new resident is someone beside them, not them.
+  - **The new work is paid:** 0.3 pf an hour, 0.4 where it ends in a check. Sitting under the Ribboned Oaks, listening at the Crucible and dicing in the Undercroft pay nothing and lift the spirits instead.
+  - **Nobody reads as a child.** Six residents described as "a girl" or "a boy" are now a young woman or a young man. Romance is between adults only, and no one's age should be in doubt when it arrives.
+  - **Three gate tests** hold the lines a test can hold: residents and reasons everywhere, the three trades' shape, and a week in Ostwick left alone.
+  - **The first gate line is the owner's:** whether a new player can live a week without the codex needs a person to try it.

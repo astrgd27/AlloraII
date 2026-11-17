@@ -1,0 +1,361 @@
+# Residents for the canon places of Eintenn and Marre that had none with a routine (Phase 1 gate).
+- id: person_eintenn_zaneto
+  origin: allora2
+  kind: person
+  roots:
+    - kess_fondaco
+  name: 'Zaneto Brag'
+  title: 'Warehouse Clerk of the Fondaco'
+  region: eintenn
+  home: kess_fondaco
+  hint: 'a neat Marrean with a ledger in each of four languages'
+  meet: 'He closes one ledger on his finger. “Zaneto Brag. I count what comes from home, and I am locked in with it at curfew.”'
+  talk:
+    - 'Zaneto says the compound is Marre with worse weather and better beer.'
+    - '“They lock the gate from outside,” Zaneto says. “I have never decided who it protects.”'
+  sched:
+    - at: [kess_fondaco, warehouses]
+      h: [6, 20]
+    - at: [kess_fondaco, court]
+- id: person_eintenn_kord
+  origin: allora2
+  kind: person
+  roots:
+    - kess_undercroft
+  name: 'Kord Nail'
+  title: 'Door-Keeper of the Cellars'
+  region: eintenn
+  home: kess_undercroft
+  hint: 'a big man on a stool by a door, paring his nails with a knife'
+  meet: 'He does not get up. “Kord Nail. You came in by the right stair, so somebody sent you. Keep your hands where I can count them.”'
+  talk:
+    - 'Kord knows every face that has passed his door and what it owed.'
+    - '“Up there they have the Salt Council,” Kord says. “Down here we are quicker.”'
+  sched:
+    - at: [kess_undercroft, cellars]
+      h: [6, 20]
+    - at: [kess_undercroft, backroom]
+- id: person_eintenn_walburg
+  origin: allora2
+  kind: person
+  roots:
+    - aschau
+  name: 'Walburg Stock'
+  title: 'Vine-Dresser of Aschau'
+  region: eintenn
+  home: aschau
+  hint: 'a woman tying a vine to its stake with a twist of straw'
+  meet: '“Mind the ash on your boots,” she says. “Walburg Stock. The Church says the fire is sin. The vines say otherwise.”'
+  talk:
+    - 'Walburg will not say whether she walks the embers, and nobody asks twice.'
+    - '“Wine and ash,” Walburg says. “You cannot have this town without both.”'
+  sched:
+    - at: [aschau, vineyards]
+      h: [6, 20]
+    - at: [aschau, vineyards]
+- id: person_eintenn_eckart
+  origin: allora2
+  kind: person
+  roots:
+    - grauwald
+  name: 'Eckart Clamp'
+  title: 'Charcoal-Burner of the Grauwald'
+  region: eintenn
+  home: grauwald
+  hint: 'a black-faced man watching a smoking mound as if it might run away'
+  meet: '“Do not stand downwind,” he says. “Eckart Clamp. Five days and nights I sit by each one. A clamp that flames is firewood.”'
+  talk:
+    - 'Eckart sees the verderers and the outlaws both, and tells neither about the other.'
+    - "“The wood is the Duke's,” Eckart says. “The smoke is mine.”"
+  sched:
+    - at: [grauwald, clearing]
+      h: [6, 20]
+    - at: [grauwald, clearing]
+- id: person_eintenn_trudel
+  origin: allora2
+  kind: person
+  roots:
+    - wisewoman_hut
+  name: 'Trudel Moss'
+  title: "Mother Brindl's carrier"
+  region: eintenn
+  home: wisewoman_hut
+  hint: 'a sturdy young woman with a basket on her back and mud to the shin'
+  meet: '“She is by the fire,” she says. “Bring something useful. Trudel Moss. I fetch and carry and do not ask foolish questions.”'
+  talk:
+    - 'Trudel walks to Ostwick and back most days with things wrapped in leaves.'
+    - '“She taught me three plants in a year,” Trudel says. “I know them very well.”'
+  sched:
+    - at: [wisewoman_hut, hut]
+      h: [6, 20]
+    - at: [wisewoman_hut, hut]
+- id: person_eintenn_henner
+  origin: allora2
+  kind: person
+  roots:
+    - greenwife_grove
+  name: 'Old Henner'
+  title: 'Ribbon-Bearer of the Oaks'
+  region: eintenn
+  home: greenwife_grove
+  hint: 'an old man standing at the edge of the trees with a fistful of ribbons, saying nothing'
+  meet: 'He puts a finger to his lips and leads you out of the ring before he speaks. “Henner. I tie them for those who cannot walk this far.”'
+  talk:
+    - 'Henner has never spoken under the oaks and does not mean to start.'
+    - '“There is no priest,” Henner says. “That is why people come.”'
+  sched:
+    - at: [greenwife_grove, oaks]
+      h: [6, 20]
+    - at: [greenwife_grove, oaks]
+- id: person_eintenn_jockel
+  origin: allora2
+  kind: person
+  roots:
+    - hohenkamm
+  name: 'Jockel Fell'
+  title: 'Goat-Herd of the High Meadows'
+  region: eintenn
+  home: hohenkamm
+  hint: 'a wiry man whistling to goats on a slope you would not walk across'
+  meet: 'He whistles, and forty heads turn. “Jockel Fell. If the bells stop, look at the sky. If the goats run, do not look. Run.”'
+  talk:
+    - 'Jockel winters with the stave-carvers and has a rune over his own door he will not explain.'
+    - '“Storms do not come here,” Jockel says. “They are made here.”'
+  sched:
+    - at: [hohenkamm, meadows]
+      h: [6, 20]
+    - at: [hohenkamm, carvers]
+- id: person_eintenn_ruprecht
+  origin: allora2
+  kind: person
+  roots:
+    - thunder_caves
+  name: 'Ruprecht Load'
+  title: 'Iron-Bearer of the Caves'
+  region: eintenn
+  home: thunder_caves
+  hint: 'a broad man with a sack of rusted iron on his back, climbing without hurry'
+  meet: 'He sets the sack down with care. “Ruprecht Load. Nails, horseshoes, a ploughshare. The valley sends it. I carry it. They up there do not talk.”'
+  talk:
+    - 'Ruprecht has carried iron up for twenty years and never been inside when the storm came.'
+    - '“I asked one what they wait for,” Ruprecht says. “He looked at the sky.”'
+  sched:
+    - at: [thunder_caves, caves]
+      h: [6, 20]
+    - at: [thunder_caves, caves]
+- id: person_eintenn_kathe
+  origin: allora2
+  kind: person
+  roots:
+    - silberhalde
+  name: 'Kathe Wedge'
+  title: "Pot-Woman of the Miner's Lamp"
+  region: eintenn
+  home: silberhalde
+  hint: 'a woman filling mugs before the men ask'
+  meet: '“Shift is up,” she says, and the door opens. Later: “Kathe Wedge. I count them in. Some nights the count is short.”'
+  talk:
+    - 'Kathe keeps a slate of what each miner owes and wipes it clean when a shaft takes one.'
+    - '“They drink like it is the last,” Kathe says. “Sometimes they are right.”'
+  sched:
+    - at: [silberhalde, lamp]
+      h: [6, 20]
+    - at: [silberhalde, lamp]
+- id: person_eintenn_harm
+  origin: allora2
+  kind: person
+  roots:
+    - salzmoor
+  name: 'Harm Sedge'
+  title: 'Eel-Catcher of the Salzmoor'
+  region: eintenn
+  home: salzmoor
+  hint: 'a man walking the mud on boards strapped to his feet'
+  meet: '“Stop there,” he calls. “That ground is not ground. Harm Sedge. Walk where I walked or go back.”'
+  talk:
+    - 'Harm knows the hour of every tide and whose boat was in the coves last night, and volunteers only the first.'
+    - '“Everyone else drowns,” Harm says. “It is not a saying. It is a count.”'
+  sched:
+    - at: [salzmoor, flats]
+      h: [6, 20]
+    - at: [salzmoor, pans]
+- id: person_eintenn_jobst
+  origin: allora2
+  kind: person
+  roots:
+    - vaelis_ruins
+  name: 'Jobst Spade'
+  title: 'Digger at Old Vaelis'
+  region: eintenn
+  home: vaelis_ruins
+  hint: 'a sunburnt man sieving earth beside a fallen column'
+  meet: '“Mine,” he says, of a hole. “Jobst Spade. That one is mine too. Dig anywhere else. Not after dark.”'
+  talk:
+    - 'Jobst has found eleven coins, one bronze hand and nothing that would make him stay after sunset.'
+    - '“I do not know who carries the lights,” Jobst says. “I have decided not to.”'
+  sched:
+    - at: [vaelis_ruins, forum]
+      h: [6, 20]
+    - at: [vaelis_ruins, forum]
+- id: person_eintenn_notker
+  origin: allora2
+  kind: person
+  roots:
+    - threshold_sanctum
+  name: 'Notker Latch'
+  title: 'Lamp-Trimmer of the Sanctum'
+  region: eintenn
+  home: threshold_sanctum
+  hint: 'a quiet man filling lamps in an empty hall, counting painted doors under his breath'
+  meet: '“By day there is only me,” he says. “Notker Latch. I fill the lamps. At dusk I leave. What they do then is theirs.”'
+  talk:
+    - 'Notker has counted the painted doors every day and never reached the same number twice.'
+    - '“Most are shut,” Notker says. “I do not look long at the open ones.”'
+  sched:
+    - at: [threshold_sanctum, hall]
+      h: [6, 20]
+    - at: [threshold_sanctum, hall]
+- id: person_eintenn_brida
+  origin: allora2
+  kind: person
+  roots:
+    - wp_ferry
+  name: 'Brida Ladle'
+  title: "Cook of the Ferryman's Inn"
+  region: eintenn
+  home: wp_ferry
+  hint: 'a red-faced woman stirring a pot big enough to bathe in'
+  meet: '“Three languages out there,” she says, “and all of them say stew. Brida Ladle. Sit. The ferry will be an hour. It is always an hour.”'
+  talk:
+    - 'Brida hears the news of three realms a week before the Duke does.'
+    - '“He has opinions about everyone who crossed,” Brida says, of the ferryman. “I have them about him.”'
+  sched:
+    - at: [wp_ferry, taproom]
+      h: [6, 20]
+    - at: [wp_ferry, taproom]
+- id: person_eintenn_florin
+  origin: allora2
+  kind: person
+  roots:
+    - pomerell
+  name: 'Brother Florin'
+  title: 'Orchard-Brother of Pomerell'
+  region: eintenn
+  home: pomerell
+  hint: 'a monk on a ladder, reading a number painted on a trunk'
+  meet: '“Two hundred and six,” he says. “A good bearer. Brother Florin. We know them by number. I also have names for them, which is not allowed.”'
+  talk:
+    - 'Florin grafted a third of the long ranks himself and can taste which tree a pear came from.'
+    - '“Forty brothers,” Florin says, “and four thousand trees. The trees are less trouble.”'
+  sched:
+    - at: [pomerell, orchards]
+      h: [6, 20]
+    - at: [pomerell, church]
+- id: person_marre_zorza
+  origin: allora2
+  kind: person
+  roots:
+    - wp_lighthouse
+  name: 'Zorza Lant'
+  title: 'Wick-Trimmer of the Lantern'
+  region: marre
+  home: wp_lighthouse
+  hint: "a woman polishing a mirror the size of a church door, a hand's breadth at a time"
+  meet: '“Do not breathe on it,” she says. “Zorza Lant. The old man keeps the lamp. I keep the glass. One smear and a ship is on the rocks.”'
+  talk:
+    - 'Zorza has watched three ships break below and trimmed the wick through each.'
+    - '“The rocks were here first,” Zorza says. “We only argue with them.”'
+  sched:
+    - at: [wp_lighthouse, tower]
+      h: [6, 20]
+    - at: [wp_lighthouse, tower]
+- id: person_marre_bona
+  origin: allora2
+  kind: person
+  roots:
+    - xonia_shore
+  name: 'Bona Sass'
+  title: 'Shell-Gatherer of the Shallows'
+  region: marre
+  home: xonia_shore
+  hint: 'a woman wading between drowned columns with a basket on her head'
+  meet: '“Low water,” she says. “Come and see the steps. Bona Sass. They go down further than anyone has walked.”'
+  talk:
+    - 'Bona sells shells to the bead-makers and keeps the carved stones she finds to herself.'
+    - '“Somebody built a stair into the sea,” Bona says. “Or the sea came up the stair.”'
+  sched:
+    - at: [xonia_shore, pools]
+      h: [6, 20]
+    - at: [xonia_shore, stair]
+- id: person_marre_tadeo
+  origin: allora2
+  kind: person
+  roots:
+    - xonia_sunken
+  name: 'Tadeo Rin'
+  title: 'Listener at the Crucible'
+  region: marre
+  home: xonia_sunken
+  hint: 'a thin man lying with his ear to the ground'
+  meet: 'He holds up a hand for quiet, then sits up. “Tadeo Rin. It rings. Strike it there and listen. Like glass. I have been listening nine years.”'
+  talk:
+    - 'Tadeo says the ringing changes with the tide, and that nobody will pay him to find out why.'
+    - '“The divers bring up statues,” Tadeo says. “I would rather know what the vessel held.”'
+  sched:
+    - at: [xonia_sunken, crucible]
+      h: [6, 20]
+    - at: [xonia_sunken, crucible]
+- id: person_marre_toma
+  origin: allora2
+  kind: person
+  roots:
+    - marre_canal
+  name: 'Toma Fach'
+  title: "Porter at the water-gate of Ca' Loredel"
+  region: marre
+  home: marre_canal
+  hint: 'a broad-backed man carrying a bale up wet steps'
+  meet: 'He sets the bale down on its mark. “Toma Fach. Thoolman cloth, by the smell. Every wall up there has a map on it. I carry what the maps are about.”'
+  talk:
+    - 'Toma can tell what a house is buying by how its barges sit in the water.'
+    - '“Three palazzi on this bend,” Toma says. “I am welcome at the back of one.”'
+  sched:
+    - at: [marre_canal, loredel]
+      h: [6, 20]
+    - at: [marre_canal, loredel]
+- id: person_marre_zulian
+  origin: allora2
+  kind: person
+  roots:
+    - terraferma
+  name: 'Zulian Risi'
+  title: 'Rice-Hand of the Terraferma'
+  region: marre
+  home: terraferma
+  hint: 'a man bent double in a flooded field, with herons standing closer than he likes'
+  meet: 'He straightens, slowly. “Zulian Risi. Water to the knee from spring to harvest. The Families see this from a portico.”'
+  talk:
+    - 'Zulian says the mosquitoes sing all night and he has stopped hearing them, which worries his wife.'
+    - '“White villas, green fields,” Zulian says. “It looks well from a boat.”'
+  sched:
+    - at: [terraferma, paddies]
+      h: [6, 20]
+    - at: [terraferma, paddies]
+- id: person_marre_menega
+  origin: allora2
+  kind: person
+  roots:
+    - morena
+  name: 'Menega Gomm'
+  title: 'Mastic-Gatherer of Morena'
+  region: marre
+  home: morena
+  hint: 'a woman scraping pale beads of resin from a scored trunk'
+  meet: '“Do not step on the tears,” she says. “Menega Gomm. The trees weep, we gather, both empires chew it. Nobody asks the trees.”'
+  talk:
+    - 'Menega sells to the Fondaco and says the Thoolman quarter pays better and the castle must not know.'
+    - '“Half-way to everywhere,” Menega says. “That is what an island is for.”'
+  sched:
+    - at: [morena, groves]
+      h: [6, 20]
+    - at: [morena, groves]

@@ -1,6 +1,15 @@
 import { HOURS_PER_YEAR, WORLD } from '@allora/engine';
 import { describe, expect, it } from 'vitest';
-import { DAY_BUDGET_MS, butler, playLife, runBalance, smith, villager, wanderer } from './bot';
+import {
+  DAY_BUDGET_MS,
+  butler,
+  inquirer,
+  playLife,
+  runBalance,
+  smith,
+  villager,
+  wanderer,
+} from './bot';
 import { REPORT_MARKER, renderReport } from './report';
 
 describe('the balance bot', () => {
@@ -106,5 +115,20 @@ describe('the report', () => {
 
   it('flags a run that is over budget', () => {
     expect(renderReport({ ...run, msPerGameDay: 25 })).toContain('**over budget**');
+  });
+});
+
+describe('the three trades', () => {
+  it.each([
+    ['smith', smith],
+    ['butler', butler],
+    ['inquirer', inquirer],
+  ] as const)('the %s finishes a career: all four ranks, in order', (_name, persona) => {
+    const life = playLife(persona, 3, 6 * HOURS_PER_YEAR);
+    expect(life.rank).toBe(3);
+    expect(life.rankDays[1]).toBeLessThan(life.rankDays[2]!);
+    expect(life.rankDays[2]).toBeLessThan(life.rankDays[3]!);
+    expect(life.earned).toBeGreaterThan(life.spent);
+    expect(life.poorMeals).toBe(0);
   });
 });

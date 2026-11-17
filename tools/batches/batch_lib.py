@@ -26,7 +26,7 @@ def write_batch(root, region, tag, P, title, extra_pos=None, water=False, routes
         (pi, pn, pt, hint, meet, t1, t2, day, night) = per
         people += f"- id: person_{region}_{pi}\n  origin: allora2\n  kind: person\n  roots:\n    - {me}\n  name: {q(pn)}\n  title: {q(pt)}\n  region: {region}\n  home: {me}\n  hint: {q(hint)}\n  meet: {q(meet)}\n  talk:\n    - {q(t1)}\n    - {q(t2)}\n  sched:\n    - at: [{me}, {day}]\n      h: [6, 20]\n    - at: [{me}, {night}]\n"
         (ai, an, at, asub, af, ato, ah, ask, adc) = act
-        acts += f"- id: activity_{i}_{ai}\n  origin: allora2\n  kind: activity\n  roots:\n    - {me}\n  name: {q(an)}\n  text: {q(at)}\n  place: {me}\n  sub: {asub}\n  from: {af}\n  to: {ato}\n  hours: {ah}\n  skill: {ask}\n" + (f"  dc: {adc}\n" if adc else '') + "  effects:\n    vigour: " + str(-3 * ah) + "\n"
+        acts += f"- id: activity_{i}_{ai}\n  origin: allora2\n  kind: activity\n  roots:\n    - {me}\n  name: {q(an)}\n  text: {q(at)}\n  place: {me}\n  sub: {asub}\n  from: {af}\n  to: {ato}\n  hours: {ah}\n  pay: {round((0.4 if adc else 0.3) * ah, 2)}\n  skill: {ask}\n" + (f"  dc: {adc}\n" if adc else '') + "  effects:\n    vigour: " + str(-3 * ah) + "\n"
         for l in links:
             a, b = sorted([me, pid(l)])
             if (a, b) in seen: continue

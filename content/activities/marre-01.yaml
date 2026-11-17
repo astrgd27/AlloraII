@@ -11,6 +11,7 @@
   from: 8
   to: 17
   hours: 2
+  pay: 0.6
   skill: skill_letters
   effects:
     vigour: -6
@@ -26,6 +27,7 @@
   from: 6
   to: 14
   hours: 2
+  pay: 0.6
   skill: skill_athletics
   effects:
     vigour: -6
@@ -41,6 +43,7 @@
   from: 16
   to: 20
   hours: 1
+  pay: 0.3
   skill: skill_devotion
   effects:
     vigour: -3
@@ -56,6 +59,7 @@
   from: 7
   to: 18
   hours: 1
+  pay: 0.3
   skill: skill_seamanship
   effects:
     vigour: -3
@@ -71,6 +75,7 @@
   from: 18
   to: 23
   hours: 2
+  pay: 0.8
   skill: skill_streetwise
   dc: 12
   effects:
@@ -87,6 +92,7 @@
   from: 7
   to: 16
   hours: 2
+  pay: 0.6
   skill: skill_woodwork
   effects:
     vigour: -6
@@ -102,6 +108,7 @@
   from: 6
   to: 10
   hours: 2
+  pay: 0.6
   skill: skill_fishing
   effects:
     vigour: -6
@@ -117,6 +124,7 @@
   from: 6
   to: 15
   hours: 2
+  pay: 0.6
   skill: skill_clothwork
   effects:
     vigour: -6
@@ -132,6 +140,7 @@
   from: 9
   to: 18
   hours: 2
+  pay: 0.8
   skill: skill_stagecraft
   dc: 12
   effects:
@@ -148,6 +157,7 @@
   from: 8
   to: 17
   hours: 1
+  pay: 0.3
   skill: skill_trade
   effects:
     vigour: -3
@@ -163,6 +173,7 @@
   from: 5
   to: 9
   hours: 2
+  pay: 0.6
   skill: skill_seamanship
   effects:
     vigour: -6
@@ -178,6 +189,7 @@
   from: 7
   to: 16
   hours: 1
+  pay: 0.3
   skill: skill_letters
   effects:
     vigour: -3
@@ -193,6 +205,7 @@
   from: 6
   to: 11
   hours: 1
+  pay: 0.4
   skill: skill_herblore
   dc: 12
   effects:
@@ -209,6 +222,7 @@
   from: 16
   to: 20
   hours: 2
+  pay: 0.6
   skill: skill_fishing
   effects:
     vigour: -6
@@ -224,6 +238,7 @@
   from: 6
   to: 15
   hours: 2
+  pay: 0.8
   skill: skill_seamanship
   dc: 12
   effects:
@@ -240,6 +255,7 @@
   from: 6
   to: 16
   hours: 2
+  pay: 0.6
   skill: skill_athletics
   effects:
     vigour: -6
@@ -255,6 +271,7 @@
   from: 5
   to: 21
   hours: 2
+  pay: 0.6
   skill: skill_husbandry
   effects:
     vigour: -6
@@ -270,6 +287,7 @@
   from: 6
   to: 12
   hours: 1
+  pay: 0.3
   skill: skill_athletics
   effects:
     vigour: -3
@@ -285,6 +303,7 @@
   from: 7
   to: 17
   hours: 2
+  pay: 0.6
   skill: skill_kilncraft
   effects:
     vigour: -6
@@ -300,6 +319,7 @@
   from: 18
   to: 23
   hours: 3
+  pay: 0.9
   skill: skill_seamanship
   effects:
     vigour: -9

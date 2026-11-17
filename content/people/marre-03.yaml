@@ -206,7 +206,7 @@
   title: 'Lamp-Keeper of the Shrine'
   region: marre
   home: place_marre_lamp_posts
-  hint: 'a girl in a skiff, filling small lamps from a can'
+  hint: 'a young woman in a skiff, filling small lamps from a can'
   meet: '“One going, one coming,” she says. “Anzoleta Lum. I count them at dusk. The numbers should match.”'
   talk:
     - 'Anzoleta says in a bad year there are lamps left over, and she lights those too.'

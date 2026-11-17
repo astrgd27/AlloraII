@@ -7309,6 +7309,586 @@
    ]
   },
   {
+   "id": "person_eintenn_zaneto",
+   "name": "Zaneto Brag",
+   "title": "Warehouse Clerk of the Fondaco",
+   "hint": "a neat Marrean with a ledger in each of four languages",
+   "meet": "He closes one ledger on his finger. “Zaneto Brag. I count what comes from home, and I am locked in with it at curfew.”",
+   "talk": [
+    "Zaneto says the compound is Marre with worse weather and better beer.",
+    "“They lock the gate from outside,” Zaneto says. “I have never decided who it protects.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "kess_fondaco",
+      "warehouses"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "kess_fondaco",
+      "court"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_eintenn_kord",
+   "name": "Kord Nail",
+   "title": "Door-Keeper of the Cellars",
+   "hint": "a big man on a stool by a door, paring his nails with a knife",
+   "meet": "He does not get up. “Kord Nail. You came in by the right stair, so somebody sent you. Keep your hands where I can count them.”",
+   "talk": [
+    "Kord knows every face that has passed his door and what it owed.",
+    "“Up there they have the Salt Council,” Kord says. “Down here we are quicker.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "kess_undercroft",
+      "cellars"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "kess_undercroft",
+      "backroom"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_eintenn_walburg",
+   "name": "Walburg Stock",
+   "title": "Vine-Dresser of Aschau",
+   "hint": "a woman tying a vine to its stake with a twist of straw",
+   "meet": "“Mind the ash on your boots,” she says. “Walburg Stock. The Church says the fire is sin. The vines say otherwise.”",
+   "talk": [
+    "Walburg will not say whether she walks the embers, and nobody asks twice.",
+    "“Wine and ash,” Walburg says. “You cannot have this town without both.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "aschau",
+      "vineyards"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "aschau",
+      "vineyards"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_eintenn_eckart",
+   "name": "Eckart Clamp",
+   "title": "Charcoal-Burner of the Grauwald",
+   "hint": "a black-faced man watching a smoking mound as if it might run away",
+   "meet": "“Do not stand downwind,” he says. “Eckart Clamp. Five days and nights I sit by each one. A clamp that flames is firewood.”",
+   "talk": [
+    "Eckart sees the verderers and the outlaws both, and tells neither about the other.",
+    "“The wood is the Duke's,” Eckart says. “The smoke is mine.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "grauwald",
+      "clearing"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "grauwald",
+      "clearing"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_eintenn_trudel",
+   "name": "Trudel Moss",
+   "title": "Mother Brindl's carrier",
+   "hint": "a sturdy young woman with a basket on her back and mud to the shin",
+   "meet": "“She is by the fire,” she says. “Bring something useful. Trudel Moss. I fetch and carry and do not ask foolish questions.”",
+   "talk": [
+    "Trudel walks to Ostwick and back most days with things wrapped in leaves.",
+    "“She taught me three plants in a year,” Trudel says. “I know them very well.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "wisewoman_hut",
+      "hut"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "wisewoman_hut",
+      "hut"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_eintenn_henner",
+   "name": "Old Henner",
+   "title": "Ribbon-Bearer of the Oaks",
+   "hint": "an old man standing at the edge of the trees with a fistful of ribbons, saying nothing",
+   "meet": "He puts a finger to his lips and leads you out of the ring before he speaks. “Henner. I tie them for those who cannot walk this far.”",
+   "talk": [
+    "Henner has never spoken under the oaks and does not mean to start.",
+    "“There is no priest,” Henner says. “That is why people come.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "greenwife_grove",
+      "oaks"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "greenwife_grove",
+      "oaks"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_eintenn_jockel",
+   "name": "Jockel Fell",
+   "title": "Goat-Herd of the High Meadows",
+   "hint": "a wiry man whistling to goats on a slope you would not walk across",
+   "meet": "He whistles, and forty heads turn. “Jockel Fell. If the bells stop, look at the sky. If the goats run, do not look. Run.”",
+   "talk": [
+    "Jockel winters with the stave-carvers and has a rune over his own door he will not explain.",
+    "“Storms do not come here,” Jockel says. “They are made here.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "hohenkamm",
+      "meadows"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "hohenkamm",
+      "carvers"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_eintenn_ruprecht",
+   "name": "Ruprecht Load",
+   "title": "Iron-Bearer of the Caves",
+   "hint": "a broad man with a sack of rusted iron on his back, climbing without hurry",
+   "meet": "He sets the sack down with care. “Ruprecht Load. Nails, horseshoes, a ploughshare. The valley sends it. I carry it. They up there do not talk.”",
+   "talk": [
+    "Ruprecht has carried iron up for twenty years and never been inside when the storm came.",
+    "“I asked one what they wait for,” Ruprecht says. “He looked at the sky.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "thunder_caves",
+      "caves"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "thunder_caves",
+      "caves"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_eintenn_kathe",
+   "name": "Kathe Wedge",
+   "title": "Pot-Woman of the Miner's Lamp",
+   "hint": "a woman filling mugs before the men ask",
+   "meet": "“Shift is up,” she says, and the door opens. Later: “Kathe Wedge. I count them in. Some nights the count is short.”",
+   "talk": [
+    "Kathe keeps a slate of what each miner owes and wipes it clean when a shaft takes one.",
+    "“They drink like it is the last,” Kathe says. “Sometimes they are right.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "silberhalde",
+      "lamp"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "silberhalde",
+      "lamp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_eintenn_harm",
+   "name": "Harm Sedge",
+   "title": "Eel-Catcher of the Salzmoor",
+   "hint": "a man walking the mud on boards strapped to his feet",
+   "meet": "“Stop there,” he calls. “That ground is not ground. Harm Sedge. Walk where I walked or go back.”",
+   "talk": [
+    "Harm knows the hour of every tide and whose boat was in the coves last night, and volunteers only the first.",
+    "“Everyone else drowns,” Harm says. “It is not a saying. It is a count.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "salzmoor",
+      "flats"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "salzmoor",
+      "pans"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_eintenn_jobst",
+   "name": "Jobst Spade",
+   "title": "Digger at Old Vaelis",
+   "hint": "a sunburnt man sieving earth beside a fallen column",
+   "meet": "“Mine,” he says, of a hole. “Jobst Spade. That one is mine too. Dig anywhere else. Not after dark.”",
+   "talk": [
+    "Jobst has found eleven coins, one bronze hand and nothing that would make him stay after sunset.",
+    "“I do not know who carries the lights,” Jobst says. “I have decided not to.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "vaelis_ruins",
+      "forum"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "vaelis_ruins",
+      "forum"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_eintenn_notker",
+   "name": "Notker Latch",
+   "title": "Lamp-Trimmer of the Sanctum",
+   "hint": "a quiet man filling lamps in an empty hall, counting painted doors under his breath",
+   "meet": "“By day there is only me,” he says. “Notker Latch. I fill the lamps. At dusk I leave. What they do then is theirs.”",
+   "talk": [
+    "Notker has counted the painted doors every day and never reached the same number twice.",
+    "“Most are shut,” Notker says. “I do not look long at the open ones.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "threshold_sanctum",
+      "hall"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "threshold_sanctum",
+      "hall"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_eintenn_brida",
+   "name": "Brida Ladle",
+   "title": "Cook of the Ferryman's Inn",
+   "hint": "a red-faced woman stirring a pot big enough to bathe in",
+   "meet": "“Three languages out there,” she says, “and all of them say stew. Brida Ladle. Sit. The ferry will be an hour. It is always an hour.”",
+   "talk": [
+    "Brida hears the news of three realms a week before the Duke does.",
+    "“He has opinions about everyone who crossed,” Brida says, of the ferryman. “I have them about him.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "wp_ferry",
+      "taproom"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "wp_ferry",
+      "taproom"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_eintenn_florin",
+   "name": "Brother Florin",
+   "title": "Orchard-Brother of Pomerell",
+   "hint": "a monk on a ladder, reading a number painted on a trunk",
+   "meet": "“Two hundred and six,” he says. “A good bearer. Brother Florin. We know them by number. I also have names for them, which is not allowed.”",
+   "talk": [
+    "Florin grafted a third of the long ranks himself and can taste which tree a pear came from.",
+    "“Forty brothers,” Florin says, “and four thousand trees. The trees are less trouble.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "pomerell",
+      "orchards"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "pomerell",
+      "church"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_zorza",
+   "name": "Zorza Lant",
+   "title": "Wick-Trimmer of the Lantern",
+   "hint": "a woman polishing a mirror the size of a church door, a hand's breadth at a time",
+   "meet": "“Do not breathe on it,” she says. “Zorza Lant. The old man keeps the lamp. I keep the glass. One smear and a ship is on the rocks.”",
+   "talk": [
+    "Zorza has watched three ships break below and trimmed the wick through each.",
+    "“The rocks were here first,” Zorza says. “We only argue with them.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "wp_lighthouse",
+      "tower"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "wp_lighthouse",
+      "tower"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_bona",
+   "name": "Bona Sass",
+   "title": "Shell-Gatherer of the Shallows",
+   "hint": "a woman wading between drowned columns with a basket on her head",
+   "meet": "“Low water,” she says. “Come and see the steps. Bona Sass. They go down further than anyone has walked.”",
+   "talk": [
+    "Bona sells shells to the bead-makers and keeps the carved stones she finds to herself.",
+    "“Somebody built a stair into the sea,” Bona says. “Or the sea came up the stair.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "xonia_shore",
+      "pools"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "xonia_shore",
+      "stair"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_tadeo",
+   "name": "Tadeo Rin",
+   "title": "Listener at the Crucible",
+   "hint": "a thin man lying with his ear to the ground",
+   "meet": "He holds up a hand for quiet, then sits up. “Tadeo Rin. It rings. Strike it there and listen. Like glass. I have been listening nine years.”",
+   "talk": [
+    "Tadeo says the ringing changes with the tide, and that nobody will pay him to find out why.",
+    "“The divers bring up statues,” Tadeo says. “I would rather know what the vessel held.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "xonia_sunken",
+      "crucible"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "xonia_sunken",
+      "crucible"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_toma",
+   "name": "Toma Fach",
+   "title": "Porter at the water-gate of Ca' Loredel",
+   "hint": "a broad-backed man carrying a bale up wet steps",
+   "meet": "He sets the bale down on its mark. “Toma Fach. Thoolman cloth, by the smell. Every wall up there has a map on it. I carry what the maps are about.”",
+   "talk": [
+    "Toma can tell what a house is buying by how its barges sit in the water.",
+    "“Three palazzi on this bend,” Toma says. “I am welcome at the back of one.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "marre_canal",
+      "loredel"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "marre_canal",
+      "loredel"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_zulian",
+   "name": "Zulian Risi",
+   "title": "Rice-Hand of the Terraferma",
+   "hint": "a man bent double in a flooded field, with herons standing closer than he likes",
+   "meet": "He straightens, slowly. “Zulian Risi. Water to the knee from spring to harvest. The Families see this from a portico.”",
+   "talk": [
+    "Zulian says the mosquitoes sing all night and he has stopped hearing them, which worries his wife.",
+    "“White villas, green fields,” Zulian says. “It looks well from a boat.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "terraferma",
+      "paddies"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "terraferma",
+      "paddies"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "person_marre_menega",
+   "name": "Menega Gomm",
+   "title": "Mastic-Gatherer of Morena",
+   "hint": "a woman scraping pale beads of resin from a scored trunk",
+   "meet": "“Do not step on the tears,” she says. “Menega Gomm. The trees weep, we gather, both empires chew it. Nobody asks the trees.”",
+   "talk": [
+    "Menega sells to the Fondaco and says the Thoolman quarter pays better and the castle must not know.",
+    "“Half-way to everywhere,” Menega says. “That is what an island is for.”"
+   ],
+   "sched": [
+    {
+     "at": [
+      "morena",
+      "groves"
+     ],
+     "h": [
+      6,
+      20
+     ]
+    },
+    {
+     "at": [
+      "morena",
+      "groves"
+     ]
+    }
+   ]
+  },
+  {
    "id": "person_eintenn_gerd",
    "name": "Gerd Sack",
    "title": "Miller of Weirbeck",
@@ -7428,7 +8008,7 @@
    "id": "person_eintenn_lise",
    "name": "Lise Marsh",
    "title": "Goose-Girl of Dunmere",
-   "hint": "a girl with a long switch and a flock that goes where she looks",
+   "hint": "a young woman with a long switch and a flock that goes where she looks",
    "meet": "The geese reach you before she does. “They don't bite,” says the girl with the switch. “Well. That one bites. I'm Lise.”",
    "talk": [
     "Lise drives forty geese to the castle kitchens every week and comes home with thirty-nine fewer.",
@@ -8037,7 +8617,7 @@
    "id": "person_eintenn_lena",
    "name": "Lena Hale",
    "title": "Shepherd of Starwatch",
-   "hint": "a girl with a crook, scratching numbers on a slate",
+   "hint": "a young woman with a crook, scratching numbers on a slate",
    "meet": "“They pay me to keep the sheep off the stones,” she says. “Lena Hale. I learned the rest by listening.”",
    "talk": [
     "Lena can name more stars than most of the students who climb the hill.",
@@ -8240,7 +8820,7 @@
    "id": "person_eintenn_detlef",
    "name": "Detlef Clink",
    "title": "Picker of the Heaps",
-   "hint": "a boy with a hammer, cracking stones and looking inside",
+   "hint": "a young man with a hammer, cracking stones and looking inside",
    "meet": "He cracks one more. “Nothing. Detlef Clink. One in fifty has colour in it.”",
    "talk": [
     "Detlef sells what he finds back to the smelter that threw it away.",
@@ -8414,7 +8994,7 @@
    "id": "person_eintenn_sanne",
    "name": "Sanne Withy",
    "title": "Ford-Keeper of Appleford",
-   "hint": "a girl with a pole, standing in the stream to her knees",
+   "hint": "a young woman with a pole, standing in the stream to her knees",
    "meet": "“Left of the white stone,” she calls. “Left!” Then, wading out: “Sanne Withy. They never listen the first time.”",
    "talk": [
     "Sanne has fished nine barrels and one abbot out of the ford.",
@@ -9748,7 +10328,7 @@
    "id": "person_marre_nineta",
    "name": "Nineta Scoa",
    "title": "Cullet-Picker of Ash Isle",
-   "hint": "a girl with rag-bound hands and a sack that clinks",
+   "hint": "a young woman with rag-bound hands and a sack that clinks",
    "meet": "She shakes the sack at you. “Nineta Scoa. Do not pick anything up. You will bleed, and then you will know why.”",
    "talk": [
     "Nineta can tell which furnace a shard came from by its green.",
@@ -10850,7 +11430,7 @@
    "id": "person_marre_anzoleta",
    "name": "Anzoleta Lum",
    "title": "Lamp-Keeper of the Shrine",
-   "hint": "a girl in a skiff, filling small lamps from a can",
+   "hint": "a young woman in a skiff, filling small lamps from a can",
    "meet": "“One going, one coming,” she says. “Anzoleta Lum. I count them at dusk. The numbers should match.”",
    "talk": [
     "Anzoleta says in a bad year there are lamps left over, and she lights those too.",
@@ -11374,6 +11954,474 @@
    }
   },
   {
+   "id": "activity_kess_fondaco_tally_bales",
+   "name": "Tally bales",
+   "text": "Count them in, in whichever language the ledger wants.",
+   "place": "kess_fondaco",
+   "sub": "warehouses",
+   "subName": "Warehouses & Counting-Rooms",
+   "from": 8,
+   "to": 17,
+   "hours": 2,
+   "skill": "skill_numbers",
+   "pay": 0.6,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_kess_undercroft_dice_backroom",
+   "name": "Dice in the back room",
+   "text": "Three bones, a cup, and a table that remembers debts.",
+   "place": "kess_undercroft",
+   "sub": "backroom",
+   "subName": "The Back Room",
+   "from": 19,
+   "to": 23,
+   "hours": 1,
+   "skill": "skill_games",
+   "dc": 12,
+   "effects": {
+    "vigour": -1,
+    "spirits": 3
+   }
+  },
+  {
+   "id": "activity_aschau_tie_vines",
+   "name": "Tie the vines",
+   "text": "A twist of straw to each shoot, along the terrace and back.",
+   "place": "aschau",
+   "sub": "vineyards",
+   "subName": "The Vineyards",
+   "from": 6,
+   "to": 17,
+   "hours": 2,
+   "skill": "skill_husbandry",
+   "pay": 0.6,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_grauwald_gather_fuel",
+   "name": "Gather fuel-wood",
+   "text": "Dead wood only, by forest law, bundled and carried out.",
+   "place": "grauwald",
+   "sub": "edge",
+   "subName": "The Forest Edge",
+   "from": 6,
+   "to": 17,
+   "hours": 2,
+   "skill": "skill_woodcraft",
+   "pay": 0.6,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_wisewoman_hut_bundle_herbs",
+   "name": "Bundle herbs to dry",
+   "text": "Small bunches, stems up, tied to a beam out of the hen's reach.",
+   "place": "wisewoman_hut",
+   "sub": "hut",
+   "subName": "Mother Brindl’s Hut",
+   "from": 7,
+   "to": 17,
+   "hours": 1,
+   "skill": "skill_herblore",
+   "pay": 0.3,
+   "effects": {
+    "vigour": -3
+   }
+  },
+  {
+   "id": "activity_greenwife_grove_sit_oaks",
+   "name": "Sit under the oaks",
+   "text": "Say nothing. After a while, the wind does not sound like wind.",
+   "place": "greenwife_grove",
+   "sub": "oaks",
+   "subName": "Under the Ribboned Oaks",
+   "from": 5,
+   "to": 21,
+   "hours": 1,
+   "skill": "skill_contemplation",
+   "effects": {
+    "vigour": -1,
+    "spirits": 3
+   }
+  },
+  {
+   "id": "activity_hohenkamm_herd_goats",
+   "name": "Herd the goats",
+   "text": "Up to the grass at dawn, and count the bells home.",
+   "place": "hohenkamm",
+   "sub": "meadows",
+   "subName": "The High Meadows",
+   "from": 5,
+   "to": 18,
+   "hours": 3,
+   "skill": "skill_beastcraft",
+   "pay": 0.9,
+   "effects": {
+    "vigour": -9
+   }
+  },
+  {
+   "id": "activity_thunder_caves_carry_iron",
+   "name": "Carry iron up",
+   "text": "A sack of old iron on your back, and a long stair of rock.",
+   "place": "thunder_caves",
+   "sub": "caves",
+   "subName": "The Thunder-Caves",
+   "from": 6,
+   "to": 15,
+   "hours": 2,
+   "skill": "skill_devotion",
+   "pay": 0.6,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_silberhalde_break_ore",
+   "name": "Break ore",
+   "text": "A hammer, a block and a heap that never shrinks.",
+   "place": "silberhalde",
+   "sub": "smelter",
+   "subName": "Smelters & Stonecutters",
+   "from": 6,
+   "to": 17,
+   "hours": 2,
+   "skill": "skill_mining",
+   "pay": 0.6,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_salzmoor_set_eel_pots",
+   "name": "Set eel-pots",
+   "text": "Wicker pots in the channels, staked against the tide.",
+   "place": "salzmoor",
+   "sub": "flats",
+   "subName": "The Tidal Flats",
+   "from": 6,
+   "to": 16,
+   "hours": 2,
+   "skill": "skill_fishing",
+   "pay": 0.8,
+   "dc": 12,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_vaelis_ruins_sift_spoil",
+   "name": "Sift the spoil",
+   "text": "Earth through the sieve, and look at what stays behind.",
+   "place": "vaelis_ruins",
+   "sub": "forum",
+   "subName": "The Fallen Forum",
+   "from": 7,
+   "to": 17,
+   "hours": 2,
+   "skill": "skill_antiquities",
+   "pay": 0.8,
+   "dc": 12,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_threshold_sanctum_trim_lamps",
+   "name": "Trim the lamps",
+   "text": "Oil and wick for each, down the long wall of painted doors.",
+   "place": "threshold_sanctum",
+   "sub": "hall",
+   "subName": "The Hall of Doors",
+   "from": 8,
+   "to": 17,
+   "hours": 1,
+   "skill": "skill_devotion",
+   "pay": 0.3,
+   "effects": {
+    "vigour": -3
+   }
+  },
+  {
+   "id": "activity_wp_ferry_haul_ferry",
+   "name": "Haul the ferry rope",
+   "text": "Hand over hand across the brown river, and back.",
+   "place": "wp_ferry",
+   "sub": "stage",
+   "subName": "The Ferry Stage",
+   "from": 6,
+   "to": 19,
+   "hours": 2,
+   "skill": "skill_athletics",
+   "pay": 0.6,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_pomerell_pick_by_number",
+   "name": "Pick by number",
+   "text": "Up the ladder at the tree you are told, and down with a full basket.",
+   "place": "pomerell",
+   "sub": "orchards",
+   "subName": "The Long Orchards",
+   "from": 6,
+   "to": 17,
+   "hours": 2,
+   "skill": "skill_husbandry",
+   "pay": 0.6,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_wp_lighthouse_polish_mirror",
+   "name": "Polish the great mirror",
+   "text": "A soft cloth, small circles, and no breath on the glass.",
+   "place": "wp_lighthouse",
+   "sub": "tower",
+   "subName": "The Lighthouse",
+   "from": 8,
+   "to": 17,
+   "hours": 2,
+   "skill": "skill_seamanship",
+   "pay": 0.6,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_xonia_shore_gather_shells",
+   "name": "Gather shells at low water",
+   "text": "Between the columns while the tide is out, and back before it is not.",
+   "place": "xonia_shore",
+   "sub": "pools",
+   "subName": "The Column Shallows",
+   "from": 6,
+   "to": 16,
+   "hours": 1,
+   "skill": "skill_fishing",
+   "pay": 0.3,
+   "effects": {
+    "vigour": -3
+   }
+  },
+  {
+   "id": "activity_xonia_sunken_listen_crucible",
+   "name": "Listen at the Crucible",
+   "text": "Strike the stone, put your ear to it, and count how long it rings.",
+   "place": "xonia_sunken",
+   "sub": "crucible",
+   "subName": "The Great Crucible",
+   "from": 6,
+   "to": 19,
+   "hours": 1,
+   "skill": "skill_contemplation",
+   "effects": {
+    "vigour": -1,
+    "spirits": 3
+   }
+  },
+  {
+   "id": "activity_marre_canal_carry_bales",
+   "name": "Carry bales at the water-gate",
+   "text": "From the barge up the wet steps, and set each on its mark.",
+   "place": "marre_canal",
+   "sub": "loredel",
+   "subName": "Ca’ Loredel",
+   "from": 6,
+   "to": 16,
+   "hours": 2,
+   "skill": "skill_athletics",
+   "pay": 0.6,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_terraferma_pick_mulberry",
+   "name": "Pick mulberry leaves",
+   "text": "A sackful of fresh leaf for the silk sheds, twice a day.",
+   "place": "terraferma",
+   "sub": "mulberries",
+   "subName": "The Mulberry Groves",
+   "from": 5,
+   "to": 18,
+   "hours": 2,
+   "skill": "skill_husbandry",
+   "pay": 0.6,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_morena_score_mastic",
+   "name": "Score the mastic trees",
+   "text": "A shallow cut, a clean floor beneath, and wait for the tears.",
+   "place": "morena",
+   "sub": "groves",
+   "subName": "The Mastic Groves",
+   "from": 6,
+   "to": 16,
+   "hours": 2,
+   "skill": "skill_herblore",
+   "pay": 0.6,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_kess_harbor_unload_cog",
+   "name": "Unload a cog",
+   "text": "Sacks up from the hold and along the mole to the carts.",
+   "place": "kess_harbor",
+   "sub": "mole",
+   "subName": "The Stone Mole",
+   "from": 6,
+   "to": 17,
+   "hours": 2,
+   "skill": "skill_athletics",
+   "pay": 0.6,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_kess_market_work_weighbeam",
+   "name": "Work the weigh-beam",
+   "text": "Hook it on, call the weight, and chalk it on the sack.",
+   "place": "kess_market",
+   "sub": "weigh",
+   "subName": "The Weigh-House",
+   "from": 7,
+   "to": 17,
+   "hours": 2,
+   "skill": "skill_numbers",
+   "pay": 0.6,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_collegium_dust_books",
+   "name": "Dust the chained books",
+   "text": "Shelf by shelf, with a goose-wing, and never pull on a chain.",
+   "place": "collegium",
+   "sub": "library",
+   "subName": "The Chained Library",
+   "from": 8,
+   "to": 17,
+   "hours": 2,
+   "skill": "skill_letters",
+   "pay": 0.6,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_tennfels_muck_stables",
+   "name": "Muck out the stables",
+   "text": "Fork, barrow and fresh straw, stall by stall.",
+   "place": "tennfels",
+   "sub": "stables",
+   "subName": "Stables, Mews & Kennels",
+   "from": 5,
+   "to": 10,
+   "hours": 2,
+   "skill": "skill_beastcraft",
+   "pay": 0.6,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_marre_city_run_messages",
+   "name": "Run messages on the Exchange",
+   "text": "A folded note, a name, and four bridges at a trot.",
+   "place": "marre_city",
+   "sub": "rialto",
+   "subName": "The Rialto Exchange",
+   "from": 8,
+   "to": 17,
+   "hours": 1,
+   "skill": "skill_trade",
+   "pay": 0.3,
+   "effects": {
+    "vigour": -3
+   }
+  },
+  {
+   "id": "activity_marre_isles_comb_strand",
+   "name": "Comb the strand for sea-glass",
+   "text": "Walk the tideline with your eyes down. Green is common. Blue is not.",
+   "place": "marre_isles",
+   "sub": "strand",
+   "subName": "The Glass Strand",
+   "from": 6,
+   "to": 18,
+   "hours": 1,
+   "skill": "skill_kilncraft",
+   "pay": 0.4,
+   "dc": 12,
+   "effects": {
+    "vigour": -3
+   }
+  },
+  {
+   "id": "activity_selino_load_stores",
+   "name": "Load stores at the mole",
+   "text": "Biscuit, water and rope, down the plank and stowed.",
+   "place": "selino",
+   "sub": "mole",
+   "subName": "The Eastern Mole",
+   "from": 6,
+   "to": 17,
+   "hours": 2,
+   "skill": "skill_athletics",
+   "pay": 0.6,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
+   "id": "activity_marre_palace_sweep_steps",
+   "name": "Sweep the Basilica steps",
+   "text": "Between the two glass lions, without touching either.",
+   "place": "marre_palace",
+   "sub": "basilica",
+   "subName": "The Basilica of the Serene Matron",
+   "from": 5,
+   "to": 9,
+   "hours": 1,
+   "skill": "skill_devotion",
+   "pay": 0.3,
+   "effects": {
+    "vigour": -3
+   }
+  },
+  {
+   "id": "activity_lazaretto_carry_water",
+   "name": "Carry water in the wards",
+   "text": "Two pails, the long ward, and a cup at every bed.",
+   "place": "lazaretto",
+   "sub": "wards",
+   "subName": "The Wards",
+   "from": 6,
+   "to": 19,
+   "hours": 2,
+   "skill": "skill_physick",
+   "pay": 0.6,
+   "effects": {
+    "vigour": -6
+   }
+  },
+  {
    "id": "activity_cerdans_night_reports",
    "name": "Read the night reports",
    "text": "What the informers saw, in forty hands, most of it nothing.",
@@ -11455,6 +12503,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_husbandry",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -11470,6 +12519,7 @@
    "to": 12,
    "hours": 3,
    "skill": "skill_husbandry",
+   "pay": 0.9,
    "effects": {
     "vigour": -9
    }
@@ -11485,6 +12535,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_husbandry",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -11500,6 +12551,7 @@
    "to": 14,
    "hours": 1,
    "skill": "skill_beastcraft",
+   "pay": 0.4,
    "dc": 10,
    "effects": {
     "vigour": -3
@@ -11516,6 +12568,7 @@
    "to": 15,
    "hours": 2,
    "skill": "skill_beastcraft",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -11531,6 +12584,7 @@
    "to": 18,
    "hours": 1,
    "skill": "skill_wayfaring",
+   "pay": 0.4,
    "dc": 10,
    "effects": {
     "vigour": -3
@@ -11547,6 +12601,7 @@
    "to": 20,
    "hours": 1,
    "skill": "skill_devotion",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -11562,6 +12617,7 @@
    "to": 15,
    "hours": 2,
    "skill": "skill_husbandry",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -11577,6 +12633,7 @@
    "to": 16,
    "hours": 1,
    "skill": "skill_seamanship",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -11592,6 +12649,7 @@
    "to": 13,
    "hours": 2,
    "skill": "skill_stewardship",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -11607,6 +12665,7 @@
    "to": 19,
    "hours": 1,
    "skill": "skill_beastcraft",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -11622,6 +12681,7 @@
    "to": 12,
    "hours": 1,
    "skill": "skill_beastcraft",
+   "pay": 0.4,
    "dc": 10,
    "effects": {
     "vigour": -3
@@ -11638,6 +12698,7 @@
    "to": 16,
    "hours": 3,
    "skill": "skill_building",
+   "pay": 0.9,
    "effects": {
     "vigour": -9
    }
@@ -11653,6 +12714,7 @@
    "to": 17,
    "hours": 2,
    "skill": "skill_woodcraft",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -11668,6 +12730,7 @@
    "to": 15,
    "hours": 3,
    "skill": "skill_woodcraft",
+   "pay": 1.2,
    "dc": 10,
    "effects": {
     "vigour": -9
@@ -11684,6 +12747,7 @@
    "to": 15,
    "hours": 2,
    "skill": "skill_husbandry",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -11699,6 +12763,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_building",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -11714,6 +12779,7 @@
    "to": 16,
    "hours": 3,
    "skill": "skill_woodwork",
+   "pay": 1.2,
    "dc": 10,
    "effects": {
     "vigour": -9
@@ -11730,6 +12796,7 @@
    "to": 10,
    "hours": 1,
    "skill": "skill_beastcraft",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -11745,6 +12812,7 @@
    "to": 22,
    "hours": 3,
    "skill": "skill_insight",
+   "pay": 0.9,
    "effects": {
     "vigour": -9
    }
@@ -11760,6 +12828,7 @@
    "to": 18,
    "hours": 2,
    "skill": "skill_numbers",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -11775,6 +12844,7 @@
    "to": 17,
    "hours": 2,
    "skill": "skill_fishing",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -11790,6 +12860,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_woodwork",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -11805,6 +12876,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_cookery",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -11820,6 +12892,7 @@
    "to": 18,
    "hours": 2,
    "skill": "skill_letters",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -11835,6 +12908,7 @@
    "to": 19,
    "hours": 2,
    "skill": "skill_beastcraft",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -11850,6 +12924,7 @@
    "to": 15,
    "hours": 2,
    "skill": "skill_athletics",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -11865,6 +12940,7 @@
    "to": 22,
    "hours": 1,
    "skill": "skill_devotion",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -11880,6 +12956,7 @@
    "to": 17,
    "hours": 3,
    "skill": "skill_husbandry",
+   "pay": 0.9,
    "effects": {
     "vigour": -9
    }
@@ -11895,6 +12972,7 @@
    "to": 17,
    "hours": 3,
    "skill": "skill_athletics",
+   "pay": 0.9,
    "effects": {
     "vigour": -9
    }
@@ -11910,6 +12988,7 @@
    "to": 17,
    "hours": 2,
    "skill": "skill_clothwork",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -11925,6 +13004,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_beastcraft",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -11940,6 +13020,7 @@
    "to": 17,
    "hours": 2,
    "skill": "skill_mining",
+   "pay": 0.8,
    "dc": 12,
    "effects": {
     "vigour": -6
@@ -11956,6 +13037,7 @@
    "to": 15,
    "hours": 2,
    "skill": "skill_clothwork",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -11971,6 +13053,7 @@
    "to": 12,
    "hours": 1,
    "skill": "skill_woodcraft",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -11986,6 +13069,7 @@
    "to": 18,
    "hours": 1,
    "skill": "skill_cookery",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -12001,6 +13085,7 @@
    "to": 11,
    "hours": 2,
    "skill": "skill_wayfaring",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12016,6 +13101,7 @@
    "to": 18,
    "hours": 2,
    "skill": "skill_cookery",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12031,6 +13117,7 @@
    "to": 18,
    "hours": 2,
    "skill": "skill_wayfaring",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12046,6 +13133,7 @@
    "to": 16,
    "hours": 1,
    "skill": "skill_husbandry",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -12061,6 +13149,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_fishing",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12076,6 +13165,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_athletics",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12091,6 +13181,7 @@
    "to": 12,
    "hours": 1,
    "skill": "skill_herblore",
+   "pay": 0.4,
    "dc": 12,
    "effects": {
     "vigour": -3
@@ -12107,6 +13198,7 @@
    "to": 14,
    "hours": 2,
    "skill": "skill_wayfaring",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12122,6 +13214,7 @@
    "to": 17,
    "hours": 1,
    "skill": "skill_woodcraft",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -12137,6 +13230,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_woodwork",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12152,6 +13246,7 @@
    "to": 17,
    "hours": 2,
    "skill": "skill_woodwork",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12167,6 +13262,7 @@
    "to": 15,
    "hours": 2,
    "skill": "skill_building",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12182,6 +13278,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_woodcraft",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12197,6 +13294,7 @@
    "to": 17,
    "hours": 2,
    "skill": "skill_fishing",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12212,6 +13310,7 @@
    "to": 20,
    "hours": 2,
    "skill": "skill_athletics",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12227,6 +13326,7 @@
    "to": 19,
    "hours": 2,
    "skill": "skill_seamanship",
+   "pay": 0.8,
    "dc": 12,
    "effects": {
     "vigour": -6
@@ -12243,6 +13343,7 @@
    "to": 18,
    "hours": 3,
    "skill": "skill_kilncraft",
+   "pay": 0.9,
    "effects": {
     "vigour": -9
    }
@@ -12258,6 +13359,7 @@
    "to": 12,
    "hours": 1,
    "skill": "skill_trade",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -12273,6 +13375,7 @@
    "to": 23,
    "hours": 2,
    "skill": "skill_streetwise",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12288,6 +13391,7 @@
    "to": 18,
    "hours": 2,
    "skill": "skill_clothwork",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12303,6 +13407,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_husbandry",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12318,6 +13423,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_building",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12333,6 +13439,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_building",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12348,6 +13455,7 @@
    "to": 10,
    "hours": 1,
    "skill": "skill_devotion",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -12363,6 +13471,7 @@
    "to": 19,
    "hours": 2,
    "skill": "skill_wayfaring",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12378,6 +13487,7 @@
    "to": 17,
    "hours": 2,
    "skill": "skill_letters",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12393,6 +13503,7 @@
    "to": 14,
    "hours": 2,
    "skill": "skill_athletics",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12408,6 +13519,7 @@
    "to": 20,
    "hours": 1,
    "skill": "skill_devotion",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -12423,6 +13535,7 @@
    "to": 18,
    "hours": 1,
    "skill": "skill_seamanship",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -12438,6 +13551,7 @@
    "to": 23,
    "hours": 2,
    "skill": "skill_streetwise",
+   "pay": 0.8,
    "dc": 12,
    "effects": {
     "vigour": -6
@@ -12454,6 +13568,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_woodwork",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12469,6 +13584,7 @@
    "to": 10,
    "hours": 2,
    "skill": "skill_fishing",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12484,6 +13600,7 @@
    "to": 15,
    "hours": 2,
    "skill": "skill_clothwork",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12499,6 +13616,7 @@
    "to": 18,
    "hours": 2,
    "skill": "skill_stagecraft",
+   "pay": 0.8,
    "dc": 12,
    "effects": {
     "vigour": -6
@@ -12515,6 +13633,7 @@
    "to": 17,
    "hours": 1,
    "skill": "skill_trade",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -12530,6 +13649,7 @@
    "to": 9,
    "hours": 2,
    "skill": "skill_seamanship",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12545,6 +13665,7 @@
    "to": 16,
    "hours": 1,
    "skill": "skill_letters",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -12560,6 +13681,7 @@
    "to": 11,
    "hours": 1,
    "skill": "skill_herblore",
+   "pay": 0.4,
    "dc": 12,
    "effects": {
     "vigour": -3
@@ -12576,6 +13698,7 @@
    "to": 20,
    "hours": 2,
    "skill": "skill_fishing",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12591,6 +13714,7 @@
    "to": 15,
    "hours": 2,
    "skill": "skill_seamanship",
+   "pay": 0.8,
    "dc": 12,
    "effects": {
     "vigour": -6
@@ -12607,6 +13731,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_athletics",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12622,6 +13747,7 @@
    "to": 21,
    "hours": 2,
    "skill": "skill_husbandry",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12637,6 +13763,7 @@
    "to": 12,
    "hours": 1,
    "skill": "skill_athletics",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -12652,6 +13779,7 @@
    "to": 17,
    "hours": 2,
    "skill": "skill_kilncraft",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12667,6 +13795,7 @@
    "to": 23,
    "hours": 3,
    "skill": "skill_seamanship",
+   "pay": 0.9,
    "effects": {
     "vigour": -9
    }
@@ -12682,6 +13811,7 @@
    "to": 14,
    "hours": 2,
    "skill": "skill_cookery",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12697,6 +13827,7 @@
    "to": 17,
    "hours": 2,
    "skill": "skill_athletics",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12712,6 +13843,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_marksmanship",
+   "pay": 0.8,
    "dc": 12,
    "effects": {
     "vigour": -6
@@ -12728,6 +13860,7 @@
    "to": 18,
    "hours": 2,
    "skill": "skill_trade",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12743,6 +13876,7 @@
    "to": 19,
    "hours": 2,
    "skill": "skill_seamanship",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12758,6 +13892,7 @@
    "to": 16,
    "hours": 3,
    "skill": "skill_woodwork",
+   "pay": 0.9,
    "effects": {
     "vigour": -9
    }
@@ -12773,6 +13908,7 @@
    "to": 17,
    "hours": 2,
    "skill": "skill_woodwork",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12788,6 +13924,7 @@
    "to": 17,
    "hours": 2,
    "skill": "skill_numbers",
+   "pay": 0.8,
    "dc": 12,
    "effects": {
     "vigour": -6
@@ -12804,6 +13941,7 @@
    "to": 17,
    "hours": 2,
    "skill": "skill_trade",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12819,6 +13957,7 @@
    "to": 22,
    "hours": 2,
    "skill": "skill_stagecraft",
+   "pay": 0.8,
    "dc": 12,
    "effects": {
     "vigour": -6
@@ -12835,6 +13974,7 @@
    "to": 9,
    "hours": 1,
    "skill": "skill_seamanship",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -12850,6 +13990,7 @@
    "to": 22,
    "hours": 2,
    "skill": "skill_revelry",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12865,6 +14006,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_athletics",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12880,6 +14022,7 @@
    "to": 10,
    "hours": 2,
    "skill": "skill_husbandry",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12895,6 +14038,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_music",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12910,6 +14054,7 @@
    "to": 20,
    "hours": 2,
    "skill": "skill_seamanship",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12925,6 +14070,7 @@
    "to": 15,
    "hours": 2,
    "skill": "skill_clothwork",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12940,6 +14086,7 @@
    "to": 12,
    "hours": 2,
    "skill": "skill_stewardship",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12955,6 +14102,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_athletics",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12970,6 +14118,7 @@
    "to": 18,
    "hours": 2,
    "skill": "skill_kilncraft",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -12985,6 +14134,7 @@
    "to": 17,
    "hours": 1,
    "skill": "skill_letters",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -13000,6 +14150,7 @@
    "to": 19,
    "hours": 1,
    "skill": "skill_seamanship",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -13015,6 +14166,7 @@
    "to": 18,
    "hours": 2,
    "skill": "skill_athletics",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13030,6 +14182,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_seamanship",
+   "pay": 0.8,
    "dc": 12,
    "effects": {
     "vigour": -6
@@ -13046,6 +14199,7 @@
    "to": 17,
    "hours": 2,
    "skill": "skill_athletics",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13061,6 +14215,7 @@
    "to": 17,
    "hours": 2,
    "skill": "skill_husbandry",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13076,6 +14231,7 @@
    "to": 9,
    "hours": 2,
    "skill": "skill_marksmanship",
+   "pay": 0.8,
    "dc": 12,
    "effects": {
     "vigour": -6
@@ -13092,6 +14248,7 @@
    "to": 17,
    "hours": 2,
    "skill": "skill_husbandry",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13107,6 +14264,7 @@
    "to": 10,
    "hours": 1,
    "skill": "skill_physick",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -13122,6 +14280,7 @@
    "to": 22,
    "hours": 2,
    "skill": "skill_revelry",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13137,6 +14296,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_kilncraft",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13152,6 +14312,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_woodcraft",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13167,6 +14328,7 @@
    "to": 15,
    "hours": 2,
    "skill": "skill_athletics",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13182,6 +14344,7 @@
    "to": 12,
    "hours": 2,
    "skill": "skill_athletics",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13197,6 +14360,7 @@
    "to": 13,
    "hours": 2,
    "skill": "skill_fishing",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13212,6 +14376,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_athletics",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13227,6 +14392,7 @@
    "to": 21,
    "hours": 1,
    "skill": "skill_devotion",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -13242,6 +14408,7 @@
    "to": 10,
    "hours": 2,
    "skill": "skill_fishing",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13257,6 +14424,7 @@
    "to": 15,
    "hours": 2,
    "skill": "skill_athletics",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13272,6 +14440,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_physick",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13287,6 +14456,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_letters",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13302,6 +14472,7 @@
    "to": 20,
    "hours": 1,
    "skill": "skill_devotion",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
@@ -13317,6 +14488,7 @@
    "to": 9,
    "hours": 2,
    "skill": "skill_trade",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13332,6 +14504,7 @@
    "to": 23,
    "hours": 2,
    "skill": "skill_fishing",
+   "pay": 0.8,
    "dc": 12,
    "effects": {
     "vigour": -6
@@ -13348,6 +14521,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_smithing",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13363,6 +14537,7 @@
    "to": 16,
    "hours": 2,
    "skill": "skill_clothwork",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13378,6 +14553,7 @@
    "to": 17,
    "hours": 2,
    "skill": "skill_clothwork",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13393,6 +14569,7 @@
    "to": 12,
    "hours": 2,
    "skill": "skill_fishing",
+   "pay": 0.6,
    "effects": {
     "vigour": -6
    }
@@ -13408,6 +14585,7 @@
    "to": 16,
    "hours": 1,
    "skill": "skill_trade",
+   "pay": 0.3,
    "effects": {
     "vigour": -3
    }
