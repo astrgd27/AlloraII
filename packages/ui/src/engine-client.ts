@@ -34,6 +34,11 @@ export class EngineClient {
   }
 
   send(order: Order): void {
+    // A new order clears the last refusal.
+    if (this.error) {
+      this.error = undefined;
+      for (const listener of this.listeners) listener();
+    }
     this.post(order);
   }
 

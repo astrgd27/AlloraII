@@ -3,7 +3,7 @@ import { Application, FillGradient, Graphics } from 'pixi.js';
 import { useEffect, useMemo, useRef } from 'react';
 import { composeScene, type SceneModel } from './compose';
 
-const HEIGHT = 190;
+const HEIGHT = 150;
 const INK = 0x2b2620;
 
 function draw(g: Graphics, m: SceneModel, W: number, H: number): void {

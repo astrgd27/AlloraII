@@ -1,16 +1,23 @@
+import { WORLD, type Order } from '@allora/engine';
 import { useEffect, useState, useSyncExternalStore } from 'react';
 import { Activities } from './Activities';
 import { Orders, Report } from './Away';
 import { Career } from './Career';
 import { engine } from './engine-client';
-import { formatDate, formatHour } from './format';
 import { MapView } from './map/MapView';
-import { Market } from './Market';
-import { People } from './People';
 import { PlaceList, PlacePanel } from './map/PlacePanel';
+import { Market } from './Market';
+import { NowBar } from './NowBar';
+import { Panel } from './Panel';
+import { People } from './People';
 import { SceneView } from './scene/SceneView';
 import { Skills } from './Skills';
 import { TITLE } from './title';
+import { TopBar } from './TopBar';
+
+const regionOf = (place: string): string =>
+  WORLD.places.find((p) => p.id === place)?.region ?? WORLD.regions[0]?.id ?? '';
+const placeName = (id: string): string => WORLD.places.find((p) => p.id === id)?.name ?? id;
 
 /** The frame. The UI only displays state and sends orders; no game logic lives here. */
 export function App() {
@@ -18,56 +25,104 @@ export function App() {
   const snapshot = useSyncExternalStore(engine.subscribe, engine.getSnapshot);
   const error = useSyncExternalStore(engine.subscribe, engine.getError);
   const [chosen, setChosen] = useState<string | undefined>(undefined);
+  const [picked, setPicked] = useState<string | undefined>(undefined);
+  const send = (order: Order) => engine.send(order);
+
+  if (!snapshot) {
+    return (
+      <main className="loading">
+        <h1>{TITLE}</h1>
+        {error && <p role="alert">{error}</p>}
+      </main>
+    );
+  }
+  const region = picked ?? regionOf(snapshot.place);
+  const busy = Boolean(snapshot.doing) || (snapshot.venture?.hoursLeft ?? 0) > 0;
+  const here = !snapshot.journey;
 
   return (
-    <main className="frame">
-      <h1>{TITLE}</h1>
-      {snapshot && (
-        <section className="clock" aria-label="Date and hour">
-          <p className="date" data-testid="date">
-            {formatDate(snapshot.date)}
-          </p>
-          <p className="hour" data-testid="hour" data-hours={snapshot.hours}>
-            {formatHour(snapshot.date)}
-          </p>
-          <div className="hour-bar" aria-hidden="true">
-            <div style={{ width: `${snapshot.hourProgress * 100}%` }} />
-          </div>
-          <ul className="needs" data-testid="needs">
-            {(['vigour', 'health', 'spirits'] as const).map((need) => (
-              <li key={need}>
-                <span>{need}</span>
-                <meter min={0} max={100} low={30} value={snapshot.needs[need]} aria-label={need} />
-              </li>
-            ))}
-          </ul>
-          {snapshot.asleep && (
-            <p className="quiet" data-testid="asleep">
-              {snapshot.journey ? 'In camp, asleep' : 'Asleep'}
-            </p>
+    <main className="game">
+      <TopBar snapshot={snapshot} />
+
+      <aside className="column left">
+        {snapshot.report && (
+          <Panel title="While you were away">
+            <Report snapshot={snapshot} send={send} />
+          </Panel>
+        )}
+        <Panel title="Calling" testid="calling">
+          {snapshot.post || snapshot.postsHere.length > 0 ? (
+            <Career snapshot={snapshot} send={send} />
+          ) : (
+            <p className="quiet">No post held. A post is taken up at its own place.</p>
           )}
-        </section>
-      )}
-      {snapshot && <Report snapshot={snapshot} send={(order) => engine.send(order)} />}
-      {snapshot && <SceneView snapshot={snapshot} />}
-      <MapView snapshot={snapshot} chosen={chosen} onChoose={setChosen} />
-      {snapshot && (
-        <>
-          <PlacePanel snapshot={snapshot} chosen={chosen} send={(order) => engine.send(order)} />
-          <People snapshot={snapshot} send={(order) => engine.send(order)} />
-          <Market snapshot={snapshot} send={(order) => engine.send(order)} />
-          <Career snapshot={snapshot} send={(order) => engine.send(order)} />
-          <Activities snapshot={snapshot} send={(order) => engine.send(order)} />
-          <Skills snapshot={snapshot} />
-          <Orders snapshot={snapshot} send={(order) => engine.send(order)} />
-          <PlaceList snapshot={snapshot} chosen={chosen} onChoose={setChosen} />
-        </>
-      )}
-      {error && (
-        <p className="error" role="alert">
-          {error}
-        </p>
-      )}
+        </Panel>
+        <Panel title="Skills">
+          {Object.keys(snapshot.skills).length > 0 ? (
+            <Skills snapshot={snapshot} />
+          ) : (
+            <p className="quiet">Skills grow from work.</p>
+          )}
+        </Panel>
+        <Panel title="Standing orders">
+          <Orders snapshot={snapshot} send={send} />
+        </Panel>
+      </aside>
+
+      <section className="centre">
+        <nav className="realms" aria-label="Realms">
+          {WORLD.regions.map((r) => (
+            <button
+              key={r.id}
+              type="button"
+              aria-pressed={r.id === region}
+              onClick={() => setPicked(r.id === regionOf(snapshot.place) ? undefined : r.id)}
+            >
+              {r.name}
+            </button>
+          ))}
+        </nav>
+        <MapView snapshot={snapshot} chosen={chosen} region={region} onChoose={setChosen} />
+        <PlacePanel snapshot={snapshot} chosen={chosen} send={send} />
+        <PlaceList snapshot={snapshot} chosen={chosen} onChoose={setChosen} />
+      </section>
+
+      <aside className="column right">
+        <Panel
+          title={here ? placeName(snapshot.place) : 'On the way'}
+          aside={here ? WORLD.regions.find((r) => r.id === regionOf(snapshot.place))?.name : ''}
+          testid="place"
+        >
+          <SceneView snapshot={snapshot} />
+        </Panel>
+        {here && (
+          <>
+            <Panel title="People here">
+              {snapshot.here.length > 0 || snapshot.words ? (
+                <People snapshot={snapshot} send={send} />
+              ) : (
+                <p className="quiet">Nobody is about.</p>
+              )}
+            </Panel>
+            <Panel title="Work to hand">
+              {busy ? (
+                <p className="quiet">Busy. See below.</p>
+              ) : snapshot.asleep ? (
+                <p className="quiet">Asleep.</p>
+              ) : snapshot.canDo.length > 0 ? (
+                <Activities snapshot={snapshot} send={send} />
+              ) : (
+                <p className="quiet">Nothing to be done here at this hour.</p>
+              )}
+            </Panel>
+          </>
+        )}
+        <Panel title="Purse and market">
+          <Market snapshot={snapshot} send={send} />
+        </Panel>
+      </aside>
+
+      <NowBar snapshot={snapshot} error={error} send={send} />
     </main>
   );
 }

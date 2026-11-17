@@ -43,8 +43,7 @@ const WORK_WORDS = { never: 'Never', away: 'While away', always: 'Always' } as c
 export function Orders({ snapshot, send }: { snapshot: Snapshot; send: Send }) {
   const o = snapshot.orders;
   return (
-    <details className="orders" data-testid="orders">
-      <summary>Standing orders</summary>
+    <div className="orders" data-testid="orders">
       <p>
         Work unasked
         {(['never', 'away', 'always'] as const).map((work) => (
@@ -74,6 +73,6 @@ export function Orders({ snapshot, send }: { snapshot: Snapshot; send: Send }) {
           Camp at night
         </button>
       </p>
-    </details>
+    </div>
   );
 }
