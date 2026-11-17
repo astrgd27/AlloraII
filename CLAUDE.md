@@ -35,6 +35,12 @@ Rules:
 - **Grow in batches** through the content pipeline, linted and rooted. Keep sessions cheap: generate from canon by script where a script can do it, and write by hand only what needs judgment.
 - The canon rules above and the world rules below still hold.
 
+**Owner's direction, 2026-11-17: the interface is for tablets and computers, and must look like a real game.** After playing the Phase 1 build the owner found it confusing: buttons that seemed to do nothing, and no clear sign of what the life was doing.
+- **Do not design for phones.** Design for tablets and computers (landscape, about 1024 px wide and up), even though the game is hosted on the web. This replaces the bible's "phone-first, in portrait".
+- **It should look like a heavy simulation game** (the owner names Paradox Interactive's games): a full-screen map, framed panels, a top bar of resources and date, clear state, tooltips.
+- **Every click answers.** A button that cannot act is shown disabled with its reason; an order that is refused says why, where the player clicked.
+- **What the life is doing is always on screen,** with its progress.
+
 ## World rules (fixed)
 
 - **The world is static.** Realms, rulers and borders never change. Players rise within the world's order, never overturn it. No quest breaks the world.
