@@ -49,7 +49,7 @@ Rules:
 - **Romance is between adults only.**
 - **The player can never learn witch magic.** Countermagic is the closest a player comes.
 - **Augury and divination give no hints about the future of play,** except where a faith says otherwise (Nim's dreams).
-- **Less text in the interface.** Explanations live in the codex, and the screens stay clean.
+- **No design talk in the game, and no walls of instructions** (owner's clarification, 2026-11-17). Nothing on screen speaks about the game's own making: no notes about canon, sources, rules for writers or what is "not built yet". No paragraphs of instructions parked at the foot of a menu. Useful information in panels, short hints and tooltips are welcome.
 - **No level-up cards or interrupting pop-ups.** Progress is shown quietly in place.
 - **Lives do not age, and nothing is inherited.** New lives come only from the Tapestry.
 

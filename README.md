@@ -8,4 +8,4 @@ A slow, vast idle fantasy life simulation in the world of Allora.
 - **Canon:** `canon/` (Allora I and the Polygoetia reference). The world grows from it and never contradicts it.
 - **Standing orders for Claude Code:** `CLAUDE.md`
 - **Start here:** `docs/KICKOFF.md`
-- **Current phase:** `docs/phase-1.md` (gate review: `docs/phase-1-gate.md`)
+- **Current phase:** `docs/phase-2.md` (last gate review: `docs/phase-1-gate.md`)
