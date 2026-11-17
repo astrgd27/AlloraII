@@ -20,8 +20,19 @@ const TITLE = 28;
 const PAD = 14;
 
 /** Regions sit side by side on a wide screen and stack on a narrow one. */
-export function layoutMap(width: number, regionIds: string[]): MapLayout {
+export function layoutMap(width: number, regionIds: string[], height?: number): MapLayout {
   const n = Math.max(1, regionIds.length);
+  if (height !== undefined) {
+    // A map that fills its frame: the regions in one row, as large as the frame allows.
+    const size = Math.max(40, Math.min((width - GAP * (n - 1)) / n, height - TITLE - 8));
+    const left = (width - (size * n + GAP * (n - 1))) / 2;
+    const top = TITLE + Math.max(0, (height - TITLE - 8 - size) / 2);
+    const boxes: Record<string, Box> = {};
+    regionIds.forEach((id, i) => {
+      boxes[id] = { x: left + i * (size + GAP), y: top, size };
+    });
+    return { width, height, regions: boxes };
+  }
   const stacked = width < NARROW;
   const size = stacked ? width : Math.min(560, (width - GAP * (n - 1)) / n);
   const regions: Record<string, Box> = {};

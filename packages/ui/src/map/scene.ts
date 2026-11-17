@@ -82,9 +82,12 @@ export class MapScene {
   resize(): void {
     if (!this.ready) return;
     this.theme = readTheme();
-    this.layout = layoutMap(this.host.clientWidth, regionIdsOf(this.world));
+    this.layout = layoutMap(
+      this.host.clientWidth,
+      regionIdsOf(this.world),
+      Math.max(120, this.host.clientHeight),
+    );
     this.app.renderer.resize(this.layout.width, this.layout.height);
-    this.host.style.height = `${this.layout.height}px`;
     this.drawGround();
     this.drawMarks();
   }
@@ -93,6 +96,10 @@ export class MapScene {
     this.snapshot = snapshot;
     this.chosen = chosen;
     if (this.ready) this.drawMarks();
+  }
+
+  private has(id: string | undefined): boolean {
+    return this.world.places.some((p) => p.id === id);
   }
 
   private point(id: string): { x: number; y: number } {
@@ -179,7 +186,7 @@ export class MapScene {
     this.chosenLabel.visible = false;
     const snap = this.snapshot;
 
-    if (this.chosen) {
+    if (this.chosen && this.has(this.chosen)) {
       const p = this.point(this.chosen);
       m.circle(p.x, p.y, 10).stroke({ width: 1.5, color: ink, alpha: 0.9 });
       const place = this.world.places.find((x) => x.id === this.chosen);
@@ -204,14 +211,23 @@ export class MapScene {
     }
     if (!snap) return;
 
+    // The life may be in a realm this map does not show.
+    if (
+      snap.journey
+        ? !this.has(snap.journey.last) || !this.has(snap.journey.next)
+        : !this.has(snap.place)
+    )
+      return;
     let at = this.point(snap.place);
     if (snap.journey) {
       const from = this.point(snap.journey.last);
       const to = this.point(snap.journey.next);
       const t = snap.journey.legProgress;
       at = { x: from.x + (to.x - from.x) * t, y: from.y + (to.y - from.y) * t };
-      const goal = this.point(snap.journey.to);
-      m.circle(goal.x, goal.y, 8).stroke({ width: 1.5, color: accent, alpha: 0.8 });
+      if (this.has(snap.journey.to)) {
+        const goal = this.point(snap.journey.to);
+        m.circle(goal.x, goal.y, 8).stroke({ width: 1.5, color: accent, alpha: 0.8 });
+      }
     }
     m.circle(at.x, at.y, 6.5).fill(accent).stroke({ width: 2, color: bg });
   }

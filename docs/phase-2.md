@@ -1,6 +1,6 @@
 # Phase 2 · A real game, with every system
 
-**Status: approved by the owner, 2026-11-17** ("continue on to phase 2 with these changes incorporated"). Issues are numbered below in the order they will be worked.
+**Status: approved by the owner, 2026-11-17** ("continue on to phase 2 with these changes incorporated"). Issues are #56–#72, in the order below.
 
 **Goal:** the same small map (Eintenn and Marre, 160 places), now played through an interface that looks and behaves like a heavy simulation game, and carrying a first working version of every system the bible describes. Phases 3 to 5 are then mostly content.
 
@@ -21,7 +21,7 @@
 
 ### A. The interface (first)
 
-1. **The game shell.** Full-screen map as the world; a top bar (date and hour, time controls, purse, needs); framed panels at the sides; a "now" bar that always shows what the life is doing and how far along; a visual language (colour, type, frames, icons) fit for a simulation game. Landscape, 1024 px and up.
+1. **The game shell.** Full-screen map as the world; a top bar (date and hour, time controls, purse, needs); framed panels at the sides; a "now" bar that always shows what the life is doing and how far along; a visual language (colour, type, frames, icons) fit for a simulation game. Landscape, 1024 px and up. *(done)*
 2. **Every click answers.** Buttons that cannot act are disabled and say why on hover. A refused order explains itself where it was given. A short log of what just happened.
 3. **The place panel.** One panel for where you are: the scene, who is here, what can be done, the market, the post, in tabs. Tooltips for hours, pay, odds and skills.
 4. **The character sheet.** Needs, skills with gates, the career ladder, purse and pack, standing orders, and the away report, as proper panels.
@@ -48,3 +48,12 @@
 
 - **2026-11-17 · The stack stays.** TypeScript, React for panels, PixiJS for the map and scenes, the engine in a worker. The owner asked whether the language was right for a game of this kind. The dense panels, tables and tooltips of a simulation game are what the browser does well; the map is already GPU-drawn; the engine is separate from the screen, so the interface can be rebuilt without touching rules, content or saves. A desktop wrapper remains possible later.
 - **2026-11-17 · The text rule is restated** in CLAUDE.md. It was aimed at design notes and long instructions leaking into the game, not at useful information.
+- **2026-11-17 · The game shell (#56).** The page is now one fixed screen. Decisions:
+  - **Layout:** a top bar (title, date and hour, the three needs as bars with numbers, the purse); the life's own panels on the left (calling, skills, standing orders, the away report); the map in the middle; the place on the right (scene, people, work, market); and along the bottom the **now bar**.
+  - **The now bar always answers "what am I doing?":** at leisure, working (with what, hours left and a progress bar), on a case step, travelling (where to, hours to go), camped, or asleep. Its button stops the work or turns back.
+  - **One look:** dark slate, parchment text, brass frames and headings, one type family. Always dark; the light scheme is gone. Framed panels with small-caps headings; nothing floats loose on the page.
+  - **No phone layout.** The screen is laid out for 1024 px and wider. At tablet width the side columns narrow so the map keeps its room.
+  - **The map shows one realm at a time,** as large as its frame allows, with a tab for each realm. It follows the life unless another realm is picked. Side by side, two realms were too small to read at tablet width. Pan, zoom and drawn terrain are #60.
+  - **A refused order** now shows in the now bar and clears with the next order. Before, it stayed at the foot of the page for good. Doing this properly is #57.
+  - **Empty panels say why** in a line ("Nobody is about.", "Nothing to be done here at this hour.").
+  - **Work now shows its pay** beside its hours.
