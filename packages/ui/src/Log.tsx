@@ -42,6 +42,10 @@ export function logText(e: LogEntry): string {
       return `Bought ${item(e.item)} · −${pf(e.price)}`;
     case 'sold':
       return `Sold ${item(e.item)} · +${pf(e.price)}`;
+    case 'moved':
+      return `Took ${e.home === 'room' ? 'a room' : 'a cottage'} in ${place(e.place)}`;
+    case 'evicted':
+      return `Turned out of the ${e.home} in ${place(e.place)} for rent owed`;
   }
 }
 

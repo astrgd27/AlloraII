@@ -7,6 +7,7 @@
  * Testing and balance).
  */
 import type { System } from './engine';
+import { HOMES, INN, atHome, takeInnBed } from './housing';
 import { MEAL_COST, spend } from './money';
 import type { GameState } from './state';
 import type { World } from './world';
@@ -32,6 +33,8 @@ export interface StandingOrders {
   work: 'never' | 'away' | 'always';
   /** On the road, turn back when badly hurt. */
   turnBackIfHurt: boolean;
+  /** Away from home, take an inn bed for the night where there is one. */
+  inn: boolean;
 }
 
 export const DEFAULT_ORDERS: StandingOrders = {
@@ -40,6 +43,7 @@ export const DEFAULT_ORDERS: StandingOrders = {
   campAtNight: true,
   work: 'away',
   turnBackIfHurt: true,
+  inn: true,
 };
 export const FULL_NEEDS: Needs = { vigour: 100, health: 100, spirits: 70 };
 
@@ -50,8 +54,7 @@ export const RATES = {
   /** Vigour lost per waking hour, at rest and on the road. */
   awake: 3,
   onTheRoad: 5,
-  /** Vigour gained per hour asleep: in a bed at home, and anywhere else. */
-  sleepAtHome: 10,
+  /** Vigour gained per hour asleep away from any bed (a home or an inn gives more: see housing). */
   sleepElsewhere: 6,
   /** A meal. */
   mealVigour: 6,
@@ -65,8 +68,6 @@ export const RATES = {
   /** With no vigour left, health drains; asleep, it mends. */
   exhaustionHealth: 2,
   sleepHealth: 1,
-  /** A night at home lifts the spirits; a night elsewhere does not. */
-  homeSpirits: 1,
   /** Spirits drift down towards this when nothing lifts them. */
   spiritsFloor: 40,
   spiritsDrift: 0.25,
@@ -119,10 +120,11 @@ export const needsSystem: System = {
     state.hoursSinceMeal += 1;
 
     if (state.asleep) {
-      const atHome = state.journey === null && state.place === state.home;
-      n.vigour = clamp(n.vigour + (atHome ? RATES.sleepAtHome : RATES.sleepElsewhere));
+      const home = atHome(state) && state.lodging ? HOMES[state.lodging.kind] : undefined;
+      const inn = !home && takeInnBed(state, world, date);
+      n.vigour = clamp(n.vigour + (home ? home.sleep : inn ? INN.sleep : RATES.sleepElsewhere));
       n.health = clamp(n.health + RATES.sleepHealth);
-      if (atHome) n.spirits = clamp(n.spirits + RATES.homeSpirits);
+      if (home) n.spirits = clamp(n.spirits + home.spirits);
       state.hoursSlept += 1;
     } else {
       n.vigour = clamp(n.vigour - (state.journey ? RATES.onTheRoad : RATES.awake));

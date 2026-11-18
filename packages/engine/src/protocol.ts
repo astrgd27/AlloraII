@@ -3,6 +3,7 @@
  * The UI sends orders; the engine sends state. Nothing else crosses.
  */
 import type { Snapshot } from './engine';
+import type { HomeKind } from './housing';
 import type { StandingOrders } from './needs';
 
 /** UI → engine. */
@@ -34,6 +35,9 @@ export type Order =
   /** Buy or sell one of a thing at the market here. */
   | { type: 'buy'; item: string }
   | { type: 'sell'; item: string }
+  /** Rent a home here, giving up the old one; or give up the home. */
+  | { type: 'rent'; home: HomeKind }
+  | { type: 'leaveHome' }
   /** Put the report away, once read. */
   | { type: 'readReport' }
   /** Change standing orders. */

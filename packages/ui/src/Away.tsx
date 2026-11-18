@@ -93,6 +93,14 @@ export function Orders({ snapshot, send }: { snapshot: Snapshot; send: Send }) {
         </button>
         <button
           type="button"
+          aria-pressed={o.inn}
+          title="Away from home, pay for an inn bed where there is one"
+          onClick={() => send({ type: 'setOrders', orders: { inn: !o.inn } })}
+        >
+          Inns on the road
+        </button>
+        <button
+          type="button"
           aria-pressed={o.campAtNight}
           title="On a road at night, stop and sleep rather than walk on"
           onClick={() => send({ type: 'setOrders', orders: { campAtNight: !o.campAtNight } })}

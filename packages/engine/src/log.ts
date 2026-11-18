@@ -1,5 +1,6 @@
 /** A short record of what just happened to the life, for the page to show. */
 import type { Degree } from './challenge';
+import type { HomeKind } from './housing';
 import type { GameState } from './state';
 
 export type LogEntry = { hours: number } & (
@@ -10,6 +11,7 @@ export type LogEntry = { hours: number } & (
   | { kind: 'road'; id: string }
   | { kind: 'met'; person: string }
   | { kind: 'bought' | 'sold'; item: string; price: number }
+  | { kind: 'moved' | 'evicted'; home: HomeKind; place: string }
 );
 
 /** How many entries are kept. */

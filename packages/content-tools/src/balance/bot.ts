@@ -9,6 +9,7 @@
  */
 import {
   Engine,
+  HOMES,
   HOURS_PER_DAY,
   HOURS_PER_YEAR,
   WORLD,
@@ -88,6 +89,9 @@ function careerist(
         engine.handle({ type: 'takePost', post }, 0);
         return;
       }
+      // A life that can afford it moves from its room into a cottage.
+      if (state.lodging?.kind === 'room' && state.money > 200 && state.place === state.home)
+        engine.handle({ type: 'rent', home: 'cottage' }, 0);
       const snap = engine.snapshot();
       if (snap.venture) {
         if (snap.venture.hoursLeft > 0 || state.doing) return;
@@ -228,6 +232,12 @@ export function playLife(persona: Persona, seed: number, hours: number): LifeRes
   if (persona.home) {
     start.place = persona.home;
     start.home = persona.home;
+    const kind = WORLD.places.find((p) => p.id === persona.home)?.kind;
+    start.lodging = {
+      kind: 'room',
+      rent: HOMES.room.rent[kind === 'city' ? 'city' : 'settled'],
+      owed: 0,
+    };
   }
   const engine = new Engine(start);
   const result: LifeResult = {

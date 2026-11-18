@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { Engine } from './engine';
 import { CUT, DEMAND, PACK, buy, buyPrice, demandOf, sell, sellPrice } from './market';
+import { HOMES } from './housing';
 import { MEAL_COST, START_MONEY } from './money';
 import { migrate } from './save/migrations';
 import { SAVE_VERSION, newGame } from './state';
@@ -19,8 +20,9 @@ describe('money', () => {
     expect(e.state.money).toBe(START_MONEY);
     e.run(24);
     expect(e.state.meals).toBe(3);
-    expect(e.state.money).toBeCloseTo(START_MONEY - 3 * MEAL_COST);
-    expect(e.state.spent).toBeCloseTo(3 * MEAL_COST);
+    // Three meals, and the room's rent at midnight.
+    expect(e.state.money).toBeCloseTo(START_MONEY - 3 * MEAL_COST - HOMES.room.rent.settled);
+    expect(e.state.spent).toBeCloseTo(3 * MEAL_COST + HOMES.room.rent.settled);
   });
 
   it('feeds a life with no money on scraps', () => {

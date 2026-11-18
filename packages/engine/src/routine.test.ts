@@ -98,6 +98,7 @@ describe('standing orders', () => {
       campAtNight: false,
       work: 'away',
       turnBackIfHurt: true,
+      inn: true,
     });
     expect(save.report).toBeNull();
   });
