@@ -879,3 +879,68 @@ button:active:not(:disabled) {
 .hour-step .num {
   min-width: 2.2rem;
 }
+
+/* Map frame and its tools */
+.map-frame {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+.map-frame .map {
+  flex: 1;
+}
+
+.map-tools {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.map-tools button {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  text-align: center;
+  font-size: 1rem;
+  background: #171d26ee;
+}
+
+.map-frame,
+.map-frame .map {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.map-frame .map {
+  position: relative;
+}
+
+.map-frame .map canvas {
+  position: absolute;
+  inset: 0;
+}
+
+/* Time controls */
+.time {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.time button {
+  min-width: 2rem;
+  padding: 0.15rem 0.45rem;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: -0.05em;
+}
+
+.time button.paused {
+  color: var(--bg);
+  background: var(--gilt);
+  border-color: var(--gilt);
+}

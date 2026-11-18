@@ -34,7 +34,7 @@ export function MapView({ snapshot, chosen, region, onChoose }: Props) {
 
   useEffect(() => {
     if (!host.current) return;
-    const s = new MapScene(host.current, realm, (id) => choose.current(id));
+    const s = new MapScene(host.current, realm, (id) => choose.current(id), WORLD);
     scene.current = s;
     void s.start();
     const observer = new ResizeObserver(() => s.resize());
@@ -51,5 +51,31 @@ export function MapView({ snapshot, chosen, region, onChoose }: Props) {
   });
 
   const name = realm.regions[0]?.name ?? '';
-  return <div className="map" ref={host} role="img" aria-label={`Map of ${name}`} />;
+  return (
+    <div className="map-frame">
+      <div className="map" ref={host} role="img" aria-label={`Map of ${name}`} data-testid="map" />
+      <div className="map-tools">
+        <button
+          type="button"
+          title="Closer (or the mouse wheel)"
+          onClick={() => scene.current?.zoomBy(1.4)}
+        >
+          +
+        </button>
+        <button type="button" title="Further" onClick={() => scene.current?.zoomBy(1 / 1.4)}>
+          −
+        </button>
+        <button type="button" title="The whole realm" onClick={() => scene.current?.home()}>
+          ⌂
+        </button>
+        <button
+          type="button"
+          title="Find the life on the map"
+          onClick={() => scene.current?.findLife()}
+        >
+          ◎
+        </button>
+      </div>
+    </div>
+  );
 }

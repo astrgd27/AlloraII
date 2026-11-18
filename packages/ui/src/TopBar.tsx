@@ -1,4 +1,4 @@
-import type { Snapshot } from '@allora/engine';
+import { SPEEDS, type Order, type Snapshot } from '@allora/engine';
 import { formatDate, formatHour, pf } from './format';
 import { Bar } from './Panel';
 import { TITLE } from './title';
@@ -10,7 +10,45 @@ const NEEDS = [
 ] as const;
 
 /** The bar across the top: the date, the needs and the purse. Display only. */
-export function TopBar({ snapshot }: { snapshot: Snapshot }) {
+const PACE = ['A game hour each minute', 'A game hour each six seconds', 'A game hour each second'];
+
+/** Pause, and the pace of the clock. Keys: space to pause, 1 2 3 for the pace. */
+function TimeControls({ snapshot, send }: { snapshot: Snapshot; send: (order: Order) => void }) {
+  return (
+    <div className="time" data-testid="time">
+      <button
+        type="button"
+        className={snapshot.paused ? 'paused' : ''}
+        aria-label={snapshot.paused ? 'Resume' : 'Pause'}
+        title={
+          snapshot.paused
+            ? 'Resume (space)'
+            : 'Pause (space). Nothing happens while paused, here or away.'
+        }
+        onClick={() => send({ type: snapshot.paused ? 'resume' : 'pause' })}
+      >
+        {snapshot.paused ? '▶' : '❚❚'}
+      </button>
+      {SPEEDS.map((s, i) => (
+        <button
+          key={s}
+          type="button"
+          aria-pressed={!snapshot.paused && snapshot.speed === s}
+          title={`${PACE[i]} (${i + 1})`}
+          data-speed={s}
+          onClick={() => {
+            if (snapshot.paused) send({ type: 'resume' });
+            send({ type: 'speed', speed: s });
+          }}
+        >
+          {'›'.repeat(i + 1)}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+export function TopBar({ snapshot, send }: { snapshot: Snapshot; send: (order: Order) => void }) {
   return (
     <header className="topbar">
       <div className="crest">{TITLE}</div>
@@ -19,10 +57,11 @@ export function TopBar({ snapshot }: { snapshot: Snapshot }) {
           {formatDate(snapshot.date)}
         </span>
         <span className="hour" data-testid="hour" data-hours={snapshot.hours}>
-          {formatHour(snapshot.date)}
+          {snapshot.paused ? 'Paused' : formatHour(snapshot.date)}
         </span>
         <Bar value={snapshot.hourProgress} label="The hour" tone="thin" />
       </div>
+      <TimeControls snapshot={snapshot} send={send} />
       <ul className="needs" data-testid="needs">
         {NEEDS.map(([key, label, hint]) => {
           const v = snapshot.needs[key];

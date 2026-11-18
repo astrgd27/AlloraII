@@ -74,7 +74,7 @@ async function main(): Promise<void> {
         // Mark the enabled, visible buttons in the page itself: one round trip, not hundreds.
         const count = (await page.evaluate(`(() => {
           let n = 0;
-          for (const b of document.querySelectorAll('main button')) {
+          for (const b of document.querySelectorAll('main button:not(.map-tools button)')) {
             b.removeAttribute('data-e2e');
             const hidden = !b.checkVisibility({ contentVisibilityAuto: true, visibilityProperty: true });
             if (b.disabled || b.getAttribute('aria-pressed') === 'true' || hidden) continue;
@@ -101,6 +101,22 @@ async function main(): Promise<void> {
         const refused = await page.locator('[data-testid=refusal]').count();
         if (after === before && refused === 0) problems.push(`no answer to "${label}"`);
       }
+      // The map's own tools move the view.
+      const view = () => page.locator('[data-testid=map]').getAttribute('data-view');
+      const start = await view();
+      await page.locator('.map-tools button').nth(0).click();
+      await page.waitForTimeout(150);
+      if ((await view()) === start) problems.push('the map does not zoom in');
+      await page.locator('.map-tools button').nth(3).click();
+      await page.waitForTimeout(150);
+      await page.locator('.map-tools button').nth(2).click();
+      await page.waitForTimeout(150);
+      if ((await view()) !== '1.00,0,0')
+        problems.push('the map does not return to the whole realm');
+      await page.mouse.move(640, 400);
+      await page.mouse.wheel(0, -300);
+      await page.waitForTimeout(150);
+      if ((await view()) === '1.00,0,0') problems.push('the wheel does not zoom');
       await page.close();
     }
   } finally {
