@@ -26,6 +26,25 @@ export interface Item {
   type?: string;
 }
 
+/** How a faith is played: joining, ranks by devotion, its aspects. */
+export interface Rite {
+  id: string;
+  faith: string;
+  name: string;
+  join: { skill: string; level: number };
+  thresholds: number[];
+  aspects: {
+    id: string;
+    place: string;
+    sub: string;
+    skills?: string[];
+    offerings?: boolean;
+    boon_skills: string[];
+    /** The canon names of the ranks. */
+    ranks: string[];
+  }[];
+}
+
 /** A feast: days of a season when a place keeps holiday. */
 export interface Feast {
   id: string;
@@ -114,6 +133,8 @@ export interface Activity {
   pay?: number;
   /** Only while this feast is on. */
   feast?: string;
+  /** Only for those who keep this faith. */
+  faith?: string;
   effects: { vigour?: number; health?: number; spirits?: number };
   /** How hard it is, as a skill level. 1 if left out. */
   level?: number;
@@ -228,6 +249,7 @@ export interface WorldData {
   markets?: Market[];
   tools?: Tool[];
   feasts?: Feast[];
+  rites?: Rite[];
 }
 
 export const WORLD = data as unknown as WorldData;
@@ -278,6 +300,8 @@ export class World {
   /** Skill id → the tools that help it. */
   readonly toolsBySkill = new Map<string, Tool[]>();
   readonly feasts = new Map<string, Feast>();
+  /** Faith id → how it is played. */
+  readonly rites = new Map<string, Rite>();
   private readonly links = new Map<string, Leg[]>();
   /** The roads do not change, so travel hours from a place are worked out once. */
   private readonly treeCache = new Map<
@@ -297,6 +321,7 @@ export class World {
     for (const item of data.items ?? []) this.items.set(item.id, item);
     for (const market of data.markets ?? []) this.markets.set(market.place, market);
     for (const feast of data.feasts ?? []) this.feasts.set(feast.id, feast);
+    for (const rite of data.rites ?? []) this.rites.set(rite.faith, rite);
     for (const tool of data.tools ?? []) {
       const list = this.toolsBySkill.get(tool.skill) ?? [];
       list.push(tool);

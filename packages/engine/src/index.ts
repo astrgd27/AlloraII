@@ -12,6 +12,7 @@ export * from './career';
 export * from './challenge';
 export * from './engine';
 export * from './events';
+export * from './faith';
 export * from './host';
 export * from './housing';
 export * from './living';

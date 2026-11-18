@@ -72,13 +72,15 @@ describe('the feasts', () => {
     );
   });
 
-  it('are four, from Allora I', () => {
+  it('are Allora I’s four, and Ilvara’s two holy days', () => {
     const e = new Engine(newGame(2, 0));
     expect([...e.world.feasts.keys()].sort()).toEqual([
       'feast_carnevale',
       'feast_harvest_home',
       'feast_lagoon',
+      'feast_longest_night',
       'feast_regatta',
+      'feast_stubble_burning',
     ]);
   });
 });

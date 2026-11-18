@@ -6,6 +6,7 @@ import { Calling } from './Career';
 import { engine } from './engine-client';
 import { MapView } from './map/MapView';
 import { PlaceList, PlacePanel } from './map/PlacePanel';
+import { FaithSheet } from './Faith';
 import { Life } from './Life';
 import { Log } from './Log';
 import { Market } from './Market';
@@ -81,6 +82,9 @@ export function App() {
         </Panel>
         <Panel title="Calling" testid="calling">
           <Calling snapshot={snapshot} />
+        </Panel>
+        <Panel title="Faith">
+          <FaithSheet snapshot={snapshot} />
         </Panel>
         <Panel title="Skills">
           <Skills snapshot={snapshot} />

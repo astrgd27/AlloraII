@@ -5,6 +5,7 @@
  * home, an inn bed can be had for the night.
  */
 import type { GameDate } from './calendar';
+import { lodgingFactor } from './faith';
 import { round2, spend } from './money';
 import type { GameState } from './state';
 import type { Place, World } from './world';
@@ -75,10 +76,10 @@ export function leaveHome(state: GameState): void {
 }
 
 /** At each dawn, the rent falls due. Returns true if the home was lost. */
-export function payRent(state: GameState): boolean {
+export function payRent(state: GameState, factor = 1): boolean {
   const l = state.lodging;
   if (!l) return false;
-  const due = round2(l.owed + l.rent);
+  const due = round2(l.owed + l.rent * factor);
   if (spend(state, due)) {
     l.owed = 0;
     return false;
@@ -97,7 +98,8 @@ export function takeInnBed(state: GameState, world: World, date: GameDate): bool
   if (state.innNight === night) return true;
   if (!state.orders.inn || state.journey || atHome(state)) return false;
   const price = innAt(world, state.place);
-  if (price === undefined || !spend(state, price)) return false;
+  if (price === undefined || !spend(state, round2(price * lodgingFactor(state, date))))
+    return false;
   state.innNight = night;
   return true;
 }

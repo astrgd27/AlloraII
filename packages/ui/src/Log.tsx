@@ -13,6 +13,7 @@ const caseName = name(WORLD.cases);
 const posts = new Map((WORLD.posts ?? []).map((p) => [p.id, p]));
 const roadEvent = new Map((WORLD.roadEvents ?? []).map((e) => [e.id, e.text]));
 
+const faithName = (id: string): string => WORLD.rites?.find((r) => r.faith === id)?.name ?? id;
 const TIER_NAMES = ['Acquaintance', 'Friend', 'Close Friend', 'Confidant'];
 
 const DEGREE = {
@@ -50,6 +51,14 @@ export function logText(e: LogEntry): string {
       return `Dues to the guild · −${pf(e.price)}`;
     case 'friend':
       return `${person(e.person)} is now a ${TIER_NAMES[e.tier]?.toLowerCase() ?? 'friend'}`;
+    case 'faith':
+      return e.rank === 0 ? `Joined ${faithName(e.faith)}` : `Raised in ${faithName(e.faith)}`;
+    case 'lapsed':
+      return `Lapsed from ${faithName(e.faith)}`;
+    case 'restored':
+      return `Restored to ${faithName(e.faith)}`;
+    case 'offered':
+      return `Burned ${item(e.item)} on the Pyre · +${e.worth} devotion`;
     case 'lost':
       return `${caseName(e.case)} · a clue lost to time`;
     case 'broke':

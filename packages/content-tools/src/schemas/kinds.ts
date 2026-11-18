@@ -175,6 +175,8 @@ export const activitySchema = entrySchema('activity', {
   skill: text.optional(),
   /** Only while this feast is on. */
   feast: text.optional(),
+  /** Only for those who keep this faith. */
+  faith: text.optional(),
   /** What it pays when done, in pf. */
   pay: z.number().nonnegative().optional(),
   /** If set, finishing it is a check against this difficulty. */
@@ -222,6 +224,25 @@ export const feastSchema = entrySchema('feast', {
   from: z.number().int().min(1).max(28),
   to: z.number().int().min(1).max(28),
   text: text,
+});
+
+/** How a canon faith is played: joining, ranks by devotion, its aspects. New to Allora II. */
+export const riteSchema = entrySchema('rite', {
+  faith: text,
+  join: z.object({ skill: text, level: z.number().int().min(0) }),
+  thresholds: z.array(z.number().int().min(0)).min(2),
+  aspects: z
+    .array(
+      z.object({
+        id: text,
+        place: text,
+        sub: text,
+        skills: z.array(text).optional(),
+        offerings: z.boolean().optional(),
+        boon_skills: z.array(text),
+      }),
+    )
+    .min(1),
 });
 
 /** Any other kind (workings, skills, recipes, lore, Weathers, …): the base fields only, for now. */

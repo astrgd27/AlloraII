@@ -1,0 +1,61 @@
+# The work of Ilvara's faithful. Some only for those who keep her, some only on her holy days.
+- id: activity_ilvara_bake_poor
+  origin: allora2
+  kind: activity
+  roots: [ilvara, ostwick]
+  faith: ilvara
+  name: Bake for the poor
+  text: 'A parish shift at the hearth-oven: loaves for every door that has none.'
+  place: ostwick
+  sub: shrine
+  from: 5
+  to: 11
+  hours: 2
+  skill: skill_cookery
+  effects: { vigour: -4, spirits: 2 }
+- id: activity_ilvara_keep_night
+  origin: allora2
+  kind: activity
+  roots: [ilvara, feast_longest_night]
+  faith: ilvara
+  feast: feast_longest_night
+  name: Keep the Longest Night
+  text: 'Sit the first watch with the hearth, and feed it when it falters.'
+  place: ostwick
+  sub: shrine
+  from: 18
+  to: 20
+  hours: 2
+  skill: skill_devotion
+  effects: { vigour: -6, spirits: 10 }
+- id: activity_ilvara_fire_stubble
+  origin: allora2
+  kind: activity
+  roots: [ilvara, feast_stubble_burning]
+  faith: ilvara
+  feast: feast_stubble_burning
+  name: Fire the stubble
+  text: 'A brand to the dry stalks, and stand back from what Ilvara takes.'
+  place: aschau
+  sub: pyre
+  from: 8
+  to: 18
+  hours: 3
+  skill: skill_devotion
+  effects: { vigour: -8, spirits: 6 }
+- id: activity_ilvara_walk_coals
+  origin: allora2
+  kind: activity
+  roots: [ilvara, feast_stubble_burning]
+  faith: ilvara
+  feast: feast_stubble_burning
+  name: Walk the coals
+  text: 'Barefoot across the embers, and do not stop in the middle.'
+  place: aschau
+  sub: pyre
+  from: 18
+  to: 23
+  hours: 1
+  skill: skill_devotion
+  dc: 18
+  effects: { health: -6, spirits: 12 }

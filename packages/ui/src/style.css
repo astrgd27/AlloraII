@@ -1052,3 +1052,14 @@ button:active:not(:disabled) {
   border-left-color: var(--gilt);
   color: #fff3d6;
 }
+
+.faith .duty {
+  font-size: 0.82rem;
+  margin-top: 0.4rem;
+}
+
+.faith-here {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}

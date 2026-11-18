@@ -1,0 +1,27 @@
+# Ilvara of the Two Flames, made playable (canon: `ilvara` in Allora I's faiths). Ranks, aspects,
+# where each is joined, what earns devotion, the boons and the duties follow her canon `mech`,
+# `boons` and `way`; the numbers are Allora II's.
+- id: rite_ilvara
+  origin: allora2
+  kind: rite
+  roots:
+    - ilvara
+  faith: ilvara
+  # Allora I: joining asks Prayer 5. Allora II's nearest skill is Devotion.
+  join: { skill: skill_devotion, level: 5 }
+  # Devotion needed for each rank, from the first.
+  thresholds: [0, 40, 120, 300, 700, 1500]
+  aspects:
+    - id: hearth
+      place: ostwick
+      sub: shrine
+      # Devotion from cooking, brewing, farming, gardening and beekeeping: one an hour.
+      skills: [skill_cookery, skill_husbandry, skill_herblore]
+      # +8% to learning these, per rank (canon: +8% per rank).
+      boon_skills: [skill_cookery, skill_husbandry, skill_herblore]
+    - id: pyre
+      place: aschau
+      sub: pyre
+      # Devotion only from burning offerings, worth their value, doubled in autumn.
+      offerings: true
+      boon_skills: [skill_smithing, skill_alchemy, skill_kilncraft, skill_evocation]

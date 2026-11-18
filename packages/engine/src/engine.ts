@@ -24,6 +24,7 @@ import type { Order } from './protocol';
 import { innAt, leaveHome, payRent, rent, rentAt, type Lodging } from './housing';
 import { liveDay, payDues } from './living';
 import { giftWhyNot, give, tierOf } from './bonds';
+import { faithDay, join, joinWhyNot, lodgingFactor, offer } from './faith';
 import { note, type LogEntry } from './log';
 import { toolFor, toolModifiers, wearLeft } from './tools';
 import {
@@ -126,6 +127,17 @@ export interface Snapshot {
   /** How many pieces of work are finished, and the last one. */
   works: number;
   lastWork: { case: string; quality: number; trial: boolean } | null;
+  /** The faith kept, its rank and devotion, and the faiths that can be joined here. */
+  faith: {
+    faith: string;
+    aspect: string;
+    rank: number;
+    devotion: number;
+    next: number | null;
+    lapsed: boolean;
+    coals: boolean;
+  } | null;
+  joinable: { faith: string; aspect: string; why?: string }[];
   /** What happened while the player was away, until it is read. */
   report: Report | null;
   /** The tools carried that are in use, each with its hours of use left. */
@@ -239,11 +251,12 @@ export class Engine {
     const date = dateAt(this.state.hours);
     if (date.hour === 0 && this.state.lodging) {
       const kind = this.state.lodging.kind;
-      if (payRent(this.state))
+      if (payRent(this.state, lodgingFactor(this.state, date)))
         note(this.state, { kind: 'evicted', home: kind, place: this.state.home });
     }
     if (date.hour === 0) {
       liveDay(this.state);
+      faithDay(this.state, this.world, date);
       const lost = careerDay(this.state, this.world);
       if (lost) note(this.state, { kind: 'lost', case: lost });
     }
@@ -376,6 +389,14 @@ export class Engine {
       case 'leaveHome':
         leaveHome(this.state);
         break;
+      case 'join':
+        join(this.state, this.world, order.faith, order.aspect);
+        break;
+      case 'offer': {
+        const worth = offer(this.state, this.world, order.item, dateAt(this.state.hours));
+        note(this.state, { kind: 'offered', item: order.item, worth });
+        break;
+      }
       case 'give':
         give(this.state, this.world, order.person, order.item);
         break;
@@ -439,6 +460,27 @@ export class Engine {
               return { id: a.id, ...(reason ? { reason } : {}) };
             }),
       report: this.state.report,
+      faith: s.faith
+        ? {
+            faith: s.faith.faith,
+            aspect: s.faith.aspect,
+            rank: s.faith.rank,
+            devotion: s.faith.devotion,
+            next: this.world.rites.get(s.faith.faith)?.thresholds[s.faith.rank + 1] ?? null,
+            lapsed: s.faith.lapsed,
+            coals: s.faith.coals,
+          }
+        : null,
+      joinable: j
+        ? []
+        : [...this.world.rites.values()].flatMap((r) =>
+            r.aspects
+              .filter((a) => a.place === s.place)
+              .map((a) => {
+                const why = joinWhyNot(s, this.world, r.faith, a.id);
+                return { faith: r.faith, aspect: a.id, ...(why ? { why } : {}) };
+              }),
+          ),
       tools: [...this.world.toolsBySkill.keys()].flatMap((skill) => {
         const t = toolFor(s, this.world, skill);
         return t ? [{ item: t.item, skill, edge: t.edge, left: wearLeft(s, t), wear: t.wear }] : [];

@@ -36,7 +36,7 @@
 10. **The trades diverge.** One deep feature each: the smith's materials and techniques; the butler's Trust and Harmony; the inquirer's case board with time pressure. *(done)*
 11. **Weather, seasons and the calendar.** Weather on the road, market and feast days from canon faiths, seasonal work. *(done)*
 12. **Bonds.** Acquaintance to friendship: gifts, favours, people who remember, and what a friend opens. *(done)*
-13. **Faith.** One faith playable end to end in Eintenn, grown from canon.
+13. **Faith.** One faith playable end to end in Eintenn, grown from canon. *(done)*
 14. **Magic.** One school learnable at the Collegium, by the rules of `canon/magic_design.md`. Countermagic stays the nearest a player comes to witch magic.
 15. **Several lives and the Tapestry.** A second and third life, the lives strip, switching, and standing orders for the ones not in focus.
 16. **The codex.** In-world reference for places, people, skills and faiths the life has met. No design talk.
@@ -135,3 +135,13 @@
   - **The people panel** shows each person's tier and a bar to the next, and a Give button that lists the pack (disabled with the reason when a gift was given this week).
   - **Not yet:** tastes for the people Allora II adds, Allora I's per-person perks, favours asked, letters, and bonds that cool with neglect.
   - Save version 17; old bonds keep their talks as points.
+- **2026-11-18 · Faith: Ilvara of the Two Flames (#68).** Chosen because Eintenn holds both her sites (the hearth-shrine at Ostwick, the pyre fields at Aschau) and her canon entry gives ranks, boons and duties for both churches. How she is played is content (`content/faiths/ilvara.yaml`, new kind `rite`), so later faiths follow the same shape. Decisions:
+  - **Joining:** at her own site, by one of her two flames, with Devotion 5 (canon asks Prayer 5; Devotion is Allora II's nearest skill). Feeding Ostwick's village fire trains it.
+  - **Ranks:** her canon ranks, six for each flame (Guest at the Hearth to Mother's Hand; Kindling to Reaper's Torch), at 0, 40, 120, 300, 700 and 1,500 devotion.
+  - **Devotion, as canon says:** the Hearth earns it from cooking, farming and herb-work (one an hour) and twice that from the faith's own work. The Pyre earns it only by burning offerings, worth their value, doubled in autumn; a Burn button lists the pack at the pyre.
+  - **Boons, from canon:** +8% learning per rank in the flame's skills (Hearth: cookery, husbandry, herblore; Pyre: smithing, alchemy, kilncraft, evocation). Hearth from Hearth-Friend: lodging costs halved in winter. Pyre from Pyre-Walker: a quarter more from the forge.
+  - **Duties, from canon:** the Hearth asks three parish bakings in every six days of a Hearth-Friend, and from Keeper of Embers the Longest Night kept at the hearth. The Pyre asks every Brand to be at the Stubble-Burning, and holds Ash-Marked until the coals are walked. A duty missed is a Lapse: the boons go quiet until three acts of the faith restore them.
+  - **Two holy days** join the calendar from her canon `way`: the Longest Night (winter, kept in proportion: days 13–14) and the Stubble-Burning (the last five days of autumn). Four faith activities: baking for the poor, keeping the Longest Night, firing the stubble, walking the coals.
+  - **On screen:** a Faith panel on the sheet (the flame's ladder, devotion bar, lapse, duties) and a Shrine tab at her sites for joining and offering.
+  - **Not yet:** the ember from Valdora, the first bread every six days, being cast out, other faiths.
+  - Save version 18.

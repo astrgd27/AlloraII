@@ -5696,6 +5696,70 @@
    "text": "A bound ledger with ruled columns, for a household's accounts."
   }
  ],
+ "rites": [
+  {
+   "id": "rite_ilvara",
+   "faith": "ilvara",
+   "name": "Ilvara of the Two Flames",
+   "join": {
+    "skill": "skill_devotion",
+    "level": 5
+   },
+   "thresholds": [
+    0,
+    40,
+    120,
+    300,
+    700,
+    1500
+   ],
+   "aspects": [
+    {
+     "id": "hearth",
+     "place": "ostwick",
+     "sub": "shrine",
+     "skills": [
+      "skill_cookery",
+      "skill_husbandry",
+      "skill_herblore"
+     ],
+     "boon_skills": [
+      "skill_cookery",
+      "skill_husbandry",
+      "skill_herblore"
+     ],
+     "ranks": [
+      "Guest at the Hearth",
+      "Hearth-Friend",
+      "Keeper of Embers",
+      "Bread-Giver",
+      "Hearth-Warden",
+      "Mother’s Hand"
+     ]
+    },
+    {
+     "id": "pyre",
+     "place": "aschau",
+     "sub": "pyre",
+     "offerings": true,
+     "boon_skills": [
+      "skill_smithing",
+      "skill_alchemy",
+      "skill_kilncraft",
+      "skill_evocation"
+     ],
+     "ranks": [
+      "Kindling",
+      "Brand",
+      "Pyre-Walker",
+      "Ash-Marked",
+      "Red Warden",
+      "Reaper’s Torch"
+     ]
+    }
+   ]
+  }
+ ],
  "feasts": [
   {
    "id": "feast_harvest_home",
@@ -5736,6 +5800,26 @@
    "from": 25,
    "to": 28,
    "text": "For the last four days of winter Marre goes masked, and by ancient law no one may be asked who they are."
+  },
+  {
+   "id": "feast_longest_night",
+   "name": "The Longest Night",
+   "place": "ostwick",
+   "sub": "shrine",
+   "season": 3,
+   "from": 13,
+   "to": 14,
+   "text": "The hearths are kept burning through the longest night, so the winter knows it is not wanted."
+  },
+  {
+   "id": "feast_stubble_burning",
+   "name": "The Stubble-Burning",
+   "place": "aschau",
+   "sub": "pyre",
+   "season": 2,
+   "from": 24,
+   "to": 28,
+   "text": "The Pyre-Wardens fire the stubble at Aschau and walk the embers, while the Hearth-Church preaches against them."
   }
  ],
  "items": [
@@ -14213,6 +14297,78 @@
    "dc": 16,
    "effects": {
     "spirits": 4
+   }
+  },
+  {
+   "id": "activity_ilvara_bake_poor",
+   "name": "Bake for the poor",
+   "text": "A parish shift at the hearth-oven: loaves for every door that has none.",
+   "place": "ostwick",
+   "sub": "shrine",
+   "subName": "Hearth-Shrine of Ilvara",
+   "from": 5,
+   "to": 11,
+   "hours": 2,
+   "skill": "skill_cookery",
+   "faith": "ilvara",
+   "effects": {
+    "vigour": -4,
+    "spirits": 2
+   }
+  },
+  {
+   "id": "activity_ilvara_keep_night",
+   "name": "Keep the Longest Night",
+   "text": "Sit the first watch with the hearth, and feed it when it falters.",
+   "place": "ostwick",
+   "sub": "shrine",
+   "subName": "Hearth-Shrine of Ilvara",
+   "from": 18,
+   "to": 20,
+   "hours": 2,
+   "skill": "skill_devotion",
+   "feast": "feast_longest_night",
+   "faith": "ilvara",
+   "effects": {
+    "vigour": -6,
+    "spirits": 10
+   }
+  },
+  {
+   "id": "activity_ilvara_fire_stubble",
+   "name": "Fire the stubble",
+   "text": "A brand to the dry stalks, and stand back from what Ilvara takes.",
+   "place": "aschau",
+   "sub": "pyre",
+   "subName": "The Pyre Fields",
+   "from": 8,
+   "to": 18,
+   "hours": 3,
+   "skill": "skill_devotion",
+   "feast": "feast_stubble_burning",
+   "faith": "ilvara",
+   "effects": {
+    "vigour": -8,
+    "spirits": 6
+   }
+  },
+  {
+   "id": "activity_ilvara_walk_coals",
+   "name": "Walk the coals",
+   "text": "Barefoot across the embers, and do not stop in the middle.",
+   "place": "aschau",
+   "sub": "pyre",
+   "subName": "The Pyre Fields",
+   "from": 18,
+   "to": 23,
+   "hours": 1,
+   "skill": "skill_devotion",
+   "feast": "feast_stubble_burning",
+   "faith": "ilvara",
+   "dc": 18,
+   "effects": {
+    "health": -6,
+    "spirits": 12
    }
   },
   {
