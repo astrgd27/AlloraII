@@ -30,6 +30,8 @@ export interface Persona {
   about: string;
   /** Where this persona's lives begin and have their bed. Ostwick, if left out. */
   home?: string;
+  /** What the life starts with in its purse, if not the usual. */
+  money?: number;
   /** Called once per game hour, before the tick. May give the engine orders. */
   act(engine: Engine): void;
 }
@@ -37,7 +39,9 @@ export interface Persona {
 /** Walks to a place picked at random whenever it is standing still. */
 export const wanderer: Persona = {
   name: 'Wanderer',
-  about: 'Sets out for a random place whenever it is standing still.',
+  about: 'Sets out for a random place whenever it is standing still, with a purse for fares.',
+  // It never works: it travels on what it set out with, so that it can reach every place.
+  money: 1000,
   act(engine) {
     if (engine.state.journey) return;
     // Only where the purse can pay the tolls and fares.
@@ -254,6 +258,7 @@ export function playLife(persona: Persona, seed: number, hours: number): LifeRes
       owed: 0,
     };
   }
+  if (persona.money !== undefined) start.money = persona.money;
   const engine = new Engine(start);
   const result: LifeResult = {
     seed,
