@@ -126,7 +126,9 @@ function moneyLines(run: BalanceRun): string[] {
   for (let y = 0; y < gameYears; y++) {
     const purse = mean(lives.map((l) => l.purse[y] ?? 0));
     const growth = last !== undefined && last > 0 ? purse / last - 1 : undefined;
-    if (growth !== undefined && y >= 2 && growth > INFLATION_LIMIT) flagged = true;
+    // Judged on the last year: a life's first years are spent climbing.
+    if (growth !== undefined && y === gameYears - 1 && y >= 2 && growth > INFLATION_LIMIT)
+      flagged = true;
     lines.push(
       `| ${y + 1} | ${purse.toFixed(1)} | ${growth === undefined ? '—' : `${(growth * 100).toFixed(1)}%`} |`,
     );
@@ -135,7 +137,7 @@ function moneyLines(run: BalanceRun): string[] {
   if (flagged)
     lines.push(
       '',
-      `- **The money these lives hold grows by more than ${INFLATION_LIMIT * 100}% a year.** Their sinks are too few.`,
+      `- **The money these lives hold still grows by more than ${INFLATION_LIMIT * 100}% a year in the last year.** Their sinks are too few.`,
     );
   return lines;
 }

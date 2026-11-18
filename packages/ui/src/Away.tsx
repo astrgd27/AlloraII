@@ -52,6 +52,15 @@ function Hour({ value, set }: { value: number; set: (h: number) => void }) {
   );
 }
 
+const LIVING_WORDS = {
+  plain: ['Plainly', 'Spend nothing on comfort, and save'],
+  comfortable: [
+    'Comfortably',
+    'Spend a little of what is put by on good food and a fire, for the spirits',
+  ],
+  rich: ['Richly', 'Spend freely on fine things, for the spirits'],
+} as const;
+
 const WORK_WORDS = { never: 'Never', away: 'While away', always: 'Always' } as const;
 
 /** The routine decisions a life settles for itself. Display only. */
@@ -70,6 +79,20 @@ export function Orders({ snapshot, send }: { snapshot: Snapshot; send: Send }) {
             onClick={() => send({ type: 'setOrders', orders: { work } })}
           >
             {WORK_WORDS[work]}
+          </button>
+        ))}
+      </p>
+      <p>
+        Live
+        {(['plain', 'comfortable', 'rich'] as const).map((living) => (
+          <button
+            key={living}
+            type="button"
+            aria-pressed={o.living === living}
+            title={LIVING_WORDS[living][1]}
+            onClick={() => send({ type: 'setOrders', orders: { living } })}
+          >
+            {LIVING_WORDS[living][0]}
           </button>
         ))}
       </p>

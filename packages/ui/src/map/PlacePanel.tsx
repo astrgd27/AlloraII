@@ -1,5 +1,5 @@
 import { WORLD, type Order, type Snapshot } from '@allora/engine';
-import { hoursText } from '../format';
+import { hoursText, pf } from '../format';
 
 interface Props {
   snapshot: Snapshot;
@@ -46,6 +46,8 @@ export function PlacePanel({ snapshot, chosen, send }: Props) {
 
   const target = chosen && chosen !== place ? chosen : undefined;
   const hours = target ? hoursTo[target] : undefined;
+  const cost = target ? (snapshot.costsTo[target] ?? 0) : 0;
+  const short = cost > snapshot.money ? 'Not enough for the tolls and fares' : undefined;
   return (
     <div className="place-panel" data-testid="place-panel">
       <p>
@@ -53,16 +55,25 @@ export function PlacePanel({ snapshot, chosen, send }: Props) {
           {nameOf(target ?? place)}
         </span>
         {hours !== undefined && <span className="quiet"> · {hoursText(hours)}</span>}
+        {target && cost > 0 && (
+          <span
+            className="quiet"
+            title="Tolls on the Duke's Road and fares by boat, paid on setting out"
+          >
+            {' '}
+            · {pf(cost)}
+          </span>
+        )}
       </p>
       {target && hours !== undefined && (
         <button
           type="button"
           data-testid="set-out"
-          disabled={Boolean(snapshot.blocked.travel)}
+          disabled={Boolean(snapshot.blocked.travel ?? short)}
           title={
             snapshot.blocked.travel
               ? `${snapshot.blocked.travel}. Set the work down first.`
-              : 'By the quickest way'
+              : (short ?? 'By the quickest way')
           }
           onClick={() => send({ type: 'travel', to: target })}
         >

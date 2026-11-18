@@ -41,7 +41,8 @@ describe('money', () => {
     expect(e.state.journey).not.toBeNull();
     expect(e.state.goods.bread).toBe(1);
     expect(e.state.poorMeals).toBe(0);
-    expect(e.state.money).toBe(START_MONEY);
+    // The Duke's Road is tolled; the toll is paid on setting out.
+    expect(e.state.money).toBeCloseTo(START_MONEY - (e.world.costsFrom('ostwick').tennfels ?? 0));
   });
 
   it('pays for work when it is done', () => {

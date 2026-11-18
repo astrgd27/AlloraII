@@ -20,6 +20,7 @@ import { HOURS_PER_DAY, dateAt, type GameDate } from './calendar';
 import { EventBus } from './events';
 import type { Order } from './protocol';
 import { innAt, leaveHome, payRent, rent, rentAt, type Lodging } from './housing';
+import { liveDay, payDues } from './living';
 import { note, type LogEntry } from './log';
 import { toolFor, toolModifiers, wearLeft } from './tools';
 import {
@@ -164,6 +165,8 @@ export interface Snapshot {
     legProgress: number;
     hoursLeft: number;
   } | null;
+  /** Tolls and fares from the life's place to every place it can reach. */
+  costsTo: Record<string, number>;
   /** Travel hours from the life's place to every place it can reach. */
   hoursTo: Record<string, number>;
 }
@@ -213,6 +216,8 @@ export class Engine {
       if (payRent(this.state))
         note(this.state, { kind: 'evicted', home: kind, place: this.state.home });
     }
+    if (date.hour === 0) liveDay(this.state);
+    if (date.seasonIndex !== before.seasonIndex) payDues(this.state, this.world);
     routine(this.state, this.world, before, this.away);
     for (const system of this.systems) system.tick(this.state, date, this.bus, this.world);
     const rank = this.state.post?.rank ?? 0;
@@ -522,6 +527,7 @@ export class Engine {
             }
           : null,
       hoursTo: j ? {} : this.world.hoursFrom(this.state.place),
+      costsTo: j ? {} : this.world.costsFrom(this.state.place),
       hours: this.state.hours,
       date: dateAt(this.state.hours),
       paused: this.state.paused,

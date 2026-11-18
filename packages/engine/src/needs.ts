@@ -8,6 +8,7 @@
  */
 import type { System } from './engine';
 import { HOMES, INN, atHome, takeInnBed } from './housing';
+import type { Living } from './living';
 import { MEAL_COST, spend } from './money';
 import type { GameState } from './state';
 import type { World } from './world';
@@ -35,6 +36,8 @@ export interface StandingOrders {
   turnBackIfHurt: boolean;
   /** Away from home, take an inn bed for the night where there is one. */
   inn: boolean;
+  /** How well to live: plainly saves; comfortably and richly spend, and lift the spirits. */
+  living: Living;
 }
 
 export const DEFAULT_ORDERS: StandingOrders = {
@@ -44,6 +47,7 @@ export const DEFAULT_ORDERS: StandingOrders = {
   work: 'away',
   turnBackIfHurt: true,
   inn: true,
+  living: 'comfortable',
 };
 export const FULL_NEEDS: Needs = { vigour: 100, health: 100, spirits: 70 };
 

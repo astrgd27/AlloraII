@@ -93,6 +93,12 @@ export const MIGRATIONS: Record<number, (save: AnySave) => AnySave> = {
   }),
   // Version 14 adds the wear on tools and the pieces a life keeps.
   13: (save) => ({ ...save, version: 14, wear: {}, keepsakes: [] }),
+  // Version 15 adds the way of living.
+  14: (save) => ({
+    ...save,
+    version: 15,
+    orders: { ...(save.orders as object), living: 'comfortable' },
+  }),
 };
 
 export function versionOf(save: unknown): number {

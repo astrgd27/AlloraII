@@ -32,7 +32,7 @@
 
 7. **Homes and lodging.** A rented room, then a cottage: rent, comfort, sleeping well away from home at an inn for a price. The first real money sink. *(done)*
 8. **Items and tools.** Things with properties: tools that help work and wear out, clothes, food kinds. The smith's commission becomes an object with a quality. *(done)*
-9. **Dues, fares and tolls,** and wage tuning, until the inflation flag clears.
+9. **Dues, fares and tolls,** and wage tuning, until the inflation flag clears. *(done; two careers still flagged, see the decision)*
 10. **The trades diverge.** One deep feature each: the smith's materials and techniques; the butler's Trust and Harmony; the inquirer's case board with time pressure.
 11. **Weather, seasons and the calendar.** Weather on the road, market and feast days from canon faiths, seasonal work.
 12. **Bonds.** Acquaintance to friendship: gifts, favours, people who remember, and what a friend opens.
@@ -100,3 +100,13 @@
   - **Features are rare:** the inquirer's Insight has no tool. Not every skill should.
   - **Not yet:** clothes, kinds of food that differ, materials with properties, and selling a made piece.
   - **Balance:** careerists keep their trade's tool and buy another when it breaks. The smith now climbs faster (grandmaster at about day 407, was 539) and earns more; the butler a little; the inquirer not at all. The three careers begin to differ.
+- **2026-11-18 · Dues, fares, tolls and the way of living (#64).** Decisions:
+  - **Tolls:** the Duke's Road is tolled (its canon-grown text says "tolled at his pleasure"): 0.25 pf a stretch. A route in content can now carry a `toll`.
+  - **Fares:** every way by boat costs 0.05 pf an hour aboard, never less than 0.2. Tolls and fares are paid on setting out; with too little in the purse the life cannot go, and the place panel shows the cost and says why. Untolled ways stay free.
+  - **Dues:** a post with a guild charges dues each season by rank (the Anvil: 2, 6, 15, 40 pf). Unpaid dues cost 10 standing. The household and the Cerdans have no guild, so no dues: features are rare.
+  - **New mechanic, the way of living** (standing order: plainly, comfortably, richly). The gap: every fixed sink (rent, food, dues) leaves a rising income piling up for ever, so wealth needs a sink that grows with it, and a life sim needs a way to spend on comfort. Plain living spends nothing. Comfortable (the default) spends 0.7% a day of the purse above 50 pf on good food, a fire and new cloth, and lifts the spirits by 1 a day; rich spends 1.5% and lifts them by 3. A life that wants to save chooses plain.
+  - **Wages are unchanged.** Lowering them would not stop a rising income piling up; a sink that grows with wealth does.
+  - **Result:** the smith's purse settles (−0.9% in year ten). The butler's (+3.8%) and the inquirer's (+5.0%) still grow a little in year ten, because their *income* is still rising then: skill and the quality of their cases keep climbing. The report now judges the last year only.
+  - **For the owner:** the gate says the purse should grow under 3% a year by year ten. I suggest judging it against income instead (a purse that grows no faster than the life's income is a life getting better at its work, not inflation). Not changed without your word.
+  - The balance personas keep their trade's tool, take a cottage at 200 pf, and live richly once they hold a master's rank and 1,500 pf.
+  - Save version 15.

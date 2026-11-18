@@ -67,6 +67,8 @@ export interface NamedRoute {
   id: string;
   name: string;
   text: string;
+  /** Paid on each stretch of it, if it is tolled. */
+  toll?: number;
 }
 
 /** Something that can happen on the way. */
@@ -135,6 +137,8 @@ export interface Post {
   ranks: string[];
   /** Pay for an hour's work at each rank, in pf. */
   pay?: number[];
+  /** Dues each season at each rank, where the post has a guild. */
+  dues?: number[];
   work: WorkStep[];
 }
 
@@ -205,12 +209,21 @@ export interface Leg {
   /** True on water (a sea lane or a river): the life is a passenger and can sleep aboard. */
   sea?: true;
   way?: Road['way'];
+  /** What it costs to pass: a toll on a tolled road, a fare by boat. */
+  cost?: number;
 }
 
 export interface Route {
   legs: Leg[];
   hours: number;
 }
+
+/** A boat fare: so much an hour aboard, and never less than this. */
+export const FARE = { perHour: 0.05, least: 0.2 };
+const round2 = (n: number): number => Math.round(n * 100) / 100;
+
+/** What a way costs to travel: tolls and fares, leg by leg. */
+export const costOf = (legs: Leg[]): number => round2(legs.reduce((n, l) => n + (l.cost ?? 0), 0));
 
 export class World {
   readonly places = new Map<string, Place>();
@@ -226,6 +239,7 @@ export class World {
   private readonly links = new Map<string, Leg[]>();
   /** The roads do not change, so travel hours from a place are worked out once. */
   private readonly hoursCache = new Map<string, Record<string, number>>();
+  private readonly costCache = new Map<string, Record<string, number>>();
 
   constructor(readonly data: WorldData = WORLD) {
     for (const place of data.places) {
@@ -245,7 +259,13 @@ export class World {
     }
     for (const road of data.roads) {
       const water = road.way === 'sea' || road.way === 'river';
-      const extra = { way: road.way, ...(water ? ({ sea: true } as const) : {}) };
+      const toll = (data.routes ?? []).find((r) => r.id === road.route)?.toll ?? 0;
+      const cost = round2(toll + (water ? Math.max(FARE.least, FARE.perHour * road.hours) : 0));
+      const extra = {
+        way: road.way,
+        ...(water ? ({ sea: true } as const) : {}),
+        ...(cost > 0 ? { cost } : {}),
+      };
       this.links.get(road.from)?.push({ road: road.id, to: road.to, hours: road.hours, ...extra });
       this.links.get(road.to)?.push({ road: road.id, to: road.from, hours: road.hours, ...extra });
     }
@@ -288,6 +308,19 @@ export class World {
       at = step.from;
     }
     return { legs, hours: best.get(to) ?? 0 };
+  }
+
+  /** What it costs to travel from one place to every place that can be reached. */
+  costsFrom(from: string): Record<string, number> {
+    const known = this.costCache.get(from);
+    if (known) return known;
+    const out: Record<string, number> = {};
+    for (const id of this.places.keys()) {
+      const route = this.route(from, id);
+      if (route) out[id] = costOf(route.legs);
+    }
+    this.costCache.set(from, out);
+    return out;
   }
 
   /** Travel hours from one place to every place that can be reached. */

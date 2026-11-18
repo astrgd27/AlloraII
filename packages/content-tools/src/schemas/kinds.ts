@@ -99,6 +99,8 @@ const rankSchema = z.looseObject({
   trial: text.optional(),
   /** Pay for an hour's work at this rank, in pf. */
   pay: z.number().nonnegative().optional(),
+  /** Dues to the post's guild each season at this rank, in pf. */
+  dues: z.number().nonnegative().optional(),
 });
 
 const approachSchema = z.looseObject({

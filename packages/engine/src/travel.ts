@@ -2,7 +2,8 @@
 import type { System } from './engine';
 import type { GameState } from './state';
 import { nextRandom } from './rng';
-import { WORLD, type RoadEvent, type World } from './world';
+import { spend } from './money';
+import { WORLD, costOf, type RoadEvent, type World } from './world';
 
 /** The chance, each waking hour on the way, that something happens. */
 export const ROAD_EVENT_CHANCE = 1 / 12;
@@ -22,6 +23,8 @@ export function setOut(state: GameState, world: World, to: string): void {
   if (to === state.place) throw new Error('Already there');
   const route = world.route(state.place, to);
   if (!route) throw new Error(`There is no way to ${to}`);
+  // Tolls and fares are paid on setting out: no purse, no passage.
+  if (!spend(state, costOf(route.legs))) throw new Error('Not enough for the tolls and fares');
   state.journey = { from: state.place, to, legs: route.legs, legHours: 0 };
   state.roadEvent = null;
 }
