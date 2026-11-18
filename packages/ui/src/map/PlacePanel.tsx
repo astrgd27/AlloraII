@@ -58,6 +58,12 @@ export function PlacePanel({ snapshot, chosen, send }: Props) {
         <button
           type="button"
           data-testid="set-out"
+          disabled={Boolean(snapshot.blocked.travel)}
+          title={
+            snapshot.blocked.travel
+              ? `${snapshot.blocked.travel}. Set the work down first.`
+              : 'By the quickest way'
+          }
           onClick={() => send({ type: 'travel', to: target })}
         >
           Set out

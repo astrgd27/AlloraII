@@ -22,7 +22,7 @@
 ### A. The interface (first)
 
 1. **The game shell.** Full-screen map as the world; a top bar (date and hour, time controls, purse, needs); framed panels at the sides; a "now" bar that always shows what the life is doing and how far along; a visual language (colour, type, frames, icons) fit for a simulation game. Landscape, 1024 px and up. *(done)*
-2. **Every click answers.** Buttons that cannot act are disabled and say why on hover. A refused order explains itself where it was given. A short log of what just happened.
+2. **Every click answers.** Buttons that cannot act are disabled and say why on hover. A refused order explains itself where it was given. A short log of what just happened. *(done)*
 3. **The place panel.** One panel for where you are: the scene, who is here, what can be done, the market, the post, in tabs. Tooltips for hours, pay, odds and skills.
 4. **The character sheet.** Needs, skills with gates, the career ladder, purse and pack, standing orders, and the away report, as proper panels.
 5. **The map.** Pan and zoom, labels that thin out by zoom, drawn terrain and water, the route to a chosen place with its hours, and the life moving along it.
@@ -57,3 +57,9 @@
   - **A refused order** now shows in the now bar and clears with the next order. Before, it stayed at the foot of the page for good. Doing this properly is #57.
   - **Empty panels say why** in a line ("Nobody is about.", "Nothing to be done here at this hour.").
   - **Work now shows its pay** beside its hours.
+- **2026-11-18 · Every click answers (#57).** Decisions:
+  - **All the work of a place is listed,** not only what can be begun this hour. What cannot be begun is shown disabled with its reason under it ("From the 7th hour to the 18th", "Only in spring", "Busy", "Asleep"). Duties of a post the life does not hold are not shown.
+  - **Every disabled button says why** on hover: people while asleep, setting out while busy, a case step away from the workshop, buying with too little money or a full pack. The engine works out each reason and sends it with the state, so the page holds no rules.
+  - **A refused order shows where the player clicked,** in a red note that fades after four seconds. It used to sit at the foot of the page for good.
+  - **"Lately":** the last twelve things that happened (work done and its pay, a check's result, cases closed, a new rank, arrivals, things on the road, people met, things bought and sold), newest first. The engine keeps the last forty. Save version 12.
+  - **A browser test in CI** (`pnpm e2e`, job `play`): it plays the built game, clicks 75 buttons over three games, and fails if any click changes nothing and says nothing, or if a disabled button gives no reason.

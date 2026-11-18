@@ -583,3 +583,63 @@ button:disabled {
     gap: 0.3rem;
   }
 }
+
+/* Why a thing cannot be done, and what just happened */
+.why {
+  display: block;
+  font-size: 0.82rem;
+  color: #e2a48f;
+}
+
+.refusal {
+  position: fixed;
+  z-index: 10;
+  max-width: 250px;
+  pointer-events: none;
+  box-shadow: 0 2px 10px #000c;
+  animation:
+    refusal-in 0.15s ease-out,
+    refusal-out 0.4s ease-in 4s forwards;
+}
+
+@keyframes refusal-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes refusal-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+.log {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.88rem;
+}
+
+.log li {
+  display: grid;
+  grid-template-columns: 2.2rem 1fr;
+  gap: 0.4rem;
+  padding: 0.15rem 0;
+  border-bottom: 1px solid #ffffff0a;
+}
+
+.log li:first-child {
+  color: #fff3d6;
+}
+
+button {
+  transition:
+    background 0.1s,
+    border-color 0.1s;
+}
+
+button:active:not(:disabled) {
+  background: var(--gilt-dim);
+}

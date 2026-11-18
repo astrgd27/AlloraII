@@ -1,5 +1,5 @@
 import { WORLD, type Order, type Snapshot } from '@allora/engine';
-import { pf } from './format';
+import { ordinal, pf } from './format';
 
 const itemName = new Map((WORLD.items ?? []).map((i) => [i.id, i.name]));
 const marketName = new Map((WORLD.markets ?? []).map((m) => [m.id, m.name]));
@@ -8,6 +8,7 @@ const marketName = new Map((WORLD.markets ?? []).map((m) => [m.id, m.name]));
 export function Market({ snapshot, send }: { snapshot: Snapshot; send: (order: Order) => void }) {
   const market = snapshot.market;
   const pack = Object.entries(snapshot.goods);
+  const hours = (WORLD.markets ?? []).find((m) => m.id === market?.id);
   return (
     <section className="market" data-testid="market">
       <p data-testid="purse">
@@ -24,10 +25,14 @@ export function Market({ snapshot, send }: { snapshot: Snapshot; send: (order: O
           <summary>
             {marketName.get(market.id)}
             <span className="quiet">
-              {market.open ? (market.marketDay ? ' · market day' : '') : ' · shut'}
+              {market.open
+                ? market.marketDay
+                  ? ' · market day'
+                  : ''
+                : ` · shut · open from the ${ordinal(hours?.from ?? 0)} hour to the ${ordinal(hours?.to ?? 0)}`}
             </span>
           </summary>
-          {market.open && (
+          {market.open && !snapshot.blocked.market && (
             <ul>
               {market.stock.map((s) => (
                 <li key={s.item}>
@@ -36,7 +41,8 @@ export function Market({ snapshot, send }: { snapshot: Snapshot; send: (order: O
                     <button
                       type="button"
                       data-buy={s.item}
-                      disabled={s.buy > snapshot.money}
+                      disabled={Boolean(s.why)}
+                      title={s.why ?? 'Buy one'}
                       onClick={() => send({ type: 'buy', item: s.item })}
                     >
                       Buy · {pf(s.buy)}

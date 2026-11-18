@@ -1,0 +1,66 @@
+import { WORLD, type LogEntry, type Snapshot } from '@allora/engine';
+import { pf } from './format';
+
+const name = <T extends { id: string; name: string }>(list: T[] | undefined) => {
+  const map = new Map((list ?? []).map((x) => [x.id, x.name]));
+  return (id: string): string => map.get(id) ?? id;
+};
+const activity = name(WORLD.activities);
+const place = name(WORLD.places);
+const person = name(WORLD.people);
+const item = name(WORLD.items);
+const caseName = name(WORLD.cases);
+const posts = new Map((WORLD.posts ?? []).map((p) => [p.id, p]));
+const roadEvent = new Map((WORLD.roadEvents ?? []).map((e) => [e.id, e.text]));
+
+const DEGREE = {
+  triumph: 'a triumph',
+  success: 'done well',
+  cost: 'done, at a cost',
+  failure: 'it went badly',
+  disaster: 'a disaster',
+};
+
+/** One line for one thing that happened. */
+export function logText(e: LogEntry): string {
+  switch (e.kind) {
+    case 'done':
+      return [activity(e.id), e.degree ? DEGREE[e.degree] : '', e.pay ? `+${pf(e.pay)}` : '']
+        .filter(Boolean)
+        .join(' · ');
+    case 'case':
+      return `${caseName(e.id)} · ${e.trial ? 'trial' : 'closed'}, quality ${e.quality}`;
+    case 'rank':
+      return `Raised to ${posts.get(e.post)?.ranks[e.rank] ?? 'a new rank'}`;
+    case 'arrived':
+      return `Arrived at ${place(e.place)}`;
+    case 'road':
+      return roadEvent.get(e.id) ?? 'Something on the road';
+    case 'met':
+      return `Met ${person(e.person)}`;
+    case 'bought':
+      return `Bought ${item(e.item)} · −${pf(e.price)}`;
+    case 'sold':
+      return `Sold ${item(e.item)} · +${pf(e.price)}`;
+  }
+}
+
+/** What just happened, newest first. Display only. */
+export function Log({ snapshot }: { snapshot: Snapshot }) {
+  if (snapshot.log.length === 0) return <p className="quiet">Nothing yet.</p>;
+  return (
+    <ol className="log" data-testid="log">
+      {snapshot.log.map((e, i) => {
+        const ago = snapshot.hours - e.hours;
+        return (
+          <li key={`${e.hours}-${i}`}>
+            <span className="quiet">
+              {ago < 1 ? 'now' : ago < 24 ? `${ago}h` : `${Math.floor(ago / 24)}d`}
+            </span>
+            {logText(e)}
+          </li>
+        );
+      })}
+    </ol>
+  );
+}

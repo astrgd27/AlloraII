@@ -1,6 +1,7 @@
 /** The whole game state. The engine owns it; the UI only ever sees snapshots. */
 import type { Doing, LastCheck } from './activities';
 import type { Held, Venture, Work } from './career';
+import type { LogEntry } from './log';
 import type { Stall } from './market';
 import { START_MONEY } from './money';
 import type { Bond, Words } from './people';
@@ -23,7 +24,7 @@ export interface Journey {
 }
 
 /** The save format version. Raise it with every change to GameState, and add a migration. */
-export const SAVE_VERSION = 11;
+export const SAVE_VERSION = 12;
 
 export interface GameState {
   version: typeof SAVE_VERSION;
@@ -84,6 +85,8 @@ export interface GameState {
   /** What happened while the player was away, until it is read. */
   report: Report | null;
   turnedBack: boolean;
+  /** What just happened, oldest first. */
+  log: LogEntry[];
 }
 
 export function newGame(seed: number, nowMs: number): GameState {
@@ -125,5 +128,6 @@ export function newGame(seed: number, nowMs: number): GameState {
     poorMeals: 0,
     report: null,
     turnedBack: false,
+    log: [],
   };
 }

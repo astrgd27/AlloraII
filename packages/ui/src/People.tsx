@@ -27,6 +27,8 @@ export function People({ snapshot, send }: { snapshot: Snapshot; send: (order: O
               <button
                 type="button"
                 data-person={h.id}
+                disabled={Boolean(snapshot.blocked.people)}
+                title={snapshot.blocked.people ?? (h.known ? 'Talk' : 'Meet')}
                 onClick={() => send({ type: h.known ? 'talk' : 'meet', person: h.id })}
               >
                 {h.known ? person.name : person.hint}

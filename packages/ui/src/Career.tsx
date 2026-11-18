@@ -45,13 +45,15 @@ export function Career({ snapshot, send }: { snapshot: Snapshot; send: (order: O
             </span>
           </p>
           <p className="quiet">{inHand.text}</p>
+          {snapshot.blocked.step && <p className="why">{snapshot.blocked.step}</p>}
           <ul>
             {venture.choices.map((c) => (
               <li key={c.id}>
                 <button
                   type="button"
                   data-approach={c.id}
-                  title={`${Math.round(c.chance * 100)} in 100`}
+                  disabled={Boolean(snapshot.blocked.step)}
+                  title={snapshot.blocked.step ?? `${Math.round(c.chance * 100)} in 100`}
                   onClick={() => send({ type: 'step', approach: c.id })}
                 >
                   {step?.approaches.find((a) => a.id === c.id)?.name}
