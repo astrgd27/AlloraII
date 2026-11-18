@@ -26,6 +26,7 @@ export * from './skills';
 export * from './state';
 export * from './tools';
 export * from './travel';
+export * from './weather';
 export * from './world';
 export * from './save/migrations';
 export * from './save/store';

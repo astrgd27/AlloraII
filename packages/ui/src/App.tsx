@@ -1,6 +1,7 @@
 import { SPEEDS, WORLD, type Order } from '@allora/engine';
 import { useEffect, useState, useSyncExternalStore } from 'react';
 import { Orders, Report } from './Away';
+import { Calendar } from './Calendar';
 import { Calling } from './Career';
 import { engine } from './engine-client';
 import { MapView } from './map/MapView';
@@ -87,6 +88,9 @@ export function App() {
         <Panel title="Standing orders">
           <Orders snapshot={snapshot} send={send} />
         </Panel>
+        <Panel title="Feasts">
+          <Calendar snapshot={snapshot} />
+        </Panel>
         <Panel title="Lately">
           <Log snapshot={snapshot} />
         </Panel>
@@ -116,6 +120,13 @@ export function App() {
           aside={here ? WORLD.regions.find((r) => r.id === regionOf(snapshot.place))?.name : ''}
           testid="place"
         >
+          {snapshot.feasts
+            .filter((f) => f.here)
+            .map((f) => (
+              <p key={f.id} className="feast-banner" data-testid="feast">
+                {WORLD.feasts?.find((x) => x.id === f.id)?.name}
+              </p>
+            ))}
           <SceneView snapshot={snapshot} />
         </Panel>
         {here ? (

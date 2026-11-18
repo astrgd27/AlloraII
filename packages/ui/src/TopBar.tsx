@@ -10,6 +10,16 @@ const NEEDS = [
 ] as const;
 
 /** The bar across the top: the date, the needs and the purse. Display only. */
+const WEATHER_HINT: Record<string, string> = {
+  fair: 'Fair weather: good for the road and the spirits.',
+  overcast: 'Grey, but dry.',
+  rain: 'Rain: roads are slower, and spirits sink on the way.',
+  fog: 'Fog: boats go slowly, roads a little slower.',
+  snow: 'Snow: roads are much slower and the cold tires.',
+  heat: 'Heat: the road tires.',
+  storm: 'Storm: no boat puts out, and the roads are hard going.',
+};
+
 const PACE = ['A game hour each minute', 'A game hour each six seconds', 'A game hour each second'];
 
 /** Pause, and the pace of the clock. Keys: space to pause, 1 2 3 for the pace. */
@@ -60,6 +70,13 @@ export function TopBar({ snapshot, send }: { snapshot: Snapshot; send: (order: O
           {snapshot.paused ? 'Paused' : formatHour(snapshot.date)}
         </span>
         <Bar value={snapshot.hourProgress} label="The hour" tone="thin" />
+      </div>
+      <div
+        className="weather"
+        data-testid="weather"
+        title={WEATHER_HINT[snapshot.weather.id] ?? ''}
+      >
+        {snapshot.weather.name}
       </div>
       <TimeControls snapshot={snapshot} send={send} />
       <ul className="needs" data-testid="needs">

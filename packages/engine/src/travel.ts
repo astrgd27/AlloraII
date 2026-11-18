@@ -3,6 +3,7 @@ import type { System } from './engine';
 import type { GameState } from './state';
 import { nextRandom } from './rng';
 import { spend } from './money';
+import { weatherOf } from './weather';
 import { WORLD, costOf, type RoadEvent, type World } from './world';
 
 /** The chance, each waking hour on the way, that something happens. */
@@ -52,13 +53,21 @@ export function turnBack(state: GameState): void {
 /** Each hour on the road is an hour of the current leg. */
 export const travelSystem: System = {
   name: 'travel',
-  tick(state, _date, bus) {
+  tick(state, date, bus, world) {
     const journey = state.journey;
     const leg = journey?.legs[0];
     if (!journey || !leg) return;
     // Asleep on a road, the life is in camp and gets no further. At sea, the ship sails on.
     if (state.asleep && leg.sea !== true) return;
-    journey.legHours += 1;
+    // The weather where the way leads sets the pace; in a storm no boat puts out.
+    const weather = weatherOf(world.places.get(leg.to)?.region ?? '', date);
+    const slow = leg.sea ? weather.water : weather.land;
+    if (!state.asleep) {
+      state.needs.spirits = clamp(state.needs.spirits + weather.spirits);
+      state.needs.vigour = clamp(state.needs.vigour + weather.vigour);
+    }
+    if (slow === 0) return;
+    journey.legHours = Math.round((journey.legHours + 1 / slow) * 1000) / 1000;
     if (!state.asleep && nextRandom(state.rng, state.seed, 'road') < ROAD_EVENT_CHANCE) {
       const options = eventsFor(leg.way, WORLD.roadEvents ?? []);
       const event = options[Math.floor(nextRandom(state.rng, state.seed, 'road') * options.length)];

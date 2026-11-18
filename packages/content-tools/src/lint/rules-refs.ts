@@ -23,6 +23,7 @@ export const REFERENCE_FIELDS = [
   'post',
   'makes',
   'item',
+  'feast',
 ];
 
 export function lintReferences(additions: Loaded[], index: CanonIndex): Problem[] {

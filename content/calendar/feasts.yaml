@@ -1,0 +1,60 @@
+# Feasts of Eintenn and Marre, from Allora I's fixed events (canon/allora-1.html, kind 'fixed').
+# Allora I's seasons have 12 days and Allora II's have 28: a feast that opens a season stays at
+# its start, one that closes a season stays at its end, others keep their place in proportion.
+# Each keeps its length. `canon_event` names the Allora I event.
+- id: feast_harvest_home
+  origin: allora2
+  kind: feast
+  roots:
+    - ostwick
+    - lore_harvest
+  canon_event: harvest_home
+  name: Harvest Home
+  place: ostwick
+  sub: harvesthome
+  season: 2
+  from: 26
+  to: 28
+  text: 'The last sheaf is brought in, dressed as the Harvest Mare and danced round the green; then the whole village sits down to supper.'
+- id: feast_regatta
+  origin: allora2
+  kind: feast
+  roots:
+    - marre_city
+    - lore_regatta
+  canon_event: regatta
+  name: The Regatta
+  place: marre_city
+  sub: regatta
+  season: 1
+  from: 6
+  to: 7
+  text: 'The gondoliers of the six sestieri race the Grand Canal, and the losers buy the wine.'
+- id: feast_lagoon
+  origin: allora2
+  kind: feast
+  roots:
+    - marre_palace
+    - lore_feast_lagoon
+  canon_event: feast_lagoon
+  name: The Feast of the Lagoon
+  place: marre_palace
+  sub: feast
+  season: 0
+  from: 1
+  to: 3
+  text: 'The Doge weds the sea, and all Marre follows the golden barge.'
+- id: feast_carnevale
+  origin: allora2
+  kind: feast
+  roots:
+    - marre_city
+    - lore_carnevale
+  canon_event: carnevale
+  name: Carnevale
+  place: marre_city
+  sub: carnevale
+  season: 3
+  from: 25
+  to: 28
+  text: 'For the last four days of winter Marre goes masked, and by ancient law no one may be asked who they are.'

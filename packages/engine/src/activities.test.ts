@@ -9,16 +9,17 @@ import { WORLD } from './world';
 const ACTIVITIES = WORLD.activities ?? [];
 
 /** An engine standing in Ostwick at a given hour of the day, in a given season. */
-function at(hour: number, season = 0, place = 'ostwick'): Engine {
+function at(hour: number, season = 0, place = 'ostwick', day = 1): Engine {
   const state = newGame(1, 0);
   state.place = place;
-  state.hours = season * DAYS_PER_SEASON * HOURS_PER_DAY + ((hour - START_HOUR + 24) % 24);
+  state.hours =
+    (season * DAYS_PER_SEASON + day - 1) * HOURS_PER_DAY + ((hour - START_HOUR + 24) % 24);
   return new Engine(state);
 }
 
 describe('the activities', () => {
   it('are twenty in Ostwick and one at each new place, each in a real sub-place', () => {
-    expect(ACTIVITIES.filter((a) => a.place === 'ostwick')).toHaveLength(20);
+    expect(ACTIVITIES.filter((a) => a.place === 'ostwick' && !a.feast)).toHaveLength(20);
     const places = new Set(WORLD.places.map((p) => p.id));
     for (const a of ACTIVITIES) {
       expect(places.has(a.place)).toBe(true);
@@ -28,7 +29,10 @@ describe('the activities', () => {
   });
 
   it.each(ACTIVITIES.map((a) => [a.id, a] as const))('%s: done at its place and hour', (_id, a) => {
-    const engine = at(a.from, a.seasons?.[0] ?? 0, a.place);
+    const feast = WORLD.feasts?.find((f) => f.id === a.feast);
+    const engine = feast
+      ? at(a.from, feast.season, a.place, feast.from)
+      : at(a.from, a.seasons?.[0] ?? 0, a.place);
     if (a.post) engine.state.post = { id: a.post, rank: 0, standing: 0 };
     expect(engine.snapshot().canDo).toContain(a.id);
     engine.handle({ type: 'do', activity: a.id }, 0);

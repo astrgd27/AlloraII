@@ -42,7 +42,8 @@ import { mark, routine, writeReport, type Report } from './routine';
 import { capOf, xpToNext, type SkillState } from './skills';
 import { type GameState } from './state';
 import { travelSystem, turnBack, setOut } from './travel';
-import { World } from './world';
+import { World, feastOn } from './world';
+import { weatherOf } from './weather';
 
 /** The paces the clock can run at while the game is open: a game hour a minute, six seconds, a second. */
 export const SPEEDS = [1, 10, 60];
@@ -176,6 +177,10 @@ export interface Snapshot {
     legProgress: number;
     hoursLeft: number;
   } | null;
+  /** Today's weather where the life is. */
+  weather: { id: string; name: string };
+  /** Feasts on today anywhere in the world, and whether here. */
+  feasts: { id: string; here: boolean }[];
   /** Tolls and fares from the life's place to every place it can reach. */
   costsTo: Record<string, number>;
   /** Travel hours from the life's place to every place it can reach. */
@@ -417,7 +422,7 @@ export class Engine {
         : [...this.world.activities.values()]
             .filter((a) => a.place === s.place && (!a.post || a.post === s.post?.id))
             .map((a) => {
-              const reason = whyNot(a, s, date);
+              const reason = whyNot(a, s, date, this.world);
               return { id: a.id, ...(reason ? { reason } : {}) };
             }),
       report: this.state.report,
@@ -558,6 +563,16 @@ export class Engine {
           : null,
       hoursTo: j ? {} : this.world.hoursFrom(this.state.place),
       costsTo: j ? {} : this.world.costsFrom(this.state.place),
+      weather: (() => {
+        const w = weatherOf(
+          this.world.places.get(j ? (j.legs[0]?.to ?? s.place) : s.place)?.region ?? '',
+          date,
+        );
+        return { id: w.id, name: w.name };
+      })(),
+      feasts: [...this.world.feasts.values()]
+        .filter((f) => feastOn(f, date))
+        .map((f) => ({ id: f.id, here: !j && f.place === s.place })),
       hours: this.state.hours,
       date: dateAt(this.state.hours),
       paused: this.state.paused,

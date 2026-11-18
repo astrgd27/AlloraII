@@ -5696,6 +5696,48 @@
    "text": "A bound ledger with ruled columns, for a household's accounts."
   }
  ],
+ "feasts": [
+  {
+   "id": "feast_harvest_home",
+   "name": "Harvest Home",
+   "place": "ostwick",
+   "sub": "harvesthome",
+   "season": 2,
+   "from": 26,
+   "to": 28,
+   "text": "The last sheaf is brought in, dressed as the Harvest Mare and danced round the green; then the whole village sits down to supper."
+  },
+  {
+   "id": "feast_regatta",
+   "name": "The Regatta",
+   "place": "marre_city",
+   "sub": "regatta",
+   "season": 1,
+   "from": 6,
+   "to": 7,
+   "text": "The gondoliers of the six sestieri race the Grand Canal, and the losers buy the wine."
+  },
+  {
+   "id": "feast_lagoon",
+   "name": "The Feast of the Lagoon",
+   "place": "marre_palace",
+   "sub": "feast",
+   "season": 0,
+   "from": 1,
+   "to": 3,
+   "text": "The Doge weds the sea, and all Marre follows the golden barge."
+  },
+  {
+   "id": "feast_carnevale",
+   "name": "Carnevale",
+   "place": "marre_city",
+   "sub": "carnevale",
+   "season": 3,
+   "from": 25,
+   "to": 28,
+   "text": "For the last four days of winter Marre goes masked, and by ancient law no one may be asked who they are."
+  }
+ ],
  "items": [
   {
    "id": "ale",
@@ -13694,6 +13736,141 @@
    "pay": 0.6,
    "effects": {
     "vigour": -6
+   }
+  },
+  {
+   "id": "activity_feast_dance_mare",
+   "name": "Dance round the Harvest Mare",
+   "text": "Hands joined, round the pole and back, until the fiddler gives out.",
+   "place": "ostwick",
+   "sub": "harvesthome",
+   "subName": "Harvest Home on the Green",
+   "from": 16,
+   "to": 23,
+   "hours": 2,
+   "skill": "skill_revelry",
+   "feast": "feast_harvest_home",
+   "effects": {
+    "vigour": -4,
+    "spirits": 12
+   }
+  },
+  {
+   "id": "activity_feast_harvest_supper",
+   "name": "Sit down to the harvest supper",
+   "text": "Trestles on the green, a loaf and a ham to every table, and the year's ale.",
+   "place": "ostwick",
+   "sub": "harvesthome",
+   "subName": "Harvest Home on the Green",
+   "from": 18,
+   "to": 21,
+   "hours": 2,
+   "skill": "skill_courtesy",
+   "feast": "feast_harvest_home",
+   "effects": {
+    "vigour": 6,
+    "spirits": 8
+   }
+  },
+  {
+   "id": "activity_feast_regatta_oar",
+   "name": "Take an oar for a sestiere",
+   "text": "Stand, pull, and do not look at the boat beside you.",
+   "place": "marre_city",
+   "sub": "regatta",
+   "subName": "The Regatta",
+   "from": 9,
+   "to": 15,
+   "hours": 2,
+   "skill": "skill_athletics",
+   "feast": "feast_regatta",
+   "dc": 15,
+   "effects": {
+    "vigour": -10,
+    "spirits": 10
+   }
+  },
+  {
+   "id": "activity_feast_regatta_cheer",
+   "name": "Cheer from the balconies",
+   "text": "A rented foot of balcony, a cup of wine, and a sestiere to shout for.",
+   "place": "marre_city",
+   "sub": "regatta",
+   "subName": "The Regatta",
+   "from": 9,
+   "to": 17,
+   "hours": 2,
+   "skill": "skill_revelry",
+   "feast": "feast_regatta",
+   "effects": {
+    "spirits": 8
+   }
+  },
+  {
+   "id": "activity_feast_dive_mirror",
+   "name": "Dive for the Doge's mirror",
+   "text": "The mirror goes in from the golden barge, and half of Marre goes in after it.",
+   "place": "marre_palace",
+   "sub": "feast",
+   "subName": "The Feast of the Lagoon",
+   "from": 10,
+   "to": 13,
+   "hours": 1,
+   "skill": "skill_athletics",
+   "feast": "feast_lagoon",
+   "dc": 22,
+   "effects": {
+    "vigour": -8,
+    "spirits": 6
+   }
+  },
+  {
+   "id": "activity_feast_follow_barge",
+   "name": "Follow the golden barge",
+   "text": "A place in any boat that floats, and the whole lagoon behind the Doge.",
+   "place": "marre_palace",
+   "sub": "feast",
+   "subName": "The Feast of the Lagoon",
+   "from": 8,
+   "to": 12,
+   "hours": 3,
+   "skill": "skill_seamanship",
+   "feast": "feast_lagoon",
+   "effects": {
+    "spirits": 10
+   }
+  },
+  {
+   "id": "activity_feast_masked_walk",
+   "name": "Walk the bridges masked",
+   "text": "A plain bauta, a cloak, and nobody may ask.",
+   "place": "marre_city",
+   "sub": "carnevale",
+   "subName": "Carnevale",
+   "from": 17,
+   "to": 23,
+   "hours": 2,
+   "skill": "skill_stagecraft",
+   "feast": "feast_carnevale",
+   "effects": {
+    "spirits": 12
+   }
+  },
+  {
+   "id": "activity_feast_masked_listen",
+   "name": "Listen behind a mask",
+   "text": "Under a mask people say what they would not; a mask hears it.",
+   "place": "marre_city",
+   "sub": "carnevale",
+   "subName": "Carnevale",
+   "from": 18,
+   "to": 23,
+   "hours": 2,
+   "skill": "skill_insight",
+   "feast": "feast_carnevale",
+   "dc": 16,
+   "effects": {
+    "spirits": 4
    }
   },
   {

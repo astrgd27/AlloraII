@@ -173,6 +173,8 @@ export const activitySchema = entrySchema('activity', {
   /** Season indexes (0 spring to 3 winter) it belongs to. All, if left out. */
   seasons: z.array(z.number().int().min(0).max(3)).optional(),
   skill: text.optional(),
+  /** Only while this feast is on. */
+  feast: text.optional(),
   /** What it pays when done, in pf. */
   pay: z.number().nonnegative().optional(),
   /** If set, finishing it is a check against this difficulty. */
@@ -207,6 +209,18 @@ export const toolSchema = entrySchema('tool', {
   edge: z.number().int().min(1).max(5),
   /** Hours of work before it is spent. */
   wear: z.number().int().min(10),
+  text: text,
+});
+
+/** A feast: days of a season when a place keeps holiday. From Allora I's fixed events. */
+export const feastSchema = entrySchema('feast', {
+  name: text,
+  place: text,
+  sub: text.optional(),
+  canon_event: text,
+  season: z.number().int().min(0).max(3),
+  from: z.number().int().min(1).max(28),
+  to: z.number().int().min(1).max(28),
   text: text,
 });
 

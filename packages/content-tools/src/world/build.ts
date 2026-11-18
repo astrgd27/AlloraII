@@ -172,6 +172,18 @@ async function main(): Promise<void> {
       })),
     markets,
     tools,
+    feasts: (await readDir('content/calendar'))
+      .filter((f) => f.kind === 'feast')
+      .map((f) => ({
+        id: f.id,
+        name: f.name,
+        place: f.place,
+        sub: f.sub,
+        season: f.season,
+        from: f.from,
+        to: f.to,
+        text: f.text,
+      })),
     items: traded.map((id) => {
       const item = allItems.get(id) as Raw;
       return {
@@ -219,6 +231,7 @@ async function main(): Promise<void> {
         seasons: a.seasons,
         skill: a.skill,
         pay: a.pay,
+        feast: a.feast,
         dc: a.dc,
         level: a.level,
         post: a.post,
