@@ -23,7 +23,7 @@
 
 1. **The game shell.** Full-screen map as the world; a top bar (date and hour, time controls, purse, needs); framed panels at the sides; a "now" bar that always shows what the life is doing and how far along; a visual language (colour, type, frames, icons) fit for a simulation game. Landscape, 1024 px and up. *(done)*
 2. **Every click answers.** Buttons that cannot act are disabled and say why on hover. A refused order explains itself where it was given. A short log of what just happened. *(done)*
-3. **The place panel.** One panel for where you are: the scene, who is here, what can be done, the market, the post, in tabs. Tooltips for hours, pay, odds and skills.
+3. **The place panel.** One panel for where you are: the scene, who is here, what can be done, the market, the post, in tabs. Tooltips for hours, pay, odds and skills. *(done)*
 4. **The character sheet.** Needs, skills with gates, the career ladder, purse and pack, standing orders, and the away report, as proper panels.
 5. **The map.** Pan and zoom, labels that thin out by zoom, drawn terrain and water, the route to a chosen place with its hours, and the life moving along it.
 6. **Time controls.** Pause, play and a faster speed for watching. *(New mechanic: the gap is that a simulation game is watched as well as left. For the owner to confirm; the slow default stays.)*
@@ -63,3 +63,8 @@
   - **A refused order shows where the player clicked,** in a red note that fades after four seconds. It used to sit at the foot of the page for good.
   - **"Lately":** the last twelve things that happened (work done and its pay, a check's result, cases closed, a new rank, arrivals, things on the road, people met, things bought and sold), newest first. The engine keeps the last forty. Save version 12.
   - **A browser test in CI** (`pnpm e2e`, job `play`): it plays the built game, clicks 75 buttons over three games, and fails if any click changes nothing and says nothing, or if a disabled button gives no reason.
+- **2026-11-18 · The place panel (#58).** Decisions:
+  - **The right column is the place:** the scene on top, then one tabbed panel. *Work* (with how many can be begun now), *People* (with how many are here), *Market*, and *Calling* where a post can be taken or worked. On the road the tabs give way to the pack.
+  - **The market is a price board:** goods, what one costs, what one fetches, how many are carried; prices are the buttons. The board says when the market opens if it is shut.
+  - **Tooltips:** work shows what it is, what it trains, the odds in numbers and why it cannot be begun; prices say what they are; goods show their usual worth.
+  - **The left "Calling" panel** now shows the post held as a ladder of its four ranks, standing, and a bar towards the next trial. With no post it says where posts are taken up.

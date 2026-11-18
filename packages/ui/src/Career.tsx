@@ -1,4 +1,5 @@
-import { WORLD, oddsWord, type Order, type Snapshot } from '@allora/engine';
+import { TRIAL_STANDING, WORLD, oddsWord, type Order, type Snapshot } from '@allora/engine';
+import { Bar } from './Panel';
 
 const posts = new Map((WORLD.posts ?? []).map((p) => [p.id, p]));
 const cases = new Map((WORLD.cases ?? []).map((c) => [c.id, c]));
@@ -80,5 +81,42 @@ export function Career({ snapshot, send }: { snapshot: Snapshot; send: (order: O
         </ul>
       )}
     </section>
+  );
+}
+
+const placeName = (id: string): string => WORLD.places.find((p) => p.id === id)?.name ?? id;
+
+/** The post held, its rank and standing, and the case in hand. Display only. */
+export function Calling({ snapshot }: { snapshot: Snapshot }) {
+  const { post, venture } = snapshot;
+  if (!post) {
+    return (
+      <p className="quiet">
+        No post held. Posts are taken up at their own place: the guild forges of Kesselhaven, the
+        household of Burg Tennfels, the Office of the Cerdans in Marre.
+      </p>
+    );
+  }
+  const held = posts.get(post.id);
+  const next = TRIAL_STANDING[post.rank + 1];
+  return (
+    <div className="calling">
+      <p>
+        {held?.name}
+        <span className="quiet"> · {placeName(held?.place ?? '')}</span>
+      </p>
+      <ol className="ladder">
+        {held?.ranks.map((r, i) => (
+          <li key={r} className={i < post.rank ? 'past' : i === post.rank ? 'now' : ''}>
+            {r}
+          </li>
+        ))}
+      </ol>
+      <p className="quiet">Standing {post.standing}</p>
+      {next !== undefined && (
+        <Bar value={post.standing / next} label="Standing towards the next trial" tone="gilt" />
+      )}
+      {venture && <p>In hand: {cases.get(venture.case)?.name}</p>}
+    </div>
   );
 }

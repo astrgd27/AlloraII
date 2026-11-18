@@ -1,8 +1,7 @@
 import { WORLD, type Order } from '@allora/engine';
 import { useEffect, useState, useSyncExternalStore } from 'react';
-import { Activities } from './Activities';
 import { Orders, Report } from './Away';
-import { Career } from './Career';
+import { Calling } from './Career';
 import { engine } from './engine-client';
 import { MapView } from './map/MapView';
 import { PlaceList, PlacePanel } from './map/PlacePanel';
@@ -10,7 +9,7 @@ import { Log } from './Log';
 import { Market } from './Market';
 import { NowBar } from './NowBar';
 import { Panel } from './Panel';
-import { People } from './People';
+import { PlaceTabs } from './PlaceTabs';
 import { SceneView } from './scene/SceneView';
 import { Skills } from './Skills';
 import { TITLE } from './title';
@@ -58,11 +57,7 @@ export function App() {
           </Panel>
         )}
         <Panel title="Calling" testid="calling">
-          {snapshot.post || snapshot.postsHere.length > 0 ? (
-            <Career snapshot={snapshot} send={send} />
-          ) : (
-            <p className="quiet">No post held. A post is taken up at its own place.</p>
-          )}
+          <Calling snapshot={snapshot} />
         </Panel>
         <Panel title="Skills">
           {Object.keys(snapshot.skills).length > 0 ? (
@@ -105,23 +100,13 @@ export function App() {
         >
           <SceneView snapshot={snapshot} />
         </Panel>
-        {here && (
-          <>
-            <Panel title="People here">
-              {snapshot.here.length > 0 || snapshot.words ? (
-                <People snapshot={snapshot} send={send} />
-              ) : (
-                <p className="quiet">Nobody is about.</p>
-              )}
-            </Panel>
-            <Panel title="Work to hand">
-              <Activities snapshot={snapshot} send={send} />
-            </Panel>
-          </>
+        {here ? (
+          <PlaceTabs snapshot={snapshot} send={send} />
+        ) : (
+          <Panel title="Pack">
+            <Market snapshot={snapshot} send={send} />
+          </Panel>
         )}
-        <Panel title="Purse and market">
-          <Market snapshot={snapshot} send={send} />
-        </Panel>
       </aside>
 
       <NowBar snapshot={snapshot} send={send} />

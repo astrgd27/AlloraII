@@ -42,7 +42,12 @@ export function Activities({
                 type="button"
                 data-activity={a.id}
                 disabled={Boolean(reason)}
-                title={[a.text, skill ? `Trains ${skill}.` : '', why ?? '']
+                title={[
+                  a.text,
+                  skill ? `Trains ${skill}.` : '',
+                  chance !== undefined ? `${Math.round(chance * 100)} in 100 to go well.` : '',
+                  why ?? '',
+                ]
                   .filter(Boolean)
                   .join(' ')}
                 onClick={() => send({ type: 'do', activity: a.id })}

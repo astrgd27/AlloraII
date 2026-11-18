@@ -1,68 +1,94 @@
 import { WORLD, type Order, type Snapshot } from '@allora/engine';
 import { ordinal, pf } from './format';
 
-const itemName = new Map((WORLD.items ?? []).map((i) => [i.id, i.name]));
-const marketName = new Map((WORLD.markets ?? []).map((m) => [m.id, m.name]));
+const items = new Map((WORLD.items ?? []).map((i) => [i.id, i]));
+const markets = new Map((WORLD.markets ?? []).map((m) => [m.id, m]));
+const subName = (place: string, sub: string | undefined): string =>
+  (sub && WORLD.places.find((p) => p.id === place)?.subs?.[sub]) || '';
 
-/** The purse, the pack, and the market here. Display only. */
+/** The market here, as a price board, and what the life carries. Display only. */
 export function Market({ snapshot, send }: { snapshot: Snapshot; send: (order: Order) => void }) {
   const market = snapshot.market;
   const pack = Object.entries(snapshot.goods);
-  const hours = (WORLD.markets ?? []).find((m) => m.id === market?.id);
+  const info = market ? markets.get(market.id) : undefined;
+  const status = !market
+    ? ''
+    : market.open
+      ? market.marketDay
+        ? 'Market day: dearer to sell to, cheaper to buy from'
+        : 'Open'
+      : `Shut · open from the ${ordinal(info?.from ?? 0)} hour to the ${ordinal(info?.to ?? 0)}`;
   return (
     <section className="market" data-testid="market">
-      <p data-testid="purse">
-        {pf(snapshot.money)}
-        {pack.length > 0 && (
-          <span className="quiet">
-            {' '}
-            · {pack.map(([id, n]) => `${itemName.get(id) ?? id} ×${n}`).join(', ')}
-          </span>
-        )}
-      </p>
-      {market && (
-        <details>
-          <summary>
-            {marketName.get(market.id)}
-            <span className="quiet">
-              {market.open
-                ? market.marketDay
-                  ? ' · market day'
-                  : ''
-                : ` · shut · open from the ${ordinal(hours?.from ?? 0)} hour to the ${ordinal(hours?.to ?? 0)}`}
-            </span>
-          </summary>
-          {market.open && !snapshot.blocked.market && (
-            <ul>
-              {market.stock.map((s) => (
-                <li key={s.item}>
-                  <span>{itemName.get(s.item) ?? s.item}</span>
-                  {s.buy !== null && (
-                    <button
-                      type="button"
-                      data-buy={s.item}
-                      disabled={Boolean(s.why)}
-                      title={s.why ?? 'Buy one'}
-                      onClick={() => send({ type: 'buy', item: s.item })}
+      {market ? (
+        <>
+          <p className="market-head">
+            {info?.name}
+            <span className="quiet"> · {subName(snapshot.place, info?.sub)}</span>
+          </p>
+          <p className={market.open ? 'quiet' : 'why'}>{status}</p>
+          <table className="board">
+            <thead>
+              <tr>
+                <th>Goods</th>
+                <th title="What one costs here now">Buy</th>
+                <th title="What one fetches here now">Sell</th>
+                <th title="How many you carry">Held</th>
+              </tr>
+            </thead>
+            <tbody>
+              {market.stock.map((s) => {
+                const item = items.get(s.item);
+                const closed = snapshot.blocked.market;
+                return (
+                  <tr key={s.item}>
+                    <td
+                      title={item ? `Worth about ${pf(item.value)} in the usual way of things` : ''}
                     >
-                      Buy · {pf(s.buy)}
-                    </button>
-                  )}
-                  {s.sell !== null && (
-                    <button
-                      type="button"
-                      data-sell={s.item}
-                      onClick={() => send({ type: 'sell', item: s.item })}
-                    >
-                      Sell · {pf(s.sell)}
-                    </button>
-                  )}
-                </li>
-              ))}
-            </ul>
-          )}
-        </details>
+                      {item?.name ?? s.item}
+                    </td>
+                    <td>
+                      {s.buy !== null && (
+                        <button
+                          type="button"
+                          data-buy={s.item}
+                          disabled={Boolean(closed ?? s.why)}
+                          title={closed ?? s.why ?? `Buy one for ${pf(s.buy)}`}
+                          onClick={() => send({ type: 'buy', item: s.item })}
+                        >
+                          {pf(s.buy)}
+                        </button>
+                      )}
+                    </td>
+                    <td>
+                      {s.sell !== null && (
+                        <button
+                          type="button"
+                          data-sell={s.item}
+                          disabled={Boolean(closed)}
+                          title={closed ?? `Sell one for ${pf(s.sell)}`}
+                          onClick={() => send({ type: 'sell', item: s.item })}
+                        >
+                          {pf(s.sell)}
+                        </button>
+                      )}
+                    </td>
+                    <td className="num">{s.held || ''}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </>
+      ) : (
+        <p className="quiet">There is no market here.</p>
       )}
+      <p className="pack">
+        <span className="quiet">Pack: </span>
+        {pack.length > 0
+          ? pack.map(([id, n]) => `${items.get(id)?.name ?? id} ×${n}`).join(', ')
+          : 'empty'}
+      </p>
     </section>
   );
 }
