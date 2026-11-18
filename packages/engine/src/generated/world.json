@@ -4975,7 +4975,8 @@
     "lv_butter",
     "fu_churn",
     "fu_stool",
-    "lv_soap"
+    "lv_soap",
+    "item_bread_peel"
    ],
    "makes": [
     "grain",
@@ -4984,7 +4985,8 @@
     "veg",
     "v_onion",
     "v_turnip",
-    "eggs"
+    "eggs",
+    "item_bread_peel"
    ]
   },
   {
@@ -5104,9 +5106,14 @@
     "lv_butter",
     "lv_pork",
     "lv_beef",
-    "fu_block"
+    "fu_block",
+    "item_hammer_tongs",
+    "item_needle_case"
    ],
-   "makes": []
+   "makes": [
+    "item_hammer_tongs",
+    "item_needle_case"
+   ]
   },
   {
    "id": "market_kess_fondaco",
@@ -5221,9 +5228,12 @@
     "hound_biscuit",
     "stable_stout",
     "cn_stone",
-    "cn_mortar"
+    "cn_mortar",
+    "item_ledger"
    ],
-   "makes": []
+   "makes": [
+    "item_ledger"
+   ]
   },
   {
    "id": "market_aschau",
@@ -5390,9 +5400,12 @@
     "parch_t2",
     "ink_t2",
     "glass_t2",
-    "candle_branch"
+    "candle_branch",
+    "item_ledger"
    ],
-   "makes": []
+   "makes": [
+    "item_ledger"
+   ]
   },
   {
    "id": "market_marre_isles",
@@ -5500,6 +5513,152 @@
    "makes": [
     "mastic"
    ]
+  }
+ ],
+ "tools": [
+  {
+   "id": "tool_axe",
+   "item": "axe",
+   "skill": "skill_woodcraft",
+   "edge": 1,
+   "wear": 80,
+   "text": "An edge that bites, and timber comes down sooner."
+  },
+  {
+   "id": "tool_pickaxe",
+   "item": "pickaxe",
+   "skill": "skill_mining",
+   "edge": 2,
+   "wear": 100,
+   "text": "Ore and stone give way to a good point."
+  },
+  {
+   "id": "tool_fishing_net",
+   "item": "fishing_net",
+   "skill": "skill_fishing",
+   "edge": 1,
+   "wear": 120,
+   "text": "More mesh in the water, more fish out of it."
+  },
+  {
+   "id": "tool_primer",
+   "item": "primer",
+   "skill": "skill_letters",
+   "edge": 1,
+   "wear": 300,
+   "text": "Letters set out plain, for copying from."
+  },
+  {
+   "id": "tool_tabor",
+   "item": "tabor",
+   "skill": "skill_music",
+   "edge": 1,
+   "wear": 300,
+   "text": "A drum to keep the time by."
+  },
+  {
+   "id": "tool_fiddle",
+   "item": "fiddle",
+   "skill": "skill_music",
+   "edge": 2,
+   "wear": 400,
+   "text": "A voice for the tune."
+  },
+  {
+   "id": "tool_lute",
+   "item": "lute",
+   "skill": "skill_music",
+   "edge": 2,
+   "wear": 400,
+   "text": "A voice for the tune, and for the song with it."
+  },
+  {
+   "id": "tool_harp",
+   "item": "harp",
+   "skill": "skill_music",
+   "edge": 3,
+   "wear": 500,
+   "text": "The instrument of halls."
+  },
+  {
+   "id": "tool_shawm",
+   "item": "shawm",
+   "skill": "skill_music",
+   "edge": 1,
+   "wear": 300,
+   "text": "Loud enough for a green."
+  },
+  {
+   "id": "tool_grooming_kit",
+   "item": "grooming_kit",
+   "skill": "skill_beastcraft",
+   "edge": 1,
+   "wear": 150,
+   "text": "Brushes, combs and a hoof-pick: a groomed beast is a calm one."
+  },
+  {
+   "id": "tool_halter",
+   "item": "halter",
+   "skill": "skill_beastcraft",
+   "edge": 1,
+   "wear": 200,
+   "text": "A long lead for a beast not yet sure of you."
+  },
+  {
+   "id": "tool_lockpicks",
+   "item": "lockpicks",
+   "skill": "skill_thievery",
+   "edge": 2,
+   "wear": 100,
+   "text": "Picks and a tension-iron, in a roll."
+  },
+  {
+   "id": "tool_dig_kit",
+   "item": "dig_kit",
+   "skill": "skill_antiquities",
+   "edge": 2,
+   "wear": 150,
+   "text": "Trowels, brushes, sieve, line and pegs."
+  },
+  {
+   "id": "tool_astrolabe",
+   "item": "astrolabe",
+   "skill": "skill_seamanship",
+   "edge": 1,
+   "wear": 600,
+   "text": "The stars brought down to a brass plate."
+  },
+  {
+   "id": "tool_hammer_tongs",
+   "item": "item_hammer_tongs",
+   "skill": "skill_smithing",
+   "edge": 2,
+   "wear": 200,
+   "text": "A smith's own hammer and tongs, fitted to the hand."
+  },
+  {
+   "id": "tool_needle_case",
+   "item": "item_needle_case",
+   "skill": "skill_clothwork",
+   "edge": 1,
+   "wear": 200,
+   "text": "Needles, a thimble and a hook, in a case of horn."
+  },
+  {
+   "id": "tool_bread_peel",
+   "item": "item_bread_peel",
+   "skill": "skill_cookery",
+   "edge": 1,
+   "wear": 250,
+   "text": "A long-handled peel for the oven, and a scraper."
+  },
+  {
+   "id": "tool_ledger",
+   "item": "item_ledger",
+   "skill": "skill_stewardship",
+   "edge": 1,
+   "wear": 300,
+   "text": "A bound ledger with ruled columns, for a household's accounts."
   }
  ],
  "items": [
@@ -5891,6 +6050,26 @@
    "id": "iron_t2",
    "name": "Wrought Iron",
    "value": 16
+  },
+  {
+   "id": "item_bread_peel",
+   "name": "Baker's Peel",
+   "value": 3
+  },
+  {
+   "id": "item_hammer_tongs",
+   "name": "Hammer and Tongs",
+   "value": 12
+  },
+  {
+   "id": "item_ledger",
+   "name": "Ruled Ledger",
+   "value": 6
+  },
+  {
+   "id": "item_needle_case",
+   "name": "Needle-Case",
+   "value": 4
   },
   {
    "id": "jewel1",

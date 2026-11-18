@@ -12,6 +12,7 @@ export type LogEntry = { hours: number } & (
   | { kind: 'met'; person: string }
   | { kind: 'bought' | 'sold'; item: string; price: number }
   | { kind: 'moved' | 'evicted'; home: HomeKind; place: string }
+  | { kind: 'broke'; item: string }
 );
 
 /** How many entries are kept. */

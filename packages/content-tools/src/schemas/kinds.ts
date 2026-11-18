@@ -187,5 +187,16 @@ export const marketSchema = entrySchema('market', {
   makes: z.array(text).optional(),
 });
 
+/** A tool: an item that helps a skill's work and wears out with it. New to Allora II. */
+export const toolSchema = entrySchema('tool', {
+  item: text,
+  skill: text,
+  /** Added to the roll of that skill's checks. */
+  edge: z.number().int().min(1).max(5),
+  /** Hours of work before it is spent. */
+  wear: z.number().int().min(10),
+  text: text,
+});
+
 /** Any other kind (workings, skills, recipes, lore, Weathers, …): the base fields only, for now. */
 export const otherSchema = entrySchema(null, {});

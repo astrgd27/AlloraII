@@ -3,6 +3,8 @@ import { ordinal, pf } from './format';
 
 const items = new Map((WORLD.items ?? []).map((i) => [i.id, i]));
 const markets = new Map((WORLD.markets ?? []).map((m) => [m.id, m]));
+const toolOf = new Map((WORLD.tools ?? []).map((t) => [t.item, t]));
+const skillName = new Map((WORLD.skills ?? []).map((s) => [s.id, s.name]));
 const subName = (place: string, sub: string | undefined): string =>
   (sub && WORLD.places.find((p) => p.id === place)?.subs?.[sub]) || '';
 
@@ -39,11 +41,20 @@ export function Market({ snapshot, send }: { snapshot: Snapshot; send: (order: O
             <tbody>
               {market.stock.map((s) => {
                 const item = items.get(s.item);
+                const tool = toolOf.get(s.item);
                 const closed = snapshot.blocked.market;
                 return (
                   <tr key={s.item}>
                     <td
-                      title={item ? `Worth about ${pf(item.value)} in the usual way of things` : ''}
+                      title={[
+                        item ? `Worth about ${pf(item.value)} in the usual way of things.` : '',
+                        tool
+                          ? `A tool: ${tool.text} +${tool.edge} to ${skillName.get(tool.skill) ?? ''}.`
+                          : '',
+                      ]
+                        .filter(Boolean)
+                        .join(' ')}
+                      className={tool ? 'is-tool' : ''}
                     >
                       {item?.name ?? s.item}
                     </td>

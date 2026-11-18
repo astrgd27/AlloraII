@@ -24,6 +24,18 @@ export interface Item {
   food?: boolean;
 }
 
+/** A tool: an item that helps one skill's work and wears out with it. */
+export interface Tool {
+  id: string;
+  item: string;
+  skill: string;
+  /** Added to the roll of that skill's checks. */
+  edge: number;
+  /** Hours of work before it is spent. */
+  wear: number;
+  text: string;
+}
+
 /** A market: where it stands, when it is open, and what it trades in. */
 export interface Market {
   id: string;
@@ -177,6 +189,7 @@ export interface WorldData {
   roadEvents?: RoadEvent[];
   items?: Item[];
   markets?: Market[];
+  tools?: Tool[];
 }
 
 export const WORLD = data as unknown as WorldData;
@@ -208,6 +221,8 @@ export class World {
   readonly items = new Map<string, Item>();
   /** Place id → its market. */
   readonly markets = new Map<string, Market>();
+  /** Skill id → the tools that help it. */
+  readonly toolsBySkill = new Map<string, Tool[]>();
   private readonly links = new Map<string, Leg[]>();
   /** The roads do not change, so travel hours from a place are worked out once. */
   private readonly hoursCache = new Map<string, Record<string, number>>();
@@ -223,6 +238,11 @@ export class World {
     for (const c of data.cases ?? []) this.cases.set(c.id, c);
     for (const item of data.items ?? []) this.items.set(item.id, item);
     for (const market of data.markets ?? []) this.markets.set(market.place, market);
+    for (const tool of data.tools ?? []) {
+      const list = this.toolsBySkill.get(tool.skill) ?? [];
+      list.push(tool);
+      this.toolsBySkill.set(tool.skill, list);
+    }
     for (const road of data.roads) {
       const water = road.way === 'sea' || road.way === 'river';
       const extra = { way: road.way, ...(water ? ({ sea: true } as const) : {}) };

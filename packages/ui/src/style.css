@@ -944,3 +944,23 @@ button:active:not(:disabled) {
   background: var(--gilt);
   border-color: var(--gilt);
 }
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.tools li {
+  cursor: help;
+}
+
+.tools .bar {
+  height: 0.25rem;
+  margin-top: 0.1rem;
+}
+
+.board .is-tool::after {
+  content: ' ⚒';
+  color: var(--gilt);
+}
