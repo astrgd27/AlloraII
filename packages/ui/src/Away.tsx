@@ -1,5 +1,5 @@
 import { WORLD, type Order, type Snapshot } from '@allora/engine';
-import { hoursText, pf } from './format';
+import { hoursText, ordinal, pf } from './format';
 
 const skillName = new Map((WORLD.skills ?? []).map((s) => [s.id, s.name]));
 type Send = (order: Order) => void;
@@ -37,6 +37,21 @@ export function Report({ snapshot, send }: { snapshot: Snapshot; send: Send }) {
   );
 }
 
+/** An hour of the day, with a step down and a step up. */
+function Hour({ value, set }: { value: number; set: (h: number) => void }) {
+  return (
+    <span className="hour-step">
+      <button type="button" title="An hour earlier" onClick={() => set((value + 23) % 24)}>
+        −
+      </button>
+      <span className="num">{ordinal(value)}</span>
+      <button type="button" title="An hour later" onClick={() => set((value + 1) % 24)}>
+        +
+      </button>
+    </span>
+  );
+}
+
 const WORK_WORDS = { never: 'Never', away: 'While away', always: 'Always' } as const;
 
 /** The routine decisions a life settles for itself. Display only. */
@@ -51,16 +66,27 @@ export function Orders({ snapshot, send }: { snapshot: Snapshot; send: Send }) {
             key={work}
             type="button"
             aria-pressed={o.work === work}
+            title="Whether the life takes up paid work and duties by itself. Cases always wait for you."
             onClick={() => send({ type: 'setOrders', orders: { work } })}
           >
             {WORK_WORDS[work]}
           </button>
         ))}
       </p>
+      <p className="hours-row">
+        <span>To bed</span>
+        <Hour
+          value={o.sleepFrom}
+          set={(sleepFrom) => send({ type: 'setOrders', orders: { sleepFrom } })}
+        />
+        <span>Up</span>
+        <Hour value={o.wakeAt} set={(wakeAt) => send({ type: 'setOrders', orders: { wakeAt } })} />
+      </p>
       <p>
         <button
           type="button"
           aria-pressed={o.turnBackIfHurt}
+          title="On the road with health low, turn back to the place last left"
           onClick={() => send({ type: 'setOrders', orders: { turnBackIfHurt: !o.turnBackIfHurt } })}
         >
           Turn back if hurt
@@ -68,6 +94,7 @@ export function Orders({ snapshot, send }: { snapshot: Snapshot; send: Send }) {
         <button
           type="button"
           aria-pressed={o.campAtNight}
+          title="On a road at night, stop and sleep rather than walk on"
           onClick={() => send({ type: 'setOrders', orders: { campAtNight: !o.campAtNight } })}
         >
           Camp at night

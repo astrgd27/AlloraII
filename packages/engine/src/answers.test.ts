@@ -70,3 +70,26 @@ describe('every click answers', () => {
     expect(migrate(old).log).toEqual([]);
   });
 });
+
+describe('the character sheet', () => {
+  it('shows each skill with the cap that holds it', () => {
+    const e = new Engine(newGame(9, 0));
+    e.state.skills.skill_husbandry = { level: 10, xp: 0, gates: 0 };
+    expect(e.snapshot().skills.skill_husbandry).toMatchObject({ level: 10, cap: 10, atGate: true });
+    e.state.skills.skill_husbandry.gates = 1;
+    expect(e.snapshot().skills.skill_husbandry).toMatchObject({ cap: 25, atGate: false });
+  });
+
+  it('lets the hours of sleep be changed, within reason', () => {
+    const e = new Engine(newGame(9, 0));
+    e.handle({ type: 'setOrders', orders: { sleepFrom: 21, wakeAt: 5 } }, 0);
+    expect(e.state.orders).toMatchObject({ sleepFrom: 21, wakeAt: 5 });
+    expect(() => e.handle({ type: 'setOrders', orders: { wakeAt: 23 } }, 0)).toThrow(
+      'four to twelve',
+    );
+    expect(() => e.handle({ type: 'setOrders', orders: { sleepFrom: 24 } }, 0)).toThrow(
+      'No such hour',
+    );
+    expect(e.state.orders).toMatchObject({ sleepFrom: 21, wakeAt: 5 });
+  });
+});

@@ -788,3 +788,94 @@ button:active:not(:disabled) {
   background: var(--gilt);
   border-color: var(--gilt);
 }
+
+/* The character sheet */
+.life {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.2rem 0.8rem;
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.life dt {
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-top: 0.15rem;
+}
+
+.life dd {
+  margin: 0;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.skills h3 {
+  margin: 0 0 0.2rem;
+  font-size: 0.72rem;
+  font-weight: normal;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.skills ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.skills li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.1rem 0.5rem;
+  cursor: help;
+}
+
+.skills li .bar {
+  grid-column: 1 / -1;
+  height: 0.3rem;
+}
+
+.skills li.at-gate .skill-level {
+  color: var(--accent);
+}
+
+.skill-level {
+  font-variant-numeric: tabular-nums;
+}
+
+.hour-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.hour-step button {
+  padding: 0 0.45rem;
+}
+
+.hour-step .num {
+  min-width: 2.4rem;
+  text-align: center;
+}
+
+.orders .hours-row {
+  flex-wrap: nowrap;
+  gap: 0.3rem;
+}
+
+.hours-row > span:not(.hour-step) {
+  color: var(--muted);
+}
+
+.hour-step .num {
+  min-width: 2.2rem;
+}

@@ -92,6 +92,7 @@ describe('learning from work', () => {
       level: 10,
       progress: expect.any(Number),
       atGate: true,
+      cap: 10,
     });
   });
 
