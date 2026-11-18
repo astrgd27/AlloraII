@@ -30,7 +30,7 @@
 
 ### B. The systems still missing
 
-7. **Homes and lodging.** A rented room, then a cottage: rent, comfort, sleeping well away from home at an inn for a price. The first real money sink.
+7. **Homes and lodging.** A rented room, then a cottage: rent, comfort, sleeping well away from home at an inn for a price. The first real money sink. *(done)*
 8. **Items and tools.** Things with properties: tools that help work and wear out, clothes, food kinds. The smith's commission becomes an object with a quality.
 9. **Dues, fares and tolls,** and wage tuning, until the inflation flag clears.
 10. **The trades diverge.** One deep feature each: the smith's materials and techniques; the butler's Trust and Harmony; the inquirer's case board with time pressure.
@@ -84,3 +84,11 @@
   - **The faster paces are for watching only.** Time away is always caught up at the usual pace, so a fast clock never makes the game run on while closed. The pace is not saved: a new visit starts at the usual pace.
   - **Paused means paused everywhere:** a paused life does not live on while the page is closed either.
   - New mechanic, for the owner to confirm: the gap is that a simulation game is watched as well as left alone.
+- **2026-11-18 · Homes and lodging (#62).** Decisions:
+  - **A life rents its bed.** A new life starts in a rented room in Ostwick. Rent falls due at midnight: a room 0.6 pf a day in a village and 1.2 in a town; a cottage 2 and 4.5. (A room costs about a loaf and a half a day; Allora I prices bread at 1.5 pf.) Old saves get a room where their home was.
+  - **What a home gives:** a room restores 10 vigour an hour asleep and lifts the spirits by 1 a night; a cottage 12 and 2. An inn bed gives 9; sleeping rough, 6.
+  - **Arrears:** rent that cannot be paid is owed; a week of it and the life is turned out (the log says so). A life with no home sleeps at inns or rough. Moving or leaving needs the arrears paid.
+  - **Inns:** away from home in any town or village, an inn bed is taken at bedtime and paid once a night (0.8 pf, 1.6 in a town), unless the new standing order "Inns on the road" is off.
+  - **A Lodging tab** at every town and village lets rooms and cottages and gives the inn's price. The sheet shows the home, its rent and anything owed.
+  - **Balance:** careerists move into a cottage once they have 200 pf. Spending rises (a smith now about 6 pf a day in a town cottage) but the purse still grows far faster than 3% a year; that is #64.
+  - Save version 13.

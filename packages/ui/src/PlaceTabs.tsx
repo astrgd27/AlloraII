@@ -2,10 +2,11 @@ import type { Order, Snapshot } from '@allora/engine';
 import { useState } from 'react';
 import { Activities } from './Activities';
 import { Career } from './Career';
+import { Lodging } from './Lodging';
 import { Market } from './Market';
 import { People } from './People';
 
-type Tab = 'work' | 'people' | 'market' | 'post';
+type Tab = 'work' | 'people' | 'market' | 'lodging' | 'post';
 
 /** Everything that can be done at this place, in tabs. Display only. */
 export function PlaceTabs({
@@ -29,6 +30,8 @@ export function PlaceTabs({
       hint: snapshot.market ? 'Prices here now' : 'No market here; what you carry',
     },
   ];
+  if (snapshot.lettings.room !== undefined)
+    tabs.push({ id: 'lodging', label: 'Lodging', hint: 'Rooms and cottages to let, and the inn' });
   if (postHere)
     tabs.push({ id: 'post', label: 'Calling', hint: 'Posts, cases and the work in hand' });
   const shown = tabs.some((t) => t.id === tab) ? tab : 'work';
@@ -60,6 +63,7 @@ export function PlaceTabs({
             <p className="quiet">Nobody is about.</p>
           ))}
         {shown === 'market' && <Market snapshot={snapshot} send={send} />}
+        {shown === 'lodging' && <Lodging snapshot={snapshot} send={send} />}
         {shown === 'post' && <Career snapshot={snapshot} send={send} />}
       </div>
     </div>

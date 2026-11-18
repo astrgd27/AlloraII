@@ -1,6 +1,7 @@
 /** The whole game state. The engine owns it; the UI only ever sees snapshots. */
 import type { Doing, LastCheck } from './activities';
 import type { Held, Venture, Work } from './career';
+import { HOMES, type Lodging } from './housing';
 import type { LogEntry } from './log';
 import type { Stall } from './market';
 import { START_MONEY } from './money';
@@ -24,7 +25,7 @@ export interface Journey {
 }
 
 /** The save format version. Raise it with every change to GameState, and add a migration. */
-export const SAVE_VERSION = 12;
+export const SAVE_VERSION = 13;
 
 export interface GameState {
   version: typeof SAVE_VERSION;
@@ -41,8 +42,12 @@ export interface GameState {
   /** Where the life is. While travelling, the place last left. */
   place: string;
   journey: Journey | null;
-  /** Where the life has a bed. */
+  /** Where the life has its home, if it has one. */
   home: string;
+  /** The home rented there, or null with none. */
+  lodging: Lodging | null;
+  /** The night (in game hours) an inn bed was last paid for. */
+  innNight: number;
   needs: Needs;
   orders: StandingOrders;
   asleep: boolean;
@@ -101,6 +106,9 @@ export function newGame(seed: number, nowMs: number): GameState {
     place: START_PLACE,
     journey: null,
     home: START_PLACE,
+    // A new life starts in a rented room in Ostwick, its first day paid.
+    lodging: { kind: 'room', rent: HOMES.room.rent.settled, owed: 0 },
+    innNight: -1,
     needs: { ...FULL_NEEDS },
     orders: { ...DEFAULT_ORDERS },
     asleep: false,

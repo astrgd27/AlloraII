@@ -83,6 +83,14 @@ export const MIGRATIONS: Record<number, (save: AnySave) => AnySave> = {
   }),
   // Version 12 adds the record of what just happened.
   11: (save) => ({ ...save, version: 12, log: [] }),
+  // Version 13 adds rent: the old free bed becomes a rented room, and an inn order.
+  12: (save) => ({
+    ...save,
+    version: 13,
+    lodging: { kind: 'room', rent: 0.6, owed: 0 },
+    innNight: -1,
+    orders: { ...(save.orders as object), inn: true },
+  }),
 };
 
 export function versionOf(save: unknown): number {

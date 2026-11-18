@@ -19,6 +19,7 @@ import { chanceOfSuccess } from './challenge';
 import { HOURS_PER_DAY, dateAt, type GameDate } from './calendar';
 import { EventBus } from './events';
 import type { Order } from './protocol';
+import { innAt, leaveHome, payRent, rent, rentAt, type Lodging } from './housing';
 import { note, type LogEntry } from './log';
 import {
   PACK,
@@ -139,6 +140,9 @@ export interface Snapshot {
   roadEvent: string | null;
   asleep: boolean;
   home: string;
+  /** The home rented, if any, and what homes and beds cost here. */
+  lodging: Lodging | null;
+  lettings: { room?: number; cottage?: number; inn?: number };
   orders: StandingOrders;
   /** The place the life is in, or last left. */
   place: string;
@@ -199,6 +203,11 @@ export class Engine {
     const before = dateAt(this.state.hours);
     this.state.hours += 1;
     const date = dateAt(this.state.hours);
+    if (date.hour === 0 && this.state.lodging) {
+      const kind = this.state.lodging.kind;
+      if (payRent(this.state))
+        note(this.state, { kind: 'evicted', home: kind, place: this.state.home });
+    }
     routine(this.state, this.world, before, this.away);
     for (const system of this.systems) system.tick(this.state, date, this.bus, this.world);
     const rank = this.state.post?.rank ?? 0;
@@ -319,6 +328,13 @@ export class Engine {
           item: order.item,
           price: sell(this.state, this.world, order.item, dateAt(this.state.hours)),
         });
+        break;
+      case 'rent':
+        rent(this.state, this.world, order.home);
+        note(this.state, { kind: 'moved', home: order.home, place: this.state.place });
+        break;
+      case 'leaveHome':
+        leaveHome(this.state);
         break;
       case 'readReport':
         this.state.report = null;
@@ -465,6 +481,18 @@ export class Engine {
       roadEvent: j ? (this.state.roadEvent?.id ?? null) : null,
       asleep: this.state.asleep,
       home: this.state.home,
+      lodging: this.state.lodging ? { ...this.state.lodging } : null,
+      lettings: j
+        ? {}
+        : Object.fromEntries(
+            (
+              [
+                ['room', rentAt(this.world, s.place, 'room')],
+                ['cottage', rentAt(this.world, s.place, 'cottage')],
+                ['inn', innAt(this.world, s.place)],
+              ] as [string, number | undefined][]
+            ).filter(([, v]) => v !== undefined),
+          ),
       orders: { ...this.state.orders },
       place: this.state.place,
       journey:
