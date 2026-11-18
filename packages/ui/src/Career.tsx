@@ -3,6 +3,14 @@ import { Bar } from './Panel';
 
 const posts = new Map((WORLD.posts ?? []).map((p) => [p.id, p]));
 const cases = new Map((WORLD.cases ?? []).map((c) => [c.id, c]));
+const itemName = new Map((WORLD.items ?? []).map((i) => [i.id, i.name]));
+const DEGREE: Record<string, string> = {
+  triumph: 'a triumph',
+  success: 'well',
+  cost: 'at a cost',
+  failure: 'badly',
+  disaster: 'a disaster',
+};
 
 /** The post held, the cases on offer and the work in hand. Display only. */
 export function Career({ snapshot, send }: { snapshot: Snapshot; send: (order: Order) => void }) {
@@ -47,6 +55,24 @@ export function Career({ snapshot, send }: { snapshot: Snapshot; send: (order: O
           </p>
           <p className="quiet">{inHand.text}</p>
           {snapshot.blocked.step && <p className="why">{snapshot.blocked.step}</p>}
+          {venture.material && (
+            <p className="quiet">Made from {itemName.get(venture.material) ?? venture.material}</p>
+          )}
+          {venture.clues.length > 0 && (
+            <ol className="board-clues" title="Each step done, and how it went">
+              {venture.clues.map((c, i) => (
+                <li key={i} className={c.degree}>
+                  {held?.work.find((w) => w.id === c.step)?.name} · {DEGREE[c.degree] ?? c.degree}
+                </li>
+              ))}
+            </ol>
+          )}
+          {held?.pressure && (
+            <p className={venture.lost > 0 ? 'why' : 'quiet'}>
+              Open {venture.days} {venture.days === 1 ? 'day' : 'days'}
+              {venture.lost > 0 ? ` · ${venture.lost} lost to time` : ''}
+            </p>
+          )}
           <ul>
             {venture.choices.map((c) => (
               <li key={c.id}>
@@ -62,6 +88,18 @@ export function Career({ snapshot, send }: { snapshot: Snapshot; send: (order: O
                 </button>
               </li>
             ))}
+            {venture.locked.map((l) => (
+              <li key={l.id}>
+                <button
+                  type="button"
+                  disabled
+                  title={`A technique taught at the rank of ${held?.ranks[l.rank] ?? ''}`}
+                >
+                  {step?.approaches.find((a) => a.id === l.id)?.name}
+                  <span className="why">Taught to {held?.ranks[l.rank]?.toLowerCase()}s</span>
+                </button>
+              </li>
+            ))}
           </ul>
         </>
       )}
@@ -72,6 +110,8 @@ export function Career({ snapshot, send }: { snapshot: Snapshot; send: (order: O
               <button
                 type="button"
                 data-case={id}
+                disabled={Boolean(snapshot.blocked.takeCase)}
+                title={snapshot.blocked.takeCase ?? cases.get(id)?.text}
                 onClick={() => send({ type: 'takeCase', case: id })}
               >
                 {cases.get(id)?.name}
@@ -115,6 +155,16 @@ export function Calling({ snapshot }: { snapshot: Snapshot }) {
       <p className="quiet">Standing {post.standing}</p>
       {next !== undefined && (
         <Bar value={post.standing / next} label="Standing towards the next trial" tone="gilt" />
+      )}
+      {post.harmony !== undefined && (
+        <div title="How well the household runs. Duties keep it up; it slips each day. A happy house makes incidents easier.">
+          <p className="quiet">Harmony {Math.round(post.harmony)}</p>
+          <Bar
+            value={post.harmony / 100}
+            label="Harmony"
+            tone={post.harmony < 40 ? 'low' : 'health'}
+          />
+        </div>
       )}
       {venture && <p>In hand: {cases.get(venture.case)?.name}</p>}
     </div>

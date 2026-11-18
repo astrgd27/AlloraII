@@ -14,6 +14,7 @@ export type LogEntry = { hours: number } & (
   | { kind: 'moved' | 'evicted'; home: HomeKind; place: string }
   | { kind: 'broke'; item: string }
   | { kind: 'dues'; post: string; price: number }
+  | { kind: 'lost'; case: string }
 );
 
 /** How many entries are kept. */

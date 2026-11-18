@@ -30,6 +30,11 @@
       pay: 3.5
       dues: 40
       trial: A legendary work.
+  # Every piece is forged from a bar the smith brings: better iron, better work.
+  materials:
+    - { item: iron_ingot, quality: 0 }
+    - { item: iron_t2, quality: 1 }
+    - { item: iron_t3, quality: 2 }
   # The work of a commission: each step is a check, and each offers a safe way and a bold one.
   work:
     - id: heat
@@ -44,6 +49,8 @@
       approaches:
         - { id: plain_weld, name: A plain weld, dc: 0 }
         - { id: folded_weld, name: A folded weld, dc: 5, bold: true }
+        # A technique the guild teaches its masters.
+        - { id: pattern_weld, name: A pattern-weld, dc: 9, bold: true, rank: 2, quality: 1 }
     - id: quench
       name: Quench
       hours: 1

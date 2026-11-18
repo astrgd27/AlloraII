@@ -964,3 +964,25 @@ button:active:not(:disabled) {
   content: ' ⚒';
   color: var(--gilt);
 }
+
+.board-clues {
+  list-style: none;
+  margin: 0.3rem 0;
+  padding: 0;
+  font-size: 0.85rem;
+}
+
+.board-clues li::before {
+  content: '◆ ';
+  color: var(--gilt-dim);
+}
+
+.board-clues li.triumph::before,
+.board-clues li.success::before {
+  color: var(--good);
+}
+
+.board-clues li.failure::before,
+.board-clues li.disaster::before {
+  color: var(--accent);
+}

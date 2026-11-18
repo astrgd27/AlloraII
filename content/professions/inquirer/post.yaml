@@ -26,6 +26,8 @@
     - name: "Capo's Deputy"
       pay: 4
       trial: Close a case that reaches into a great house, quietly.
+  # A case left open gives the culprit time: after three days, a clue is lost every two.
+  pressure: { grace: 3, every: 2 }
   # The work of a case: four ways to find clues, then the accusation. Each clue makes the accusation surer.
   work:
     - id: scene

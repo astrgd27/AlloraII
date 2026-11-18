@@ -155,6 +155,9 @@ async function main(): Promise<void> {
         sub: e.sub,
         ranks: (e.ranks as Raw[]).map((r) => r.name),
         work: e.work,
+        materials: e.materials,
+        harmony: e.harmony,
+        pressure: e.pressure,
       })),
     cases: professions
       .filter((e) => e.kind === 'case')

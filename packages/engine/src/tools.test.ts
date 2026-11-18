@@ -8,6 +8,7 @@ import { TOOL_PAY, toolFor, toolModifiers } from './tools';
 const smith = () => {
   const state = newGame(4, 0);
   state.place = 'kess_market';
+  state.goods = { iron_ingot: 50 };
   state.home = 'kess_market';
   const e = new Engine(state);
   e.handle({ type: 'takePost', post: 'post_kesselhaven_guild_smith' }, 0);

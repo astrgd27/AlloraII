@@ -25,7 +25,7 @@ export interface Journey {
 }
 
 /** The save format version. Raise it with every change to GameState, and add a migration. */
-export const SAVE_VERSION = 15;
+export const SAVE_VERSION = 16;
 
 export interface GameState {
   version: typeof SAVE_VERSION;

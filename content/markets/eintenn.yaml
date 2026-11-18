@@ -127,6 +127,7 @@
     - clay
     - copper_ore
     - tin_ore
+    - iron_t3
 - id: market_wp_ferry
   origin: allora2
   kind: market

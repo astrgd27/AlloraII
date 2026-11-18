@@ -7,6 +7,8 @@
 import { activitySystem, availableNow, begin, whyNot, type LastCheck } from './activities';
 import {
   beginStep,
+  careerDay,
+  materialFor,
   choices,
   offers,
   takeCase,
@@ -86,7 +88,7 @@ export interface Snapshot {
   /** All the work of this place open to the life, and why any of it cannot be begun now. */
   work: { id: string; reason?: string }[];
   /** Why whole kinds of order would be refused now. Absent when they would not be. */
-  blocked: { travel?: string; people?: string; market?: string; step?: string };
+  blocked: { travel?: string; people?: string; market?: string; step?: string; takeCase?: string };
   /** What just happened, newest first. */
   log: LogEntry[];
   /** Ids of the activities that can be begun here and now. */
@@ -109,6 +111,15 @@ export interface Snapshot {
     strain: number;
     hoursLeft: number;
     choices: { id: string; chance: number }[];
+    /** Techniques of this step not yet learned, and the rank that opens them. */
+    locked: { id: string; rank: number }[];
+    /** The case board: each step done and how it went. */
+    clues: { step: string; degree: string }[];
+    /** Days the case has been open, and clues lost to time. */
+    days: number;
+    lost: number;
+    /** The material it is made from, if any. */
+    material: string | null;
   } | null;
   /** How many pieces of work are finished, and the last one. */
   works: number;
@@ -216,7 +227,11 @@ export class Engine {
       if (payRent(this.state))
         note(this.state, { kind: 'evicted', home: kind, place: this.state.home });
     }
-    if (date.hour === 0) liveDay(this.state);
+    if (date.hour === 0) {
+      liveDay(this.state);
+      const lost = careerDay(this.state, this.world);
+      if (lost) note(this.state, { kind: 'lost', case: lost });
+    }
     if (date.seasonIndex !== before.seasonIndex) payDues(this.state, this.world);
     routine(this.state, this.world, before, this.away);
     for (const system of this.systems) system.tick(this.state, date, this.bus, this.world);
@@ -388,6 +403,11 @@ export class Engine {
       else if (j || s.place !== postPlace) blocked.step = 'Not at the workshop';
       else if (working) blocked.step = 'Busy';
     }
+    const postNow = s.post ? this.world.posts.get(s.post.id) : undefined;
+    if (postNow?.materials && !materialFor(s, postNow)) {
+      const names = postNow.materials.map((m) => this.world.items.get(m.item)?.name ?? m.item);
+      blocked.takeCase = `Needs ${names.join(' or ')} to work`;
+    }
     const full = carried(s) >= PACK;
     return {
       blocked,
@@ -471,6 +491,16 @@ export class Engine {
               id: c.approach.id,
               chance: c.chance,
             })),
+            locked: (
+              this.world.posts.get(this.state.post?.id ?? '')?.work[this.state.venture.step]
+                ?.approaches ?? []
+            )
+              .filter((a) => (a.rank ?? 0) > (this.state.post?.rank ?? 0))
+              .map((a) => ({ id: a.id, rank: a.rank ?? 0 })),
+            clues: this.state.venture.clues.map((c) => ({ ...c })),
+            days: Math.floor((this.state.hours - this.state.venture.started) / 24),
+            lost: this.state.venture.lost,
+            material: this.state.venture.material ?? null,
           }
         : null,
       works: this.state.works.length,
