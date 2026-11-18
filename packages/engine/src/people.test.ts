@@ -85,7 +85,15 @@ describe('meeting and talking', () => {
   it('shows a stranger, then a name once met', () => {
     const engine = at(19);
     expect(engine.snapshot().here).toEqual([
-      { id: 'hanne', sub: 'tavern', known: false, talks: 0 },
+      {
+        id: 'hanne',
+        sub: 'tavern',
+        known: false,
+        talks: 0,
+        points: 0,
+        tier: 0,
+        giftWhy: 'Not yet met',
+      },
     ]);
     const before = engine.state.needs.spirits;
     engine.handle({ type: 'meet', person: 'hanne' }, 0);

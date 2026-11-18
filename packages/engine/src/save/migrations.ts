@@ -111,6 +111,25 @@ export const MIGRATIONS: Record<number, (save: AnySave) => AnySave> = {
         ? { ...(save.post as object), harmony: 60 }
         : (save.post ?? null),
   }),
+  // Version 17 adds friendship: points, gifts and what is told at each tier.
+  16: (save) => ({
+    ...save,
+    version: 17,
+    bonds: Object.fromEntries(
+      Object.entries((save.bonds ?? {}) as Record<string, Record<string, unknown>>).map(
+        ([id, b]) => [
+          id,
+          {
+            ...b,
+            points: 20 + 6 * Math.min(20, Number(b.talks ?? 0)),
+            lastGift: -1,
+            toTell: 0,
+            told: 0,
+          },
+        ],
+      ),
+    ),
+  }),
 };
 
 export function versionOf(save: unknown): number {

@@ -3,6 +3,7 @@
  * talking with those you know. Schedules are read as Allora I reads them.
  */
 import type { GameDate } from './calendar';
+import { POINTS, warm } from './bonds';
 import type { GameState } from './state';
 import type { Person, World } from './world';
 
@@ -12,14 +13,23 @@ export interface Bond {
   talks: number;
   /** The day of the year on which they last talked, so a talk counts once a day. */
   lastTalkDay: number;
+  /** Friendship points, 0 to 1,000 (bonds.ts). */
+  points: number;
+  /** The game day of the last gift, or −1. */
+  lastGift: number;
+  /** The highest tier whose confidence is still to be told, and the highest told. */
+  toTell: number;
+  told: number;
 }
 
 /** The last thing someone said to the life. */
 export interface Words {
   person: string;
-  kind: 'meet' | 'talk';
-  /** Which of the person's talk lines, for `talk`. */
+  kind: 'meet' | 'talk' | 'gift' | 'confide';
+  /** Which of the person's talk lines, for `talk`; which tier, for `confide`. */
   line: number;
+  /** How a gift was taken. */
+  reaction?: string;
 }
 
 export const SPIRITS = { meet: 3, talk: 2 };
@@ -66,7 +76,14 @@ function present(state: GameState, world: World, id: string, date: GameDate): Pe
 export function meet(state: GameState, world: World, id: string, date: GameDate): void {
   present(state, world, id, date);
   if (state.bonds[id]) throw new Error('Already met');
-  state.bonds[id] = { talks: 0, lastTalkDay: -1 };
+  state.bonds[id] = {
+    talks: 0,
+    lastTalkDay: -1,
+    points: POINTS.meet,
+    lastGift: -1,
+    toTell: 0,
+    told: 0,
+  };
   state.needs.spirits = clamp(state.needs.spirits + SPIRITS.meet);
   state.words = { person: id, kind: 'meet', line: 0 };
 }
@@ -80,7 +97,19 @@ export function talk(state: GameState, world: World, id: string, date: GameDate)
   if (bond.lastTalkDay !== today) {
     state.needs.spirits = clamp(state.needs.spirits + SPIRITS.talk);
     bond.lastTalkDay = today;
+    warm(state, world, id, POINTS.talk);
   }
-  state.words = { person: id, kind: 'talk', line: bond.talks % Math.max(1, person.talk.length) };
   bond.talks += 1;
+  // A new tier of friendship: they tell you what they have been keeping back.
+  if (bond.toTell > bond.told && person.tiers?.[bond.told]) {
+    state.words = { person: id, kind: 'confide', line: bond.told };
+    bond.told += 1;
+    return;
+  }
+  bond.told = Math.max(bond.told, bond.toTell);
+  state.words = {
+    person: id,
+    kind: 'talk',
+    line: (bond.talks - 1) % Math.max(1, person.talk.length),
+  };
 }

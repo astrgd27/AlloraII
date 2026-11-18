@@ -5743,890 +5743,1066 @@
    "id": "ale",
    "name": "Ale",
    "value": 3,
+   "type": "food",
    "food": true
   },
   {
    "id": "alembic",
    "name": "Alembic & Still",
-   "value": 81.25
+   "value": 81.25,
+   "type": "furniture"
   },
   {
    "id": "astrolabe",
    "name": "Astrolabe",
-   "value": 120
+   "value": 120,
+   "type": "tool"
   },
   {
    "id": "axe",
    "name": "Felling Axe",
-   "value": 15
+   "value": 15,
+   "type": "tool"
   },
   {
    "id": "bauta",
    "name": "Marrean Bauta",
-   "value": 35
+   "value": 35,
+   "type": "wear"
   },
   {
    "id": "bench1",
    "name": "Rough Workbench",
-   "value": 18.75
+   "value": 18.75,
+   "type": "furniture"
   },
   {
    "id": "boots",
    "name": "Stout Boots",
-   "value": 18
+   "value": 18,
+   "type": "wear"
   },
   {
    "id": "bread",
    "name": "Bread",
    "value": 1.5,
+   "type": "food",
    "food": true
   },
   {
    "id": "bronze_ingot",
    "name": "Bronze Bar",
-   "value": 20
+   "value": 20,
+   "type": "goods"
   },
   {
    "id": "buckler",
    "name": "Buckler",
-   "value": 20
+   "value": 20,
+   "type": "tool"
   },
   {
    "id": "candle",
    "name": "Rough Stub",
-   "value": 1.6
+   "value": 1.6,
+   "type": "goods"
   },
   {
    "id": "candle_branch",
    "name": "Iron Candle-Branch",
-   "value": 30
+   "value": 30,
+   "type": "furniture"
   },
   {
    "id": "candle_t2",
    "name": "Smooth Pillar",
-   "value": 4
+   "value": 4,
+   "type": "goods"
   },
   {
    "id": "catnip",
    "name": "Dried Catnip",
-   "value": 2
+   "value": 2,
+   "type": "goods"
   },
   {
    "id": "chew_bone",
    "name": "Chew-Bone",
-   "value": 2
+   "value": 2,
+   "type": "goods"
   },
   {
    "id": "citrus",
    "name": "Bitter Oranges",
-   "value": 2
+   "value": 2,
+   "type": "raw"
   },
   {
    "id": "clay",
    "name": "Clay",
-   "value": 0.5
+   "value": 0.5,
+   "type": "raw"
   },
   {
    "id": "cn_beam",
    "name": "Squared Beams",
-   "value": 4
+   "value": 4,
+   "type": "goods"
   },
   {
    "id": "cn_bricks",
    "name": "Fired Bricks",
-   "value": 2.5
+   "value": 2.5,
+   "type": "goods"
   },
   {
    "id": "cn_fence",
    "name": "Fence Rails",
-   "value": 2
+   "value": 2,
+   "type": "goods"
   },
   {
    "id": "cn_hinges",
    "name": "Iron Fittings",
-   "value": 13.3
+   "value": 13.3,
+   "type": "goods"
   },
   {
    "id": "cn_mortar",
    "name": "Lime Mortar",
-   "value": 2
+   "value": 2,
+   "type": "goods"
   },
   {
    "id": "cn_nails",
    "name": "Box of Nails",
-   "value": 3.3
+   "value": 3.3,
+   "type": "goods"
   },
   {
    "id": "cn_stone",
    "name": "Dressed Stone",
-   "value": 3.3
+   "value": 3.3,
+   "type": "goods"
   },
   {
    "id": "coal",
    "name": "Charcoal",
-   "value": 1.8
+   "value": 1.8,
+   "type": "raw"
   },
   {
    "id": "compass",
    "name": "Lodestone Compass",
-   "value": 90
+   "value": 90,
+   "type": "wear"
   },
   {
    "id": "copper_ingot",
    "name": "Copper Bar",
-   "value": 9
+   "value": 9,
+   "type": "goods"
   },
   {
    "id": "copper_ore",
    "name": "Copper Ore",
-   "value": 2.5
+   "value": 2.5,
+   "type": "raw"
   },
   {
    "id": "cordial",
    "name": "Mariner’s Cordial",
-   "value": 20
+   "value": 20,
+   "type": "goods"
   },
   {
    "id": "crossbow",
    "name": "Crossbow",
-   "value": 45
+   "value": 45,
+   "type": "tool"
   },
   {
    "id": "desk1",
    "name": "Writing Desk",
-   "value": 43.75
+   "value": 43.75,
+   "type": "furniture"
   },
   {
    "id": "dig_kit",
    "name": "Excavator’s Kit",
-   "value": 30
+   "value": 30,
+   "type": "tool"
   },
   {
    "id": "doublet",
    "name": "Fine Doublet",
-   "value": 55
+   "value": 55,
+   "type": "wear"
   },
   {
    "id": "easel1",
    "name": "Painter’s Easel",
-   "value": 34.375
+   "value": 34.375,
+   "type": "furniture"
   },
   {
    "id": "eggs",
    "name": "Hen’s Eggs",
-   "value": 0.4
+   "value": 0.4,
+   "type": "raw"
   },
   {
    "id": "falcon_hood",
    "name": "Falconer’s Hood",
-   "value": 25
+   "value": 25,
+   "type": "tool"
   },
   {
    "id": "feather_lure",
    "name": "Feather Lure",
-   "value": 3
+   "value": 3,
+   "type": "goods"
   },
   {
    "id": "felt_hat",
    "name": "Felt Hat",
-   "value": 12
+   "value": 12,
+   "type": "wear"
   },
   {
    "id": "fever_bark",
    "name": "Fever-Bark",
-   "value": 14
+   "value": 14,
+   "type": "goods"
   },
   {
    "id": "fiddle",
    "name": "Fiddle",
-   "value": 35
+   "value": 35,
+   "type": "tool"
   },
   {
    "id": "fish",
    "name": "Fish",
-   "value": 1
+   "value": 1,
+   "type": "raw"
   },
   {
    "id": "fishing_net",
    "name": "Fishing Net",
-   "value": 25
+   "value": 25,
+   "type": "tool"
   },
   {
    "id": "flax",
    "name": "Flax",
-   "value": 1
+   "value": 1,
+   "type": "raw"
   },
   {
    "id": "fodder_mash",
    "name": "Warm Fodder-Mash",
-   "value": 3
+   "value": 3,
+   "type": "goods"
   },
   {
    "id": "forge1",
    "name": "Rough Forge",
-   "value": 100
+   "value": 100,
+   "type": "furniture"
   },
   {
    "id": "fr_apple_pie",
    "name": "Apple Pie",
    "value": 6.3,
+   "type": "food",
    "food": true
   },
   {
    "id": "fr_cider",
    "name": "Cider",
    "value": 3,
+   "type": "food",
    "food": true
   },
   {
    "id": "fruit",
    "name": "Orchard Fruit",
-   "value": 0.8
+   "value": 0.8,
+   "type": "raw"
   },
   {
    "id": "fu_block",
    "name": "Butcher’s Block",
-   "value": 22.1
+   "value": 22.1,
+   "type": "furniture"
   },
   {
    "id": "fu_churn",
    "name": "Butter Churn",
-   "value": 49.3
+   "value": 49.3,
+   "type": "furniture"
   },
   {
    "id": "fu_stool",
    "name": "Milking Stool and Pails",
-   "value": 6.6
+   "value": 6.6,
+   "type": "furniture"
   },
   {
    "id": "gambeson",
    "name": "Padded Gambeson",
-   "value": 30
+   "value": 30,
+   "type": "tool"
   },
   {
    "id": "glass",
    "name": "Green Glass",
-   "value": 5
+   "value": 5,
+   "type": "goods"
   },
   {
    "id": "glass_t2",
    "name": "Clear Glass",
-   "value": 12
+   "value": 12,
+   "type": "goods"
   },
   {
    "id": "gold_ingot",
    "name": "Gold Bar",
-   "value": 60
+   "value": 60,
+   "type": "goods"
   },
   {
    "id": "grain",
    "name": "Grain",
-   "value": 0.6
+   "value": 0.6,
+   "type": "raw"
   },
   {
    "id": "grapes",
    "name": "Grapes",
-   "value": 1
+   "value": 1,
+   "type": "raw"
   },
   {
    "id": "grooming_kit",
    "name": "Grooming Kit",
-   "value": 30
+   "value": 30,
+   "type": "tool"
   },
   {
    "id": "h_chamomile",
    "name": "Chamomile",
-   "value": 1.6
+   "value": 1.6,
+   "type": "raw"
   },
   {
    "id": "h_sage",
    "name": "Sage",
-   "value": 1.4
+   "value": 1.4,
+   "type": "raw"
   },
   {
    "id": "h_thyme",
    "name": "Thyme",
-   "value": 1.2
+   "value": 1.2,
+   "type": "raw"
   },
   {
    "id": "habit",
    "name": "Hooded Robe",
-   "value": 18
+   "value": 18,
+   "type": "wear"
   },
   {
    "id": "halter",
    "name": "Tamer’s Halter",
-   "value": 35
+   "value": 35,
+   "type": "tool"
   },
   {
    "id": "harp",
    "name": "Harp",
-   "value": 70
+   "value": 70,
+   "type": "tool"
   },
   {
    "id": "herb_rack",
    "name": "Herb-Drying Racks",
-   "value": 21.875
+   "value": 21.875,
+   "type": "furniture"
   },
   {
    "id": "herbs",
    "name": "Herbs",
-   "value": 1.5
+   "value": 1.5,
+   "type": "raw"
   },
   {
    "id": "hide",
    "name": "Raw Hide",
-   "value": 2
+   "value": 2,
+   "type": "raw"
   },
   {
    "id": "hood",
    "name": "Hood",
-   "value": 6
+   "value": 6,
+   "type": "wear"
   },
   {
    "id": "hound_biscuit",
    "name": "Hound-Biscuits",
-   "value": 3
+   "value": 3,
+   "type": "goods"
   },
   {
    "id": "hunting_bow",
    "name": "Hunting Bow",
-   "value": 30
+   "value": 30,
+   "type": "tool"
   },
   {
    "id": "icon",
    "name": "Thoolman Icon",
-   "value": 120
+   "value": 120,
+   "type": "furniture"
   },
   {
    "id": "incense",
    "name": "Frankincense",
-   "value": 10
+   "value": 10,
+   "type": "raw"
   },
   {
    "id": "ink",
    "name": "Oak-Gall Ink",
-   "value": 3
+   "value": 3,
+   "type": "goods"
   },
   {
    "id": "ink_t2",
    "name": "Lamp-Black Ink",
-   "value": 8
+   "value": 8,
+   "type": "goods"
   },
   {
    "id": "iron_ingot",
    "name": "Bloomery Iron",
-   "value": 6
+   "value": 6,
+   "type": "goods"
   },
   {
    "id": "iron_ore",
    "name": "Iron Ore",
-   "value": 2
+   "value": 2,
+   "type": "raw"
   },
   {
    "id": "iron_t2",
    "name": "Wrought Iron",
-   "value": 16
+   "value": 16,
+   "type": "goods"
   },
   {
    "id": "iron_t3",
    "name": "Steel Bar",
-   "value": 42
+   "value": 42,
+   "type": "goods"
   },
   {
    "id": "item_bread_peel",
    "name": "Baker's Peel",
-   "value": 3
+   "value": 3,
+   "type": "tool"
   },
   {
    "id": "item_hammer_tongs",
    "name": "Hammer and Tongs",
-   "value": 12
+   "value": 12,
+   "type": "tool"
   },
   {
    "id": "item_ledger",
    "name": "Ruled Ledger",
-   "value": 6
+   "value": 6,
+   "type": "tool"
   },
   {
    "id": "item_needle_case",
    "name": "Needle-Case",
-   "value": 4
+   "value": 4,
+   "type": "tool"
   },
   {
    "id": "jewel1",
    "name": "Jeweller’s Bench",
-   "value": 100
+   "value": 100,
+   "type": "furniture"
   },
   {
    "id": "kettle_hat",
    "name": "Kettle Hat",
-   "value": 20
+   "value": 20,
+   "type": "wear"
   },
   {
    "id": "kiln1",
    "name": "Pottery Kiln",
-   "value": 75
+   "value": 75,
+   "type": "furniture"
   },
   {
    "id": "leather_ball",
    "name": "Leather Ball",
-   "value": 4
+   "value": 4,
+   "type": "goods"
   },
   {
    "id": "lion_pin",
    "name": "Glass Lion Brooch",
-   "value": 40
+   "value": 40,
+   "type": "wear"
   },
   {
    "id": "lockpicks",
    "name": "Lockpicks",
-   "value": 25
+   "value": 25,
+   "type": "tool"
   },
   {
    "id": "loom1",
    "name": "Hand-Loom",
-   "value": 50
+   "value": 50,
+   "type": "furniture"
   },
   {
    "id": "lute",
    "name": "Lute",
-   "value": 40
+   "value": 40,
+   "type": "tool"
   },
   {
    "id": "lv_beef",
    "name": "Beef",
-   "value": 3
+   "value": 3,
+   "type": "raw"
   },
   {
    "id": "lv_butter",
    "name": "Fresh Butter",
    "value": 3.4,
+   "type": "food",
    "food": true
   },
   {
    "id": "lv_pork",
    "name": "Pork",
-   "value": 2.5
+   "value": 2.5,
+   "type": "raw"
   },
   {
    "id": "lv_soap",
    "name": "Lye Soap",
-   "value": 2.9
+   "value": 2.9,
+   "type": "goods"
   },
   {
    "id": "mail",
    "name": "Mail Hauberk",
-   "value": 150
+   "value": 150,
+   "type": "tool"
   },
   {
    "id": "mason1",
    "name": "Mason’s Banker",
-   "value": 28.125
+   "value": 28.125,
+   "type": "furniture"
   },
   {
    "id": "mastic",
    "name": "Mastic Tears",
-   "value": 9
+   "value": 9,
+   "type": "raw"
   },
   {
    "id": "mirror",
    "name": "Marrean Mirror",
-   "value": 60
+   "value": 60,
+   "type": "tool"
   },
   {
    "id": "needle1",
    "name": "Sewing Table",
-   "value": 31.25
+   "value": 31.25,
+   "type": "furniture"
   },
   {
    "id": "neroli",
    "name": "Marrean Neroli",
-   "value": 70
+   "value": 70,
+   "type": "wear"
   },
   {
    "id": "o_apple",
    "name": "Apples",
-   "value": 0.7
+   "value": 0.7,
+   "type": "raw"
   },
   {
    "id": "o_pear",
    "name": "Pears",
-   "value": 0.8
+   "value": 0.8,
+   "type": "raw"
   },
   {
    "id": "o_plum",
    "name": "Plums",
-   "value": 0.8
+   "value": 0.8,
+   "type": "raw"
   },
   {
    "id": "oilskin",
    "name": "Oilskin Cloak",
-   "value": 24
+   "value": 24,
+   "type": "wear"
   },
   {
    "id": "parch_t2",
    "name": "Rag Paper",
-   "value": 9
+   "value": 9,
+   "type": "goods"
   },
   {
    "id": "parchment",
    "name": "Rough Parchment",
-   "value": 4
+   "value": 4,
+   "type": "goods"
   },
   {
    "id": "pell",
    "name": "Pell & Practice Dummy",
-   "value": 25
+   "value": 25,
+   "type": "furniture"
   },
   {
    "id": "perfume",
    "name": "Flower-Water",
-   "value": 30
+   "value": 30,
+   "type": "wear"
   },
   {
    "id": "pickaxe",
    "name": "Pickaxe",
-   "value": 18
+   "value": 18,
+   "type": "tool"
   },
   {
    "id": "plague_mask",
    "name": "Plague-Doctor’s Mask",
-   "value": 30
+   "value": 30,
+   "type": "wear"
   },
   {
    "id": "potion",
    "name": "Healing Draught",
-   "value": 12
+   "value": 12,
+   "type": "goods"
   },
   {
    "id": "primer",
    "name": "Primer of Letters",
-   "value": 30
+   "value": 30,
+   "type": "tool"
   },
   {
    "id": "purple",
    "name": "Thoolman Purple",
-   "value": 101.4
+   "value": 101.4,
+   "type": "goods"
   },
   {
    "id": "rapier",
    "name": "Rapier",
-   "value": 70
+   "value": 70,
+   "type": "tool"
   },
   {
    "id": "riding_boots",
    "name": "Riding Boots",
-   "value": 45
+   "value": 45,
+   "type": "wear"
   },
   {
    "id": "rope",
    "name": "Hemp Rope",
-   "value": 3
+   "value": 3,
+   "type": "goods"
   },
   {
    "id": "rope_bed",
    "name": "Rope Bed",
-   "value": 50
+   "value": 50,
+   "type": "furniture"
   },
   {
    "id": "rope_t2",
    "name": "Tarred Line",
-   "value": 8
+   "value": 8,
+   "type": "goods"
   },
   {
    "id": "rosary",
    "name": "Prayer Beads",
-   "value": 8
+   "value": 8,
+   "type": "wear"
   },
   {
    "id": "salt",
    "name": "Salt",
-   "value": 1
+   "value": 1,
+   "type": "raw"
   },
   {
    "id": "sand",
    "name": "Sand",
-   "value": 0.2
+   "value": 0.2,
+   "type": "raw"
   },
   {
    "id": "scholar_cap",
    "name": "Scholar’s Cap",
-   "value": 14
+   "value": 14,
+   "type": "wear"
   },
   {
    "id": "scholar_gown",
    "name": "Scholar’s Gown",
-   "value": 30
+   "value": 30,
+   "type": "wear"
   },
   {
    "id": "sd_b_chanterelle",
    "name": "Chanterelles (spawn)",
-   "value": 5
+   "value": 5,
+   "type": "goods"
   },
   {
    "id": "sd_gr_wheat",
    "name": "Wheat (seed)",
-   "value": 1
+   "value": 1,
+   "type": "goods"
   },
   {
    "id": "sd_h_chamomile",
    "name": "Chamomile (seed)",
-   "value": 2.4
+   "value": 2.4,
+   "type": "goods"
   },
   {
    "id": "sd_h_parsley",
    "name": "Parsley (seed)",
-   "value": 1.7
+   "value": 1.7,
+   "type": "goods"
   },
   {
    "id": "sd_h_sage",
    "name": "Sage (seed)",
-   "value": 2.1
+   "value": 2.1,
+   "type": "goods"
   },
   {
    "id": "sd_h_thyme",
    "name": "Thyme (seed)",
-   "value": 1.8
+   "value": 1.8,
+   "type": "goods"
   },
   {
    "id": "sd_o_apple",
    "name": "Apples (sapling)",
-   "value": 4.2
+   "value": 4.2,
+   "type": "goods"
   },
   {
    "id": "sd_o_pear",
    "name": "Pears (sapling)",
-   "value": 4.8
+   "value": 4.8,
+   "type": "goods"
   },
   {
    "id": "sd_o_plum",
    "name": "Plums (sapling)",
-   "value": 4.8
+   "value": 4.8,
+   "type": "goods"
   },
   {
    "id": "sd_v_carrot",
    "name": "Carrots (seed)",
-   "value": 0.9
+   "value": 0.9,
+   "type": "goods"
   },
   {
    "id": "sd_v_leek",
    "name": "Leeks (seed)",
-   "value": 1
+   "value": 1,
+   "type": "goods"
   },
   {
    "id": "sd_v_onion",
    "name": "Onions (seed)",
-   "value": 0.9
+   "value": 0.9,
+   "type": "goods"
   },
   {
    "id": "sd_v_pea",
    "name": "Peas (seed)",
-   "value": 1
+   "value": 1,
+   "type": "goods"
   },
   {
    "id": "sd_v_turnip",
    "name": "Turnips (seed)",
-   "value": 0.8
+   "value": 0.8,
+   "type": "goods"
   },
   {
    "id": "sea_boots",
    "name": "Sea-Boots",
-   "value": 26
+   "value": 26,
+   "type": "wear"
   },
   {
    "id": "sea_glass",
    "name": "Sea-Glass",
-   "value": 0.8
+   "value": 0.8,
+   "type": "raw"
   },
   {
    "id": "shawm",
    "name": "Shawm",
-   "value": 20
+   "value": 20,
+   "type": "tool"
   },
   {
    "id": "shelves",
    "name": "Bookshelves",
-   "value": 137.5
+   "value": 137.5,
+   "type": "furniture"
   },
   {
    "id": "shift_white",
    "name": "White Linen Shift",
-   "value": 12
+   "value": 12,
+   "type": "wear"
   },
   {
    "id": "silk",
    "name": "Raw Silk",
-   "value": 14
+   "value": 14,
+   "type": "raw"
   },
   {
    "id": "slops",
    "name": "Sailor’s Slops & Jersey",
-   "value": 16
+   "value": 16,
+   "type": "wear"
   },
   {
    "id": "smelter1",
    "name": "Bloomery",
-   "value": 106.25
+   "value": 106.25,
+   "type": "furniture"
   },
   {
    "id": "smock",
    "name": "Work Smock",
-   "value": 6
+   "value": 6,
+   "type": "wear"
   },
   {
    "id": "smoked_fish",
    "name": "Smoked Fish",
    "value": 2.5,
+   "type": "food",
    "food": true
   },
   {
    "id": "spear",
    "name": "Spear",
-   "value": 20
+   "value": 20,
+   "type": "tool"
   },
   {
    "id": "spectacles",
    "name": "Spectacles",
-   "value": 75
+   "value": 75,
+   "type": "wear"
   },
   {
    "id": "spiced_wine",
    "name": "Marrean Spiced Wine",
    "value": 16,
+   "type": "food",
    "food": true
   },
   {
    "id": "spices",
    "name": "Southern Spices",
-   "value": 15
+   "value": 15,
+   "type": "goods"
   },
   {
    "id": "stable_stout",
    "name": "Stable Stout",
    "value": 4,
+   "type": "food",
    "food": true
   },
   {
    "id": "stone",
    "name": "Stone",
-   "value": 1
+   "value": 1,
+   "type": "raw"
   },
   {
    "id": "straw_bed",
    "name": "Straw Pallet",
-   "value": 9.375
+   "value": 9.375,
+   "type": "furniture"
   },
   {
    "id": "straw_hat",
    "name": "Straw Hat",
-   "value": 3
+   "value": 3,
+   "type": "wear"
   },
   {
    "id": "sugar_cube",
    "name": "Honey-Sugar Cubes",
-   "value": 2
+   "value": 2,
+   "type": "goods"
   },
   {
    "id": "surcoat",
    "name": "Armorial Surcoat",
-   "value": 60
+   "value": 60,
+   "type": "wear"
   },
   {
    "id": "surgeon_kit",
    "name": "Surgeon’s Case",
-   "value": 35
+   "value": 35,
+   "type": "wear"
   },
   {
    "id": "sword",
    "name": "Arming Sword",
-   "value": 60
+   "value": 60,
+   "type": "tool"
   },
   {
    "id": "table",
    "name": "Trestle Table & Benches",
-   "value": 28.125
+   "value": 28.125,
+   "type": "furniture"
   },
   {
    "id": "tabor",
    "name": "Tabor",
-   "value": 15
+   "value": 15,
+   "type": "tool"
   },
   {
    "id": "theriac",
    "name": "Theriac",
-   "value": 28
+   "value": 28,
+   "type": "goods"
   },
   {
    "id": "tin_ore",
    "name": "Tin Ore",
-   "value": 4
+   "value": 4,
+   "type": "raw"
   },
   {
    "id": "training_whistle",
    "name": "Training Whistle",
-   "value": 20
+   "value": 20,
+   "type": "tool"
   },
   {
    "id": "tunic",
    "name": "Wool Tunic & Hose",
-   "value": 14
+   "value": 14,
+   "type": "wear"
   },
   {
    "id": "v_onion",
    "name": "Onions",
-   "value": 0.6
+   "value": 0.6,
+   "type": "raw"
   },
   {
    "id": "v_turnip",
    "name": "Turnips",
-   "value": 0.5
+   "value": 0.5,
+   "type": "raw"
   },
   {
    "id": "vats1",
    "name": "Tanning & Dye Vats",
-   "value": 62.5
+   "value": 62.5,
+   "type": "furniture"
   },
   {
    "id": "veg",
    "name": "Vegetables",
-   "value": 0.7
+   "value": 0.7,
+   "type": "raw"
   },
   {
    "id": "windows",
    "name": "Glazed Windows",
-   "value": 200
+   "value": 200,
+   "type": "furniture"
   },
   {
    "id": "wine",
    "name": "Wine",
    "value": 7,
+   "type": "food",
    "food": true
   },
   {
    "id": "wood",
    "name": "Timber",
-   "value": 1
+   "value": 1,
+   "type": "raw"
   },
   {
    "id": "wool",
    "name": "Wool",
-   "value": 1.5
+   "value": 1.5,
+   "type": "raw"
   },
   {
    "id": "wool_cloak",
    "name": "Wool Cloak",
-   "value": 14
+   "value": 14,
+   "type": "wear"
   },
   {
    "id": "work_gloves",
    "name": "Work Gloves",
-   "value": 8
+   "value": 8,
+   "type": "wear"
   },
   {
    "id": "ws_sailcloth",
    "name": "Bolt of Sailcloth",
-   "value": 15.3
+   "value": 15.3,
+   "type": "goods"
   }
  ],
  "routes": [
@@ -7364,6 +7540,31 @@
       "cottages"
      ]
     }
+   ],
+   "love": [
+    "honey_cake",
+    "mead",
+    "straw_hat",
+    "flowers"
+   ],
+   "like": [
+    "food",
+    "roses",
+    "lavender"
+   ],
+   "dislike": [
+    "antiq",
+    "book"
+   ],
+   "hate": [
+    "poison",
+    "salt_herring",
+    "genever"
+   ],
+   "tiers": [
+    "Hanne has saved eleven pf towards a strip of land by the river, in a stocking under the barn floor. She shows you.",
+    "Hanne’s mother is ill and the bailiff has raised the rent. Hanne asks you, very stiffly, not to tell anyone.",
+    "Hanne bought her strip of river-land this spring. She has named the first furrow after you, which she says is an honour, and which you decide to take as one."
    ]
   },
   {
@@ -7397,6 +7598,30 @@
       21
      ]
     }
+   ],
+   "love": [
+    "smoked_fish",
+    "genever",
+    "fishing_net",
+    "tabor"
+   ],
+   "like": [
+    "food",
+    "ale",
+    "wine"
+   ],
+   "dislike": [
+    "wear"
+   ],
+   "hate": [
+    "eel",
+    "perfume",
+    "fine_shoes"
+   ],
+   "tiers": [
+    "Jory had a son who went for a marine on the Marrean galleys and never wrote. He keeps the boy’s tabor on a nail by his bed.",
+    "Jory admits he can’t read, and asks you to read him the one letter his son ever sent. It is very short, and he asks you to read it twice.",
+    "Jory has left you his eel-traps in his will, which he made you witness. “Nobody else would know what to do with them,” he says."
    ]
   },
   {
@@ -7430,6 +7655,31 @@
       20
      ]
     }
+   ],
+   "love": [
+    "book",
+    "illuminated",
+    "spectacles",
+    "candle"
+   ],
+   "like": [
+    "goods",
+    "parchment",
+    "ink"
+   ],
+   "dislike": [
+    "raw",
+    "tool"
+   ],
+   "hate": [
+    "dark_beer",
+    "meat",
+    "pumpkin"
+   ],
+   "tiers": [
+    "Mechthild is not a member of the Collegium. She can’t afford the fees, and reads in the library by bribing the porter with gingerbread.",
+    "The Collegium has offered Mechthild a fellowship, on condition she gives up her history of everything. She is thinking about it.",
+    "Mechthild turned the fellowship down. Her history of everything has reached the letter C, and she has dedicated it to you."
    ]
   },
   {
@@ -7459,6 +7709,29 @@
       "rialto"
      ]
     }
+   ],
+   "love": [
+    "saor",
+    "spiced_wine",
+    "painted_fan",
+    "carnival_mask"
+   ],
+   "like": [
+    "food",
+    "wear"
+   ],
+   "dislike": [
+    "raw"
+   ],
+   "hate": [
+    "eel",
+    "genever",
+    "salt_herring"
+   ],
+   "tiers": [
+    "Zanetta is the first woman to hold a gondolier’s licence in her sestiere, and has fought nine men about it, and won seven.",
+    "Zanetta wants to row in the Regatta. The guild says no woman ever has. She says that is a very poor argument.",
+    "Zanetta rowed in the Regatta. She came fourth, which in her sestiere is now spoken of as a victory, and she painted your name on her prow."
    ]
   },
   {
@@ -7492,6 +7765,29 @@
       18
      ]
     }
+   ],
+   "love": [
+    "silver_ingot",
+    "mirror",
+    "sea_glass",
+    "risotto"
+   ],
+   "like": [
+    "goods",
+    "food"
+   ],
+   "dislike": [
+    "tool"
+   ],
+   "hate": [
+    "lamp_oil",
+    "pottery",
+    "fur"
+   ],
+   "tiers": [
+    "Bastian’s master is one of the few who knows the secret of the Masque glass, and is teaching it to him very slowly.",
+    "Bastian has been offered a fortune by a foreign legation to leave the Isles. He is frightened, and asks you what to do.",
+    "Bastian stayed. He has silvered a little mirror for you — the first he ever made alone — and when you look into it, sometimes, it shows you smiling."
    ]
   },
   {
@@ -7535,6 +7831,29 @@
       20
      ]
     }
+   ],
+   "love": [
+    "spices",
+    "purple",
+    "genever",
+    "secret"
+   ],
+   "like": [
+    "goods",
+    "wine"
+   ],
+   "dislike": [
+    "furniture"
+   ],
+   "hate": [
+    "rosary",
+    "pilgrim_badge",
+    "lamp_livery"
+   ],
+   "tiers": [
+    "Momolo was a customs officer for six years, which is how he became such a good smuggler.",
+    "The Loop-Lords want Momolo to run something worse than silk. He has said no, and is sleeping in a different place every night.",
+    "Momolo has told you where he hides his savings, and the name of the boat that will take you anywhere in the world, no questions asked, if you ever need it."
    ]
   },
   {
@@ -7568,6 +7887,29 @@
       20
      ]
     }
+   ],
+   "love": [
+    "theriac",
+    "salve",
+    "lavender_water",
+    "risotto"
+   ],
+   "like": [
+    "goods",
+    "food"
+   ],
+   "dislike": [
+    "raw"
+   ],
+   "hate": [
+    "poison",
+    "cats_eye",
+    "fever_bark"
+   ],
+   "tiers": [
+    "Cateruccia came to the Lazaretto at fourteen as a patient, and never left.",
+    "Cateruccia had the Pestilence again last year and told no one until it was over. She asks you never to do that.",
+    "Cateruccia has made you a little bag of herbs to wear against the sickness. “It won’t work,” she says, “but I’ll feel better.”"
    ]
   },
   {
