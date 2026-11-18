@@ -81,6 +81,8 @@ export const MIGRATIONS: Record<number, (save: AnySave) => AnySave> = {
     report: null,
     turnedBack: false,
   }),
+  // Version 12 adds the record of what just happened.
+  11: (save) => ({ ...save, version: 12, log: [] }),
 };
 
 export function versionOf(save: unknown): number {

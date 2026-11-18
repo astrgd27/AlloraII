@@ -3,13 +3,20 @@
  * with explicit priorities, never by wrapping each other's functions.
  */
 import type { GameDate } from './calendar';
+import type { Degree } from './challenge';
 
 export interface EngineEvents {
   HourPassed: { hours: number; date: GameDate };
   DayBegan: { hours: number; date: GameDate };
   SeasonBegan: { hours: number; date: GameDate };
   YearBegan: { hours: number; date: GameDate };
-  ActivityCompleted: { hours: number; activity: string; place: string };
+  ActivityCompleted: {
+    hours: number;
+    activity: string;
+    place: string;
+    pay?: number;
+    degree?: Degree;
+  };
   CaseFinished: { hours: number; case: string; quality: number; trial: boolean };
   RoadEvent: { hours: number; event: string; road: string };
   Arrived: { hours: number; place: string; from: string };

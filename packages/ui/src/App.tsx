@@ -1,15 +1,15 @@
 import { WORLD, type Order } from '@allora/engine';
 import { useEffect, useState, useSyncExternalStore } from 'react';
-import { Activities } from './Activities';
 import { Orders, Report } from './Away';
-import { Career } from './Career';
+import { Calling } from './Career';
 import { engine } from './engine-client';
 import { MapView } from './map/MapView';
 import { PlaceList, PlacePanel } from './map/PlacePanel';
+import { Log } from './Log';
 import { Market } from './Market';
 import { NowBar } from './NowBar';
 import { Panel } from './Panel';
-import { People } from './People';
+import { PlaceTabs } from './PlaceTabs';
 import { SceneView } from './scene/SceneView';
 import { Skills } from './Skills';
 import { TITLE } from './title';
@@ -27,6 +27,8 @@ export function App() {
   const [chosen, setChosen] = useState<string | undefined>(undefined);
   const [picked, setPicked] = useState<string | undefined>(undefined);
   const send = (order: Order) => engine.send(order);
+  // A refusal is shown where the player last clicked, and fades.
+  const [click, setClick] = useState({ x: 0, y: 0 });
 
   if (!snapshot) {
     return (
@@ -37,11 +39,15 @@ export function App() {
     );
   }
   const region = picked ?? regionOf(snapshot.place);
-  const busy = Boolean(snapshot.doing) || (snapshot.venture?.hoursLeft ?? 0) > 0;
   const here = !snapshot.journey;
 
   return (
-    <main className="game">
+    <main
+      className="game"
+      onPointerDownCapture={(e) => {
+        setClick({ x: e.clientX, y: e.clientY });
+      }}
+    >
       <TopBar snapshot={snapshot} />
 
       <aside className="column left">
@@ -51,11 +57,7 @@ export function App() {
           </Panel>
         )}
         <Panel title="Calling" testid="calling">
-          {snapshot.post || snapshot.postsHere.length > 0 ? (
-            <Career snapshot={snapshot} send={send} />
-          ) : (
-            <p className="quiet">No post held. A post is taken up at its own place.</p>
-          )}
+          <Calling snapshot={snapshot} />
         </Panel>
         <Panel title="Skills">
           {Object.keys(snapshot.skills).length > 0 ? (
@@ -66,6 +68,9 @@ export function App() {
         </Panel>
         <Panel title="Standing orders">
           <Orders snapshot={snapshot} send={send} />
+        </Panel>
+        <Panel title="Lately">
+          <Log snapshot={snapshot} />
         </Panel>
       </aside>
 
@@ -95,34 +100,27 @@ export function App() {
         >
           <SceneView snapshot={snapshot} />
         </Panel>
-        {here && (
-          <>
-            <Panel title="People here">
-              {snapshot.here.length > 0 || snapshot.words ? (
-                <People snapshot={snapshot} send={send} />
-              ) : (
-                <p className="quiet">Nobody is about.</p>
-              )}
-            </Panel>
-            <Panel title="Work to hand">
-              {busy ? (
-                <p className="quiet">Busy. See below.</p>
-              ) : snapshot.asleep ? (
-                <p className="quiet">Asleep.</p>
-              ) : snapshot.canDo.length > 0 ? (
-                <Activities snapshot={snapshot} send={send} />
-              ) : (
-                <p className="quiet">Nothing to be done here at this hour.</p>
-              )}
-            </Panel>
-          </>
+        {here ? (
+          <PlaceTabs snapshot={snapshot} send={send} />
+        ) : (
+          <Panel title="Pack">
+            <Market snapshot={snapshot} send={send} />
+          </Panel>
         )}
-        <Panel title="Purse and market">
-          <Market snapshot={snapshot} send={send} />
-        </Panel>
       </aside>
 
-      <NowBar snapshot={snapshot} error={error} send={send} />
+      <NowBar snapshot={snapshot} send={send} />
+      {error && (
+        <p
+          key={error}
+          className="refusal"
+          role="alert"
+          data-testid="refusal"
+          style={{ left: Math.min(click.x, innerWidth - 260), top: Math.max(8, click.y - 44) }}
+        >
+          {error}
+        </p>
+      )}
     </main>
   );
 }

@@ -60,15 +60,7 @@ export function nowOf(snapshot: Snapshot): Now {
 }
 
 /** Always on screen: what the life is doing, and how far along. Display only. */
-export function NowBar({
-  snapshot,
-  error,
-  send,
-}: {
-  snapshot: Snapshot;
-  error: string | undefined;
-  send: (order: Order) => void;
-}) {
+export function NowBar({ snapshot, send }: { snapshot: Snapshot; send: (order: Order) => void }) {
   const now = nowOf(snapshot);
   return (
     <footer className="nowbar" data-testid="now">
@@ -82,11 +74,6 @@ export function NowBar({
       <div className="now-progress">
         {now.progress !== undefined && <Bar value={now.progress} label="Progress" tone="gilt" />}
       </div>
-      {error && (
-        <p className="refusal" role="alert" data-testid="refusal">
-          {error}
-        </p>
-      )}
       {now.stop && (
         <button type="button" onClick={() => now.stop && send(now.stop.order)}>
           {now.stop.label}

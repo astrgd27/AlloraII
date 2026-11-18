@@ -19,7 +19,8 @@
     "lint:content": "tsx packages/content-tools/src/lint/cli.ts",
     "world": "tsx packages/content-tools/src/world/build.ts",
     "balance": "tsx packages/content-tools/src/balance/cli.ts",
-    "world:plan": "tsx packages/content-tools/src/world/plan-cli.ts"
+    "world:plan": "tsx packages/content-tools/src/world/plan-cli.ts",
+    "e2e": "tsx packages/content-tools/src/e2e/clicks.ts"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

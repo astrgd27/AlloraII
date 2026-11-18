@@ -4,7 +4,7 @@
  * It has no knowledge of the screen, the worker or storage, so the same code
  * runs in the browser, in tests and in the balance bot.
  */
-import { activitySystem, availableNow, begin, type LastCheck } from './activities';
+import { activitySystem, availableNow, begin, whyNot, type LastCheck } from './activities';
 import {
   beginStep,
   choices,
@@ -19,7 +19,18 @@ import { chanceOfSuccess } from './challenge';
 import { HOURS_PER_DAY, dateAt, type GameDate } from './calendar';
 import { EventBus } from './events';
 import type { Order } from './protocol';
-import { buy, buyPrice, isMarketDay, isOpen, marketHere, sell, sellPrice } from './market';
+import { note, type LogEntry } from './log';
+import {
+  PACK,
+  carried,
+  buy,
+  buyPrice,
+  isMarketDay,
+  isOpen,
+  marketHere,
+  sell,
+  sellPrice,
+} from './market';
 import { meet, peopleAt, talk, type Words } from './people';
 import { needsSystem, type Needs, type StandingOrders } from './needs';
 import { mark, routine, writeReport, type Report } from './routine';
@@ -64,6 +75,12 @@ export interface Snapshot {
   needs: Needs;
   /** The activity in hand, and the hours it still needs. */
   doing: { id: string; hoursLeft: number } | null;
+  /** All the work of this place open to the life, and why any of it cannot be begun now. */
+  work: { id: string; reason?: string }[];
+  /** Why whole kinds of order would be refused now. Absent when they would not be. */
+  blocked: { travel?: string; people?: string; market?: string; step?: string };
+  /** What just happened, newest first. */
+  log: LogEntry[];
   /** Ids of the activities that can be begun here and now. */
   canDo: string[];
   /** For those that end in a check: the chance of success, 0 to 1. */
@@ -98,7 +115,14 @@ export interface Snapshot {
     id: string;
     open: boolean;
     marketDay: boolean;
-    stock: { item: string; buy: number | null; sell: number | null; held: number }[];
+    stock: {
+      item: string;
+      buy: number | null;
+      sell: number | null;
+      held: number;
+      /** Why one cannot be bought now, if it is for sale. */
+      why?: string;
+    }[];
   } | null;
   /** The skills the life has used: level, progress to the next (0 to 1), and whether a gate holds it. */
   skills: Record<string, { level: number; progress: number; atGate: boolean }>;
@@ -147,6 +171,20 @@ export class Engine {
     this.msPerGameHour = options.msPerGameHour ?? MS_PER_GAME_HOUR;
     this.world = options.world ?? new World();
     this.systems = [needsSystem, travelSystem, activitySystem, ...(options.systems ?? [])];
+    // The record of what just happened is kept from the engine's own events.
+    this.bus.on('ActivityCompleted', (e) =>
+      note(this.state, {
+        kind: 'done',
+        id: e.activity,
+        ...(e.pay ? { pay: e.pay } : {}),
+        ...(e.degree ? { degree: e.degree } : {}),
+      }),
+    );
+    this.bus.on('CaseFinished', (e) =>
+      note(this.state, { kind: 'case', id: e.case, quality: e.quality, trial: e.trial }),
+    );
+    this.bus.on('Arrived', (e) => note(this.state, { kind: 'arrived', place: e.place }));
+    this.bus.on('RoadEvent', (e) => note(this.state, { kind: 'road', id: e.event }));
   }
 
   /** Runs one game hour. */
@@ -156,6 +194,7 @@ export class Engine {
     const date = dateAt(this.state.hours);
     routine(this.state, this.world, before, this.away);
     for (const system of this.systems) system.tick(this.state, date, this.bus, this.world);
+    const rank = this.state.post?.rank ?? 0;
     const done = workHour(this.state, this.world).finished;
     if (done) {
       this.bus.emit('CaseFinished', {
@@ -165,6 +204,8 @@ export class Engine {
         trial: done.trial,
       });
     }
+    if (this.state.post && this.state.post.rank > rank)
+      note(this.state, { kind: 'rank', post: this.state.post.id, rank: this.state.post.rank });
     const payload = { hours: this.state.hours, date };
     this.bus.emit('HourPassed', payload);
     if (date.hour === 0) this.bus.emit('DayBegan', payload);
@@ -241,6 +282,7 @@ export class Engine {
         break;
       case 'meet':
         meet(this.state, this.world, order.person, dateAt(this.state.hours));
+        note(this.state, { kind: 'met', person: order.person });
         break;
       case 'talk':
         talk(this.state, this.world, order.person, dateAt(this.state.hours));
@@ -253,10 +295,18 @@ export class Engine {
         setOut(this.state, this.world, order.to);
         break;
       case 'buy':
-        buy(this.state, this.world, order.item, dateAt(this.state.hours));
+        note(this.state, {
+          kind: 'bought',
+          item: order.item,
+          price: buy(this.state, this.world, order.item, dateAt(this.state.hours)),
+        });
         break;
       case 'sell':
-        sell(this.state, this.world, order.item, dateAt(this.state.hours));
+        note(this.state, {
+          kind: 'sold',
+          item: order.item,
+          price: sell(this.state, this.world, order.item, dateAt(this.state.hours)),
+        });
         break;
       case 'readReport':
         this.state.report = null;
@@ -280,7 +330,31 @@ export class Engine {
     const leg = j?.legs[0];
     const date = dateAt(this.state.hours);
     const market = marketHere(this.state, this.world);
+    const s = this.state;
+    const working = Boolean(s.doing) || Boolean(s.venture?.working);
+    const postPlace = this.world.posts.get(s.post?.id ?? '')?.place;
+    const blocked: Snapshot['blocked'] = {};
+    if (working && !j) blocked.travel = 'Busy';
+    if (s.asleep) blocked.people = 'Asleep';
+    if (market && s.asleep) blocked.market = 'Asleep';
+    else if (market && !isOpen(market, date)) blocked.market = 'The market is shut';
+    if (s.venture) {
+      if (s.asleep) blocked.step = 'Asleep';
+      else if (j || s.place !== postPlace) blocked.step = 'Not at the workshop';
+      else if (working) blocked.step = 'Busy';
+    }
+    const full = carried(s) >= PACK;
     return {
+      blocked,
+      log: s.log.slice(-12).reverse(),
+      work: j
+        ? []
+        : [...this.world.activities.values()]
+            .filter((a) => a.place === s.place && (!a.post || a.post === s.post?.id))
+            .map((a) => {
+              const reason = whyNot(a, s, date);
+              return { id: a.id, ...(reason ? { reason } : {}) };
+            }),
       report: this.state.report,
       money: this.state.money,
       goods: { ...this.state.goods },
@@ -289,16 +363,23 @@ export class Engine {
             id: market.id,
             open: isOpen(market, date),
             marketDay: isMarketDay(market, date),
-            stock: [...new Set([...market.sells, ...Object.keys(this.state.goods)])].map(
-              (item) => ({
+            stock: [...new Set([...market.sells, ...Object.keys(this.state.goods)])]
+              .map((item) => ({
                 item,
                 buy: buyPrice(this.state, this.world, market, item, date) ?? null,
                 sell: this.state.goods[item]
                   ? (sellPrice(this.state, this.world, market, item, date) ?? null)
                   : null,
                 held: this.state.goods[item] ?? 0,
-              }),
-            ),
+              }))
+              .map((row) => ({
+                ...row,
+                ...(row.buy !== null && full
+                  ? { why: 'The pack is full' }
+                  : row.buy !== null && row.buy > s.money
+                    ? { why: 'Not enough money' }
+                    : {}),
+              })),
           }
         : null,
       needs: { ...this.state.needs },

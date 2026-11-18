@@ -107,6 +107,12 @@ export const activitySystem: System = {
     if (doing.standing && state.post) state.post.standing += doing.standing;
     state.done[doing.id] = (state.done[doing.id] ?? 0) + 1;
     state.doing = null;
-    bus.emit('ActivityCompleted', { hours: state.hours, activity: doing.id, place: state.place });
+    bus.emit('ActivityCompleted', {
+      hours: state.hours,
+      activity: doing.id,
+      place: state.place,
+      ...(doing.pay ? { pay: doing.pay } : {}),
+      ...(doing.dc && state.lastCheck ? { degree: state.lastCheck.degree } : {}),
+    });
   },
 };

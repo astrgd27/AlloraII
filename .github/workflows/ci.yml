@@ -45,6 +45,21 @@ jobs:
           LINT_BASE: origin/${{ github.base_ref || 'main' }}
           CANON_CHANGE: ${{ contains(github.event.pull_request.labels.*.name, 'canon-change') }}
 
+  play:
+    # The built game in a real browser: every click answers.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @allora/content-tools exec playwright install --with-deps chromium
+      - run: pnpm build
+      - run: pnpm e2e
+
   canon:
     # pnpm extract must reproduce content/canon/ byte for byte.
     runs-on: ubuntu-latest
