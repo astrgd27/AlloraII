@@ -5,6 +5,7 @@ import { Calling } from './Career';
 import { engine } from './engine-client';
 import { MapView } from './map/MapView';
 import { PlaceList, PlacePanel } from './map/PlacePanel';
+import { Life } from './Life';
 import { Log } from './Log';
 import { Market } from './Market';
 import { NowBar } from './NowBar';
@@ -56,15 +57,14 @@ export function App() {
             <Report snapshot={snapshot} send={send} />
           </Panel>
         )}
+        <Panel title="The life">
+          <Life snapshot={snapshot} />
+        </Panel>
         <Panel title="Calling" testid="calling">
           <Calling snapshot={snapshot} />
         </Panel>
         <Panel title="Skills">
-          {Object.keys(snapshot.skills).length > 0 ? (
-            <Skills snapshot={snapshot} />
-          ) : (
-            <p className="quiet">Skills grow from work.</p>
-          )}
+          <Skills snapshot={snapshot} />
         </Panel>
         <Panel title="Standing orders">
           <Orders snapshot={snapshot} send={send} />

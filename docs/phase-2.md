@@ -24,7 +24,7 @@
 1. **The game shell.** Full-screen map as the world; a top bar (date and hour, time controls, purse, needs); framed panels at the sides; a "now" bar that always shows what the life is doing and how far along; a visual language (colour, type, frames, icons) fit for a simulation game. Landscape, 1024 px and up. *(done)*
 2. **Every click answers.** Buttons that cannot act are disabled and say why on hover. A refused order explains itself where it was given. A short log of what just happened. *(done)*
 3. **The place panel.** One panel for where you are: the scene, who is here, what can be done, the market, the post, in tabs. Tooltips for hours, pay, odds and skills. *(done)*
-4. **The character sheet.** Needs, skills with gates, the career ladder, purse and pack, standing orders, and the away report, as proper panels.
+4. **The character sheet.** Needs, skills with gates, the career ladder, purse and pack, standing orders, and the away report, as proper panels. *(done)*
 5. **The map.** Pan and zoom, labels that thin out by zoom, drawn terrain and water, the route to a chosen place with its hours, and the life moving along it.
 6. **Time controls.** Pause, play and a faster speed for watching. *(New mechanic: the gap is that a simulation game is watched as well as left. For the owner to confirm; the slow default stays.)*
 
@@ -68,3 +68,8 @@
   - **The market is a price board:** goods, what one costs, what one fetches, how many are carried; prices are the buttons. The board says when the market opens if it is shut.
   - **Tooltips:** work shows what it is, what it trains, the odds in numbers and why it cannot be begun; prices say what they are; goods show their usual worth.
   - **The left "Calling" panel** now shows the post held as a ladder of its four ranks, standing, and a bar towards the next trial. With no post it says where posts are taken up.
+- **2026-11-18 · The character sheet (#59).** The left column is the life's sheet. Decisions:
+  - **Sections, top to bottom:** the away report (when there is one), *The life* (home, purse, pack), *Calling*, *Skills*, *Standing orders*, *Lately*. The needs stay in the top bar, where they are always seen.
+  - **Skills are grouped by family** and show level over cap (e.g. 12/25). A skill held at its cap shows its level in red, and its tooltip names the gate that holds it.
+  - **The hours of sleep can be changed** from the sheet, an hour at a time. The engine refuses a night shorter than four hours or longer than twelve, and says so.
+  - Every standing order has a tooltip saying what it does.

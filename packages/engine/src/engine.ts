@@ -125,7 +125,7 @@ export interface Snapshot {
     }[];
   } | null;
   /** The skills the life has used: level, progress to the next (0 to 1), and whether a gate holds it. */
-  skills: Record<string, { level: number; progress: number; atGate: boolean }>;
+  skills: Record<string, { level: number; progress: number; atGate: boolean; cap: number }>;
   /** The people at the life's place now. `known` is false until they have met. */
   here: { id: string; sub: string; known: boolean; talks: number }[];
   /** The last thing someone said. */
@@ -311,9 +311,16 @@ export class Engine {
       case 'readReport':
         this.state.report = null;
         break;
-      case 'setOrders':
-        this.state.orders = { ...this.state.orders, ...order.orders };
+      case 'setOrders': {
+        const next = { ...this.state.orders, ...order.orders };
+        for (const h of [next.sleepFrom, next.wakeAt]) {
+          if (!Number.isInteger(h) || h < 0 || h > 23) throw new Error('No such hour');
+        }
+        const span = (next.wakeAt - next.sleepFrom + 24) % 24;
+        if (span < 4 || span > 12) throw new Error('A night is four to twelve hours');
+        this.state.orders = next;
         break;
+      }
       case 'turnBack':
         turnBack(this.state);
         break;
@@ -438,6 +445,7 @@ export class Engine {
             level: k.level,
             progress: Math.min(1, k.xp / xpToNext(k.level)),
             atGate: k.level >= capOf(k) && k.level < 100,
+            cap: capOf(k),
           },
         ]),
       ),
