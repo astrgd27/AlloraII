@@ -4,7 +4,14 @@
  * with a safe way and sometimes a bold one.
  */
 import type { GameDate } from './calendar';
-import { chanceOfSuccess, edgeOf, lessonFactor, rollCheck, type Degree } from './challenge';
+import {
+  chanceOfSuccess,
+  edgeOf,
+  lessonFactor,
+  rollCheck,
+  type Degree,
+  type Modifier,
+} from './challenge';
 import { earn, round2 } from './money';
 import { toolModifiers, wearTool } from './tools';
 import { GATES, XP_PER_HOUR, capOf, edgeFactor, gain, newSkill, passGate } from './skills';
@@ -18,6 +25,8 @@ export interface Held {
   rank: number;
   /** Standing with the employer, from duties and cases. */
   standing: number;
+  /** For a household: how well it runs, 0 to 100. */
+  harmony?: number;
 }
 
 /** A case under way. */
@@ -29,6 +38,14 @@ export interface Venture {
   strain: number;
   /** The approach chosen for the step in hand, while it is being worked. */
   working: { approach: string; hoursLeft: number; hours: number } | null;
+  /** When the case was taken, in game hours. */
+  started: number;
+  /** Each step done and how it went: the case board. */
+  clues: { step: string; degree: Degree }[];
+  /** Clues lost to time. */
+  lost: number;
+  /** The material used, if the trade uses one. */
+  material?: string;
 }
 
 /** A finished piece of work. */
@@ -65,7 +82,7 @@ export function takePost(state: GameState, world: World, id: string): void {
   if (!post) throw new Error(`No such post: ${id}`);
   if (state.post) throw new Error('Already holds a post');
   if (state.journey || state.place !== post.place) throw new Error('Not here');
-  state.post = { id, rank: 0, standing: 0 };
+  state.post = { id, rank: 0, standing: 0, ...(post.harmony ? { harmony: HARMONY.start } : {}) };
   // A master who accepts you is the first gate: Apprenticeship.
   const skill = (state.skills[post.skill] ??= newSkill());
   if (skill.gates === 0) skill.gates = 1;
@@ -92,10 +109,77 @@ export function offers(state: GameState, world: World): Case[] {
   });
 }
 
+/** The best material carried for a post's work, if the trade uses one. */
+export function materialFor(
+  state: GameState,
+  post: Post,
+): { item: string; quality: number } | undefined {
+  return [...(post.materials ?? [])]
+    .sort((a, b) => b.quality - a.quality)
+    .find((m) => (state.goods[m.item] ?? 0) > 0);
+}
+
 export function takeCase(state: GameState, world: World, id: string): void {
   if (!offers(state, world).some((c) => c.id === id)) throw new Error('Not on offer');
-  state.venture = { case: id, step: 0, quality: 0, strain: 0, working: null };
+  const post = postOf(state, world);
+  const material = post.materials ? materialFor(state, post) : undefined;
+  if (post.materials && !material) {
+    throw new Error(
+      `Needs ${world.items.get(post.materials[0]?.item ?? '')?.name ?? 'materials'} to work`,
+    );
+  }
+  if (material) {
+    const held = state.goods[material.item] ?? 0;
+    if (held <= 1) delete state.goods[material.item];
+    else state.goods[material.item] = held - 1;
+  }
+  state.venture = {
+    case: id,
+    step: 0,
+    // Better stuff, better work: the material's quality is where the piece starts.
+    quality: material?.quality ?? 0,
+    strain: 0,
+    working: null,
+    started: state.hours,
+    clues: [],
+    lost: 0,
+    ...(material ? { material: material.item } : {}),
+  };
 }
+
+/** A household's harmony: where it starts, what a day costs and a duty gives, and what it does to a case. */
+export const HARMONY = { start: 60, daily: 3, duty: 4, low: 40, high: 80, lowDc: 3, highDc: -2 };
+
+/** What the post's own state adds to a case's checks, by name. */
+export function postModifiers(state: GameState, post: Post): Modifier[] {
+  const h = state.post?.harmony;
+  if (!post.harmony || h === undefined) return [];
+  if (h < HARMONY.low) return [{ source: 'A quarrelsome household', value: -HARMONY.lowDc }];
+  if (h >= HARMONY.high)
+    return [{ source: 'A household that runs itself', value: -HARMONY.highDc }];
+  return [];
+}
+
+/** Each day: a household's harmony slips, and a case left open loses clues to time. */
+export function careerDay(state: GameState, world: World): string | undefined {
+  const held = state.post;
+  const post = held && world.posts.get(held.id);
+  if (!held || !post) return undefined;
+  if (held.harmony !== undefined) held.harmony = Math.max(0, held.harmony - HARMONY.daily);
+  const v = state.venture;
+  if (!v || !post.pressure) return undefined;
+  const days = Math.floor((state.hours - v.started) / 24);
+  const late = days - post.pressure.grace;
+  // The first clue goes the day after the grace runs out, then one every few days.
+  if (late <= 0 || (late - 1) % post.pressure.every !== 0) return undefined;
+  v.quality -= 1;
+  v.lost += 1;
+  return v.case;
+}
+
+/** The ways open through a step: techniques only from their rank. */
+const openApproaches = (state: GameState, step: { approaches: Approach[] }): Approach[] =>
+  step.approaches.filter((a) => (a.rank ?? 0) <= (state.post?.rank ?? 0));
 
 /** An accusation starts harder than the case, and each clue (point of quality) makes it surer. */
 export const ACCUSE = { harder: 5, perClue: 2, wrongStanding: 8 };
@@ -120,11 +204,11 @@ export function choices(state: GameState, world: World): { approach: Approach; c
   const c = world.cases.get(venture.case);
   const step = post.work[venture.step];
   if (!c || !step) return [];
-  return step.approaches.map((approach) => ({
+  return openApproaches(state, step).map((approach) => ({
     approach,
     chance: chanceOfSuccess({
       ...specFor(state, post, c, approach),
-      modifiers: toolModifiers(state, world, post.skill),
+      modifiers: [...toolModifiers(state, world, post.skill), ...postModifiers(state, post)],
     }),
   }));
 }
@@ -144,6 +228,8 @@ export function beginStep(
   if (state.asleep) throw new Error('Asleep');
   const step = post.work[venture.step];
   if (!step?.approaches.some((a) => a.id === approachId)) throw new Error('No such approach');
+  if (!openApproaches(state, step).some((a) => a.id === approachId))
+    throw new Error('A technique not yet learned');
   venture.working = { approach: approachId, hoursLeft: step.hours, hours: step.hours };
   void date;
 }
@@ -174,12 +260,17 @@ export function workHour(state: GameState, world: World): { finished?: Work; deg
     return {};
   }
   const spec = specFor(state, post, c, approach);
-  const roll = { ...spec, modifiers: toolModifiers(state, world, post.skill) };
+  const roll = {
+    ...spec,
+    modifiers: [...toolModifiers(state, world, post.skill), ...postModifiers(state, post)],
+  };
   const result = rollCheck(roll, state.rng, state.seed, 'checks');
   state.checks[result.degree] = (state.checks[result.degree] ?? 0) + 1;
   state.lastCheck = { ...result, activity: `${c.id}/${step.id}` };
   const won = result.degree === 'success' || result.degree === 'triumph';
-  venture.quality += QUALITY[result.degree] + (approach.bold && won ? 1 : 0);
+  venture.quality +=
+    QUALITY[result.degree] + (approach.bold && won ? 1 : 0) + (won ? (approach.quality ?? 0) : 0);
+  venture.clues.push({ step: step.id, degree: result.degree });
   venture.strain += STRAIN[result.degree];
   if (step.accuse && !won) {
     // A wrong accusation: the case is spoiled and the office remembers.

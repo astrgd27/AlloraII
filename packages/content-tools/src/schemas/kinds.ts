@@ -110,6 +110,10 @@ const approachSchema = z.looseObject({
   dc: z.number().int(),
   /** A bold way: harder, and better if it comes off. */
   bold: z.boolean().optional(),
+  /** A technique: open only from this rank (0 to 3). */
+  rank: z.number().int().min(0).max(3).optional(),
+  /** Extra quality when it comes off. */
+  quality: z.number().int().min(0).max(3).optional(),
 });
 const workStepSchema = z.looseObject({
   id: text,
@@ -131,6 +135,12 @@ export const postSchema = entrySchema('post', {
   group: text.optional(),
   /** The steps of a case in this post, each a check with one or more approaches. */
   work: z.array(workStepSchema).min(3).max(6).optional(),
+  /** Bars or stuff a case is made from: one is used each case, the best carried. */
+  materials: z.array(z.object({ item: text, quality: z.number().int().min(0).max(3) })).optional(),
+  /** The household's harmony is kept, and felt in each case. */
+  harmony: z.boolean().optional(),
+  /** A case left open loses a clue every `every` days after `grace` days. */
+  pressure: z.object({ grace: z.number().int().min(1), every: z.number().int().min(1) }).optional(),
 });
 
 /** A case: a venture offered to those who hold a post. A trial names the rank it wins. */

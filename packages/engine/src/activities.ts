@@ -2,6 +2,7 @@
 import type { GameDate } from './calendar';
 import { edgeOf, lessonFactor, rollCheck, type CheckResult } from './challenge';
 import type { System } from './engine';
+import { HARMONY } from './career';
 import { earn, round2 } from './money';
 import { TOOL_PAY, toolFor, toolModifiers, wearTool } from './tools';
 import { XP_PER_HOUR, edgeFactor, gain, newSkill, workXp } from './skills';
@@ -109,7 +110,11 @@ export const activitySystem: System = {
     }
     wearTool(state, world, doing.skill, doing.hours ?? 1);
     if (doing.pay) earn(state, doing.pay);
-    if (doing.standing && state.post) state.post.standing += doing.standing;
+    if (doing.standing && state.post) {
+      state.post.standing += doing.standing;
+      if (state.post.harmony !== undefined)
+        state.post.harmony = Math.min(100, state.post.harmony + HARMONY.duty);
+    }
     state.done[doing.id] = (state.done[doing.id] ?? 0) + 1;
     state.doing = null;
     bus.emit('ActivityCompleted', {

@@ -116,6 +116,10 @@ export interface Approach {
   dc: number;
   /** A bold way: harder, and better if it comes off. */
   bold?: boolean;
+  /** A technique: open only from this rank. */
+  rank?: number;
+  /** Extra quality when it comes off. */
+  quality?: number;
 }
 
 export interface WorkStep {
@@ -140,6 +144,12 @@ export interface Post {
   /** Dues each season at each rank, where the post has a guild. */
   dues?: number[];
   work: WorkStep[];
+  /** Bars or stuff a case is made from: one is used each case, the best carried. */
+  materials?: { item: string; quality: number }[];
+  /** The household's harmony is kept. */
+  harmony?: boolean;
+  /** A case left open loses a clue every `every` days after `grace` days. */
+  pressure?: { grace: number; every: number };
 }
 
 /** A case: a venture offered to those who hold a post. */

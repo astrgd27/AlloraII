@@ -46,6 +46,8 @@ export function logText(e: LogEntry): string {
       return `Took ${e.home === 'room' ? 'a room' : 'a cottage'} in ${place(e.place)}`;
     case 'dues':
       return `Dues to the guild · −${pf(e.price)}`;
+    case 'lost':
+      return `${caseName(e.case)} · a clue lost to time`;
     case 'broke':
       return `${item(e.item)} worn out`;
     case 'evicted':

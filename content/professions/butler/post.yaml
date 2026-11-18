@@ -25,6 +25,8 @@
     - name: Steward of the House
       pay: 3
       trial: Carry the household through the Royal Progress.
+  # The household's harmony: kept up by the day's duties, and felt in every incident.
+  harmony: true
   # The work of an incident in a great house.
   work:
     - id: contain

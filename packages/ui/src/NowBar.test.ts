@@ -32,6 +32,7 @@ describe('what the life is doing', () => {
   it('shows the progress of a case step', () => {
     const state = newGame(4, 0);
     state.place = 'kess_market';
+    state.goods = { iron_ingot: 5 };
     const e = new Engine(state);
     e.handle({ type: 'takePost', post: 'post_kesselhaven_guild_smith' }, 0);
     e.run(2);

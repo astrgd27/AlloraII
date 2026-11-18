@@ -33,7 +33,7 @@
 7. **Homes and lodging.** A rented room, then a cottage: rent, comfort, sleeping well away from home at an inn for a price. The first real money sink. *(done)*
 8. **Items and tools.** Things with properties: tools that help work and wear out, clothes, food kinds. The smith's commission becomes an object with a quality. *(done)*
 9. **Dues, fares and tolls,** and wage tuning, until the inflation flag clears. *(done; two careers still flagged, see the decision)*
-10. **The trades diverge.** One deep feature each: the smith's materials and techniques; the butler's Trust and Harmony; the inquirer's case board with time pressure.
+10. **The trades diverge.** One deep feature each: the smith's materials and techniques; the butler's Trust and Harmony; the inquirer's case board with time pressure. *(done)*
 11. **Weather, seasons and the calendar.** Weather on the road, market and feast days from canon faiths, seasonal work.
 12. **Bonds.** Acquaintance to friendship: gifts, favours, people who remember, and what a friend opens.
 13. **Faith.** One faith playable end to end in Eintenn, grown from canon.
@@ -110,3 +110,11 @@
   - **For the owner:** the gate says the purse should grow under 3% a year by year ten. I suggest judging it against income instead (a purse that grows no faster than the life's income is a life getting better at its work, not inflation). Not changed without your word.
   - The balance personas keep their trade's tool, take a cottage at 200 pf, and live richly once they hold a master's rank and 1,500 pf.
   - Save version 15.
+- **2026-11-18 · The trades diverge (#65).** Each trade gets one feature of its own, set in the post's content so other posts can borrow them later. Decisions:
+  - **The smith works from materials.** Every commission and trial is forged from a bar carried: bloomery iron, wrought iron (+1 quality) or a steel bar (+2), the best carried being used. All three are canon goods; steel is now sold at Silberhalde's ore-floor. Without a bar no case can be taken, and the button says so.
+  - **The smith learns a technique.** The pattern-weld (harder, +1 quality when it comes off) is open only from Master; until then it shows, disabled, as "taught to masters".
+  - **The butler keeps Harmony.** The household starts at 60, slips 3 a day, and rises 4 with each duty. Below 40 every incident is 3 harder ("a quarrelsome household"); from 80 it is 2 easier ("a household that runs itself"). The calling panel shows it as a bar. Standing still stands for the Duke's trust.
+  - **The inquirer races time.** A case open longer than three days loses a clue every two (quality −1, the log says so). The case board lists each step and how it went.
+  - **Result:** the climbs now differ by pace and by means. Grandmaster smith about day 501 (iron to buy, a technique to wait for); Steward of the House about day 334 (a happy household speeds every incident); Capo's Deputy about day 480. The inquirer persona works without pause, so the clock rarely costs it a clue; a player who wanders will feel it.
+  - **Not yet:** material properties beyond grade, other techniques, the butler's Trust as its own measure, named culprits and theories on the board.
+  - Save version 16.

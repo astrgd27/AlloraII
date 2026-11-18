@@ -99,6 +99,18 @@ export const MIGRATIONS: Record<number, (save: AnySave) => AnySave> = {
     version: 15,
     orders: { ...(save.orders as object), living: 'comfortable' },
   }),
+  // Version 16 adds the case board, time on a case, and a household's harmony.
+  15: (save) => ({
+    ...save,
+    version: 16,
+    venture: save.venture
+      ? { ...(save.venture as object), started: save.hours ?? 0, clues: [], lost: 0 }
+      : null,
+    post:
+      save.post && (save.post as { id?: string }).id === 'post_tennfels_steward'
+        ? { ...(save.post as object), harmony: 60 }
+        : (save.post ?? null),
+  }),
 };
 
 export function versionOf(save: unknown): number {

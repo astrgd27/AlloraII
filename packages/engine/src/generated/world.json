@@ -4471,7 +4471,8 @@
       }
      ]
     }
-   ]
+   ],
+   "harmony": true
   },
   {
    "id": "post_cerdans_inquirer",
@@ -4583,7 +4584,11 @@
       }
      ]
     }
-   ]
+   ],
+   "pressure": {
+    "grace": 3,
+    "every": 2
+   }
   },
   {
    "id": "post_kesselhaven_guild_smith",
@@ -4643,6 +4648,14 @@
        "name": "A folded weld",
        "dc": 5,
        "bold": true
+      },
+      {
+       "id": "pattern_weld",
+       "name": "A pattern-weld",
+       "dc": 9,
+       "bold": true,
+       "rank": 2,
+       "quality": 1
       }
      ]
     },
@@ -4693,6 +4706,20 @@
        "bold": true
       }
      ]
+    }
+   ],
+   "materials": [
+    {
+     "item": "iron_ingot",
+     "quality": 0
+    },
+    {
+     "item": "iron_t2",
+     "quality": 1
+    },
+    {
+     "item": "iron_t3",
+     "quality": 2
     }
    ]
   }
@@ -5277,14 +5304,16 @@
     "copper_ore",
     "tin_ore",
     "copper_ingot",
-    "gold_ingot"
+    "gold_ingot",
+    "iron_t3"
    ],
    "makes": [
     "coal",
     "iron_ore",
     "clay",
     "copper_ore",
-    "tin_ore"
+    "tin_ore",
+    "iron_t3"
    ]
   },
   {
@@ -6056,6 +6085,11 @@
    "id": "iron_t2",
    "name": "Wrought Iron",
    "value": 16
+  },
+  {
+   "id": "iron_t3",
+   "name": "Steel Bar",
+   "value": 42
   },
   {
    "id": "item_bread_peel",

@@ -13,6 +13,7 @@ const SKILL = 'skill_smithing';
 function smith(seed = 1, hold = true): Engine {
   const state = newGame(seed, 0);
   state.place = 'kess_market';
+  state.goods = { iron_ingot: 50 };
   state.home = 'kess_market';
   state.hours = 8 - START_HOUR;
   const engine = new Engine(state);

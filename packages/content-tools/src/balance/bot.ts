@@ -78,9 +78,6 @@ export const idler: Persona = {
   },
 };
 
-/** The snapshot, for personas that look at the market. */
-const snapEarly = (engine: Engine) => (engine.state.asleep ? undefined : engine.snapshot());
-
 /** A persona that holds a post: duties, cases, and each trial as soon as it is offered. */
 function careerist(
   name: string,
@@ -100,10 +97,31 @@ function careerist(
         engine.handle({ type: 'takePost', post }, 0);
         return;
       }
+      // Buying is done only at leisure, at an open market that sells the thing.
+      const market = engine.world.markets.get(state.place);
+      const date = dateAt(state.hours);
+      const shop =
+        !state.doing && !state.venture?.working && !state.journey && market && isOpen(market, date)
+          ? market
+          : undefined;
+      const price = (item: string) =>
+        shop && shop.sells.includes(item)
+          ? buyPrice(state, engine.world, shop, item, date)
+          : undefined;
       // A careful life keeps the tool of its trade, and buys another when it breaks.
       const tool = engine.world.toolsBySkill.get(engine.world.posts.get(post)?.skill ?? '')?.[0];
-      if (tool && !state.goods[tool.item] && state.money > 40 && snapEarly(engine)?.market?.open)
+      const toolPrice = tool && !state.goods[tool.item] ? price(tool.item) : undefined;
+      if (tool && toolPrice !== undefined && toolPrice * 3 < state.money)
         engine.handle({ type: 'buy', item: tool.item }, 0);
+      // Stuff to work: the best the market here has, a few at a time.
+      const stuff = engine.world.posts.get(post)?.materials;
+      if (stuff && shop && stuff.reduce((n, m) => n + (state.goods[m.item] ?? 0), 0) < 3) {
+        const best = [...stuff].reverse().find((m) => {
+          const p = price(m.item);
+          return p !== undefined && p * 4 < state.money;
+        });
+        if (best) engine.handle({ type: 'buy', item: best.item }, 0);
+      }
       // A master with money put by lives as a master.
       if (state.orders.living !== 'rich' && state.post.rank >= 2 && state.money > 1500)
         engine.handle({ type: 'setOrders', orders: { living: 'rich' } }, 0);
@@ -126,8 +144,10 @@ function careerist(
       const hardest = offered
         .filter((c) => c.trialFor === undefined)
         .sort((a, b) => b.dc - a.dc)[0];
-      if (trial) engine.handle({ type: 'takeCase', case: trial.id }, 0);
-      else if (hardest && roll < 0.6) engine.handle({ type: 'takeCase', case: hardest.id }, 0);
+      const can = !snap.blocked.takeCase;
+      if (trial && can) engine.handle({ type: 'takeCase', case: trial.id }, 0);
+      else if (hardest && can && roll < 0.6)
+        engine.handle({ type: 'takeCase', case: hardest.id }, 0);
       else {
         const mine = snap.canDo.filter((id) => id.startsWith(duties));
         const duty = mine[Math.floor(roll * mine.length) % Math.max(1, mine.length)];
