@@ -24,6 +24,18 @@ export interface Item {
   food?: boolean;
 }
 
+/** A feast: days of a season when a place keeps holiday. */
+export interface Feast {
+  id: string;
+  name: string;
+  place: string;
+  sub?: string;
+  season: number;
+  from: number;
+  to: number;
+  text: string;
+}
+
 /** A tool: an item that helps one skill's work and wears out with it. */
 export interface Tool {
   id: string;
@@ -98,6 +110,8 @@ export interface Activity {
   skill?: string;
   /** What it pays when done, in pf. */
   pay?: number;
+  /** Only while this feast is on. */
+  feast?: string;
   effects: { vigour?: number; health?: number; spirits?: number };
   /** How hard it is, as a skill level. 1 if left out. */
   level?: number;
@@ -204,6 +218,7 @@ export interface WorldData {
   items?: Item[];
   markets?: Market[];
   tools?: Tool[];
+  feasts?: Feast[];
 }
 
 export const WORLD = data as unknown as WorldData;
@@ -253,6 +268,7 @@ export class World {
   readonly markets = new Map<string, Market>();
   /** Skill id → the tools that help it. */
   readonly toolsBySkill = new Map<string, Tool[]>();
+  readonly feasts = new Map<string, Feast>();
   private readonly links = new Map<string, Leg[]>();
   /** The roads do not change, so travel hours from a place are worked out once. */
   private readonly treeCache = new Map<
@@ -271,6 +287,7 @@ export class World {
     for (const c of data.cases ?? []) this.cases.set(c.id, c);
     for (const item of data.items ?? []) this.items.set(item.id, item);
     for (const market of data.markets ?? []) this.markets.set(market.place, market);
+    for (const feast of data.feasts ?? []) this.feasts.set(feast.id, feast);
     for (const tool of data.tools ?? []) {
       const list = this.toolsBySkill.get(tool.skill) ?? [];
       list.push(tool);
@@ -374,3 +391,7 @@ export class World {
     return this.places.has(from) ? this.tree(from).hours : {};
   }
 }
+
+/** Whether a feast is on, on a date. */
+export const feastOn = (feast: Feast, date: { seasonIndex: number; day: number }): boolean =>
+  date.seasonIndex === feast.season && date.day >= feast.from && date.day <= feast.to;

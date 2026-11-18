@@ -986,3 +986,34 @@ button:active:not(:disabled) {
 .board-clues li.disaster::before {
   color: var(--accent);
 }
+
+.weather {
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  cursor: help;
+  white-space: nowrap;
+}
+
+.calendar li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.15rem 0;
+  font-size: 0.88rem;
+}
+
+.calendar li.on {
+  color: var(--gilt);
+}
+
+.feast-banner {
+  margin: 0;
+  padding: 0.35rem 0.7rem;
+  color: var(--bg);
+  background: linear-gradient(90deg, var(--gilt), #e0c070);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}

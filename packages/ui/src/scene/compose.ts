@@ -29,6 +29,10 @@ export interface SceneModel {
   figures: Shape[];
   /** How dark the land is, 0 (noon) to 0.6 (deep night). */
   dusk: number;
+  /** Weather over the scene: falling drops or flakes, a fog, a grey sky. */
+  weather: { drops: Shape[]; kind: 'rain' | 'snow' | 'none'; fog: number; grey: number };
+  /** Bunting for a feast here. */
+  bunting: boolean;
   /** The same scene in words, for those who cannot see it. */
   description: string;
 }
@@ -144,10 +148,34 @@ export function composeScene(snapshot: Snapshot, world: WorldData): SceneModel {
         : ' Nobody is about.'
       : ` ${n === 1 ? 'One person is' : `${n} people are`} here.`;
   const lamps = buildings.some((b) => b.lit) ? ' Lamps are lit.' : '';
-  const description = `${where}, ${date.dayPart === 'day' ? 'by day' : `at ${date.dayPart}`} in ${SEASON_WORDS[season] ?? ''}.${lamps}${people}`;
+  const w = snapshot.weather.id;
+  const fall = w === 'rain' || w === 'storm' ? 'rain' : w === 'snow' ? 'snow' : 'none';
+  const drops: Shape[] =
+    fall === 'none'
+      ? []
+      : Array.from({ length: fall === 'rain' ? 70 : 50 }, () => ({
+          x: rand(),
+          y: rand(),
+          w: fall === 'rain' ? 0.002 : 0.006,
+          h: fall === 'rain' ? 0.06 : 0.006,
+        }));
+  const weather = {
+    drops,
+    kind: fall as 'rain' | 'snow' | 'none',
+    fog: w === 'fog' ? 0.45 : 0,
+    grey:
+      w === 'overcast' || w === 'rain' || w === 'storm' || w === 'snow'
+        ? w === 'storm'
+          ? 0.55
+          : 0.35
+        : 0,
+  };
+  const bunting = snapshot.feasts.some((f) => f.here);
+  const weatherWords = w === 'fair' ? '' : ` ${snapshot.weather.name}.`;
+  const description = `${where}, ${date.dayPart === 'day' ? 'by day' : `at ${date.dayPart}`} in ${SEASON_WORDS[season] ?? ''}.${weatherWords}${lamps}${people}${bunting ? ' A feast is on.' : ''}`;
 
   return {
-    key: `${journey ? journey.road : snapshot.place}|${hour}|${season}|${snapshot.here.length}`,
+    key: `${journey ? journey.road : snapshot.place}|${hour}|${season}|${snapshot.here.length}|${snapshot.weather.id}|${snapshot.feasts.length}`,
     sky: skyAt(hour),
     light,
     stars,
@@ -158,6 +186,8 @@ export function composeScene(snapshot: Snapshot, world: WorldData): SceneModel {
     way: journey ? (water ? 'water' : 'road') : null,
     figures,
     dusk,
+    weather,
+    bunting,
     description,
   };
 }

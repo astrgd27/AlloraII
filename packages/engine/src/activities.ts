@@ -7,7 +7,7 @@ import { earn, round2 } from './money';
 import { TOOL_PAY, toolFor, toolModifiers, wearTool } from './tools';
 import { XP_PER_HOUR, edgeFactor, gain, newSkill, workXp } from './skills';
 import type { GameState } from './state';
-import type { Activity, World } from './world';
+import { feastOn, type Activity, type World } from './world';
 
 /** An activity under way. */
 export interface Doing {
@@ -35,26 +35,34 @@ export const CHECK_SPIRITS = { triumph: 2, disaster: -3 };
 const clamp = (n: number): number => Math.max(0, Math.min(100, n));
 
 /** Why an activity cannot be begun now, or undefined if it can. */
-export function whyNot(activity: Activity, state: GameState, date: GameDate): string | undefined {
+export function whyNot(
+  activity: Activity,
+  state: GameState,
+  date: GameDate,
+  world?: World,
+): string | undefined {
   if (state.journey) return 'On the road';
   if (state.place !== activity.place) return 'Not here';
   if (state.asleep) return 'Asleep';
   if (state.doing || state.venture?.working) return 'Busy';
   if (activity.post && state.post?.id !== activity.post) return 'Not your post';
   if (activity.seasons && !activity.seasons.includes(date.seasonIndex)) return 'Out of season';
+  const feast = activity.feast ? world?.feasts.get(activity.feast) : undefined;
+  if (activity.feast && (!feast || !feastOn(feast, date)))
+    return `Only at ${feast?.name ?? 'a feast'}`;
   if (date.hour < activity.from || date.hour >= activity.to) return 'Not at this hour';
   return undefined;
 }
 
 /** The activities that can be begun here and now. */
 export function availableNow(world: World, state: GameState, date: GameDate): Activity[] {
-  return [...world.activities.values()].filter((a) => whyNot(a, state, date) === undefined);
+  return [...world.activities.values()].filter((a) => whyNot(a, state, date, world) === undefined);
 }
 
 export function begin(state: GameState, world: World, id: string, date: GameDate): void {
   const activity = world.activities.get(id);
   if (!activity) throw new Error(`No such activity: ${id}`);
-  const reason = whyNot(activity, state, date);
+  const reason = whyNot(activity, state, date, world);
   if (reason) throw new Error(reason);
   // A duty is paid by the hour at the rank held; other work pays what it says.
   const wage = activity.post

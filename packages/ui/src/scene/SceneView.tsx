@@ -79,6 +79,29 @@ function draw(g: Graphics, m: SceneModel, W: number, H: number): void {
       const top = (b.y - b.h) * H;
       g.rect(b.x * W + b.w * W * 0.35, top + b.h * H * 0.35, b.w * W * 0.3, 7).fill(0xffd27a);
     }
+  if (m.bunting) {
+    // Pennants strung across the scene for the feast.
+    const colours = [0xc9a24a, 0xd86a48, 0x5b93b8, 0x6fae6a];
+    g.moveTo(0, 0.12 * H)
+      .quadraticCurveTo(W / 2, 0.3 * H, W, 0.12 * H)
+      .stroke({ width: 1, color: 0x2b2620 });
+    for (let i = 1; i < 14; i++) {
+      const t = i / 14;
+      const x = t * W;
+      const y = (1 - t) * (1 - t) * 0.12 * H + 2 * (1 - t) * t * 0.3 * H + t * t * 0.12 * H;
+      g.poly([x - 6, y, x + 6, y, x, y + 12]).fill(colours[i % colours.length] ?? 0xc9a24a);
+    }
+  }
+  if (m.weather.grey > 0)
+    g.rect(0, 0, W, 0.45 * H).fill({ color: 0x5a6070, alpha: m.weather.grey });
+  for (const d of m.weather.drops) {
+    if (m.weather.kind === 'rain')
+      g.moveTo(d.x * W, d.y * H)
+        .lineTo(d.x * W - 3, d.y * H + d.h * H)
+        .stroke({ width: 1, color: 0xb8c8dc, alpha: 0.6 });
+    else g.circle(d.x * W, d.y * H, 1.6).fill({ color: 0xffffff, alpha: 0.85 });
+  }
+  if (m.weather.fog > 0) g.rect(0, 0, W, H).fill({ color: 0xc8ccd2, alpha: m.weather.fog });
   for (const f of m.figures) {
     const x = f.x * W;
     const base = f.y * H;

@@ -34,7 +34,7 @@
 8. **Items and tools.** Things with properties: tools that help work and wear out, clothes, food kinds. The smith's commission becomes an object with a quality. *(done)*
 9. **Dues, fares and tolls,** and wage tuning, until the inflation flag clears. *(done; two careers still flagged, see the decision)*
 10. **The trades diverge.** One deep feature each: the smith's materials and techniques; the butler's Trust and Harmony; the inquirer's case board with time pressure. *(done)*
-11. **Weather, seasons and the calendar.** Weather on the road, market and feast days from canon faiths, seasonal work.
+11. **Weather, seasons and the calendar.** Weather on the road, market and feast days from canon faiths, seasonal work. *(done)*
 12. **Bonds.** Acquaintance to friendship: gifts, favours, people who remember, and what a friend opens.
 13. **Faith.** One faith playable end to end in Eintenn, grown from canon.
 14. **Magic.** One school learnable at the Collegium, by the rules of `canon/magic_design.md`. Countermagic stays the nearest a player comes to witch magic.
@@ -118,3 +118,11 @@
   - **Result:** the climbs now differ by pace and by means. Grandmaster smith about day 501 (iron to buy, a technique to wait for); Steward of the House about day 334 (a happy household speeds every incident); Capo's Deputy about day 480. The inquirer persona works without pause, so the clock rarely costs it a clue; a player who wanders will feel it.
   - **Not yet:** material properties beyond grade, other techniques, the butler's Trust as its own measure, named culprits and theories on the board.
   - Save version 16.
+- **2026-11-18 · Weather and the feasts (#66).** Decisions:
+  - **Weather is an addition** (canon gives the Seven none; Polygoetia's Weathers are its own). Each realm has one weather a day: fair, overcast, rain, fog, snow, heat or storm, drawn from its season and its character (Eintenn: wet springs, snowy winters; Marre: lagoon fogs, summer heat, winter storms off the sea). It is the same for every life, worked out from the date alone, so it needs no save.
+  - **What it does on the way:** rain makes roads 1.3 times slower, snow 1.6, a storm 1.4; fog slows boats 1.6 times; in a storm no boat puts out. Fair weather lifts the spirits on the road; rain, snow and storm sink them; snow, heat and storm tire.
+  - **It shows:** a word in the top bar with a tooltip saying what it does; grey skies, falling rain or snow, and fog in the scene; and the scene's words for screen readers.
+  - **Four feasts from Allora I** (`content/calendar/feasts.yaml`, kind `feast`): Harvest Home in Ostwick, the Regatta and Carnevale in Marre, and the Feast of the Lagoon on the Piazza. They are Allora I's own fixed events with their days moved onto 28-day seasons: one that opens a season stays at its start, one that closes it at its end (so Carnevale is still the last four days of winter, as its lore says), others keep their place in proportion.
+  - **Feast work:** eight activities only while a feast is on (dance round the Harvest Mare, the harvest supper, an oar in the Regatta, diving for the Doge's mirror, walking the bridges masked, and more). Out of the feast they show disabled with "Only at Carnevale".
+  - **A Feasts panel** on the sheet lists the year's feasts, the next first, with days to go; a banner and bunting mark a feast where the life is.
+  - **Not yet:** feast days from the canon faiths (their texts give rules, not dates), seasonal work beyond the old spring-only sowing, weather at sea for the long lanes, and prices that move with feasts.

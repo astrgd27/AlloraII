@@ -1,0 +1,116 @@
+# What there is to do at the feasts (content/calendar/feasts.yaml). Only while the feast is on.
+- id: activity_feast_dance_mare
+  origin: allora2
+  kind: activity
+  roots: [feast_harvest_home]
+  feast: feast_harvest_home
+  name: Dance round the Harvest Mare
+  text: 'Hands joined, round the pole and back, until the fiddler gives out.'
+  place: ostwick
+  sub: harvesthome
+  from: 16
+  to: 23
+  hours: 2
+  skill: skill_revelry
+  effects: { vigour: -4, spirits: 12 }
+- id: activity_feast_harvest_supper
+  origin: allora2
+  kind: activity
+  roots: [feast_harvest_home]
+  feast: feast_harvest_home
+  name: Sit down to the harvest supper
+  text: "Trestles on the green, a loaf and a ham to every table, and the year's ale."
+  place: ostwick
+  sub: harvesthome
+  from: 18
+  to: 21
+  hours: 2
+  skill: skill_courtesy
+  effects: { vigour: 6, spirits: 8 }
+- id: activity_feast_regatta_oar
+  origin: allora2
+  kind: activity
+  roots: [feast_regatta]
+  feast: feast_regatta
+  name: Take an oar for a sestiere
+  text: 'Stand, pull, and do not look at the boat beside you.'
+  place: marre_city
+  sub: regatta
+  from: 9
+  to: 15
+  hours: 2
+  skill: skill_athletics
+  dc: 15
+  effects: { vigour: -10, spirits: 10 }
+- id: activity_feast_regatta_cheer
+  origin: allora2
+  kind: activity
+  roots: [feast_regatta]
+  feast: feast_regatta
+  name: Cheer from the balconies
+  text: 'A rented foot of balcony, a cup of wine, and a sestiere to shout for.'
+  place: marre_city
+  sub: regatta
+  from: 9
+  to: 17
+  hours: 2
+  skill: skill_revelry
+  effects: { spirits: 8 }
+- id: activity_feast_dive_mirror
+  origin: allora2
+  kind: activity
+  roots: [feast_lagoon]
+  feast: feast_lagoon
+  name: Dive for the Doge's mirror
+  text: 'The mirror goes in from the golden barge, and half of Marre goes in after it.'
+  place: marre_palace
+  sub: feast
+  from: 10
+  to: 13
+  hours: 1
+  skill: skill_athletics
+  dc: 22
+  effects: { vigour: -8, spirits: 6 }
+- id: activity_feast_follow_barge
+  origin: allora2
+  kind: activity
+  roots: [feast_lagoon]
+  feast: feast_lagoon
+  name: Follow the golden barge
+  text: 'A place in any boat that floats, and the whole lagoon behind the Doge.'
+  place: marre_palace
+  sub: feast
+  from: 8
+  to: 12
+  hours: 3
+  skill: skill_seamanship
+  effects: { spirits: 10 }
+- id: activity_feast_masked_walk
+  origin: allora2
+  kind: activity
+  roots: [feast_carnevale]
+  feast: feast_carnevale
+  name: Walk the bridges masked
+  text: 'A plain bauta, a cloak, and nobody may ask.'
+  place: marre_city
+  sub: carnevale
+  from: 17
+  to: 23
+  hours: 2
+  skill: skill_stagecraft
+  effects: { spirits: 12 }
+- id: activity_feast_masked_listen
+  origin: allora2
+  kind: activity
+  roots: [feast_carnevale]
+  feast: feast_carnevale
+  name: Listen behind a mask
+  text: 'Under a mask people say what they would not; a mask hears it.'
+  place: marre_city
+  sub: carnevale
+  from: 18
+  to: 23
+  hours: 2
+  skill: skill_insight
+  dc: 16
+  effects: { spirits: 4 }
