@@ -26,7 +26,7 @@
 3. **The place panel.** One panel for where you are: the scene, who is here, what can be done, the market, the post, in tabs. Tooltips for hours, pay, odds and skills. *(done)*
 4. **The character sheet.** Needs, skills with gates, the career ladder, purse and pack, standing orders, and the away report, as proper panels. *(done)*
 5. **The map.** Pan and zoom, labels that thin out by zoom, drawn terrain and water, the route to a chosen place with its hours, and the life moving along it. *(done)*
-6. **Time controls.** Pause, play and a faster speed for watching. *(New mechanic: the gap is that a simulation game is watched as well as left. For the owner to confirm; the slow default stays.)*
+6. **Time controls.** Pause, play and a faster speed for watching. *(New mechanic: the gap is that a simulation game is watched as well as left. For the owner to confirm; the slow default stays.)* *(done)*
 
 ### B. The systems still missing
 
@@ -79,3 +79,8 @@
   - **Drawn ground:** the realm is a land panel; wild places sit in dark woods, settled ones in fields; ways by boat run through water.
   - **The way is drawn:** choose a place and the quickest way there shows in brass with its hours; on a journey, the way still to go. Routes come from the engine's own `World`, so the page finds no paths of its own.
   - The canvas keeps to its frame at every size.
+- **2026-11-18 · Time controls (#61).** Decisions:
+  - **Pause and three paces** in the top bar: a game hour each minute (the usual pace), each six seconds, and each second. Space pauses; 1, 2 and 3 set the pace.
+  - **The faster paces are for watching only.** Time away is always caught up at the usual pace, so a fast clock never makes the game run on while closed. The pace is not saved: a new visit starts at the usual pace.
+  - **Paused means paused everywhere:** a paused life does not live on while the page is closed either.
+  - New mechanic, for the owner to confirm: the gap is that a simulation game is watched as well as left alone.

@@ -39,6 +39,9 @@ import { type GameState } from './state';
 import { travelSystem, turnBack, setOut } from './travel';
 import { World } from './world';
 
+/** The paces the clock can run at while the game is open: a game hour a minute, six seconds, a second. */
+export const SPEEDS = [1, 10, 60];
+
 /** One real minute is one game hour. The single tunable clock rate. */
 export const MS_PER_GAME_HOUR = 60_000;
 
@@ -66,6 +69,8 @@ export interface Snapshot {
   hours: number;
   date: GameDate;
   paused: boolean;
+  /** The pace of the clock (see SPEEDS). */
+  speed: number;
   /** How far the current game hour has run, 0 to 1. */
   hourProgress: number;
   /** Game hours simulated to catch up after the last time away. */
@@ -157,6 +162,8 @@ export interface Snapshot {
 export class Engine {
   readonly bus = new EventBus();
   readonly msPerGameHour: number;
+  /** How many times faster than the usual pace the clock runs while the game is open. */
+  speed = 1;
   readonly world: World;
   private readonly systems: System[];
   private caughtUpHours = 0;
@@ -223,7 +230,7 @@ export class Engine {
     const elapsed = Math.max(0, nowMs - this.state.lastRealMs);
     this.state.lastRealMs = nowMs;
     if (this.state.paused) return 0;
-    const total = this.state.carryMs + elapsed;
+    const total = this.state.carryMs + elapsed * this.speed;
     const hours = Math.floor(total / this.msPerGameHour);
     this.state.carryMs = total - hours * this.msPerGameHour;
     this.run(hours);
@@ -260,6 +267,11 @@ export class Engine {
       case 'pause':
         this.advanceTo(nowMs);
         this.state.paused = true;
+        break;
+      case 'speed':
+        if (!SPEEDS.includes(order.speed)) throw new Error('No such pace');
+        this.advanceTo(nowMs);
+        this.speed = order.speed;
         break;
       case 'resume':
         this.state.lastRealMs = nowMs;
@@ -474,6 +486,7 @@ export class Engine {
       hours: this.state.hours,
       date: dateAt(this.state.hours),
       paused: this.state.paused,
+      speed: this.speed,
       hourProgress: Math.min(1, this.state.carryMs / this.msPerGameHour),
       caughtUpHours: this.caughtUpHours,
       skippedHours: this.skippedHours,

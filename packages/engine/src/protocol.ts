@@ -9,6 +9,8 @@ import type { StandingOrders } from './needs';
 export type Order =
   | { type: 'pause' }
   | { type: 'resume' }
+  /** Run the clock faster or slower while the game is open. */
+  | { type: 'speed'; speed: number }
   /** Set out for a place, by the quickest way. */
   | { type: 'travel'; to: string }
   /** Turn back to the place last left. */

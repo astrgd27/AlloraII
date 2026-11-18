@@ -1,4 +1,4 @@
-import { WORLD, type Order } from '@allora/engine';
+import { SPEEDS, WORLD, type Order } from '@allora/engine';
 import { useEffect, useState, useSyncExternalStore } from 'react';
 import { Orders, Report } from './Away';
 import { Calling } from './Career';
@@ -28,6 +28,24 @@ export function App() {
   const [chosen, setChosen] = useState<string | undefined>(undefined);
   const [picked, setPicked] = useState<string | undefined>(undefined);
   const send = (order: Order) => engine.send(order);
+  // Keys for the clock: space to pause, 1 2 3 for the pace.
+  const paused = snapshot?.paused;
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.target instanceof HTMLElement && e.target.closest('input, textarea')) return;
+      if (e.code === 'Space') {
+        e.preventDefault();
+        engine.send({ type: paused ? 'resume' : 'pause' });
+      }
+      const pace = SPEEDS[Number(e.key) - 1];
+      if (pace) {
+        if (paused) engine.send({ type: 'resume' });
+        engine.send({ type: 'speed', speed: pace });
+      }
+    };
+    addEventListener('keydown', onKey);
+    return () => removeEventListener('keydown', onKey);
+  }, [paused]);
   // A refusal is shown where the player last clicked, and fades.
   const [click, setClick] = useState({ x: 0, y: 0 });
 
@@ -49,7 +67,7 @@ export function App() {
         setClick({ x: e.clientX, y: e.clientY });
       }}
     >
-      <TopBar snapshot={snapshot} />
+      <TopBar snapshot={snapshot} send={send} />
 
       <aside className="column left">
         {snapshot.report && (

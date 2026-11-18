@@ -924,3 +924,23 @@ button:active:not(:disabled) {
   position: absolute;
   inset: 0;
 }
+
+/* Time controls */
+.time {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.time button {
+  min-width: 2rem;
+  padding: 0.15rem 0.45rem;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: -0.05em;
+}
+
+.time button.paused {
+  color: var(--bg);
+  background: var(--gilt);
+  border-color: var(--gilt);
+}
