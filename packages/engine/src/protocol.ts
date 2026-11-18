@@ -35,6 +35,8 @@ export type Order =
   /** Buy or sell one of a thing at the market here. */
   | { type: 'buy'; item: string }
   | { type: 'sell'; item: string }
+  /** Give a thing from the pack to someone here. */
+  | { type: 'give'; person: string; item: string }
   /** Rent a home here, giving up the old one; or give up the home. */
   | { type: 'rent'; home: HomeKind }
   | { type: 'leaveHome' }

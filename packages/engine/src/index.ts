@@ -6,6 +6,7 @@ export const ENGINE_NAME = 'allora-ii-engine';
 export const ENGINE_VERSION = '0.0.0';
 
 export * from './activities';
+export * from './bonds';
 export * from './calendar';
 export * from './career';
 export * from './challenge';

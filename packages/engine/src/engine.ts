@@ -23,6 +23,7 @@ import { EventBus } from './events';
 import type { Order } from './protocol';
 import { innAt, leaveHome, payRent, rent, rentAt, type Lodging } from './housing';
 import { liveDay, payDues } from './living';
+import { giftWhyNot, give, tierOf } from './bonds';
 import { note, type LogEntry } from './log';
 import { toolFor, toolModifiers, wearLeft } from './tools';
 import {
@@ -151,7 +152,16 @@ export interface Snapshot {
   /** The skills the life has used: level, progress to the next (0 to 1), and whether a gate holds it. */
   skills: Record<string, { level: number; progress: number; atGate: boolean; cap: number }>;
   /** The people at the life's place now. `known` is false until they have met. */
-  here: { id: string; sub: string; known: boolean; talks: number }[];
+  here: {
+    id: string;
+    sub: string;
+    known: boolean;
+    talks: number;
+    /** Friendship points and tier (0 Acquaintance to 3 Confidant), and why no gift today. */
+    points: number;
+    tier: number;
+    giftWhy?: string;
+  }[];
   /** The last thing someone said. */
   words: Words | null;
   /** The last thing that happened on the way, while still on the way. */
@@ -366,6 +376,9 @@ export class Engine {
       case 'leaveHome':
         leaveHome(this.state);
         break;
+      case 'give':
+        give(this.state, this.world, order.person, order.item);
+        break;
       case 'readReport':
         this.state.report = null;
         break;
@@ -516,6 +529,9 @@ export class Engine {
             ...p,
             known: Boolean(this.state.bonds[p.id]),
             talks: this.state.bonds[p.id]?.talks ?? 0,
+            points: this.state.bonds[p.id]?.points ?? 0,
+            tier: tierOf(this.state.bonds[p.id]?.points ?? 0),
+            ...((w) => (w ? { giftWhy: w } : {}))(giftWhyNot(this.state, p.id)),
           })),
       skills: Object.fromEntries(
         Object.entries(this.state.skills).map(([id, k]: [string, SkillState]) => [

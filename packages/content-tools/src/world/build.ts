@@ -190,6 +190,7 @@ async function main(): Promise<void> {
         id,
         name: item.name,
         value: item.value,
+        type: item.type,
         ...(item.type === 'food' ? { food: true } : {}),
       };
     }),
@@ -215,6 +216,8 @@ async function main(): Promise<void> {
       meet: n.meet,
       talk: n.talk,
       sched: n.sched,
+      ...(n.love ? { love: n.love, like: n.like, dislike: n.dislike, hate: n.hate } : {}),
+      ...(n.tiers ? { tiers: n.tiers } : {}),
     })),
     activities: activities
       .filter((a) => placeIds.has(a.place))

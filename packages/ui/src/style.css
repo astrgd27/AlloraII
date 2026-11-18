@@ -1017,3 +1017,38 @@ button:active:not(:disabled) {
   font-size: 0.85rem;
   letter-spacing: 0.04em;
 }
+
+.people .person {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.3rem;
+}
+
+.people .person > button:first-child .bar {
+  height: 0.2rem;
+  margin-top: 0.25rem;
+}
+
+.people .give {
+  align-self: start;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+.gift-list {
+  grid-column: 1 / -1;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  gap: 0.25rem !important;
+}
+
+.gift-list button {
+  padding: 0.15rem 0.5rem;
+  font-size: 0.82rem;
+}
+
+.said.confide {
+  border-left-color: var(--gilt);
+  color: #fff3d6;
+}

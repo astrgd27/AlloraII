@@ -13,6 +13,8 @@ const caseName = name(WORLD.cases);
 const posts = new Map((WORLD.posts ?? []).map((p) => [p.id, p]));
 const roadEvent = new Map((WORLD.roadEvents ?? []).map((e) => [e.id, e.text]));
 
+const TIER_NAMES = ['Acquaintance', 'Friend', 'Close Friend', 'Confidant'];
+
 const DEGREE = {
   triumph: 'a triumph',
   success: 'done well',
@@ -46,6 +48,8 @@ export function logText(e: LogEntry): string {
       return `Took ${e.home === 'room' ? 'a room' : 'a cottage'} in ${place(e.place)}`;
     case 'dues':
       return `Dues to the guild · −${pf(e.price)}`;
+    case 'friend':
+      return `${person(e.person)} is now a ${TIER_NAMES[e.tier]?.toLowerCase() ?? 'friend'}`;
     case 'lost':
       return `${caseName(e.case)} · a clue lost to time`;
     case 'broke':

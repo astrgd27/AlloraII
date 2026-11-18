@@ -22,6 +22,8 @@ export interface Item {
   /** Its worth in pf, before demand. */
   value: number;
   food?: boolean;
+  /** Its kind: food, tool, wear, goods, raw... */
+  type?: string;
 }
 
 /** A feast: days of a season when a place keeps holiday. */
@@ -202,6 +204,13 @@ export interface Person {
   /** Things they say once you know them. */
   talk: string[];
   sched: SchedEntry[];
+  /** Tastes in gifts: item ids, or kinds of item (food, tool, wear...). Canon people have them. */
+  love?: string[];
+  like?: string[];
+  dislike?: string[];
+  hate?: string[];
+  /** What they tell a friend, at each tier of friendship past the first. */
+  tiers?: string[];
 }
 
 export interface WorldData {

@@ -35,7 +35,7 @@
 9. **Dues, fares and tolls,** and wage tuning, until the inflation flag clears. *(done; two careers still flagged, see the decision)*
 10. **The trades diverge.** One deep feature each: the smith's materials and techniques; the butler's Trust and Harmony; the inquirer's case board with time pressure. *(done)*
 11. **Weather, seasons and the calendar.** Weather on the road, market and feast days from canon faiths, seasonal work. *(done)*
-12. **Bonds.** Acquaintance to friendship: gifts, favours, people who remember, and what a friend opens.
+12. **Bonds.** Acquaintance to friendship: gifts, favours, people who remember, and what a friend opens. *(done)*
 13. **Faith.** One faith playable end to end in Eintenn, grown from canon.
 14. **Magic.** One school learnable at the Collegium, by the rules of `canon/magic_design.md`. Countermagic stays the nearest a player comes to witch magic.
 15. **Several lives and the Tapestry.** A second and third life, the lives strip, switching, and standing orders for the ones not in focus.
@@ -126,3 +126,12 @@
   - **Feast work:** eight activities only while a feast is on (dance round the Harvest Mare, the harvest supper, an oar in the Regatta, diving for the Doge's mirror, walking the bridges masked, and more). Out of the feast they show disabled with "Only at Carnevale".
   - **A Feasts panel** on the sheet lists the year's feasts, the next first, with days to go; a banner and bunting mark a feast where the life is.
   - **Not yet:** feast days from the canon faiths (their texts give rules, not dates), seasonal work beyond the old spring-only sowing, weather at sea for the long lanes, and prices that move with feasts.
+- **2026-11-18 · Bonds (#67).** Friendship works as Allora I's does, read from its own code. Decisions:
+  - **Points from 0 to 1,000 and Allora I's four tiers:** Acquaintance, Friend at 150, Close Friend at 400, Confidant at 750. A first meeting gives 20, as in Allora I.
+  - **Gifts are judged by the person's own tastes:** canon people carry Allora I's loves, likes, dislikes and hates, by the thing or its kind (food, tool, wear). Allora I's reactions and values: loves it +70, likes it +28, polite +10, does not care for it −15, hates it −40. One gift a week to each person, as in Allora I. New people have no tastes yet, so every gift is polite.
+  - **People remember:** a day's talk gives 6 (once a day), and finishing work where someone one knows is working gives 2.
+  - **A confidence at each new tier:** canon people tell Allora I's own tier stories (Hanne's savings, her mother's illness, her strip of land) at the next talk after a new tier. The log notes the new tier.
+  - **What a friend opens:** friends put work your way. Paid work at a friend's own haunt pays a quarter more.
+  - **The people panel** shows each person's tier and a bar to the next, and a Give button that lists the pack (disabled with the reason when a gift was given this week).
+  - **Not yet:** tastes for the people Allora II adds, Allora I's per-person perks, favours asked, letters, and bonds that cool with neglect.
+  - Save version 17; old bonds keep their talks as points.

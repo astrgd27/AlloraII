@@ -2,7 +2,9 @@
 import type { GameDate } from './calendar';
 import { edgeOf, lessonFactor, rollCheck, type CheckResult } from './challenge';
 import type { System } from './engine';
+import { POINTS, FRIEND_PAY, friendsAt, warm } from './bonds';
 import { HARMONY } from './career';
+import { peopleAt } from './people';
 import { earn, round2 } from './money';
 import { TOOL_PAY, toolFor, toolModifiers, wearTool } from './tools';
 import { XP_PER_HOUR, edgeFactor, gain, newSkill, workXp } from './skills';
@@ -12,6 +14,8 @@ import { feastOn, type Activity, type World } from './world';
 /** An activity under way. */
 export interface Doing {
   id: string;
+  /** The sub-place it is done in. */
+  sub?: string;
   hoursLeft: number;
   effects: Activity['effects'];
   /** The skill it trains, how long it takes and how hard it is. */
@@ -69,9 +73,16 @@ export function begin(state: GameState, world: World, id: string, date: GameDate
     ? (world.posts.get(activity.post)?.pay?.[state.post?.rank ?? 0] ?? 0)
     : 0;
   const base = activity.pay ?? round2(wage * activity.hours);
-  const pay = toolFor(state, world, activity.skill) ? round2(base * TOOL_PAY) : base;
+  const withTool = toolFor(state, world, activity.skill) ? base * TOOL_PAY : base;
+  // Friends put work your way: their own haunt pays a quarter more.
+  const pay = round2(
+    friendsAt(state, world, activity.place, activity.sub).length > 0
+      ? withTool * FRIEND_PAY
+      : withTool,
+  );
   state.doing = {
     id,
+    ...(activity.sub ? { sub: activity.sub } : {}),
     hoursLeft: activity.hours,
     effects: activity.effects,
     hours: activity.hours,
@@ -118,6 +129,11 @@ export const activitySystem: System = {
     }
     wearTool(state, world, doing.skill, doing.hours ?? 1);
     if (doing.pay) earn(state, doing.pay);
+    // Work done alongside people one knows draws them closer.
+    for (const p of peopleAt(world, state.place, _date)) {
+      if (state.bonds[p.id] && (!doing.sub || p.sub === doing.sub))
+        warm(state, world, p.id, POINTS.alongside);
+    }
     if (doing.standing && state.post) {
       state.post.standing += doing.standing;
       if (state.post.harmony !== undefined)
