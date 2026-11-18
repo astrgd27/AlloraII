@@ -188,7 +188,7 @@ export class Engine {
     options: EngineOptions = {},
   ) {
     this.msPerGameHour = options.msPerGameHour ?? MS_PER_GAME_HOUR;
-    this.world = options.world ?? new World();
+    this.world = options.world ?? World.shared();
     this.systems = [needsSystem, travelSystem, activitySystem, ...(options.systems ?? [])];
     // The record of what just happened is kept from the engine's own events.
     this.bus.on('ActivityCompleted', (e) =>
