@@ -13,6 +13,7 @@ export * from './engine';
 export * from './events';
 export * from './host';
 export * from './housing';
+export * from './living';
 export * from './log';
 export * from './market';
 export * from './money';

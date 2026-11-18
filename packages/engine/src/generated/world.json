@@ -4595,6 +4595,12 @@
     1.6,
     3.5
    ],
+   "dues": [
+    2,
+    6,
+    15,
+    40
+   ],
    "place": "kess_market",
    "sub": "guilds",
    "ranks": [
@@ -6626,7 +6632,8 @@
   {
    "id": "route_eintenn_dukes_road",
    "name": "The Duke's Road",
-   "text": "The made road from Kesselhaven up to the castle and down to Ostwick, ditched and gravelled at the Duke's cost and tolled at his pleasure."
+   "text": "The made road from Kesselhaven up to the castle and down to Ostwick, ditched and gravelled at the Duke's cost and tolled at his pleasure.",
+   "toll": 0.25
   },
   {
    "id": "route_eintenn_levy_way",

@@ -99,6 +99,7 @@ describe('standing orders', () => {
       work: 'away',
       turnBackIfHurt: true,
       inn: true,
+      living: 'comfortable',
     });
     expect(save.report).toBeNull();
   });

@@ -8,6 +8,8 @@
     - tennfels
   name: "The Duke's Road"
   way: road
+  # Paid at each toll-bar, one to a stretch of road (the route's text says it is tolled).
+  toll: 0.25
   text: "The made road from Kesselhaven up to the castle and down to Ostwick, ditched and gravelled at the Duke's cost and tolled at his pleasure."
 - id: route_eintenn_levy_way
   origin: allora2

@@ -30,6 +30,8 @@ export interface Persona {
   about: string;
   /** Where this persona's lives begin and have their bed. Ostwick, if left out. */
   home?: string;
+  /** What the life starts with in its purse, if not the usual. */
+  money?: number;
   /** Called once per game hour, before the tick. May give the engine orders. */
   act(engine: Engine): void;
 }
@@ -37,10 +39,16 @@ export interface Persona {
 /** Walks to a place picked at random whenever it is standing still. */
 export const wanderer: Persona = {
   name: 'Wanderer',
-  about: 'Sets out for a random place whenever it is standing still.',
+  about: 'Sets out for a random place whenever it is standing still, with a purse for fares.',
+  // It never works: it travels on what it set out with, so that it can reach every place.
+  money: 1000,
   act(engine) {
     if (engine.state.journey) return;
-    const others = WORLD.places.filter((p) => p.id !== engine.state.place);
+    // Only where the purse can pay the tolls and fares.
+    const costs = engine.world.costsFrom(engine.state.place);
+    const others = WORLD.places.filter(
+      (p) => p.id !== engine.state.place && (costs[p.id] ?? Infinity) <= engine.state.money,
+    );
     const roll = nextRandom(engine.state.rng, engine.state.seed, 'bot');
     const target = others[Math.floor(roll * others.length)];
     if (target) engine.handle({ type: 'travel', to: target.id }, 0);
@@ -96,6 +104,9 @@ function careerist(
       const tool = engine.world.toolsBySkill.get(engine.world.posts.get(post)?.skill ?? '')?.[0];
       if (tool && !state.goods[tool.item] && state.money > 40 && snapEarly(engine)?.market?.open)
         engine.handle({ type: 'buy', item: tool.item }, 0);
+      // A master with money put by lives as a master.
+      if (state.orders.living !== 'rich' && state.post.rank >= 2 && state.money > 1500)
+        engine.handle({ type: 'setOrders', orders: { living: 'rich' } }, 0);
       // A life that can afford it moves from its room into a cottage.
       if (state.lodging?.kind === 'room' && state.money > 200 && state.place === state.home)
         engine.handle({ type: 'rent', home: 'cottage' }, 0);
@@ -157,7 +168,8 @@ export const pedlar: Persona = {
       return ms.sort((a, b) => (hours[a.place] ?? 1e9) - (hours[b.place] ?? 1e9))[0];
     };
     const go = (to: string | undefined) => {
-      if (to) engine.handle({ type: 'travel', to }, 0);
+      if (to && (world.costsFrom(state.place)[to] ?? Infinity) <= state.money)
+        engine.handle({ type: 'travel', to }, 0);
     };
     const held = Object.keys(state.goods).filter((id) => !world.items.get(id)?.food);
     if (!here) return go(nearest(others)?.place);
@@ -246,6 +258,7 @@ export function playLife(persona: Persona, seed: number, hours: number): LifeRes
       owed: 0,
     };
   }
+  if (persona.money !== undefined) start.money = persona.money;
   const engine = new Engine(start);
   const result: LifeResult = {
     seed,

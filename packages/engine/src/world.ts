@@ -67,6 +67,8 @@ export interface NamedRoute {
   id: string;
   name: string;
   text: string;
+  /** Paid on each stretch of it, if it is tolled. */
+  toll?: number;
 }
 
 /** Something that can happen on the way. */
@@ -135,6 +137,8 @@ export interface Post {
   ranks: string[];
   /** Pay for an hour's work at each rank, in pf. */
   pay?: number[];
+  /** Dues each season at each rank, where the post has a guild. */
+  dues?: number[];
   work: WorkStep[];
 }
 
@@ -205,6 +209,8 @@ export interface Leg {
   /** True on water (a sea lane or a river): the life is a passenger and can sleep aboard. */
   sea?: true;
   way?: Road['way'];
+  /** What it costs to pass: a toll on a tolled road, a fare by boat. */
+  cost?: number;
 }
 
 export interface Route {
@@ -212,7 +218,21 @@ export interface Route {
   hours: number;
 }
 
+/** A boat fare: so much an hour aboard, and never less than this. */
+export const FARE = { perHour: 0.05, least: 0.2 };
+const round2 = (n: number): number => Math.round(n * 100) / 100;
+
+/** What a way costs to travel: tolls and fares, leg by leg. */
+export const costOf = (legs: Leg[]): number => round2(legs.reduce((n, l) => n + (l.cost ?? 0), 0));
+
 export class World {
+  private static default: World | undefined;
+
+  /** The one world every engine shares unless given another: its routes are worked out once. */
+  static shared(): World {
+    return (World.default ??= new World());
+  }
+
   readonly places = new Map<string, Place>();
   readonly activities = new Map<string, Activity>();
   readonly people = new Map<string, Person>();
@@ -225,7 +245,10 @@ export class World {
   readonly toolsBySkill = new Map<string, Tool[]>();
   private readonly links = new Map<string, Leg[]>();
   /** The roads do not change, so travel hours from a place are worked out once. */
-  private readonly hoursCache = new Map<string, Record<string, number>>();
+  private readonly treeCache = new Map<
+    string,
+    { hours: Record<string, number>; costs: Record<string, number> }
+  >();
 
   constructor(readonly data: WorldData = WORLD) {
     for (const place of data.places) {
@@ -245,7 +268,13 @@ export class World {
     }
     for (const road of data.roads) {
       const water = road.way === 'sea' || road.way === 'river';
-      const extra = { way: road.way, ...(water ? ({ sea: true } as const) : {}) };
+      const toll = (data.routes ?? []).find((r) => r.id === road.route)?.toll ?? 0;
+      const cost = round2(toll + (water ? Math.max(FARE.least, FARE.perHour * road.hours) : 0));
+      const extra = {
+        way: road.way,
+        ...(water ? ({ sea: true } as const) : {}),
+        ...(cost > 0 ? { cost } : {}),
+      };
       this.links.get(road.from)?.push({ road: road.id, to: road.to, hours: road.hours, ...extra });
       this.links.get(road.to)?.push({ road: road.id, to: road.from, hours: road.hours, ...extra });
     }
@@ -290,16 +319,48 @@ export class World {
     return { legs, hours: best.get(to) ?? 0 };
   }
 
+  /**
+   * One search from a place to all others (Dijkstra by hours): the hours and the
+   * tolls and fares of the quickest way to each. Worked out once per place.
+   */
+  private tree(from: string): { hours: Record<string, number>; costs: Record<string, number> } {
+    const known = this.treeCache.get(from);
+    if (known) return known;
+    const hours: Record<string, number> = { [from]: 0 };
+    const costs: Record<string, number> = { [from]: 0 };
+    const open = new Set([from]);
+    const done = new Set<string>();
+    while (open.size > 0) {
+      let current: string | undefined;
+      for (const id of open) {
+        if (current === undefined || (hours[id] ?? Infinity) < (hours[current] ?? Infinity))
+          current = id;
+      }
+      if (current === undefined) break;
+      open.delete(current);
+      done.add(current);
+      for (const leg of this.links.get(current) ?? []) {
+        if (done.has(leg.to)) continue;
+        const h = (hours[current] ?? 0) + leg.hours;
+        if (h < (hours[leg.to] ?? Infinity)) {
+          hours[leg.to] = h;
+          costs[leg.to] = round2((costs[current] ?? 0) + (leg.cost ?? 0));
+          open.add(leg.to);
+        }
+      }
+    }
+    const result = { hours, costs };
+    this.treeCache.set(from, result);
+    return result;
+  }
+
+  /** What it costs to travel from one place to every place that can be reached. */
+  costsFrom(from: string): Record<string, number> {
+    return this.places.has(from) ? this.tree(from).costs : {};
+  }
+
   /** Travel hours from one place to every place that can be reached. */
   hoursFrom(from: string): Record<string, number> {
-    const known = this.hoursCache.get(from);
-    if (known) return known;
-    const out: Record<string, number> = {};
-    for (const id of this.places.keys()) {
-      const route = this.route(from, id);
-      if (route) out[id] = route.hours;
-    }
-    this.hoursCache.set(from, out);
-    return out;
+    return this.places.has(from) ? this.tree(from).hours : {};
   }
 }

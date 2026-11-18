@@ -148,6 +148,9 @@ async function main(): Promise<void> {
         name: e.name,
         skill: e.skill,
         pay: (e.ranks as Raw[]).map((r) => r.pay ?? 0),
+        dues: (e.ranks as Raw[]).some((r) => r.dues)
+          ? (e.ranks as Raw[]).map((r) => r.dues ?? 0)
+          : undefined,
         place: e.place,
         sub: e.sub,
         ranks: (e.ranks as Raw[]).map((r) => r.name),
@@ -179,6 +182,7 @@ async function main(): Promise<void> {
       id: r.id,
       name: r.name,
       text: r.text,
+      toll: r.toll,
     })),
     roadEvents: (await readDir('content/events'))
       .filter((e) => e.kind === 'road_event')
