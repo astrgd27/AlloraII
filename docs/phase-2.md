@@ -25,7 +25,7 @@
 2. **Every click answers.** Buttons that cannot act are disabled and say why on hover. A refused order explains itself where it was given. A short log of what just happened. *(done)*
 3. **The place panel.** One panel for where you are: the scene, who is here, what can be done, the market, the post, in tabs. Tooltips for hours, pay, odds and skills. *(done)*
 4. **The character sheet.** Needs, skills with gates, the career ladder, purse and pack, standing orders, and the away report, as proper panels. *(done)*
-5. **The map.** Pan and zoom, labels that thin out by zoom, drawn terrain and water, the route to a chosen place with its hours, and the life moving along it.
+5. **The map.** Pan and zoom, labels that thin out by zoom, drawn terrain and water, the route to a chosen place with its hours, and the life moving along it. *(done)*
 6. **Time controls.** Pause, play and a faster speed for watching. *(New mechanic: the gap is that a simulation game is watched as well as left. For the owner to confirm; the slow default stays.)*
 
 ### B. The systems still missing
@@ -73,3 +73,9 @@
   - **Skills are grouped by family** and show level over cap (e.g. 12/25). A skill held at its cap shows its level in red, and its tooltip names the gate that holds it.
   - **The hours of sleep can be changed** from the sheet, an hour at a time. The engine refuses a night shorter than four hours or longer than twelve, and says so.
   - Every standing order has a tooltip saying what it does.
+- **2026-11-18 · The map (#60).** Decisions:
+  - **Pan and zoom:** drag to move, the wheel to zoom about the pointer, and four tools at the corner: closer, further, the whole realm, and find the life. Zoom runs from the whole realm to six times closer.
+  - **Names thin out by themselves:** each is placed only where it fits, towns first, then canon villages, then new ones, then the wild. Zoom in and more appear. Towns are drawn larger and bold, as squares.
+  - **Drawn ground:** the realm is a land panel; wild places sit in dark woods, settled ones in fields; ways by boat run through water.
+  - **The way is drawn:** choose a place and the quickest way there shows in brass with its hours; on a journey, the way still to go. Routes come from the engine's own `World`, so the page finds no paths of its own.
+  - The canvas keeps to its frame at every size.
