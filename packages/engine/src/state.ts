@@ -25,7 +25,7 @@ export interface Journey {
 }
 
 /** The save format version. Raise it with every change to GameState, and add a migration. */
-export const SAVE_VERSION = 13;
+export const SAVE_VERSION = 14;
 
 export interface GameState {
   version: typeof SAVE_VERSION;
@@ -46,6 +46,10 @@ export interface GameState {
   home: string;
   /** The home rented there, or null with none. */
   lodging: Lodging | null;
+  /** Item id → hours of use left in the one in hand. */
+  wear: Record<string, number>;
+  /** Pieces the life made and kept: its trial works. */
+  keepsakes: { case: string; quality: number; hours: number }[];
   /** The night (in game hours) an inn bed was last paid for. */
   innNight: number;
   needs: Needs;
@@ -109,6 +113,8 @@ export function newGame(seed: number, nowMs: number): GameState {
     // A new life starts in a rented room in Ostwick, its first day paid.
     lodging: { kind: 'room', rent: HOMES.room.rent.settled, owed: 0 },
     innNight: -1,
+    wear: {},
+    keepsakes: [],
     needs: { ...FULL_NEEDS },
     orders: { ...DEFAULT_ORDERS },
     asleep: false,

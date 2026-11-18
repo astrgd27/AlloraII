@@ -21,6 +21,7 @@ import { EventBus } from './events';
 import type { Order } from './protocol';
 import { innAt, leaveHome, payRent, rent, rentAt, type Lodging } from './housing';
 import { note, type LogEntry } from './log';
+import { toolFor, toolModifiers, wearLeft } from './tools';
 import {
   PACK,
   carried,
@@ -113,6 +114,10 @@ export interface Snapshot {
   lastWork: { case: string; quality: number; trial: boolean } | null;
   /** What happened while the player was away, until it is read. */
   report: Report | null;
+  /** The tools carried that are in use, each with its hours of use left. */
+  tools: { item: string; skill: string; edge: number; left: number; wear: number }[];
+  /** Pieces the life made and kept. */
+  keepsakes: { case: string; quality: number }[];
   /** The purse, in pf, and what the life carries. */
   money: number;
   goods: Record<string, number>;
@@ -391,6 +396,11 @@ export class Engine {
               return { id: a.id, ...(reason ? { reason } : {}) };
             }),
       report: this.state.report,
+      tools: [...this.world.toolsBySkill.keys()].flatMap((skill) => {
+        const t = toolFor(s, this.world, skill);
+        return t ? [{ item: t.item, skill, edge: t.edge, left: wearLeft(s, t), wear: t.wear }] : [];
+      }),
+      keepsakes: s.keepsakes.map((k) => ({ case: k.case, quality: k.quality })),
       money: this.state.money,
       goods: { ...this.state.goods },
       market: market
@@ -430,6 +440,7 @@ export class Engine {
             chanceOfSuccess({
               dc: a.dc ?? 0,
               skillLevel: (a.skill && this.state.skills[a.skill]?.level) || 0,
+              modifiers: toolModifiers(this.state, this.world, a.skill),
               allowsCost: false,
             }),
           ]),

@@ -70,6 +70,9 @@ export const idler: Persona = {
   },
 };
 
+/** The snapshot, for personas that look at the market. */
+const snapEarly = (engine: Engine) => (engine.state.asleep ? undefined : engine.snapshot());
+
 /** A persona that holds a post: duties, cases, and each trial as soon as it is offered. */
 function careerist(
   name: string,
@@ -89,6 +92,10 @@ function careerist(
         engine.handle({ type: 'takePost', post }, 0);
         return;
       }
+      // A careful life keeps the tool of its trade, and buys another when it breaks.
+      const tool = engine.world.toolsBySkill.get(engine.world.posts.get(post)?.skill ?? '')?.[0];
+      if (tool && !state.goods[tool.item] && state.money > 40 && snapEarly(engine)?.market?.open)
+        engine.handle({ type: 'buy', item: tool.item }, 0);
       // A life that can afford it moves from its room into a cottage.
       if (state.lodging?.kind === 'room' && state.money > 200 && state.place === state.home)
         engine.handle({ type: 'rent', home: 'cottage' }, 0);

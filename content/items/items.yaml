@@ -1,0 +1,33 @@
+# Tools Allora I does not have, for trades Allora II adds. Sold where their trade is done.
+- id: item_hammer_tongs
+  origin: allora2
+  kind: item
+  roots:
+    - g_anvil
+  name: 'Hammer and Tongs'
+  value: 12
+  type: tool
+- id: item_needle_case
+  origin: allora2
+  kind: item
+  roots:
+    - ostwick
+  name: 'Needle-Case'
+  value: 4
+  type: tool
+- id: item_bread_peel
+  origin: allora2
+  kind: item
+  roots:
+    - ostwick
+  name: "Baker's Peel"
+  value: 3
+  type: tool
+- id: item_ledger
+  origin: allora2
+  kind: item
+  roots:
+    - tennfels
+  name: 'Ruled Ledger'
+  value: 6
+  type: tool

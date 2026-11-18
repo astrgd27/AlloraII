@@ -86,8 +86,21 @@ async function main(): Promise<void> {
 
   // Markets: what each sells is its place's canon shop list, less recipes and guild-gated goods.
   const allItems = new Map(
-    (await readYaml('content/canon/allora1/items.yaml')).map((i) => [i.id as string, i]),
+    [
+      ...(await readYaml('content/canon/allora1/items.yaml')),
+      ...(await readDir('content/items')).filter((i) => i.kind === 'item'),
+    ].map((i) => [i.id as string, i]),
   );
+  const tools = (await readDir('content/items'))
+    .filter((t) => t.kind === 'tool')
+    .map((t) => ({
+      id: t.id,
+      item: t.item,
+      skill: t.skill,
+      edge: t.edge,
+      wear: t.wear,
+      text: t.text,
+    }));
   const markets = (await readDir('content/markets'))
     .filter((m) => placeIds.has(m.place))
     .map((m) => {
@@ -152,6 +165,7 @@ async function main(): Promise<void> {
         trialFor: e.trial_for,
       })),
     markets,
+    tools,
     items: traded.map((id) => {
       const item = allItems.get(id) as Raw;
       return {

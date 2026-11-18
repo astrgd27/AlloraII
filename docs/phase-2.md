@@ -31,7 +31,7 @@
 ### B. The systems still missing
 
 7. **Homes and lodging.** A rented room, then a cottage: rent, comfort, sleeping well away from home at an inn for a price. The first real money sink. *(done)*
-8. **Items and tools.** Things with properties: tools that help work and wear out, clothes, food kinds. The smith's commission becomes an object with a quality.
+8. **Items and tools.** Things with properties: tools that help work and wear out, clothes, food kinds. The smith's commission becomes an object with a quality. *(done)*
 9. **Dues, fares and tolls,** and wage tuning, until the inflation flag clears.
 10. **The trades diverge.** One deep feature each: the smith's materials and techniques; the butler's Trust and Harmony; the inquirer's case board with time pressure.
 11. **Weather, seasons and the calendar.** Weather on the road, market and feast days from canon faiths, seasonal work.
@@ -92,3 +92,11 @@
   - **A Lodging tab** at every town and village lets rooms and cottages and gives the inn's price. The sheet shows the home, its rent and anything owed.
   - **Balance:** careerists move into a cottage once they have 200 pf. Spending rises (a smith now about 6 pf a day in a town cottage) but the purse still grows far faster than 3% a year; that is #64.
   - Save version 13.
+- **2026-11-18 · Items and tools (#63).** Decisions:
+  - **Tools are content** (`content/items/tools.yaml`, kind `tool`): an item, the skill it helps, an *edge* (+1 to +3) and *wear* (hours of use). Fourteen grow from Allora I's own tools (felling axe, pickaxe, fishing net, primer, the instruments, grooming kit, halter, lockpicks, excavator's kit, astrolabe). **Four are new** (`content/items/items.yaml`), for trades canon has no tool for: hammer and tongs (smithing), a needle-case (clothwork), a baker's peel (cookery) and a ruled ledger (stewardship). They are sold where their trade is done.
+  - **What a tool does:** carried, it adds its edge to the roll of its skill's checks, named in the roll ("Hammer and Tongs +2"), and paid work done with it pays a quarter more. What work teaches is still set by the life's own skill, not the tool.
+  - **Wear:** each hour of its skill's work wears it; when spent it breaks (the log says so) and the next one in the pack is taken up. The sheet shows each tool with a bar of wear left.
+  - **Kept pieces:** a trial piece (a journeyman's piece, a masterpiece) is the life's own and is kept; the sheet lists them. A commission goes to its client and is paid for, as before.
+  - **Features are rare:** the inquirer's Insight has no tool. Not every skill should.
+  - **Not yet:** clothes, kinds of food that differ, materials with properties, and selling a made piece.
+  - **Balance:** careerists keep their trade's tool and buy another when it breaks. The smith now climbs faster (grandmaster at about day 407, was 539) and earns more; the butler a little; the inquirer not at all. The three careers begin to differ.

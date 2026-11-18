@@ -8,6 +8,7 @@ import {
   itemSchema,
   landSchema,
   marketSchema,
+  toolSchema,
   otherSchema,
   personSchema,
   placeSchema,
@@ -33,6 +34,7 @@ export const SCHEMA_BY_KIND: Record<string, { name: string; schema: z.ZodType }>
   activity: { name: 'activity', schema: activitySchema },
   case: { name: 'case', schema: caseSchema },
   market: { name: 'market', schema: marketSchema },
+  tool: { name: 'tool', schema: toolSchema },
 };
 
 export interface Failure {

@@ -6,6 +6,7 @@
 import type { GameDate } from './calendar';
 import { chanceOfSuccess, edgeOf, lessonFactor, rollCheck, type Degree } from './challenge';
 import { earn, round2 } from './money';
+import { toolModifiers, wearTool } from './tools';
 import { GATES, XP_PER_HOUR, capOf, edgeFactor, gain, newSkill, passGate } from './skills';
 import type { GameState } from './state';
 import type { Approach, Case, Post, World } from './world';
@@ -121,7 +122,10 @@ export function choices(state: GameState, world: World): { approach: Approach; c
   if (!c || !step) return [];
   return step.approaches.map((approach) => ({
     approach,
-    chance: chanceOfSuccess(specFor(state, post, c, approach)),
+    chance: chanceOfSuccess({
+      ...specFor(state, post, c, approach),
+      modifiers: toolModifiers(state, world, post.skill),
+    }),
   }));
 }
 
@@ -170,7 +174,8 @@ export function workHour(state: GameState, world: World): { finished?: Work; deg
     return {};
   }
   const spec = specFor(state, post, c, approach);
-  const result = rollCheck(spec, state.rng, state.seed, 'checks');
+  const roll = { ...spec, modifiers: toolModifiers(state, world, post.skill) };
+  const result = rollCheck(roll, state.rng, state.seed, 'checks');
   state.checks[result.degree] = (state.checks[result.degree] ?? 0) + 1;
   state.lastCheck = { ...result, activity: `${c.id}/${step.id}` };
   const won = result.degree === 'success' || result.degree === 'triumph';
@@ -186,6 +191,7 @@ export function workHour(state: GameState, world: World): { finished?: Work; deg
     skill,
     venture.working.hours * XP_PER_HOUR * edgeFactor(edgeOf(spec)) * lessonFactor(result.degree),
   );
+  wearTool(state, world, post.skill, venture.working.hours);
   venture.working = null;
   venture.step += 1;
   if (venture.step < post.work.length) return { degree: result.degree };
@@ -200,6 +206,8 @@ export function workHour(state: GameState, world: World): { finished?: Work; deg
   state.works.push(work);
   state.venture = null;
   if (c.trialFor !== undefined) {
+    // A trial piece is the life's own, and kept.
+    state.keepsakes.push({ case: c.id, quality: work.quality, hours: state.hours });
     if (work.quality >= (TRIAL_QUALITY[c.trialFor] ?? Infinity) && skill.gates < GATES.length) {
       passGate(skill);
       held.rank = c.trialFor;

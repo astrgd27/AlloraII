@@ -3,6 +3,7 @@ import type { GameDate } from './calendar';
 import { edgeOf, lessonFactor, rollCheck, type CheckResult } from './challenge';
 import type { System } from './engine';
 import { earn, round2 } from './money';
+import { TOOL_PAY, toolFor, toolModifiers, wearTool } from './tools';
 import { XP_PER_HOUR, edgeFactor, gain, newSkill, workXp } from './skills';
 import type { GameState } from './state';
 import type { Activity, World } from './world';
@@ -58,7 +59,8 @@ export function begin(state: GameState, world: World, id: string, date: GameDate
   const wage = activity.post
     ? (world.posts.get(activity.post)?.pay?.[state.post?.rank ?? 0] ?? 0)
     : 0;
-  const pay = activity.pay ?? round2(wage * activity.hours);
+  const base = activity.pay ?? round2(wage * activity.hours);
+  const pay = toolFor(state, world, activity.skill) ? round2(base * TOOL_PAY) : base;
   state.doing = {
     id,
     hoursLeft: activity.hours,
@@ -75,7 +77,7 @@ export function begin(state: GameState, world: World, id: string, date: GameDate
 /** Each waking hour is an hour of the work in hand. Sleep sets it down until morning. */
 export const activitySystem: System = {
   name: 'activities',
-  tick(state, _date, bus) {
+  tick(state, _date, bus, world) {
     const doing = state.doing;
     if (!doing || state.asleep) return;
     doing.hoursLeft -= 1;
@@ -86,8 +88,10 @@ export const activitySystem: System = {
     const skill = doing.skill ? (state.skills[doing.skill] ??= newSkill()) : undefined;
     if (doing.dc) {
       // The work ends in a check. Its edge sets what it teaches; failure teaches half.
+      // A tool helps the roll; what the work teaches is set by the life's own skill.
       const spec = { dc: doing.dc, skillLevel: skill?.level ?? 0, allowsCost: false };
-      const result = rollCheck(spec, state.rng, state.seed, 'checks');
+      const roll = { ...spec, modifiers: toolModifiers(state, world, doing.skill) };
+      const result = rollCheck(roll, state.rng, state.seed, 'checks');
       state.lastCheck = { ...result, activity: doing.id };
       state.checks[result.degree] = (state.checks[result.degree] ?? 0) + 1;
       if (result.degree === 'triumph')
@@ -103,6 +107,7 @@ export const activitySystem: System = {
     } else if (skill) {
       gain(skill, workXp(doing.hours ?? 1, doing.level ?? 1, skill.level));
     }
+    wearTool(state, world, doing.skill, doing.hours ?? 1);
     if (doing.pay) earn(state, doing.pay);
     if (doing.standing && state.post) state.post.standing += doing.standing;
     state.done[doing.id] = (state.done[doing.id] ?? 0) + 1;
