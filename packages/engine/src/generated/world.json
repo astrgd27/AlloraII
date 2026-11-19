@@ -2,11 +2,13 @@
  "regions": [
   {
    "id": "eintenn",
-   "name": "Duchy of Eintenn"
+   "name": "Duchy of Eintenn",
+   "text": "Smallest of the Seven Principalities and among the richest, Eintenn clings to the northern coast between the Grauwald and the sea. Duke Albrecht IV von Tennfels, called the Salt-Duke, rules from Burg Tennfels through a web of feudal oaths: barons hold their manors of him, knights hold of the barons, and villeins owe labour on the demesne three days in seven. The duchy’s wealth flows from salt in the Salzmoor, silver at Silberhalde and the harbor-tolls of Kesselhaven, whose burghers chafe under ducal taxes and envy the liberties of the merchant-princes of Luggen."
   },
   {
    "id": "marre",
-   "name": "Republic of Marre"
+   "name": "Republic of Marre",
+   "text": "One of the three great powers: the City of Sea-Glass, built on a hundred islands in a turquoise lagoon, its palaces faced with sea-glass and silvered mirror. The Doge is elected for life from one of the Ten Families and rules, with their councils, a colonial empire of islands and trading posts across the southern sea. Marrean galleys carry spice, silk and glass to every port of the Seven. Its illusionists work through mirrors, and its politics are much the same. The Kingdom of Rolla lies under its influence."
   }
  ],
  "places": [
@@ -29,7 +31,8 @@
     "harvesthome": "Harvest Home on the Green",
     "plots": "The Cottage Plots",
     "pecart": "Pecutto’s Cart"
-   }
+   },
+   "text": "A thatch-and-timber village of some forty hearths on the ducal demesne, ringed by strip-fields and common pasture. The hearth-shrine of Ilvara smokes day and night beside the well, and the Barley Sheaf serves ale to anyone with a pfennig."
   },
   {
    "id": "kess_harbor",
@@ -45,7 +48,8 @@
     "cog": "Aboard a Coastal Cog",
     "eel": "The Gilded Eel",
     "chapel": "The Drowned Chapel"
-   }
+   },
+   "text": "The great kettle-shaped harbor that gave Kesselhaven its name. Timber-cogs from Luggen jostle Marrean galleys along the stone mole; salt, silver and stockfish go out, wine, spice and glass come in. Half under the tideline crouches the Drowned Chapel of Mother Vass."
   },
   {
    "id": "kess_market",
@@ -68,7 +72,8 @@
     "pesthouse": "The Pest-Houses",
     "progress": "The Royal Progress",
     "pecart": "Pecutto’s Cart"
-   }
+   },
+   "text": "The beating heart of Kesselhaven: the Salzmarkt square with its weigh-house and pillory, ringed by the guildhalls of the Adze, the Anvil, the Needle and the Book. Opposite the weigh-house stands the Hall of Currents, where the philosophers of Horro keep their ledgers and their deposits. Here everything is for sale, and everyone has a price."
   },
   {
    "id": "kess_fondaco",
@@ -84,7 +89,8 @@
     "warehouses": "Warehouses & Counting-Rooms",
     "workshops": "Marrean Workshops",
     "court": "The Courtyard"
-   }
+   },
+   "text": "A walled compound granted to the merchants of the Republic of Marre, locked from outside at curfew. Within: warehouses of spice and sea-glass, the Scuola di Scherma where rapiers ring, and the little Teatro della Maschera, whose stage is walled with mirrors."
   },
   {
    "id": "kess_undercroft",
@@ -98,7 +104,8 @@
     "cellars": "The Old Salt-Cellars",
     "backroom": "The Back Room",
     "streets": "The Night Streets"
-   }
+   },
+   "text": "Beneath the Salzmarkt lie the old salt-cellars, vaulted and endless, abandoned when the Salt Council built new warehouses. The Rats live here now: cutpurses, fences, forgers and the Night-Master who rules them."
   },
   {
    "id": "collegium",
@@ -116,7 +123,8 @@
     "hermetic": "The Hermetic Faculty",
     "comet": "The Comet",
     "disput": "The Disputation Hall"
-   }
+   },
+   "text": "A tall brick college under ducal charter, where masters lecture in High Allorese and mages of the Hermetic Art are registered, examined and licensed. Its observatory tower is the highest point in Kesselhaven."
   },
   {
    "id": "tennfels",
@@ -137,7 +145,8 @@
     "tourney": "The Tourney Lists",
     "players": "Pecutto’s Players’ Wagons",
     "pecart": "Pecutto’s Cart"
-   }
+   },
+   "text": "Seat of the Dukes of Eintenn: a grey keep on a basalt crag above the Tenn, its bailey loud with drilling men-at-arms and barking hounds. The chapel of Saint Calder the Oathbound holds the banners of a hundred sworn knights, and in a quiet side-court the legate of the Dellian Diet keeps a lamp-chapel to Dell."
   },
   {
    "id": "aschau",
@@ -152,7 +161,8 @@
     "chapel": "Hearth-Chapel & Seminary",
     "pyre": "The Pyre Fields",
     "players": "Pecutto’s Players’ Wagons"
-   }
+   },
+   "text": "A vine-town on the warm southern slopes, famous for its wine and infamous for its fields. Each autumn the Pyre-Wardens of Ilvara burn the stubble here and walk barefoot through the embers, while the Hearth-Church preaches against them from the town chapel."
   },
   {
    "id": "grauwald",
@@ -169,7 +179,8 @@
     "camp": "The Outlaws’ Camp",
     "bounty": "The Bounty Post",
     "wolfhunt": "The Wolf-Hunt"
-   }
+   },
+   "text": "The grey forest: beech and oak and ancient yew, ducal hunting ground and refuge of outlaws. Charcoal-burners' smoke rises from its clearings; deeper in, the trees grow older and the paths less certain."
   },
   {
    "id": "wisewoman_hut",
@@ -181,7 +192,8 @@
    "canon": true,
    "subs": {
     "hut": "Mother Brindl’s Hut"
-   }
+   },
+   "text": "A turf-roofed hut at the forest’s edge, hung with drying herbs, bird-skulls and charms of knotted thread. Mother Brindl will teach the hedge-arts to those who bring her something useful and ask no foolish questions."
   },
   {
    "id": "greenwife_grove",
@@ -193,7 +205,8 @@
    "canon": true,
    "subs": {
     "oaks": "Under the Ribboned Oaks"
-   }
+   },
+   "text": "A ring of oaks older than the duchy, their low branches tied with ribbons, hair and little bags of salt. There is no altar, no priest, and no sound but the wind. Those who stay long enough say the trees begin to listen."
   },
   {
    "id": "hohenkamm",
@@ -208,7 +221,8 @@
     "crags": "The Crags",
     "carvers": "The Carvers’ Huts",
     "eyrie": "The Eagle’s Eyrie"
-   }
+   },
+   "text": "The High Comb: a jagged range of limestone peaks walling Eintenn from the north. Goat-herders summer on its meadows and old stave-carvers still cut runes into the lintels of their huts. Storms here arrive without warning."
   },
   {
    "id": "thunder_caves",
@@ -220,7 +234,8 @@
    "canon": true,
    "subs": {
     "caves": "The Thunder-Caves"
-   }
+   },
+   "text": "Caves on the highest peak of the Hohenkamm, their mouths glazed black and glassy by ages of lightning. Inside, heaps of rusted iron offerings rise like cairns. The Cave-Sworn keep their silent vigils here, waiting for the storm."
   },
   {
    "id": "silberhalde",
@@ -236,7 +251,8 @@
     "lamp": "The Miner’s Lamp",
     "drift": "The Old Drift",
     "newseam": "The New Seam"
-   }
+   },
+   "text": "A raw mining town of spoil-heaps and smelter smoke, where the duke’s Bergmeister weighs every ingot. Silver from these seams pays for half the ducal court; the miners who dig it drink hard and die young."
   },
   {
    "id": "salzmoor",
@@ -251,7 +267,8 @@
     "flats": "The Tidal Flats",
     "coves": "Smugglers’ Coves",
     "wreck": "The Wreck of the Salt-Queen"
-   }
+   },
+   "text": "Salt-marsh and mudflat east of Kesselhaven, crossed by tidal channels and dotted with salt-pans. Eel-catchers, pearl-divers and smugglers know its ways; everyone else drowns."
   },
   {
    "id": "vaelis_ruins",
@@ -264,7 +281,8 @@
    "subs": {
     "forum": "The Fallen Forum",
     "tombs": "The Tombs"
-   }
+   },
+   "text": "Fallen colonnades and collapsed bath-houses in a lonely mountain valley: all that remains of an Allorese provincial capital. Treasure-hunters dig here by day. By night, lights move among the stones that no one admits to carrying."
   },
   {
    "id": "threshold_sanctum",
@@ -276,7 +294,8 @@
    "canon": true,
    "subs": {
     "hall": "The Hall of Doors"
-   }
+   },
+   "text": "An underground hall beneath Vaelis, its walls painted with doors — hundreds of them, some open, most shut. Initiates of the Veiled One gather here by night, hooded, to keep vigil and to undergo the rites of passage."
   },
   {
    "id": "marre_city",
@@ -299,7 +318,8 @@
     "pesthouse": "The Pest-Houses",
     "progress": "The Royal Progress",
     "pecart": "Pecutto’s Cart"
-   }
+   },
+   "text": "The greatest port of Allora, built on a hundred islands in a turquoise lagoon. Its palaces are faced with sea-glass and silvered mirror, so that the whole city shimmers and doubles on the water. The Doge, chosen for life from one of the Ten Families, rules a colonial empire across the southern sea. In Marre nothing is quite what it seems — and that is the point."
   },
   {
    "id": "marre_isles",
@@ -313,7 +333,8 @@
     "strand": "The Glass Strand",
     "furnaces": "The Furnaces",
     "chapel": "The Glassmakers’ Chapel of Dolma"
-   }
+   },
+   "text": "Furnace islands across the lagoon where Marre’s glassmakers live in gilded captivity — honoured, rich, and forbidden on pain of death to leave. Here sea-glass is remelted, crystal is blown, and the great mirrors are silvered that make the Silvered Masque possible."
   },
   {
    "id": "wp_ferry",
@@ -326,7 +347,8 @@
    "subs": {
     "taproom": "The Taproom",
     "stage": "The Ferry Stage"
-   }
+   },
+   "text": "A low inn at the river-crossing on the Luggen road, where drovers, raftsmen and Kontor clerks wait for the ferry and trade gossip in three languages. The ferryman has a wooden leg and opinions about everyone who ever crossed."
   },
   {
    "id": "wp_lighthouse",
@@ -340,7 +362,8 @@
     "tower": "The Lighthouse",
     "rocks": "The Wreck-Rocks",
     "wreck": "The Fresh Wreck"
-   }
+   },
+   "text": "A Marrean lighthouse on a black headland, its great lamp reflected by a mirror the size of a church door. The rocks below are littered with the wreckage of ships that did not see it."
   },
   {
    "id": "xonia_shore",
@@ -354,7 +377,8 @@
     "stair": "The Marble Stair",
     "pools": "The Column Shallows",
     "wreck": "The Fresh Wreck"
-   }
+   },
+   "text": "A white beach east of the lagoon where a marble stair runs down off the sand into clear green water. At low tide the tops of columns break the surface like a line of swimmers, and the sea-glass underfoot is thicker here than anywhere in Marre."
   },
   {
    "id": "xonia_sunken",
@@ -367,7 +391,8 @@
    "subs": {
     "agora": "The Drowned Agora",
     "crucible": "The Great Crucible"
-   }
+   },
+   "text": "Forty feet down in the blue, the streets of a drowned city: colonnades furred with weed, an agora paved in marble, statues lying where they fell. The water here is strangely warm, and the ground beneath the silt rings like glass when you strike it."
   },
   {
    "id": "selino",
@@ -384,7 +409,8 @@
     "den": "The Back of the Loop",
     "players": "Pecutto’s Players’ Wagons",
     "pesthouse": "The Pest-Houses"
-   }
+   },
+   "text": "An island city two days’ sail from Marre and the last port before the eastern sea: the staging-ground for every galley bound for the spice-coasts and the Rabene shore. Chandlers, pilots, sailors waiting for a ship and sailors hiding from one fill its quays — and the rest of them fill the Lilac Loop, the one road in Selino that goes round in a circle, lined with gaming-houses, lilac-lamped houses of pleasure, fences and gentlemen with heavy sticks."
   },
   {
    "id": "marre_palace",
@@ -403,7 +429,8 @@
     "reliquary": "The Reliquary of Saint Calder",
     "feast": "The Feast of the Lagoon",
     "lampchapel": "The Dellian Lamp-Chapel"
-   }
+   },
+   "text": "The heart of the Republic: a great square open to the lagoon, the Doge’s pink-and-white palace, the gold-domed Basilica of the Serene Matron guarded by two glass lions, the reliquary of Saint Calder, and across the square the plain black door of the Cerdans."
   },
   {
    "id": "marre_canal",
@@ -417,7 +444,8 @@
     "grimassi": "Ca’ Grimassi",
     "morvan": "Ca’ Morvan",
     "loredel": "Ca’ Loredel"
-   }
+   },
+   "text": "The great S-bend of the Grand Canal, lined with the palazzi of the Ten Families — sea-glass façades, water-gates, striped mooring-poles in family colours, and a constant traffic of gondolas carrying clients, spies and roses."
   },
   {
    "id": "lazaretto",
@@ -432,7 +460,8 @@
     "theatre": "The Theatre of Chirurgery",
     "spezieria": "The Spezieria",
     "quays": "The Quarantine Quays"
-   }
+   },
+   "text": "The plague island: a walled quarantine of wards, fumigation-sheds, burial-pits and the best physicians in Allora. Every ship from the east anchors here forty days. The air smells of vinegar and burning juniper, and nobody shakes hands."
   },
   {
    "id": "terraferma",
@@ -446,7 +475,8 @@
     "villas": "The Villas",
     "mulberries": "The Mulberry Groves",
     "paddies": "The Rice-Fields"
-   }
+   },
+   "text": "The mainland behind the lagoon: white villas with porticoes among mulberry groves, silkworm-sheds, and endless flooded rice-fields where the mosquitoes sing all summer."
   },
   {
    "id": "morena",
@@ -461,7 +491,8 @@
     "fondaco": "The Factor’s Fondaco",
     "quarter": "The Thoolman Quarter",
     "groves": "The Mastic Groves"
-   }
+   },
+   "text": "The Halfway Isle: a rocky island in the eastern sea with a Marrean castle, a harbour full of galleys from both empires, a Thoolman quarter of gold-domed chapels and clockmakers’ shops, and silver-green groves where the mastic trees weep their resin."
   },
   {
    "id": "pomerell",
@@ -477,7 +508,8 @@
     "cloister": "The Herb-Cloister",
     "kitchen": "The Brothers’ Kitchen-Garden",
     "church": "The Abbey Church"
-   }
+   },
+   "text": "An old abbey in a fold of the hills south of Ostwick, now mostly orchard: a church, a cloister of herbs, a cider-house the size of a barn, and apple-trees in long ranks down to the river, each with a number painted on its trunk and a page in the brothers’ book."
   },
   {
    "id": "place_eintenn_weirbeck_mill",
@@ -490,7 +522,8 @@
    "subs": {
     "wheelhouse": "The Wheelhouse",
     "millpool": "The Mill Pool"
-   }
+   },
+   "text": "A timber mill on the beck below the village, where Ostwick's corn is weighed in and its flour weighed out. The wheel has turned for three generations of one family."
   },
   {
    "id": "place_eintenn_netherwick",
@@ -503,7 +536,8 @@
    "subs": {
     "haymeads": "The Haymeads",
     "row": "The Row"
-   }
+   },
+   "text": "A dozen cottages on the low ground east of Ostwick, where the fields flood in a wet spring and the hay is the best on the demesne."
   },
   {
    "id": "place_eintenn_tithe_barn",
@@ -516,7 +550,8 @@
    "subs": {
     "threshing_floor": "The Threshing Floor",
     "tally_room": "The Tally Room"
-   }
+   },
+   "text": "A great aisled barn on the Ostwick road where the Duke's tenth is counted, stored and carted up to the castle."
   },
   {
    "id": "place_eintenn_crow_stone",
@@ -529,7 +564,8 @@
    "subs": {
     "stone": "The Stone",
     "fold": "The Lambing Fold"
-   }
+   },
+   "text": "A leaning grey stone on the common boundary, older than the village. The shepherds meet here at noon and will not say why it is unlucky to sit with your back to it."
   },
   {
    "id": "place_eintenn_dunmere",
@@ -542,7 +578,8 @@
    "subs": {
     "pond": "The Mere",
     "green": "The Goose Green"
-   }
+   },
+   "text": "A village round a brown pond on the castle road, known for geese, goose-down and the noise of both."
   },
   {
    "id": "place_eintenn_three_ash_ford",
@@ -555,7 +592,8 @@
    "subs": {
     "ford": "The Ford",
     "hut": "The Ford-Keeper's Hut"
-   }
+   },
+   "text": "A stony ford under three ash trees, where the Aschau road crosses the beck. A plank bridge serves in summer; in spring there is only the ford-keeper's rope."
   },
   {
    "id": "place_eintenn_hollin_cross",
@@ -568,7 +606,8 @@
    "subs": {
     "hearth": "The Wayside Hearth",
     "crossroads": "The Four Ways"
-   }
+   },
+   "text": "A crossroads under holly trees with a wayside hearth of Ilvara, where travellers leave a stick for the fire and take a coal for their own."
   },
   {
    "id": "place_eintenn_sallowfield",
@@ -581,7 +620,8 @@
    "subs": {
     "orchard_edge": "The Orchard Edge",
     "cots": "The Pickers' Cots"
-   }
+   },
+   "text": "A hamlet at the edge of the abbey's orchards, whose people pick for the brothers in autumn and prune for them in winter."
   },
   {
    "id": "place_eintenn_hanging_oak",
@@ -594,7 +634,8 @@
    "subs": {
     "oak": "The Oak",
     "pit": "The Lime Pit"
-   }
+   },
+   "text": "A dead oak at the forest road's first turning, where the Duke's justice hangs outlaws in sight of the trees they came from."
   },
   {
    "id": "place_eintenn_undercrag",
@@ -607,7 +648,8 @@
    "subs": {
     "wash_stones": "The Wash-Stones",
     "lines": "The Lines"
-   }
+   },
+   "text": "The servants' village under the basalt crag: laundresses, scullions and grooms, and wash-lines strung from the castle rock itself."
   },
   {
    "id": "place_eintenn_broken_lance",
@@ -620,7 +662,8 @@
    "subs": {
     "long_room": "The Long Room",
     "yard": "The Stable Yard"
-   }
+   },
+   "text": "An inn on the road below the tiltyard, kept by an old man-at-arms, where squires drink before a tourney and knights after one."
   },
   {
    "id": "place_eintenn_falkenau",
@@ -633,7 +676,8 @@
    "subs": {
     "weathering": "The Weathering Ground",
     "lofts": "The Lure-Makers' Lofts"
-   }
+   },
+   "text": "A village on the windy side of the crag where the ducal falconers live, every roof with its block and every child with a glove."
   },
   {
    "id": "place_eintenn_black_quarry",
@@ -646,7 +690,8 @@
    "subs": {
     "face": "The Face",
     "sheds": "The Dressing Sheds"
-   }
+   },
+   "text": "The basalt quarry that built the keep, still worked for kerbs and millstones by a few families who say the Duke owes them for a castle."
   },
   {
    "id": "place_eintenn_burners_ride",
@@ -659,7 +704,8 @@
    "subs": {
     "stacks": "The Cordwood Stacks",
     "halt": "The Carters' Halt"
-   }
+   },
+   "text": "A wide track where the charcoal carts come out of the Grauwald, black-rutted and lined with stacked cordwood waiting for the kilns."
   },
   {
    "id": "place_eintenn_verderers_lodge",
@@ -672,7 +718,8 @@
    "subs": {
     "hall": "The Lodge Hall",
     "paddock": "The Deer-Hay"
-   }
+   },
+   "text": "A timber lodge inside the forest where the Duke's foresters keep the hunting-rolls, the deer-count and a cellar for poachers."
   },
   {
    "id": "place_eintenn_reedmere",
@@ -685,7 +732,8 @@
    "subs": {
     "reedbeds": "The Reed-Beds",
     "staithe": "The Cutters' Staithe"
-   }
+   },
+   "text": "A shallow mere between the common and the forest edge, all reed, heron and mist, where thatch is cut in winter and eels are taken in summer."
   },
   {
    "id": "place_eintenn_steinwick",
@@ -698,7 +746,8 @@
    "subs": {
     "shearing_floor": "The Shearing Floor",
     "walls": "The Long Walls"
-   }
+   },
+   "text": "A sheep village of dry-stone walls on the rising ground toward Aschau, where everything that is not a wall is a fold."
   },
   {
    "id": "place_eintenn_vintners_halt",
@@ -711,7 +760,8 @@
    "subs": {
     "cooperage": "The Cooperage",
     "weighbridge": "The Weighbridge"
-   }
+   },
+   "text": "A carters' stop below the vine slopes, with a cooper's shed, a weighbridge and a pump that every carter swears is haunted."
   },
   {
    "id": "place_eintenn_pomerell_grange",
@@ -724,7 +774,8 @@
    "subs": {
     "yard": "The Grange Yard",
     "dovecote": "The Dovecote"
-   }
+   },
+   "text": "The abbey's outlying farm on the Ostwick side of the hills: a walled yard, a dovecote and the brothers' plough-oxen."
   },
   {
    "id": "place_eintenn_beacon_knoll",
@@ -737,7 +788,8 @@
    "subs": {
     "basket": "The Fire-Basket",
     "watch_hut": "The Watch-Hut"
-   }
+   },
+   "text": "A bald hill between Ostwick and the castle with an iron fire-basket on a post, kept ready to call the Duke's levy."
   },
   {
    "id": "place_eintenn_salters_gate",
@@ -750,7 +802,8 @@
    "subs": {
     "arch": "The Arch",
     "tollhouse": "The Toll-House"
-   }
+   },
+   "text": "The gate between the Salzmarkt and the harbour, where every salt cart is counted through. The arch is white to head height."
   },
   {
    "id": "place_eintenn_netmenders_strand",
@@ -763,7 +816,8 @@
    "subs": {
     "racks": "The Drying Racks",
     "shingle": "The Shingle"
-   }
+   },
+   "text": "A shingle beach east of the harbour where the nets are spread and mended. It smells of tar and yesterday."
   },
   {
    "id": "place_eintenn_coopers_yard",
@@ -776,7 +830,8 @@
    "subs": {
     "sheds": "The Stave Sheds",
     "fire": "The Hooping Fire"
-   }
+   },
+   "text": "A yard of barrel-makers north of the Salzmarkt. Salt, herring and ale all leave Kesselhaven in their work."
   },
   {
    "id": "place_eintenn_eelwater",
@@ -789,7 +844,8 @@
    "subs": {
     "smokehouses": "The Smokehouses",
     "dykes": "The Dykes"
-   }
+   },
+   "text": "A fen village west of the harbour, built on its own smoke. The eels are caught at night and hung over alder fires by day."
   },
   {
    "id": "place_eintenn_inkwell_row",
@@ -802,7 +858,8 @@
    "subs": {
     "stalls": "The Bookstalls",
     "garrets": "The Garrets"
-   }
+   },
+   "text": "A street of booksellers, copyists and cheap lodgings between the Collegium and the town. Students owe money at every door."
   },
   {
    "id": "place_eintenn_starwatch_hill",
@@ -815,7 +872,8 @@
    "subs": {
     "stones": "The Sighting Stones",
     "fold": "The Sheepfold"
-   }
+   },
+   "text": "A bare hill north of the Collegium with a ring of sighting stones on top. Students come up at night; sheep keep it by day."
   },
   {
    "id": "place_eintenn_panners_row",
@@ -828,7 +886,8 @@
    "subs": {
     "row": "The Row",
     "store": "The Salt Store"
-   }
+   },
+   "text": "A row of low houses at the edge of the Salzmoor where the pan-workers live. Everything here is crusted white, the children included."
   },
   {
    "id": "place_eintenn_mud_chapel",
@@ -841,7 +900,8 @@
    "subs": {
     "nave": "The Nave",
     "belfry": "The Fog Bell"
-   }
+   },
+   "text": "A small chapel on stilts above the tidal flats, kept for those the moor has taken. Its bell rings in fog."
   },
   {
    "id": "place_eintenn_haverford",
@@ -854,7 +914,8 @@
    "subs": {
     "ford": "The Ford",
     "oatfields": "The Oatfields"
-   }
+   },
+   "text": "A farm village at the ford on the way to the Salzmoor. Its oats feed half the cart-horses of Kesselhaven."
   },
   {
    "id": "place_eintenn_long_reach",
@@ -867,7 +928,8 @@
    "subs": {
     "towpath": "The Towpath",
     "hut": "The Haulers’ Hut"
-   }
+   },
+   "text": "A straight mile of river where the barges are hauled upstream by men on a towpath. There is a hut, a fire and a great deal of rope."
   },
   {
    "id": "place_eintenn_osterau",
@@ -880,7 +942,8 @@
    "subs": {
     "retting": "The Retting Ponds",
     "green": "The Scutching Green"
-   }
+   },
+   "text": "A flax village in the river meadows. In summer the fields are blue for a week; in autumn the whole place stinks of retting."
   },
   {
    "id": "place_eintenn_lindenau",
@@ -893,7 +956,8 @@
    "subs": {
     "green": "The Lime Green",
     "paddocks": "The Paddocks"
-   }
+   },
+   "text": "A village round a great lime tree, known for its horse fair. Half the cart-horses and a few of the destriers of Eintenn were first sold under that tree."
   },
   {
    "id": "place_eintenn_slag_heaps",
@@ -906,7 +970,8 @@
    "subs": {
     "heaps": "The Heaps",
     "washing": "The Washing Trough"
-   }
+   },
+   "text": "Grey hills of waste below Silberhalde. Pickers go over them for the ore the smelters missed."
   },
   {
    "id": "place_eintenn_stollenwick",
@@ -919,7 +984,8 @@
    "subs": {
     "lane": "The Steep Lane",
     "washhouse": "The Wash-House"
-   }
+   },
+   "text": "A miners’ village on the slope above the workings. The men go down before light and come up after it, so the village belongs to the women."
   },
   {
    "id": "place_eintenn_wolf_pits",
@@ -932,7 +998,8 @@
    "subs": {
     "pits": "The Pits",
     "bothy": "The Warden’s Bothy"
-   }
+   },
+   "text": "Old pits at the edge of the Grauwald, dug for wolves in a hard winter and kept ever since. A warden walks them at dawn."
   },
   {
    "id": "place_eintenn_high_byre",
@@ -945,7 +1012,8 @@
    "subs": {
     "byre": "The Byre",
     "pasture": "The Summer Pasture"
-   }
+   },
+   "text": "A summer byre below the Hohenkamm where the cattle are driven up at the thaw. The cheese comes down in autumn, and the herders with it."
   },
   {
    "id": "place_eintenn_pilgrim_stair",
@@ -958,7 +1026,8 @@
    "subs": {
     "steps": "The Steps",
     "rest": "The Half-Way Rest"
-   }
+   },
+   "text": "A stair of worn steps cut into the hillside on the way north. Someone has swept it every morning for longer than anyone remembers."
   },
   {
    "id": "place_eintenn_kelterwick",
@@ -971,7 +1040,8 @@
    "subs": {
     "press": "The Great Press",
     "cellars": "The Cool Cellars"
-   }
+   },
+   "text": "A village east of Aschau built round one great wine-press. At vintage the whole street runs purple."
   },
   {
    "id": "place_eintenn_appleford",
@@ -984,7 +1054,8 @@
    "subs": {
     "ford": "The Ford",
     "yard": "The Carters’ Yard"
-   }
+   },
+   "text": "A ford and a few houses on the cart-road to Pomerell. In autumn the cider carts queue to the bend."
   },
   {
    "id": "place_eintenn_bee_garth",
@@ -997,7 +1068,8 @@
    "subs": {
     "niches": "The Bee Wall",
     "honeyhouse": "The Honey-House"
-   }
+   },
+   "text": "The abbey’s walled bee yard, west of the orchards. Forty straw skeps stand in niches in the wall."
   },
   {
    "id": "place_eintenn_greywater_weir",
@@ -1010,7 +1082,8 @@
    "subs": {
     "weir": "The Weir",
     "trap": "The Fish-Trap"
-   }
+   },
+   "text": "A stone weir west of Ostwick with a fish-trap in its teeth. It is older than the village and nobody admits to building it."
   },
   {
    "id": "place_eintenn_brackenfell",
@@ -1023,7 +1096,8 @@
    "subs": {
     "cuttings": "The Peat Cuttings",
     "stacks": "The Stacks"
-   }
+   },
+   "text": "A turf-cutters’ village on the western moor. Every house has a peat stack taller than its door."
   },
   {
    "id": "place_eintenn_standing_sisters",
@@ -1036,7 +1110,8 @@
    "subs": {
     "stones": "The Three Stones",
     "thorn": "The Rag Thorn"
-   }
+   },
+   "text": "Three leaning stones on a rise, tied with rags by people who would not say why. The grass inside them is never grazed."
   },
   {
    "id": "place_eintenn_cloudgate_pass",
@@ -1049,7 +1124,8 @@
    "subs": {
     "cairns": "The Cairns",
     "shelter": "The Stone Shelter"
-   }
+   },
+   "text": "The notch in the ridge where the track crosses the Hohenkamm. It is open four months in the year, and the cairns are there for the other eight."
   },
   {
    "id": "place_eintenn_the_antler",
@@ -1062,7 +1138,8 @@
    "subs": {
     "taproom": "The Taproom",
     "woodyard": "The Woodyard"
-   }
+   },
+   "text": "A foresters’ alehouse just inside the Grauwald. Every beam has horns nailed to it, and every horn has a story that gets longer."
   },
   {
    "id": "place_eintenn_mossbeck",
@@ -1075,7 +1152,8 @@
    "subs": {
     "osiers": "The Osier Beds",
     "doorsteps": "The Doorsteps"
-   }
+   },
+   "text": "A village of basket-makers on a willow stream. Half the eel-traps, bee-skeps and cradles in the west were woven here."
   },
   {
    "id": "place_eintenn_silverford",
@@ -1088,7 +1166,8 @@
    "subs": {
     "ford": "The Ford",
     "wrights": "The Wrights’ Yard"
-   }
+   },
+   "text": "The ford where the ore carts cross on their way to the castle and the coast. A wheelwright, a smith and an inn live off broken axles."
   },
   {
    "id": "place_eintenn_burgmill",
@@ -1101,7 +1180,8 @@
    "subs": {
     "stones": "The Mill Floor",
     "race": "The Mill Race"
-   }
+   },
+   "text": "The castle’s mill under the rock of Tennfels. The Duke’s tenants must bring their corn here and nowhere else, by law."
   },
   {
    "id": "place_eintenn_rabenstein",
@@ -1114,7 +1194,8 @@
    "subs": {
     "tower": "The Tower",
     "beacon": "The Beacon"
-   }
+   },
+   "text": "A broken watchtower on a crag, with a beacon basket still kept filled. Ravens nest in what is left of the top floor."
   },
   {
    "id": "place_eintenn_nordwick",
@@ -1127,7 +1208,8 @@
    "subs": {
     "staithe": "The Staithe",
     "saltsheds": "The Salting Sheds"
-   }
+   },
+   "text": "A river hamlet upstream of the ferry, where salmon are netted in the run and salted for the rest of the year."
   },
   {
    "id": "place_eintenn_chainhouse",
@@ -1140,7 +1222,8 @@
    "subs": {
     "capstan": "The Capstan",
     "landing": "The Far Landing"
-   }
+   },
+   "text": "The far-bank house where the ferry’s chain is winched. Four men and a horse walk the capstan every time the horn sounds."
   },
   {
    "id": "place_eintenn_sandhaven",
@@ -1153,7 +1236,8 @@
    "subs": {
     "dunes": "The Lookout Dune",
     "boats": "The Pilot Boats"
-   }
+   },
+   "text": "A pilots’ hamlet on the dunes east of the town. They row out to meet anything with a foreign rig and bring it in over the bar."
   },
   {
    "id": "place_eintenn_pitch_kilns",
@@ -1166,7 +1250,8 @@
    "subs": {
     "kilns": "The Kilns",
     "barrels": "The Tar Barrels"
-   }
+   },
+   "text": "Kilns east of the shipyard where pine is burned down to tar. The smoke is why nobody else lives on that side."
   },
   {
    "id": "place_eintenn_herring_stairs",
@@ -1179,7 +1264,8 @@
    "subs": {
     "steps": "The Steps",
     "barrow_rank": "The Barrow Rank"
-   }
+   },
+   "text": "Wide steps down to the water where the herring boats sell straight off the gunwale. By noon it is scales and gulls."
   },
   {
    "id": "place_eintenn_lantern_court",
@@ -1192,7 +1278,8 @@
    "subs": {
     "watchhouse": "The Watch-House",
     "oilshops": "The Oil Shops"
-   }
+   },
+   "text": "A yard of lamp-oil sellers above the Undercroft, and the watch-house of the night patrol. It is the last lit place before the streets that are not."
   },
   {
    "id": "place_eintenn_bleaching_fields",
@@ -1205,7 +1292,8 @@
    "subs": {
     "greens": "The Greens",
     "lyehouse": "The Lye-House"
-   }
+   },
+   "text": "Meadows south-west of the town where new linen is pegged out to whiten. From the walls it looks like snow that has been ironed."
   },
   {
    "id": "place_eintenn_mittelau",
@@ -1218,7 +1306,8 @@
    "subs": {
     "gardens": "The Hop Gardens",
     "kiln": "The Drying Kiln"
-   }
+   },
+   "text": "A hop-growing village half-way between Ostwick and the wine country. The poles stand in rows like a leafless wood all winter."
   },
   {
    "id": "place_eintenn_sonnhalde",
@@ -1231,7 +1320,8 @@
    "subs": {
     "terraces": "The Terraces",
     "hut": "The Vine-Watcher’s Hut"
-   }
+   },
+   "text": "A south-facing slope of terraces between the wine country and the abbey. The walls hold the day’s heat for the grapes at night."
   },
   {
    "id": "place_eintenn_southmere",
@@ -1244,7 +1334,8 @@
    "subs": {
     "reedbeds": "The Reed Beds",
     "stacks": "The Bundle Stacks"
-   }
+   },
+   "text": "A reed-cutters’ village on a shallow lake. Every roof for a day’s walk is thatched from here."
   },
   {
    "id": "place_eintenn_red_scar",
@@ -1257,7 +1348,8 @@
    "subs": {
     "foot": "The Foot of the Scar",
     "cell": "The Cell"
-   }
+   },
+   "text": "A cliff of red stone with a cell cut into it half-way up. A basket goes down on a rope each morning and comes up with bread or without."
   },
   {
    "id": "place_eintenn_westmark_stone",
@@ -1270,7 +1362,8 @@
    "subs": {
     "stone": "The Stone",
     "hut": "The Customs Hut"
-   }
+   },
+   "text": "The boundary stone of the Duchy on the west road, with a customs hut beside it. The stone has the Duke’s salt-pan on one face and nothing on the other."
   },
   {
    "id": "place_marre_calle_inchiostro",
@@ -1283,7 +1376,8 @@
    "subs": {
     "desks": "The Copy-Desks",
     "stair": "The Paper Stair"
-   }
+   },
+   "text": "A narrow lane behind the Piazza where scriveners copy for the Council and the Cerdans by the page. Every window has a desk in it and every desk a lamp."
   },
   {
    "id": "place_marre_molo_grano",
@@ -1296,7 +1390,8 @@
    "subs": {
     "quay": "The Grain Quay",
     "measure": "The Measuring Shed"
-   }
+   },
+   "text": "The quay at the lagoon end of the Piazza where the grain barges tie up. The Republic counts every sack ashore, because a hungry city is not a serene one."
   },
   {
    "id": "place_marre_campo_leoni",
@@ -1309,7 +1404,8 @@
    "subs": {
     "well": "The Lion Well",
     "houses": "The Keepers’ Houses"
-   }
+   },
+   "text": "A small square behind the Basilica where the lion-keepers of the Serene Matron live. Two worn stone lions sit at its well, copies of the glass ones nobody may touch."
   },
   {
    "id": "place_marre_riva_ombra",
@@ -1322,7 +1418,8 @@
    "subs": {
     "steps": "The Water-Steps",
     "grating": "The Low Grating"
-   }
+   },
+   "text": "The shaded quay under the palace roof, where families wait in boats for word of someone in the Leads. Nobody raises their voice here."
   },
   {
    "id": "place_marre_osteria_bauta",
@@ -1335,7 +1432,8 @@
    "subs": {
     "taproom": "The Front Room",
     "snug": "The Room Behind"
-   }
+   },
+   "text": "A wine-shop a bridge away from the black door, where informers drink and are careful what about. Its sign is a white mask with no mouth."
   },
   {
    "id": "place_marre_squero_storto",
@@ -1348,7 +1446,8 @@
    "subs": {
     "slip": "The Slip",
     "loft": "The Rib Loft"
-   }
+   },
+   "text": "A boatyard on a bent side-canal where gondolas are built by eye, each a hand’s breadth crooked so that one oar drives it straight."
   },
   {
    "id": "place_marre_pescaria",
@@ -1361,7 +1460,8 @@
    "subs": {
     "slabs": "The Slabs",
     "boats": "The Night Boats"
-   }
+   },
+   "text": "The fish market by the Rialto, loud before dawn and washed down by the third hour. Everything on the slabs was in the lagoon yesterday."
   },
   {
    "id": "place_marre_corte_tinta",
@@ -1374,7 +1474,8 @@
    "subs": {
     "vats": "The Vats",
     "lines": "The Drying Lines"
-   }
+   },
+   "text": "A dyers’ court where the canal runs three colours by noon. Silk from the Terraferma comes in white and leaves in the colours of the great houses."
   },
   {
    "id": "place_marre_ponte_maschere",
@@ -1387,7 +1488,8 @@
    "subs": {
     "stalls": "The Stalls",
     "span": "The Span"
-   }
+   },
+   "text": "A covered bridge of mask-makers’ stalls between the city and the great palazzi. A hundred white faces hang in every window."
   },
   {
    "id": "place_marre_fondamenta_specchi",
@@ -1400,7 +1502,8 @@
    "subs": {
     "shops": "The Mirror Shops",
     "landing": "The Guarded Landing"
-   }
+   },
+   "text": "The mirror-sellers’ quay, facing the Glass Isles across the water. The glass comes over by guarded barge; the men who made it do not."
   },
   {
    "id": "place_marre_waiting_roads",
@@ -1413,7 +1516,8 @@
    "subs": {
     "anchorage": "The Anchorage",
     "guardboat": "The Health Boat"
-   }
+   },
+   "text": "The anchorage off the Lazaretto where ships from the east ride out their forty days. From the island they look like a town that is not allowed ashore."
   },
   {
    "id": "place_marre_quiet_isle",
@@ -1426,7 +1530,8 @@
    "subs": {
     "pits": "The Lime Pits",
     "hut": "The List-Keeper’s Hut"
-   }
+   },
+   "text": "A low island south of the Lazaretto where its dead are buried in lime. One man lives on it and keeps the list."
   },
   {
    "id": "place_marre_isle_of_simples",
@@ -1439,7 +1544,8 @@
    "subs": {
     "beds": "The Physic Beds",
     "stillroom": "The Still-Room"
-   }
+   },
+   "text": "A walled physic garden on its own islet, which grows what the Spezieria cannot wait a season’s sailing for."
   },
   {
    "id": "place_marre_stilt_huts",
@@ -1452,7 +1558,8 @@
    "subs": {
     "platform": "The Net Platform",
     "traps": "The Eel Traps"
-   }
+   },
+   "text": "Fishermen’s huts on stilts in the middle of the lagoon, an hour from anywhere. The eel-men live on them from spring to autumn."
   },
   {
    "id": "place_marre_pilots_rest",
@@ -1465,7 +1572,8 @@
    "subs": {
     "lookout": "The Lookout",
     "boathouse": "The Boathouse"
-   }
+   },
+   "text": "The pilot station at the lagoon mouth. No ship crosses the bar without a Marrean pilot, and the Republic means it that way."
   },
   {
    "id": "place_marre_barge_stair",
@@ -1478,7 +1586,8 @@
    "subs": {
     "stair": "The Stair",
     "sheds": "The Toll Sheds"
-   }
+   },
+   "text": "The landing where the mainland barges load for the city: rice, silk, firewood and wine, and the Families going out to their villas in summer."
   },
   {
    "id": "place_marre_silk_sheds",
@@ -1491,7 +1600,8 @@
    "subs": {
     "sheds": "The Worm Sheds",
     "reels": "The Reeling Yard"
-   }
+   },
+   "text": "A hamlet among the mulberry groves where the worms are fed day and night for six weeks, and the whole place holds its breath."
   },
   {
    "id": "place_marre_chiusa_vecchia",
@@ -1504,7 +1614,8 @@
    "subs": {
     "gates": "The Sluice Gates",
     "dyke": "The Dyke Path"
-   }
+   },
+   "text": "The old sluice that floods the rice-fields in spring and drains them for harvest. Its keeper decides whose field drinks first."
   },
   {
    "id": "place_marre_ash_isle",
@@ -1517,7 +1628,8 @@
    "subs": {
     "tips": "The Tips",
     "sieves": "The Sieves"
-   }
+   },
+   "text": "A grey islet off the Glass Isles where the furnaces’ ash and broken glass are tipped. Pickers sift it for cullet to sell back."
   },
   {
    "id": "place_marre_guard_boats",
@@ -1530,7 +1642,8 @@
    "subs": {
     "pontoon": "The Pontoon",
     "watch": "The Watch-Hut"
-   }
+   },
+   "text": "The station of the boats that circle the Glass Isles day and night. They are there to keep pirates out, the Republic says."
   },
   {
    "id": "place_marre_biscuit_ovens",
@@ -1543,7 +1656,8 @@
    "subs": {
     "ovens": "The Ovens",
     "racks": "The Cooling Racks"
-   }
+   },
+   "text": "A street of ovens that bake nothing but ship’s biscuit, twice, until it rings like a tile. Every galley bound east carries a season of it."
   },
   {
    "id": "place_marre_water_stairs",
@@ -1556,7 +1670,8 @@
    "subs": {
     "cisterns": "The Cisterns",
     "caskway": "The Cask Way"
-   }
+   },
+   "text": "Steps down to the great cisterns where the galleys fill their casks. Sweet water is the one thing Selino sells dearer than rope."
   },
   {
    "id": "place_marre_marines_yard",
@@ -1569,7 +1684,8 @@
    "subs": {
     "butts": "The Butts",
     "platform": "The Rocking Stage"
-   }
+   },
+   "text": "A walled yard where the galley marines shoot at straw men from a rocking platform, because a deck does not stand still."
   },
   {
    "id": "place_marre_pawn_arch",
@@ -1582,7 +1698,8 @@
    "subs": {
     "counters": "The Counters",
     "lofts": "The Pledge Lofts"
-   }
+   },
+   "text": "An archway of pawnshops between the Loop and the mole. Sailors leave their coats here in spring and buy them back in autumn, if they come back."
   },
   {
    "id": "place_marre_widows_lookout",
@@ -1595,7 +1712,8 @@
    "subs": {
     "headland": "The Headland",
     "cairn": "The Name Cairn"
-   }
+   },
+   "text": "A bare headland east of the town where families wait for the autumn fleet. Someone is always there from the first cold wind."
   },
   {
    "id": "place_marre_breaming_hard",
@@ -1608,7 +1726,8 @@
    "subs": {
     "hard": "The Hard",
     "fires": "The Breaming Fires"
-   }
+   },
+   "text": "A shelving beach where galleys are hauled over on their sides and scraped clean before the run east."
   },
   {
    "id": "place_marre_campo_remi",
@@ -1621,7 +1740,8 @@
    "subs": {
     "benches": "The Shaving Benches",
     "racks": "The Oar Racks"
-   }
+   },
+   "text": "A square of oar-makers. Every doorway has a rack of pale ash blades, and the paving is ankle-deep in shavings."
   },
   {
    "id": "place_marre_calle_cambi",
@@ -1634,7 +1754,8 @@
    "subs": {
     "tables": "The Changing Tables",
     "strongroom": "The Barred Room"
-   }
+   },
+   "text": "The money-changers’ lane by the Exchange, where every coin in the known world is weighed and found a little light."
   },
   {
    "id": "place_marre_fondaco_spezie",
@@ -1647,7 +1768,8 @@
    "subs": {
     "floor": "The Sorting Floor",
     "vaults": "The Sealed Vaults"
-   }
+   },
+   "text": "The spice warehouse behind the Exchange. The whole street sneezes when the autumn galleys unload."
   },
   {
    "id": "place_marre_teatro_remo",
@@ -1660,7 +1782,8 @@
    "subs": {
     "stage": "The Barge Stage",
     "hold": "The Puppet Hold"
-   }
+   },
+   "text": "A puppet theatre on a moored barge. The audience sits on the quay steps, and the stage rocks when a boat goes by."
   },
   {
    "id": "place_marre_corte_barcaroli",
@@ -1673,7 +1796,8 @@
    "subs": {
     "court": "The Court",
     "moorings": "The Night Moorings"
-   }
+   },
+   "text": "The gondoliers’ court, where the stands are shared out and quarrels over fares are settled by men who all know each other’s fathers."
   },
   {
    "id": "place_marre_caulkers_bell",
@@ -1686,7 +1810,8 @@
    "subs": {
     "room": "The Long Room",
     "gate": "The Gate Bench"
-   }
+   },
+   "text": "A tavern at the Arsenal gate that opens when the work-bell rings and fills in a hundred breaths."
   },
   {
    "id": "place_marre_long_ropewalk",
@@ -1699,7 +1824,8 @@
    "subs": {
     "walk": "The Walk",
     "wheel": "The Laying Wheel"
-   }
+   },
+   "text": "A shed as long as a galley’s cable, where rope is laid by men walking backwards all day."
   },
   {
    "id": "place_marre_isola_orti",
@@ -1712,7 +1838,8 @@
    "subs": {
     "beds": "The Beds",
     "landing": "The Green Landing"
-   }
+   },
+   "text": "A flat island of kitchen gardens south of the city. Its boats go in before dawn, loaded to the gunwale with greens."
   },
   {
    "id": "place_marre_matrons_foundlings",
@@ -1725,7 +1852,8 @@
    "subs": {
     "wheel": "The Wheel",
     "choir": "The Choir Loft"
-   }
+   },
+   "text": "The foundling house of the Serene Matron. There is a wheel in the wall where a child can be left without a face being seen."
   },
   {
    "id": "place_marre_traghetto_giglio",
@@ -1738,7 +1866,8 @@
    "subs": {
     "stand": "The Stand",
     "boat": "The Crossing Boat"
-   }
+   },
+   "text": "A ferry-stand on the Grand Canal: two oars, one long boat and everybody standing up."
   },
   {
    "id": "place_marre_rio_servi",
@@ -1751,7 +1880,8 @@
    "subs": {
     "steps": "The Washing Steps",
     "doors": "The Kitchen Doors"
-   }
+   },
+   "text": "The narrow back-canal behind the great palazzi, where the laundry, the kitchen boats and the gossip come and go."
   },
   {
    "id": "place_marre_ca_zorzan",
@@ -1764,7 +1894,8 @@
    "subs": {
     "hall": "The Water-Hall",
     "counting": "The Counting-Room"
-   }
+   },
+   "text": "The new house of a spice family that is not one of the Ten and would like its grandchildren to be. Everything in it is a little too gilded."
   },
   {
    "id": "place_marre_sand_barges",
@@ -1777,7 +1908,8 @@
    "subs": {
     "landing": "The Landing",
     "sheds": "The Ash Sheds"
-   }
+   },
+   "text": "The landing on the Isles where white sand and soda-ash come in. It is the only part of the Isles a stranger may walk on unwatched."
   },
   {
    "id": "place_marre_bead_row",
@@ -1790,7 +1922,8 @@
    "subs": {
     "doorways": "The Doorways",
     "lampshop": "The Lamp-Workers’ Shop"
-   }
+   },
+   "text": "A lane of women stringing glass beads by the thousand, on wires fanned out like a hand. The galleys carry them east by the barrel."
   },
   {
    "id": "place_marre_old_masters_isle",
@@ -1803,7 +1936,8 @@
    "subs": {
     "loggia": "The Loggia",
     "garden": "The Glass Garden"
-   }
+   },
+   "text": "A small island where glassmakers too old for the furnace live out their days, well fed, well housed and still not allowed to leave."
   },
   {
    "id": "place_marre_goat_rock",
@@ -1816,7 +1950,8 @@
    "subs": {
     "mast": "The Signal Mast",
     "hut": "The Signalman’s Hut"
-   }
+   },
+   "text": "A steep islet off Morena with a signal mast and a few goats. Flags from here reach the castle before a ship does."
   },
   {
    "id": "place_marre_salvage_camp",
@@ -1829,7 +1964,8 @@
    "subs": {
     "sledges": "The Sledges",
     "tents": "The Tents"
-   }
+   },
+   "text": "A camp of tents on the white beach, where a crew raises marble from the shallows at low tide and ships it to the city’s masons."
   },
   {
    "id": "place_marre_divers_raft",
@@ -1842,7 +1978,8 @@
    "subs": {
     "raft": "The Raft",
     "line": "The Stone Line"
-   }
+   },
+   "text": "A raft anchored over the drowned streets, where sponge-divers go down on a stone and come up with whatever they can carry."
   },
   {
    "id": "place_marre_keepers_cove",
@@ -1855,7 +1992,8 @@
    "subs": {
     "landing": "The Landing",
     "path": "The Oil Path"
-   }
+   },
+   "text": "The one safe landing below Cape Drown, where the oil for the great lamp is brought ashore and carried up the cliff by hand."
   },
   {
    "id": "place_marre_villa_dandri",
@@ -1868,7 +2006,8 @@
    "subs": {
     "garden": "The Formal Garden",
     "portico": "The Portico"
-   }
+   },
+   "text": "The summer villa of a lesser merchant house: a portico, a frescoed hall and a garden laid out with string."
   },
   {
    "id": "place_marre_heron_marsh",
@@ -1881,7 +2020,8 @@
    "subs": {
     "hides": "The Hides",
     "channels": "The Channels"
-   }
+   },
+   "text": "Reed and standing water past the last rice-field, where fowlers lie in punts for the Families’ tables."
   },
   {
    "id": "place_marre_rice_floors",
@@ -1894,7 +2034,8 @@
    "subs": {
     "floors": "The Brick Floors",
     "barn": "The Rice Barn"
-   }
+   },
+   "text": "Brick floors where the rice is trodden out by oxen at harvest and spread to dry, turned with rakes every hour."
   },
   {
    "id": "place_marre_fever_chapel",
@@ -1907,7 +2048,8 @@
    "subs": {
     "nave": "The Nave",
     "porch": "The Porch"
-   }
+   },
+   "text": "A whitewashed chapel among the paddies, where the field-workers ask the Matron to keep the marsh-fever off for one more summer."
   },
   {
    "id": "place_marre_locanda_baco",
@@ -1920,7 +2062,8 @@
    "subs": {
     "table": "The Common Table",
     "stable": "The Stable Yard"
-   }
+   },
+   "text": "An inn on the mulberry road where silk-buyers from the city sleep, and talk prices too loudly at supper."
   },
   {
    "id": "place_marre_shore_kilns",
@@ -1933,7 +2076,8 @@
    "subs": {
     "kilns": "The Kilns",
     "claypits": "The Clay Pits"
-   }
+   },
+   "text": "Brick and lime kilns on the mainland shore. The city is built of what is burned here and floated across."
   },
   {
    "id": "place_marre_timber_rafts",
@@ -1946,7 +2090,8 @@
    "subs": {
     "rafts": "The Rafts",
     "boom": "The Boom"
-   }
+   },
+   "text": "The river mouth where logs from the hills arrive lashed into rafts, with a hut built on top. Every pile under Marre came this way."
   },
   {
    "id": "place_marre_pile_shoal",
@@ -1959,7 +2104,8 @@
    "subs": {
     "staging": "The Staging",
     "mudflat": "The New Ground"
-   }
+   },
+   "text": "A shoal being turned into ground: gangs drive oak piles into the mud to a song, one blow to a line."
   },
   {
    "id": "place_marre_south_pans",
@@ -1972,7 +2118,8 @@
    "subs": {
     "pans": "The Pans",
     "heaps": "The Salt Heaps"
-   }
+   },
+   "text": "Salt-pans at the quiet end of the lagoon: shallow squares of sea left for the sun to finish."
   },
   {
    "id": "place_marre_mussel_poles",
@@ -1985,7 +2132,8 @@
    "subs": {
     "poles": "The Poles",
     "raft": "The Sorting Raft"
-   }
+   },
+   "text": "Rows of poles in a tidal channel, each furred black with mussels. The pickers work from flat boats at slack water."
   },
   {
    "id": "place_marre_the_dredger",
@@ -1998,7 +2146,8 @@
    "subs": {
     "deck": "The Spoon Deck",
     "scow": "The Mud Scow"
-   }
+   },
+   "text": "A great flat barge with a spoon on a beam, which does nothing all year but dig the channels the lagoon wants to fill."
   },
   {
    "id": "place_marre_lamp_posts",
@@ -2011,7 +2160,8 @@
    "subs": {
     "shrine": "The Shrine",
     "ladder": "The Mooring Ladder"
-   }
+   },
+   "text": "A small shrine to the Serene Matron on four posts in open water. Boatmen bound for the Lazaretto leave a lamp, and take one coming back."
   },
   {
    "id": "place_marre_long_bar",
@@ -2024,7 +2174,8 @@
    "subs": {
     "seaside": "The Sea Side",
     "lagoonside": "The Lagoon Side"
-   }
+   },
+   "text": "A fishing village on the sandbar between lagoon and sea. Its houses are painted so each man can find his own in fog."
   },
   {
    "id": "place_marre_sea_gate_fort",
@@ -2037,7 +2188,8 @@
    "subs": {
     "rampart": "The Rampart",
     "chainroom": "The Chain-Room"
-   }
+   },
+   "text": "A low fort at the lagoon mouth with a chain that can be raised across the channel. It has not been raised in anger for a lifetime, and is greased weekly."
   },
   {
    "id": "place_marre_airing_sheds",
@@ -2050,7 +2202,8 @@
    "subs": {
     "sheds": "The Sheds",
     "smokepits": "The Smoke Pits"
-   }
+   },
+   "text": "Open-sided sheds where cargo from the east is spread, turned and smoked for forty days before the city may touch it."
   },
   {
    "id": "place_marre_proveditors_landing",
@@ -2063,7 +2216,8 @@
    "subs": {
     "office": "The Stamp Office",
     "jetty": "The Jetty"
-   }
+   },
+   "text": "The office where the health officers stamp a ship’s bill clean, or do not. A captain can wait a morning here and a season after."
   },
   {
    "id": "place_marre_deaf_bell_isle",
@@ -2076,7 +2230,8 @@
    "subs": {
     "cloister": "The Cloister",
     "belltower": "The Bell-Tower"
-   }
+   },
+   "text": "A speck of an island with a house of six brothers and a cracked bell that makes no more than a clank. They ring it anyway."
   },
   {
    "id": "place_marre_market_raft",
@@ -2089,7 +2244,8 @@
    "subs": {
     "boats": "The Boat Stalls",
     "gangway": "The Plank Walk"
-   }
+   },
+   "text": "A floating market that ties up north of the Piazza before dawn and is gone by the fourth hour: boats lashed gunwale to gunwale, each one a stall."
   },
   {
    "id": "place_marre_cuttle_flats",
@@ -2102,7 +2258,8 @@
    "subs": {
     "flats": "The Flats",
     "markers": "The Withy Markers"
-   }
+   },
+   "text": "Mudflats north of the city that show at low water. Children and old men walk them with lanterns for cuttlefish."
   },
   {
    "id": "place_marre_founders_isle",
@@ -2115,7 +2272,8 @@
    "subs": {
     "pit": "The Casting Pit",
     "furnace": "The Furnace"
-   }
+   },
+   "text": "The bell- and anchor-foundry, kept on its own island so that if it burns it burns alone."
   },
   {
    "id": "place_marre_tanners_isle",
@@ -2128,7 +2286,8 @@
    "subs": {
     "pits": "The Tan Pits",
     "frames": "The Stretching Frames"
-   }
+   },
+   "text": "The island the city sent its smells to: tan-pits, lime-pits and hides on frames, downwind of everyone."
   },
   {
    "id": "place_marre_lace_isle",
@@ -2141,7 +2300,8 @@
    "subs": {
     "doorways": "The Doorways",
     "nets": "The Net Lofts"
-   }
+   },
+   "text": "A fishing island where the women make lace while the men are out, on pillows in the doorways. It sells for more than the fish."
   },
   {
    "id": "place_marre_oyster_beds",
@@ -2154,7 +2314,8 @@
    "subs": {
     "beds": "The Beds",
     "hut": "The Watch Hut"
-   }
+   },
+   "text": "Staked beds in the clean water east of the city, watched from a hut on legs. The Families’ feasts begin here."
   },
   {
    "id": "place_marre_coral_rock",
@@ -2167,7 +2328,8 @@
    "subs": {
     "reef": "The Reef",
     "boat": "The Anchored Boat"
-   }
+   },
+   "text": "A reef south of Morena where divers cut red coral for the bead-makers and the reliquaries."
   }
  ],
  "roads": [
@@ -5840,6 +6002,112 @@
    ]
   }
  ],
+ "faiths": [
+  {
+   "id": "veiled",
+   "name": "The Veiled One",
+   "domain": "Thresholds, secrets, death-and-return, memory",
+   "sites": [
+    "threshold_sanctum"
+   ],
+   "text": "In the dockside wine-cellars they whisper of a god older than the Allorese emperors, whose followers pass through doors that are not there. The Veiled One asks nothing of coin or harvest. It asks for nights spent awake, for memories offered and kept, and for silence. Each grade of initiation is a death and a return; at each, something is shown that cannot be unseen. What initiates of the fourth grade learn first is a name."
+  },
+  {
+   "id": "orthun",
+   "name": "Orthun Stormfather",
+   "domain": "Storm, mountains, iron, oaths sworn on high places",
+   "sites": [
+    "thunder_caves"
+   ],
+   "text": "The lowland folk say Orthun’s voice is the thunder and his anvil the mountain. His shrines are caves above the treeline, their walls glazed black by ages of lightning, their floors heaped with offerings of iron. A god of the heights does not come down to the valleys; those who would honour him must climb. Those who stay too long below find that the Storm forgets them."
+  },
+  {
+   "id": "ilvara",
+   "name": "Ilvara of the Two Flames",
+   "domain": "Fire, grain, hearth, harvest, purification",
+   "sites": [
+    "ostwick",
+    "aschau"
+   ],
+   "text": "Ilvara is the flame in the bread-oven and the flame in the burning field. To farmers she is the Hearth-Mother, who keeps winter at bay and turns grain into bread. To smiths, charcoal-burners and the desperate she is the Red Reaper, who takes what is offered and returns it purified. The Schism of the Two Flames split her faithful a century ago; each aspect calls the other heresy, though both light the same fire."
+  },
+  {
+   "id": "vass",
+   "name": "Mother Vass of the Deep",
+   "domain": "Sea, drowning, fortune, the lost",
+   "sites": [
+    "kess_harbor"
+   ],
+   "text": "Vass keeps everything the sea takes: ships, sailors, silver. Sailors toss coins over the rail before every voyage and leave the first fish of every catch to rot on the jetty. Her faithful hold that the drowned are not dead but kept, and that she bargains fairly with those who have already given her their last breath once."
+  },
+  {
+   "id": "calder",
+   "name": "Saint Calder the Oathbound",
+   "domain": "Oaths, knighthood, sacrifice, the held line",
+   "sites": [
+    "tennfels",
+    "marre_palace"
+   ],
+   "text": "Calder was a mortal knight who held the bridge at Sankt Wendel’s Field for a day and a night against the whole host of Sarlon, so that the duke’s army could escape. He had sworn to hold it until relieved; no relief came. The oath outlived him, and the oath, they say, made him a god. He asks nothing but that you keep your word — and that you give it often."
+  },
+  {
+   "id": "horro",
+   "name": "Horro",
+   "domain": "Circulation, exchange, value, the living current of the world",
+   "sites": [
+    "kess_market",
+    "marre_city"
+   ],
+   "text": "Horro has no face and wants none. The Currentists teach that everything in the world — labour, harvest, love, war — is energy, and that coin is simply energy made countable. Money is not sacred because it is precious; it is sacred because it moves. Where it flows, life quickens; where it is hoarded, life stagnates and rots. The miser is Horro’s only true heretic. To earn is to draw from the Current; to tithe is to return to it; and a deposit in a Hall is not savings but a channel, through which the Current returns to the faithful a little stronger than it left."
+  },
+  {
+   "id": "greenwife",
+   "name": "The Greenwife",
+   "domain": "Wild places, growth, the seasons, beasts",
+   "sites": [
+    "greenwife_grove"
+   ],
+   "text": "Older than the Allorese, older than the hearth, the Greenwife is the forest’s own will. She does not answer prayer; she answers attention. Her grace waxes in spring and all but vanishes in winter. She takes it ill when her trees are felled."
+  },
+  {
+   "id": "dell",
+   "name": "Dell of the Soft Light",
+   "domain": "Diplomacy, international order, accord, soft light",
+   "sites": [
+    "tennfels"
+   ],
+   "text": "Dell is the light that lets two people see each other’s faces without blinding either: the shaded lamp at the negotiating table, the dusk in which old enemies may walk together unrecognised. Dell’s faithful believe that order among nations is a sacred thing, more fragile than any single crown, and that every war is a failure of attention. They light their lamps at dusk and dawn, the hours of neither day nor night."
+  },
+  {
+   "id": "pecutto",
+   "name": "Pecutto of the Cup",
+   "domain": "Wine, revels, the stage and the open road — and, in the countryside, the fertility of vine and field",
+   "sites": [
+    "marre_city"
+   ],
+   "text": "Pecutto is the god who arrives. He comes up the road with a cart and a cup; he is the stranger at the door and the best guest you ever had; and when he leaves, the vines hang heavier and someone is expecting. In Marre he is the patron of actors and travellers. In the countryside he is older and earthier, the god of the vintage and the furrow, and his plays are fertility rites with jokes in them. He has no commandments anyone can remember, which his priests regard as a theological position."
+  },
+  {
+   "id": "norrae",
+   "name": "Norrae, Maiden of the River",
+   "domain": "Rivers and fords, clean water, purity, the year’s floods and their mercy",
+   "sites": [
+    "tennfels",
+    "wp_ferry"
+   ],
+   "text": "Norrae is the maiden of the river — of the Tenn, and of the Lugg, and of the outflow of Lake Lumen, and of any river her faithful happen to be standing beside — and not one of them feels the slightest contradiction in this. She is young and clear and cold. She gives fish and fords and good water, and every year she takes what she is owed. Her faithful believe the rivers stay clean only so long as the people who love them do, and they keep themselves accordingly."
+  },
+  {
+   "id": "dolma",
+   "name": "Dolma, the Serene Matron",
+   "domain": "Marre itself — its glass, its prudence, its councils and its lagoon",
+   "sites": [
+    "marre_palace",
+    "marre_isles"
+   ],
+   "text": "The Serene Matron is a tall, calm woman in a gown of green glass, seated between two lions of glass, one awake and one sleeping. She is wisdom that does not hurry, judgement that does not shout, the patience that built a city on mud and made it shine. She taught the first Marreans to make glass from the sand of the lagoon, and the lagoon has kept them safe ever since. Foreigners find her cold. Marreans find foreigners loud."
+  }
+ ],
  "rites": [
   {
    "id": "rite_ilvara",
@@ -7365,362 +7633,434 @@
   {
    "id": "skill_smithing",
    "name": "Smithing",
-   "family": "crafts"
+   "family": "crafts",
+   "text": "Iron, bronze, silver and gold, from nails to bells."
   },
   {
    "id": "skill_woodwork",
    "name": "Woodwork",
-   "family": "crafts"
+   "family": "crafts",
+   "text": "Timber shaped for houses, ships, bows and instruments."
   },
   {
    "id": "skill_building",
    "name": "Building",
-   "family": "crafts"
+   "family": "crafts",
+   "text": "Stone dressed and set, walls raised, floors laid."
   },
   {
    "id": "skill_clothwork",
    "name": "Clothwork",
-   "family": "crafts"
+   "family": "crafts",
+   "text": "Thread, cloth, hide and fur, cut, dyed and sewn."
   },
   {
    "id": "skill_cookery",
    "name": "Cookery",
-   "family": "crafts"
+   "family": "crafts",
+   "text": "The oven, the pot, the cask and the salt-barrel."
   },
   {
    "id": "skill_kilncraft",
    "name": "Kilncraft",
-   "family": "crafts"
+   "family": "crafts",
+   "text": "Glass and clay, worked hot."
   },
   {
    "id": "skill_alchemy",
    "name": "Alchemy",
-   "family": "crafts"
+   "family": "crafts",
+   "text": "Distilling, compounding and preserving."
   },
   {
    "id": "skill_bookcraft",
    "name": "Bookcraft",
-   "family": "crafts"
+   "family": "crafts",
+   "text": "Parchment, ink, binding, gilding and paint."
   },
   {
    "id": "skill_artifice",
    "name": "Artifice",
-   "family": "crafts"
+   "family": "crafts",
+   "text": "Wheels, springs and made things that move."
   },
   {
    "id": "skill_husbandry",
    "name": "Husbandry",
-   "family": "land"
+   "family": "land",
+   "text": "Field, garden, vine, hive and silk."
   },
   {
    "id": "skill_beastcraft",
    "name": "Beastcraft",
-   "family": "land"
+   "family": "land",
+   "text": "Flocks, horses, hounds, hawks and stranger beasts."
   },
   {
    "id": "skill_herblore",
    "name": "Herblore",
-   "family": "land"
+   "family": "land",
+   "text": "What grows wild, and what it is good for."
   },
   {
    "id": "skill_woodcraft",
    "name": "Woodcraft",
-   "family": "land"
+   "family": "land",
+   "text": "The forest: its timber, its game and its ways through."
   },
   {
    "id": "skill_mining",
    "name": "Mining",
-   "family": "land"
+   "family": "land",
+   "text": "Ore, stone, salt and ice, found and won."
   },
   {
    "id": "skill_seamanship",
    "name": "Seamanship",
-   "family": "land"
+   "family": "land",
+   "text": "Sail, oar, rope and the reading of water."
   },
   {
    "id": "skill_fishing",
    "name": "Fishing",
-   "family": "land"
+   "family": "land",
+   "text": "Net, line, trap and the breath-held dive."
   },
   {
    "id": "skill_wayfaring",
    "name": "Wayfaring",
-   "family": "land"
+   "family": "land",
+   "text": "Roads, maps, caravans and the long way round."
   },
   {
    "id": "skill_arms",
    "name": "Arms",
-   "family": "body"
+   "family": "body",
+   "text": "Blade, haft, shield and harness."
   },
   {
    "id": "skill_marksmanship",
    "name": "Marksmanship",
-   "family": "body"
+   "family": "body",
+   "text": "Bow, crossbow and the thrown thing."
   },
   {
    "id": "skill_riding",
    "name": "Riding to war",
-   "family": "body"
+   "family": "body",
+   "text": "The charge, the chariot and the lists."
   },
   {
    "id": "skill_athletics",
    "name": "Athletics",
-   "family": "body"
+   "family": "body",
+   "text": "Running, leaping, climbing and swimming."
   },
   {
    "id": "skill_games",
    "name": "Games",
-   "family": "body"
+   "family": "body",
+   "text": "Wrestling, ball-games and every contest of the green."
   },
   {
    "id": "skill_letters",
    "name": "Letters",
-   "family": "mind"
+   "family": "mind",
+   "text": "Reading, records, lineages and the past."
   },
   {
    "id": "skill_numbers",
    "name": "Numbers",
-   "family": "mind"
+   "family": "mind",
+   "text": "Reckoning, ledgers and the keeping of money."
   },
   {
    "id": "skill_physick",
    "name": "Physick",
-   "family": "mind"
+   "family": "mind",
+   "text": "The sick, the hurt and the mending of both."
   },
   {
    "id": "skill_philosophy",
    "name": "Natural philosophy",
-   "family": "mind"
+   "family": "mind",
+   "text": "The sky, the earth and why things are as they are."
   },
   {
    "id": "skill_antiquities",
    "name": "Antiquities",
-   "family": "mind"
+   "family": "mind",
+   "text": "What the old peoples left, and how to read it."
   },
   {
    "id": "skill_tongues",
    "name": "Tongues",
-   "family": "mind"
+   "family": "mind",
+   "text": "The languages of Allora, living and dead."
   },
   {
    "id": "skill_command",
    "name": "Command",
-   "family": "mind"
+   "family": "mind",
+   "text": "Ordering people and ground, in war and out of it."
   },
   {
    "id": "skill_persuasion",
    "name": "Persuasion",
-   "family": "people"
+   "family": "people",
+   "text": "Moving minds by reason, charm or weight."
   },
   {
    "id": "skill_courtesy",
    "name": "Courtesy",
-   "family": "people"
+   "family": "people",
+   "text": "Rank, manners, dress and the right word at court."
   },
   {
    "id": "skill_insight",
    "name": "Insight",
-   "family": "people"
+   "family": "people",
+   "text": "Reading a face, a room and a lie."
   },
   {
    "id": "skill_trade",
    "name": "Trade",
-   "family": "people"
+   "family": "people",
+   "text": "Buying, selling, valuing and the terms of a deal."
   },
   {
    "id": "skill_stewardship",
    "name": "Stewardship",
-   "family": "people"
+   "family": "people",
+   "text": "Running a house, an estate or an office."
   },
   {
    "id": "skill_music",
    "name": "Music",
-   "family": "people"
+   "family": "people",
+   "text": "Voice and instrument."
   },
   {
    "id": "skill_stagecraft",
    "name": "Stagecraft",
-   "family": "people"
+   "family": "people",
+   "text": "The stage, the tale, the verse and the dance."
   },
   {
    "id": "skill_revelry",
    "name": "Revelry",
-   "family": "people"
+   "family": "people",
+   "text": "The table, the cup and good company."
   },
   {
    "id": "skill_stealth",
    "name": "Stealth",
-   "family": "shadow"
+   "family": "shadow",
+   "text": "Going unseen and unremarked."
   },
   {
    "id": "skill_thievery",
    "name": "Thievery",
-   "family": "shadow"
+   "family": "shadow",
+   "text": "Locks, purses and graves."
   },
   {
    "id": "skill_streetwise",
    "name": "Streetwise",
-   "family": "shadow"
+   "family": "shadow",
+   "text": "The underside of a town: its talk, its games and its trade."
   },
   {
    "id": "skill_deceit",
    "name": "Deceit",
-   "family": "shadow"
+   "family": "shadow",
+   "text": "Lies, forged hands, plots and spies."
   },
   {
    "id": "skill_poisoncraft",
    "name": "Poisoncraft",
-   "family": "shadow"
+   "family": "shadow",
+   "text": "Venoms, doses and their cures."
   },
   {
    "id": "skill_devotion",
    "name": "Devotion",
-   "family": "faith"
+   "family": "faith",
+   "text": "Prayer, song and the rites of the day."
   },
   {
    "id": "skill_theology",
    "name": "Theology",
-   "family": "faith"
+   "family": "faith",
+   "text": "Doctrine, and the speaking of it."
   },
   {
    "id": "skill_contemplation",
    "name": "Contemplation",
-   "family": "faith"
+   "family": "faith",
+   "text": "Stillness, fasting and the long road to a shrine."
   },
   {
    "id": "skill_rites",
    "name": "Rites of power",
-   "family": "faith"
+   "family": "faith",
+   "text": "Casting out and calling in."
   },
   {
    "id": "skill_augury",
    "name": "Augury",
-   "family": "faith"
+   "family": "faith",
+   "text": "Signs, lots and the reading of them."
   },
   {
    "id": "skill_hedgecraft",
    "name": "Charms",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_evocation",
    "name": "Evocation",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_warding",
    "name": "Warding",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_illusion",
    "name": "Illusion",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_divination",
    "name": "Divination",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_summoning",
    "name": "Summoning",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_necromancy",
    "name": "Necromancy",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_druidism",
    "name": "Nature Magic",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_runecraft",
    "name": "Rune Magic",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_feybargain",
    "name": "Fae Magic",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_lumencraft",
    "name": "Light Magic",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_grandeur",
    "name": "Gigantism",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_hushcraft",
    "name": "Oblivion",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_witchlore",
    "name": "Countermagic",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_battlemagic",
    "name": "Pyromancy",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_dreaming",
    "name": "Dream Magic",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_geomancy",
    "name": "Geomancy",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_namebinding",
    "name": "Name Magic",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_redreading",
    "name": "Blood Magic",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_demonology",
    "name": "Demonology",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_facetcraft",
    "name": "Crystal Magic",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_verseburning",
    "name": "Inscription",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_alteration",
    "name": "Alteration",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_transmutation",
    "name": "Transmutation",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   },
   {
    "id": "skill_restoration",
    "name": "Restoration",
-   "family": "magic"
+   "family": "magic",
+   "text": "A discipline of magic, kept as Allora I has it."
   }
  ],
  "people": [

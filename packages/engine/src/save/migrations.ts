@@ -112,6 +112,12 @@ export const MIGRATIONS: Record<number, (save: AnySave) => AnySave> = {
         : (save.post ?? null),
   }),
   // Version 17 adds friendship: points, gifts and what is told at each tier.
+  // Version 21 adds the places a life has stood in.
+  20: (save) => ({
+    ...save,
+    version: 21,
+    seen: [...new Set([save.place, save.home].filter((p) => typeof p === 'string'))],
+  }),
   // Version 20 adds the Legend a life has earned.
   19: (save) => ({ ...save, version: 20, legend: 0 }),
   // Version 19 adds an art studied.

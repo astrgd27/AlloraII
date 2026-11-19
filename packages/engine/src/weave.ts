@@ -131,6 +131,7 @@ export function bear(w: Weave, world: World, id: string, name: string): void {
   const state = newGame((clock.seed + 0x9e3779b9 * w.lives.length) >>> 0, clock.lastRealMs);
   state.hours = clock.hours;
   state.place = state.home = u.place;
+  state.seen = [u.place];
   const rent = rentAt(world, u.place, 'room');
   state.lodging = rent === undefined ? null : { kind: 'room', rent, owed: 0 };
   for (const [skill, level] of Object.entries(u.skills))
@@ -180,6 +181,14 @@ export interface WeaveView {
     woven: boolean;
     why?: string;
   }[];
+  /** What any life has learned of the world, for the codex. */
+  known: {
+    places: string[];
+    people: string[];
+    skills: string[];
+    faiths: string[];
+    regions: string[];
+  };
   /** Upbringings a new life could be born into, with the names on offer. */
   births: { upbringing: string; names: string[]; why?: string }[];
 }
@@ -199,9 +208,32 @@ export function weaveView(w: Weave, world: World): WeaveView {
       const why = weaveWhyNot(w, world, n.id);
       return { ...n, woven: w.woven.includes(n.id), ...(why ? { why } : {}) };
     }),
+    known: knownOf(w, world),
     births: [...world.upbringings.values()].map((u) => {
       const why = bornWhyNot(w, world, u.id);
       return { upbringing: u.id, names: namesLeft(w, world, u.id), ...(why ? { why } : {}) };
     }),
+  };
+}
+
+/** The codex is shared: what any life has seen, met, used or kept. */
+export function knownOf(w: Weave, world: World): WeaveView['known'] {
+  const all = (pick: (s: GameState) => string[]): string[] =>
+    [...new Set(w.lives.flatMap((l) => pick(l.state)))].sort();
+  const places = all((s) => s.seen);
+  const seen = new Set(places);
+  return {
+    places,
+    people: all((s) => Object.keys(s.bonds)),
+    skills: all((s) => Object.keys(s.skills)),
+    faiths: (world.data.faiths ?? [])
+      .filter(
+        (f) =>
+          f.sites.some((p) => seen.has(p)) || w.lives.some((l) => l.state.faith?.faith === f.id),
+      )
+      .map((f) => f.id),
+    regions: [...new Set(places.map((p) => world.places.get(p)?.region ?? ''))]
+      .filter(Boolean)
+      .sort(),
   };
 }

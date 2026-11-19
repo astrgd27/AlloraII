@@ -100,7 +100,21 @@ async function main(): Promise<void> {
         const after = await look(page);
         const refused = await page.locator('[data-testid=refusal]').count();
         if (after === before && refused === 0) problems.push(`no answer to "${label}"`);
+        // The codex covers the game: close it before the next click.
+        if ((await page.locator('[data-testid=codex]').count()) > 0)
+          await page.keyboard.press('Escape');
       }
+      // The codex opens, turns its tabs, and closes again.
+      await page.locator('[data-testid=codex-open]').click();
+      const entry = () => page.locator('.codex-entry h3').innerText({ timeout: 1000 });
+      const firstEntry = await entry().catch(() => '');
+      if (!firstEntry) problems.push('the codex opens on nothing');
+      await page.locator('[data-codex-tab=regions]').click();
+      if ((await entry().catch(() => firstEntry)) === firstEntry)
+        problems.push('the codex tabs do not turn');
+      await page.keyboard.press('Escape');
+      if ((await page.locator('[data-testid=codex]').count()) > 0)
+        problems.push('the codex does not close');
       // The map's own tools move the view.
       const view = () => page.locator('[data-testid=map]').getAttribute('data-view');
       const start = await view();

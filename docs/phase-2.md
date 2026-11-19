@@ -39,7 +39,7 @@
 13. **Faith.** One faith playable end to end in Eintenn, grown from canon. *(done)*
 14. **Magic.** One school learnable at the Collegium, by the rules of `canon/magic_design.md`. Countermagic stays the nearest a player comes to witch magic. *(done)*
 15. **Several lives and the Tapestry.** A second and third life, the lives strip, switching, and standing orders for the ones not in focus. *(done)*
-16. **The codex.** In-world reference for places, people, skills and faiths the life has met. No design talk.
+16. **The codex.** In-world reference for places, people, skills and faiths the life has met. No design talk. *(done)*
 17. **Balance and the gate review.**
 
 ## Decisions
@@ -165,3 +165,11 @@
   - **On screen:** a Lives panel heads the sheet column (each life's name and what it is doing; click to turn to it). A Tapestry panel shows Legend, the threads with Weave buttons and reasons, and a new life: pick an upbringing, then a name.
   - **Not yet:** letters and parcels between lives, commissions, joint ventures, laying a life down, the other eight threads.
   - Save version 20; weave version 1.
+- **2026-11-19 · The codex (#71).** A Codex screen over the map, opened from the top bar or with C, closed with Esc. Decisions:
+  - **Generated, as the bible says:** each entry comes from the world data at build time (canon place descriptions, realm texts, faith texts, skill texts, people's titles and looks), so it cannot fall out of step with the game. No hand-written codex text yet.
+  - **Shared, and only what is known:** the codex lists what any life has learned: places stood in, people met, skills used, the realms of those places, and the faiths kept at a place seen or joined. Each life now records the places it has stood in (save version 21).
+  - **Five tabs:** Realms, Places, People, Skills, Faiths. Each tab has a list and the entry beside it, with counts on the tabs. A skill shows the level of the life in hand.
+  - **No design talk:** every line is the world's own words. Nothing on the screen speaks of sources, rules or what is still to come.
+  - **The click test** now closes the codex between clicks and checks that it opens, turns its tabs and closes.
+  - **Not yet:** codex entries for items, posts and arts; hand-written lore entries.
+  - Save version 21.
