@@ -16,6 +16,11 @@ const proof = name(WORLD.proofs);
 const roadEvent = new Map((WORLD.roadEvents ?? []).map((e) => [e.id, e.text]));
 
 const faithName = (id: string): string => WORLD.rites?.find((r) => r.faith === id)?.name ?? id;
+/** What each post's seasonal dues are, in its own words. */
+const DUES: Record<string, string> = {
+  post_kesselhaven_guild_smith: 'Dues to the Anvil',
+  post_cerdans_inquirer: 'The informers paid',
+};
 const TIER_NAMES = ['Acquaintance', 'Friend', 'Close Friend', 'Confidant'];
 
 const DEGREE = {
@@ -50,7 +55,7 @@ export function logText(e: LogEntry): string {
     case 'moved':
       return `Took ${e.home === 'room' ? 'a room' : 'a cottage'} in ${place(e.place)}`;
     case 'dues':
-      return `Dues to the guild · −${pf(e.price)}`;
+      return `${DUES[e.post] ?? 'Dues paid'} · −${pf(e.price)}`;
     case 'friend':
       return `${person(e.person)} is now a ${TIER_NAMES[e.tier]?.toLowerCase() ?? 'friend'}`;
     case 'faith':

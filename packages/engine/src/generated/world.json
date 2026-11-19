@@ -4646,6 +4646,12 @@
     1.8,
     4
    ],
+   "dues": [
+    0,
+    6,
+    20,
+    60
+   ],
    "place": "marre_palace",
    "sub": "cerdans",
    "ranks": [

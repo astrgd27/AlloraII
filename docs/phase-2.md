@@ -40,7 +40,7 @@
 14. **Magic.** One school learnable at the Collegium, by the rules of `canon/magic_design.md`. Countermagic stays the nearest a player comes to witch magic. *(done)*
 15. **Several lives and the Tapestry.** A second and third life, the lives strip, switching, and standing orders for the ones not in focus. *(done)*
 16. **The codex.** In-world reference for places, people, skills and faiths the life has met. No design talk. *(done)*
-17. **Balance and the gate review.**
+17. **Balance and the gate review.** *(done; see `docs/phase-2-gate.md`)*
 
 ## Decisions
 
@@ -173,3 +173,6 @@
   - **The click test** now closes the codex between clicks and checks that it opens, turns its tabs and closes.
   - **Not yet:** codex entries for items, posts and arts; hand-written lore entries.
   - Save version 21.
+- **2026-11-19 · Balance and the gate review (#72).** The review is in `docs/phase-2-gate.md`. Three lines hold and two wait on the owner: the play test, and a ruling on the money line. Decisions:
+  - **The inquirer pays informers.** Each season, by rank: 0, 6, 20 and 60 pf. Before, it had no seasonal cost while the smith paid dues. The log names each trade's dues in its own words.
+  - **The money line is put to the owner, not tuned further.** Living costs a share of the purse, so a purse settles at 55–90 days of income in every earning trade. The inquirer's purse still grows 5.2% in year ten because its skill and pay still grow. Fees of 90 pf moved it by a tenth of a point.

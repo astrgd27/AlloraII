@@ -14,17 +14,22 @@
   group: o_cerdans
   patron: ppl_querzi
   text: 'A place behind the plain black door on the Piazza: long tables of files, and a great deal of quiet.'
+  # Paid out each season, by rank: the informers who keep a Cerdans' man in news, and the
+  # small silences he buys. The higher he climbs, the more ears he must keep.
   ranks:
     - name: Informer
       pay: 0.45
     - name: Constable
       pay: 0.9
+      dues: 6
       trial: Close three petty matters without a wrong accusation.
     - name: Inquirer
       pay: 1.8
+      dues: 20
       trial: Close a death.
     - name: "Capo's Deputy"
       pay: 4
+      dues: 60
       trial: Close a case that reaches into a great house, quietly.
   # A case left open gives the culprit time: after three days, a clue is lost every two.
   pressure: { grace: 3, every: 2 }
