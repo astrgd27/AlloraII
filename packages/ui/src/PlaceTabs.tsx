@@ -4,10 +4,11 @@ import { Activities } from './Activities';
 import { Career } from './Career';
 import { FaithHere } from './Faith';
 import { Lodging } from './Lodging';
+import { StudyHere } from './Magic';
 import { Market } from './Market';
 import { People } from './People';
 
-type Tab = 'work' | 'people' | 'market' | 'lodging' | 'post' | 'faith';
+type Tab = 'work' | 'people' | 'market' | 'lodging' | 'post' | 'faith' | 'study';
 
 /** Everything that can be done at this place, in tabs. Display only. */
 export function PlaceTabs({
@@ -36,6 +37,12 @@ export function PlaceTabs({
   const pyreHere = snapshot.faith?.aspect === 'pyre' && snapshot.place === 'aschau';
   if (snapshot.joinable.length > 0 || pyreHere)
     tabs.push({ id: 'faith', label: 'Shrine', hint: 'Joining the faith kept here, and offerings' });
+  if (snapshot.study.length > 0)
+    tabs.push({
+      id: 'study',
+      label: 'Collegium',
+      hint: 'Matriculation, the library and disputations',
+    });
   if (postHere)
     tabs.push({ id: 'post', label: 'Calling', hint: 'Posts, cases and the work in hand' });
   const shown = tabs.some((t) => t.id === tab) ? tab : 'work';
@@ -69,6 +76,7 @@ export function PlaceTabs({
         {shown === 'market' && <Market snapshot={snapshot} send={send} />}
         {shown === 'lodging' && <Lodging snapshot={snapshot} send={send} />}
         {shown === 'faith' && <FaithHere snapshot={snapshot} send={send} />}
+        {shown === 'study' && <StudyHere snapshot={snapshot} send={send} />}
         {shown === 'post' && <Career snapshot={snapshot} send={send} />}
       </div>
     </div>

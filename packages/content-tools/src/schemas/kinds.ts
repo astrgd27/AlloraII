@@ -114,6 +114,8 @@ const approachSchema = z.looseObject({
   rank: z.number().int().min(0).max(3).optional(),
   /** Extra quality when it comes off. */
   quality: z.number().int().min(0).max(3).optional(),
+  /** A way by magic: open to those who know the art, rolled with this skill. */
+  magic: text.optional(),
 });
 const workStepSchema = z.looseObject({
   id: text,
@@ -243,6 +245,38 @@ export const riteSchema = entrySchema('rite', {
       }),
     )
     .min(1),
+});
+
+/** A school of magic made playable: where and how it is learned, its degrees and focus. */
+export const artSchema = entrySchema('art', {
+  name: text,
+  skill: text,
+  place: text,
+  library: text,
+  hall: text,
+  matriculate: z.object({ fee: z.number().nonnegative(), skill: text, level: z.number().int() }),
+  degrees: z
+    .array(
+      z.object({ name: text, level: z.number().int().optional(), dc: z.number().int().optional() }),
+    )
+    .min(1),
+  focus: text.optional(),
+});
+
+/** A working of an art: what copying it costs, what casting costs, and what it does for a while. */
+export const proofSchema = entrySchema('proof', {
+  art: text,
+  working: text,
+  name: text,
+  level: z.number().int().min(0),
+  fee: z.number().nonnegative(),
+  will: z.number().int().min(1),
+  ink: z.record(z.string(), z.number().int().min(1)),
+  boost: z.object({
+    skills: z.array(text).min(1),
+    value: z.number().int(),
+    hours: z.number().int().min(1),
+  }),
 });
 
 /** Any other kind (workings, skills, recipes, lore, Weathers, …): the base fields only, for now. */

@@ -1,0 +1,52 @@
+# Hermetic Evocation, made playable (canon: `mag_hermetic` in Allora I's schools; canon/magic_design.md,
+# "Hermetic Evocation — the proof that closes"). Learned by copying from the Collegium library, for a
+# fee, by a matriculated student only. Workings are proofs; they cost Will and ink, and a proof cast
+# too near the edge of one's skill can misfire and burn.
+- id: school_hermetic_evocation
+  origin: allora2
+  kind: art
+  roots:
+    - mag_hermetic
+    - collegium
+  name: Hermetic Evocation
+  skill: skill_evocation
+  place: collegium
+  library: library
+  hall: disput
+  # Matriculation: the fee, and letters enough to swear the scholars' oath.
+  matriculate: { fee: 25, skill: skill_letters, level: 5 }
+  # The Collegium's degrees (magic_design.md: Scholar, Bachelor and Master), each won in a disputation.
+  degrees:
+    - { name: Scholar }
+    - { name: Bachelor, level: 20, dc: 18 }
+    - { name: Master, level: 45, dc: 26 }
+  # The proof-rod, a wand turned at the Collegium: without one a near miss misfires too.
+  focus: item_proof_rod
+- id: proof_force
+  origin: allora2
+  kind: proof
+  roots:
+    - v_force
+  art: school_hermetic_evocation
+  working: v_force
+  name: Lesser Proof of Force
+  level: 5
+  fee: 4
+  will: 10
+  ink: { ink: 1 }
+  # Canon: +6% to win fights for a day. Here: a steadier arm in every test of strength.
+  boost: { skills: [skill_athletics, skill_arms], value: 1, hours: 24 }
+- id: proof_kindle
+  origin: allora2
+  kind: proof
+  roots:
+    - v_kindle
+  art: school_hermetic_evocation
+  working: v_kindle
+  name: Proof of the Kindled Point
+  level: 15
+  fee: 10
+  will: 15
+  ink: { ink: 1 }
+  # Canon: +6 to the quality of smithing, glassblowing and cooking, for a day.
+  boost: { skills: [skill_smithing, skill_kilncraft, skill_cookery], value: 2, hours: 24 }

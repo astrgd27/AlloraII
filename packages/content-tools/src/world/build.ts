@@ -173,6 +173,31 @@ async function main(): Promise<void> {
       })),
     markets,
     tools,
+    arts: (await readDir('content/magic'))
+      .filter((a) => a.kind === 'art')
+      .map((a) => ({
+        id: a.id,
+        name: a.name,
+        skill: a.skill,
+        place: a.place,
+        library: a.library,
+        hall: a.hall,
+        matriculate: a.matriculate,
+        degrees: a.degrees,
+        focus: a.focus,
+      })),
+    proofs: (await readDir('content/magic'))
+      .filter((p) => p.kind === 'proof')
+      .map((p) => ({
+        id: p.id,
+        art: p.art,
+        name: p.name,
+        level: p.level,
+        fee: p.fee,
+        will: p.will,
+        ink: p.ink,
+        boost: p.boost,
+      })),
     rites: (await readDir('content/faiths'))
       .filter((r) => r.kind === 'rite')
       .map((r) => {

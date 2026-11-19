@@ -4630,6 +4630,12 @@
        "name": "A hotter heat",
        "dc": 5,
        "bold": true
+      },
+      {
+       "id": "proof_heat",
+       "name": "A heat by proof",
+       "dc": 2,
+       "magic": "skill_evocation"
       }
      ]
     },
@@ -5224,9 +5230,12 @@
     "candle_t2",
     "parch_t2",
     "ink_t2",
-    "candle_branch"
+    "candle_branch",
+    "item_proof_rod"
    ],
-   "makes": []
+   "makes": [
+    "item_proof_rod"
+   ]
   },
   {
    "id": "market_tennfels",
@@ -5694,6 +5703,78 @@
    "edge": 1,
    "wear": 300,
    "text": "A bound ledger with ruled columns, for a household's accounts."
+  }
+ ],
+ "arts": [
+  {
+   "id": "school_hermetic_evocation",
+   "name": "Hermetic Evocation",
+   "skill": "skill_evocation",
+   "place": "collegium",
+   "library": "library",
+   "hall": "disput",
+   "matriculate": {
+    "fee": 25,
+    "skill": "skill_letters",
+    "level": 5
+   },
+   "degrees": [
+    {
+     "name": "Scholar"
+    },
+    {
+     "name": "Bachelor",
+     "level": 20,
+     "dc": 18
+    },
+    {
+     "name": "Master",
+     "level": 45,
+     "dc": 26
+    }
+   ],
+   "focus": "item_proof_rod"
+  }
+ ],
+ "proofs": [
+  {
+   "id": "proof_force",
+   "art": "school_hermetic_evocation",
+   "name": "Lesser Proof of Force",
+   "level": 5,
+   "fee": 4,
+   "will": 10,
+   "ink": {
+    "ink": 1
+   },
+   "boost": {
+    "skills": [
+     "skill_athletics",
+     "skill_arms"
+    ],
+    "value": 1,
+    "hours": 24
+   }
+  },
+  {
+   "id": "proof_kindle",
+   "art": "school_hermetic_evocation",
+   "name": "Proof of the Kindled Point",
+   "level": 15,
+   "fee": 10,
+   "will": 15,
+   "ink": {
+    "ink": 1
+   },
+   "boost": {
+    "skills": [
+     "skill_smithing",
+     "skill_kilncraft",
+     "skill_cookery"
+    ],
+    "value": 2,
+    "hours": 24
+   }
   }
  ],
  "rites": [
@@ -6317,6 +6398,12 @@
    "id": "item_needle_case",
    "name": "Needle-Case",
    "value": 4,
+   "type": "tool"
+  },
+  {
+   "id": "item_proof_rod",
+   "name": "Proof-Rod",
+   "value": 30,
    "type": "tool"
   },
   {

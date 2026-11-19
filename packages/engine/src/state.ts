@@ -4,6 +4,7 @@ import type { Held, Venture, Work } from './career';
 import { HOMES, type Lodging } from './housing';
 import type { Kept } from './faith';
 import type { LogEntry } from './log';
+import type { Studied } from './magic';
 import type { Stall } from './market';
 import { START_MONEY } from './money';
 import type { Bond, Words } from './people';
@@ -26,7 +27,7 @@ export interface Journey {
 }
 
 /** The save format version. Raise it with every change to GameState, and add a migration. */
-export const SAVE_VERSION = 18;
+export const SAVE_VERSION = 19;
 
 export interface GameState {
   version: typeof SAVE_VERSION;
@@ -47,6 +48,8 @@ export interface GameState {
   home: string;
   /** The home rented there, or null with none. */
   lodging: Lodging | null;
+  /** The art studied, if any. */
+  magic: Studied | null;
   /** The faith kept, if any. */
   faith: Kept | null;
   /** Item id → hours of use left in the one in hand. */
@@ -117,6 +120,7 @@ export function newGame(seed: number, nowMs: number): GameState {
     lodging: { kind: 'room', rent: HOMES.room.rent.settled, owed: 0 },
     innNight: -1,
     faith: null,
+    magic: null,
     wear: {},
     keepsakes: [],
     needs: { ...FULL_NEEDS },

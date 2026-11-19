@@ -26,6 +26,31 @@ export interface Item {
   type?: string;
 }
 
+/** A school of magic made playable. */
+export interface Art {
+  id: string;
+  name: string;
+  skill: string;
+  place: string;
+  library: string;
+  hall: string;
+  matriculate: { fee: number; skill: string; level: number };
+  degrees: { name: string; level?: number; dc?: number }[];
+  focus?: string;
+}
+
+/** A working of an art. */
+export interface Proof {
+  id: string;
+  art: string;
+  name: string;
+  level: number;
+  fee: number;
+  will: number;
+  ink: Record<string, number>;
+  boost: { skills: string[]; value: number; hours: number };
+}
+
 /** How a faith is played: joining, ranks by devotion, its aspects. */
 export interface Rite {
   id: string;
@@ -157,6 +182,8 @@ export interface Approach {
   rank?: number;
   /** Extra quality when it comes off. */
   quality?: number;
+  /** A way by magic: open to those who know the art, rolled with this skill. */
+  magic?: string;
 }
 
 export interface WorkStep {
@@ -250,6 +277,8 @@ export interface WorldData {
   tools?: Tool[];
   feasts?: Feast[];
   rites?: Rite[];
+  arts?: Art[];
+  proofs?: Proof[];
 }
 
 export const WORLD = data as unknown as WorldData;
@@ -302,6 +331,8 @@ export class World {
   readonly feasts = new Map<string, Feast>();
   /** Faith id → how it is played. */
   readonly rites = new Map<string, Rite>();
+  readonly arts = new Map<string, Art>();
+  readonly proofs = new Map<string, Proof>();
   private readonly links = new Map<string, Leg[]>();
   /** The roads do not change, so travel hours from a place are worked out once. */
   private readonly treeCache = new Map<
@@ -322,6 +353,8 @@ export class World {
     for (const market of data.markets ?? []) this.markets.set(market.place, market);
     for (const feast of data.feasts ?? []) this.feasts.set(feast.id, feast);
     for (const rite of data.rites ?? []) this.rites.set(rite.faith, rite);
+    for (const art of data.arts ?? []) this.arts.set(art.id, art);
+    for (const proof of data.proofs ?? []) this.proofs.set(proof.id, proof);
     for (const tool of data.tools ?? []) {
       const list = this.toolsBySkill.get(tool.skill) ?? [];
       list.push(tool);

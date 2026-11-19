@@ -19,6 +19,9 @@ export type LogEntry = { hours: number } & (
   | { kind: 'faith'; faith: string; rank: number }
   | { kind: 'lapsed' | 'restored'; faith: string }
   | { kind: 'offered'; item: string; worth: number }
+  | { kind: 'degree'; art: string; degree: number }
+  | { kind: 'disputed'; art: string }
+  | { kind: 'copied' | 'cast' | 'misfire'; proof: string }
 );
 
 /** How many entries are kept. */

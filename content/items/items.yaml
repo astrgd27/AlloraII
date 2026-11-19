@@ -31,3 +31,12 @@
   name: 'Ruled Ledger'
   value: 6
   type: tool
+- id: item_proof_rod
+  origin: allora2
+  kind: item
+  roots:
+    - collegium
+    - mag_hermetic
+  name: 'Proof-Rod'
+  value: 30
+  type: tool

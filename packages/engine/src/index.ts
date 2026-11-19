@@ -14,6 +14,7 @@ export * from './engine';
 export * from './events';
 export * from './faith';
 export * from './host';
+export * from './magic';
 export * from './housing';
 export * from './living';
 export * from './log';
