@@ -40,6 +40,10 @@ export type Order =
   | { type: 'copy'; proof: string }
   | { type: 'cast'; proof: string }
   | { type: 'dispute' }
+  /** The lives: turn to one, weave a thread of the Tapestry, begin a new life. */
+  | { type: 'focus'; life: number }
+  | { type: 'weave'; node: string }
+  | { type: 'bear'; upbringing: string; name: string }
   /** Join a faith by one of its aspects, at its site; burn an offering on the Pyre. */
   | { type: 'join'; faith: string; aspect: string }
   | { type: 'offer'; item: string }

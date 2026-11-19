@@ -64,7 +64,7 @@ export function routine(state: GameState, world: World, date: GameDate, away: bo
   if (work) begin(state, world, work.id, date);
 }
 
-interface Mark {
+export interface Mark {
   hours: number;
   earned: number;
   spent: number;

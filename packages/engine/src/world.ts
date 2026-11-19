@@ -51,6 +51,17 @@ export interface Proof {
   boost: { skills: string[]; value: number; hours: number };
 }
 
+/** Where a new life is born, and what it already knows. */
+export interface Upbringing {
+  id: string;
+  name: string;
+  place: string;
+  skills: Record<string, number>;
+  /** Legend the Tapestry asks to open it; 0 is open from the start. */
+  legend: number;
+  names: string[];
+}
+
 /** How a faith is played: joining, ranks by devotion, its aspects. */
 export interface Rite {
   id: string;
@@ -279,6 +290,7 @@ export interface WorldData {
   rites?: Rite[];
   arts?: Art[];
   proofs?: Proof[];
+  upbringings?: Upbringing[];
 }
 
 export const WORLD = data as unknown as WorldData;
@@ -333,6 +345,7 @@ export class World {
   readonly rites = new Map<string, Rite>();
   readonly arts = new Map<string, Art>();
   readonly proofs = new Map<string, Proof>();
+  readonly upbringings = new Map<string, Upbringing>();
   private readonly links = new Map<string, Leg[]>();
   /** The roads do not change, so travel hours from a place are worked out once. */
   private readonly treeCache = new Map<
@@ -355,6 +368,7 @@ export class World {
     for (const rite of data.rites ?? []) this.rites.set(rite.faith, rite);
     for (const art of data.arts ?? []) this.arts.set(art.id, art);
     for (const proof of data.proofs ?? []) this.proofs.set(proof.id, proof);
+    for (const u of data.upbringings ?? []) this.upbringings.set(u.id, u);
     for (const tool of data.tools ?? []) {
       const list = this.toolsBySkill.get(tool.skill) ?? [];
       list.push(tool);

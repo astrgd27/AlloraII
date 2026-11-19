@@ -279,5 +279,14 @@ export const proofSchema = entrySchema('proof', {
   }),
 });
 
+/** Where a new life is born, what it already knows, and the names it may take. */
+export const upbringingSchema = entrySchema('upbringing', {
+  name: text,
+  place: text,
+  skills: z.record(z.string(), z.number().int().min(1).max(10)),
+  legend: z.number().int().nonnegative(),
+  names: z.array(text).min(1),
+});
+
 /** Any other kind (workings, skills, recipes, lore, Weathers, …): the base fields only, for now. */
 export const otherSchema = entrySchema(null, {});

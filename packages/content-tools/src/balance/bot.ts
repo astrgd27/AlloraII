@@ -12,6 +12,7 @@ import {
   HOMES,
   HOURS_PER_DAY,
   HOURS_PER_YEAR,
+  LIVES_THREAD,
   WORLD,
   dateAt,
   newGame,
@@ -233,6 +234,11 @@ export const inquirer = careerist(
   'activity_cerdans_',
 );
 
+/** Legend needed in all for each life the Tapestry opens: the running sum of the Lives thread. */
+export const LEGEND_STEPS = LIVES_THREAD.map((_, i) =>
+  LIVES_THREAD.slice(0, i + 1).reduce((n, x) => n + x.cost, 0),
+);
+
 export interface LifeResult {
   seed: number;
   hours: number;
@@ -249,6 +255,9 @@ export interface LifeResult {
   /** Rank reached in a post (0 to 3), or −1 with no post; and the game day each rank was won. */
   rank: number;
   rankDays: number[];
+  /** Legend earned, and the game day it first reached each Lives-thread price (in total). */
+  legend: number;
+  legendDays: (number | undefined)[];
   post: string;
   works: number;
   /** Things that happened on the road. */
@@ -294,6 +303,8 @@ export function playLife(persona: Persona, seed: number, hours: number): LifeRes
     checks: {},
     rank: -1,
     rankDays: [],
+    legend: 0,
+    legendDays: [],
     post: '',
     works: 0,
     roadEvents: 0,
@@ -324,6 +335,10 @@ export function playLife(persona: Persona, seed: number, hours: number): LifeRes
       result.rank = rank;
       result.rankDays[rank] = Math.floor(h / HOURS_PER_DAY);
     }
+    LEGEND_STEPS.forEach((need, i) => {
+      if (result.legendDays[i] === undefined && engine.state.legend >= need)
+        result.legendDays[i] = Math.floor(h / HOURS_PER_DAY);
+    });
     for (const key of ['vigour', 'health', 'spirits'] as const) {
       const v = engine.state.needs[key];
       result.needs[key].mean += v / hours;
@@ -335,6 +350,7 @@ export function playLife(persona: Persona, seed: number, hours: number): LifeRes
   result.roadEvents = engine.state.roadEvents;
   result.works = engine.state.works.length;
   result.post = engine.state.post?.id ?? '';
+  result.legend = engine.state.legend;
   result.earned = engine.state.earned;
   result.spent = engine.state.spent;
   result.poorMeals = engine.state.poorMeals;

@@ -9,6 +9,7 @@ import {
 } from './calendar';
 import { CATCH_UP_DAYS_PER_REAL_DAY, Engine, MS_PER_GAME_HOUR } from './engine';
 import { EventBus } from './events';
+import { WEAVE_VERSION, type Weave } from './weave';
 import { EngineHost } from './host';
 import type { FromEngine } from './protocol';
 import { createRng, nextRandom } from './rng';
@@ -273,7 +274,9 @@ describe('the host', () => {
     const { host, lastState } = setup(store);
     await host.receive({ type: 'init' });
     expect(lastState()).toMatchObject({ snapshot: { hours: 100 } });
-    expect(versionOf((await store.latest())?.data)).toBe(SAVE_VERSION);
+    const saved = (await store.latest())?.data as Weave;
+    expect(saved.weave).toBe(WEAVE_VERSION);
+    expect(versionOf(saved.lives[0]?.state)).toBe(SAVE_VERSION);
   });
 
   it('autosaves at the start of each game day', async () => {

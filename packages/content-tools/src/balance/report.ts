@@ -1,6 +1,6 @@
 /** Renders the balance report posted on every pull request. */
-import { WORLD, hoursToLevel } from '@allora/engine';
-import { DAY_BUDGET_MS, type BalanceRun } from './bot';
+import { HOURS_PER_DAY, LIVES_THREAD, MS_PER_GAME_HOUR, WORLD, hoursToLevel } from '@allora/engine';
+import { DAY_BUDGET_MS, LEGEND_STEPS, type BalanceRun } from './bot';
 
 /** Marks the report's comment so the next run updates it instead of adding another. */
 export const REPORT_MARKER = '<!-- allora-balance-report -->';
@@ -91,12 +91,32 @@ export function renderReport(run: BalanceRun, options: { timings?: boolean } = {
     '',
     ...checkLines(run),
     '',
-    '### Legend pace',
-    '',
-    NOT_YET,
+    ...legendLines(run),
     '',
   );
   return lines.join('\n');
+}
+
+/** Real hours of play to each new life, at the usual pace (design bible: the first in 10–15). */
+function legendLines(run: BalanceRun): string[] {
+  const lines = ['### Legend pace', ''];
+  const earned = mean(run.lives.map((l) => l.legend));
+  if (earned === 0) return [...lines, '_This persona earns no Legend._'];
+  lines.push(`- Legend earned per life: ${earned.toFixed(0)}.`);
+  LIVES_THREAD.forEach((node, i) => {
+    const days = run.lives.map((l) => l.legendDays[i]).filter((d): d is number => d !== undefined);
+    const need = LEGEND_STEPS[i];
+    if (days.length === 0) {
+      lines.push(`- ${node.name} (${need} Legend in all): not reached.`);
+      return;
+    }
+    const d = mean(days);
+    const real = (d * HOURS_PER_DAY * MS_PER_GAME_HOUR) / 3_600_000;
+    lines.push(
+      `- ${node.name} (${need} Legend in all): day ${d.toFixed(0)}, about ${real.toFixed(1)} real hours of play, by ${days.length} of ${run.lives.length} lives.`,
+    );
+  });
+  return lines;
 }
 
 /** Flag the money held by lives when it grows faster than this a year (design bible, Guarding the balance). */

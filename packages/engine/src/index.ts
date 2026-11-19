@@ -33,3 +33,4 @@ export * from './weather';
 export * from './world';
 export * from './save/migrations';
 export * from './save/store';
+export * from './weave';

@@ -8,6 +8,7 @@ import { MapView } from './map/MapView';
 import { PlaceList, PlacePanel } from './map/PlacePanel';
 import { FaithSheet } from './Faith';
 import { MagicSheet } from './Magic';
+import { LivesStrip, Tapestry } from './Lives';
 import { Life } from './Life';
 import { Log } from './Log';
 import { Market } from './Market';
@@ -73,6 +74,9 @@ export function App() {
       <TopBar snapshot={snapshot} send={send} />
 
       <aside className="column left">
+        <Panel title="Lives" testid="lives-panel">
+          <LivesStrip snapshot={snapshot} send={send} />
+        </Panel>
         {snapshot.report && (
           <Panel title="While you were away">
             <Report snapshot={snapshot} send={send} />
@@ -101,6 +105,9 @@ export function App() {
         </Panel>
         <Panel title="Lately">
           <Log snapshot={snapshot} />
+        </Panel>
+        <Panel title="The Tapestry">
+          <Tapestry snapshot={snapshot} send={send} />
         </Panel>
       </aside>
 
