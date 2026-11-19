@@ -19,7 +19,9 @@ function at(hour: number, season = 0, place = 'ostwick', day = 1): Engine {
 
 describe('the activities', () => {
   it('are twenty in Ostwick and one at each new place, each in a real sub-place', () => {
-    expect(ACTIVITIES.filter((a) => a.place === 'ostwick' && !a.feast)).toHaveLength(20);
+    expect(ACTIVITIES.filter((a) => a.place === 'ostwick' && !a.feast && !a.faith)).toHaveLength(
+      20,
+    );
     const places = new Set(WORLD.places.map((p) => p.id));
     for (const a of ACTIVITIES) {
       expect(places.has(a.place)).toBe(true);
@@ -34,6 +36,18 @@ describe('the activities', () => {
       ? at(a.from, feast.season, a.place, feast.from)
       : at(a.from, a.seasons?.[0] ?? 0, a.place);
     if (a.post) engine.state.post = { id: a.post, rank: 0, standing: 0 };
+    if (a.faith)
+      engine.state.faith = {
+        faith: a.faith,
+        aspect: 'hearth',
+        devotion: 0,
+        rank: 0,
+        lapsed: false,
+        restore: 0,
+        shifts: [],
+        kept: -1,
+        coals: false,
+      };
     expect(engine.snapshot().canDo).toContain(a.id);
     engine.handle({ type: 'do', activity: a.id }, 0);
     expect(engine.snapshot().doing).toEqual({ id: a.id, hoursLeft: a.hours });

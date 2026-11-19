@@ -16,6 +16,9 @@ export type LogEntry = { hours: number } & (
   | { kind: 'dues'; post: string; price: number }
   | { kind: 'lost'; case: string }
   | { kind: 'friend'; person: string; tier: number }
+  | { kind: 'faith'; faith: string; rank: number }
+  | { kind: 'lapsed' | 'restored'; faith: string }
+  | { kind: 'offered'; item: string; worth: number }
 );
 
 /** How many entries are kept. */

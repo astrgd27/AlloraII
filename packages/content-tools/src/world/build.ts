@@ -101,6 +101,7 @@ async function main(): Promise<void> {
       wear: t.wear,
       text: t.text,
     }));
+  const allFaiths = await readYaml('content/canon/allora1/faiths.yaml');
   const markets = (await readDir('content/markets'))
     .filter((m) => placeIds.has(m.place))
     .map((m) => {
@@ -172,6 +173,20 @@ async function main(): Promise<void> {
       })),
     markets,
     tools,
+    rites: (await readDir('content/faiths'))
+      .filter((r) => r.kind === 'rite')
+      .map((r) => {
+        const faith = allFaiths.find((f) => f.id === r.faith);
+        const ranks = (faith?.ranks ?? {}) as Record<string, string[]>;
+        return {
+          id: r.id,
+          faith: r.faith,
+          name: faith?.name,
+          join: r.join,
+          thresholds: r.thresholds,
+          aspects: (r.aspects as Raw[]).map((a) => ({ ...a, ranks: ranks[a.id as string] ?? [] })),
+        };
+      }),
     feasts: (await readDir('content/calendar'))
       .filter((f) => f.kind === 'feast')
       .map((f) => ({
@@ -235,6 +250,7 @@ async function main(): Promise<void> {
         skill: a.skill,
         pay: a.pay,
         feast: a.feast,
+        faith: a.faith,
         dc: a.dc,
         level: a.level,
         post: a.post,

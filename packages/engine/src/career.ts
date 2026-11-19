@@ -12,6 +12,7 @@ import {
   type Degree,
   type Modifier,
 } from './challenge';
+import { boonFactor, forgeFactor } from './faith';
 import { earn, round2 } from './money';
 import { toolModifiers, wearTool } from './tools';
 import { GATES, XP_PER_HOUR, capOf, edgeFactor, gain, newSkill, passGate } from './skills';
@@ -280,7 +281,11 @@ export function workHour(state: GameState, world: World): { finished?: Work; deg
   const skill = (state.skills[post.skill] ??= newSkill());
   gain(
     skill,
-    venture.working.hours * XP_PER_HOUR * edgeFactor(edgeOf(spec)) * lessonFactor(result.degree),
+    venture.working.hours *
+      XP_PER_HOUR *
+      edgeFactor(edgeOf(spec)) *
+      lessonFactor(result.degree) *
+      boonFactor(state, world, post.skill),
   );
   wearTool(state, world, post.skill, venture.working.hours);
   venture.working = null;
@@ -311,7 +316,8 @@ export function workHour(state: GameState, world: World): { finished?: Work; deg
     // A case pays its hours at the rank's wage, more for good work and less for poor.
     const hours = post.work.reduce((n, s) => n + s.hours, 0);
     const worth = Math.max(0.5, Math.min(2, 1 + CASE_PAY_PER_QUALITY * work.quality));
-    earn(state, round2(hours * (post.pay?.[held.rank] ?? 0) * worth));
+    const forge = post.skill === 'skill_smithing' ? forgeFactor(state) : 1;
+    earn(state, round2(hours * (post.pay?.[held.rank] ?? 0) * worth * forge));
   }
   return { finished: work, degree: result.degree };
 }

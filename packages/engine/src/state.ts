@@ -2,6 +2,7 @@
 import type { Doing, LastCheck } from './activities';
 import type { Held, Venture, Work } from './career';
 import { HOMES, type Lodging } from './housing';
+import type { Kept } from './faith';
 import type { LogEntry } from './log';
 import type { Stall } from './market';
 import { START_MONEY } from './money';
@@ -25,7 +26,7 @@ export interface Journey {
 }
 
 /** The save format version. Raise it with every change to GameState, and add a migration. */
-export const SAVE_VERSION = 17;
+export const SAVE_VERSION = 18;
 
 export interface GameState {
   version: typeof SAVE_VERSION;
@@ -46,6 +47,8 @@ export interface GameState {
   home: string;
   /** The home rented there, or null with none. */
   lodging: Lodging | null;
+  /** The faith kept, if any. */
+  faith: Kept | null;
   /** Item id → hours of use left in the one in hand. */
   wear: Record<string, number>;
   /** Pieces the life made and kept: its trial works. */
@@ -113,6 +116,7 @@ export function newGame(seed: number, nowMs: number): GameState {
     // A new life starts in a rented room in Ostwick, its first day paid.
     lodging: { kind: 'room', rent: HOMES.room.rent.settled, owed: 0 },
     innNight: -1,
+    faith: null,
     wear: {},
     keepsakes: [],
     needs: { ...FULL_NEEDS },

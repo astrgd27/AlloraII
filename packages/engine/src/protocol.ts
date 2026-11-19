@@ -35,6 +35,9 @@ export type Order =
   /** Buy or sell one of a thing at the market here. */
   | { type: 'buy'; item: string }
   | { type: 'sell'; item: string }
+  /** Join a faith by one of its aspects, at its site; burn an offering on the Pyre. */
+  | { type: 'join'; faith: string; aspect: string }
+  | { type: 'offer'; item: string }
   /** Give a thing from the pack to someone here. */
   | { type: 'give'; person: string; item: string }
   /** Rent a home here, giving up the old one; or give up the home. */

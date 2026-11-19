@@ -4,6 +4,7 @@ import { edgeOf, lessonFactor, rollCheck, type CheckResult } from './challenge';
 import type { System } from './engine';
 import { POINTS, FRIEND_PAY, friendsAt, warm } from './bonds';
 import { HARMONY } from './career';
+import { boonFactor, faithOnWork } from './faith';
 import { peopleAt } from './people';
 import { earn, round2 } from './money';
 import { TOOL_PAY, toolFor, toolModifiers, wearTool } from './tools';
@@ -26,6 +27,8 @@ export interface Doing {
   standing?: number;
   /** What it pays when done. */
   pay?: number;
+  /** The faith whose work it is. */
+  faith?: string;
 }
 
 /** The last check a life made, for the page to show. */
@@ -51,6 +54,8 @@ export function whyNot(
   if (state.doing || state.venture?.working) return 'Busy';
   if (activity.post && state.post?.id !== activity.post) return 'Not your post';
   if (activity.seasons && !activity.seasons.includes(date.seasonIndex)) return 'Out of season';
+  if (activity.faith && state.faith?.faith !== activity.faith)
+    return `For the faithful of ${world?.rites.get(activity.faith)?.name ?? 'the faith'}`;
   const feast = activity.feast ? world?.feasts.get(activity.feast) : undefined;
   if (activity.feast && (!feast || !feastOn(feast, date)))
     return `Only at ${feast?.name ?? 'a feast'}`;
@@ -91,6 +96,7 @@ export function begin(state: GameState, world: World, id: string, date: GameDate
     ...(activity.dc ? { dc: activity.dc } : {}),
     ...(activity.standing ? { standing: activity.standing } : {}),
     ...(pay > 0 ? { pay } : {}),
+    ...(activity.faith ? { faith: activity.faith } : {}),
   };
 }
 
@@ -121,13 +127,28 @@ export const activitySystem: System = {
       if (skill) {
         gain(
           skill,
-          (doing.hours ?? 1) * XP_PER_HOUR * edgeFactor(edgeOf(spec)) * lessonFactor(result.degree),
+          (doing.hours ?? 1) *
+            XP_PER_HOUR *
+            edgeFactor(edgeOf(spec)) *
+            lessonFactor(result.degree) *
+            boonFactor(state, world, doing.skill),
         );
       }
     } else if (skill) {
-      gain(skill, workXp(doing.hours ?? 1, doing.level ?? 1, skill.level));
+      gain(
+        skill,
+        workXp(doing.hours ?? 1, doing.level ?? 1, skill.level) *
+          boonFactor(state, world, doing.skill),
+      );
     }
     wearTool(state, world, doing.skill, doing.hours ?? 1);
+    faithOnWork(state, world, {
+      id: doing.id,
+      hours: doing.hours ?? 1,
+      ...(doing.skill ? { skill: doing.skill } : {}),
+      ...(doing.faith ? { faith: doing.faith } : {}),
+      ...(doing.dc && state.lastCheck ? { degree: state.lastCheck.degree } : {}),
+    });
     if (doing.pay) earn(state, doing.pay);
     // Work done alongside people one knows draws them closer.
     for (const p of peopleAt(world, state.place, _date)) {

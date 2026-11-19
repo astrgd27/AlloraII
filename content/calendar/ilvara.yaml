@@ -1,0 +1,31 @@
+# Ilvara's holy days, from her canon `way`. Allora I's 12-day seasons are moved onto 28 days as
+# the feasts are (calendar/feasts.yaml): the Longest Night (days 6–7 of winter) keeps its place in
+# proportion; the Stubble-Burning (the last five days of autumn) stays at the season's end.
+- id: feast_longest_night
+  origin: allora2
+  kind: feast
+  roots:
+    - ilvara
+    - ostwick
+  canon_event: ilvara_way_longest_night
+  name: The Longest Night
+  place: ostwick
+  sub: shrine
+  season: 3
+  from: 13
+  to: 14
+  text: 'The hearths are kept burning through the longest night, so the winter knows it is not wanted.'
+- id: feast_stubble_burning
+  origin: allora2
+  kind: feast
+  roots:
+    - ilvara
+    - aschau
+  canon_event: ilvara_way_stubble_burning
+  name: The Stubble-Burning
+  place: aschau
+  sub: pyre
+  season: 2
+  from: 24
+  to: 28
+  text: 'The Pyre-Wardens fire the stubble at Aschau and walk the embers, while the Hearth-Church preaches against them.'
