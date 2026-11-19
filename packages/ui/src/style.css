@@ -1096,3 +1096,59 @@ button:active:not(:disabled) {
   text-align: left;
   margin-bottom: 0.25rem;
 }
+
+/* The codex: a framed reference over the map */
+.codex-open {
+  align-self: center;
+}
+.codex-veil {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: #000a;
+  display: grid;
+  place-items: center;
+}
+.codex {
+  width: min(980px, 92vw);
+  height: min(680px, 86vh);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+}
+.codex-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.codex-head .tab-row {
+  flex: 1;
+}
+.codex-body {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  min-height: 0;
+}
+.codex-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--line);
+}
+.codex-list button {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 0.15rem;
+}
+.codex-entry {
+  padding: 0.8rem 1.2rem;
+  overflow-y: auto;
+  line-height: 1.5;
+}
+.codex-entry h3 {
+  margin-top: 0;
+  color: var(--gilt);
+}
+.codex-entry .subs {
+  columns: 2;
+}

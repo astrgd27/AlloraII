@@ -29,6 +29,7 @@ async function main(): Promise<void> {
   const args = new Set(process.argv.slice(2));
   const allPlaces = await readYaml('content/canon/allora1/places.yaml');
   const allRegions = await readYaml('content/canon/allora1/regions.yaml');
+  const allRealms = await readYaml('content/canon/allora1/realms.yaml');
 
   const regions = allRegions.filter((r) => WORLD_REGIONS.includes(r.id as string));
   const readDir = async (dir: string): Promise<Raw[]> => {
@@ -123,7 +124,11 @@ async function main(): Promise<void> {
   const traded = [...new Set(markets.flatMap((m) => m.sells))].sort();
 
   const world = {
-    regions: regions.map((r) => ({ id: r.id, name: r.name })),
+    regions: regions.map((r) => ({
+      id: r.id,
+      name: r.name,
+      text: allRealms.find((x) => x.id === r.realm)?.text,
+    })),
     places: places.map((p) => ({
       id: p.id,
       name: p.name,
@@ -133,6 +138,7 @@ async function main(): Promise<void> {
       kind: p.city ? 'city' : p.wild || p.place_kind === 'wild' ? 'wild' : 'settled',
       canon: p.origin === 'allora1',
       subs: Object.fromEntries(((p.subs as Raw[] | undefined) ?? []).map((x) => [x.id, x.name])),
+      text: p.description ?? p.text,
     })),
     roads: roads.map((r) => ({
       id: r.id,
@@ -208,6 +214,16 @@ async function main(): Promise<void> {
         legend: u.legend,
         names: u.names,
       })),
+    // The faiths with a site in this world, for the codex.
+    faiths: allFaiths
+      .filter((f) => ((f.sites as string[] | undefined) ?? []).some((id) => placeIds.has(id)))
+      .map((f) => ({
+        id: f.id,
+        name: f.name,
+        domain: f.domain,
+        sites: (f.sites as string[]).filter((id) => placeIds.has(id)),
+        text: f.text,
+      })),
     rites: (await readDir('content/faiths'))
       .filter((r) => r.kind === 'rite')
       .map((r) => {
@@ -257,6 +273,7 @@ async function main(): Promise<void> {
       id: k.id,
       name: k.name,
       family: k.family,
+      text: k.text,
     })),
     people: npcs.map((n) => ({
       id: n.id,

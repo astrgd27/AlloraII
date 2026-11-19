@@ -13,6 +13,8 @@ export interface Place {
   canon?: boolean;
   /** Sub-place id → its name. */
   subs?: Record<string, string>;
+  /** What the codex says of it. */
+  text?: string;
 }
 
 /** A thing that can be carried, bought and sold. */
@@ -273,12 +275,14 @@ export interface Person {
 }
 
 export interface WorldData {
-  regions: { id: string; name: string }[];
+  regions: { id: string; name: string; text?: string }[];
   places: Place[];
   roads: Road[];
   activities?: Activity[];
   people?: Person[];
-  skills?: { id: string; name: string; family: string }[];
+  skills?: { id: string; name: string; family: string; text?: string }[];
+  /** The faiths with a site in this world. */
+  faiths?: { id: string; name: string; domain?: string; sites: string[]; text?: string }[];
   routes?: NamedRoute[];
   posts?: Post[];
   cases?: Case[];

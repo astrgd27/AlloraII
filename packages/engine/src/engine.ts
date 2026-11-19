@@ -311,6 +311,8 @@ export class Engine {
   /** One game hour of one life. Lives out of focus keep to their standing orders. */
   private tickLife(before: GameDate, away: boolean): void {
     this.state.hours += 1;
+    if (!this.state.journey && !this.state.seen.includes(this.state.place))
+      this.state.seen.push(this.state.place);
     const date = dateAt(this.state.hours);
     if (date.hour === 0 && this.state.lodging) {
       const kind = this.state.lodging.kind;

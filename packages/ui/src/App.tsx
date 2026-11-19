@@ -19,6 +19,7 @@ import { SceneView } from './scene/SceneView';
 import { Skills } from './Skills';
 import { TITLE } from './title';
 import { TopBar } from './TopBar';
+import { Codex } from './Codex';
 
 const regionOf = (place: string): string =>
   WORLD.places.find((p) => p.id === place)?.region ?? WORLD.regions[0]?.id ?? '';
@@ -31,6 +32,7 @@ export function App() {
   const error = useSyncExternalStore(engine.subscribe, engine.getError);
   const [chosen, setChosen] = useState<string | undefined>(undefined);
   const [picked, setPicked] = useState<string | undefined>(undefined);
+  const [codex, setCodex] = useState(false);
   const send = (order: Order) => engine.send(order);
   // Keys for the clock: space to pause, 1 2 3 for the pace.
   const paused = snapshot?.paused;
@@ -41,6 +43,7 @@ export function App() {
         e.preventDefault();
         engine.send({ type: paused ? 'resume' : 'pause' });
       }
+      if (e.key === 'c' || e.key === 'C') setCodex((open) => !open);
       const pace = SPEEDS[Number(e.key) - 1];
       if (pace) {
         if (paused) engine.send({ type: 'resume' });
@@ -71,7 +74,8 @@ export function App() {
         setClick({ x: e.clientX, y: e.clientY });
       }}
     >
-      <TopBar snapshot={snapshot} send={send} />
+      <TopBar snapshot={snapshot} send={send} onCodex={() => setCodex(true)} />
+      {codex && <Codex snapshot={snapshot} onClose={() => setCodex(false)} />}
 
       <aside className="column left">
         <Panel title="Lives" testid="lives-panel">

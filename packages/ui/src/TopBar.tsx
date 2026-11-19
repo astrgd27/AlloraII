@@ -58,10 +58,27 @@ function TimeControls({ snapshot, send }: { snapshot: Snapshot; send: (order: Or
   );
 }
 
-export function TopBar({ snapshot, send }: { snapshot: Snapshot; send: (order: Order) => void }) {
+export function TopBar({
+  snapshot,
+  send,
+  onCodex,
+}: {
+  snapshot: Snapshot;
+  send: (order: Order) => void;
+  onCodex: () => void;
+}) {
   return (
     <header className="topbar">
       <div className="crest">{TITLE}</div>
+      <button
+        type="button"
+        className="codex-open"
+        data-testid="codex-open"
+        title="The codex: all your lives have learned (C)"
+        onClick={onCodex}
+      >
+        Codex
+      </button>
       <div className="clock" aria-label="Date and hour">
         <span className="date" data-testid="date">
           {formatDate(snapshot.date)}
