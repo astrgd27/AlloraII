@@ -5,6 +5,7 @@ import type { System } from './engine';
 import { POINTS, FRIEND_PAY, friendsAt, warm } from './bonds';
 import { HARMONY } from './career';
 import { boonFactor, faithOnWork } from './faith';
+import { boostModifiers } from './magic';
 import { peopleAt } from './people';
 import { earn, round2 } from './money';
 import { TOOL_PAY, toolFor, toolModifiers, wearTool } from './tools';
@@ -116,7 +117,13 @@ export const activitySystem: System = {
       // The work ends in a check. Its edge sets what it teaches; failure teaches half.
       // A tool helps the roll; what the work teaches is set by the life's own skill.
       const spec = { dc: doing.dc, skillLevel: skill?.level ?? 0, allowsCost: false };
-      const roll = { ...spec, modifiers: toolModifiers(state, world, doing.skill) };
+      const roll = {
+        ...spec,
+        modifiers: [
+          ...toolModifiers(state, world, doing.skill),
+          ...boostModifiers(state, world, doing.skill),
+        ],
+      };
       const result = rollCheck(roll, state.rng, state.seed, 'checks');
       state.lastCheck = { ...result, activity: doing.id };
       state.checks[result.degree] = (state.checks[result.degree] ?? 0) + 1;

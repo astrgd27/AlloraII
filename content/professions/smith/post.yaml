@@ -43,6 +43,8 @@
       approaches:
         - { id: safe_heat, name: A safe heat, dc: 0 }
         - { id: hot_heat, name: A hotter heat, dc: 5, bold: true }
+        # For those who know Hermetic Evocation: the heat brought up by a proof, rolled with that art.
+        - { id: proof_heat, name: A heat by proof, dc: 2, magic: skill_evocation }
     - id: weld
       name: Shape and weld
       hours: 2

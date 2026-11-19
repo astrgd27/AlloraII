@@ -25,6 +25,19 @@ import { innAt, leaveHome, payRent, rent, rentAt, type Lodging } from './housing
 import { liveDay, payDues } from './living';
 import { giftWhyNot, give, tierOf } from './bonds';
 import { faithDay, join, joinWhyNot, lodgingFactor, offer } from './faith';
+import {
+  WILL_MAX,
+  boostModifiers,
+  cast,
+  castWhyNot,
+  copy,
+  copyWhyNot,
+  dispute,
+  disputeWhyNot,
+  magicHour,
+  matriculate,
+  matriculateWhyNot,
+} from './magic';
 import { note, type LogEntry } from './log';
 import { toolFor, toolModifiers, wearLeft } from './tools';
 import {
@@ -138,6 +151,18 @@ export interface Snapshot {
     coals: boolean;
   } | null;
   joinable: { faith: string; aspect: string; why?: string }[];
+  /** The art studied: degree, Will, proofs known (and why one cannot be cast), proofs in force. */
+  magic: {
+    art: string;
+    degree: number;
+    will: number;
+    willMax: number;
+    proofs: { id: string; why?: string }[];
+    boosts: { proof: string; hoursLeft: number }[];
+    disputeWhy?: string;
+  } | null;
+  /** At an art's seat: matriculating, and the proofs in its library. */
+  study: { art: string; matriculateWhy?: string; library: { id: string; why?: string }[] }[];
   /** What happened while the player was away, until it is read. */
   report: Report | null;
   /** The tools carried that are in use, each with its hours of use left. */
@@ -261,6 +286,7 @@ export class Engine {
       if (lost) note(this.state, { kind: 'lost', case: lost });
     }
     if (date.seasonIndex !== before.seasonIndex) payDues(this.state, this.world);
+    magicHour(this.state);
     routine(this.state, this.world, before, this.away);
     for (const system of this.systems) system.tick(this.state, date, this.bus, this.world);
     const rank = this.state.post?.rank ?? 0;
@@ -389,6 +415,18 @@ export class Engine {
       case 'leaveHome':
         leaveHome(this.state);
         break;
+      case 'matriculate':
+        matriculate(this.state, this.world, order.art);
+        break;
+      case 'copy':
+        copy(this.state, this.world, order.proof);
+        break;
+      case 'cast':
+        cast(this.state, this.world, order.proof);
+        break;
+      case 'dispute':
+        dispute(this.state, this.world, dateAt(this.state.hours));
+        break;
       case 'join':
         join(this.state, this.world, order.faith, order.aspect);
         break;
@@ -460,6 +498,38 @@ export class Engine {
               return { id: a.id, ...(reason ? { reason } : {}) };
             }),
       report: this.state.report,
+      magic: s.magic
+        ? {
+            art: s.magic.art,
+            degree: s.magic.degree,
+            will: s.magic.will,
+            willMax: WILL_MAX,
+            proofs: s.magic.proofs.map((id) => {
+              const why = castWhyNot(s, this.world, id);
+              return { id, ...(why ? { why } : {}) };
+            }),
+            boosts: s.magic.boosts
+              .filter((b) => b.until > s.hours)
+              .map((b) => ({ proof: b.proof, hoursLeft: b.until - s.hours })),
+            ...((w) => (w ? { disputeWhy: w } : {}))(disputeWhyNot(s, this.world)),
+          }
+        : null,
+      study: j
+        ? []
+        : [...this.world.arts.values()]
+            .filter((art) => art.place === s.place)
+            .map((art) => ({
+              art: art.id,
+              ...((w) => (w ? { matriculateWhy: w } : {}))(
+                matriculateWhyNot(s, this.world, art.id),
+              ),
+              library: [...this.world.proofs.values()]
+                .filter((p) => p.art === art.id)
+                .map((p) => {
+                  const why = copyWhyNot(s, this.world, p.id);
+                  return { id: p.id, ...(why ? { why } : {}) };
+                }),
+            })),
       faith: s.faith
         ? {
             faith: s.faith.faith,
@@ -525,7 +595,10 @@ export class Engine {
             chanceOfSuccess({
               dc: a.dc ?? 0,
               skillLevel: (a.skill && this.state.skills[a.skill]?.level) || 0,
-              modifiers: toolModifiers(this.state, this.world, a.skill),
+              modifiers: [
+                ...toolModifiers(this.state, this.world, a.skill),
+                ...boostModifiers(this.state, this.world, a.skill),
+              ],
               allowsCost: false,
             }),
           ]),

@@ -84,6 +84,8 @@
   from: 9
   to: 17
   day: 1
+  makes:
+    - item_proof_rod
 - id: market_tennfels
   origin: allora2
   kind: market

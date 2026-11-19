@@ -37,7 +37,7 @@
 11. **Weather, seasons and the calendar.** Weather on the road, market and feast days from canon faiths, seasonal work. *(done)*
 12. **Bonds.** Acquaintance to friendship: gifts, favours, people who remember, and what a friend opens. *(done)*
 13. **Faith.** One faith playable end to end in Eintenn, grown from canon. *(done)*
-14. **Magic.** One school learnable at the Collegium, by the rules of `canon/magic_design.md`. Countermagic stays the nearest a player comes to witch magic.
+14. **Magic.** One school learnable at the Collegium, by the rules of `canon/magic_design.md`. Countermagic stays the nearest a player comes to witch magic. *(done)*
 15. **Several lives and the Tapestry.** A second and third life, the lives strip, switching, and standing orders for the ones not in focus.
 16. **The codex.** In-world reference for places, people, skills and faiths the life has met. No design talk.
 17. **Balance and the gate review.**
@@ -145,3 +145,13 @@
   - **On screen:** a Faith panel on the sheet (the flame's ladder, devotion bar, lapse, duties) and a Shrine tab at her sites for joining and offering.
   - **Not yet:** the ember from Valdora, the first bread every six days, being cast out, other faiths.
   - Save version 18.
+- **2026-11-19 · Magic: Hermetic Evocation (#69).** Chosen because its seat, the Collegium, is in Eintenn and `canon/magic_design.md` gives it whole: learned by copying from the library for a fee, workings called proofs, degrees won in disputation. How it is played is content (`content/magic/hermetic.yaml`, new kinds `art` and `proof`), so later schools follow the same shape. Decisions:
+  - **Matriculation:** at the Collegium, Letters 5 and a 25 pf fee.
+  - **Copying:** a proof costs its library fee plus a parchment and an ink, and can be copied up to 10 levels above one's Evocation.
+  - **Casting:** costs Will (0–100, back 6 an hour asleep and 1 awake) and ink. It is a check against the proof's level + 8. A hold grants a named bonus to the proof's skills for its hours; a failure misfires and burns health (8, or 16 on a disaster). The proof-rod (a new Collegium item) turns a near miss (cost) into a hold.
+  - **Two proofs from canon workings:** the Lesser Proof of Force (`v_force`: +1 to athletics and arms for a day) and the Proof of the Kindled Point (`v_kindle`: +2 to smithing, kilncraft and cookery for a day).
+  - **Degrees:** Scholar on matriculation, then Bachelor (Evocation 20) and Master (45), each won in a disputation; one disputation a season.
+  - **Into the trades:** the smith's heat gains a way by proof, open only to a student of the art and rolled with Evocation.
+  - **On screen:** an Art panel on the sheet (degree, Will bar, Cast buttons with reasons, proofs in force) and a Collegium tab there for matriculating, copying and disputing.
+  - **Not yet:** other schools, countermagic, greater proofs.
+  - Save version 19.

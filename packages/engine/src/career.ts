@@ -13,6 +13,7 @@ import {
   type Modifier,
 } from './challenge';
 import { boonFactor, forgeFactor } from './faith';
+import { boostModifiers } from './magic';
 import { earn, round2 } from './money';
 import { toolModifiers, wearTool } from './tools';
 import { GATES, XP_PER_HOUR, capOf, edgeFactor, gain, newSkill, passGate } from './skills';
@@ -180,7 +181,11 @@ export function careerDay(state: GameState, world: World): string | undefined {
 
 /** The ways open through a step: techniques only from their rank. */
 const openApproaches = (state: GameState, step: { approaches: Approach[] }): Approach[] =>
-  step.approaches.filter((a) => (a.rank ?? 0) <= (state.post?.rank ?? 0));
+  step.approaches.filter(
+    (a) =>
+      (a.rank ?? 0) <= (state.post?.rank ?? 0) &&
+      (!a.magic || (state.magic !== null && (state.skills[a.magic]?.level ?? 0) > 0)),
+  );
 
 /** An accusation starts harder than the case, and each clue (point of quality) makes it surer. */
 export const ACCUSE = { harder: 5, perClue: 2, wrongStanding: 8 };
@@ -192,7 +197,8 @@ const specFor = (state: GameState, post: Post, c: Case, approach: Approach) => (
     (post.work[state.venture?.step ?? -1]?.accuse
       ? ACCUSE.harder - ACCUSE.perClue * Math.max(0, state.venture?.quality ?? 0)
       : 0),
-  skillLevel: state.skills[post.skill]?.level ?? 0,
+  // A way by magic is rolled with the art, not the trade.
+  skillLevel: state.skills[approach.magic ?? post.skill]?.level ?? 0,
   // Past the strain limit, you press on at disadvantage.
   advantage: (state.venture && state.venture.strain >= STRAIN_LIMIT ? -1 : 0) as -1 | 0,
 });
@@ -209,7 +215,11 @@ export function choices(state: GameState, world: World): { approach: Approach; c
     approach,
     chance: chanceOfSuccess({
       ...specFor(state, post, c, approach),
-      modifiers: [...toolModifiers(state, world, post.skill), ...postModifiers(state, post)],
+      modifiers: [
+        ...toolModifiers(state, world, post.skill),
+        ...boostModifiers(state, world, post.skill),
+        ...postModifiers(state, post),
+      ],
     }),
   }));
 }
@@ -263,7 +273,11 @@ export function workHour(state: GameState, world: World): { finished?: Work; deg
   const spec = specFor(state, post, c, approach);
   const roll = {
     ...spec,
-    modifiers: [...toolModifiers(state, world, post.skill), ...postModifiers(state, post)],
+    modifiers: [
+      ...toolModifiers(state, world, post.skill),
+      ...boostModifiers(state, world, post.skill),
+      ...postModifiers(state, post),
+    ],
   };
   const result = rollCheck(roll, state.rng, state.seed, 'checks');
   state.checks[result.degree] = (state.checks[result.degree] ?? 0) + 1;

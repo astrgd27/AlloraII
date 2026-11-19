@@ -11,6 +11,8 @@ const person = name(WORLD.people);
 const item = name(WORLD.items);
 const caseName = name(WORLD.cases);
 const posts = new Map((WORLD.posts ?? []).map((p) => [p.id, p]));
+const arts = new Map((WORLD.arts ?? []).map((a) => [a.id, a]));
+const proof = name(WORLD.proofs);
 const roadEvent = new Map((WORLD.roadEvents ?? []).map((e) => [e.id, e.text]));
 
 const faithName = (id: string): string => WORLD.rites?.find((r) => r.faith === id)?.name ?? id;
@@ -65,6 +67,18 @@ export function logText(e: LogEntry): string {
       return `${item(e.item)} worn out`;
     case 'evicted':
       return `Turned out of the ${e.home} in ${place(e.place)} for rent owed`;
+    case 'degree':
+      return e.degree === 0
+        ? `Matriculated in ${arts.get(e.art)?.name ?? e.art}`
+        : `Won the degree of ${arts.get(e.art)?.degrees[e.degree]?.name ?? 'a new degree'}`;
+    case 'disputed':
+      return 'Lost a disputation';
+    case 'copied':
+      return `Copied ${proof(e.proof)} from the library`;
+    case 'cast':
+      return `Cast ${proof(e.proof)}`;
+    case 'misfire':
+      return `${proof(e.proof)} misfired and burned`;
   }
 }
 

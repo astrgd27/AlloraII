@@ -35,6 +35,11 @@ export type Order =
   /** Buy or sell one of a thing at the market here. */
   | { type: 'buy'; item: string }
   | { type: 'sell'; item: string }
+  /** Study an art: matriculate, copy a proof, cast one, stand a disputation. */
+  | { type: 'matriculate'; art: string }
+  | { type: 'copy'; proof: string }
+  | { type: 'cast'; proof: string }
+  | { type: 'dispute' }
   /** Join a faith by one of its aspects, at its site; burn an offering on the Pyre. */
   | { type: 'join'; faith: string; aspect: string }
   | { type: 'offer'; item: string }
