@@ -5777,6 +5777,69 @@
    }
   }
  ],
+ "upbringings": [
+  {
+   "id": "upbringing_ostwick_farm",
+   "name": "An Ostwick farm child",
+   "place": "ostwick",
+   "skills": {
+    "skill_husbandry": 2,
+    "skill_cookery": 1
+   },
+   "legend": 0,
+   "names": [
+    "Rike Holt",
+    "Tam Reed",
+    "Ilse Marsh",
+    "Jakob Thorn"
+   ]
+  },
+  {
+   "id": "upbringing_kess_guild",
+   "name": "A Kesselhaven guild apprentice",
+   "place": "kess_market",
+   "skills": {
+    "skill_smithing": 3
+   },
+   "legend": 0,
+   "names": [
+    "Gerd Hale",
+    "Lene Stamp",
+    "Ulf Crane",
+    "Mina Slade"
+   ]
+  },
+  {
+   "id": "upbringing_tennfels_hall",
+   "name": "A child of the Tennfels servants' hall",
+   "place": "tennfels",
+   "skills": {
+    "skill_courtesy": 3
+   },
+   "legend": 30,
+   "names": [
+    "Bertl Ash",
+    "Grete Lowe",
+    "Hal Combe",
+    "Trude Penn"
+   ]
+  },
+  {
+   "id": "upbringing_collegium_scribe",
+   "name": "A Collegium scribe's child",
+   "place": "collegium",
+   "skills": {
+    "skill_letters": 5
+   },
+   "legend": 30,
+   "names": [
+    "Ottilie Severus",
+    "Benno Lucidus",
+    "Agnes Fabricia",
+    "Lorenz Quintus"
+   ]
+  }
+ ],
  "rites": [
   {
    "id": "rite_ilvara",

@@ -198,6 +198,16 @@ async function main(): Promise<void> {
         ink: p.ink,
         boost: p.boost,
       })),
+    upbringings: (await readDir('content/lives'))
+      .filter((u) => u.kind === 'upbringing')
+      .map((u) => ({
+        id: u.id,
+        name: u.name,
+        place: u.place,
+        skills: u.skills,
+        legend: u.legend,
+        names: u.names,
+      })),
     rites: (await readDir('content/faiths'))
       .filter((r) => r.kind === 'rite')
       .map((r) => {

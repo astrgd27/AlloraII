@@ -29,7 +29,40 @@ export const LOG_SIZE = 40;
 
 type Loose<T> = T extends unknown ? Omit<T, 'hours'> : never;
 
+/** Legend for a rank trial passed, by the rank won (design bible, Legend). */
+export const LEGEND_RANK = [0, 10, 40, 150];
+/** Legend for other great deeds. */
+export const LEGEND = {
+  greatCase: 15,
+  greatQuality: 8,
+  confidant: 10,
+  faithRank: 10,
+  degree: [0, 10, 25],
+};
+
+/**
+ * What a thing that happened earns towards the Tapestry. A great case is one
+ * well above what the life's rank expects: the bar rises a point with each rank.
+ */
+export function legendOf(entry: Loose<LogEntry>, rank = 0): number {
+  switch (entry.kind) {
+    case 'rank':
+      return LEGEND_RANK[entry.rank] ?? LEGEND_RANK[LEGEND_RANK.length - 1]!;
+    case 'case':
+      return !entry.trial && entry.quality >= LEGEND.greatQuality + rank ? LEGEND.greatCase : 0;
+    case 'friend':
+      return entry.tier === 3 ? LEGEND.confidant : 0;
+    case 'faith':
+      return entry.rank > 0 ? LEGEND.faithRank : 0;
+    case 'degree':
+      return LEGEND.degree[entry.degree] ?? 0;
+    default:
+      return 0;
+  }
+}
+
 export function note(state: GameState, entry: Loose<LogEntry>): void {
+  state.legend += legendOf(entry, state.post?.rank ?? 0);
   state.log.push({ hours: state.hours, ...entry } as LogEntry);
   if (state.log.length > LOG_SIZE) state.log.splice(0, state.log.length - LOG_SIZE);
 }

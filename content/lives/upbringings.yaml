@@ -1,0 +1,46 @@
+# Upbringings: where a new life is born and what it already knows (design bible, Making a new life).
+# Names follow docs/lore/cultures/eintenn.md: common folk a short given name and a short plain family
+# name, scholars a learned old-tongue family name. `legend` is what the Tapestry asks to open one;
+# 0 is open from the first life.
+- id: upbringing_ostwick_farm
+  origin: allora2
+  kind: upbringing
+  roots:
+    - ostwick
+  name: An Ostwick farm child
+  place: ostwick
+  skills: { skill_husbandry: 2, skill_cookery: 1 }
+  legend: 0
+  names: [Rike Holt, Tam Reed, Ilse Marsh, Jakob Thorn]
+- id: upbringing_kess_guild
+  origin: allora2
+  kind: upbringing
+  roots:
+    - kess_market
+    - post_kesselhaven_guild_smith
+  name: A Kesselhaven guild apprentice
+  place: kess_market
+  skills: { skill_smithing: 3 }
+  legend: 0
+  names: [Gerd Hale, Lene Stamp, Ulf Crane, Mina Slade]
+- id: upbringing_tennfels_hall
+  origin: allora2
+  kind: upbringing
+  roots:
+    - tennfels
+    - post_tennfels_steward
+  name: A child of the Tennfels servants' hall
+  place: tennfels
+  skills: { skill_courtesy: 3 }
+  legend: 30
+  names: [Bertl Ash, Grete Lowe, Hal Combe, Trude Penn]
+- id: upbringing_collegium_scribe
+  origin: allora2
+  kind: upbringing
+  roots:
+    - collegium
+  name: A Collegium scribe's child
+  place: collegium
+  skills: { skill_letters: 5 }
+  legend: 30
+  names: [Ottilie Severus, Benno Lucidus, Agnes Fabricia, Lorenz Quintus]

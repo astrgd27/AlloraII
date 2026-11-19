@@ -27,7 +27,7 @@ export interface Journey {
 }
 
 /** The save format version. Raise it with every change to GameState, and add a migration. */
-export const SAVE_VERSION = 19;
+export const SAVE_VERSION = 20;
 
 export interface GameState {
   version: typeof SAVE_VERSION;
@@ -102,6 +102,8 @@ export interface GameState {
   turnedBack: boolean;
   /** What just happened, oldest first. */
   log: LogEntry[];
+  /** Legend this life has earned by its great deeds, towards the Tapestry. */
+  legend: number;
 }
 
 export function newGame(seed: number, nowMs: number): GameState {
@@ -151,5 +153,6 @@ export function newGame(seed: number, nowMs: number): GameState {
     report: null,
     turnedBack: false,
     log: [],
+    legend: 0,
   };
 }

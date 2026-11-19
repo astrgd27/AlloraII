@@ -5,7 +5,8 @@
  */
 import { Engine, type EngineOptions } from './engine';
 import type { FromEngine, InitMessage, ToEngine } from './protocol';
-import { migrate } from './save/migrations';
+import { migrateSave } from './weave';
+import { World } from './world';
 import type { SaveStore } from './save/store';
 import { newGame } from './state';
 
@@ -48,7 +49,9 @@ export class EngineHost {
     const now = this.deps.now();
     const saved = await this.deps.store.latest();
     if (saved) {
-      this.start(new Engine(migrate(saved.data), this.options));
+      this.start(
+        new Engine(migrateSave(saved.data, this.options.world ?? World.shared()), this.options),
+      );
       this.engine?.catchUpTo(now);
     } else {
       const seed = message.seed ?? (now ^ 0x9e3779b9) >>> 0;
@@ -75,7 +78,7 @@ export class EngineHost {
     if (!this.engine) return;
     const now = this.deps.now();
     this.engine.advanceTo(now);
-    await this.deps.store.write({ savedAt: now, data: this.engine.state });
+    await this.deps.store.write({ savedAt: now, data: this.engine.weave });
     this.deps.post({ type: 'saved', hours: this.engine.state.hours });
   }
 

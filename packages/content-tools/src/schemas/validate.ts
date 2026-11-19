@@ -12,6 +12,7 @@ import {
   riteSchema,
   artSchema,
   proofSchema,
+  upbringingSchema,
   toolSchema,
   otherSchema,
   personSchema,
@@ -43,6 +44,7 @@ export const SCHEMA_BY_KIND: Record<string, { name: string; schema: z.ZodType }>
   rite: { name: 'rite', schema: riteSchema },
   art: { name: 'art', schema: artSchema },
   proof: { name: 'proof', schema: proofSchema },
+  upbringing: { name: 'upbringing', schema: upbringingSchema },
 };
 
 export interface Failure {

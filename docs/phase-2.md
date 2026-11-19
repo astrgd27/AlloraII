@@ -38,7 +38,7 @@
 12. **Bonds.** Acquaintance to friendship: gifts, favours, people who remember, and what a friend opens. *(done)*
 13. **Faith.** One faith playable end to end in Eintenn, grown from canon. *(done)*
 14. **Magic.** One school learnable at the Collegium, by the rules of `canon/magic_design.md`. Countermagic stays the nearest a player comes to witch magic. *(done)*
-15. **Several lives and the Tapestry.** A second and third life, the lives strip, switching, and standing orders for the ones not in focus.
+15. **Several lives and the Tapestry.** A second and third life, the lives strip, switching, and standing orders for the ones not in focus. *(done)*
 16. **The codex.** In-world reference for places, people, skills and faiths the life has met. No design talk.
 17. **Balance and the gate review.**
 
@@ -155,3 +155,13 @@
   - **On screen:** an Art panel on the sheet (degree, Will bar, Cast buttons with reasons, proofs in force) and a Collegium tab there for matriculating, copying and disputing.
   - **Not yet:** other schools, countermagic, greater proofs.
   - Save version 19.
+- **2026-11-19 · Several lives and the Tapestry (#70).** The bible's open question "How many lives can act at once?" is settled as its recommendation: one in focus, the rest on standing orders, with a report on turning back to one. Decisions:
+  - **One simulation:** every life runs the same systems each hour. The life in focus takes orders. The others work as if the player were away: standing orders apply, and cases wait. The first life keeps the one clock, so pausing stops them all.
+  - **The save is now a weave** (its own version, 1): the lives, the one in focus, and the threads woven. Each life keeps its own save version (20 adds its Legend). A save from before is read as the first life of a weave.
+  - **Legend, from the bible's table:** rank trials 10 / 40 / 150; a Confidant won 10; a faith rank 10; a Bachelor's degree 10, a Master's 25; a great case 15. A great case is quality 8 or more at Apprentice, and the bar rises a point with each rank, so a master's ordinary work is not great.
+  - **Pace:** bots that only follow one trade reach the second life's 50 Legend on days 37–65 (15–26 real hours) and 200 in all on days 145–222. The bible asks for 10–15 hours. A player who also keeps a faith, makes a friend or studies gets there sooner. Prices are left as the bible gives them, for the gate review.
+  - **The Tapestry, first threads:** Lives (a second life, 50; a third, 150) and Origins (each upbringing past the first two is opened for its Legend).
+  - **Upbringings** are content (`content/lives/upbringings.yaml`, new kind `upbringing`): an Ostwick farm child and a Kesselhaven guild apprentice are open from the start; a child of the Tennfels servants' hall and a Collegium scribe's child are opened for 30 Legend each. Each sets the birthplace, a room there, a few starting skill levels and four names from the Eintenn culture guide.
+  - **On screen:** a Lives panel heads the sheet column (each life's name and what it is doing; click to turn to it). A Tapestry panel shows Legend, the threads with Weave buttons and reasons, and a new life: pick an upbringing, then a name.
+  - **Not yet:** letters and parcels between lives, commissions, joint ventures, laying a life down, the other eight threads.
+  - Save version 20; weave version 1.

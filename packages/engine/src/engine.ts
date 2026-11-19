@@ -59,6 +59,16 @@ import { type GameState } from './state';
 import { travelSystem, turnBack, setOut } from './travel';
 import { World, feastOn } from './world';
 import { weatherOf } from './weather';
+import {
+  bear,
+  focus,
+  isWeave,
+  weaveNode,
+  weaveOf,
+  weaveView,
+  type Weave,
+  type WeaveView,
+} from './weave';
 
 /** The paces the clock can run at while the game is open: a game hour a minute, six seconds, a second. */
 export const SPEEDS = [1, 10, 60];
@@ -86,7 +96,7 @@ export interface EngineOptions {
   world?: World;
 }
 
-export interface Snapshot {
+export interface Snapshot extends WeaveView {
   hours: number;
   date: GameDate;
   paused: boolean;
@@ -246,12 +256,15 @@ export class Engine {
   /** True while catching up on time away. */
   private away = false;
 
-  constructor(
-    public state: GameState,
-    options: EngineOptions = {},
-  ) {
+  /** Every life, and the Tapestry. */
+  readonly weave: Weave;
+  /** The life being ticked, while the lives are ticked in turn. */
+  private ticking: number | undefined;
+
+  constructor(state: GameState | Weave, options: EngineOptions = {}) {
     this.msPerGameHour = options.msPerGameHour ?? MS_PER_GAME_HOUR;
     this.world = options.world ?? World.shared();
+    this.weave = isWeave(state) ? state : weaveOf(state, this.world);
     this.systems = [needsSystem, travelSystem, activitySystem, ...(options.systems ?? [])];
     // The record of what just happened is kept from the engine's own events.
     this.bus.on('ActivityCompleted', (e) =>
@@ -269,9 +282,34 @@ export class Engine {
     this.bus.on('RoadEvent', (e) => note(this.state, { kind: 'road', id: e.event }));
   }
 
-  /** Runs one game hour. */
+  /** The life in hand: the one being ticked, else the one in focus. */
+  get state(): GameState {
+    return this.weave.lives[this.ticking ?? this.weave.focus]!.state;
+  }
+
+  /** The first life keeps the clock for the whole weave. */
+  private get clock(): GameState {
+    return this.weave.lives[0]!.state;
+  }
+
+  /** Runs one game hour for every life. */
   tick(): void {
-    const before = dateAt(this.state.hours);
+    const before = dateAt(this.clock.hours);
+    for (let i = 0; i < this.weave.lives.length; i++) {
+      this.ticking = i;
+      this.tickLife(before, this.away || i !== this.weave.focus);
+    }
+    this.ticking = undefined;
+    const date = dateAt(this.clock.hours);
+    const payload = { hours: this.clock.hours, date };
+    this.bus.emit('HourPassed', payload);
+    if (date.hour === 0) this.bus.emit('DayBegan', payload);
+    if (date.seasonIndex !== before.seasonIndex) this.bus.emit('SeasonBegan', payload);
+    if (date.year !== before.year) this.bus.emit('YearBegan', payload);
+  }
+
+  /** One game hour of one life. Lives out of focus keep to their standing orders. */
+  private tickLife(before: GameDate, away: boolean): void {
     this.state.hours += 1;
     const date = dateAt(this.state.hours);
     if (date.hour === 0 && this.state.lodging) {
@@ -287,7 +325,7 @@ export class Engine {
     }
     if (date.seasonIndex !== before.seasonIndex) payDues(this.state, this.world);
     magicHour(this.state);
-    routine(this.state, this.world, before, this.away);
+    routine(this.state, this.world, before, away);
     for (const system of this.systems) system.tick(this.state, date, this.bus, this.world);
     const rank = this.state.post?.rank ?? 0;
     const done = workHour(this.state, this.world).finished;
@@ -301,11 +339,6 @@ export class Engine {
     }
     if (this.state.post && this.state.post.rank > rank)
       note(this.state, { kind: 'rank', post: this.state.post.id, rank: this.state.post.rank });
-    const payload = { hours: this.state.hours, date };
-    this.bus.emit('HourPassed', payload);
-    if (date.hour === 0) this.bus.emit('DayBegan', payload);
-    if (date.seasonIndex !== before.seasonIndex) this.bus.emit('SeasonBegan', payload);
-    if (date.year !== before.year) this.bus.emit('YearBegan', payload);
   }
 
   /** Runs a number of game hours at once (the balance bot, catching up). */
@@ -315,12 +348,12 @@ export class Engine {
 
   /** Moves the clock to `nowMs` while the game is open. Returns the hours that passed. */
   advanceTo(nowMs: number): number {
-    const elapsed = Math.max(0, nowMs - this.state.lastRealMs);
-    this.state.lastRealMs = nowMs;
-    if (this.state.paused) return 0;
-    const total = this.state.carryMs + elapsed * this.speed;
+    const elapsed = Math.max(0, nowMs - this.clock.lastRealMs);
+    this.clock.lastRealMs = nowMs;
+    if (this.clock.paused) return 0;
+    const total = this.clock.carryMs + elapsed * this.speed;
     const hours = Math.floor(total / this.msPerGameHour);
-    this.state.carryMs = total - hours * this.msPerGameHour;
+    this.clock.carryMs = total - hours * this.msPerGameHour;
     this.run(hours);
     return hours;
   }
@@ -330,16 +363,16 @@ export class Engine {
    * speed up to the cap; the rest is skipped and reported.
    */
   catchUpTo(nowMs: number): void {
-    const away = Math.max(0, nowMs - this.state.lastRealMs);
-    this.state.lastRealMs = nowMs;
+    const away = Math.max(0, nowMs - this.clock.lastRealMs);
+    this.clock.lastRealMs = nowMs;
     this.caughtUpHours = 0;
     this.skippedHours = 0;
-    if (this.state.paused) return;
-    const total = this.state.carryMs + away;
+    if (this.clock.paused) return;
+    const total = this.clock.carryMs + away;
     const due = Math.floor(total / this.msPerGameHour);
     const cap = Math.ceil(away / REAL_DAY_MS) * CATCH_UP_DAYS_PER_REAL_DAY * HOURS_PER_DAY;
     const hours = Math.min(due, cap);
-    this.state.carryMs = due > cap ? 0 : total - due * this.msPerGameHour;
+    this.clock.carryMs = due > cap ? 0 : total - due * this.msPerGameHour;
     const before = mark(this.state);
     this.away = true;
     this.run(hours);
@@ -354,7 +387,7 @@ export class Engine {
     switch (order.type) {
       case 'pause':
         this.advanceTo(nowMs);
-        this.state.paused = true;
+        this.clock.paused = true;
         break;
       case 'speed':
         if (!SPEEDS.includes(order.speed)) throw new Error('No such pace');
@@ -362,8 +395,8 @@ export class Engine {
         this.speed = order.speed;
         break;
       case 'resume':
-        this.state.lastRealMs = nowMs;
-        this.state.paused = false;
+        this.clock.lastRealMs = nowMs;
+        this.clock.paused = false;
         break;
       case 'do':
         begin(this.state, this.world, order.activity, dateAt(this.state.hours));
@@ -453,6 +486,15 @@ export class Engine {
       }
       case 'turnBack':
         turnBack(this.state);
+        break;
+      case 'focus':
+        focus(this.weave, this.world, order.life);
+        break;
+      case 'weave':
+        weaveNode(this.weave, this.world, order.node);
+        break;
+      case 'bear':
+        bear(this.weave, this.world, order.upbringing, order.name);
         break;
       case 'save':
       case 'reset':
@@ -687,7 +729,7 @@ export class Engine {
               last: this.state.place,
               legProgress: Math.min(
                 1,
-                (j.legHours + this.state.carryMs / this.msPerGameHour) / leg.hours,
+                (j.legHours + this.clock.carryMs / this.msPerGameHour) / leg.hours,
               ),
               hoursLeft: j.legs.reduce((n, l) => n + l.hours, 0) - j.legHours,
             }
@@ -706,11 +748,12 @@ export class Engine {
         .map((f) => ({ id: f.id, here: !j && f.place === s.place })),
       hours: this.state.hours,
       date: dateAt(this.state.hours),
-      paused: this.state.paused,
+      paused: this.clock.paused,
       speed: this.speed,
-      hourProgress: Math.min(1, this.state.carryMs / this.msPerGameHour),
+      hourProgress: Math.min(1, this.clock.carryMs / this.msPerGameHour),
       caughtUpHours: this.caughtUpHours,
       skippedHours: this.skippedHours,
+      ...weaveView(this.weave, this.world),
     };
   }
 }
